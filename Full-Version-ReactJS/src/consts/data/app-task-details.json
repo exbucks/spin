@@ -1,0 +1,108 @@
+{
+    "Task": {
+        "Id": "6726746",
+        "Project": {
+            "Name": "Analytics Redesing"
+        },
+        "AssignedBy": {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}"
+        },
+        "StartDate": "{{faker:date.recent}}",
+        "DueDate": "{{faker:date.recent}}",
+        "AssignedDate": "{{faker:date.recent}}",
+        "Priority": "Low",
+        "Progress": 0.3,
+        "Title": "Configurable human-resource Graphic Interface",
+        "Text": "{{faker:lorem.paragraphs}}",
+        "Labels": [
+            "Bug",
+            "Feature",
+            "Help"
+        ]
+    },
+    "People": [
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Online",
+            "Avatar": "{{faker:image.avatar}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Busy",
+            "Avatar": "{{faker:image.avatar}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Away",
+            "Avatar": "{{faker:image.avatar}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Offline",
+            "Avatar": "{{faker:image.avatar}}"
+        }
+    ],
+    "Attachments": [
+        {
+            "FileName": "borders_action_items_bandwidth.skd",
+            "FileSize": 548,
+            "Type": "Word",
+            "Owner": "{{fake:[name.firstName] [name.lastName]}}",
+            "DateAdded": "{{faker:date.recent}}"
+        },
+        {
+            "FileName": "borders_action_items_bandwidth.skd",
+            "FileSize": 959,
+            "Type": "PowerPoint",
+            "Owner": "{{fake:[name.firstName] [name.lastName]}}",
+            "DateAdded": "{{faker:date.recent}}"
+        },
+        {
+            "FileName": "borders_action_items_bandwidth.skd",
+            "FileSize": 887,
+            "Type": "Excel",
+            "Owner": "{{fake:[name.firstName] [name.lastName]}}",
+            "DateAdded": "{{faker:date.recent}}"
+        }
+    ],
+    "Comments": [
+        {
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "CurrentStatus": "Away",
+                "Avatar": "{{faker:image.avatar}}"
+            },
+            "DateAdded": "{{faker:date.recent}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Likes": 92,
+            "Replies": [
+                {
+                    "Sender": {
+                        "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                        "CurrentStatus": "Busy",
+                        "Avatar": "{{faker:image.avatar}}"
+                    },
+                    "DateAdded": "{{faker:date.recent}}",
+                    "Content": "{{faker:lorem.sentences}}",
+                    "Likes": 44,
+                    "Replies": [
+                        {
+                            "Sender": {
+                                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                                "CurrentStatus": "Online",
+                                "Avatar": "{{faker:image.avatar}}"
+                            },
+                            "DateAdded": "{{faker:date.recent}}",
+                            "Content": "{{faker:lorem.sentences}}",
+                            "Likes": 8
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

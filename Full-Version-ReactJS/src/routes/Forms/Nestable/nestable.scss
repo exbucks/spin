@@ -1,0 +1,64 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.person {
+    // Panel Body Here
+    > * {
+        display: flex;
+        align-items: center;
+    }
+    cursor: ns-resize;
+
+    &--nested {
+        cursor: move;
+    }
+
+    &:hover {
+        border-color: $gray-light;
+    }
+
+    &__actions {
+        flex: 0 0 50px;
+    }
+
+    &__info {
+        margin-top: 0;
+        flex: 1 1 auto;
+    }
+
+    &__children {
+        margin-left: 25px;
+    }
+}
+
+.remove {
+    width: 15px;
+    height: 15px;
+    background: $brand-danger;
+    line-height: 15px;
+    text-align: center;
+}
+
+.people {
+    text-align: center;
+
+    &__list {
+        > * + * {
+            margin-left: 10px;
+        }
+    }
+
+    &--active {
+        > * {
+            box-sizing: border-box;
+            border-style: dashed;
+            border-color: rgba($brand-primary, 0.5);
+            background: rgba($brand-primary, 0.1);
+        }
+    }
+}
+
+.placeholder {
+    border: 2px dashed rgba($brand-primary, 0.5);
+    background: rgba($brand-primary, 0.1);
+    margin-bottom: 18px;
+}

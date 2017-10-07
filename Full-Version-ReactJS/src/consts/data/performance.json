@@ -1,0 +1,52 @@
+{
+  "PartsPerformance": [
+    {
+      "Name": "Browser",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "Public",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "Ajax",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "API",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "Googlebot",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "Raw",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "Feed",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    },
+    {
+      "Name": "Other",
+      "ResponseTime": "{{n:1000:80000}}",
+      "Thrughtput": "{{n:1000:80000}}",
+      "CpuBurn": "{{f2:1:9}}"
+    }
+  ]
+}

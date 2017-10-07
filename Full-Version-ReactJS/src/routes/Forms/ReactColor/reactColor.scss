@@ -1,0 +1,11 @@
+.pickerWrap {
+    padding: 15px;
+}
+
+.pickerWrap > * {
+    flex: 0 1 auto;
+}
+
+.compactWrap > * > * {
+    background: #1a1a1a !important;
+}

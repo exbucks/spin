@@ -1,0 +1,18 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.wrap {
+    margin-top: 1rem;
+}
+
+.bigValue {
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+
+    small {
+        color: $text-muted;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,7 @@
+.tabsRoot {
+    ul > li > a {
+        &:focus {
+            outline: none;
+        }
+    }
+}

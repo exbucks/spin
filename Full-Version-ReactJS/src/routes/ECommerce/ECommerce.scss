@@ -1,0 +1,151 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .sectionRow {
+        margin-top: 3rem;
+    }
+
+    .avatar {
+        width: 35px;
+    }
+
+    .mediaFix {
+        width: auto;
+    }
+
+    .boxHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        .boxHeaderTitle {
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+
+    .buttonWithIcon i {
+        margin-left: 1rem;
+    }
+
+    .summaryPanel {
+        border: none;
+        background-color: $gray-dark;
+
+        .summaryPanelDate {
+            color: $gray-lighter;
+            float: right;
+        }
+
+        .summaryValue {
+            font-weight: 300;
+            color: $brand-white;
+            font-size: 24px;
+        }
+
+        .summaryDiff {
+            small {
+                color: $gray-lighter;
+                margin-left: 1rem;
+            }
+
+            &.summaryDiffInc {
+                color: $brand-success;
+            }
+            &.summaryDiffDec {
+                color: $brand-danger;
+            }
+        }
+    }
+
+    .chart {
+        margin-bottom: 19px;
+
+        .chartObject {
+            margin-top: 2rem;
+        }
+    }
+
+    .latestTransactions {
+        .transactionsTable {
+            margin-top: 1.5rem;
+
+            th:last-child,
+            td:last-child {
+                text-align: left;
+            }
+
+            .transactionStatus {
+                margin-right: 1rem;
+
+                &.transactionStatusSuccess {
+                    color: $brand-success;
+                }
+                &.transactionStatusDanger {
+                    color: $brand-danger;
+                }
+                &.transactionStatusWarning {
+                    color: $brand-warning
+                }
+            }
+        }
+    }
+
+    .latestComments {
+        .commentsList {
+            padding: 0;
+            list-style: none;
+            margin-top: 15px;
+            margin-bottom: 19px;
+
+            > li {
+                border-top: 1px solid $gray-dark;
+                padding: 5px 0;
+
+                &:first-child {
+                    border-top-width: 2px;
+                }
+            }
+        }
+
+        .commentContent {
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+    }
+
+    .mostViewedItems {
+        .mostViewedItemsTable {
+            margin-top: 1.5rem;
+
+            td {
+                vertical-align: top;
+            }
+
+            th:last-child,
+            td:last-child {
+                text-align: left;
+            }
+
+            th {
+                text-transform: uppercase;
+                font-size: 76%;
+                color: $text-muted;
+            }
+
+            .mostViewedItemStatus {
+                margin-right: 1rem;
+                &.mostViewedItemStatusSuccess {
+                    color: $brand-success;
+                }
+                &.mostViewedItemStatusWarning {
+                    color: $brand-warning;
+                }
+                &.mostViewedItemStatusDanger {
+                    color: $brand-danger
+                }
+            }
+        }
+    }
+}

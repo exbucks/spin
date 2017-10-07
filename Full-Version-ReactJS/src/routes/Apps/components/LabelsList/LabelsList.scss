@@ -1,0 +1,5 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+
+.navItem:not(:hover) > a {
+    color: $gray;
+}

@@ -1,0 +1,134 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.timeline {
+    .timelineDate{
+        display: block;
+        max-width: 210px;
+        position: relative;
+        padding-top: 8px;
+
+        &:before{
+            background: #262626;
+            border-radius: 2px;
+            bottom: -35px;
+            content: "";
+            height: 29px;
+            left: 12px;
+            position: absolute;
+            width: 1px;
+        }
+    }
+
+    &.timeline__dateTime {
+        .timelineItem {
+            margin-left: 117px;
+        }
+
+        .timelineDate {
+            text-align: center;
+            &:before {
+                left: calc(50% - 1px);
+            }
+        }
+
+        .timelineItemTime {
+            position: absolute;
+            top: 10px;
+            right: calc(100% + 35px);
+        }
+    }
+
+    &:not(.timeline__dateTime) {
+        .timelineItem {
+            border-bottom: 1px solid $gray-darker;
+        }
+    }
+
+    .timelineItem{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 25px;
+        padding-right: 15px;
+        position: relative;
+
+        &:first-child{
+            margin-top: 0;
+        }
+
+        @media (max-width: $screen-lg) {
+            .timelineItemTime{
+                text-align: left !important;
+                font-size: 10px;
+                line-height: 15px;
+            }
+        }
+
+        .timelineItemTime{
+            text-align: right;
+        }
+
+        .timelineItemTimeVertical {
+            font-size: 10px;
+            line-height: 15px;
+            margin-bottom: 9.5px;
+        }
+
+        .timelineItemInner{
+            padding: 0 10px 10px 10px;
+            position: relative;
+        }
+
+        .timelineItemHead {
+            border-bottom: 1px solid $gray-darker;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+        }
+
+        .timelineItemContent p {
+            color: #585b5e;
+            font-size: .9em;
+            margin: 0;
+        }
+
+        .timelineIcon {
+            &:before{
+                background: #262626;
+                border-radius: 2px;
+                bottom: -32px;
+                content: "";
+                height: 100%;
+                left: -14px;
+                position: absolute;
+                width: 1px;
+            }
+
+            i{
+                left: -19px;
+                position: absolute;
+                top: 15px;
+            }
+        }
+    }
+
+    .timelineItemHeader {
+        .timelineItemHeaderTitle {
+            margin: 0;
+        }
+
+        .timelineItemHeaderText {
+            margin-top: 0;
+        }
+    }
+
+    &.timeline__dateTime {
+        .timelineItemHeader {
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid $gray-darker;
+        }
+    }
+
+    .timelineItemBody {
+        margin-left: 1rem;
+    }
+}

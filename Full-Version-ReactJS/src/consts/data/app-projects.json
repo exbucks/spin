@@ -1,0 +1,224 @@
+{
+    "ProjectsList": [
+        {
+            "Name": "Analytics Redesign",
+            "NotificationsCount": 13,
+            "Favorited": false
+        },
+        {
+            "Name": "New Company Website",
+            "NotificationsCount": 34,
+            "Favorited": false
+        },
+        {
+            "Name": "Chart to Newsletter",
+            "NotificationsCount": 5,
+            "Favorited": false
+        },
+        {
+            "Name": "UX for webkom.co",
+            "NotificationsCount": 19,
+            "Favorited": false
+        }
+    ],
+    "People": [
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Online"
+        },
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Busy"
+        },
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Away"
+        },
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Offline"
+        }
+    ],
+    "Projects": [
+        {
+            "Title": "Analytics Redesign",
+            "Status": "Active",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "36",
+                "Total": "94"
+            },
+            "AssignedUsers": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Title": "New Company Website",
+            "Status": "Waiting",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "1",
+                "Total": "6"
+            }
+        },
+        {
+            "Title": "Charts to Newsletter",
+            "Status": "Suspended",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "4",
+                "Total": "6"
+            },
+            "AssignedUsers": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Title": "UX for webkom.com",
+            "Status": "Disabled",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "2",
+                "Total": "918"
+            },
+            "AssignedUsers": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Title": "Microsoft Windows 7",
+            "Status": "Active",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "21",
+                "Total": "78"
+            },
+            "AssignedUsers": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Title": "Apple Messenger",
+            "Status": "Waiting",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "2",
+                "Total": "10"
+            }
+        },
+        {
+            "Title": "Highcharts to React",
+            "Status": "Suspended",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "5",
+                "Total": "6"
+            },
+            "AssignedUsers": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Title": "New Dashboard for Gov UK",
+            "Status": "Disabled",
+            "Favorite": false,
+            "StartDate": "{{faker:date.recent}}",
+            "LastEdit": {
+                "Author": "{{fake:[name.firstName] [name.lastName]}}",
+                "Date": "{{faker:date.recent}}"
+            },
+            "Completed": {
+                "Value": "3",
+                "Total": "956"
+            },
+            "AssignedUsers": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        }
+    ]
+}

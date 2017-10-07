@@ -1,0 +1,52 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+@import '~chartist/dist/scss/chartist.scss';
+
+.ctDonutChart {
+    display: inline-block;
+    position: relative;
+
+    .ctSliceDonut {
+        @extend .ct-slice-donut;
+    }
+
+    .ctDonutBackground{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    .ctDonutFill {
+        position: relative;
+        z-index: 2;
+    }
+
+    // Data Colors
+    .grayBase .ctSliceDonut { stroke: $gray-base}
+    .grayDarker .ctSliceDonut { stroke: $gray-darker }
+    .grayDark .ctSliceDonut { stroke: $gray-dark }
+    .gray .ctSliceDonut { stroke: $gray }
+    .grayLight .ctSliceDonut { stroke: $gray-light }
+    .grayLighter .ctSliceDonut { stroke: $gray-lighter }
+
+    .brandWhite .ctSliceDonut { stroke: $brand-white }
+    .brandPrimary .ctSliceDonut { stroke: $brand-primary }
+    .brandSuccess .ctSliceDonut { stroke: $brand-success }
+    .brandInfo .ctSliceDonut { stroke: $brand-info }
+    .brandWarning .ctSliceDonut { stroke: $brand-warning }
+    .brandDanger .ctSliceDonut { stroke: $brand-danger }
+
+    .brandCerulean .ctSliceDonut { stroke: $brand-cerulean }
+    .brandCuriousBlue .ctSliceDonut { stroke: $brand-curious-blue }
+    .brandEndaveour .ctSliceDonut { stroke: $brand-endaveour }
+    .brandMinsk .ctSliceDonut { stroke: $brand-minsk }
+    .brandEminence .ctSliceDonut { stroke: $brand-eminence }
+    .brandVioletEggplant .ctSliceDonut { stroke: $brand-violet-eggplant}
+    .brandMintGreen .ctSliceDonut { stroke: $brand-mint-green }
+    .brandAquamarine .ctSliceDonut { stroke: $brand-aquamarine }
+    .brandMalibu .ctSliceDonut { stroke: $brand-malibu }
+    .brandDodgerBlue .ctSliceDonut { stroke: $brand-dodger-blue }
+    .brandHeliotrope .ctSliceDonut { stroke: $brand-heliotrope }
+    .brandPerfume .ctSliceDonut { stroke: $brand-perfume }
+
+    .secondaryPart .ctSliceDonut { display: none };
+}

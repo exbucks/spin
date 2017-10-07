@@ -1,0 +1,45 @@
+{
+    "Invoice": {
+        "Subject": "Spin Dashboard",
+        "Sender": {
+            "AddressLine1": "{{fake:[address.streetAddress] [address.streetName]}}",
+            "AddressLine2": "{{fake:[address.state], [address.stateAbbr], [address.zipCode]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Fax": "{{fake:[phone.phoneNumber]}}",
+            "Email": "{{fake:[internet.email]}}"
+        },
+        "Id": "{{fake:[random.number]}}",
+        "Receiver": {
+            "Name": "{{fake:[company.companyName]}}",
+            "AddressLine1": "{{fake:[address.streetAddress] [address.streetName]}}",
+            "AddressLine2": "{{fake:[address.state], [address.stateAbbr], [address.zipCode]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Fax": "{{fake:[phone.phoneNumber]}}",
+            "Email": "{{fake:[internet.email]}}"
+        },
+        "DateInvoice": "{{fake:[date.day] [date.month] [date.year]}}",
+        "DateDue": "{{fake:[date.day] [date.month] [date.year]}}",
+        "Items": [
+            {
+                "Description": "{{fake:[commerce.productName]}}",
+                "Quantity": "{{fake:[date.day]}}",
+                "Price": "{{fake:[finance.amount]}}"
+            },
+            {
+                "Description": "{{fake:[commerce.productName]}}",
+                "Quantity": "{{fake:[date.day]}}",
+                "Price": "{{fake:[finance.amount]}}"
+            },
+            {
+                "Description": "{{fake:[commerce.productName]}}",
+                "Quantity": "{{fake:[date.day]}}",
+                "Price": "{{fake:[finance.amount]}}"
+            },
+            {
+                "Description": "{{fake:[commerce.productName]}}",
+                "Quantity": "{{fake:[date.day]}}",
+                "Price": "{{fake:[finance.amount]}}"
+            }
+        ]
+    }
+}

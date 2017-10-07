@@ -1,0 +1,266 @@
+{
+  "Summary": {
+    "TotalRevenue": {
+      "value": "{{n:5000000:20000000}}",
+      "diff": "{{n:-40:70}}"
+    },
+    "TotalItemsSold": {
+      "value": "{{n:75000:300000}}",
+      "diff": "{{n:-40:70}}"
+    },
+    "TotalVisitors": {
+      "value": "{{n:1000000:3500000}}",
+      "diff": "{{n:10:80}}"
+    }
+  },
+  "Report": {
+      "Revenue": [
+        {
+          "date": "{{dateDiff:0}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-1}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-2}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-3}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-4}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-5}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-6}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-7}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-8}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-9}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-10}}",
+          "value": "{{n:40:250}}"
+        },
+        {
+          "date": "{{dateDiff:-11}}",
+          "value": "{{n:40:250}}"
+        }
+      ],
+      "ItemsSold": [
+        {
+          "date": "{{dateDiff:0}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-1}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-2}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-3}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-4}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-5}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-6}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-7}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-8}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-9}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-10}}",
+          "value": "{{n:4000:15000}}"
+        },
+        {
+          "date": "{{dateDiff:-11}}",
+          "value": "{{n:4000:15000}}"
+        }
+      ]
+  },
+  "LatestTransactions": [
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    },
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    },
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    },
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    },
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    },
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    },
+    {
+      "userAvatar": "{{faker:image.avatar}}",
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "date": "{{faker:date.recent}}",
+      "price": "{{f2:40:600}}",
+      "status": "{{n:0:2}}"
+    }
+  ],
+  "LatestComments": [
+    {
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "userAvatar": "{{faker:image.avatar}}",
+      "comment": "{{faker:lorem.paragraph}}",
+      "category": "{{faker:commerce.department}}",
+      "date": "{{faker:date.recent}}"
+    },
+    {
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "userAvatar": "{{faker:image.avatar}}",
+      "comment": "{{faker:lorem.paragraph}}",
+      "category": "{{faker:commerce.department}}",
+      "date": "{{faker:date.recent}}"
+    },
+    {
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "userAvatar": "{{faker:image.avatar}}",
+      "comment": "{{faker:lorem.paragraph}}",
+      "category": "{{faker:commerce.department}}",
+      "date": "{{faker:date.recent}}"
+    },
+    {
+      "userFirstName": "{{faker:name.firstName}}",
+      "userLastName": "{{faker:name.lastName}}",
+      "userAvatar": "{{faker:image.avatar}}",
+      "comment": "{{faker:lorem.paragraph}}",
+      "category": "{{faker:commerce.department}}",
+      "date": "{{faker:date.recent}}"
+    }
+  ],
+  "MostViewedItems": [
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    },
+    {
+      "name": "{{faker:commerce.productName}}",
+      "price": "{{f2:100:600}}",
+      "viewCount": "{{n:2000:10000}}",
+      "countLeft": "{{n:20:1000}}"
+    }
+  ]
+}

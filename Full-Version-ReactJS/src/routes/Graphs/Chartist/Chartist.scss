@@ -1,0 +1,17 @@
+.chartContainer {
+    height: 300px;
+}
+
+.stackedBarChart {
+    @extend .chartContainer;
+
+    svg > g:nth-child(2) line {
+        stroke-width: 30px;
+    }
+}
+
+.exampleLabel {
+    margin-top: 1.5rem;
+    font-size: 10px;
+    font-weight: bold;
+}

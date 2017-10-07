@@ -1,0 +1,63 @@
+@import './../bootstrap/variables';
+
+$body-color: #404043;
+$sidebar-color: #1A1A1A;
+
+$content-padding-x: 1rem;
+
+$sidebar-item-icon-color: #383838;
+$sidebar-item-color: #5C5C5C;
+
+$sidebar-item-hover-icon-color: white;
+$sidebar-item-hover-color: white;
+
+$sidebar-active-color: white;
+$sidebar-active-icon-color: white;
+
+$sidebar-active-background: #232323;
+$sidebar-active-accent-color: #2c97de;
+
+$sidebar-font-size: 10px;
+
+$sidebar-border-width: 1px;
+$sidebar-border-color: #212121;
+$sidebar-border: $sidebar-border-width solid $sidebar-border-color;
+
+$sidebar-width-default: 250px;
+$sidebar-width-bigicons: 137px;
+$sidebar-width-slim: 50px;
+
+$navbar-border-color: #212121;
+$navbar-height: 50px;
+
+$right-sidebar-width: 300px;
+
+$outer-submenu-width: 250px;
+
+$outer-submenu-title-color: white;
+$outer-submenu-title-size: 18px;
+$outer-submenu-title-line: 1px solid $gray-dark;
+
+$footer-height: 60px;
+
+$layout-settings-width: 200px;
+
+$box-layout-width: 1200px;
+
+//Responsive setup
+$xs-min: 480px;
+$sm-min: 768px;
+$md-min: 992px;
+$lg-min: 1200px;
+
+$xs-max: ($sm-min - 1);
+$sm-max: ($md-min - 1);
+$md-max: ($lg-min - 1);
+
+$phone:          "only screen and (min-width: #{$xs-min})";
+$phone-strict:   "only screen and (min-width: #{$xs-min}) and (max-width: #{$xs-max})";
+$tablet:         "only screen and (min-width: #{$sm-min})";
+$tablet-strict:  "only screen and (min-width: #{$sm-min}) and (max-width: #{$sm-max})";
+$desktop:        "only screen and (min-width: #{$md-min})";
+$desktop-strict: "only screen and (min-width: #{$md-min}) and (max-width: #{$md-max})";
+$large:          "only screen and (min-width: #{$lg-min})";

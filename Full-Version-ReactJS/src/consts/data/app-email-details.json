@@ -1,0 +1,40 @@
+{
+    "Message": {
+        "Sender": {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{faker:image.avatar}}",
+            "Address": "{{faker:address.state}}",
+            "Email": "{{faker:internet.email}}",
+            "Status": "Online"
+        },
+        "Date": "{{faker:date.recent}}",
+        "Labels": [
+            "Work"
+        ],
+        "Subject": "{{faker:company.catchPhrase}}",
+        "Content": "{{faker:lorem.paragraphs}}",
+        "Attachments": [
+            {
+                "FileName": "borders_action_items_bandwidth.skd",
+                "FileSize": 548,
+                "Type": "Word",
+                "Owner": "{{fake:[name.firstName] [name.lastName]}}",
+                "DateAdded": "{{faker:date.recent}}"
+            },
+            {
+                "FileName": "borders_action_items_bandwidth.skd",
+                "FileSize": 959,
+                "Type": "PowerPoint",
+                "Owner": "{{fake:[name.firstName] [name.lastName]}}",
+                "DateAdded": "{{faker:date.recent}}"
+            },
+            {
+                "FileName": "borders_action_items_bandwidth.skd",
+                "FileSize": 887,
+                "Type": "Excel",
+                "Owner": "{{fake:[name.firstName] [name.lastName]}}",
+                "DateAdded": "{{faker:date.recent}}"
+            }
+        ]
+    }
+}

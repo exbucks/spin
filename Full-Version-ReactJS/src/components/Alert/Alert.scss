@@ -1,0 +1,19 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.noBackground {
+    background: none;
+    border: 1px solid $gray;
+    color: $gray-lighter;
+
+    h6,h5,h4,h3,h2,h1 {
+        color: white;
+    }
+
+    p {
+        color: $gray-lighter;
+    }
+}
+
+.notRounded {
+    border-radius: 0;
+}

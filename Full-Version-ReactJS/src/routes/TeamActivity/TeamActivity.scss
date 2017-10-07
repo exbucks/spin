@@ -1,0 +1,41 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .summaryPanel {
+        margin-top: 3rem;
+        border: none;
+        background: $gray-dark;
+
+        .summaryPanelHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .summaryPanelHeaderTitle {
+                color: $brand-white;
+                margin: 0;
+            }
+        }
+
+        .chartTitle {
+            color: $brand-white;
+        }
+
+        .lineChartTitle {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+
+            .lineChartValue {
+                color: $brand-white;
+            }
+        }
+
+        .channelsTitle {
+            margin-top: 3rem;
+        }
+
+        .chartLegendValue {
+            color: $brand-white;
+        }
+    }
+}

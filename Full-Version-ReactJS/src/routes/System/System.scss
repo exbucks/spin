@@ -1,0 +1,77 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .componentPanel {
+        background-color: $gray-dark;
+        border: none;
+
+        >:last-child {
+            padding-top: 20px;
+            padding-bottom: 0;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+    }
+
+    .filledMedia{
+        margin: -10px -15px;
+        width: calc(100% + 30px);
+        padding: 10px 15px;
+    }
+
+    .componentVal {
+        color: $brand-white;
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin: 0 15px 0 0;
+        display: inline-block;
+
+        small {
+            margin-left: 1rem;
+            font-size: 65%;
+        }
+
+        .componentDiff {
+            font-size: 9px;
+        }
+    }
+
+    .panelHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+    .processTable {
+        th {
+            color: $text-muted;
+            text-transform: uppercase;
+            font-size: 76%;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+        .generalRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                margin: 0;
+            }
+        }
+
+        .processComponentVal {
+            font-size: 16px;
+            color: $brand-white;
+        }
+    }
+}

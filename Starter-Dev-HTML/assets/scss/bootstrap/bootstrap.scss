@@ -1,0 +1,1255 @@
+// Core variables and mixins
+@import 'variables';
+
+@import "bootstrap/mixins";
+@import 'mixins';
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+@import "bootstrap/glyphicons";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/wells";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+
+
+
+body{
+    // buttons.scss override
+    .btn {
+        &:active,
+        &.active {
+            @include box-shadow(none);
+        }
+        // [converter] extracted a& to a.btn
+    }
+
+    .btn-default {
+        @include button-variant-transparent($btn-default-color, $btn-default-bg, $btn-default-border);
+    }
+
+// forms.scss Override
+  .btn:focus,
+  .button:focus{
+    outline: none !important;
+  }
+
+//	code.scss Override
+  kbd {
+    background-color: #5c5c5c;
+  }
+
+
+// forms.scss Override
+  .has-success {
+    @include form-control-validation($brand-success, $brand-success, $state-success-bg);
+  }
+  .has-warning {
+    @include form-control-validation($brand-warning, $brand-warning, $state-warning-bg);
+  }
+  .has-error {
+    @include form-control-validation($brand-danger, $brand-danger, $state-danger-bg);
+  }
+
+// type.scss Override
+  mark,
+  .mark {
+    background-color: #6abfff;
+    padding: .2em;
+  }
+}
+
+@include text-emphasis-variant('.text-success', $brand-success);
+@include text-emphasis-variant('.text-info', $brand-info);
+@include text-emphasis-variant('.text-warning', $brand-warning);
+@include text-emphasis-variant('.text-danger', $brand-danger);
+
+// progress-bars.scss Override
+.progress-bar-white{
+  @include progress-bar-variant($brand-white);
+}
+
+.progress-bar-curious-blue{
+  @include progress-bar-variant($brand-curious-blue);
+}
+.progress-bar-endaveour{
+  @include progress-bar-variant($brand-endaveour);
+}
+.progress-bar-minsk{
+  @include progress-bar-variant($brand-minsk);
+}
+.progress-bar-eminence{
+  @include progress-bar-variant($brand-eminence);
+}
+.progress-bar-violet-eggplant{
+  @include progress-bar-variant($brand-violet-eggplant);
+}
+.progress-bar-mint-green{
+  @include progress-bar-variant($brand-mint-green);
+}
+.progress-bar-aquamarine{
+  @include progress-bar-variant($brand-aquamarine);
+}
+.progress-bar-malibu{
+  @include progress-bar-variant($brand-malibu);
+}
+.progress-bar-dodger-blue{
+  @include progress-bar-variant($brand-dodger-blue);
+}
+.progress-bar-heliotrope{
+  @include progress-bar-variant($brand-heliotrope);
+}
+.progress-bar-perfume{
+  @include progress-bar-variant($brand-perfume);
+}
+.progress-bar-brand-cerulean{
+  @include progress-bar-variant($brand-cerulean);
+}
+.progress-bar-gray-darker{
+  @include progress-bar-variant($gray-darker);
+}
+.progress-bar-gray-dark{
+  @include progress-bar-variant($gray-dark);
+}
+.progress-bar-gray{
+  @include progress-bar-variant($gray);
+}
+.progress-bar-gray-light{
+  @include progress-bar-variant($gray-light);
+}
+.progress-bar-gray-lighter{
+  @include progress-bar-variant($gray-lighter);
+}
+
+
+// labels.scss Override
+.label-cerulean {
+  @include label-variant($brand-cerulean);
+}
+.label-curious-blue {
+  @include label-variant($brand-curious-blue);
+}
+.label-endaveour {
+  @include label-variant($brand-endaveour);
+}
+.label-minsk {
+  @include label-variant($brand-minsk);
+}
+.label-eminence {
+  @include label-variant($brand-eminence);
+}
+.label-violet-eggplant {
+  @include label-variant($brand-violet-eggplant);
+}
+.label-mint-green {
+  @include label-variant($brand-mint-green);
+}
+.label-aquamarine {
+  @include label-variant($brand-aquamarine);
+}
+.label-malibu {
+  @include label-variant($brand-malibu);
+}
+.label-dodger-blue {
+  @include label-variant($brand-dodger-blue);
+}
+.label-heliotrope {
+  @include label-variant($brand-heliotrope);
+}
+.label-perfume {
+  @include label-variant($brand-perfume);
+}
+
+.label-brand-cerulean {
+  @include label-variant($brand-cerulean);
+}
+.label-gray-darker {
+  @include label-variant($gray-darker);
+}
+.label-gray-dark {
+  @include label-variant($gray-dark);
+}
+.label-gray {
+  @include label-variant($gray);
+}
+.label-gray-light {
+  @include label-variant($gray-light);
+}
+.label-gray-lighter {
+  @include label-variant($gray-lighter);
+}
+.label-white {
+  @include label-variant($brand-white);
+}
+
+.label.label-pill{
+  padding-right: .6em;
+  padding-left: .6em;
+  border-radius: 10rem;
+}
+
+// Labels Outline
+.label.label-outline{
+  background: transparent;
+  border: 1px solid;
+
+  &.label-primary {
+    color: $brand-primary;
+    border-color: $brand-primary;
+  }
+  &.label-success {
+    color: $brand-success;
+    border-color: $brand-success;
+  }
+  &.label-info {
+    color: $brand-info;
+    border-color: $brand-info;
+  }
+  &.label-warning {
+    color: $brand-warning;
+    border-color: $brand-warning;
+  }
+  &.label-danger {
+    color: $brand-danger;
+    border-color: $brand-danger;
+  }
+
+  &.label-cerulean {
+    color: $brand-cerulean;
+    border-color: $brand-cerulean;
+  }
+  &.label-curious-blue {
+    color: $brand-curious-blue;
+    border-color: $brand-curious-blue;
+  }
+  &.label-endaveour {
+    color: $brand-endaveour;
+    border-color: $brand-endaveour;
+  }
+  &.label-minsk {
+    color: $brand-minsk;
+    border-color: $brand-minsk;
+  }
+  &.label-eminence {
+    color: $brand-eminence;
+    border-color: $brand-eminence;
+  }
+  &.label-violet-eggplant {
+    color: $brand-violet-eggplant;
+    border-color: $brand-violet-eggplant;
+  }
+  &.label-mint-green {
+    color: $brand-mint-green;
+    border-color: $brand-mint-green;
+  }
+  &.label-aquamarine {
+    color: $brand-aquamarine;
+    border-color: $brand-aquamarine;
+  }
+  &.label-malibu {
+    color: $brand-malibu;
+    border-color: $brand-malibu;
+  }
+  &.label-dodger-blue {
+    color: $brand-dodger-blue;
+    border-color: $brand-dodger-blue;
+  }
+  &.label-heliotrope {
+    color: $brand-heliotrope;
+    border-color: $brand-heliotrope;
+  }
+  &.label-perfume {
+    color: $brand-perfume;
+    border-color: $brand-perfume;
+  }
+
+  &.label-brand-cerulean {
+    color: $brand-cerulean;
+    border-color: $brand-cerulean;
+  }
+  &.label-gray-darker {
+    color: $gray-darker;
+    border-color: $gray-darker;
+  }
+  &.label-gray-dark {
+    color: $gray-dark;
+    border-color: $gray-dark;
+  }
+  &.label-gray {
+    color: $gray;
+    border-color: $gray;
+  }
+  &.label-gray-light {
+    color: $gray-light;
+    border-color: $gray-light;
+  }
+  &.label-gray-lighter {
+    color: $gray-lighter;
+    border-color: $gray-lighter;
+  }
+  &.label-white {
+  color: $brand-white;
+  border-color: $brand-white;
+  }
+}
+
+// badges.scss override
+.badge{
+	//Colors
+	&.badge-primary {
+	  background-color: $brand-primary;
+	}
+	&.badge-success {
+	  background-color: $brand-success;
+	}
+	&.badge-info {
+	  background-color: $brand-info;
+	}
+	&.badge-warning {
+	  background-color: $brand-warning;
+	}
+	&.badge-danger {
+	  background-color: $brand-danger;
+	}
+	&.badge-cerulean {
+	  background-color: $brand-cerulean;
+	}
+	&.badge-curious-blue {
+	  background-color: $brand-curious-blue;
+	}
+	&.badge-endaveour {
+	  background-color: $brand-endaveour;
+	}
+	&.badge-minsk {
+	  background-color: $brand-minsk;
+	}
+	&.badge-eminence {
+	  background-color: $brand-eminence;
+	}
+	&.badge-violet-eggplant {
+	  background-color: $brand-violet-eggplant;
+	}
+	&.badge-mint-green {
+	  background-color: $brand-mint-green;
+	}
+	&.badge-aquamarine {
+	  background-color: $brand-aquamarine;
+	}
+	&.badge-malibu {
+	  background-color: $brand-malibu;
+	}
+	&.badge-dodger-blue {
+	  background-color: $brand-dodger-blue;
+	}
+	&.badge-heliotrope {
+	  background-color: $brand-heliotrope;
+	}
+	&.badge-perfume {
+	  background-color: $brand-perfume;
+	}
+	&.badge-brand-cerulean {
+	  background-color: $brand-cerulean;
+	}
+	&.badge-gray-darker {
+	  background-color: $gray-darker;
+	}
+	&.badge-gray-dark {
+	  background-color: $gray-dark;
+	}
+	&.badge-gray {
+	  background-color: $gray;
+	}
+	&.badge-gray-light {
+	  background-color: $gray-light;
+	}
+	&.badge-gray-lighter {
+	  background-color: $gray-lighter;
+	}
+    &.badge-white {
+	  background-color: $brand-white;
+	}
+
+	// Badges Outline
+	&.badge-outline {
+		border-width: 1px;
+		border-style: solid;
+		background: none;
+		color: $badge-bg;
+		border-color: $badge-bg;
+		&.badge-primary {
+			color: $brand-primary;
+			border-color: $brand-primary;
+		}
+		&.badge-success {
+			color: $brand-success;
+			border-color: $brand-success;
+		}
+		&.badge-info {
+			color: $brand-info;
+			border-color: $brand-info;
+		}
+		&.badge-warning {
+			color: $brand-warning;
+			border-color: $brand-warning;
+		}
+		&.badge-danger {
+			color: $brand-danger;
+			border-color: $brand-danger;
+		}
+		&.badge-cerulean {
+			color: $brand-cerulean;
+			border-color: $brand-cerulean;;
+		}
+		&.badge-curious-blue {
+			color: $brand-curious-blue;
+			border-color: $brand-curious-blue;
+		}
+		&.badge-endaveour {
+			color: $brand-endaveour;
+			border-color: $brand-endaveour;
+		}
+		&.badge-minsk {
+			color: $brand-minsk;
+			border-color: $brand-minsk;
+		}
+		&.badge-eminence {
+			color: $brand-eminence;
+			border-color: $brand-eminence;
+		}
+		&.badge-violet-eggplant {
+			color: $brand-violet-eggplant;
+			border-color: $brand-violet-eggplant;
+		}
+		&.badge-mint-green {
+			color: $brand-mint-green;
+			border-color: $brand-mint-green;
+		}
+		&.badge-aquamarine {
+			color: $brand-aquamarine;
+			border-color: $brand-aquamarine;
+		}
+		&.badge-malibu {
+			color: $brand-malibu;
+			border-color: $brand-malibu;
+		}
+		&.badge-dodger-blue {
+			color: $brand-dodger-blue;
+			border-color: $brand-dodger-blue;
+		}
+		&.badge-heliotrope {
+			color: $brand-heliotrope;
+			border-color: $brand-heliotrope;
+		}
+		&.badge-perfume {
+			color: $brand-perfume;
+			border-color: $brand-perfume;
+		}
+		&.badge-brand-cerulean {
+			color: $brand-cerulean;
+			border-color: $brand-cerulean;
+		}
+		&.badge-gray-darker {
+			color: $gray-darker;
+			border-color: $gray-darker;
+		}
+		&.badge-gray-dark {
+			color: $gray-dark;
+			border-color: $gray-dark;
+		}
+		&.badge-gray {
+			color: $gray;
+			border-color: $gray;
+		}
+		&.badge-gray-light {
+			color: $gray-light;
+			border-color: $gray-light;
+		}
+		&.badge-gray-lighter {
+			color: $gray-lighter;
+			border-color: $gray-lighter;
+		}
+        &.badge-white {
+			color: $brand-white;
+			border-color: $brand-white;
+		}
+	}
+}
+
+// forms.scss override
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  padding: $padding-base-vertical $padding-base-horizontal;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $input-color;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  @include box-shadow(none);
+  @include transition(none);
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus;
+
+  // Placeholder
+  @include placeholder;
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    border: 0;
+    background-color: transparent;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: $input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+  }
+
+  // [converter] extracted textarea& to textarea.form-control
+}
+
+// _modals.scss Override
+// Actual modal
+.modal-content {
+  position: relative;
+  background-color: $modal-content-bg;
+  border: 2px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: 2px solid $modal-content-border-color;
+  border-radius: $border-radius-large;
+  @include box-shadow(0 3px 9px rgba(0,0,0,.0));
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: 0;
+}
+
+// _navbars.scss Override
+
+// Primary Navbar
+.navbar-primary {
+  background-color: $navbar-primary-bg;
+  border-color: $navbar-primary-border;
+
+  .navbar-brand {
+    color: $navbar-primary-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-primary-brand-hover-color;
+      background-color: $navbar-primary-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-primary-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-primary-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-primary-link-hover-color;
+        background-color: $navbar-primary-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-primary-link-active-color;
+        background-color: $navbar-primary-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-primary-link-disabled-color;
+        background-color: $navbar-primary-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: $navbar-primary-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $navbar-primary-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-primary-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken($navbar-primary-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-primary-link-active-bg;
+        color: $navbar-primary-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: $navbar-primary-border;
+        }
+        .divider {
+          background-color: $navbar-primary-border;
+        }
+        > li > a {
+          color: $navbar-primary-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-primary-link-hover-color;
+            background-color: $navbar-primary-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-primary-link-active-color;
+            background-color: $navbar-primary-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-primary-link-disabled-color;
+            background-color: $navbar-primary-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $navbar-primary-link-color;
+    &:hover {
+      color: $navbar-primary-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-primary-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-primary-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-primary-link-disabled-color;
+      }
+    }
+  }
+}
+
+
+// info Navbar
+.navbar-info {
+  background-color: $navbar-info-bg;
+  border-color: $navbar-info-border;
+
+  .navbar-brand {
+    color: $navbar-info-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-info-brand-hover-color;
+      background-color: $navbar-info-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-info-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-info-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-info-link-hover-color;
+        background-color: $navbar-info-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-info-link-active-color;
+        background-color: $navbar-info-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-info-link-disabled-color;
+        background-color: $navbar-info-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: $navbar-info-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $navbar-info-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-info-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken($navbar-info-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-info-link-active-bg;
+        color: $navbar-info-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: $navbar-info-border;
+        }
+        .divider {
+          background-color: $navbar-info-border;
+        }
+        > li > a {
+          color: $navbar-info-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-info-link-hover-color;
+            background-color: $navbar-info-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-info-link-active-color;
+            background-color: $navbar-info-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-info-link-disabled-color;
+            background-color: $navbar-info-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $navbar-info-link-color;
+    &:hover {
+      color: $navbar-info-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-info-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-info-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-info-link-disabled-color;
+      }
+    }
+  }
+}
+
+
+// success Navbar
+.navbar-success {
+  background-color: $navbar-success-bg;
+  border-color: $navbar-success-border;
+
+  .navbar-brand {
+    color: $navbar-success-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-success-brand-hover-color;
+      background-color: $navbar-success-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-success-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-success-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-success-link-hover-color;
+        background-color: $navbar-success-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-success-link-active-color;
+        background-color: $navbar-success-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-success-link-disabled-color;
+        background-color: $navbar-success-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: $navbar-success-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $navbar-success-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-success-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken($navbar-success-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-success-link-active-bg;
+        color: $navbar-success-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: $navbar-success-border;
+        }
+        .divider {
+          background-color: $navbar-success-border;
+        }
+        > li > a {
+          color: $navbar-success-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-success-link-hover-color;
+            background-color: $navbar-success-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-success-link-active-color;
+            background-color: $navbar-success-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-success-link-disabled-color;
+            background-color: $navbar-success-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $navbar-success-link-color;
+    &:hover {
+      color: $navbar-success-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-success-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-success-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-success-link-disabled-color;
+      }
+    }
+  }
+}
+
+
+// Warning Navbar
+.navbar-warning {
+  background-color: $navbar-warning-bg;
+  border-color: $navbar-warning-border;
+
+  .navbar-brand {
+    color: $navbar-warning-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-warning-brand-hover-color;
+      background-color: $navbar-warning-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-warning-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-warning-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-warning-link-hover-color;
+        background-color: $navbar-warning-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-warning-link-active-color;
+        background-color: $navbar-warning-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-warning-link-disabled-color;
+        background-color: $navbar-warning-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: $navbar-warning-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $navbar-warning-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-warning-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken($navbar-warning-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-warning-link-active-bg;
+        color: $navbar-warning-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: $navbar-warning-border;
+        }
+        .divider {
+          background-color: $navbar-warning-border;
+        }
+        > li > a {
+          color: $navbar-warning-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-warning-link-hover-color;
+            background-color: $navbar-warning-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-warning-link-active-color;
+            background-color: $navbar-warning-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-warning-link-disabled-color;
+            background-color: $navbar-warning-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $navbar-warning-link-color;
+    &:hover {
+      color: $navbar-warning-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-warning-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-warning-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-warning-link-disabled-color;
+      }
+    }
+  }
+}
+
+
+// Danger Navbar
+.navbar-danger {
+  background-color: $navbar-danger-bg;
+  border-color: $navbar-danger-border;
+
+  .navbar-brand {
+    color: $navbar-danger-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-danger-brand-hover-color;
+      background-color: $navbar-danger-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-danger-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-danger-link-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-danger-link-hover-color;
+        background-color: $navbar-danger-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-danger-link-active-color;
+        background-color: $navbar-danger-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-danger-link-disabled-color;
+        background-color: $navbar-danger-link-disabled-bg;
+      }
+    }
+  }
+
+  // Darken the responsive nav toggle
+  .navbar-toggle {
+    border-color: $navbar-danger-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $navbar-danger-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-danger-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: darken($navbar-danger-bg, 7%);
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-danger-link-active-bg;
+        color: $navbar-danger-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: $navbar-danger-border;
+        }
+        .divider {
+          background-color: $navbar-danger-border;
+        }
+        > li > a {
+          color: $navbar-danger-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-danger-link-hover-color;
+            background-color: $navbar-danger-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-danger-link-active-color;
+            background-color: $navbar-danger-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-danger-link-disabled-color;
+            background-color: $navbar-danger-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $navbar-danger-link-color;
+    &:hover {
+      color: $navbar-danger-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-danger-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-danger-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-danger-link-disabled-color;
+      }
+    }
+  }
+}

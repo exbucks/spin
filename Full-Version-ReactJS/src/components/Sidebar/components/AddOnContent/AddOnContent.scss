@@ -1,0 +1,25 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+@import '~@owczar/spin-template/src/scss/app/variables';
+
+
+.defaultAvatarContainer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.bigIconsAvatarContainer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.slimAvatarContainer {
+    min-height: $navbar-height;
+    position: relative;
+
+    > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

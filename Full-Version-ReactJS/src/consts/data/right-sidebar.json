@@ -1,0 +1,273 @@
+{
+    "Weather": {
+        "Status": "Partly cloudy today, temperature minimum 11º, maximum 15º"
+    },
+    "Stock": [
+        {
+            "Name": "DOW J",
+            "Value": "{{f2:2000:20000}}",
+            "Diff": "{{f2:-10:10}}"
+        },
+        {
+            "Name": "APPL",
+            "Value": "{{f2:2000:20000}}",
+            "Diff": "{{f2:-10:10}}"
+        },
+        {
+            "Name": "CAC",
+            "Value": "{{f2:2000:20000}}",
+            "Diff": "{{f2:-10:10}}"
+        },
+        {
+            "Name": "DAX",
+            "Value": "{{f2:2000:20000}}",
+            "Diff": "{{f2:-10:10}}"
+        }
+    ],
+    "Emails": [
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Time": "{{faker:date.recent}}",
+            "Content": "{{faker:lorem.sentence}}",
+            "Avatar": "{{faker:image.avatar}}",
+            "Status": "Online"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Time": "{{faker:date.recent}}",
+            "Content": "{{faker:lorem.sentence}}",
+            "Avatar": "{{faker:image.avatar}}",
+            "Status": "Busy"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Time": "{{faker:date.recent}}",
+            "Content": "{{faker:lorem.sentence}}",
+            "Avatar": "{{faker:image.avatar}}",
+            "Status": "Away"
+        }
+    ],
+    "Tasks": [
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Active": true
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Active": false
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Active": false
+        }
+    ],
+    "SystemStatus": {
+        "Components": [
+            {
+                "Name": "CPU",
+                "Value": "{{n:10:100}}"
+            },
+            {
+                "Name": "Drive",
+                "Value": "{{n:10:100}}"
+            },
+            {
+                "Name": "Memory",
+                "Value": "{{n:10:100}}"
+            }
+        ],
+        "Network": {
+            "UpStream": "{{n:20:500}}",
+            "DownStream": "{{n:20:500}}"
+        },
+        "System": [
+            {
+                "Name": "Disabled",
+                "Value": "1:36"
+            },
+            {
+                "Name": "Processing",
+                "Value": "{{n:1000:10000}}"
+            },
+            {
+                "Name": "CPU User",
+                "Value": "16%"
+            },
+            {
+                "Name": "CPU System",
+                "Value": "19%"
+            },
+            {
+                "Name": "CPU Free",
+                "Value": "65%"
+            }
+        ],
+        "Lan": {
+            "Ip": "{{faker:internet.ip}}",
+            "Mac": "{{faker:internet.mac}}",
+            "UpStream": {
+                "Current": "{{f2:100:800}}",
+                "Total": "{{f2:100:800}}"
+            },
+            "DownStream": {
+                "Current": "{{f2:100:800}}",
+                "Total": "{{f2:100:800}}"
+            }
+        },
+        "VirtualMachines": [
+            {
+                "Name": "Macintosh",
+                "Performace": "{{n:200:800}}",
+                "Space": {
+                    "Used": "{{f2:20:100}}",
+                    "Total": 164
+                }
+            },
+            {
+                "Name": "Windows",
+                "Performace": "{{n:200:800}}",
+                "Space": {
+                    "Used": "{{f2:20:200}}",
+                    "Total": 224
+                }
+            },
+            {
+                "Name": "Linux",
+                "Performace": "{{n:200:800}}",
+                "Space": {
+                    "Used": "{{f2:20:200}}",
+                    "Total": 224
+                }
+            }
+        ]
+    },
+    "Chat": {
+        "List": [
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Online",
+                "UnreadMessages": {
+                    "Count": "4"
+                }
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Online"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Online",
+                "UnreadMessages": {
+                    "Count": "12",
+                    "Recent": true
+                }
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Busy"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Busy"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Busy"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Away"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Away"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Away"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Offline"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Offline"
+            },
+            {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Title": "{{faker:name.jobTitle}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Status": "Offline"
+            }
+        ],
+        "ActiveChat": {
+            "Receiver": "{{fake:[name.firstName] [name.lastName]}}",
+            "Status": "Online",
+            "Messages": [
+                {
+                    "User": {
+                        "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Status": "Online"
+                    },
+                    "Time": "{{faker:date.recent}}",
+                    "Content": "{{faker:lorem.sentence}}"
+                },
+                {
+                    "User": {
+                        "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Status": "Busy"
+                    },
+                    "Time": "{{faker:date.recent}}",
+                    "Content": "{{faker:lorem.sentence}}",
+                    "Recent": true
+                },
+                {
+                    "User": {
+                        "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Status": "Offline"
+                    },
+                    "Time": "{{faker:date.recent}}",
+                    "Content": "{{faker:lorem.sentence}}"
+                },
+                {
+                    "User": {
+                        "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Status": "Away"
+                    },
+                    "Time": "{{faker:date.recent}}",
+                    "Content": "{{faker:lorem.sentence}}"
+                }
+            ]
+        }
+    }
+}

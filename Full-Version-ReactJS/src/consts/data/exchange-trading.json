@@ -1,0 +1,34 @@
+{
+  "pricingSummary": {
+    "LastPrice": "{{f2:150:500}}",
+    "DailyChange": {
+      "Value": "{{f2:-200:200}}",
+      "Diff": "{{f2:-20: 80}}"
+    },
+    "DailyRange": {
+      "From": "{{f2:150:300}}",
+      "To": "{{f2:300:500}}"
+    },
+    "TodayOpen": "{{f2:150:500}}",
+    "Volume": "{{n:1000:8000}}",
+    "MarketCap": "{{f2:1000000000:8000000000}}",
+    "Total": "{{n:5000000:50000000}}"
+  },
+  "News": [
+    {
+      "Date": "01-July-2012",
+      "Title": "Ut alias deleniti ducimus nemo",
+      "Content": "Est veniam maiores odio quo. Fugit possimus totam inventore non iusto voluptatem sed. Similique modi magni eaque sit. In et aut maiores est."
+    },
+    {
+      "Date": "05-July-2011",
+      "Title": "Soluta iusto omnis repellat odit nam aut",
+      "Content": "Beatae sit expedita non doloribus ut et qui. Voluptates atque voluptatem expedita sed laborum quo cupiditate earum sint. Ut ratione minus libero praesentium velit. Autem aut quisquam nesciunt placeat est eius quasi quaerat cupiditate."
+    },
+    {
+      "Date": "06-January-2013",
+      "Title": "Animi non ut numquam harum fuga velit inventore",
+      "Content": "Architecto dolores voluptatem et consequatur voluptas corrupti et. Enim recusandae nobis sint laudantium id et. Ipsam architecto non voluptatem sunt repudiandae doloribus. Nostrum totam ipsam hic est in quo et amet. Unde pariatur et modi dolore asperiores harum rerum consequatur nisi."
+    }
+  ]
+}

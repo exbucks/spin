@@ -1,0 +1,15 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.leftPanelDivider {
+    margin-bottom: 1rem;
+}
+
+.leftPanelSection {
+    margin-bottom: 3rem;
+    background: none;
+}
+
+.taskAvatar,
+.taskLabel {
+    margin: 0 2.5px;
+}

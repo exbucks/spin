@@ -1,0 +1,39 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.messagePanelHeader {
+    flex-wrap: wrap;
+
+    &.noBackLink {
+        justify-content: flex-end;
+    }
+
+    .actionButtons {
+        flex-shrink: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .messagePanelHeader .actionButtons {
+        flex-shrink: 1;
+    }
+}
+
+.messageHeader {
+    .messageHeaderDate {
+        flex-shrink: 0;
+        text-align: right;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .messageHeader .senderEmail samp {
+        display: block;
+    }
+}
+
+.messageSubject {
+    font-weight: 300;
+    margin: 0 0 1.5rem 0;
+}

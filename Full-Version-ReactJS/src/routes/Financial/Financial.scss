@@ -1,0 +1,62 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .cashSummary {
+        .cashSummaryPanel {
+            background-color: $gray-dark;
+            border: none;
+        }
+
+        .cashSummaryValue {
+            font-weight: 300;
+            margin-bottom: 0;
+            font-size: 24px;
+            color: $brand-white;
+            line-height: 1.6;
+            margin-bottom: 9.5px;
+        }
+
+        .cashSummaryDiffInc {
+            color: $brand-success;
+        }
+
+        .cashSummaryDiffDec {
+            color: $brand-danger;
+        }
+    }
+
+    .settingsListItem {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        background: none;
+    }
+
+    .boxHeader {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        .boxHeaderTitle {
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+
+    table {
+        th {
+            font-size: 76%;
+            color: $text-muted;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .buttonWithIcon > i {
+        margin-left: 1rem;
+    }
+}

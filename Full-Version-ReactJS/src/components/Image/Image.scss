@@ -1,0 +1,37 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.imageWrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.iconPlaceholder,
+.imagePlaceholder,
+.image {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.imagePlaceholder,
+.iconPlaceholder {
+    z-index: 5;
+    position: relative;
+}
+
+.iconPlaceholder {
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.imagePlaceholder {
+
+}
+
+.image {
+    z-index: 1;
+}

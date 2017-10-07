@@ -1,0 +1,15 @@
+.wideMenuContainer > li {
+    position: static;
+}
+
+.wideMenu {
+    position: static;
+
+    .topMenuContent {
+        padding: 20px 30px;
+    }
+
+    > ul {
+        width: 100%;
+    }
+}

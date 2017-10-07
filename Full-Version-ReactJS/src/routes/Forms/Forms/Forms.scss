@@ -1,0 +1,24 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    margin-top: 3rem;
+}
+
+.sectionLabel {
+    color: $text-muted;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+.singleTable {
+    th, td {
+        text-align: left !important;
+    }
+}
+
+.switchCustomClass > :first-child {
+    background-color: #ab199f;
+}

@@ -1,0 +1,23 @@
+@import "~@owczar/spin-template/src/scss/bootstrap/variables";
+
+$rdl-input-bg: $input-bg;
+$rdl-input-disabled-bg: $input-bg-disabled;
+$rdl-input-border: $input-border;
+$rdl-input-color: $input-color;
+$rdl-btn-bg: $btn-default-bg;
+$rdl-btn-border: $btn-default-border;
+$rdl-btn-color: $btn-default-color;
+$rdl-line-height: 1.428571429;
+
+@import "~react-dual-listbox/src/scss/react-dual-listbox";
+
+body {
+    .rdl-move {
+        background: $rdl-btn-bg;
+    }
+
+    .rdl-filter,
+    .rdl-control {
+        background: $rdl-input-bg;
+    }
+}

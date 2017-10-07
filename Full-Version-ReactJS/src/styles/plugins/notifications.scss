@@ -1,0 +1,12 @@
+/*
+    Styles override for react-notification-system-redux
+    (https://github.com/gor181/react-notification-system-redux)
+*/
+
+.notifications-wrapper .notification {
+    padding: 10px 15px !important;
+
+    .notification-title {
+        color: inherit !important;
+    }
+}

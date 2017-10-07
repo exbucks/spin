@@ -1,0 +1,370 @@
+{
+    "System": {
+        "CPU": {
+            "Name": "Intel Celeron G1610 @2.60Ghz",
+            "Cores": [
+                {
+                    "No": 0,
+                    "LoadPercentage": 60
+                },
+                {
+                    "No": 1,
+                    "LoadPercentage": 12
+                }
+            ]
+        },
+        "Memory": {
+            "Name": "GSkill 2 x 8 GB DDR3 @1333 Mhz",
+            "Type": "Ram",
+            "TotalSize": 16,
+            "Allocated": 5079,
+            "InCache": 3789,
+            "Available": 7516
+        },
+        "Build": "Spear x64 (Early 2014)"
+    },
+    "Network": {
+        "Interface": "eth0",
+        "Name": "Intel Celeron G1610 @2.60Ghz",
+        "Traffic": [
+            8,
+            4,
+            0,
+            0,
+            0,
+            0,
+            1,
+            4,
+            4,
+            10,
+            10,
+            10,
+            10,
+            0,
+            0,
+            0,
+            4,
+            6,
+            5,
+            9,
+            10
+        ]
+    },
+    "Temperatures": [
+        {
+            "Name": "CPU",
+            "Status": "idle",
+            "MinTemp": "19",
+            "MaxTemp": "25",
+            "AverageTemp": "23",
+            "History": [
+                22,
+                21,
+                22,
+                23,
+                20,
+                25,
+                22,
+                24,
+                29,
+                30,
+                30,
+                30,
+                30,
+                20,
+                22,
+                20,
+                24,
+                26,
+                22,
+                29,
+                27
+            ]
+        },
+        {
+            "Name": "HDD1 WD30EZRX",
+            "Status": "ada0",
+            "MinTemp": "19",
+            "MaxTemp": "25",
+            "AverageTemp": "23",
+            "History": [
+                28,
+                20,
+                22,
+                27,
+                26,
+                25,
+                24,
+                23,
+                29,
+                30,
+                20,
+                30,
+                30,
+                20,
+                22,
+                20,
+                22,
+                23,
+                22,
+                20,
+                20
+            ]
+        },
+        {
+            "Name": "HDD2 WD30EZRX",
+            "MinTemp": "19",
+            "MaxTemp": "25",
+            "AverageTemp": "23",
+            "History": [
+                30,
+                29,
+                26,
+                22,
+                20,
+                20,
+                21,
+                25,
+                20,
+                30,
+                20,
+                30,
+                30,
+                20,
+                22,
+                20,
+                22,
+                20,
+                20,
+                21,
+                22
+            ]
+        }
+    ],
+    "Volumes": [
+        {
+            "Path": "/mnt/volume1",
+            "Size": {
+                "Total": 2.72,
+                "Used": 0.81,
+                "Free": 1.91
+            }
+        },
+        {
+            "Path": "/mnt/volume2",
+            "Size": {
+                "Total": 4.94,
+                "Used": 1.98,
+                "Free": 2.96
+            }
+        },
+        {
+            "Path": "/mnt/volume3",
+            "Size": {
+                "Total": 8.01,
+                "Used": 2.64,
+                "Free": 5.37
+            }
+        },
+        {
+            "Path": "/mnt/volume3",
+            "Size": {
+                "Total": 8.01,
+                "Used": 3.84,
+                "Free": 4
+            }
+        }
+    ],
+    "Drives": [
+        {
+            "Name": "HDD1",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 3.16,
+                "Total": 4.62
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD1",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 3.16,
+                "Total": 4.62
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD2",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 2.59,
+                "Total": 7.5
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD3",
+            "Adapter": "ada2",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 2.16,
+                "Total": 7.7
+            },
+            "Status": "Degraded"
+        },
+        {
+            "Name": "HDD4",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 2.43,
+                "Total": 4.29
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD5",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 4.76,
+                "Total": 7.72
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD2",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume3",
+            "Size": {
+                "Used": 6.1,
+                "Total": 6.77
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD3",
+            "Adapter": "ada2",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 2.08,
+                "Total": 8.88
+            },
+            "Status": "Degraded"
+        },
+        {
+            "Name": "HDD4",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 3.86,
+                "Total": 6.02
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD5",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 7.56,
+                "Total": 9.48
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD2",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 1.13,
+                "Total": 1.44
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD3",
+            "Adapter": "ada2",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 2.06,
+                "Total": 5.36
+            },
+            "Status": "Degraded"
+        },
+        {
+            "Name": "HDD4",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 2.4,
+                "Total": 9.55
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD1",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 3.16,
+                "Total": 4.62
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD5",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 0.9,
+                "Total": 4.06
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD1",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 6.69,
+                "Total": 7.62
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD2",
+            "Adapter": "ada1",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 3.74,
+                "Total": 9.11
+            },
+            "Status": "Healthy"
+        },
+        {
+            "Name": "HDD3",
+            "Adapter": "ada2",
+            "Mount": "/mnt/volume2",
+            "Size": {
+                "Used": 3.52,
+                "Total": 3.54
+            },
+            "Status": "Degraded"
+        },
+        {
+            "Name": "HDD1",
+            "Adapter": "ada0",
+            "Mount": "/mnt/volume1",
+            "Size": {
+                "Used": 2.83,
+                "Total": 4.28
+            },
+            "Status": "Healthy"
+        }
+    ]
+}

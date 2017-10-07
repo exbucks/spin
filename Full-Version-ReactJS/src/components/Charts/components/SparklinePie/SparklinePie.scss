@@ -1,0 +1,72 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+@import '~chartist/dist/scss/chartist.scss';
+
+@mixin darken-fill($refColor) {
+    fill: rgba($refColor, .1);
+}
+
+.ctPieChart {
+    display: inline-block;
+
+    .ctSlicePie {
+        @extend .ct-slice-pie;
+    }
+
+    .secondaryPart { }
+
+    // Data Colors
+    .grayBase .ctSlicePie { fill: $gray-base}
+    .grayDarker .ctSlicePie { fill: $gray-darker }
+    .grayDark .ctSlicePie { fill: $gray-dark }
+    .gray .ctSlicePie { fill: $gray }
+    .grayLight .ctSlicePie { fill: $gray-light }
+    .grayLighter .ctSlicePie { fill: $gray-lighter }
+
+    .brandWhite .ctSlicePie { fill: $brand-white }
+    .brandPrimary .ctSlicePie { fill: $brand-primary }
+    .brandSuccess .ctSlicePie { fill: $brand-success }
+    .brandInfo .ctSlicePie { fill: $brand-info }
+    .brandWarning .ctSlicePie { fill: $brand-warning }
+    .brandDanger .ctSlicePie { fill: $brand-danger }
+
+    .brandCerulean .ctSlicePie { fill: $brand-cerulean }
+    .brandCuriousBlue .ctSlicePie { fill: $brand-curious-blue }
+    .brandEndaveour .ctSlicePie { fill: $brand-endaveour }
+    .brandMinsk .ctSlicePie { fill: $brand-minsk }
+    .brandEminence .ctSlicePie { fill: $brand-eminence }
+    .brandVioletEggplant .ctSlicePie { fill: $brand-violet-eggplant}
+    .brandMintGreen .ctSlicePie { fill: $brand-mint-green }
+    .brandAquamarine .ctSlicePie { fill: $brand-aquamarine }
+    .brandMalibu .ctSlicePie { fill: $brand-malibu }
+    .brandDodgerBlue .ctSlicePie { fill: $brand-dodger-blue }
+    .brandHeliotrope .ctSlicePie { fill: $brand-heliotrope }
+    .brandPerfume .ctSlicePie { fill: $brand-perfume }
+
+    // Darken Alternatives
+    .grayBaseDark .ctSlicePie { @include darken-fill($gray-base); }
+    .grayDarkerDark .ctSlicePie { @include darken-fill($gray-darker); }
+    .grayDarkDark .ctSlicePie { @include darken-fill($gray-dark); }
+    .grayDark .ctSlicePie { @include darken-fill($gray); }
+    .grayLightDark .ctSlicePie { @include darken-fill($gray-light); }
+    .grayLighterDark .ctSlicePie { @include darken-fill($gray-lighter); }
+
+    .brandWhiteDark .ctSlicePie { @include darken-fill($brand-white); }
+    .brandPrimaryDark .ctSlicePie { @include darken-fill($brand-primary); }
+    .brandSuccessDark .ctSlicePie { @include darken-fill($brand-success); }
+    .brandInfoDark .ctSlicePie { @include darken-fill($brand-info); }
+    .brandWarningDark .ctSlicePie { @include darken-fill($brand-warning); }
+    .brandDangerDark .ctSlicePie { @include darken-fill($brand-danger); }
+
+    .brandCeruleanDark .ctSlicePie { @include darken-fill($brand-cerulean); }
+    .brandCuriousBlueDark .ctSlicePie { @include darken-fill($brand-curious-blue); }
+    .brandEndaveourDark .ctSlicePie { @include darken-fill($brand-endaveour); }
+    .brandMinskDark .ctSlicePie { @include darken-fill($brand-minsk); }
+    .brandEminenceDark .ctSlicePie { @include darken-fill($brand-eminence); }
+    .brandVioletEggplantDark .ctSlicePie { @include darken-fill($brand-violet-eggplant); }
+    .brandMintGreenDark .ctSlicePie { @include darken-fill($brand-mint-green); }
+    .brandAquamarineDark .ctSlicePie { @include darken-fill($brand-aquamarine); }
+    .brandMalibuDark .ctSlicePie { @include darken-fill($brand-malibu); }
+    .brandDodgerBlueDark .ctSlicePie { @include darken-fill($brand-dodger-blue); }
+    .brandHeliotropeDark .ctSlicePie { @include darken-fill($brand-heliotrope); }
+    .brandPerfumeDark .ctSlicePie { @include darken-fill($brand-perfume); }
+}

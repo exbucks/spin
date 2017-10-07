@@ -1,0 +1,39 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.panelHeader {
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.centerCol {
+    margin: 0 auto;
+    float: none;
+}
+
+.toHomeLink {
+    display: block;
+    min-height: 80px;
+    position: relative;
+
+    > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.panelWhite {
+    background-color: $brand-white;
+}
+
+.invoiceTable {
+    th {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: $text-muted;
+    }
+
+    border-bottom: 1px solid $gray-dark;
+}

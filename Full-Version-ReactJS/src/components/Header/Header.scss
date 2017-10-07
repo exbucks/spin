@@ -1,0 +1,14 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.simpleHeaderWrap {
+    margin: 0 0 19px;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 8.5px;
+
+    .headerPart {
+        > h1 {
+            margin: .67em 0;
+            font-size: 2em;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "Payments": {
+        "Today": "3267",
+        "ThisMonth": "0"
+    },
+    "Invoices": {
+        "Due": "7762.01",
+        "Overdue": "2342"
+    },
+    "AllTasks": {
+        "Pending": "3",
+        "Behind": "5",
+        "Completed": "8"
+    },
+    "AllProjects": {
+        "Pending": "12",
+        "Behind": "4",
+        "Completed": "45"
+    },
+    "MyStats": {
+        "ActiveProjects": "5",
+        "OpenTasks": "3",
+        "Support": "15",
+        "ActiveTimers": "0"
+    },
+    "Tasks": [
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": false,
+            "Type": "1"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": true,
+            "Type": "2"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": true,
+            "Type": "0"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": false,
+            "Type": "3"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": false,
+            "Type": "1"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": true,
+            "Type": "2"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": true,
+            "Type": "0"
+        },
+        {
+            "Title": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Complete": false,
+            "Type": "3"
+        }
+    ],
+    "Timeline": [
+        {
+            "Type": "message",
+            "Text": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Title": "Alert",
+            "Disabled": false
+        },
+        {
+            "Type": "message",
+            "Text": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Title": "Warning",
+            "Disabled": false
+        },
+        {
+            "Type": "files",
+            "Text": "6 users have been accepted by the Admin",
+            "Date": "{{faker:date.recent}}",
+            "Title": "Info",
+            "Disabled": false
+        },
+        {
+            "Type": "avatars",
+            "Text": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Title": "Message",
+            "Disabled": false
+        },
+        {
+            "Type": "messageExtra",
+            "Text": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "ExtraText": "{{faker:lorem.paragraph}}",
+            "Title": "Success",
+            "Disabled": false
+        },
+        {
+            "Type": "message",
+            "Text": "{{faker:hacker.phrase}}",
+            "Date": "{{faker:date.recent}}",
+            "Title": "Obsolete",
+            "Disabled": true
+        }
+    ],
+    "MyProjects": [
+        {
+            "Title": "UX for webkom.co",
+            "Status": "Active",
+            "Completness": 67,
+            "Tasks": "3",
+            "DaysDue": "528"
+        },
+        {
+            "Title": "New Company Website",
+            "Status": "Timer",
+            "Completness": 12,
+            "Tasks": "89",
+            "DaysDue": "2"
+        },
+        {
+            "Title": "Charts to Newsletter",
+            "Status": "Open",
+            "Completness": 99,
+            "Tasks": "123",
+            "DaysDue": "5"
+        },
+        {
+            "Title": "Design Concepts",
+            "Status": "Support",
+            "Completness": 89,
+            "Tasks": "0",
+            "DaysDue": "346"
+        }
+    ]
+}

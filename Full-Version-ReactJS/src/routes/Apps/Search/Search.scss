@@ -1,0 +1,23 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.searchHeader {
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.searchResultDefault {
+    margin-bottom: 19px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray;
+}
+
+.searchResultImage {
+    background: none;
+    border: 2px solid $gray-dark;
+}
+
+.searchResultUserHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

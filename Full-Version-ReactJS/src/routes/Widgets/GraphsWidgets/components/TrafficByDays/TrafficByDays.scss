@@ -1,0 +1,10 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.primaryPanel {
+    background: $brand-primary;
+
+    // Header border
+    > *:first-child {
+        border-bottom: none;
+    }
+}

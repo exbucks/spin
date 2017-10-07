@@ -1,0 +1,82 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mediaFix {
+    width: auto;
+}
+
+.customToolBar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    > * + * {
+        margin-left: 10px;
+    }
+
+    .search {
+        flex: 1 1 20%;
+    }
+
+    .actions {
+        flex: 0 0 auto;
+    }
+}
+
+.tableMiddle {
+    table > tbody > tr > td {
+        vertical-align: middle;
+    }
+}
+
+.regionChecks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -3px;
+}
+
+.regionCheck {
+    white-space: nowrap;
+    padding: 0 3px;
+
+    input {
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    label {
+        margin: 0 0 0 3px;
+        vertical-align: middle;
+    }
+}
+
+.priceEditor {
+    display: flex;
+
+    > :nth-child(1) {
+        flex: 1 1 auto;
+    }
+
+    > :nth-child(2) {
+        flex: 1 1 92px;
+    }
+
+    > :nth-child(3) {
+        flex: 0 0 30px;
+    }
+}
+
+.expandedRow {
+    padding: 15px 15px 0 15px;
+
+    .detailsList {
+        > * {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.simpleHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

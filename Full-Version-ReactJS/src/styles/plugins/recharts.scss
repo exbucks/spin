@@ -1,0 +1,28 @@
+.recharts-cartesian-axis-tick-value {
+  font-size: 11px;
+  fill: white !important;
+}
+
+/* Slider */
+.recharts-brush {
+  /* Background Color */
+  > rect:first-child {
+    fill: none;
+  }
+
+  /* Slider Color */
+  .recharts-brush-slide {
+    fill-opacity: 1;
+    fill: RGBA(249, 249, 249, 0.1);
+  }
+}
+
+/* BarGraph Hover */
+.recharts-bar-cursor {
+  fill: RGBA(45, 45, 45, 0.3);
+}
+
+/* Pie Label Text */
+.recharts-pie-label-text {
+  fill: white;
+}

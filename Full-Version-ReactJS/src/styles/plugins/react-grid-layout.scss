@@ -1,0 +1,71 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.react-grid-layout {
+    position: relative;
+    transition: height 200ms ease;
+}
+
+.react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top;
+}
+
+.react-grid-item.cssTransforms {
+    transition-property: transform;
+}
+
+.react-grid-item.resizing {
+    z-index: 1;
+}
+
+.react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: 3;
+}
+
+.react-grid-item.react-grid-placeholder {
+    background: none;
+    z-index: 2;
+    transition-duration: 100ms;
+    user-select: none;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+        content: " ";
+        background: rgba($brand-primary, 0.1);
+        border-radius: 4px;
+        border: 2px dashed rgba($brand-primary, 0.5);
+        height: calc(100% - 15px);
+        width: calc(100% - 30px);
+    }
+}
+
+.react-grid-item:hover > .react-resizable-handle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    bottom: 25px;
+    right: 20px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1em;
+    color: $gray-lighter;
+    box-sizing: border-box;
+    cursor: se-resize;
+    transform: rotate(45deg);
+
+    &:after {
+        content: "\f054";
+    }
+}
+
+.react-grid-item:hover .panel .panel-heading {
+    cursor: grab;
+
+    a {
+        cursor: pointer !important;
+    }
+}

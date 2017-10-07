@@ -1,0 +1,32 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .graphWrap {
+        margin-top: 3rem;
+    }
+
+    .avgResponseTime {
+        margin: 0;
+        font-size: 6rem;
+        font-weight: 300;
+        color: $brand-white;
+
+        small {
+
+        }
+    }
+
+    .responsesSummary span {
+        color: $brand-white;
+    }
+
+    .detailedSummary {
+        margin-top: 3rem;
+
+        table {
+            td:last-child {
+                text-align: left !important;
+            }
+        }
+    }
+}

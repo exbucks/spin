@@ -1,0 +1,33 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+
+.collapsablePanelBodyNoMargin {
+    transition: max-height 0.2s ease-in-out;
+}
+
+.collapsablePanelBody {
+    margin: 15px;
+    @extend .collapsablePanelBodyNoMargin;
+}
+
+.collapsablePanelFooter {
+    transition: max-height 0.2s ease-in-out;
+    padding: 10px 15px;
+    overflow-y: hidden;
+}
+
+.collapsablePanelHeader {
+    font-size: inherit !important;
+}
+
+.collapsedPanelFooter {
+    display: none;
+}
+
+.collapsablePanel {
+    background: none;
+    border: 2px solid $gray-dark;
+}
+
+.collapsedPanel {
+    border-bottom-width: 1px;
+}

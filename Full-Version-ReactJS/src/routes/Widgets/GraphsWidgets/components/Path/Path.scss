@@ -1,0 +1,26 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.wrap {
+    margin-top: 1rem;
+}
+
+.bigValue {
+    font-weight: 300;
+    margin: 1rem 0 0 0;
+    color: #fff;
+    font-size: 32px;
+}
+
+.tableValue {
+    font-size: 10px;
+
+    th {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    td:last-child {
+        text-align: right;
+        color: #fff;
+    }
+}

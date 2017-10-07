@@ -1,0 +1,67 @@
+// Variables Overrides (For the list see: https://github.com/airbnb/react-dates/blob/master/css/variables.scss)
+$react-dates-width-input: 130px !default;
+$react-dates-width-arrow: 24px !default;
+$react-dates-width-tooltip-arrow: 20px !default;
+$react-dates-width-day-picker: 300px !default;
+$react-dates-spacing-vertical-picker: 72px !default;
+
+$react-dates-color-primary: $brand-primary;
+$react-dates-color-primary-dark: $brand-primary;
+$react-dates-color-primary-shade-1: $brand-primary;
+$react-dates-color-primary-shade-2: #266C98;
+$react-dates-color-primary-shade-3: $brand-primary;
+$react-dates-color-primary-shade-4: #266C98;
+$react-dates-color-secondary: #1A1A1A;
+$react-dates-color-white: #1A1A1A;
+$react-dates-color-gray: white;
+$react-dates-color-gray-dark: white;
+$react-dates-color-gray-light: #5C5C58;   // #82888a
+$react-dates-color-gray-lighter: #404040;     // #cacccd
+$react-dates-color-highlighted: #ffe8bc !default;
+
+$react-dates-color-border: #404040;
+$react-dates-color-border-light: #404040;
+$react-dates-color-border-medium: #404040;
+$react-dates-color-placeholder-text: #757575 !default;
+$react-dates-color-text: #484848 !default;
+$react-dates-color-text-focus: white;
+$react-dates-color-focus: $brand-primary;
+
+@import '~react-dates/css/styles';
+
+.DateRangePicker,
+.SingleDatePicker {
+    &__picker--portal,
+    &__picker--full-screen-portal {
+        z-index: 100;
+    }
+}
+
+.DayPicker--portal {
+    z-index: 100;
+}
+
+.CalendarMonthGrid { background: #1A1A1A }
+
+.CalendarDay--selected,
+.CalendarDay--hovered-span,
+.CalendarDay--selected-start,
+.CalendarDay--selected-span,
+.CalendarDay--selected-end,
+.CalendarDay--after-hovered-start,
+.CalendarDay--hovered {
+    color: #fff;
+}
+
+.CalendarDay[class="CalendarDay CalendarDay--valid CalendarDay--hovered"] {
+    border-style: solid;
+}
+/*
+.CalendarDay--hovered {
+    &:not(.CalendarDay--selected-start),
+    &:not(.CalendarDay--hovered-span),
+    &:not(.CalendarDay--selected-end) {
+        border-style: solid;
+    }
+}
+*/

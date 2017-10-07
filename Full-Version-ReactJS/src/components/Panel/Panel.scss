@@ -1,0 +1,33 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.panelNoBg {
+    border: 2px solid $gray-dark;
+    background: $body-bg;
+}
+
+.panelBgLight {
+    background-color: $gray-dark;
+}
+
+.panelBgGray {
+    background-color: $gray-dark;
+}
+
+.flexHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fullBody {
+    padding: 0;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.fullFooter {
+    padding: 0;
+}
+
+.titleReset {
+    font-size: inherit !important;
+}

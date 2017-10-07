@@ -1,0 +1,22 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.table {
+    th {
+        font-size: 10px;
+        font-weight: bold;
+        color: $text-muted;
+        text-transform: uppercase;
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    td {
+        vertical-align: middle !important;
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.tabsContainer {
+    display: flex;
+
+    .tabSettings {
+        flex-grow: 1;
+        text-align: right;
+        border-bottom: 1px solid $gray;
+    }
+}
+
+.companiesTable,
+.peopleTable {
+    margin-top: 1.5rem;
+
+    th {
+        &:first-child {
+            width: 0;
+        }
+    }
+
+    td {
+        padding: 15px 8px !important;
+    }
+}
+
+.companiesTable th:last-child {
+    min-width: 150px;
+}
+
+.companiesPanel,
+.userPanel {
+    .companyPanelName {
+        display: flex;
+        align-items: center;
+    }
+
+    .detailsTab {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+
+    dl dd {
+        overflow: hidden;
+    }
+}

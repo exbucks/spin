@@ -1,0 +1,222 @@
+{
+    "Messages": [
+        {
+            "Unread": true,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Online"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": true,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Away"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "Labels": [
+                "Work"
+            ],
+            "HasAttachment": false,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": true,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Busy"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": false,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Offline"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": false,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Online"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Online"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Online"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": false,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Away"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": false,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Offline"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Busy"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Online"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": false,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Busy"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "Labels": [
+                "Friends"
+            ],
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Offline"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Offline"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Unread": false,
+            "Starred": false,
+            "Sender": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{faker:image.avatar}}",
+                "Address": "{{faker:address.state}}",
+                "Status": "Away"
+            },
+            "Subject": "{{faker:company.catchPhrase}}",
+            "Content": "{{faker:lorem.paragraph}}",
+            "Labels": [
+                "Work"
+            ],
+            "HasAttachment": true,
+            "Date": "{{faker:date.recent}}"
+        }
+    ]
+}

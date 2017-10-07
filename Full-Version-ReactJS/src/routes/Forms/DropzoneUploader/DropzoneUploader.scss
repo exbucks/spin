@@ -1,0 +1,108 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.dropzone {
+    border: 2px dashed $gray-light;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+        border-color: $brand-primary;
+        background-color: rgba($brand-primary, 0.1);
+    }
+}
+
+.icon {
+    margin-bottom: 20px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    &--line {
+        flex: 1 1 auto;
+    }
+
+    &--actions {
+        padding-left: 1rem;
+        flex: 0 0 auto;
+    }
+}
+
+.action {
+    color: $gray-light !important;
+
+    &--active {
+        color: #fff !important;
+    }
+
+    + .action {
+        margin-left: 10px;
+    }
+}
+
+.title-delete {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+
+    > :first-child {
+        flex: 1 1 auto;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    > :last-child {
+        flex: 0 0 auto;
+    }
+}
+
+.grid-panel {
+    padding: 5px;
+}
+
+.list-item {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+
+    + .list-item  {
+        margin-top: 10px;
+    }
+
+    > * {
+        margin-top: 0;
+    }
+}
+
+.ph--large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background-color: $gray;
+    margin-bottom: 5px;
+
+    > i {
+        color: #fff;
+    }
+}
+
+.ph--small {
+    background-color: $gray;
+    padding: 7px 5px;
+    border-radius: 7px;
+
+    > i {
+        color: #fff;
+    }
+}

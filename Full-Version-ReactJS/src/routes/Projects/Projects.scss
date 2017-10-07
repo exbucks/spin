@@ -1,0 +1,82 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.headParagraph {
+    margin-bottom: 3rem;
+}
+
+.itemsGroup {
+    .itemsGroupHeader {
+        margin: 0;
+    }
+
+    .itemsGroupTitle {
+        margin: 0;
+        text-align: center;
+
+        > i {
+            margin-right: 5px;
+        }
+    }
+
+    .itemsGroupValue {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+        color: $brand-white;
+    }
+}
+
+
+.statsList {
+    background: none;
+
+    .statsListItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: solid $gray-dark;
+        border-width: 0 0 1px 0;
+        color: $brand-white;
+        background: none;
+        padding: 5px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.taskTitleComplete {
+    color: $text-muted;
+    text-decoration: line-through;
+}
+
+.panelLight {
+    background-color: $gray-dark;
+    border: none;
+}
+
+.listItemTransparent {
+    background: none;
+}
+
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectTitle {
+    @extend .panelHeader;
+    padding: 9.5px 0;
+}
+
+.panelHeaderTitle {
+    margin: 0;
+}
+
+.slimBarWrap > .slimBar {
+    border-radius: 0;
+    height: 3px;
+    margin-top: 1rem;
+}

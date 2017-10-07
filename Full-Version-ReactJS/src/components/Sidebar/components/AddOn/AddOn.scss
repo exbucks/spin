@@ -1,0 +1,7 @@
+@import '~@owczar/spin-template/src/scss/app/variables';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.addOnContainer {
+    border-right: 1px solid $sidebar-border-color;
+    border-bottom: 1px solid $gray-darker;
+}

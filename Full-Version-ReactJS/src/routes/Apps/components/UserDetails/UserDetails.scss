@@ -1,0 +1,17 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.userDetails {
+    .userPanelName {
+        display: flex;
+        align-items: center;
+    }
+
+    .detailsTab {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+
+    dl dd {
+        overflow: hidden;
+    }
+}

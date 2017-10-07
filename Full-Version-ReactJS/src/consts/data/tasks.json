@@ -1,0 +1,214 @@
+{
+    "ProjectsList": [
+        {
+            "Name": "Analytics Redesign",
+            "NotificationsCount": 13,
+            "Favorited": false
+        },
+        {
+            "Name": "New Company Website",
+            "NotificationsCount": 34,
+            "Favorited": false
+        },
+        {
+            "Name": "Chart to Newsletter",
+            "NotificationsCount": 5,
+            "Favorited": false
+        },
+        {
+            "Name": "UX for webkom.co",
+            "NotificationsCount": 19,
+            "Favorited": false
+        }
+    ],
+    "People": [
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Online"
+        },
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Busy"
+        },
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Away"
+        },
+        {
+            "Avatar": "{{faker:image.avatar}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Address": "{{fake:[address.state], [address.stateAbbr]}}",
+            "Status": "Offline"
+        }
+    ],
+    "Tasks": [
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Labels": [
+                "Bug",
+                "Feature"
+            ],
+            "Priority": "Low",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Priority": "High",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Labels": [
+                "Duplicate",
+                "Invalid",
+                "On Hold"
+            ],
+            "Priority": "Normal"
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Priority": "Highest",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Labels": [
+                "Help",
+                "Fix"
+            ],
+            "Priority": "Low",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Priority": "High",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Labels": [
+                "HTML",
+                "CSS",
+                "Next Phase"
+            ],
+            "Priority": "Normal"
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Labels": [
+                "Bug",
+                "Feature"
+            ],
+            "Priority": "Low",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                },
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Priority": "Highest",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}}"
+                }
+            ]
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Labels": [
+                "Duplicate",
+                "Invalid",
+                "On Hold"
+            ],
+            "Priority": "Normal"
+        },
+        {
+            "Id": "{{faker:random.number}}",
+            "Title": "{{faker:hacker.phrase}}",
+            "Content": "{{faker:lorem.sentences}}",
+            "Date": "{{faker:date.recent}}",
+            "Priority": "Low",
+            "Users": [
+                {
+                    "Avatar": "{{faker:image.avatar}}"
+                }
+            ]
+        }
+    ]
+}

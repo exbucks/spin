@@ -1,0 +1,11 @@
+.flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectsNav {
+    .flexSpaceBetween > a {
+        @extend .flexSpaceBetween;
+    }
+}

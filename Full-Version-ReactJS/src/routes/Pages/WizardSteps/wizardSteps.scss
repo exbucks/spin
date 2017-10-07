@@ -1,0 +1,22 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.ddWrap {
+    > * {
+        display: block;
+    }
+}
+
+.changeBtnWrap {
+    margin-left: -13px;
+}
+
+.card {
+    background: $gray-dark;
+    padding: 20px;
+}
+
+.flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,738 @@
+{
+    "People": [
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Computers",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Shoes",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Offline",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Toys",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Busy",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Computers",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Away",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Music",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Shoes",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Offline",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Jewelery",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Games",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Away",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Jewelery",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Busy",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Clothing",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Movies",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Offline",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Industrial",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Automotive",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Avatar": "{{fake: [image.avatar]}}",
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "ShortProfile": "{{fake:[lorem.sentences]}}",
+            "Status": "Online",
+            "Contact": {
+                "Email": "{{fake:[internet.email]}}",
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Mobile": "{{fake:[phone.phoneNumberFormat]}}",
+                "Fax": "{{fake:[phone.phoneNumberFormat]}}",
+                "Skype": "{{fake:[internet.userName]}}"
+            },
+            "Social": {
+                "LinkedIn": "{{fake:/[internet.userName]}}",
+                "Facebook": "{{fake:/[internet.userName]}}",
+                "Twitter": "{{fake:/[internet.userName]}}"
+            },
+            "Address": {
+                "Address": "{{fake:[address.streetAddress]}}",
+                "City": "{{fake:[address.city]}}",
+                "State": "{{fake:[address.state]}}",
+                "ZipCode": "{{fake:[address.zipCode]}}"
+            },
+            "Favoritted": "{{n:0:1}}",
+            "Labels": [
+                "Grocery",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        }
+    ],
+
+    "Companies": [
+        {
+            "Name": "Facebook",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Online"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Busy"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Apple",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Offline"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Busy"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Twitter",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Online"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Online"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Amazon",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Away"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Busy"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Foursquare",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Offline"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Offline"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Last.fm",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Busy"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Online"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "LinkedIn",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Online"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Online"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Medium",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Away"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Away"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        },
+        {
+            "Name": "Microsoft",
+            "ShortDesc": "{{fake:[lorem.sentences]}}",
+            "Favoritted": "{n:0:1}",
+            "Location": "{{fake:[address.country]}}",
+            "Employees": [
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Busy"
+                },
+                {
+                    "Avatar": "{{fake:[image.avatar]}}",
+                    "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                    "Location": "{{fake: [address.state], [address.stateAbbr]}}",
+                    "Status": "Busy"
+                }
+            ],
+            "Contact": {
+                "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+                "Email": "{{fake:[internet.email]}}"
+            },
+            "Address": {
+                "Line1": "{{fake:[address.streetAddress]}}",
+                "Line2": "{{fake:[address.city] [address.state], [address.zipCode]}}"
+            },
+            "Tags": [
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}",
+                "{{fake:[commerce.department]}}"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    margin-top: 3rem;
+}
+
+.boxPanel {
+    border: 2px solid $gray-dark;
+    background: none;
+
+    .boxPanelHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}

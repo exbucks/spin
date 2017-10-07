@@ -1,0 +1,29 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.fileContainer {
+    border-width: 2px;
+    border-color: $gray-dark;
+    background: none;
+}
+
+.headerActions {
+    flex-shrink: 0;
+}
+
+.searchBox {
+    max-width: 300px;
+
+    > div {
+        margin: 0;
+    }
+}
+@media (max-width: $screen-xs-max) {
+    .searchBox {
+        max-width: none;
+    }
+}
+
+.messageLabel {
+    margin: 0 2.5px;
+}

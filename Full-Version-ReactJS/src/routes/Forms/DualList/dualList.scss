@@ -1,0 +1,13 @@
+.example {
+    > h3 {
+        margin-top: 0;
+    }
+
+    > p {
+        margin-bottom: 15px;
+    }
+
+    + .example {
+        margin-top: 25px;
+    }
+}

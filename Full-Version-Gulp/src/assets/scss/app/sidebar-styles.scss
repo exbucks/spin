@@ -1,0 +1,705 @@
+// GLOBAL
+body.sidebar-slim .navigation .sidebar,
+body.sidebar-big-icons .navigation .sidebar {
+    .sidebar-content .side-menu {
+        li.has-submenu {
+            &:hover {
+                > a {
+                    border-right-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+/**************************************************************
+*                   COLOR SIDEBAR VARIANTS                    *
+***************************************************************/
+@mixin sidebar-color-variant($primaryColor, $secondaryColor) {
+    .main-wrap {
+        background: $primaryColor;
+    }
+
+    // ======= DEFAULT SIDEBAR ========
+    .navigation .sidebar {
+        background: $primaryColor;
+
+        .sidebar-content .side-menu {
+            // ======= Main Menus =======
+            > li {
+                > a {
+                    border-right: 1px solid $primaryColor;
+
+                    &:hover {
+                        box-shadow: 0 -1px 0 0 $primaryColor inset;
+                    }
+                }
+
+                &.nested-active:not(.expanded) > a,
+                &.active > a {
+                    box-shadow: 3px 0px 0px 0px white inset,
+                                0px -1px 0px 0px $primaryColor inset;
+                }
+            }
+
+            // ======= Sub Menus =======
+            > li ul > li {
+                > a {
+                    border-right: 1px solid $primaryColor;
+
+                    &:hover {
+                        box-shadow: 0px -1px 0px 0px $primaryColor inset;
+                    }
+                }
+
+                &.nested-active:not(.expanded) > a,
+                &.active > a {
+                    box-shadow: 3px 0px 0px 0px white inset,
+                                0px -1px 0px 0px $primaryColor inset;
+                }
+            }
+        }
+    }
+
+    // ======== SLIM SIDEBAR =======
+    &.sidebar-slim .navigation .sidebar {
+        .sidebar-content .side-menu {
+            li {
+                &:not(.nested-active):hover > a,
+                &:not(.active):hover > a,
+                &:hover > a {
+                    background-color: $secondaryColor;
+                }
+            }
+            // ====== Main Menu =======
+            > li {
+                &:hover:not(.nested-active):not(.active) {
+                    > a {
+                        background: $secondaryColor;
+                        box-shadow: 0 -1px 0 0 $primaryColor inset;
+                    }
+                }
+            }
+            // ====== Sub Menus =======
+            li > ul {
+                border-color: $secondaryColor;
+                background-color: $secondaryColor;
+
+                > li > a {
+                    border-color: $secondaryColor;
+                }
+
+                > li.nested-active > a,
+                > li.active > a {
+                    background-color: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    // ===== BIG ICONS SIDEBAR =====
+    &.sidebar-big-icons .navigation .sidebar {
+        .sidebar-content .side-menu {
+            // ====== Main Menu =======
+            > li {
+                &:hover:not(.active):not(.nested-active) > a {
+                    box-shadow: 0 -1px 0 0 $primaryColor inset;
+                    background: $secondaryColor;
+                }
+            }
+            // ====== Sub Menus =======
+            li > ul {
+                background-color: $secondaryColor;
+                border-color: $secondaryColor;
+            }
+        }
+    }
+}
+
+// General Color Sidebar Settings
+body.sidebar-primary,
+body.sidebar-info,
+body.sidebar-success,
+body.sidebar-warning,
+body.sidebar-danger {
+    .navigation .sidebar {
+        color: rgba(255, 255, 255, 0.6);
+
+        // ========= TEXT-MUTED ===============
+        .text-muted {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        hr {
+            border-top-color: rgba(255, 255, 255, 0.2);
+        }
+
+        // ======= Avatar Addons=========
+        .add-on-container,
+        .avatar-container {
+            border-right: none;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .sidebar-overlay-head {
+            border-color: rgba(255, 255, 255, 0.3);
+            border-width: 0 0 1px 0;
+
+            .sidebar-switch {
+                color: #fff;
+            }
+        }
+        .sidebar-logo {
+            border-right: none;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+            background: white;
+        }
+
+        // NAVS
+        .nav > li > a:hover,
+        .nav > li > a:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        // AVATARS
+        .avatar .avatar-status {
+            border-color: white;
+        }
+
+        // BADGES AND LABELS
+        .side-menu .label.label-outline,
+        .side-menu .badge.badge-outline {
+            border-color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        // PROGRESS BARS
+        .progress {
+            background: rgba(255, 255, 255, 0.3);
+
+            .progress-bar {
+                background-color: #fff;
+            }
+        }
+
+        // ============ MENU ==================
+        .sidebar-content .side-menu {
+            // ========== All Menus ===========
+            // General LI settings
+            li {
+                // General A settings
+                border-right: none;
+
+                a {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+
+                // General hover A settings
+                > a:hover {
+                    color: rgba(255, 255, 255, 1);
+                    background: rgba(255, 255, 255, 0.3);
+                }
+
+                // General active A settings
+                &.active > a {
+                    background: rgba(255, 255, 255, 0.3);
+                }
+            }
+
+            // ========= Main Menus ===========
+            > li {
+                // General A settings
+                > a {
+                    // General Icon Settings
+                    > i:first-child {
+                        color: rgba(255, 255, 255, 0.4);
+                    }
+                }
+
+                > a:hover {
+                    color: white;
+                    background: rgba(255, 255, 255, 0.3);
+                }
+
+                // Active A settings
+                &.nested-active:not(.expanded) > a,
+                &.active > a {
+                    background: rgba(255, 255, 255, 0.3);
+                    color: white;
+
+                    // Active Icon Color
+                    > i:first-child {
+                        color: white;
+                    }
+                }
+            }
+
+            // ========== Sub Menus =============
+            > li ul > li {
+                > a:hover {
+                    color: white;
+                    background: rgba(255, 255, 255, 0.3);
+                }
+
+                // Submenu Active A settings
+                &.nested-active:not(.expanded) > a,
+                &.active > a {
+                    //Accent (switch to none if disabled)
+                    background: rgba(255, 255, 255, 0.3);
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &.sidebar-slim .navigation .sidebar {
+        .sidebar-content .side-menu {
+            li.active > a {
+                box-shadow: none;
+            }
+
+            li > ul {
+                > li {
+                    border-color: transparent;
+
+                    &:hover > a {
+                        color: white;
+                        box-shadow: none !important;
+                    }
+
+                    &.nested-active:not(.expanded),
+                    &.nested-active > a,
+                    &.active > a {
+                        color: white;
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sidebar-big-icons .navigation .sidebar {
+        .sidebar-content .side-menu {
+            // ============ Sub Menus ===========
+            li > ul {
+                > li {
+                    > a {
+                        box-shadow: none !important;
+                        border: none;
+                    }
+
+                    &.nested-active > a,
+                    &.active > a {
+                        background: none;
+                    }
+
+                    &.active > a {
+                        color: white;
+                    }
+
+                    &:hover:not(.active):not(.nested-active) > a {
+                        background: none;
+                    }
+                }
+
+                // Sub Menu Top Title
+                &:before {
+                    color: white;
+                    border-color: RGBA(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+}
+
+// Actual Color Variants
+body.sidebar-primary {
+    @include sidebar-color-variant($brand-primary, RGBA(108, 183, 229, 1.00));
+}
+
+body.sidebar-info {
+    @include sidebar-color-variant($brand-info, #71D1C2);
+}
+
+body.sidebar-success {
+    @include sidebar-color-variant($brand-success, #AACA82);
+}
+
+body.sidebar-warning {
+    @include sidebar-color-variant($brand-warning, #ED9879);
+}
+
+body.sidebar-danger {
+    @include sidebar-color-variant($brand-danger, #DA7881);
+}
+
+/**************************************************************
+*                   LIGHT SIDEBAR VARIANTS                    *
+***************************************************************/
+@mixin sidebar-light-variant($color) {
+    .navigation .sidebar .sidebar-content .side-menu {
+        > li.nested-active:not(.expanded) > a,
+        > li.active > a {
+            box-shadow: 3px 0 0 0 $color inset,
+                        0 -1px 0 0 white inset;
+        }
+
+        > li ul > li.active > a {
+            box-shadow: 3px 0 0 0 $color inset,
+                        0 -1px 0 0 white inset;
+        }
+    }
+}
+
+// General Light Sidebar Settings
+body.sidebar-light-primary,
+body.sidebar-light-success,
+body.sidebar-light-info,
+body.sidebar-light-warning,
+body.sidebar-light-danger {
+    .main-wrap {
+        background: #fff
+    }
+
+    .navigation .sidebar {
+        // HEADERS
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            color: $gray-darker;
+        }
+
+        // TEXTS
+        .text-white {
+            color: $gray-darker;
+        }
+
+        .text-muted {
+            color: #ABADAD;
+        }
+
+        // NAVS
+        .nav > li > a:hover,
+        .nav > li > a:focus {
+            background-color: lighten($gray-lighter, 60%);
+        }
+
+        // AVATARS
+        .avatar .avatar-status {
+            border-color: white;
+        }
+
+        hr {
+            border-top-color: #e8e8e8;
+        }
+
+        .navigation .sidebar {
+            background: #fff;
+            color: #ABADAD;
+        }
+
+        // AVATAR ADDONS
+        .add-on-container,
+        .avatar-container {
+            border-right: none;
+            border-color: #e8e8e8;
+        }
+
+        .sidebar-overlay-head {
+            border-color: #e8e8e8;
+            border-width: 0 0 1px 0;
+        }
+
+        .sidebar-logo {
+            border-right: none;
+            border-bottom-color: #f1f1f1;
+        }
+
+        background: #fff;
+
+        .sidebar-content .side-menu {
+			// ========== All Menus ===========
+	        // General LI settings
+	        li {
+	    		// General A settings
+				border-right: none;
+
+	    		a {
+	    			color: #ABADAD;
+
+	    			// Hover Link
+	    			&:hover {
+	    				color: yellow;
+	    				background: #F1F1F1;
+	    			}
+	    		}
+
+	            // General hover A settings
+	            > a:hover {
+	                color: #555555;
+	                background: #F1F1F1;
+	            }
+
+	            // General active A settings
+	            &.active > a {
+	                background: #F1F1F1;
+	                color: #555555;
+	            }
+	        }
+
+			// ========= Main Menus ===========
+			> li {
+	            // General A settings
+	            > a {
+	                border-right: 1px solid white;
+
+	                // General Icon Settings
+	                > i:first-child {
+	                    color: #929292;
+	                }
+	            }
+
+	            > a:hover {
+	                color: #555555;
+	                background: #F1F1F1;
+	                box-shadow: 0px -1px 0px 0px white inset;
+	            }
+
+	            // Active A settings
+	            &.nested-active:not(.expanded) > a,
+	            &.active > a {
+	                //Accent (switch to none if disabled)
+	                box-shadow: 3px 0px 0px 0px #2D99DC inset, 0px -1px 0px 0px white inset;
+	                background: #F1F1F1;
+	                color: #555555;
+
+	                // Active Icon Color
+	                > i:first-child {
+	                    color: #555555;
+	                }
+	            }
+			}
+
+	        // ========== Sub Menus =============
+	        > li ul > li {
+	            > a {
+	                // Sub Menu A General Settings
+	                border-right: 1px solid #f1f1f1;
+	            }
+
+	            > a:hover {
+	                color: #555555;
+	                background: #F1F1F1;
+	                box-shadow: 0px -1px 0px 0px white inset;
+	            }
+
+	            // Submenu Active A settings
+	            &.nested-active:not(.expanded) > a,
+	            &.active > a {
+	                //Accent (switch to none if disabled)
+	                box-shadow: 3px 0px 0px 0px #2D99DC inset, 0px -1px 0px 0px white inset;
+	                background: #F1F1F1;
+	                color: #555555;
+
+	                // Active Icon Color
+	                > i:first-child {
+	                    color: wheat;
+	                }
+	            }
+	        }
+		}
+    }
+
+    // Sidebar-Light-Primary Slim
+	&.sidebar-slim .navigation .sidebar {
+		.sidebar-content .side-menu {
+	        // =========== All Menus ===========
+	        li {
+
+	            &.active > a {
+	                box-shadow: none;
+	            }
+
+	            // Hover Background Color for menu item and SideMenu
+	            &:not(.nested-active):hover > a,
+	            &:not(.active):hover > a,
+	            &:hover > a {
+	                color: #555555;
+	                background-color: #F1F1F1;
+	            }
+	        }
+
+	        // ============ Main Menu ===========
+	        > li {
+				&:hover:not(.nested-active):not(.active) {
+					> a {
+						color: #555555;
+						background: #F1F1F1;
+						box-shadow: 0px -1px 0px 0px white inset;
+					}
+
+					> a > i:first-child {
+						color: #555;
+					}
+				}
+	        }
+
+	        // ============ Sub Menus ===========
+	        li > ul {
+	            border-color: #F1F1F1;
+	            background-color: #F1F1F1;
+	            > li {
+	                border-color: transparent;
+	            }
+
+	            > li:hover > a {
+	                color: #555555;
+	                background-color: #F1F1F1;
+	                box-shadow: none;
+	            }
+
+	            > li.nested-active > a,
+	            > li.active > a {
+	                color: #555555;
+	                background-color: #F1F1F1;
+	                box-shadow: none;
+	            }
+	        }
+		}
+	}
+
+    &.sidebar-big-icons .navigation .sidebar {
+		.sidebar-content .side-menu {
+	        // =========== All Menus ==============
+	        li {
+	            &.active > a {
+	                color: khaki;
+	            }
+	        }
+
+	        // ============ Main Menu ===========
+	        > li {
+				&:hover:not(.active):not(.nested-active) > a {
+					box-shadow: 0 -1px 0 0 white inset;
+					background-color: #f1f1f1;
+					color: #555;
+
+					> i:first-child {
+						color: #555;
+					}
+				}
+	        }
+
+	        // ============ Sub Menus ===========
+	        li > ul {
+	            background-color: #f1f1f1;
+	            border-color: #f1f1f1;
+
+	            > li {
+	                > a {
+	                    box-shadow: none;
+	                    border: none;
+	                }
+
+					&.nested-active > a,
+	                &.active > a {
+	                    background: none;
+						box-shadow: none;
+	                }
+
+					&.active > a {
+						color: #555;
+					}
+
+	            }
+
+	            // Sub Menu Top Title
+	            &:before {
+	                color: #555;
+	                border-color: #e8e8e8;
+	            }
+	        }
+	    }
+	}
+}
+
+// Actual Color Variants
+body.sidebar-light-primary {
+    @include sidebar-light-variant($brand-primary);
+}
+
+body.sidebar-light-success {
+    @include sidebar-light-variant($brand-success);
+}
+
+body.sidebar-light-info {
+    @include sidebar-light-variant($brand-info);
+}
+
+body.sidebar-light-warning {
+    @include sidebar-light-variant($brand-warning);
+}
+
+body.sidebar-light-danger {
+    @include sidebar-light-variant($brand-danger);
+}
+
+/**************************************************************
+*                    DARK SIDEBAR VARIANTS                    *
+***************************************************************/
+@mixin sidebar-dark-variant($color) {
+    .navigation .sidebar {
+		.side-menu > li {
+			&.nested-active:not(.expanded):hover > a,
+			&.nested-active:not(.expanded) > a,
+			&.active:hover > a,
+            &.active > a {
+                box-shadow: 3px 0px 0px 0px $color inset;
+            }
+
+			&:hover > a {
+				box-shadow: 0px -1px 0px 0px #1A1A1A inset,
+							0px 1px 0px 0px #1A1A1A inset;
+			}
+		}
+	}
+
+	// ONLY DEFAULT
+	&:not(.sidebar-big-icons):not(.sidebar-slim) .navigation .sidebar {
+		.side-menu {
+			li {
+				&.nested-active:not(.expanded):hover > a,
+				&.nested-active:not(.expanded) > a,
+				&.active:hover > a,
+	            &.active > a {
+	                box-shadow: 3px 0px 0px 0px $color inset;
+	            }
+			}
+
+			ul > li > a:hover,
+			> li > a:hover {
+				box-shadow: 0px -1px 0px 0px #1A1A1A inset,
+							0px 1px 0px 0px #1A1A1A inset;
+			}
+		}
+	}
+}
+
+body.sidebar-dark-primary {
+    @include sidebar-dark-variant($brand-primary);
+}
+
+body.sidebar-dark-success {
+    @include sidebar-dark-variant($brand-success);
+}
+
+body.sidebar-dark-info {
+    @include sidebar-dark-variant($brand-info);
+}
+
+body.sidebar-dark-warning {
+    @include sidebar-dark-variant($brand-warning);
+}
+
+body.sidebar-dark-danger {
+    @include sidebar-dark-variant($brand-danger);
+}

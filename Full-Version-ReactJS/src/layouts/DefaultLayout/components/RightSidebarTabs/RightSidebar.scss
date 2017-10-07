@@ -1,0 +1,76 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.affixTop .contentContainer {
+    max-height: 100vh;
+}
+
+.affix .contentContainer {
+    max-height: calc(100vh - 50px)
+}
+
+.sectionTitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem 0 5px 0;
+    font-size: 10px;
+    color: $text-muted;
+}
+
+.sectionContainer {
+    margin: 0 0 3rem 0;
+}
+
+.flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    border-top: 1px solid $gray-dark;
+    li {
+        @extend .flexSpaceBetween;
+        border-width: 1px 0 0 0;
+    }
+}
+
+.weather {
+    .dayLarge {
+        color: $brand-white;
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+.marked {
+    color: $text-muted;
+    text-decoration: line-through;
+}
+
+.stockList {
+
+}
+
+.listEntry {
+    padding: 5px !important;
+}
+
+.closeTrigger {
+    position: absolute;
+    color: $text-muted;
+    display: block;
+    top: 23px;
+    left: 15px;
+}
+
+.clickableElement {
+    cursor: pointer;
+}
+
+@media (max-width: $screen-xs-max) {
+    .tabsNavigation {
+        margin-left: 42px !important;
+    }
+}

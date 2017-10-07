@@ -1,0 +1,84 @@
+{
+    "Messages": [
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Away"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Online"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Online"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Busy"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Away"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Online"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Offline"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        },
+        {
+            "User": {
+                "Name": "{{fake:[name.firstName] [name.lastName]}}",
+                "Avatar": "{{fake:[image.avatar]}}",
+                "Status": "Away"
+            },
+            "Date": "{{fake:[date.recent]}}",
+            "Content": "{{fake:[lorem.paragraph]}}",
+            "Active": "{{n:0:1}}"
+        }
+    ]
+}

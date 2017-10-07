@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- START Head -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <title>
+         SPIN | Docs 
+    </title>
+
+    <!--START Loader -->
+    <style>
+        #initial-loader{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;background:#212121;position:fixed;z-index:10000;top:0;left:0;bottom:0;right:0;transition:opacity .2s ease-out}#initial-loader .initial-loader-top{display:flex;align-items:center;justify-content:space-between;width:200px;border-bottom:1px solid #2d2d2d;padding-bottom:5px}#initial-loader .initial-loader-top > *{display:block;flex-shrink:0;flex-grow:0}#initial-loader .initial-loader-bottom{padding-top:10px;color:#5C5C5C;font-family:-apple-system,"Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;font-size:12px}@keyframes spin{100%{transform:rotate(360deg)}}#initial-loader .loader g{transform-origin:50% 50%;animation:spin .5s linear infinite}body.loading {overflow: hidden !important} body.loaded #initial-loader{opacity:0}
+    </style>
+    <!--END Loader-->
+
+    <!-- SCSS Output -->
+    <link rel="stylesheet" href="../assets/stylesheets/app.min.e0bb64e7.css">
+
+    <!-- START Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END Favicon -->
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../atom.xml">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-83862026-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- jekyll settings -->
+    <script>
+        var ASSET_PATH_BASE = '../';
+    </script>
+</head>
+<!-- END Head -->
+
+
+<body class="sidebar-disabled">
+    <div class="main-wrap">
+        <nav class="navigation">
+            <div class="navbar-inverse navbar navbar-fixed-top" id="introduction">
+    <div class="container">
+        
+           <!-- START Logo -->
+           <div class="navbar-header">
+            <a class="current navbar-brand" href="../index.html">
+                <img alt="Spin Logo Inverted" class="h-20" src="../assets/images/spin-logo-inverted-@2X.png">
+            </a>
+
+            <button class="action-right-sidebar-toggle navbar-toggle collapsed" data-target="#navdbar" data-toggle="collapse" type="button">
+                <i class="fa fa-fw fa-align-right text-white"></i>
+            </button>
+
+            <button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+                <i class="fa fa-fw fa-user text-white"></i>
+            </button>
+
+            <button class="action-sidebar-open navbar-toggle collapsed" type="button">
+                <i class="fa fa-fw fa-bars text-white"></i>
+            </button>
+        </div>
+         <!-- END Logo -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../index.html">
+                        &#x2039; Back to Dashboard
+                    </a>
+                </li>
+                <li class="">
+                     <a href="../docs/docs.html">Documentation</a>
+                </li>
+                <li class="active">
+                     <a href="../docs/docs-react.html">Documentation React</a>
+                </li>
+                
+                
+            </ul>
+            <p class="navbar-text navbar-right">Version 1.0</p>
+            
+        </div><!-- /.navbar-collapse -->
+   
+    </div>
+</div>
+        </nav>
+
+        <div class="content">
+            <div class="container">
+    <div class="row">
+
+       <!-- START CONTENT -->
+        <div class="col-lg-9">
+
+            <div class="page-header">
+                <h3 id="installation">Installation <small class="m-l-1">Go to demo <a href="http://spin.webkom.co/react">spin.webkom.co/react</a></small></h3>
+            </div>
+
+            <ol>
+                <li>Make sure you have NodeJS &gt;= 6.0.0 installed on your machine.</li>
+                <li>Go to folder with app <kbd>/SPIN-React</kbd>
+                </li><li>Run <kbd>npm install</kbd> to install nescessary NPM dependecies</li>
+            </ol>
+            
+            <h5 class="m-t-3">Usage</h5>
+            <ul>
+                <li><kbd>npm start</kbd> - start development mode with Hot Reloading enabled</li>
+                <li><kbd>npm run deploy:prod</kbd> - compile source to the <kbd>dist</kbd> directory</li>
+            </ul>
+            
+            <div class="page-header">
+                <h3 id="plugins">Plugins <small>Used Libraries</small></h3>
+            </div>
+            
+            <h5 class="m-t-3">General</h5>
+                <ul>
+                    <li><a href="https://github.com/facebook/react">React ^15.0.0</a> - Cornerstone rendering engine for the application</li>
+                    <li><a href="https://github.com/react-bootstrap/react-bootstrap">React Bootstrap ^0.30.7</a> - Port of Bootstrap 3 for React</li>
+                    <li><a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome ^4.6.3</a> - Large set of various icons</li>
+                    <li><a href="https://github.com/ReactTraining/react-router">React Router ^2.2.0</a> - Provides routing within the application</li>
+                    <li><a href="https://github.com/reactjs/redux">Redux ^3.0.0</a> - Used for application state management</li>
+                    <li><a href="https://github.com/julianshapiro/velocity">Velocity Animate ^1.2.3</a> - Provides a solid animation system for some components</li>
+                    <li><a href="https://github.com/hiddentao/react-image-holder">React Image Holder ^2.0.1</a> - Adds placeholder support for the Image component</li>
+                    <li><a href="https://github.com/kaimallea/isMobile">IsMobile ^0.4.0</a> - Detects the device on which the application is running, so some components can adjust to the environment</li>
+                    <li><a href="http://momentjs.com/">Moment ^2.13.0</a> - Used for time modification and parsing</li>
+                    <li><a href="http://numeraljs.com/">Numeral ^1.5.3</a> - Provides formatting for number types</li>
+                    <li><a href="https://github.com/noraesae/perfect-scrollbar">PerfectScrollbar ^0.6.13</a> - Wrapped in a component, which adds styled scrollbars when nescessary</li>
+                    <li><a href="http://github.hubspot.com/pace/docs/welcome/">Pace 1.0.2</a> - Page loading indicator used mainly when a Webpack Code Split needs to be loaded</li>
+                    <li><a href="https://github.com/bgrins/TinyColor">TinyColor ^1.4.1</a> - Fast color mixing library used in some components</li>
+                    <li><a href="http://underscorejs.org/">Underscore ^1.8.3</a> - Flexible functional data manegement library</li>
+                </ul>
+
+           <h5 class="m-t-3">Charts</h5>
+                <ul>
+                    <li><a href="https://github.com/kirjs/react-highcharts">React Highcharts ^8.3.3</a> - Provides <a href="http://www.highcharts.com/">Highcharts</a> support.</li>
+                    <li><a href="https://github.com/borisyankov/react-sparklines">React Sparklines ^1.5.2</a> - Adds small charts called Sparklines. It is extended by a custom component for additional features.</li>
+                    <li><a href="https://github.com/fraserxu/react-chartist">React Chartist ^0.10.2</a> - Adds <a href="https://gionkunz.github.io/chartist-js/">Chartist</a> support.</li>
+                </ul>
+
+           <h5 class="m-t-3">Build</h5>
+                <ul>
+                    <li><a href="http://koajs.com/">Koa ^2.0.0-alpha.3</a> - Web Server used for serving the application.</li>
+                    <li><a href="https://webpack.github.io/">Webpack ^1.12.14</a> - Advanced system used for modules management. It is backed by a multitude of smaller loaders which add nescessary functionalities.</li>
+                    <li><a href="https://github.com/jtangelder/sass-loader">Sass Loader ^3.0.0</a> - Webpack loader which allows the usage of SCSS modules.</li>
+                    <li><a href="https://babeljs.io/">Babel ^6.3.19</a> - Provides support for ES2015+ and JSX</li>
+                </ul>
+
+           <h5 class="m-t-3">Demo</h5>
+                <p>These libraries are used to generate random data state trees to use in Containers for demonstration purposes.</p>
+                <ul>
+                    <li><a href="https://github.com/marak/Faker.js/">Faker ^3.1.0</a> - Generate fake demo data</li>
+                    <li><a href="https://github.com/sindresorhus/deep-assign">deep-assign ^2.0.0</a> - Recursive <code>Object.assign()</code> - helps building complex data trees</li>
+                </ul>            
+            
+            
+
+            <div class="page-header">
+              <h3 id="reusable-components">Reusable Components <small>1.0</small></h3>
+            </div>
+
+            <div class="page-header">
+            <h4 id="layout">Layout</h4>
+            </div>
+
+    <p>It is the <strong>main parent of the application</strong>. Provides interaction between child elements, and handles visual styling for them.</p>
+    
+    <ul>
+        <li><kbd>navbarEnabled&lt;bool&gt;</kbd> - Is the Navbar visible (Default: true)</li>
+        <li><kbd>navbarFixed&lt;bool&gt;</kbd> - Should the Navbar stick to the top edge of the screen (Default: false)</li>
+        <li><kbd>sidebarEnabled&lt;bool&gt;</kbd> - Is the Sidebar visible (Default: true)</li>
+        <li><kbd>sidebarStyle&lt;string&gt;</kbd> - (Available options: <kbd>default</kbd>, <kbd>slim</kbd>, <kbd>bigicons</kbd>). Style of the Sidebar (Default: <kbd>default</kbd>)</li>
+        <li><kbd>sidebarFixed&lt;bool&gt;</kbd> - Should the Sidebar stick to the top edge of the screen (Default: false)</li>
+        <li><kbd>sidebarAside&lt;bool&gt;</kbd> - Should the Sidebar be in &#x201C;Aside mode&#x201D; - full height of the viewport (Default: false)</li>
+        <li><kbd>contentView&lt;string&gt;</kbd> - (Available oprions: <kbd>static</kbd>, <kbd>fluid</kbd>, <kbd>boxed</kbd>) How the content should be displayed (Default: <kbd>fluid</kbd>)</li>
+        <li><kbd>footerEnabled&lt;bool&gt;</kbd> - Is the Footer visible (Default: true)</li>
+        <li><kbd>footerFixed&lt;bool&gt;</kbd> - Should the Footer stick to the bottom edge of the screen (Default: false)</li>
+        <li><kbd>rightSidebarEnabled&lt;bool&gt;</kbd> - Is the Right Sidebar visible (Default: true)</li>
+        <li><kbd>headerEnabled&lt;bool&gt;</kbd> - Is the Content Header visible (Default: true)</li>
+        <li><kbd>headerStyle&lt;string&gt;</kbd> - (Available options: <kbd>simple</kbd>, <kbd>breadcrumbs</kbd>) <kbd>simple</kbd> - shows only the current page title; <kbd>breadcrumbs</kbd> - additionally shows nested breadcrumbs (Default: &#x2018;breadcrumbs&#x2019;)</li>
+        <li><kbd>skinColor&lt;string&gt;</kbd> - (Available options: <kbd>primary</kbd>, <kbd>success</kbd>, <kbd>info</kbd>, <kbd>warning</kbd>, <kbd>danger</kbd>) - The theme color which is used in the <kbd>Sidebar</kbd> and <kbd>Navbar</kbd></li>
+        <li><kbd>sidebarSkin&lt;string&gt;</kbd> - (Available options: <kbd>dark</kbd>, <kbd>light</kbd>, <kbd>color</kbd>) - Determines the skin of the Sidebar (Default: <kbd>dark</kbd>)</li>
+        <li><kbd>navbarSkin&lt;string&gt;</kbd> - (Available options: <kbd>dark</kbd>, <kbd>light</kbd>, <kbd>color</kbd>) - Determines the skin of the Navbar (Default: <kbd>dark</kbd>)</li>
+    </ul>
+
+    <h5 class="m-t-3">Layout.Navigation</h5>
+    <p>Parent of the main navigation items - <kbd>Navbar</kbd> and <kbd>Sidebar</kbd></p>
+
+    <h5 class="m-t-3">Layout.Content</h5>
+    <p>The content of the page should be rendered here</p>
+
+    <div class="page-header">
+        <h4 id="affix-wrap">AffixWrap</h4>
+    </div>
+
+    <p>Watches the scroll position and applies affix classes to the provided child</p>
+    <p>Props:</p>
+    <ul>
+        <li><kbd>offset&lt;number&gt;</kbd> - Offset from top when the Affix should be activated</li>
+        <li><kbd>affixAdditionalClass&lt;string&gt;</kbd> - Class next to <kbd>affix</kbd> which will be added to the child if Affixed</li>
+        <li><kbd>affixTopAdditionalClass&lt;string&gt;</kbd> - Class next to <kbd>affix-top</kbd> which will be added tot he child if not Affixed</li>
+    </ul>
+
+    <div class="page-header">
+        <h4 id="avatars" class="m-t-3">Avatars</h4>
+    </div>
+
+    <p>General Props:</p>
+    
+    <ul>
+        <li><kbd>size&lt;string&gt;</kbd> - (Available options: <kbd>large</kbd>, <kbd>default</kbd>, <kbd>small</kbd>) Size of the Avatar</li>
+        <li><kbd>type&lt;string&gt;</kbd> - (Available options: <kbd>circle</kbd>, <kbd>rounded</kbd>) Shape of the Avatar</li>
+        <li><kbd>showStatus&lt;bool&gt;</kbd> - Should the status icon be shown</li>
+        <li><kbd>statusColor&lt;string&gt;</kbd> - Color of the status icon</li>
+        <li><kbd>statusBorderColor&lt;string&gt;</kbd> - Border color of the status icon (Default: gray-darker)</li>
+        <li><kbd>statusPlacement&lt;string&gt;</kbd> - (Available options: <kbd>top</kbd>, <kbd>bottom</kbd>) Placement of the status icon</li>
+        <li><kbd>info&lt;node&gt;</kbd> - The info element, should be a <kbd>Badge</kbd> or a <kbd>Label</kbd></li>
+    </ul>
+
+    <h5 id="child-components" class="m-t-3">Child Components <small>(use these)</small></h5>
+    <p><kbd>AvatarImage</kbd> - Embedds an Avatar with an Image provided in <kbd>src</kbd> property. If the <kbd>src</kbd> param won&#x2019;t be valid or there while loading the file - a configurable placeholder will be rendered.</p>
+
+    <p>Props:</p>
+    <ul>
+        <li><kbd>src&lt;string&gt;</kbd> - Source Image URL</li>
+        <li><kbd>placeholder&lt;node&gt;</kbd> - Placeholder item which will be displayed if the Image fails to load. (Default: <kbd>&lt;i className=&apos;fa fa-user&apos;&gt;&lt;/i&gt;</kbd>)</li>
+        <li><kbd>phColor&lt;string&gt;</kbd> - Color of the Placeholder (Default: Colors.grayLight)</li>
+        <li><kbd>phBackgroundColor&lt;string&gt;</kbd> - Background COlor of the Placeholder (Default: Colors.grayDark)</li>
+    </ul>
+
+
+    <p class="m-t-3"><kbd>AvatarText</kbd> - Embedds an Avatar with a Text or Icon inside.</p>
+    <p>Props:</p>
+    <ul>
+        <li><kbd>backgroundColor&lt;string&gt;</kbd> - Background Color (Default: Colors.brandPrimary)</li>
+        <li><kbd>color&lt;string&gt;</kbd> - Font Color (Default: white)</li>
+        <li><kbd>children&lt;node&gt;</kbd> - Text to display inside the Avatar</li>
+    </ul>
+
+<p class="m-t-3"><kbd>AvatarIcon</kbd> - Embedds an Avatar with an Icon inside</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>backgroundColor&lt;string&gt;</kbd> - Background Color (Default: Colors.brandPrimary)</li>
+    <li><kbd>color&lt;string&gt;</kbd> - Icon Color (Default: white)</li>
+    <li><kbd>children&lt;node&gt;</kbd> - Icon to display inside the Avatar</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="tabs">Tabs</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#tabs">Tabs</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>bsStyle&lt;string&gt;</kbd> - (Available options: <kbd>default</kbd>, <kbd>highlight</kbd>) defines the style of the Tabs</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="alerts">Alerts</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#alerts">Alert</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>noBackground&lt;bool&gt;</kbd> - Setting to true will make the Alert box without background, with a border accent on the Left side. Accent color will be set accordingly to the <kbd>bsStyle</kbd> prop.</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="badges">Badges</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#badges">Badge</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>outline&lt;bool&gt;</kbd> - Creates an outline version of the Badge</li>
+    <li><kbd>withIcon&lt;bool&gt;</kbd> - Adjusts the Badge position so that it can be placed next to an FontAwesome icon</li>
+    <li><kbd>bsStyle&lt;string&gt;</kbd> - (Available options: <kbd>primary</kbd>, <kbd>success</kbd>, <kbd>info</kbd>, <kbd>warning</kbd>, <kbd>danger</kbd>) Adds color to the badge</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="breadcrumbs">Breadcrumbs</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#breadcrumbs">Breadcrumb</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>noBackground&lt;bool&gt;</kbd> - Background is disabled</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="buttons">Buttons</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#buttons">Button</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>outline&lt;bool&gt;</kbd> - the button can be in an outline only style with transparent background (Default: false)</li>
+    <li><kbd>bsStyle&lt;string&gt;</kbd> - now can accepts <kbd>custom</kbd>, which will apply the custom color</li>
+    <li><kbd>customColor&lt;string&gt;</kbd> - color to apply when <kbd>bsStyle</kbd> is set to <kbd>custom</kbd></li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="dividers">Dividers</h4>
+</div>
+<p>Creates a section separator with a Header inside. _Note: Might have issues when used on a non-standard background. _</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>textPosition&lt;string&gt;</kbd> - (Available options: <kbd>left</kbd>&lt;d&gt;, <kbd>center</kbd>, <kbd>right</kbd>) Determines where the header should be placed horizonatly within the line.</li>
+    <li><kbd>componentClass&lt;string&gt;</kbd> - Determines which HTML element should be used for the header. Default: <kbd>h6</kbd></li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="favorite-star">Favorite Star</h4>
+</div>
+<p>Renders a two-state(on/off) Favorite Star, with hint <kbd>Tooltip</kbd> attached, and &#x201C;Favorited&#x201D; event handler.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>favorited&lt;bool&gt;</kbd> - Determines if the Star is On</li>
+    <li><kbd>onFavorited&lt;func&gt;</kbd> - Basically a click event handler</li>
+    <li><kbd>tooltipTextActive&lt;string&gt;</kbd> - Text which will be visible in the tooltip if the component is in On state (Default: <kbd>Remove from favorites</kbd>)</li>
+    <li><kbd>tooltipTextInActive&lt;string&gt;</kbd> - Text which will be visible in the tooltip if the component is in Off state (Default: <kbd>Add to favorites</kbd>)</li>
+    <li><kbd>tooltipPlacement&lt;string&gt;</kbd> - (Available options: <kbd>top</kbd>, <kbd>bottom</kbd>, <kbd>left</kbd>, <kbd>right</kbd>) On which side of the Star the Tooltip should be rendered (Default: <kbd>top</kbd>)</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="footer">Footer</h4>
+</div>
+<p>Bottom part of the main layout.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>fluid&lt;bool&gt;</kbd> - Should there be a <kbd>fluid</kbd> container inside</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="images">Images</h4>
+</div>
+<p>Advanced Image component with support for Placeholders. If <kbd>src</kbd> prop is blank, invalid or the Image has failed to load, a desired Placeholder will be rendered. Supports Icons or <a href="https://github.com/imsky/holder">HolderJs</a></p>
+<p>Props:</p>
+<ul>
+    <li><kbd>src&lt;string&gt;</kbd> - URL of the image to be rendered</li>
+    <li><kbd>phIcon&lt;node&gt;</kbd> - A placeholder icon element (i.e. <kbd>FontAwesome</kbd>). Will be rendered if image has failed to load, if none provided, HolderJs will be attached</li>
+    <li><kbd>phForegroundColor&lt;string&gt;</kbd> - Foreground color of the Placeholder (Default: <kbd>Colors.grayLight</kbd>)</li>
+    <li><kbd>phBackgroundColor&lt;string&gt;</kbd> - Background color of the Placeholder (Default: <kbd>#fff</kbd>)</li>
+    <li><kbd>alt&lt;string&gt;</kbd> - The alt description which will be attached to the image</li>
+    <li><kbd>shape&lt;string&gt;</kbd> - (Available options: <kbd>default</kbd>&lt;d&gt;, <kbd>rounded</kbd>, <kbd>circle</kbd>) Rounds the corner of the image or transforms it into a circle</li>
+    <li><kbd>width&lt;string/number&gt;</kbd> - Width of the image, can be a CSS value <kbd>string</kbd> (i.e. <kbd>75px</kbd>, <kbd>100%</kbd>) or a <kbd>number</kbd> in pixels</li>
+    <li><kbd>height&lt;string/number&gt;</kbd> - Height of the image, can be a CSS value <kbd>string</kbd> (i.e. <kbd>75px</kbd>, <kbd>100%</kbd>) or a <kbd>number</kbd> in pixels (Default: <kbd>100px</kbd>)</li>
+    <li><kbd>block&lt;bool&gt;</kbd> - Should the image be rendered as a block element (Default: false)</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="labels">Labels</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#labels">Label</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>outline&lt;bool&gt;</kbd> - Creates an outline version of the Label</li>
+    <li><kbd>withIcon&lt;bool&gt;</kbd> - Adjusts the Label position so that it can be placed next to an FontAwesome icon</li>
+    <li><kbd>pill&lt;bool&gt;</kbd> - Makes the Label Pill shaped</li>
+    <li><kbd>customColor&lt;string&gt;</kbd> - Accepts a color definition. <strong>Available only if <kbd>bsStyle</kbd> is set to <kbd>custom</kbd></strong></li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="modals">Modals</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#modals">Modal</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+    <li><kbd>bsStyle&lt;string&gt;</kbd> - (Available options: <kbd>primary</kbd>, <kbd>success</kbd>, <kbd>info</kbd>, <kbd>warning</kbd>, <kbd>danger</kbd>) Adds a colored border to the modal, indicating the modal purpose.</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="navbars">Navbars</h4>
+</div>
+<p>Standard <a href="https://react-bootstrap.github.io/components.html#navbars">Navbar</a> from ReactBootstrap, extended by couple of SubComponents.</p>
+
+<h5 class="m-t-3">Navbar.Menu</h5>
+<p>Full-width navigation Menu. Has to have <kbd>Navbar.MenuSection</kbd> components inside which correspond to <kbd>/routes/routesStructure.js</kbd> using the <kbd>slug</kbd> property. Has to be placed in a <kbd>Nav</kbd>.</p>
+<p>Props:</p>
+<ul>
+
+    <li><kbd>title&lt;string&gt;</kbd> - Title of the <kbd>Nav</kbd> Button (Default: <kbd>Menu</kbd>)</li>
+    <li><kbd>currentPath&lt;string&gt;</kbd> - current URL, should be connected with React Router</li>
+</ul>
+
+<h5 class="m-t-3">Navbar.MenuSection</h5>
+<p>Renders a section in the menu, with a title and links inside.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>slug&lt;string&gt;</kbd> - Slug of the section from <kbd>/routes/routesStructure.js</kbd></li>
+</ul>
+
+<h5 class="m-t-3">Navbar.DropdownList</h5>
+<p>A special Nav Dropdown which is build of a header, list and a footer.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>header&lt;node&gt;</kbd> - Element which will be placed at the beginning of the Dropdown, <kbd>flex spece-between</kbd> will be applied automatically to separate the title from potential options</li>
+    <li><kbd>footer&lt;node/string&gt;</kbd> - Text or element rendered at the end of the list</li>
+    <li><kbd>footerUrl&lt;string&gt;</kbd> - Optional URL wrapping the Footer</li>
+    <li><kbd>listHeight&lt;number/string&gt;</kbd> - Maximum height of the list (Default: <kbd>250</kbd> (px))</li>
+    <li><kbd>width&lt;number/string&gt;</kbd> - Width of the list on devices greater than XS (Default: <kbd>350</kbd> (px))</li>
+</ul>
+
+<h5 class="m-t-3">OutsideClick</h5>
+<p>Fires the provided <kbd>EventHandler</kbd> when User clicks outside of the provided child element.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>onClickOutside&lt;func&gt;</kbd> - <kbd>EventHandler</kbd> called when clicked outside</li>
+    <li><kbd>excludedElements&lt;array&gt;</kbd> - Array of elements which will be ommited from the click-test. Mostly usable for trigger buttons</li>
+    <li><kbd>active&lt;bool&gt;</kbd> - Is the detection mechanism active (Default: true)</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="panels">Panels</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#panels">Panel</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+<li>
+<p><kbd>flexHeader&lt;bool&gt;</kbd> - Header children will be moved to the edges of the Panel (Applies flex space-between no-wrap)</p>
+</li>
+<li>
+    <p><kbd>maxHeight&lt;number&gt;</kbd> - When provided, the Body&#x2019;s <kbd>max-height</kbd> will be set to this value, additionally a custom scroll will be initialized inside the Panel Body</p>
+</li>
+<li>
+    <p><kbd>flexHeader&lt;bool&gt;</kbd>- Body and Footer will fill the whole Panel space, omitting the parent&#x2019;s padding</p>
+</li>
+<li>
+    <p><kbd>fullBody&lt;bool&gt;</kbd> - Removes the internal padding</p>
+</li>
+<li>
+    <p><kbd>background&lt;string&gt;</kbd> - (Available options: <kbd>null</kbd>, <kbd>light</kbd>, <kbd>gray</kbd>) Sets the panel background, set to <kbd>null</kbd> if no background should be applied. (Default: <kbd>null</kbd>)</p>
+</li>
+<li>
+    <p><kbd>borderStyle</kbd> - (Available options: <kbd>thin</kbd>, <kbd>normal</kbd>, <kbd>thick</kbd>). Sets the border width to <kbd>1px</kbd>, <kbd>2px</kbd> and <kbd>3px</kbd> sequentially. (Default: &apos;normal`)</p>
+</li>
+<li>
+    <p><kbd>bsStyle&lt;string&gt;</kbd> - Provides context color to the panel</p>
+</li>
+<li>
+    <p><kbd>type&lt;string&gt;</kbd> - Applies one of 6 panel visual types (Default: null)</p>
+    <p><strong>Available options</strong>:</p>
+    <ul>
+        <li><kbd>color-border-full</kbd> - whole panel border in context color</li>
+        <li><kbd>color-border-left</kbd> - left panel border in context color</li>
+        <li><kbd>color-border-top</kbd> - top panel border in context color</li>
+        <li><kbd>color-border-heading</kbd> - bottom header border in context color</li>
+        <li><kbd>color-title</kbd> - header background in context color</li>
+        <li><kbd>color-title-border</kbd> - header background and whole panel border in context color</li>
+    </ul>
+</li>
+</ul>
+
+
+<h5 class="m-t-3">CollapsablePanel</h5>
+<p>A Panel (see above) which can be collapsed (Body and Footer collapsing with animation) or disabled via additional options in the Panel Header.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>collapsed&lt;bool&gt;</kbd> - Determines if the Body and Footer are collapsed (Default: false)</li>
+    <li><kbd>title&lt;string&gt;</kbd> - Panel Title placed in the header</li>
+    <li><kbd>footer&lt;node&gt;</kbd> - Element placed in the Panel&#x2019;s footer</li>
+    <li><kbd>fill&lt;bool&gt;</kbd> - Makes the Panel Body render without padding</li>
+    <li><kbd>onCollapse&lt;func&gt;</kbd> - Callback fired when the Panel starts collapsing</li>
+    <li><kbd>onClose&lt;func&gt;</kbd> - Callback fired when the Disable Option is clicked</li>
+</ul>
+
+<h5 class="m-t-3">RightSidebar</h5>
+<p>Right Sidebar for some less important content available at any time.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>active&lt;bool&gt;</kbd> - Should the sidebar be visible (Default: false)</li>
+    <li><kbd>affixOffset&lt;number&gt;</kbd> - Offset on which the sidebar should be affixed (sticky) (Default: <kbd>0</kbd>)</li>
+    <li><kbd>children&lt;node&gt;</kbd> - Content of the Right Sidebar</li>
+</ul>
+
+<h5 class="m-t-3">RightSidebar.OverlayContent</h5>
+<p>Additional container which can be overlayed over the RightSidebar. Use <kbd>RightSidebar.OverlayContentParent</kbd> for appropriate position adjustment.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>active&lt;bool&gt;</kbd> - Should the overlay be visible (Default: false)</li>
+    <li><kbd>children&lt;node&gt;</kbd> The actual content</li>
+</ul>
+<h5 class="m-t-3">RightSidebar.OverlayContentParent</h5>
+<p>The parent of the content. <kbd>RightSidebar.OverlayContent</kbd> will be relative to this Component.</p>
+<p>Props:</p>
+<ul>
+    <li><kbd>children&lt;node&gt;</kbd> - Mixed HTML with <kbd>RightSidebar.OverlayContent</kbd></li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="sidebars">Sidebars</h4>
+</div>
+<p>Sidebar element which can contain <kbd>Sidebar.Menu</kbd> for navigation and <kbd>Sidebar.Addon</kbd>s which are extra content elements adjustable for different sidebar styles: <kbd>default</kbd>, <kbd>slim</kbd>, <kbd>big-icons</kbd>.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>affixOffset&lt;number&gt;</kbd> - Offset on which the sidebar should be affixed (sticky) (Default: <kbd>0</kbd>)</li>
+<li><kbd>header&lt;node&gt;</kbd> - Header elements shown on <kbd>Overlay</kbd>ed version on mobile</li>
+<li><kbd>overlay&lt;bool&gt;</kbd> - Should the sidebar be an overlay, Typically this would be set when Screen Size is <kbd>XS</kbd> (Default: false)</li>
+<li><kbd>overlayVisible&lt;bool&gt;</kbd> - When Overlay Mode is on, should the Sidebar be shown (Default: <kbd>false</kbd>)</li>
+<li>`overlayAnimationDuration&lt;number&gt; - How long the show/hide animation should be (Default: 300)</li>
+<li><kbd>overlayAnimationEasingOpen&lt;string&gt;</kbd> - (Available: <kbd>CSS3 easings</kbd>) Easing type used for the opening animation</li>
+<li><kbd>overlayAnimationEasingClose&lt;string&gt;</kbd> - (Available: <kbd>CSS3 easings</kbd>) Easing type used for the closing animation</li>
+<li><kbd>onOverlayClosed&lt;func&gt;</kbd> - Callback triggered when the Overlay will finish closing</li>
+<li><kbd>onHeightChange&lt;func&gt;</kbd> - Callback triggered when the Menus inside will open or close. Additional height (more than default Sidebar Height) is passed in the <kbd>first argument</kbd></li>
+</ul>
+
+<h5 class="m-t-3">Sidebar.Menu</h5>
+<p>Navigation in the sidebar. Gets all the available routes from <kbd>/routes/routesStructure</kbd>.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>currentUrl&lt;string&gt;</kbd> - Current page URL, should be attached to <kbd>ReactRouter</kbd></li>
+<li><kbd>animationDuration&lt;number&gt;</kbd> - Open/close node animation duration</li>
+<li><kbd>animationEasing&lt;string&gt;</kbd> - (Available: CSS3 easings) Open/close node animation easing</li>
+</ul>
+
+<h5 class="m-t-3">Sidebar.AddOn</h5>
+<p>Additional content element which can be placed within the Sidebar. It should be composed of <kbd>Sidebar.AddOnContent</kbd>s which are being enabled/disabled accordingly to the current sidebar style.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>children</kbd> - List of <kbd>AddOnContent</kbd>s</li>
+</ul>
+
+<h5 class="m-t-3">Sidebar.AddOnContent</h5>
+<p>The content of the AddOn which will be displayed when current Sidebar Style matches the <kbd>supportedStyle</kbd> prop.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>supportedStyle&lt;array/string&gt;</kbd> - (Available: <kbd>default</kbd>, <kbd>slim</kbd>, <kbd>big-icons</kbd>) On which SidebarStyle this container should be visible</li>
+</ul>
+
+<div class="page-header">
+    <h4 id="star-rating">Star Rating</h4>
+</div>
+<p>Rating component which can be used for showing rating with Star Icons, aswell as returning Rating from user click.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>max&lt;number&gt;</kbd> - Determines how many Stars are there total (Default: <kbd>5</kbd>)</li>
+<li><kbd>at&lt;number&gt;</kbd> - Determines what is the current rating, which renders highlighted stars (Default: <kbd>0</kbd>)</li>
+<li><kbd>starColor&lt;string&gt;</kbd> - Color of the active stars (Default: <kbd>Colors.brandWarning</kbd>)</li>
+<li><kbd>onSelect&lt;func&gt;</kbd> - When provided, it will be called when a user click on any of the star. Attached argument indicates which star in order was clicked (1 - max)</li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="progress-bars">Progress Bars</h4>
+</div>
+<p>Alternative version of React Bootstrap <a href="https://react-bootstrap.github.io/components.html#progress">ProgressBar</a> with 3 different heights available.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>size&lt;string&gt;</kbd> - (Available options: <kbd>small</kbd>&lt;d&gt;, <kbd>medium</kbd>, <kbd>large</kbd>) Size of the Bar - respectively: <kbd>3px</kbd>, <kbd>6px</kbd> and <kbd>9px</kbd></li>
+</ul>
+
+
+
+<div class="page-header">
+    <h4 id="scroll-bar-container">Scroll Bar Container</h4>
+</div>
+<p>Adds a container with <a href="https://github.com/noraesae/perfect-scrollbar">PerfectScrollbar</a> attached. Initializes only when not on OSX nor mobile device.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>notRelative&lt;bool&gt;</kbd> - Prevents adding <kbd>position: relative</kbd> to the container which is needed by PerfectScrollbar. Use when the container has to be <kbd>position:absolute</kbd> (Default: false)</li>
+<li><kbd>componentClass&lt;string&gt;</kbd> - What kind of HTML element should be used for the container (Default: &#x2018;div&#x2019;)</li>
+<li><kbd>noXScrollBar&lt;bool&gt;</kbd> - Disables the horizontal Scroll Bar (Default: false)</li>
+<li><kbd>noYScrollBar&lt;bool&gt;</kbd> - Disables the vertical Scroll Bar (Default: false)</li>
+<li><kbd>dynamicChildren&lt;bool&gt;</kbd> - Adds a mutation observer for children changes. If a change is detected, the Scroll Bars will be updated. Set this option if there are components inside which <strong>frequently modify their size</strong>, in other situations keep it disabled for avoiding unnescessary overhead (Default: false)</li>
+</ul>
+
+<div class="page-header">
+    <h4 id="timeline">Timeline</h4>
+</div>
+<p>Renders a Timeline sequence using provided child components. Use <kbd>Timeline.Item</kbd> and &#x2018;Timeline.Date&#x2019; as direct children of this component for adding entries.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>itemAlignment&lt;string&gt;</kbd> - (Available options: <kbd>vertical</kbd>, <kbd>horizontal</kbd>&lt;d&gt;) Describes in which fashion should the <kbd>Timeline.Item</kbd>s render</li>
+</ul>
+
+<h5 class="m-t-3">Timeline.Item</h5>
+<p>Represents a single entry in the <kbd>Timeline</kbd>. Should be composed of a <kbd>Timeline.ItemHeader</kbd> and <kbd>Timeline.ItemBody</kbd>.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>date&lt;string/number/object&gt;</kbd> - Entry date information which will be parsed by <a href="http://momentjs.com/">momentjs</a> and displayed within the <kbd>Timeline.Item</kbd></li>
+<li><kbd>dateFormat&lt;string&gt;</kbd> - Date format string which will be used for displaying the date (Default: <kbd>DD MMM YYYY[\n]h:mm a</kbd>)</li>
+<li><kbd>icon&lt;node&gt;</kbd> - Small icon which serves as a bullet for each entry (Default: <kbd>&lt;i className=&apos;fa fa-circle-o&apos;&gt;&lt;/i&gt;</kbd>)</li>
+<li><kbd>color&lt;string&gt;</kbd> - Color of the above icon (Default: Colors.brandPrimary)</li>
+</ul>
+
+<h5 class="m-t-3">Timeline.ItemBody</h5>
+<p>Contains the content of the Timeline entry.</p>
+<h4><a id="TimelineItemHeader_398"></a>Timeline.ItemHeader</h4>
+<p>Header of the <kbd>Timline.Item</kbd>. Renders an Icon/Avatar in a combination with primary/secondary text.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>avatar&lt;node&gt;</kbd> - Graphic representation of the entry. May be <kbd>AvatarImage</kbd>, <kbd>AvatarIcon</kbd> or <kbd>AvatarText</kbd></li>
+<li><kbd>primaryText&lt;node/string&gt;</kbd> - Main text element of the header</li>
+<li><kbd>secondaryText&lt;node/string&gt;</kbd> - Additional text element of the header</li>
+</ul>
+
+<h5 class="m-t-3">Timeline.Date</h5>
+<p>Used as a separator of <kbd>Timeline.Item</kbd>s. May group entries by date i.e. <kbd>today</kbd>, <kbd>yesterday</kbd> etc. The text should be placed as a child of this component.</p>
+
+
+<div class="page-header">
+    <h4 id="tooltips">Tooltips</h4>
+</div>
+<p>Extended <a href="https://react-bootstrap.github.io/components.html#tooltips">Tooltip</a> from ReactBootstrap.</p>
+<p>Additional Props:</p>
+<ul>
+<li><kbd>bsStyle&lt;string&gt;</kbd> - (Available options: <kbd>primary</kbd>, <kbd>success</kbd>, <kbd>info</kbd>, <kbd>warning</kbd>, <kbd>danger</kbd>) Adds appropriate background color to the Tooltip</li>
+<li><kbd>customColor&lt;string&gt;</kbd> - Accepts a color definition. <strong>Available only if <kbd>bsStyle</kbd> is set to <kbd>custom</kbd></strong></li>
+</ul>
+
+
+<div class="page-header">
+    <h4 id="tree-navigator">Tree Navigator</h4>
+</div>
+<p>Tree Navigation component which consists of <kbd>TreeNavigation.Branch</kbd>es populated with React Routers <kbd>Link</kbd> components.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>currentPath&lt;string&gt;</kbd> - Current site URL, typically this will be connected to React Router&#x2019;s current path.</li>
+<li><kbd>activeEventKey&lt;string&gt;</kbd> - Key of the branch which will be opened by default</li>
+</ul>
+
+<h5 class="m-t-3">TreeNavigator.Branch</h5>
+<p>Component grouping <kbd>Link</kbd>s. Place the links inside of the Branch. There can be only one branch opened at a time.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>title&lt;string&gt;</kbd> - Title of the branch</li>
+<li><kbd>eventKey&lt;string&gt;</kbd> - Key of the branch, very optional use only in combination of <kbd>activeEventKey</kbd> from the parent (Default: [random key])</li>
+</ul>          
+                        
+<div class="page-header">
+    <h3 id="charts">Charts</h3>
+</div>
+<p>A set of Charts Components which can be used in various ways discribed below:</p>
+
+<div class="page-header">
+    <h4 id="chartist">Chartist</h4>
+</div>
+<p>A Proxy of <a href="https://github.com/fraserxu/react-chartist">ReactChartist</a>. Check the Project&#x2019;s site for available props.</p>
+
+<div class="page-header">
+    <h4 id="highcharts-highstock">Highcharts &amp; Highstock <small>HighchartBase, HighchartBasicLine, HighchartBasicLine, HighchartBasicColumn, HighStock</small></h4>
+</div>
+
+<p>Wrap of <a href="http://www.highcharts.com/">Highcharts</a> charts. Use the <kbd>HighchartBase</kbd> for making a Highchart chart from scratch providing the configuration in the <kbd>config</kbd> prop. <kbd>HighchartBasicLine</kbd>, <kbd>HighchartBasicLine</kbd>, <kbd>HighchartBasicColumn</kbd> have initial configurations for achieving the basic feel of each chart. All of these components have a theme connected which matches the dashboard style.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>config&lt;object&gt;</kbd> - Highcharts configuration object. Will be deeply merged with the theme and/or initial chart configuration.</li>
+<li><kbd>dynamicUpdate&lt;bool&gt;</kbd> - If set to <kbd>true</kbd> it will watch for changes in <kbd>series</kbd> data and inject only the freshly added points. Use for efficient rendering of streams of data. (Default: false)</li>
+</ul>
+
+<h5 class="m-t-3">AsyncChart</h5>
+<p>Asynchronous Highcharts loader. Can be used when a chart needs to load a large amount of data. Place a <kbd>Highchart</kbd> chart as direct child of this component. While the data loads there will be a loader rendered.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>children&lt;element&gt;</kbd> - <kbd>Highchart</kbd> Component which will be injected with data</li>
+<li><kbd>getConfig&lt;func&gt;</kbd> - Callback function which will be called when <kbd>data</kbd> will be available. Should return a config object merged with <kbd>data</kbd> from the <strong>first argument</strong></li>
+<li><kbd>getJson&lt;func&gt;</kbd> - Callback which should make an <kbd>async request</kbd> or <kbd>async Webpack require</kbd>. Should call the <strong>callback from the first argumnet</strong> when the request is complete</li>
+</ul> 
+
+<div class="page-header">
+    <h4 id="sparklines">Sparklines</h4>
+</div>
+<p>Sparklines are typically small charts which fit well as inline/table charts. There are four types that you can use:</p>
+
+<h5 class="m-t-3">SparklineLine</h5>
+<p>Typical Line Chart look.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>data&lt;array&lt;number&gt;&gt;</kbd> - Array of values to display the chart</li>
+<li><kbd>color&lt;string&gt;</kbd> - Color string which represents the chart line (Default: <kbd>Colors.brandPrimary</kbd>)</li>
+<li><kbd>width&lt;number&gt;</kbd> - Chart width in <kbd>px</kbd></li>
+<li><kbd>height&lt;number&gt;</kbd> - Chart height in <kbd>px</kbd></li>
+<li><kbd>limit&lt;number&gt;</kbd> - Total points which will be rendered in the Chart</li>
+<li><kbd>block&lt;bool&gt;</kbd> - If set to true will make the Chart a <kbd>display: block</kbd> element, <kbd>inline-block</kbd> othwerwise (Default: false)</li>
+<li><kbd>chartStyle&lt;object&gt;</kbd> - Additional style object for some custom SVG modifications</li>
+<li><kbd>fullWidth&lt;bool&gt;</kbd> - Adjusts the Chart Container to fill the Parent space</li>
+</ul>
+
+<h5 class="m-t-3">SparklineBar</h5>
+<p>Bar Chart representation</p>
+<p>Props:</p>
+<ul>
+<li><kbd>data&lt;array&lt;number&gt;&gt;</kbd> - Array of values to display the chart</li>
+<li><kbd>color&lt;string&gt;</kbd> - Color string which represents the chart line (Default: <kbd>Colors.brandPrimary</kbd>)</li>
+<li><kbd>width&lt;number&gt;</kbd> - Chart width in <kbd>px</kbd> (Default: 32)</li>
+<li><kbd>height&lt;number&gt;</kbd> - Chart height in <kbd>px</kbd> (Default: 16)</li>
+<li><kbd>chartStyle&lt;object&gt;</kbd> - Additional style object for some custom SVG modifications</li>
+</ul>
+
+<h5 class="m-t-3">SparklineBar</h5>
+<p>Bar Chart representation</p>
+<p>Props:</p>
+<ul>
+<li><kbd>data&lt;array&lt;number&gt;&gt;</kbd> - Array of values to display the chart</li>
+<li><kbd>color&lt;string&gt;</kbd> - Color string which represents the chart line (Default: <kbd>Colors.brandPrimary</kbd>)</li>
+<li><kbd>width&lt;number&gt;</kbd> - Chart width in <kbd>px</kbd> (Default: 32)</li>
+<li><kbd>height&lt;number&gt;</kbd> - Chart height in <kbd>px</kbd> (Default: 16)</li>
+<li><kbd>chartStyle&lt;object&gt;</kbd> - Additional style object for some custom SVG modifications</li>
+</ul>
+
+<h5 class="m-t-3">SparklineDonut</h5>
+<p>Donut / Gauge Chart representation</p>
+<p>Props:</p>
+<ul>
+<li><kbd>data&lt;array&lt;number&gt;&gt;</kbd> - Values of each slice sequentially</li>
+<li><kbd>value&lt;number&gt;</kbd> - Single value for Gauge, when provided data wil be omited</li>
+<li><kbd>radius&lt;number&gt;</kbd> - Radius of the donut in <kbd>px</kbd> (Default: <kbd>30px</kbd>)</li>
+<li><kbd>innerRadius&lt;number/string&gt;</kbd> - Size of the inner ring can be in <kbd>px</kbd> or <kbd>%</kbd> (Default: <kbd>%</kbd>)</li>
+<li><kbd>colors&lt;array&lt;string&gt;&gt;</kbd> - Array of sequential colors which will be used for <kbd>data</kbd> (Default: <kbd>[Colors.brandPrimary, Colors.brandInfo, Colors.brandWarning, Colors.brandDanger, Colors.brandSuccess])</kbd></li>
+<li><kbd>color&lt;string&gt;</kbd> - Color used for single Value (Default: <kbd>Colors.brandPrimary</kbd>)</li>
+<li><kbd>animated&lt;bool&gt;</kbd> - Should the donut be animated on initial render (Default: false)</li>
+<li><kbd>animationDuration&lt;number&gt;</kbd> - Duration of the initial render animation</li>
+</ul>
+
+<h5 class="m-t-3">SparklinePie</h5>
+<p>Pie/Gauge Chart representation.</p>
+<p>Props:</p>
+<ul>
+<li><kbd>data&lt;array&lt;number&gt;&gt;</kbd> - Values of each slice sequentially</li>
+<li><kbd>value&lt;number&gt;</kbd> - Single value for Gauge, when provided data wil be omited</li>
+<li><kbd>radius&lt;number&gt;</kbd> - Radius of the donut in <kbd>px</kbd> (Default: <kbd>30px</kbd>)</li>
+<li><kbd>innerRadius&lt;number/string&gt;</kbd> - Size of the inner ring can be in <kbd>px</kbd> or <kbd>%</kbd> (Default: <kbd>%</kbd>)</li>
+<li><kbd>colors&lt;array&lt;string&gt;&gt;</kbd> - Array of sequential colors which will be used for <kbd>data</kbd> (Default: <kbd>[Colors.brandPrimary, Colors.brandInfo, Colors.brandWarning, Colors.brandDanger, Colors.brandSuccess])</kbd></li>
+<li><kbd>color&lt;string&gt;</kbd> - Color used for single Value (Default: <kbd>Colors.brandPrimary</kbd>)</li>
+<li><kbd>animated&lt;bool&gt;</kbd> - Should the donut be animated on initial render (Default: false)</li>
+<li><kbd>animationDuration&lt;number&gt;</kbd> - Duration of the initial render animation</li>
+</ul>
+
+                                
+                         
+                                   
+        </div>
+        <!-- END CONTENT -->
+        
+        <div class="col-lg-3">
+               <!-- START Right Sidebar Slim -->
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+                <ul class="nav bs-docs-sidenav" id="highstock-right-sidebar">
+                    <li> <a href="#introduction">Introduction</a></li>
+                    <li> <a href="#reusable-components">Reusable Components</a>
+                        <ul class="nav">
+                            <li><a href="#layout">Layout</a></li>
+                            <li><a href="#affix-wrap">AffixWrap</a></li>
+                            <li><a href="#avatars">Avatars</a></li>
+                            <li><a href="#tabs">Tabs</a></li>
+                            <li><a href="#alerts">Alerts</a></li>
+                            <li><a href="#badges">Badges</a></li>
+                            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#dividers">Dividers</a></li>
+                            <li><a href="#favorite-star">Favorite Star</a></li>
+                            <li><a href="#footer">Footer</a></li>
+                            <li><a href="#images">Images</a></li>
+                            <li><a href="#labels">Labels</a></li>
+                            <li><a href="#navbars">Navbars</a></li>
+                            <li><a href="#panels">Panels</a></li>
+                            <li><a href="#sidebars">Sidebars</a></li>
+                            <li><a href="#star-rating">Star Rating</a></li>
+                            <li><a href="#progress-bars">Progress Bars</a></li>
+                            <li><a href="#scroll-bar-container">Scroll Bar Container</a></li>
+                            <li><a href="#timeline">Timeline</a></li>
+                            <li><a href="#tooltips">Tooltips</a></li>
+                             <li><a href="#tree-navigator">Tree Navigator</a></li>
+                            
+                      </ul>
+                    </li>
+                    <li> <a href="#charts">Charts</a>
+                        <ul class="nav">
+                            <li><a href="#chartist">Chartist</a></li>
+                            <li><a href="#highcharts-highstock">Highcharts &amp; Highstock</a></li>
+                            <li><a href="#sparklines">Sparklines</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+            </nav>
+            <!-- END Right Sidebar Slim -->
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+
+          <!-- START Footer -->
+<footer>
+    <div class="container">
+        <p class="text-gray-dark">
+            <strong class="m-r-1">SPIN Dashboard </strong> 
+            <span class="text-gray-dark">&#xA9; 2009 - 2016. Made by 
+            <i class="fa fa-fw fa-heart text-danger"></i> New York, US</span>
+        </p>
+    </div>
+</footer>
+<!-- END Footer -->
+
+    </div>
+
+    <script src="../assets/vendor/js/lib.min.js"></script>
+    <script src="../assets/javascript/docs.js"></script>
+</body>
+
+</html>

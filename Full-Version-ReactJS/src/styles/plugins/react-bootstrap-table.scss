@@ -1,0 +1,80 @@
+@import '~react-bootstrap-table/css/react-bootstrap-table';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+body {
+    .react-bs-table table td.react-bs-table-expand-cell {
+        text-overflow: clip;
+    }
+
+    .tr-expanded {
+        background-color: #2f2f2f;
+    }
+
+    .react-bs-table-bordered {
+        border-radius: 0;
+        border-color: $table-border-color;
+    }
+
+    thead th {
+        font-size: 10px;
+        font-weight: 700;
+        color: $text-muted;
+        text-transform: uppercase;
+
+        //select.filter,
+        .date-filter-comparator,
+        .select-filter,
+        select.number-filter-comparator,
+        .filter.select-filter {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid $btn-default-border !important;
+            position: relative;
+            font-style: normal !important;
+            border-radius: 4px !important;
+            padding: 6px 20px 6px 12p !important;
+            color: #fff !important;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAcIEi6ytMBZALYlAAAAJElEQVQIHWMAA2FjYwWGzJkzpzBIzJwZwMDYOZWBgUE8gAEBAIuHBemYSa8PAAAAAElFTkSuQmCC') !important;
+            background-color: #212121 !important;
+            background-position: calc(100% - 5px) center;
+            background-repeat: no-repeat;
+
+            option {
+                color: #fff !important;
+            }
+        }
+
+        > div > .filter {
+            margin-top: 5px;
+        }
+    }
+
+    // As Panel
+    .react-bs-table-container.panel {
+        .panel-footer > .row {
+            margin-top: 0 !important;
+        }
+
+        .panel-heading {
+            margin-bottom: 0;
+        }
+
+        .panel-footer {
+            margin-top: 0;
+        }
+
+        .react-bs-table-bordered {
+            border: none;
+        }
+    }
+
+    .bootstrap-filters-size-sm {
+        thead th .form-control {
+            height: 27px;
+            padding: 5px 10px;
+            font-size: 10px;
+            line-height: 1.5;
+            border-radius: 1px;
+        }
+    }
+}

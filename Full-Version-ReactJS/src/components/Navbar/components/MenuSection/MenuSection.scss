@@ -1,0 +1,33 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.menuSection {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .header {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 9.5px 0;
+        color: $text-muted;
+    }
+
+    .list {
+        list-style-type: none;
+        padding-left: 5px;
+        line-height: 20px;
+
+        a {
+            color: $text-muted;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .active a {
+            color: #fff;
+        }
+    }
+}

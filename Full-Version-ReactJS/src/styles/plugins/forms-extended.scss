@@ -1,0 +1,90 @@
+@import "~react-select/scss/select";
+
+// Change Variables Here
+
+/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/JedWatson/react-select
+*/
+
+// Variables
+// ------------------------------
+
+// control options
+$select-input-bg:                   $input-bg;
+$select-input-bg-disabled:          darken($input-bg, 8%);
+$select-input-border-color:         $input-border;
+$select-input-border-radius:        4px !default;
+$select-input-border-focus:         #08c !default; // blue
+$select-input-border-width:         1px !default;
+$select-input-height:               36px !default;
+$select-input-internal-height:      ($select-input-height - ($select-input-border-width * 2)) !default;
+$select-input-placeholder:          $input-color-placeholder;
+$select-text-color:                 white;
+$select-link-hover-color:           $select-input-border-focus !default;
+
+$select-padding-vertical:           8px !default;
+$select-padding-horizontal:         10px !default;
+
+// menu options
+$select-menu-zindex:                1000 !default;
+$select-menu-max-height:            200px !default;
+
+$select-option-color:               $gray-light;
+$select-option-bg:                  $dropdown-bg;
+$select-option-focused-color:       white;
+$select-option-focused-bg:          $brand-primary; // pale blue
+$select-option-selected-color:      white;
+$select-option-selected-bg:         $input-bg; // lightest blue
+$select-option-disabled-color:      darken($input-color-placeholder, 20%);
+
+$select-noresults-color:            lighten($select-text-color, 40%) !default;
+
+// clear "x" button
+$select-clear-size:                 floor(($select-input-height / 2)) !default;
+$select-clear-color:                #999 !default;
+$select-clear-hover-color:          #D0021B !default; // red
+$select-clear-width:                ($select-input-internal-height / 2) !default;
+
+// arrow indicator
+$select-arrow-color:                $gray-lighter;
+$select-arrow-color-hover:          lighten($gray-lighter, 10%);
+$select-arrow-width:                5px !default;
+
+// loading indicator
+$select-loading-size:               16px !default;
+$select-loading-color:              $gray-lighter;
+$select-loading-color-bg:           $select-input-border-color !default;
+
+// multi-select item
+$select-item-border-radius:         2px !default;
+$select-item-gutter:                5px !default;
+$select-item-padding-vertical:      2px !default;
+$select-item-padding-horizontal:    5px !default;
+$select-item-font-size:             .9em !default;
+$select-item-color:                 white; // pale blue
+$select-item-bg:                    $brand-primary;
+$select-item-border-color:          #2F85BB;
+$select-item-hover-color:           none; // pale blue
+$select-item-hover-bg:              none;
+$select-item-disabled-color:        darken(white, 10%);
+$select-item-disabled-bg:           darken($brand-primary, 10%);
+$select-item-disabled-border-color: darken($select-item-border-color, 10%);
+
+$select-input-border-color: $input-border;
+
+@import "~react-select/scss/control";
+@import "~react-select/scss/menu";
+@import "~react-select/scss/mixins";
+@import "~react-select/scss/multi";
+@import "~react-select/scss/spinner";
+
+// Change Styles Here
+body {
+    .is-open > .Select-control {
+        border-color: $select-input-border-color;
+    }
+}

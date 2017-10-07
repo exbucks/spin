@@ -1,0 +1,49 @@
+@import "~react-bootstrap-typeahead/css/Token";
+@import "~react-bootstrap-typeahead/css/Typeahead";
+@import "~react-bootstrap-typeahead/css/Loader";
+@import "~react-bootstrap-typeahead/css/ClearButton";
+
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+body {
+    .bootstrap-typeahead {
+        .form-control {
+            &:focus,
+            &.focus {
+                border-color: #fff;
+                background-color: #fff !important;
+                color: $gray-darker;
+                outline: 0;
+
+                .bootstrap-typeahead-input-main {
+                    color: inherit !important;
+                }
+            }
+
+            .bootstrap-typeahead-input-main {
+                color: #fff !important;
+
+                &::-moz-placeholder {
+                    color: $gray-lighter;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder { color: $gray-lighter; }
+                &::-webkit-input-placeholder  { color: $gray-lighter; }
+            }
+        }
+
+        .token {
+            background-color: $brand-primary;
+            color: #fff;
+            padding-right: 7px;
+            padding-left: 30px;
+
+            .close-button {
+                padding: 4px 7px;
+                border-right: 1px solid darken($brand-primary, 10%);
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}

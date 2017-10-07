@@ -1,0 +1,124 @@
+{
+    "MemoryUsage": {
+        "Value": "{{n:10:100}}",
+        "Max": 100,
+        "Diff": "{{n:10:60}}"
+    },
+    "CpuUsage": {
+        "Value": "{{n:10:100}}",
+        "Max": 100,
+        "Diff": "{{n:10:60}}"
+    },
+    "Traffic": {
+        "Value": "{{n:1:90}}",
+        "Max": 100,
+        "Diff": "{{n:10:60}}"
+    },
+    "DiskUsage": {
+        "Value": "{{n:1:90}}",
+        "Max": 100,
+        "Diff": "{{n:10:60}}"
+    },
+    "ProcessDetails": [
+        {
+            "Name": "Apache",
+            "Version": "12.02",
+            "Space": {
+                "Total": 10000,
+                "Used": "{{n:100:9000}}"
+            },
+            "ProcessCount": {
+                "Max": 20
+            },
+            "MemoryUsage": {
+                "Max": 1000
+            },
+            "CpuUsage": {
+                "Max": 100
+            },
+            "DiskUsage": {
+                "Max": 1000
+            }
+        },
+        {
+            "Name": "Postfix",
+            "Version": "5.09",
+            "Space": {
+                "Total": 10000,
+                "Used": "{{n:100:9000}}"
+            },
+            "ProcessCount": {
+                "Max": 20
+            },
+            "MemoryUsage": {
+                "Max": 1000
+            },
+            "CpuUsage": {
+                "Max": 100
+            },
+            "DiskUsage": {
+                "Max": 1000
+            }
+        },
+        {
+            "Name": "Ruby R1",
+            "Version": "0.0.2",
+            "Space": {
+                "Total": 10000,
+                "Used": "{{n:100:9000}}"
+            },
+            "ProcessCount": {
+                "Max": 20
+            },
+            "MemoryUsage": {
+                "Max": 1000
+            },
+            "CpuUsage": {
+                "Max": 100
+            },
+            "DiskUsage": {
+                "Max": 1000
+            }
+        },
+        {
+            "Name": "MySQL",
+            "Version": "6.1",
+            "Space": {
+                "Total": 10000,
+                "Used": "{{n:100:9000}}"
+            },
+            "ProcessCount": {
+                "Max": 20
+            },
+            "MemoryUsage": {
+                "Max": 1000
+            },
+            "CpuUsage": {
+                "Max": 100
+            },
+            "DiskUsage": {
+                "Max": 1000
+            }
+        },
+        {
+            "Name": "Ruby R2",
+            "Version": "1.1",
+            "Space": {
+                "Total": 10000,
+                "Used": "{{n:100:9000}}"
+            },
+            "ProcessCount": {
+                "Max": 20
+            },
+            "MemoryUsage": {
+                "Max": 1000
+            },
+            "CpuUsage": {
+                "Max": 100
+            },
+            "DiskUsage": {
+                "Max": 1000
+            }
+        }
+    ]
+}

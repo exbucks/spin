@@ -1,0 +1,103 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .favoriteTitle {
+        font-weight: 300;
+        margin: 0;
+        line-height: 26px;
+
+        span {
+            margin-bottom: 1rem;
+            color: $brand-white;
+            font-size: 13px;
+        }
+    }
+
+    .valGrowth {
+        color: $brand-success;
+    }
+
+    .valLoss {
+        color: $brand-danger;
+    }
+
+    .favoriteScoreTitle {
+        margin-bottom: 0;
+        margin-top: 1rem;
+        white-space: nowrap;
+        font-size: 10px;
+    }
+
+    .favoriteScore {
+        @extend .favoriteScoreTitle;
+
+        font-size: 13px;
+        small {
+            margin-left: 1.5rem;
+        }
+    }
+
+    .favoriteValue {
+        padding-top: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .stockValue {
+        &.stockValue__growth {
+            i,
+            .stockValuePrice {
+                color: $brand-success;
+            }
+        }
+
+        &.stockValue__loss {
+            i,
+            .stockValuePrice {
+                color: $brand-danger;
+            }
+        }
+
+        .stockValuePrice {
+
+        }
+    }
+
+    .detailedStockHeader {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        align-items: baseline;
+
+        .detailedStockHeaderValue {
+            display: inline-block;
+        }
+    }
+
+    .statsTable {
+        th {
+            font-size: 10px;
+            font-weight: bold;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+
+        td:first-child {
+            color: $brand-white;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+    }
+
+    .selectedStocksTable {
+        th {
+            font-size: 10px;
+            font-weight: bold;
+            color: $text-muted;
+            text-transform: uppercase;
+        }
+    }
+}

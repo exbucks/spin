@@ -1,0 +1,76 @@
+{
+    "ViewsStatistics": {
+        "TotalViews": "{{n:50000:100000}}",
+        "UniqueViews": "{{n:20000:50000}}",
+        "MaxConcurentViews": "{{n:5000:10000}}",
+        "TotalMinutesViewed": "{{n:2000000:5000000}}",
+        "AverageDuration": "{{n:600:7200}}"
+    },
+    "Devices": [
+        {
+            "Name": "Desktop",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Tablet",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Mobile",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Others",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Connected TV",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        }
+    ],
+    "MediaType": [
+        {
+            "Name": "Recorded",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Live",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Image",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        },
+        {
+            "Name": "Status",
+            "Views": "{{n:3000:20000}}",
+            "UniqueViewsPercentage": "{{n:30:80}}",
+            "TotalMinutes": "{{n:20000:100000}}",
+            "Duration": "{{n:600:7200}}"
+        }
+    ]
+}

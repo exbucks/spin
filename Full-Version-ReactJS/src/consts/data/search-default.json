@@ -1,0 +1,91 @@
+{
+  "Query": "Content Designer",
+  "ResultsCount": 1370,
+  "Time": 0.13,
+  "Results": [
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    },
+    {
+      "Title": "{{fake:[lorem.sentence]}}",
+      "Url": "{{fake:[internet.url]}}",
+      "Rating": "{{n:1:5}}",
+      "Votes": "{{n:1000:10000}}",
+      "ShortDesc": "{{fake:[lorem.paragraph]}}"
+    }
+  ]
+}

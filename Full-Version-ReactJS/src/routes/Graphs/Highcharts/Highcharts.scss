@@ -1,0 +1,32 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.columnChart {
+    max-height: 300px;
+}
+
+.totalIncome {
+    margin-bottom: 3rem;
+}
+
+.payment {
+    margin-bottom: 1.5rem;
+}
+
+.paymentHeader {
+    margin: 0;
+    font-weight: normal;
+    font-size: 13px;
+    color: $gray-lighter;
+}
+
+.paymentValue {
+    color: $brand-white;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.paymentValueLarge {
+    @extend .paymentValue;
+    font-size: 24px;
+}

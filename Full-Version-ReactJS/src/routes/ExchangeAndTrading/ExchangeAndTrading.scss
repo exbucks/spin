@@ -1,0 +1,149 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.mainWrap {
+    .summary {
+        > * {
+            margin-bottom: 10px;
+        }
+
+        .summaryValueTitle {
+            margin-bottom: 0;
+        }
+
+        .summaryLargeValue {
+            font-weight: 300;
+            margin: 0 0 1rem 0;
+            font-size: 28px;
+            color: $brand-white;
+
+            small {
+                font-size: 65%;
+                color: $text-muted;
+            }
+
+            .summaryValueLess {
+                color: $brand-danger;
+            }
+
+            .summaryValueMore {
+                color: $brand-success;
+            }
+        }
+
+        @media (max-width: $screen-md) {
+            .summaryLargeValue{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .overall {
+        margin-top: 0;
+        margin-bottom: 3rem;
+
+        .overallEntry:not(:first-child) {
+            margin-left: 3rem;
+        }
+
+        @media (max-width: $screen-sm) {
+            .overallEntry{
+                display: block;
+                margin-left: 0 !important;
+            }
+        }
+
+        .overallValue {
+            margin-left: 1rem;
+            color: $brand-white;
+        }
+    }
+
+    .exchangePanel {
+        margin-top: 1.5rem;
+        border: none;
+        background-color: $gray-darker;
+
+        .exchangePanelTitle {
+            font-weight: 300;
+            margin-right: 1rem;
+            padding-bottom: 10px;
+        }
+
+        .exchangeInput {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .exchangeActions{
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 10px;
+
+            .exchangeAction {
+                margin-right: 5px;
+
+                > i {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .ordersTable {
+        th {
+            font-weight: 700;
+            font-size: 76%;
+            text-transform: uppercase;
+        }
+    }
+
+    .orders {
+        .iconBuy {
+            color: $brand-primary;
+            margin-right: 1rem;
+        }
+
+        .iconSell {
+            color: $brand-danger;
+            margin-right: 1rem;
+        }
+
+        .iconAll {
+            color: $text-muted;
+            margin-right: 1rem;
+        }
+
+        .iconIncrease {
+            color: $brand-success;
+        }
+
+        .iconDecrease {
+            color: $brand-danger;
+        }
+    }
+
+    .news {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .newsHeader{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .newsHeaderTitle {
+                margin-top: 0;
+                font-weight: 300;
+            }
+        }
+
+        .newsTitle {
+            margin-top: 0;
+
+            a {
+                color: $brand-white;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+$break: 10px;
+$arrowHeight: 20px;
+$arrowColor: #1A1A1A;
+
+.wrap {
+    &--absolute {
+        position: relative;
+        display: inline-block;
+        
+        .pickerWrap {
+            position: absolute;
+            z-index: 5;
+        }
+    }
+
+    &--buttons {
+        display: inline-block;
+    }
+
+    &--bottom {
+        .pickerWrap {
+            bottom: -$break;
+            transform: translateY(100%);
+        }
+    }
+
+    &--top {
+        .pickerWrap {
+            top: -$break * 2;
+            transform: translateY(-100%);
+        }
+    }
+
+    &--left {
+        .pickerWrap {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    &--right {
+        .pickerWrap {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+.pickerWrap {
+    margin-top: $break;
+}
+
+.focusedWrap {
+    position: relative;
+
+    // Arrow
+    &::after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-left: $arrowHeight solid transparent;
+        border-right: $arrowHeight solid transparent;
+
+        border-bottom: $arrowHeight solid $arrowColor;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+    }
+}
+
+.focusedInput {
+    background-color: #fff;
+    border-color: #fff;
+    color: #262626;
+    outline: 0;
+}
+
+.buttonSepearator {
+    pointer-events: none;
+    background: none;
+    border: none;
+    color: #828282;
+}

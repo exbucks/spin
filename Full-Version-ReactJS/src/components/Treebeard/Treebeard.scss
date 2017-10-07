@@ -1,0 +1,58 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.container {
+    > * {
+        background: none !important;
+    }
+
+    // Ultra Hack - when the node has a background
+    // it means its active, change the icon colors then...
+    // thank inline styling...
+    .icon {
+        color: $text-muted;
+    }
+
+    li > div[style*="background"] .icon {
+        color: #fff !important;
+    }
+}
+
+.loading {
+    font-size: 12px;
+    font-family: $font-family-sans-serif !important;
+    color: $brand-warning !important;
+}
+
+.header {
+    color: $text-muted !important;
+    font-size: 12px !important;
+    font-family: $font-family-sans-serif !important;
+
+    .nodeName {
+        color: $brand-primary;
+    }
+
+    &.headerActive {
+        background-color: $brand-primary !important;
+
+        .nodeName {
+            color: white !important;
+        }
+    }
+}
+
+.toggle {
+    display: inline-block;
+    vertical-align: top;
+    transform-origin: center center;
+    position: relative;
+    margin-right: 2px;
+    height: 24px !important;
+
+    > i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

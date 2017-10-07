@@ -1,0 +1,49 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.treeNavigatorRoot {
+
+}
+
+.treeNavigatorBranch {
+    list-style-type: none;
+
+    .branchTitle {
+        padding: 4px 0 4px 18px;
+        font-weight: 700;
+        color: $gray-light;
+        display: block;
+        border-left: 2px solid transparent;
+        text-decoration: none !important;
+    }
+
+    .branchItem a {
+        color: $gray-light;
+        padding-left: 28px;
+        display: block;
+        border-left: 2px solid transparent;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .branchItem.active a,
+    &.active .branchTitle{
+        color: $brand-primary;
+        border-color: $brand-primary;
+    }
+
+    .branchItem:not(.active) a:hover,
+    &:not(.active) .branchTitle:hover {
+        color: $brand-white;
+        text-decoration: none;
+        border-color: $brand-white;
+    }
+
+    .treeNavigatorBranchList {
+        padding-left: 0;
+        list-style-type: none;
+        overflow: hidden;
+    }
+}

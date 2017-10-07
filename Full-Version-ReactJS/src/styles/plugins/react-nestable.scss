@@ -1,0 +1,49 @@
+@import "~react-nestable/src/Nestable/Nestable";
+
+.nestable-item {
+    &::before {
+
+    }
+    list-style-type: none;
+}
+
+.nestable {
+    ol li{
+        &::before {
+            content: none;
+            margin-left: auto;
+            list-style-type: none;
+        }
+    }
+    list-style-type: none;
+}
+
+.nestable-list {
+    .nestable-item.is-dragging::before {
+        content: " " !important;
+        border-width: 2px;
+        border-style: dashed;
+        border-color: rgba($brand-primary, 0.5);
+        background: rgba($brand-primary, 0.1);
+    }
+
+    /*
+    .nestable-icon {
+        position: inherit;
+        display: inherit;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        background-position: inherit;
+        background-repeat: inherit;
+
+        &::before {
+            content: inherit;
+            display: inherit;
+            width: inherit;
+            height: inherit;
+            overflow: inherit;
+        }
+    }
+    */
+}

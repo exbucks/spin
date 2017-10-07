@@ -1,0 +1,66 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+
+.leftPanelDivider {
+    margin-bottom: 1rem;
+}
+
+.leftPanelSection {
+    margin-bottom: 3rem;
+    background: none;
+}
+
+.taskDetails {
+    @extend .leftPanelSection;
+
+    li {
+        padding: 5px 0;
+        background: none;
+        border-width: 0 0 1px 0;
+        border-color: $gray;
+    }
+
+    li:last-child {
+        border: none;
+    }
+}
+
+.detailsValue,
+.detailsKey {
+    margin: 0;
+}
+
+.detailsKey {
+    color: $gray-lighter;
+}
+
+.detailsValue {
+    text-align: right;
+    color: $brand-white;
+}
+
+.taskLabel {
+    display: inline-block;
+    margin: 0 2px 2px 0;
+}
+
+.taskHeader {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    .headerActions {
+        flex-shrink: 0;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .taskHeader {
+        display: block;
+    }
+}
+
+.taskPanelTitle {
+    font-weight: 300;
+    margin: 0;
+}

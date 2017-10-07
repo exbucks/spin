@@ -1,0 +1,26 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.wrap {
+    margin-top: 1rem;
+}
+
+.panelGroupItem {
+    background: none;
+    border: none;
+}
+
+.memoryChartWrap {
+    margin-bottom: 10px;
+}
+
+.totalMemoryValue {
+    font-weight: 300;
+    margin: 0;
+    font-size: 24px;
+    color: $brand-white;
+}
+
+.memoryValue {
+    margin: 9.5px 0 0 0;
+    color: $brand-white;
+}

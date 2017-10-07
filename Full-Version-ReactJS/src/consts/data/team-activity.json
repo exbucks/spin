@@ -1,0 +1,206 @@
+{
+    "Summary": {
+        "Duration": 31,
+        "Happiness": {
+            "Great": 25718,
+            "Good": 33066,
+            "Bad": 14696
+        },
+        "Customers": {
+            "Count": "{{n:40000:70000}}"
+        },
+        "Tickets": {
+            "Count": "{{n:40000:70000}}"
+        },
+        "Replies": {
+            "Count": "{{n:40000:70000}}"
+        },
+        "AvgResponseTime": {
+            "Count": "{{n:30:120}}"
+        },
+        "Channels": [
+            {
+                "Name": "Emails",
+                "Count": "{{n:10000:80000}}"
+            },
+            {
+                "Name": "Emails (Manual)",
+                "Count": "{{n:10000:80000}}"
+            },
+            {
+                "Name": "Phones",
+                "Count": "{{n:10000:80000}}"
+            },
+            {
+                "Name": "Docs",
+                "Count": "{{n:10000:80000}}"
+            },
+            {
+                "Name": "Calls",
+                "Count": "{{n:10000:80000}}"
+            }
+        ]
+    },
+    "Activties": [
+        {
+            "Date": "Today",
+            "List": [
+                {
+                    "Type": "quote",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "question",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "addition",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "approve",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "info",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                }
+            ]
+        },
+        {
+            "Date": "Yesterday",
+            "List": [
+                {
+                    "Type": "like",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "question",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "addition",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "approve",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                },
+                {
+                    "Type": "info",
+                    "User": {
+                        "FirstName": "{{faker:name.firstName}}",
+                        "LastName": "{{faker:name.lastName}}",
+                        "Avatar": "{{faker:image.avatar}}",
+                        "Assigned": "{{faker:name.firstName name.lastName}}"
+                    },
+                    "Content": {
+                        "Message": "{{faker:hacker.phrase}}",
+                        "User": "{{faker:name.firstName name.lastName}}",
+                        "Id": "{{faker:random.number}}"
+                    },
+                    "Date": "{{faker:date.recent}}"
+                }
+            ]
+        }
+    ]
+}

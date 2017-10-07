@@ -1,0 +1,39 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.leftPanelDivider {
+    margin-bottom: 1rem;
+}
+
+.leftPanelSection {
+    margin-bottom: 3rem;
+    background: none;
+}
+
+.inlineHeader {
+    display: inline;
+}
+
+.projectsListTable {
+    th {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    td {
+        vertical-align: middle !important;
+    }
+}
+
+.projectsEdited {
+    font-size: 13px;
+    color: $text-muted;
+}
+
+.projectAvatar {
+    margin: 0 2.5px;
+}
+
+.projectsPanel {
+    border: 2px solid $gray-dark;
+    background: none;
+}

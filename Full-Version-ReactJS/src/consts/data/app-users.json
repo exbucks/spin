@@ -1,0 +1,244 @@
+{
+    "Users": [
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn",
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Offline",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Busy",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Away",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn",
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Offline",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Busy",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Away",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn",
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Offline",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Busy",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Away",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn",
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Offline",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Online",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook",
+                "Twitter"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Busy",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "Facebook"
+            ],
+            "Favorited": "{{n:0:1}}"
+        },
+        {
+            "Name": "{{fake:[name.firstName] [name.lastName]}}",
+            "Avatar": "{{fake:[image.avatar]}}",
+            "Status": "Away",
+            "Position": "{{fake:[name.jobTitle]}}",
+            "Email": "{{fake:[internet.email]}}",
+            "Phone": "{{fake:[phone.phoneNumberFormat]}}",
+            "Social": [
+                "LinkedIn"
+            ],
+            "Favorited": "{{n:0:1}}"
+        }
+    ]
+}

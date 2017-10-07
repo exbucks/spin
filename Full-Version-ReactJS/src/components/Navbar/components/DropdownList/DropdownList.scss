@@ -1,0 +1,65 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.dropdownList {
+    margin: -5px 0;
+
+    @media (max-width: $screen-xs-max) {
+        width: auto !important;
+    }
+}
+
+.dropdownListHeader {
+    padding: 10px 15px;
+    border-bottom: 1px solid $gray-darker;
+
+    @media (max-width: $screen-xs-max) {
+        display: none;
+    }
+
+    > * {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.dropdownListContent {
+    @media (max-width: $screen-xs-max) {
+        max-height: none !important;
+    }
+}
+
+.dropdownListFooter {
+    border-top: 1px solid $gray-darker;
+
+    > * {
+        padding: 10px 15px;
+    }
+
+    .dropdownListFooterLink {
+        color: $text-muted;
+        display: block;
+
+        &:hover {
+            background: $gray-darker;
+            color: $brand-white;
+        }
+    }
+}
+
+.adjustedListGroup {
+    margin: 0;
+    border: 0;
+
+    > * {
+        border-left: none;
+        border-right: none;
+
+        &:first-child {
+            border-top: none;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

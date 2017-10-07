@@ -1,0 +1,18 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar > * {
+    position: relative;
+}
+
+
+.navbarCollapse {
+    max-height: calc(100vh - 50px);
+
+    @media (min-width: $screen-sm-min) {
+        padding: 0;
+    }
+}

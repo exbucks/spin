@@ -1,0 +1,13 @@
+.slimBarWrap > .slimBar {
+    border-radius: 0;
+    height: 3px;
+    margin-bottom: 0;
+
+    &.medium {
+        height: 6px;
+    }
+
+    &.large {
+        height: 9px;
+    }
+}

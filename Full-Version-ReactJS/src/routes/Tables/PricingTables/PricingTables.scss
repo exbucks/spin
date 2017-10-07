@@ -1,0 +1,40 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    color: white;
+}
+
+.description {
+    max-height: 40px;
+    height: 100px;
+}
+
+.capabilitiesTable {
+    td {
+        vertical-align: middle;
+        &:first-child {
+            text-align: left;
+        }
+        &:last-child {
+            text-align: right;
+            color: white;
+        }
+    }
+
+    tr:first-child td {
+        border-top: none;
+    }
+}
+
+.header {
+    margin: -10px -15px;
+    padding: 10px 15px;
+}
+
+.tableClean {
+    text-align: center;
+}

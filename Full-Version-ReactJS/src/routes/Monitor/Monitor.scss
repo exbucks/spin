@@ -1,0 +1,167 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.monitorPanel {
+    border: none;
+    background-color: $gray-dark;
+
+    .panelGroupItem {
+        background: none;
+    }
+
+    // CPU
+    .cpuMonitorBarWrap > .cpuMonitorBar {
+        border-radius: 0;
+        height: 3px;
+        margin-top: 1rem;
+    }
+
+    // Memory
+    .memoryChartWrap {
+        margin-bottom: 10px;
+    }
+
+    .totalMemoryValue {
+        font-weight: 300;
+        margin: 0;
+        font-size: 24px;
+        color: $brand-white;
+    }
+
+    .memoryValue {
+        margin: 9.5px 0 0 0;
+        color: $brand-white;
+    }
+
+    // Network
+    .networkGroupItem {
+        @extend .panelGroupItem;
+
+        .networkHardwareName {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // Hardware temp
+    .tempGroupItem {
+        @extend .panelGroupItem;
+
+        .tempSummary {
+            margin-bottom: 1.5rem;
+
+            .tempDeltaIcon {
+                color: $brand-primary;
+            }
+
+            .tempValue {
+                margin-right: 1rem;
+                color: $brand-white;
+            }
+        }
+    }
+}
+
+.volumeWrap {
+    .divider {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .volumeWidget {
+        .volumeWidgetHeader {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .volumeSize {
+            font-weight: 300;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            font-size: 24px;
+            line-height: 38px;
+            color: white;
+
+            small {
+                font-size: 16px;
+                font-weight: normal;
+            }
+        }
+
+        .graphSizeWrap {
+            padding: 5px;
+        }
+
+        .dotBrandPrimary {
+            color: $brand-primary;
+        }
+        .dotBrandPrimaryDark {
+            color: rgba($brand-primary, .1);
+        }
+
+        .dotBrandSuccess {
+            color: $brand-success;
+        }
+        .dotBrandSuccessDark {
+            color: rgba($brand-success, .1);
+        }
+
+        .dotBrandWarning {
+            color: $brand-warning;
+        }
+        .dotBrandWarningDark {
+            color: rgba($brand-warning, .1);
+        }
+
+        .dotBrandDanger {
+            color: $brand-danger;
+        }
+        .dotBrandDangerDark {
+            color: rgba($brand-danger, .1);
+        }
+
+        .labelUsed {
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: $brand-white;
+        }
+    }
+}
+
+table.drivesTable {
+    thead th {
+        text-transform: uppercase;
+        color: $text-muted;
+        font-weight: bold;
+        font-size: 76%;
+    }
+
+    tbody td {
+        vertical-align: middle;
+    }
+
+    .raidType {
+        margin-right: 1rem;
+    }
+
+    .driveName {
+        color: $brand-white;
+        margin-right: 5px;
+    }
+
+    .driveUsedSpace {
+        color: $brand-white;
+    }
+
+    td > .driveBar {
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: none;
+        height: 3px;
+    }
+
+    .iconHealthy {
+        color: $brand-success;
+    }
+    .iconDegraded {
+        color: $brand-danger;
+    }
+}

@@ -1,0 +1,31 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.exampleLabel {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+}
+
+.chartExampleTable {
+    thead td {
+        font-size: 10px;
+        text-transform: uppercase;;
+        font-weight: bold;
+        color: $text-muted;
+        
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    tbody td {
+        &:first-child {
+            color: $brand-white;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+}

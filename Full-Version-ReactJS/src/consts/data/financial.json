@@ -1,0 +1,198 @@
+{
+    "CashSummary": [
+        {
+            "Name": "Main Fundings",
+            "Value": "{{f2:300:3000}}",
+            "DiffChanged": "{{n:0:1}}",
+            "Diff": "{{f2:-300:300}}"
+        },
+        {
+            "Name": "Invoices",
+            "Value": "{{f2:300:3000}}",
+            "DiffChanged": "{{n:0:1}}",
+            "Diff": "{{f2:-300:300}}"
+        },
+        {
+            "Name": "Accounts Receivable",
+            "Value": "{{f2:300:3000}}",
+            "DiffChanged": "{{n:0:1}}",
+            "Diff": "{{f2:-300:300}}"
+        },
+        {
+            "Name": "Secure Holdings",
+            "Value": "{{f2:300:3000}}",
+            "DiffChanged": "{{n:0:1}}",
+            "Diff": "{{f2:-300:300}}"
+        }
+    ],
+    "RecentFunding": [
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}"
+        }
+    ],
+    "Invoices": [
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        },
+        {
+            "Company": "{{faker:company.companyName}}",
+            "Amount": "{{f2:20:1000}}",
+            "Date": "{{faker:date.recent}}",
+            "Name": "{{faker:name.firstName name.lastName}}",
+            "Email": "{{faker:internet.email}}"
+        }
+    ],
+    "AccountPerformance": [
+        {
+            "Year": "2014",
+            "Data": [
+                0,
+                1,
+                4,
+                4,
+                5,
+                2,
+                3,
+                7,
+                8,
+                3,
+                5,
+                6
+            ]
+        },
+        {
+            "Year": "2015",
+            "Data": [
+                8,
+                6,
+                12,
+                7,
+                3,
+                1,
+                2,
+                1,
+                9,
+                5,
+                12,
+                9
+            ]
+        },
+        {
+            "Year": "2016",
+            "Data": [
+                0,
+                1,
+                4,
+                1,
+                5,
+                2,
+                3,
+                2,
+                2,
+                4,
+                1,
+                6
+            ]
+        }
+    ]
+}

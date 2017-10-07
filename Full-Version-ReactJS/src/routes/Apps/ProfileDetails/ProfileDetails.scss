@@ -1,0 +1,56 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.userDetails {
+    .userPanelName {
+        display: flex;
+        align-items: center;
+    }
+
+    .detailsTab {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+}
+
+.overviewBox {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        align-items: center;
+    }
+
+    .value {
+        margin: 1rem 0 0 0;
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+    }
+
+    .subTitle {
+        font-size: 8px;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .footer {
+        font-size: 10px;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.messagesTable {
+    td:last-child {
+        > * {
+            white-space: nowrap;
+        }
+    }
+}

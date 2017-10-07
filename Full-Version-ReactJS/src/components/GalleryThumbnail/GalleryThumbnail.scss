@@ -1,0 +1,23 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails.scss';
+
+.galleryThumbnail {
+    @extend .thumbnail;
+    border: 2px solid $gray-darker;
+    background: $gray-darker;
+    transition: none;
+}
+
+.galleryThumbnail.active {
+    border: 2px solid $brand-primary;
+}
+
+.galleryThumbnail:hover {
+     border: 2px solid $gray;
+}
+
+.galleryThumbnail.active:hover {
+    border: 2px solid darken($brand-primary, 13.5%);
+}

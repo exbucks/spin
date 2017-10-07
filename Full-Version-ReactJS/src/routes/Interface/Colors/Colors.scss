@@ -1,0 +1,30 @@
+@import '~@owczar/spin-template/src/scss/bootstrap/variables';
+
+.swatchPanel {
+    background-color: $gray-darker;
+}
+
+.swatchBody {
+    padding: 15px;
+    margin: -15px;
+    height: 100px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    overflow: hidden;
+
+    border-bottom: 1px solid $gray-darker;
+}
+
+.keyValColor {
+    display: block;
+    margin-bottom: 5px;
+
+    > *:first-child {
+        color: $text-muted;
+        display: inline-block;
+        min-width: 45px;
+    }
+    > *:last-child {
+        color: $brand-white;
+    }
+}

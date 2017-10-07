@@ -1,0 +1,373 @@
+{
+    "FavoriteStocks": [
+        {
+            "Name": "AAPL",
+            "Value": "{{faker:commerce.price}}",
+            "Percentage": "{{f1:0:100}}",
+            "Growth": "{{n:0:1}}",
+            "Scores": {
+                "Action": "23",
+                "Quality": "67",
+                "Value": "23",
+                "Growth": "12"
+            }
+        },
+        {
+            "Name": "MSFT",
+            "Value": "{{faker:commerce.price}}",
+            "Percentage": "{{f1:0:100}}",
+            "Growth": "{{n:0:1}}",
+            "Scores": {
+                "Action": "89",
+                "Quality": "11",
+                "Value": "43",
+                "Growth": "10"
+            }
+        },
+        {
+            "Name": "CAT",
+            "Value": "{{faker:commerce.price}}",
+            "Percentage": "{{f1:0:100}}",
+            "Growth": "{{n:0:1}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "23",
+                "Value": "98",
+                "Growth": "67"
+            }
+        },
+        {
+            "Name": "TSLA",
+            "Value": "{{faker:commerce.price}}",
+            "Percentage": "{{f1:0:100}}",
+            "Growth": "{{n:0:1}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "23",
+                "Value": "98",
+                "Growth": "67"
+            }
+        },
+        {
+            "Name": "KN",
+            "Value": "{{faker:commerce.price}}",
+            "Percentage": "{{f1:0:100}}",
+            "Growth": "{{n:0:1}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "23",
+                "Value": "98",
+                "Growth": "67"
+            }
+        }
+    ],
+    "DetailedStock": {
+        "Name": "Nokia Corp",
+        "ShortName": "ADR",
+        "Growth": "{{n:0:1}}",
+        "Value": "{{faker:commerce.price}}",
+        "Percentage": "{{f1:0:100}}",
+        "Score": "{{f2:1:10}}",
+        "Details": {
+            "Open": "{{f2:30:50}}",
+            "High": "{{f2:50:80}}",
+            "Low": "{{f2:20:30}}",
+            "MarketCap": "{{f2:200:500}}",
+            "PERatio": "{{f2:10:50}}",
+            "DividentYield": "{{f1:1:10}}"
+        },
+        "HistoryData": {
+            "Internistic": [
+                { "y": 29.5, "x": 1293840000 },
+                { "y": 29.5, "x": 1298937600 },
+                { "y": 30, "x": 1299024000 },
+                { "y": 30, "x": 1314835200 },
+                { "y": 30.5, "x": 1314921600 },
+                { "y": 30.5, "x": 1328054400 },
+                { "y": 31, "x": 1328140800 },
+                { "y": 31, "x": 1377993600 },
+                { "y": 32, "x": 1378080000 },
+                { "y": 32, "x": 1398902400 },
+                { "y": 32.7, "x": 1398988800 },
+                { "y": 32.7, "x": 1406851200 },
+                { "y": 33.2, "x": 1406937600 },
+                { "y": 33.2, "x": 1420070400 },
+                { "y": 36, "x": 1420156800 },
+                { "y": 36, "x": 1451606400 }
+            ],
+            "BuyPrice": [
+                { "y": 25, "x": 1293840000 },
+                { "y": 25, "x": 1298937600 },
+                { "y": 26, "x": 1299024000 },
+                { "y": 26, "x": 1314835200 },
+                { "y": 27, "x": 1314921600 },
+                { "y": 27, "x": 1328054400 },
+                { "y": 28, "x": 1328140800 },
+                { "y": 28, "x": 1338508800 },
+                { "y": 29, "x": 1338595200 },
+                { "y": 29, "x": 1356998400 },
+                { "y": 30, "x": 1357084800 },
+                { "y": 30, "x": 1377993600 },
+                { "y": 31, "x": 1378080000 },
+                { "y": 31, "x": 1398902400 },
+                { "y": 31.5, "x": 1398988800 },
+                { "y": 31.5, "x": 1406851200 },
+                { "y": 32.2, "x": 1406937600 },
+                { "y": 32.2, "x": 1420070400 },
+                { "y": 34, "x": 1420156800 },
+                { "y": 34, "x": 1451606400 }
+            ],
+            "StockPrice": [
+                { "y": 25, "x": 1293840000 },
+                { "y": 27, "x": 1301616000 },
+                { "y": 26, "x": 1308096000 },
+                { "y": 24, "x": 1315008000 },
+                { "y": 30, "x": 1325376000 },
+                { "y": 25, "x": 1330560000 },
+                { "y": 26, "x": 1341100800 },
+                { "y": 28, "x": 1349049600 },
+                { "y": 32, "x": 1359676800 },
+                { "y": 28, "x": 1364774400 },
+                { "y": 28.5, "x": 1371254400 },
+                { "y": 33, "x": 1377993600 },
+                { "y": 30, "x": 1393632000 },
+                { "y": 35, "x": 1404172800 },
+                { "y": 33, "x": 1412121600 },
+                { "y": 37, "x": 1420070400 },
+                { "y": 38, "x": 1425168000 },
+                { "y": 37, "x": 1433116800 },
+                { "y": 38, "x": 1451606400 }
+            ]
+        }
+    },
+    "Stats": [
+        {
+            "Name": "CROIC",
+            "Values": [
+                "33*4%",
+                "28*2%",
+                "28*3%"
+            ]
+        },
+        {
+            "Name": "PE",
+            "Values": [
+                "10*4",
+                "15*4",
+                "16*5"
+            ]
+        },
+        {
+            "Name": "Magic Y",
+            "Values": [
+                "2*5",
+                "12*5",
+                "12*8"
+            ]
+        },
+        {
+            "Name": "ROA",
+            "Values": [
+                "7*4%",
+                "4*2%",
+                "61%"
+            ]
+        },
+        {
+            "Name": "EV/EBITDA",
+            "Values": [
+                "10*4",
+                "15*4",
+                "16*5"
+            ]
+        },
+        {
+            "Name": "P/FCF",
+            "Values": [
+                "2*5",
+                "12*5",
+                "12*8"
+            ]
+        },
+        {
+            "Name": "ROA",
+            "Values": [
+                "2*5",
+                "12*5",
+                "12*8"
+            ]
+        },
+        {
+            "Name": "FCR/S",
+            "Values": [
+                "2*5",
+                "12*5",
+                "12*8"
+            ]
+        },
+        {
+            "Name": "CROIC",
+            "Values": [
+                "33*4%",
+                "28*2%",
+                "28*3%"
+            ]
+        },
+        {
+            "Name": "PE",
+            "Values": [
+                "10*4",
+                "15*4",
+                "16*5"
+            ]
+        },
+        {
+            "Name": "Magic Y",
+            "Values": [
+                "2*5",
+                "12*5",
+                "12*8"
+            ]
+        },
+        {
+            "Name": "ROA",
+            "Values": [
+                "7*4%",
+                "4*2%",
+                "61%"
+            ]
+        },
+        {
+            "Name": "P/FCF",
+            "Values": [
+                "2*5",
+                "12*5",
+                "12*8"
+            ]
+        }
+    ],
+    "CheapStocks": [
+        {
+            "Name": "Caterpillar",
+            "ShortName": "CAT",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "87",
+                "Quality": "35",
+                "Value": "17",
+                "Growth": "45"
+            }
+        },
+        {
+            "Name": "Google",
+            "ShortName": "GOOGL",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "98",
+                "Value": "38",
+                "Growth": "15"
+            }
+        },
+        {
+            "Name": "Microsoft",
+            "ShortName": "MSFT",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "12",
+                "Quality": "56",
+                "Value": "23",
+                "Growth": "16"
+            }
+        },
+        {
+            "Name": "Apple",
+            "ShortName": "AAPL",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "98",
+                "Value": "38",
+                "Growth": "15"
+            }
+        },
+        {
+            "Name": "Samsung Electronics Co",
+            "ShortName": "SAMS",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "98",
+                "Value": "38",
+                "Growth": "15"
+            }
+        }
+    ],
+    "ExpensiveStocks": [
+        {
+            "Name": "Apple",
+            "ShortName": "AAPL",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "98",
+                "Value": "38",
+                "Growth": "15"
+            }
+        },
+        {
+            "Name": "Google",
+            "ShortName": "GOOGL",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "98",
+                "Value": "38",
+                "Growth": "15"
+            }
+        },
+        {
+            "Name": "Samsung Electronics Co",
+            "ShortName": "SAMS",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "11",
+                "Quality": "98",
+                "Value": "38",
+                "Growth": "15"
+            }
+        },
+        {
+            "Name": "Microsoft",
+            "ShortName": "MSFT",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "12",
+                "Quality": "56",
+                "Value": "23",
+                "Growth": "16"
+            }
+        },
+        {
+            "Name": "Caterpillar",
+            "ShortName": "CAT",
+            "Growth": "{{n:0:1}}",
+            "ValuePercentage": "{{f1:0:100}}",
+            "Scores": {
+                "Action": "87",
+                "Quality": "35",
+                "Value": "17",
+                "Growth": "45"
+            }
+        }
+    ]
+}

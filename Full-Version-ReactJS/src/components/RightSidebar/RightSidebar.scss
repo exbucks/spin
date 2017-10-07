@@ -1,0 +1,7 @@
+.affixTop .contentContainer {
+    max-height: 100vh;
+}
+
+.affix .contentContainer {
+    max-height: calc(100vh - 50px)
+}
