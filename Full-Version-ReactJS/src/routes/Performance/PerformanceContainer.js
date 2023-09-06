@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
 import ReactInterval from 'react-interval';
-import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
 
@@ -165,10 +164,11 @@ class PerformanceContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, {
+        this.state = {
             ResponseTimeData: getChartData(performanceChartData),
-            avgRequestsCount: performanceChartData.length + Math.round(Math.random() * 10000)
-        }, getData(performanceData));
+            avgRequestsCount: performanceChartData.length + Math.round(Math.random() * 10000),
+            ...getData(performanceData)
+        };
     }
 
     getLayoutOptions() {

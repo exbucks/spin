@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import {
     Row,
@@ -37,9 +36,7 @@ class SearchDefaultContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(resultsData)
-        });
+        this.state = { data: getData(resultsData) };
     }
 
     getLayoutOptions() {

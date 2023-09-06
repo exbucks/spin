@@ -2,7 +2,6 @@ import React from 'react';
 import _ from 'underscore';
 import moment from 'moment';
 import truncate from 'truncate';
-import deepAssign from 'assign-deep';
 import { Link } from 'react-router-dom';
 import {
     Row,
@@ -322,9 +321,7 @@ class InboxContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(inboxData)
-        });
+        this.state = { data: getData(inboxData) };
     }
 
     getLayoutOptions() {

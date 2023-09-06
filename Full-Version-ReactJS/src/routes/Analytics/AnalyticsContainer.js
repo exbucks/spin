@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
 
@@ -241,9 +240,7 @@ class AnalyticsContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, getData(analyticsData), {
-            ViewChart: getChartConfig(analyticsChartData)
-        });
+        this.state = { ...getData(analyticsData), ViewChart: getChartConfig(analyticsChartData) }
     }
 
     getLayoutOptions() {

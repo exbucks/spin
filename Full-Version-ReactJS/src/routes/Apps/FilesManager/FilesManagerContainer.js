@@ -2,7 +2,6 @@ import React from 'react';
 import truncate from 'truncate';
 import _ from 'underscore';
 import moment from 'moment';
-import deepAssign from 'assign-deep';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -306,9 +305,7 @@ class FilesManagerContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(filesData)
-        });
+        this.state = { data: getData(filesData) };
     }
 
     getLayoutOptions() {

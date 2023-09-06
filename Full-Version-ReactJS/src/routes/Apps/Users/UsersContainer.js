@@ -1,7 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -383,7 +382,7 @@ class UsersContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
+        this.state = {
             data: getData(usersData),
 
             callModalVisible: false,
@@ -392,7 +391,7 @@ class UsersContainer extends RoutedComponent {
             videoModalVisible: false,
             editModalVisible: false,
             deleteModalVisible: false
-        });
+        };
     }
 
     getLayoutOptions() {

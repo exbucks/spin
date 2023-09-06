@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 import moment from 'moment';
 import { faker } from '@faker-js/faker';
-import deepAssign from 'assign-deep';
 import {
     Row,
     Col,
@@ -209,9 +208,7 @@ class ChatContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(chatData)
-        });
+        this.state = { data: getData(chatData) }
     }
 
     getLayoutOptions() {

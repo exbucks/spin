@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
 import moment from 'moment';
-import deepAssign from 'assign-deep';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import Notifications from 'react-notification-system-redux';
@@ -326,9 +325,7 @@ class ProjectsContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(projectsData),
-        });
+        this.state = { data: getData(projectsData) };
     }
 
     getLayoutOptions() {

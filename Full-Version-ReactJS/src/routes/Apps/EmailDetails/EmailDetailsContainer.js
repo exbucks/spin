@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
 import moment from 'moment';
-import deepAssign from 'assign-deep';
 
 import {
     Row,
@@ -206,9 +205,7 @@ class EmailDetailsContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(emailData)
-        });
+        this.state = { data: getData(emailData) }
     }
 
     getLayoutOptions() {

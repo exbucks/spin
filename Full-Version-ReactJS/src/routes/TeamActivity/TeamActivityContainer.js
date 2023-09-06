@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactInterval from 'react-interval';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
@@ -285,7 +284,7 @@ class TeamActivityContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, getData(activityData), {
+        this.state = { ...getData(activityData),
             Summary: {
                 Customers: {
                     Data: genChartData()
@@ -300,7 +299,7 @@ class TeamActivityContainer extends RoutedComponent {
                     Data: genChartData()
                 }
             }
-        });
+        };
     }
 
     addChartData() {
@@ -310,7 +309,7 @@ class TeamActivityContainer extends RoutedComponent {
             return [...lastData, val];
         };
 
-        this.setState(deepAssign({}, this.state, {
+        this.setState({
             Summary: {
                 Customers: {
                     Data: genNewData(this.state.Summary.Customers.Data)
@@ -325,7 +324,7 @@ class TeamActivityContainer extends RoutedComponent {
                     Data: genNewData(this.state.Summary.AvgResponseTime.Data)
                 }
             }
-        }));
+        });
     }
 
     getLayoutOptions() {

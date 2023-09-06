@@ -1,7 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
 import classNames from 'classnames';
@@ -330,11 +329,7 @@ class ECommerceContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, {
-            Report: {
-                selected: 'Revenue'
-            }
-        }, getData(eCommerceData));
+        this.state = { Report: { selected: 'Revenue' }, ...getData(eCommerceData)};
     }
 
     getLayoutOptions() {
@@ -353,11 +348,11 @@ class ECommerceContainer extends RoutedComponent {
         const chartPeriodEnd = moment(_.last(dataset).date).format('MMM YYYY');
 
         const changeDataSet = (datasetName) => {
-            this.setState(deepAssign({}, this.state, {
+            this.setState({
                 Report: {
                     selected: datasetName
                 }
-            }));
+            });
         }
 
         return (

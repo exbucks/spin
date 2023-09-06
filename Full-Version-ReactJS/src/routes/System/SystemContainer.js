@@ -3,7 +3,6 @@ import ReactInterval from 'react-interval';
 import hash from 'object-hash';
 import _ from 'underscore';
 import numeral from 'numeral';
-import deepAssign from 'assign-deep';
 
 import {
     Row,
@@ -44,8 +43,7 @@ const genInitialPerfData = (source) => {
         return output;
     };
 
-    return _.map(source, (s) => (
-        deepAssign({}, s, {
+    return _.map(source, (s) => ({ ...s,
             CpuUsage: {
                 Data: initialData(s.CpuUsage.Max),
                 Metric: '%',
@@ -66,7 +64,7 @@ const genInitialPerfData = (source) => {
                 Color: Colors.brandPrimary
             }
         })
-    ));
+    );
 };
 
 const genComponentData = (count = 16) => {
@@ -251,7 +249,7 @@ class SystemContainer extends RoutedComponent {
 
         const randBool = () => Math.random() > 0.5;
 
-        this.state = deepAssign({}, getData(systemData), {
+        this.state = { ...getData(systemData),
             MemoryUsage: {
                 Data: genComponentData(),
                 DiffInc: randBool()
@@ -269,7 +267,7 @@ class SystemContainer extends RoutedComponent {
                 DiffInc: randBool()
             },
             ProcessDetails: genInitialPerfData(systemData.ProcessDetails)
-        });
+        };
     }
 
     simulateProcessData() {
@@ -279,9 +277,8 @@ class SystemContainer extends RoutedComponent {
             return [...lastData, val];
         };
 
-        this.setState(Object.assign({}, this.state, {
-            ProcessDetails: _.map(this.state.ProcessDetails, (pd) => (
-                deepAssign({}, pd, {
+        this.setState({
+            ProcessDetails: _.map(this.state.ProcessDetails, (pd) => ({ ...pd,
                     CpuUsage: {
                         Data: genNewData(pd.CpuUsage.Data, pd.CpuUsage.Max),
                     },
@@ -295,8 +292,8 @@ class SystemContainer extends RoutedComponent {
                         Data: genNewData(pd.ProcessCount.Data, pd.ProcessCount.Max),
                     }
                 })
-            ))
-        }));
+            )
+        });
     }
 
     getLayoutOptions() {

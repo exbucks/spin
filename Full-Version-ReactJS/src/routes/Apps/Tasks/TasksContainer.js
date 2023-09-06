@@ -2,7 +2,6 @@ import React from 'react';
 import _ from 'underscore';
 import moment from 'moment';
 import truncate from 'truncate';
-import deepAssign from 'assign-deep';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -353,9 +352,7 @@ class TasksContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            data: getData(tasksData)
-        });
+        this.state = { data: getData(tasksData) };
     }
 
     getLayoutOptions() {

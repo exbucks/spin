@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import moment from 'moment';
 import classNames from 'classnames';
 
@@ -286,11 +285,11 @@ class StockContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, getData(stockData), {
+        this.state = { ...getData(stockData),
             chartConfig: getChartConfig(
                 getChartData(stockData.DetailedStock.HistoryData)
             )
-        });
+        };
     }
 
     getLayoutOptions() {

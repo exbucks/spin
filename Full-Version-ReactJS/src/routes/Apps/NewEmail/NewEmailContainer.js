@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import deepAssign from 'assign-deep';
 import {
     Row,
     Col,
@@ -183,9 +182,7 @@ class NewEmailContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, this.state, {
-            attachments: treeRandomizer(attachments)
-        });
+        this.state = { attachments: treeRandomizer(attachments) };
     }
 
     getLayoutOptions() {

@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import deepAssign from 'assign-deep';
 import _ from 'underscore';
 // import ReactHighstock from 'react-highcharts/bundle/ReactHighstock';
 // import ReactHighcharts from 'react-highcharts/bundle/ReactHighcharts';
@@ -56,10 +55,7 @@ class HighchartBase extends React.Component {
     constructor(props, context) {
         super(props, context);
 
-        this.state = Object.assign({}, this.state, {
-            chartConfig: deepAssign({}, theme, this.getChartConfig()
-                , this.props.config)
-        });
+        this.state = { ...theme, ...this.getChartConfig(), ...props.config }
         // this.Chart = this.isHighstock() ? ReactHighstock : ReactHighcharts;
         this.Chart = <div></div>;
     }
@@ -70,10 +66,7 @@ class HighchartBase extends React.Component {
             return;
         }
 
-        this.setState(Object.assign({}, this.state, {
-            chartConfig: deepAssign({}, theme, this.getChartConfig()
-                , nextProps.config)
-        }));
+        this.setState({ chartConfig: { ...theme, ...this.getChartConfig(), ...nextProps.config() } })
     }
 
     componentDidMount() {

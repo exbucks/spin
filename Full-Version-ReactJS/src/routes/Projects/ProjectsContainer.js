@@ -2,7 +2,6 @@ import React from 'react';
 import hash from 'object-hash';
 import _ from 'underscore';
 import { Link } from 'react-router-dom';
-import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
 import { faker } from '@faker-js/faker';
@@ -470,7 +469,7 @@ class ProjectsContainer extends RoutedComponent {
     constructor(props, context) {
         super(props, context);
 
-        this.state = deepAssign({}, getData(projectsData));
+        this.state = { ...getData(projectsData)};
     }
 
     getLayoutOptions() {

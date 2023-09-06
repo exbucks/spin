@@ -1,5 +1,4 @@
 import React from 'react';
-import deepAssign from 'assign-deep';
 import _ from 'underscore';
 
 import {
@@ -462,11 +461,7 @@ class ClientsContainer extends RoutedComponent {
 
         const data = getData(clientsData);
 
-        this.state = deepAssign({}, this.state, {
-            data: data,
-            selected: _.first(data.People),
-            selectedType: ENTRY_TYPE_USER
-        });
+        this.state = { data, selected:_.first(data.People), selectedType: ENTRY_TYPE_USER }
     }
 
     getLayoutOptions() {
