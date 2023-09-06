@@ -3,6 +3,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import DefaultLayout from './layouts/DefaultLayout';
+import './App.scss';
 
 const router = createBrowserRouter([
   {

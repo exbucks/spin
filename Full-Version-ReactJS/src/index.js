@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.scss';
 
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 import 'react-date-picker/dist/DatePicker.css';
