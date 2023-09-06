@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
 import { Editor as ReactEditor } from 'react-draft-wysiwyg';
-import deepExtend from 'deep-extend';
 
 import bold from './icons/bold.svg';
 import italic from './icons/italic.svg';
@@ -30,7 +29,7 @@ import subscript from './icons/subscript.svg';
 import superscript from './icons/superscript.svg';
 
 const Editor = props => {
-    const toolBar = deepExtend({}, props.toolbar, {
+    const toolBar = { ...props.toolbar,
         inline: {
             bold: { icon: bold },
             italic: { icon: italic },
@@ -66,7 +65,7 @@ const Editor = props => {
             undo: { icon: undo },
             redo: { icon: redo },
         }
-    });
+    };
 
     return (
         <ReactEditor
