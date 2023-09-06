@@ -2,8 +2,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { Provider } from 'react-redux'
 import DefaultLayout from './layouts/DefaultLayout';
+import configureStore from './store'
 import './App.scss';
+
+
+const store = configureStore()
 
 const router = createBrowserRouter([
   {
@@ -18,7 +23,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 
