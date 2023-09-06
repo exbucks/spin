@@ -1,5 +1,5 @@
 import React from 'react';
-import {Radio, InputGroup} from 'components';
+import {Form} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 import options from './../exampleData';
@@ -30,14 +30,15 @@ class InputSizeExample extends React.Component {
                     placeholder="Choose a state..."
                 />
                 {radios.map(({label, value}) => (
-                    <Radio
+                    <Form.Check
+                        type="radio"
                         checked={bsSize === value}
                         key={value || 'default'}
                         onChange={e => this.setState({bsSize: value})}
                         value={value}
                     >
                         {label}
-                    </Radio>
+                    </Form.Check>
                 ))}
             </div>
         );

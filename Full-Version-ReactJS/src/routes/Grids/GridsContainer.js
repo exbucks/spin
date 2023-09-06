@@ -3,7 +3,6 @@ import {
     Row,
     Col,
     Table,
-    Clearfix
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -175,7 +174,7 @@ class GridsContainer extends RoutedComponent {
                     <Row className="show-grid">
                         <Col sm={6} md={3}>col-xs-6 col-sm-3</Col>
                         <Col sm={6} md={3}>col-xs-6 col-sm-3</Col>
-                        <Clearfix visibleSmBlock>Clearfix visible sm</Clearfix>
+                        <div>Clearfix visible sm</div>
                         <Col sm={6} md={3}>col-xs-6 col-sm-3</Col>
                         <Col sm={6} md={3}>col-xs-6 col-sm-3</Col>
                     </Row>

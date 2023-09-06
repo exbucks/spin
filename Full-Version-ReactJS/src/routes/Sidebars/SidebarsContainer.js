@@ -5,9 +5,6 @@ import _ from 'underscore';
 import {
     Row,
     Col,
-    Table,
-    Clearfix,
-    Thumbnail,
     GalleryThumbnail,
     Divider
 } from 'components';

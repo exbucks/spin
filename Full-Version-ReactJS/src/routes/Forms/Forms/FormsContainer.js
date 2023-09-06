@@ -15,11 +15,8 @@ import {
     Form,
     FormGroup,
     ControlLabel,
-    HelpBlock,
-    Radio,
     DropdownButton,
     MenuItem,
-    Glyphicon,
     MaskedTextInput
 } from 'components';
 import Toggle from 'react-toggle';
@@ -65,9 +62,9 @@ const BasicElements = () => (
                     </Col>
                     <Col sm={9}>
                         <FormControl type="email" placeholder="Email" />
-                        <HelpBlock>
+                        <p>
                             A block of help text that breaks onto a new line and may extend beyond one line.
-                        </HelpBlock>
+                        </p>
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="formBasicPlaceholder">
@@ -133,15 +130,15 @@ const CheckboxesRadios = () => (
                         <Form.Check disabled>
                             Option two is disabled
                         </Form.Check>
-                        <Radio name='radios-example' defaultChecked>
+                        <Form.Check type="radio" name='radios-example' defaultChecked>
                             Option one is this and that—be sure to include why it's great
-                        </Radio>
-                        <Radio name='radios-example'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='radios-example'>
                             Option two can be something else and selecting it will deselect option one
-                        </Radio>
-                        <Radio name='radios-example' disabled>
+                        </Form.Check>
+                        <Form.Check type="radio" name='radios-example' disabled>
                             Option three is disabled
-                        </Radio>
+                        </Form.Check>
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="formCheckRadioInline">
@@ -161,15 +158,15 @@ const CheckboxesRadios = () => (
                             </Form.Check>
                         </p>
                         <p className='m-y-0'>
-                            <Radio name='inline-radios-example' inline defaultChecked>
+                            <Form.Check type="radio" name='inline-radios-example' inline defaultChecked>
                                 One
-                            </Radio>
-                            <Radio name='inline-radios-example' inline>
+                            </Form.Check>
+                            <Form.Check type="radio" name='inline-radios-example' inline>
                                 Two
-                            </Radio>
-                            <Radio name='inline-radios-example' inline>
+                            </Form.Check>
+                            <Form.Check type="radio" name='inline-radios-example' inline>
                                 Three
-                            </Radio>
+                            </Form.Check>
                         </p>
                     </Col>
                 </FormGroup>
@@ -491,7 +488,7 @@ const ValidationStates = () => (
                             </InputGroup.Addon>
                             <FormControl type="text" />
                             <FormControl.Feedback>
-                                <Glyphicon glyph="ok-sign" />
+                                <span className="ok-sign" />
                             </FormControl.Feedback>
                         </InputGroup>
                     </FormGroup>
@@ -503,7 +500,7 @@ const ValidationStates = () => (
                             </InputGroup.Addon>
                             <FormControl type="text" />
                             <FormControl.Feedback>
-                                <Glyphicon glyph="exclamation-sign" />
+                                <span className="exclamation-sign" />
                             </FormControl.Feedback>
                         </InputGroup>
                     </FormGroup>
@@ -515,7 +512,7 @@ const ValidationStates = () => (
                             </InputGroup.Addon>
                             <FormControl type="text" />
                             <FormControl.Feedback>
-                                <Glyphicon glyph="remove-sign" />
+                                <span className="remove-sign" />
                             </FormControl.Feedback>
                         </InputGroup>
                     </FormGroup>

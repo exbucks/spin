@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import _ from 'underscore';
-import { Radio } from 'components';
+import { Form } from 'components';
 
 export default class Creatable extends React.Component {
     constructor() {
@@ -38,12 +38,12 @@ export default class Creatable extends React.Component {
                     onChange={ val => this.handleOnChange(val) }
                 />
                 <div className='m-t-2'>
-                    <Radio checked={ this.state.multi } onChange={ () => this.setState({ multi: true }) }>
+                    <Form.Check type="radio" checked={ this.state.multi } onChange={ () => this.setState({ multi: true }) }>
                         Multiselect
-                    </Radio>
-                    <Radio checked={ !this.state.multi } onChange={ () => this.setState({ multi: false }) }>
+                    </Form.Check>
+                    <Form.Check type="radio" checked={ !this.state.multi } onChange={ () => this.setState({ multi: false }) }>
                         Single Value
-                    </Radio>
+                    </Form.Check>
                 </div>
             </div>
         )

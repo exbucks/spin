@@ -6,8 +6,7 @@ import {
     Button,
     Form,
     FormGroup,
-    FormControl,
-    Radio
+    FormControl
 } from 'components';
 
 import classes from './LayoutOptions.scss';
@@ -326,8 +325,9 @@ class LayoutOptions extends React.Component {
                             <p className='small text-uppercase'>
                                 <strong>Main Color</strong>
                             </p>
-                            <Radio
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.skinColor === SKIN_COLOR_PRIMARY }
                                 onChange={ ev => this.props.setSkinColor(SKIN_COLOR_PRIMARY) }
                             >
@@ -335,9 +335,10 @@ class LayoutOptions extends React.Component {
                                     <span>Primary</span>
                                     <i className='fa fa-circle text-primary'></i>
                                 </div>
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.skinColor === SKIN_COLOR_INFO }
                                 onChange={ ev => this.props.setSkinColor(SKIN_COLOR_INFO) }
                             >
@@ -345,9 +346,10 @@ class LayoutOptions extends React.Component {
                                     <span>Info</span>
                                     <i className='fa fa-circle text-info'></i>
                                 </div>
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.skinColor === SKIN_COLOR_SUCCESS }
                                 onChange={ ev => this.props.setSkinColor(SKIN_COLOR_SUCCESS) }
                             >
@@ -355,9 +357,10 @@ class LayoutOptions extends React.Component {
                                     <span>Success</span>
                                     <i className='fa fa-circle text-success'></i>
                                 </div>
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.skinColor === SKIN_COLOR_WARNING }
                                 onChange={ ev => this.props.setSkinColor(SKIN_COLOR_WARNING) }
                             >
@@ -365,9 +368,10 @@ class LayoutOptions extends React.Component {
                                     <span>Warning</span>
                                     <i className='fa fa-circle text-warning'></i>
                                 </div>
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.skinColor === SKIN_COLOR_DANGER }
                                 onChange={ ev => this.props.setSkinColor(SKIN_COLOR_DANGER) }
                             >
@@ -375,57 +379,63 @@ class LayoutOptions extends React.Component {
                                     <span>Danger</span>
                                     <i className='fa fa-circle text-danger'></i>
                                 </div>
-                            </Radio>
+                            </Form.Check>
 
                             <p className='small text-uppercase m-t-2'>
                                 <strong>Navbar</strong>
                             </p>
-                            <Radio
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.navbarSkin === SKIN_DARK }
                                 onChange={ ev => this.props.setNavbarSkin(SKIN_DARK) }
                             >
                                 Dark
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.navbarSkin === SKIN_LIGHT }
                                 onChange={ ev => this.props.setNavbarSkin(SKIN_LIGHT) }
                             >
                                 Light
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.navbarSkin === SKIN_COLOR }
                                 onChange={ ev => this.props.setNavbarSkin(SKIN_COLOR) }
                             >
                                 Like Main Color
-                            </Radio>
+                            </Form.Check>
 
                             <p className='small text-uppercase m-t-2'>
                                 <strong>Sidebar</strong>
                             </p>
-                            <Radio
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.sidebarSkin === SKIN_DARK }
                                 onChange={ ev => this.props.setSidebarSkin(SKIN_DARK) }
                             >
                                 Dark
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.sidebarSkin === SKIN_LIGHT }
                                 onChange={ ev => this.props.setSidebarSkin(SKIN_LIGHT) }
                             >
                                 Light
-                            </Radio>
-                            <Radio
+                            </Form.Check>
+                            <Form.Check
                                 className={ classes.blockRadio }
+                                type="radio"
                                 checked={ this.props.sidebarSkin === SKIN_COLOR }
                                 onChange={ ev => this.props.setSidebarSkin(SKIN_COLOR) }
                             >
                                 Like Main Color
-                            </Radio>
+                            </Form.Check>
                         </Tab>
                     </Tabs>
                 </Panel>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import _ from 'underscore';
-import { Radio, Form } from 'components';
+import { Form } from 'components';
 import fetch from 'isomorphic-fetch';
 
 export default class GithubUsers extends React.Component {
@@ -66,12 +66,12 @@ export default class GithubUsers extends React.Component {
                     labelKey="login"
                 />
                 <div className='m-t-2'>
-                    <Radio checked={ this.state.multi } onChange={ () => this.switchToMulti() }>
+                    <Form.Check type="radio" checked={ this.state.multi } onChange={ () => this.switchToMulti() }>
                         Multiselect
-                    </Radio>
-                    <Radio checked={ !this.state.multi } onChange={ () => this.switchToSingle() }>
+                    </Form.Check>
+                    <Form.Check type="radio" checked={ !this.state.multi } onChange={ () => this.switchToSingle() }>
                         Single Value
-                    </Radio>
+                    </Form.Check>
                 </div>
                 <div className='m-t-2'>
                     <Form.Check checked={ this.state.creatable } onChange={ () => this.toggleState('creatable') } >

@@ -7,17 +7,11 @@ import classes from './Skins.scss';
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import {
     CONTENT_VIEW_STATIC,
-    SKIN_DARK,
-    SKIN_LIGHT,
-    SKIN_COLOR
 } from 'layouts/DefaultLayout/modules/layout';
 
 import {
     Row,
     Col,
-    Table,
-    Clearfix,
-    Thumbnail,
     GalleryThumbnail,
     Divider,
     Badge

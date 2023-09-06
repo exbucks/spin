@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { Button, Form, Radio } from 'components';
+import { Button, Form } from 'components';
 import _ from 'underscore';
 
 const STATES_AU = [
@@ -85,21 +85,23 @@ export default class States extends React.Component {
                     </Form.Check>
                 </div>
                 <div className='m-t-1'>
-                    <Radio
+                    <Form.Check
+                        type="radio"
                         inline
                         checked={ this.state.options === STATES_AU }
                         onChange={ () => { this.setState({ options: STATES_AU, value: null }) } }
                     >
                         Australia
-                    </Radio>
-                    <Radio
+                    </Form.Check>
+                    <Form.Check
+                        type="radio"
                         inline
                         checked={ this.state.options === STATES_US }
                         onChange={ () => { this.setState({ options: STATES_US, value: null }) } }
                         className='m-l-1'
                     >
                         United States
-                    </Radio>
+                    </Form.Check>
                 </div>
             </div>
         )

@@ -10,7 +10,6 @@ import {
     Form,
     FormGroup,
     ControlLabel,
-    HelpBlock,
     Panel
 } from 'components';
 
@@ -54,9 +53,9 @@ const BasicExample = () => (
                                 FileInput
                             </ControlLabel>
                             <FormControl type='file'/>
-                            <HelpBlock>
+                            <p>
                                 Example block-level help text here.
-                            </HelpBlock>
+                            </p>
                         </FormGroup>
                         <Form.Check>
                             Check me out

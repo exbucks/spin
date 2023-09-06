@@ -1,5 +1,5 @@
 import React from 'react';
-import {Radio} from 'components';
+import {Form} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 import options from './../exampleData';
@@ -30,14 +30,15 @@ class MenuAlignExample extends React.Component {
                     placeholder="Choose a state..."
                 />
                 {radios.map(({label, value}) => (
-                    <Radio
+                    <Form.Check
+                        type="radio"
                         checked={align === value}
                         key={value}
                         onChange={e => this.setState({align: value})}
                         value={value}
                     >
                         {label}
-                    </Radio>
+                    </Form.Check>
                 ))}
             </div>
         );

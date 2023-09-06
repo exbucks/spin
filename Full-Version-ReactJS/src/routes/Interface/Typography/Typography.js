@@ -3,7 +3,6 @@ import React from 'react';
 import {
     Row,
     Col,
-    PageHeader,
     Divider
 } from 'components';
 
@@ -117,11 +116,9 @@ class TypographyContainer extends RoutedComponent {
                     <p className="small text-uppercase m-b-0 m-t-2">
                         <strong>Examples</strong>
                     </p>
-                    <PageHeader
-                        className='m-b-3 m-t-0'
-                    >
+                    <div className='m-b-3 m-t-0'>
                         Example page header <small>Subtext for header</small>
-                    </PageHeader>
+                    </div>
 
                     <h5 className="m-t-3 m-b-1">
                         HR Headers

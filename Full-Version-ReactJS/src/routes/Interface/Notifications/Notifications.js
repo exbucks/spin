@@ -10,7 +10,6 @@ import {
     FormGroup,
     ControlLabel,
     Button,
-    HelpBlock,
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -67,7 +66,7 @@ class NotificationsContainer extends RoutedComponent {
                                         value={ this.state.title }
                                         onChange={ e => this.setState({ title: e.target.value }) }
                                     />
-                                    <HelpBlock>Leave empty to hide</HelpBlock>
+                                    <p>Leave empty to hide</p>
                                 </Col>
                             </FormGroup>
 
@@ -134,7 +133,7 @@ class NotificationsContainer extends RoutedComponent {
                                         value={ this.state.autoDismiss }
                                         onChange={ e => this.setState({ autoDismiss: e.target.value }) }
                                     />
-                                    <HelpBlock>secs (0 means infinite)</HelpBlock>
+                                    <p>secs (0 means infinite)</p>
                                 </Col>
                             </FormGroup>
 

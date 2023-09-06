@@ -7,7 +7,6 @@ import { RoutedComponent, connect } from 'routes/routedComponent';
 import {
     Row,
     Col,
-    PageHeader,
     Form,
     FormGroup,
     FormControl,

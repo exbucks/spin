@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-    Radio,
-    Divider
+    Divider,
+    Form
 } from 'components';
 
 const SearchPeriod = () => (
@@ -10,18 +10,18 @@ const SearchPeriod = () => (
             Date
         </Divider>
         <div>
-            <Radio name='search-period' defaultChecked>
+            <Form.Check type="radio" name='search-period' defaultChecked>
                 All
-            </Radio>
-            <Radio name='search-period'>
+            </Form.Check>
+            <Form.Check type="radio" name='search-period'>
                 Last 24 Hours
-            </Radio>
-            <Radio name='search-period'>
+            </Form.Check>
+            <Form.Check type="radio" name='search-period'>
                 Last Week
-            </Radio>
-            <Radio name='search-period'>
+            </Form.Check>
+            <Form.Check type="radio" name='search-period'>
                 Last Month
-            </Radio>
+            </Form.Check>
         </div>
     </div>
 );

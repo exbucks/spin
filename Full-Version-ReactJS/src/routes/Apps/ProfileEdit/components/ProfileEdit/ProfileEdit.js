@@ -7,7 +7,6 @@ import {
     Col,
     FormControl,
     ControlLabel,
-    Radio,
     Button,
     Divider,
     Label
@@ -16,8 +15,6 @@ import {
 import { Colors } from 'consts';
 
 import { Upload } from 'routes/Apps/components';
-
-import classes from './../../ProfileEdit.scss';
 
 const ProfileEdit = () => (
     <div>
@@ -86,26 +83,26 @@ const ProfileEdit = () => (
                         After Logging
                     </Col>
                     <Col sm={6}>
-                        <Radio name='after-logging' defaultChecked>
+                        <Form.Check type="radio" name='after-logging' defaultChecked>
                             <Label outline bsStyle='success'>
                                 Available
                             </Label>
-                        </Radio>
-                        <Radio name='after-logging'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='after-logging'>
                             <Label outline bsStyle='warning'>
                                 Inactive
                             </Label>
-                        </Radio>
-                        <Radio name='after-logging'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='after-logging'>
                             <Label outline bsStyle='danger'>
                                 Busy
                             </Label>
-                        </Radio>
-                        <Radio name='after-logging'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='after-logging'>
                             <Label outline bsStyle='custom' customColor={ Colors.grayDarker }>
                                 Offline
                             </Label>
-                        </Radio>
+                        </Form.Check>
                     </Col>
                 </FormGroup>
 

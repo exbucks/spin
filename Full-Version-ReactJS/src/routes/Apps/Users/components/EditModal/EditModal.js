@@ -1,12 +1,10 @@
 import React, { PropTypes } from 'react';
 
 import {
-    Row,
     Col,
     Modal,
     Button,
     Form,
-    Radio,
     InputGroup,
     FormGroup,
     FormControl,
@@ -81,26 +79,26 @@ const EditModal = props => (
                         After Logging
                     </Col>
                     <Col sm={9}>
-                        <Radio name='after-logging' defaultChecked>
+                        <Form.Check type="radio" name='after-logging' defaultChecked>
                             <Label outline bsStyle='success'>
                                 Available
                             </Label>
-                        </Radio>
-                        <Radio name='after-logging'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='after-logging'>
                             <Label outline bsStyle='warning'>
                                 Inactive
                             </Label>
-                        </Radio>
-                        <Radio name='after-logging'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='after-logging'>
                             <Label outline bsStyle='danger'>
                                 Busy
                             </Label>
-                        </Radio>
-                        <Radio name='after-logging'>
+                        </Form.Check>
+                        <Form.Check type="radio" name='after-logging'>
                             <Label outline bsStyle='custom' customColor={ Colors.grayDarker }>
                                 Offline
                             </Label>
-                        </Radio>
+                        </Form.Check>
                     </Col>
                 </FormGroup>
 

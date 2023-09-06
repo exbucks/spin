@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import {
     Row,
     Col,
-    Table,
-    Clearfix,
-    Thumbnail,
     GalleryThumbnail,
     Divider
 } from 'components';

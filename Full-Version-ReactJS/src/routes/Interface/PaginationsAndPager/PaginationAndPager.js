@@ -3,7 +3,6 @@ import {
     Row,
     Col,
     Pagination,
-    Pager
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -109,11 +108,11 @@ class PaginationAndPagerContainer extends RoutedComponent {
                             <p className="small text-uppercase m-b-0 m-t-2">
                                 <strong>Example</strong>
                             </p>
-                            <Pager>
-                                <Pager.Item href="#">Previous</Pager.Item>
+                            <div>
+                                <div href="#">Previous</div>
                                 {' '}
-                                <Pager.Item href="#">Next</Pager.Item>
-                            </Pager>
+                                <div href="#">Next</div>
+                            </div>
                         </Col>
                         <Col lg={ 4 }>
                             <h5>
@@ -125,11 +124,11 @@ class PaginationAndPagerContainer extends RoutedComponent {
                             <p className="small text-uppercase m-b-0 m-t-2">
                                 <strong>Example</strong>
                             </p>
-                            <Pager>
-                                <Pager.Item previous href="#">&larr; Older</Pager.Item>
+                            <div>
+                                <div previous href="#">&larr; Older</div>
                                 {' '}
-                                <Pager.Item next href="#">Newer &rarr;</Pager.Item>
-                            </Pager>
+                                <div next href="#">Newer &rarr;</div>
+                            </div>
                         </Col>
                         <Col lg={ 4 }>
                             <h5>
@@ -141,11 +140,11 @@ class PaginationAndPagerContainer extends RoutedComponent {
                             <p className="small text-uppercase m-b-0 m-t-2">
                                 <strong>Example</strong>
                             </p>
-                            <Pager>
-                                <Pager.Item previous disabled href="#">&larr; Older</Pager.Item>
+                            <div>
+                                <div previous disabled href="#">&larr; Older</div>
                                 {' '}
-                                <Pager.Item next href="#">Newer &rarr;</Pager.Item>
-                            </Pager>
+                                <div next href="#">Newer &rarr;</div>
+                            </div>
                         </Col>
                     </Row>
                 </Col>

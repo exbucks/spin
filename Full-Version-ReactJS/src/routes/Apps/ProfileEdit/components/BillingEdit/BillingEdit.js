@@ -11,7 +11,6 @@ import {
     Col,
     FormControl,
     ControlLabel,
-    Radio,
     Button,
     ProgressBar,
     Media,
@@ -488,20 +487,22 @@ class BillingEdit extends React.Component {
                                 <h5 className={ classes.paymentOtherLabel }>
                                     Pay With
                                 </h5>
-                                <Radio
+                                <Form.Check
                                     inline
+                                    type="radio"
                                     checked={ this.state.paymentModalType === 'credit' }
                                     onChange={ () => { this.setState({ paymentModalType: 'credit' }) } }
                                 >
                                     Credit Card
-                                </Radio>
-                                <Radio
+                                </Form.Check>
+                                <Form.Check
                                     inline
+                                    type="radio"
                                     checked={ this.state.paymentModalType === 'paypal' }
                                     onChange={ () => { this.setState({ paymentModalType: 'paypal' }) } }
                                 >
                                     PayPal Account
-                                </Radio>
+                                </Form.Check>
                             </FormGroup>
                             {
                                 this.state.paymentModalType === 'credit' ? (

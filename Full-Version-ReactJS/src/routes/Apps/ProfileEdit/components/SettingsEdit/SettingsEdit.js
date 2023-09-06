@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import {
     Panel,
     Form,
-    Radio,
     Button,
 } from 'components';
 
@@ -44,12 +43,12 @@ const SettingsEdit = () => (
                 <p>
                     Do you want notify you by email whenever contacts send you a message?
                 </p>
-                <Radio name='privateMessagesAccept' defaultChecked inline>
+                <Form.Check type="radio" name='privateMessagesAccept' defaultChecked inline>
                     Yes
-                </Radio>
-                <Radio name='privateMessagesAccept' inline>
+                </Form.Check>
+                <Form.Check type="radio" name='privateMessagesAccept' inline>
                     No
-                </Radio>
+                </Form.Check>
             </div>
 
             <div className='m-t-3'>
