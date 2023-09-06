@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { faker } from '@faker-js/faker';
 import { LinkContainer } from 'react-router-bootstrap';
-import Notifications from 'react-notification-system-redux';
 
 import treeRandomizer from 'modules/treeRandomizer';
 import getLogoBySkin from './getLogoBySkin.js';
@@ -465,10 +464,6 @@ class DefaultLayout extends React.Component {
                         <i className="fa fa-fw fa-heart text-danger"></i> New York, US</span>
                     </p>
                 </Footer>
-
-                <Notifications
-                    notifications={ this.props.notifications }
-                />
             </Layout>
         )
     };
@@ -495,8 +490,6 @@ const mapStateToProps = (state) => ({
     currentScreenSize: state.layout.currentScreenSize,
     skinColor: state.layout.skinColor,
     rawContent: state.layout.rawContent,
-
-    notifications: state.notifications
 });
 
 const mapActionCreators = {

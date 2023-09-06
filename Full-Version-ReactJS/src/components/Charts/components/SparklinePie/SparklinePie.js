@@ -1,13 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import _ from 'underscore';
 import tinycolor from 'tinycolor2';
 
-import Chartist from 'chartist';
-import 'chartist/dist/chartist.css';
-import classes from './SparklinePie.scss';
+import * as Chartist from 'chartist';
 
-import { Colors } from './../../../../consts';
+import { Colors } from 'consts';
+import classes from './SparklinePie.scss';
 
 export default class SparklinePie extends React.Component {
     static propTypes = {
@@ -106,7 +104,7 @@ export default class SparklinePie extends React.Component {
         const data = this.getData();
         const defaultSettings = this.getChartSettings();
 
-        this.chart = new Chartist.Pie(this.refs.pieContainer, data, defaultSettings);
+        this.chart = new Chartist.PieChart(this.refs.pieContainer, data, defaultSettings);
         this.chart.on('created', () => {
             this.applySlicesColors(this.refs.pieContainer, data.series || []);
         });

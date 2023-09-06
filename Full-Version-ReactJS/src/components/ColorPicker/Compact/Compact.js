@@ -1,9 +1,9 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 import map from 'lodash/map'
-import color from 'react-color/lib/helpers/color'
+import * as color from 'react-color/lib/helpers/color'
 
-import { Raised } from 'react-color/modules/react-material-design'
+import { Raised } from 'react-color/lib/components/common'
 import { ColorWrap } from 'react-color/lib/components/common'
 import CompactColor from './CompactColor'
 import CompactFields from './CompactFields'

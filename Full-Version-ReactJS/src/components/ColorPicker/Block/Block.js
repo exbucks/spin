@@ -1,6 +1,6 @@
 import React from 'react'
 import reactCSS from 'reactcss'
-import color from 'react-color/lib/helpers/color'
+import * as color from 'react-color/lib/helpers/color'
 
 import { ColorWrap, EditableInput, Checkboard } from 'react-color/lib/components/common'
 import BlockSwatches from './BlockSwatches'

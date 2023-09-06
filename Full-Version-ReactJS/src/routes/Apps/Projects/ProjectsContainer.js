@@ -3,7 +3,6 @@ import _ from 'underscore';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import Notifications from 'react-notification-system-redux';
 
 import {
     Row,
@@ -348,16 +347,16 @@ class ProjectsContainer extends RoutedComponent {
             }
         });
 
-        const notification = favorited ?
-            Notifications.success({
-                title: 'Added to favorites',
-                message: `${ projectToModify.Title } added to Favorites!`
+        // const notification = favorited ?
+        //     Notifications.success({
+        //         title: 'Added to favorites',
+        //         message: `${ projectToModify.Title } added to Favorites!`
 
-            }) :
-            Notifications.error({
-                title: 'Removed from favorites',
-                message: `${ projectToModify.Title } removed from Favorites!`
-            });
+        //     }) :
+        //     Notifications.error({
+        //         title: 'Removed from favorites',
+        //         message: `${ projectToModify.Title } removed from Favorites!`
+        //     });
 
         // Show Notification
         this.context.store.dispatch(notification);

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Ps from 'perfect-scrollbar';
 import _ from 'underscore';
 
-import 'perfect-scrollbar/dist/css/perfect-scrollbar.css';
+import 'perfect-scrollbar/css/perfect-scrollbar.css';
 
 class ScrollBarContainer extends React.Component {
     static propTypes = {

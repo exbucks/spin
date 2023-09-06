@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import Notifications from 'react-notification-system-redux';
 
 import {
     Row,
@@ -42,8 +41,8 @@ class NotificationsContainer extends RoutedComponent {
     formSubmit(ev) {
         ev.preventDefault();
 
-        const notificationAction = Notifications.show(this.state, this.state.level);
-        this.context.store.dispatch(notificationAction);
+        // const notificationAction = Notifications.show(this.state, this.state.level);
+        // this.context.store.dispatch(notificationAction);
     }
 
     render() {

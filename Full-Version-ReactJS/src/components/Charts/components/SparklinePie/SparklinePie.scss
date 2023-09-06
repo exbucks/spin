@@ -1,4 +1,4 @@
-@import '~chartist/dist/scss/chartist.scss';
+@import '~chartist/dist/index.scss';
 
 @mixin darken-fill($refColor) {
     fill: rgba($refColor, .1);

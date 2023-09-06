@@ -1,8 +1,8 @@
 import React from 'react'
 import reactCSS from 'reactcss'
-import color from 'react-color/lib/helpers/color'
+import * as color from 'react-color/lib/helpers/color'
 
-import { Raised } from 'react-color/modules/react-material-design'
+import { Raised } from 'react-color/lib/components/common'
 import { ColorWrap, EditableInput } from 'react-color/lib/components/common'
 
 export const Material = ({ onChange, hex, rgb }) => {

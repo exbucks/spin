@@ -1,9 +1,9 @@
 import React from 'react';
-import Chartist from 'chartist';
+import * as Chartist from 'chartist';
 import _ from 'underscore';
 import { v4 as uuidv4 } from 'uuid';
 
-import { Colors } from './../../../../consts';
+import { Colors } from 'consts';
 
 import SparklinePie from './../SparklinePie';
 
@@ -50,7 +50,7 @@ const createSimpleDonutAnimation = (animationDuration, animationPlayed = false) 
                 dur: animationDuration,
                 from: `${-pathLength}px`,
                 to: '0px',
-                easing: Chartist.Svg.Easing.easeOutQuint,
+                easing: Chartist.Svg.easeOutQuint,
                 fill: 'freeze'
             }
         };

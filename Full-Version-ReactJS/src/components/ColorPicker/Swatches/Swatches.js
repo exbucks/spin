@@ -1,11 +1,11 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 import map from 'lodash/map'
-import color from 'react-color/lib/helpers/color'
+import * as color from 'react-color/lib/helpers/color'
 import * as material from 'material-colors'
 
 import { ColorWrap } from 'react-color/lib/components/common'
-import { Raised } from 'react-color/modules/react-material-design'
+import { Raised } from 'react-color/lib/components/common'
 import SwatchesGroup from './SwatchesGroup'
 
 export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex }) => {

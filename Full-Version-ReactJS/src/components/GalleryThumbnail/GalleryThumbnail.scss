@@ -1,6 +1,6 @@
-@import '~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails.scss';
+@import '~bootstrap/scss/_variables.scss';
+@import '~bootstrap/scss/_mixins.scss';
+@import '~bootstrap/scss/_thumbnails.scss';
 
 .galleryThumbnail {
     @extend .thumbnail;

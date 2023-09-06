@@ -1,7 +1,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 import map from 'lodash/map'
-import color from 'react-color/lib/helpers/color'
+import * as color from 'react-color/lib/helpers/color'
 
 import { ColorWrap, EditableInput, Swatch } from 'react-color/lib/components/common'
 
