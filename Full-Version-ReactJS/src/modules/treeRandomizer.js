@@ -1,7 +1,7 @@
 import _ from 'underscore';
 import { faker } from '@faker-js/faker';
 import moment from 'moment';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 const pad = (num, size) => {
     var s = "000000000" + num;
@@ -116,7 +116,7 @@ const treeRandomizer = (input) => {
         }
 
         if(typeof val === 'object') {
-            val._id = uid.v4();
+            val._id = uuidv4();
             treeRandomizer(val);
         }
     });

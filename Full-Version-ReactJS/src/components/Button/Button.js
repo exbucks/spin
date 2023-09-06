@@ -7,8 +7,6 @@ import classNames from 'classnames';
 
 import classes from './Button.scss';
 
-import { Colors } from 'consts';
-
 const BS_STYLES = [
     'default',
     'link',

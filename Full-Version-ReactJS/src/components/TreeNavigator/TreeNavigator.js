@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
 
-import TreeNavigatorBranch from './TreeNavigatorBranch';
-
 import classes from './TreeNavigator.scss';
 
 class TreeNavigator extends React.Component {

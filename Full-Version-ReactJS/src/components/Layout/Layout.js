@@ -8,7 +8,6 @@ import updateChildElementOfType from './../utils/updateChildElementOfType';
 
 import {
     CONTENT_VIEW_STATIC,
-    CONTENT_VIEW_FLUID,
     CONTENT_VIEW_BOXED,
 
     SIDEBAR_STYLE_DEFAULT,
@@ -20,10 +19,6 @@ import {
     SKIN_COLOR,
 
     SKIN_COLOR_PRIMARY,
-    SKIN_COLOR_INFO,
-    SKIN_COLOR_SUCCESS,
-    SKIN_COLOR_WARNING,
-    SKIN_COLOR_DANGER,
 
     HEADER_STYLE_SIMPLE,
     HEADER_STYLE_BREADCRUMBS,

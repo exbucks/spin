@@ -3,17 +3,14 @@
 
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
-import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 import classNames from 'classnames';
 
 import {
     DayPickerSingleDateController,
-    ScrollableOrientationShape,
 } from 'react-dates';
 
 import {
-    FormGroup,
     FormControl,
     InputGroup,
     OutsideClick,
@@ -49,7 +46,7 @@ class DatePicker extends React.Component {
 
         placeholder: PropTypes.string,
 
-        initialDate: momentPropTypes.momentObj,
+        initialDate: PropTypes.date,
 
         bsSize: PropTypes.string,
         bsStyle: PropTypes.string,

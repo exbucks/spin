@@ -3,8 +3,6 @@ import { Tooltip as ReactBootstrapTooltip } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import _ from 'underscore';
 
-import { Colors } from './../../consts';
-
 import bsStyleToColor from './../utils/bsStyleToColor';
 
 /*

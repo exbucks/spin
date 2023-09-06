@@ -1,5 +1,3 @@
-import React, { PropTypes } from 'react';
-
 import HighchartBase, { connect } from './../HighchartBase';
 
 class HighchartBasicColumn extends HighchartBase {

@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import momentPropTypes from 'react-moment-proptypes';
 import _ from 'underscore';
 import moment from 'moment';
 
@@ -14,7 +13,7 @@ import { HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from '../../constants';
 const propTypes = {
     // example props for the demo
     autoFocus: PropTypes.bool,
-    initialDate: momentPropTypes.momentObj,
+    initialDate: PropTypes.date,
     ...(_.omit(SingleDatePickerShape, [
         'date',
         'onDateChange',

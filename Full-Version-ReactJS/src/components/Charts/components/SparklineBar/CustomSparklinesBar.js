@@ -3,11 +3,9 @@ import { SparklinesBars } from 'react-sparklines';
 
 export default class CustomSparklinesBar extends SparklinesBars {
     render() {
-        const { points, height, style, barWidth, barMargin } = this.props;
+        const { points, height, style, barWidth } = this.props;
         const strokeWidth = 1 * ((style && style.strokeWidth) || 0);
         const width = barWidth || Math.ceil(points && points.length >= 2 ? Math.ceil(Math.max(0, points[1].x - points[0].x - strokeWidth)) : 0);
-
-        const initialDiff = points[0].x;
 
         return (
             <g>

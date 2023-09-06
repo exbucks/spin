@@ -1,8 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 import DefaultLayout from './layouts/DefaultLayout';
 

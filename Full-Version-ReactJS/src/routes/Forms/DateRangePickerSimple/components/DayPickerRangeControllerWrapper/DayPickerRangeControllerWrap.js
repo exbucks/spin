@@ -1,11 +1,9 @@
 import React, { PropTypes } from 'react';
-import momentPropTypes from 'react-moment-proptypes';
 import _ from 'underscore';
 import moment from 'moment';
 
 import {
     DayPickerRangeController,
-    ScrollableOrientationShape,
 
     isInclusivelyAfterDay
 } from 'react-dates';
@@ -14,8 +12,8 @@ import { START_DATE, END_DATE, HORIZONTAL_ORIENTATION } from './../../constants'
 const propTypes = {
     // example props for the demo
     autoFocusEndDate: PropTypes.bool,
-    initialStartDate: momentPropTypes.momentObj,
-    initialEndDate: momentPropTypes.momentObj,
+    initialStartDate: PropTypes.date,
+    initialEndDate: PropTypes.date,
 
     keepOpenOnDateSelect: PropTypes.bool,
     minimumNights: PropTypes.number,

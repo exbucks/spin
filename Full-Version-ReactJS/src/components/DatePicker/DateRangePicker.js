@@ -1,16 +1,13 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
-import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 import classNames from 'classnames';
 
 import {
     DayPickerRangeController,
-    ScrollableOrientationShape
 } from 'react-dates';
 
 import {
-    FormGroup,
     FormControl,
     InputGroup,
     OutsideClick,
@@ -50,8 +47,8 @@ class DateRangePicker extends React.Component {
         placeholderStart: PropTypes.string,
         placeholderEnd: PropTypes.string,
 
-        initialStartDate: momentPropTypes.momentObj,
-        initialEndDate: momentPropTypes.momentObj,
+        initialStartDate: PropTypes.date,
+        initialEndDate: PropTypes.date,
 
         bsSize: PropTypes.string,
         bsStyle: PropTypes.string,

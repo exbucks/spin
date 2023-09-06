@@ -5,13 +5,11 @@ import _ from 'underscore';
 import classes from './AddOnContent.scss';
 
 import {
-    SIDEBAR_STYLE_SLIM,
     SIDEBAR_STYLE_DEFAULT,
-    SIDEBAR_STYLE_BIGICONS
 } from 'layouts/DefaultLayout/modules/layout';
 
 const AddOnContent = props => {
-    const { supportedStyle, children, className, ...otherProps } = props;
+    const { supportedStyle, children, className } = props;
 
     const stylesNormalized = (typeof supportedStyle === 'array') ?
         props.supportedStyle : [supportedStyle];

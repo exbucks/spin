@@ -15,8 +15,6 @@ const responsiveBreakpoints = {
 
 const reactGridLayoutProps = ['rowHeight'];
 
-const deepClone = o => JSON.parse(JSON.stringify(o));
-
 const simplifyChildrenArray = (reactChildren) => _.map(reactChildren, child => (
     { ...child, key: child.key.replace(/\.\$/g, '') }
 ));

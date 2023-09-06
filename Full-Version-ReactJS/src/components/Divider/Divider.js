@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import _ from 'underscore';
 
 import classes from './Divider.scss';
 

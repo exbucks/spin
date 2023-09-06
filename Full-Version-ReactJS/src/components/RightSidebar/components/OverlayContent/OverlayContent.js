@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const OverlayContent = props => {
-    const { active, children, className, style, ...otherProps } = props;
+    const { active, children, className, style } = props;
 
     const contentClass = classNames({
         'active': active

@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import momentPropTypes from 'react-moment-proptypes';
 import _ from 'underscore';
 import moment from 'moment';
 
@@ -15,8 +14,8 @@ const propTypes = {
     // example props for the demo
     autoFocus: PropTypes.bool,
     autoFocusEndDate: PropTypes.bool,
-    initialStartDate: momentPropTypes.momentObj,
-    initialEndDate: momentPropTypes.momentObj,
+    initialStartDate: PropTypes.date,
+    initialEndDate: PropTypes.date,
 
     ...(_.omit(DateRangePickerShape, [
         'startDate',
