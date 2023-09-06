@@ -24,8 +24,6 @@ import classes from './Monitor.scss';
 import sectionRender from 'modules/sectionRender';
 import treeRandomizer from 'modules/treeRandomizer';
 
-import Faker from 'components/Faker';
-
 import monitorData from 'consts/data/monitor.json';
 
 // ------------------------------------
@@ -356,7 +354,7 @@ class MonitorContainer extends RoutedComponent {
                     className={ classes.volumeWrap }
                 >
                     <p>
-                        <Faker>{'[lorem.paragraph]'}</Faker>
+                        Faker
                     </p>
                     <Divider className='m-t-3 m-b-1'>
                         Volume Status

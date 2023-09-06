@@ -7,8 +7,8 @@ import { faker } from '@faker-js/faker';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import treeRandomizer from 'modules/treeRandomizer';
+import ROUTES, { findActiveNodes } from 'routes/routesStructure';
 import getLogoBySkin from './getLogoBySkin.js';
-import ROUTES, { findActiveNodes } from './../../routes/routesStructure';
 
 // Components
 import {

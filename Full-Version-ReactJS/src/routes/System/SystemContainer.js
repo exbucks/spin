@@ -16,7 +16,6 @@ import {
     Charts,
     SlimProgressBar
 } from 'components'
-import Faker from 'components/Faker';
 
 import treeRandomizer from 'modules/treeRandomizer';
 import renderSection from 'modules/sectionRender';
@@ -191,7 +190,7 @@ const renderProcessDetails = (processData) => {
             }
         >
             <p>
-                <Faker>{'[lorem.paragraph]'}</Faker>
+                Faker
             </p>
             <Table
                 responsive
