@@ -4,25 +4,25 @@ import { faker } from '@faker-js/faker';
 import {
     Table,
     Media,
+    Dropdown,
     DropdownButton,
-    MenuItem,
     AvatarImage
 } from 'components';
 
 const renderActionsDropdown = (index) => (
     <DropdownButton title='Action' id={`dropdown-basic-${index}`}>
-        <MenuItem eventKey="1">
+        <Dropdown.Item eventKey="1">
             <i className='fa fa-envelope fa-fw text-gray-lighter m-r-1'></i>
             Send Email
-        </MenuItem>
-        <MenuItem eventKey="2">
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="2">
             <i className='fa fa-phone fa-fw text-gray-lighter m-r-1'></i>
             Call
-        </MenuItem>
-        <MenuItem eventKey="3">
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="3">
             <i className='fa fa-user fa-fw text-gray-lighter m-r-1'></i>
             Show Profile
-        </MenuItem>
+        </Dropdown.Item>
     </DropdownButton>
 );
 

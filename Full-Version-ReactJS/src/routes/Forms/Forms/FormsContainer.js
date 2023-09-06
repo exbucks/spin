@@ -16,7 +16,6 @@ import {
     FormGroup,
     ControlLabel,
     DropdownButton,
-    MenuItem,
     MaskedTextInput
 } from 'components';
 import Toggle from 'react-toggle';
@@ -376,11 +375,11 @@ const AdditionalElements = () => (
                         <InputGroup>
                             <InputGroup.Button>
                                 <DropdownButton title='Action' id='input-dropdown-standard-1'>
-                                    <MenuItem eventKey="1">Action</MenuItem>
-                                    <MenuItem eventKey="2">Another action</MenuItem>
-                                    <MenuItem eventKey="3">Active Item</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey="4">Separated link</MenuItem>
+                                    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="3">Active Item</Dropdown.Item>
+                                    <Dropdown.Item divider />
+                                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                                 </DropdownButton>
                             </InputGroup.Button>
                             <FormControl type="text"/>
@@ -391,11 +390,11 @@ const AdditionalElements = () => (
                             <FormControl type="text"/>
                             <InputGroup.Button>
                                 <DropdownButton title='Action' id='input-dropdown-standard-2'>
-                                    <MenuItem eventKey="1">Action</MenuItem>
-                                    <MenuItem eventKey="2">Another action</MenuItem>
-                                    <MenuItem eventKey="3">Active Item</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey="4">Separated link</MenuItem>
+                                    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="3">Active Item</Dropdown.Item>
+                                    <Dropdown.Item divider />
+                                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                                 </DropdownButton>
                             </InputGroup.Button>
                         </InputGroup>
@@ -414,11 +413,11 @@ const AdditionalElements = () => (
                             </InputGroup.Button>
                             <InputGroup.Button>
                                 <DropdownButton title='' id='input-dropdown-split-1'>
-                                    <MenuItem eventKey="1">Action</MenuItem>
-                                    <MenuItem eventKey="2">Another action</MenuItem>
-                                    <MenuItem eventKey="3">Active Item</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey="4">Separated link</MenuItem>
+                                    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="3">Active Item</Dropdown.Item>
+                                    <Dropdown.Item divider />
+                                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                                 </DropdownButton>
                             </InputGroup.Button>
                             <FormControl type="text"/>
@@ -429,11 +428,11 @@ const AdditionalElements = () => (
                             <FormControl type="text"/>
                             <InputGroup.Button>
                                 <DropdownButton title='' id='input-dropdown-split-2'>
-                                    <MenuItem eventKey="1">Action</MenuItem>
-                                    <MenuItem eventKey="2">Another action</MenuItem>
-                                    <MenuItem eventKey="3">Active Item</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey="4">Separated link</MenuItem>
+                                    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                    <Dropdown.Item eventKey="3">Active Item</Dropdown.Item>
+                                    <Dropdown.Item divider />
+                                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                                 </DropdownButton>
                             </InputGroup.Button>
                             <InputGroup.Button>

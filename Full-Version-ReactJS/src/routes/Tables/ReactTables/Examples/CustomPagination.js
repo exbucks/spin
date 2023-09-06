@@ -3,9 +3,8 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 import {
     Col,
-    Row,
+    Dropdown,
     DropdownButton,
-    MenuItem
 } from 'components';
 
 import { products } from './../utils';
@@ -45,7 +44,7 @@ class CustomPagination extends React.Component {
                         >
                             {
                                 PAGE_SIZES.map((pageSize, index) => (
-                                    <MenuItem eventKey={index}>{pageSize}</MenuItem>
+                                    <Dropdown.Item eventKey={index}>{pageSize}</Dropdown.Item>
                                 ))
                             }
                         </DropdownButton>

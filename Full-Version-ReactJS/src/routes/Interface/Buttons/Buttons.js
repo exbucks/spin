@@ -7,7 +7,6 @@ import {
     ButtonGroup,
     ButtonToolbar,
     DropdownButton,
-    MenuItem,
     SplitButton,
     Button
 } from 'components';
@@ -328,8 +327,8 @@ class ButtonsContainer extends RoutedComponent {
                                 <Button>Button</Button>
                                 <Button>Button</Button>
                                 <DropdownButton title="Dropdown" id="bg-vertical-dropdown-1">
-                                    <MenuItem eventKey="1">Dropdown link</MenuItem>
-                                    <MenuItem eventKey="2">Dropdown link</MenuItem>
+                                    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
                                 </DropdownButton>
                                 <Button>Button</Button>
                             </ButtonGroup>
@@ -389,8 +388,8 @@ class ButtonsContainer extends RoutedComponent {
                                 <Button>1</Button>
                                 <Button>2</Button>
                                 <DropdownButton title="Dropdown" id="bg-nested-dropdown">
-                                    <MenuItem eventKey="1">Dropdown link</MenuItem>
-                                    <MenuItem eventKey="2">Dropdown link</MenuItem>
+                                    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
                                 </DropdownButton>
                             </ButtonGroup>
                         </Col>
@@ -409,18 +408,18 @@ class ButtonsContainer extends RoutedComponent {
                                 <strong>Examples</strong>
                             </p>
                             <DropdownButton title='Action' id='dropdown-basic-2'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </DropdownButton>&nbsp;
                             <DropdownButton bsStyle='primary' title='Action' id='dropdown-basic-3'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </DropdownButton>
                         </Col>
                         <Col lg={ 3 }>
@@ -432,18 +431,18 @@ class ButtonsContainer extends RoutedComponent {
                                 <strong>Examples</strong>
                             </p>
                             <SplitButton title='Action' id='split-basic-1'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </SplitButton>&nbsp;
                             <SplitButton bsStyle='primary' title='Action' id='split-basic-2'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </SplitButton>
                         </Col>
                         <Col lg={ 3 }>
@@ -455,18 +454,18 @@ class ButtonsContainer extends RoutedComponent {
                                 <strong>Examples</strong>
                             </p>
                             <SplitButton title='Dropup' id='split-basic-3'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </SplitButton>&nbsp;
                             <SplitButton bsStyle='primary' title='Dropup' id='split-basic-4'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </SplitButton>
                         </Col>
                         <Col lg={ 3 }>
@@ -478,27 +477,27 @@ class ButtonsContainer extends RoutedComponent {
                                 <strong>Examples</strong>
                             </p>
                             <DropdownButton title='Large button' id='dropdown-basic-4' bsSize='lg' className='m-b-1'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </DropdownButton>
                             <br/>
                             <DropdownButton title='Small button' id='dropdown-basic-5' bsSize='sm' className='m-b-1'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </DropdownButton>
                             <br/>
                             <DropdownButton title='Extra small button' id='dropdown-basic-6' bsSize='xs'>
-                                <MenuItem eventKey="1">Action</MenuItem>
-                                <MenuItem eventKey="2">Another action</MenuItem>
-                                <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey="4">Separated link</MenuItem>
+                                <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+                                <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+                                <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item>
+                                <Dropdown.Item divider />
+                                <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
                             </DropdownButton>
                         </Col>
                     </Row>

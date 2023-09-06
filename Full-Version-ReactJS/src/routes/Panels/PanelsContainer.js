@@ -7,8 +7,8 @@ import {
     Panel,
     CollapsablePanel,
     Button,
+    Dropdown,
     DropdownButton,
-    MenuItem,
     Label,
     Badge,
     ButtonGroup,
@@ -729,23 +729,23 @@ class PanelsContainer extends RoutedComponent {
                                 <div className='flex-space-between'>
                                     <span>Panel with Dropdown</span>
                                     <DropdownButton title='Save' id={`panel-example-dropdown`} bsSize='small'>
-                                        <MenuItem eventKey="1">
+                                        <Dropdown.Item eventKey="1">
                                             <i className='fa fa-fw text-gray-lighter fa-file-pdf-o m-r-1'></i>
                                             Save as .pdf
-                                        </MenuItem>
-                                        <MenuItem eventKey="2">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item eventKey="2">
                                             <i className='fa fa-fw text-gray-lighter fa-file-word-o m-r-1'></i>
                                             Save as .doc
-                                        </MenuItem>
-                                        <MenuItem eventKey="3">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item eventKey="3">
                                             <i className='fa fa-fw text-gray-lighter fa-file-excel-o m-r-1'></i>
                                             Save as .xls
-                                        </MenuItem>
-                                        <MenuItem divider />
-                                        <MenuItem eventKey="4">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item divider />
+                                        <Dropdown.Item eventKey="4">
                                             <i className='fa fa-fw text-gray-lighter fa-file-text-o m-r-1'></i>
                                             Save as .txt
-                                        </MenuItem>
+                                        </Dropdown.Item>
                                     </DropdownButton>
                                 </div>
                             }

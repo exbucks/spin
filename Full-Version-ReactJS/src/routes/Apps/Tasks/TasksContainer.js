@@ -12,7 +12,6 @@ import {
     Panel,
     Button,
     DropdownButton,
-    MenuItem,
     ButtonGroup,
     Form,
     ListGroup,
@@ -115,24 +114,24 @@ const renderActionsDropdown = (small = false) => (
         id='dropdown-task-actions'
     >
         <LinkContainer to='/apps/task-details'>
-            <MenuItem eventKey="1">
+            <Dropdown.Item eventKey="1">
                 <i className="fa fa-fw fa-folder-open text-gray-lighter m-r-1"></i>
                 View
-            </MenuItem>
+            </Dropdown.Item>
         </LinkContainer>
-        <MenuItem eventKey="2">
+        <Dropdown.Item eventKey="2">
             <i className="fa fa-fw fa-ticket text-gray-lighter m-r-1"></i>
             Add Task
-        </MenuItem>
-        <MenuItem eventKey="3">
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="3">
             <i className="fa fa-fw fa-paperclip text-gray-lighter m-r-1"></i>
             Add Files
-        </MenuItem>
-        <MenuItem divider />
-        <MenuItem eventKey="4">
+        </Dropdown.Item>
+        <Dropdown.Item divider />
+        <Dropdown.Item eventKey="4">
             <i className="fa fa-fw fa-trash text-gray-lighter m-r-1"></i>
             Delete
-        </MenuItem>
+        </Dropdown.Item>
     </DropdownButton>
 );
 

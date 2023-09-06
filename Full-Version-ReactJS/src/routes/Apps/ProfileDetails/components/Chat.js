@@ -9,7 +9,6 @@ import {
     Button,
     Dropdown,
     DropdownButton,
-    MenuItem
 } from 'components';
 
 import { Chat as ChatExample } from 'routes/Apps/components';
@@ -33,19 +32,19 @@ const Chat = () => (
                             id="dropdown-chat-options-mobile"
                             title="Options"
                         >
-                            <MenuItem eventKey="1">
+                            <Dropdown.Item eventKey="1">
                                 <i className='fa fa-message fa-fw m-r-1'></i>
                                 Private Message
-                            </MenuItem>
-                            <MenuItem eventKey="2">
+                            </Dropdown.Item>
+                            <Dropdown.Item eventKey="2">
                                 <i className='fa fa-search fa-fw m-r-1'></i>
                                 Search this Thread
-                            </MenuItem>
-                            <MenuItem divider />
-                            <MenuItem eventKey="3">
+                            </Dropdown.Item>
+                            <Dropdown.Item divider />
+                            <Dropdown.Item eventKey="3">
                                 <i className='fa fa-cross fa-fw m-r-1'></i>
                                 Block User
-                            </MenuItem>
+                            </Dropdown.Item>
                         </DropdownButton>
                     </Col>
                 </Col>
@@ -55,19 +54,19 @@ const Chat = () => (
                             <i className='fa fa-gear fa-fw'></i>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className="super-colors">
-                            <MenuItem eventKey="1">
+                            <Dropdown.Item eventKey="1">
                                 <i className='fa fa-message fa-fw m-r-1'></i>
                                 Private Message
-                            </MenuItem>
-                            <MenuItem eventKey="2">
+                            </Dropdown.Item>
+                            <Dropdown.Item eventKey="2">
                                 <i className='fa fa-search fa-fw m-r-1'></i>
                                 Search this Thread
-                            </MenuItem>
-                            <MenuItem divider />
-                            <MenuItem eventKey="3">
+                            </Dropdown.Item>
+                            <Dropdown.Item divider />
+                            <Dropdown.Item eventKey="3">
                                 <i className='fa fa-cross fa-fw m-r-1'></i>
                                 Block User
-                            </MenuItem>
+                            </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>

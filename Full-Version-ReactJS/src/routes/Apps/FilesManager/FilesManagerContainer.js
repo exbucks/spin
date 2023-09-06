@@ -14,7 +14,6 @@ import {
     ButtonToolbar,
     Dropdown,
     Label,
-    MenuItem,
     Table,
     Media,
     Pagination,
@@ -164,31 +163,31 @@ const renderDirectoriesList = directories => (
                                         <i className='fa fa-fw fa-gear'></i>
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu>
-                                        <MenuItem eventKey="1">
+                                        <Dropdown.Item eventKey="1">
                                             <span>
                                                 <i className='fa fa-fw fa-share text-gray-lighter m-r-1'></i>
                                                 Share
                                             </span>
-                                        </MenuItem>
-                                        <MenuItem eventKey="2">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item eventKey="2">
                                             <i className='fa fa-fw fa-cloud-download text-gray-lighter m-r-1'></i>
                                             Download
-                                        </MenuItem>
-                                        <MenuItem eventKey="3">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item eventKey="3">
                                             <i className='fa fa-fw fa-trash text-gray-lighter m-r-1'></i>
                                             Delete
-                                        </MenuItem>
-                                        <MenuItem eventKey="4">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item eventKey="4">
                                             <i className='fa fa-fw fa-pencil text-gray-lighter m-r-1'></i>
                                             Edit
-                                        </MenuItem>
+                                        </Dropdown.Item>
 
-                                        <MenuItem divider />
+                                        <Dropdown.Item divider />
 
-                                        <MenuItem eventKey="6">
+                                        <Dropdown.Item eventKey="6">
                                             <i className='fa fa-fw fa-copy text-gray-lighter m-r-1'></i>
                                             Copy
-                                        </MenuItem>
+                                        </Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </td>

@@ -23,7 +23,6 @@ import {
     NavItem,
     NavDropdown,
     AvatarImage,
-    MenuItem,
     RightSidebar,
     Tabs,
     Tab,
@@ -284,27 +283,27 @@ class DefaultLayout extends React.Component {
                                         eventKey={ 3 }
                                         noCaret
                                     >
-                                        <MenuItem
+                                        <NavDropdown.Item
                                             header
                                             className='text-uppercase hidden-xs'
                                         >
                                             <strong className='text-gray-lighter'>
                                                 Account
                                             </strong>
-                                        </MenuItem>
-                                        <MenuItem divider className='hidden-xs'/>
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item divider className='hidden-xs'/>
                                         <LinkContainer to='/apps/profile-details'>
-                                            <MenuItem eventKey={3.1}>Your Profile</MenuItem>
+                                            <NavDropdown.Item eventKey={3.1}>Your Profile</NavDropdown.Item>
                                         </LinkContainer>
                                         <LinkContainer to='/apps/user-profile/edit/settings'>
-                                            <MenuItem eventKey={3.2}>Settings</MenuItem>
+                                            <NavDropdown.Item eventKey={3.2}>Settings</NavDropdown.Item>
                                         </LinkContainer>
                                         <LinkContainer to='/apps/faq'>
-                                            <MenuItem eventKey={3.3}>Faq</MenuItem>
+                                            <NavDropdown.Item eventKey={3.3}>Faq</NavDropdown.Item>
                                         </LinkContainer>
-                                        <MenuItem divider />
+                                        <NavDropdown.Item divider />
                                         <LinkContainer to='/pages/login'>
-                                            <MenuItem eventKey={3.4}>Sign Out</MenuItem>
+                                            <NavDropdown.Item eventKey={3.4}>Sign Out</NavDropdown.Item>
                                         </LinkContainer>
                                     </NavDropdown>
 

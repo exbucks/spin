@@ -2,14 +2,12 @@ import React, {PropTypes} from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'components/ReactTable';
 import moment from 'moment';
 import {
-    Row,
-    Grid,
     Col,
     ButtonGroup,
     Button,
     InputGroup,
+    Dropdown,
     DropdownButton,
-    MenuItem,
     StarRating,
     Label
 } from 'components';
@@ -106,7 +104,7 @@ class AdvancedTableA extends React.Component {
                             >
                                 {
                                     pageSizes.map((pageSize, index) => (
-                                        <MenuItem eventKey={index}>{pageSize}</MenuItem>
+                                        <Dropdown.Item eventKey={index}>{pageSize}</Dropdown.Item>
                                     ))
                                 }
                             </DropdownButton>

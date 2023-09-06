@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import classNames from 'classnames';
 
 import {
     Wizard,
@@ -14,8 +13,8 @@ import {
     ControlLabel,
     FormGroup,
     InputGroup,
+    Dropdown,
     DropdownButton,
-    MenuItem,
     ButtonGroup
 } from 'components';
 
@@ -192,8 +191,8 @@ class WizardStepsContainer extends RoutedComponent {
                                     </ControlLabel>
                                     <div className={classes.ddWrap}>
                                         <DropdownButton title='PL (+48)' id='dropdown-address-country'>
-                                            <MenuItem eventKey="1">PL (+48)</MenuItem>
-                                            <MenuItem eventKey="2">UK (+44)</MenuItem>
+                                            <Dropdown.Item eventKey="1">PL (+48)</Dropdown.Item>
+                                            <Dropdown.Item eventKey="2">UK (+44)</Dropdown.Item>
                                         </DropdownButton>
                                     </div>
                                 </FormGroup>
@@ -232,8 +231,8 @@ class WizardStepsContainer extends RoutedComponent {
                                     <InputGroup>
                                         <InputGroup.Button>
                                             <DropdownButton title='PL (+48)' id='dropdown-phone-prefix' className='btn-block'>
-                                                <MenuItem eventKey="1">PL (+48)</MenuItem>
-                                                <MenuItem eventKey="2">UK (+44)</MenuItem>
+                                                <Dropdown.Item eventKey="1">PL (+48)</Dropdown.Item>
+                                                <Dropdown.Item eventKey="2">UK (+44)</Dropdown.Item>
                                             </DropdownButton>
                                         </InputGroup.Button>
                                         <FormControl type="text" placeholder='For Verification Purpose...' />
@@ -340,14 +339,14 @@ class WizardStepsContainer extends RoutedComponent {
                                     </ControlLabel>
                                     <div>
                                         <DropdownButton title='Jun (06)' id='dropdown-expiriation-month' className='btn-block'>
-                                            <MenuItem eventKey="1">Jul (07)</MenuItem>
-                                            <MenuItem eventKey="2">Aug (08)</MenuItem>
+                                            <Dropdown.Item eventKey="1">Jul (07)</Dropdown.Item>
+                                            <Dropdown.Item eventKey="2">Aug (08)</Dropdown.Item>
                                         </DropdownButton>
                                         &nbsp;
                                         <DropdownButton title='PL (+48)' id='dropdown-expiriation-year' className='btn-block'>
-                                            <MenuItem eventKey="1">2018</MenuItem>
-                                            <MenuItem eventKey="2">2019</MenuItem>
-                                            <MenuItem eventKey="2">2020</MenuItem>
+                                            <Dropdown.Item eventKey="1">2018</Dropdown.Item>
+                                            <Dropdown.Item eventKey="2">2019</Dropdown.Item>
+                                            <Dropdown.Item eventKey="2">2020</Dropdown.Item>
                                         </DropdownButton>
                                     </div>
                                 </FormGroup>

@@ -6,12 +6,11 @@ import {
     Grid,
     Col,
     ButtonGroup,
-    ButtonToolbar,
     Button,
     InputGroup,
     FormControl,
+    Dropdown,
     DropdownButton,
-    MenuItem,
     Label,
     AvatarImage
 } from 'components';
@@ -295,7 +294,7 @@ class AdvancedTableB extends React.Component {
                             >
                                 {
                                     pageSizes.map((pageSize, index) => (
-                                        <MenuItem eventKey={index}>{pageSize}</MenuItem>
+                                        <Dropdown.Item eventKey={index}>{pageSize}</Dropdown.Item>
                                     ))
                                 }
                             </DropdownButton>

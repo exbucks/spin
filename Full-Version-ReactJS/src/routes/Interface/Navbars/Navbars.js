@@ -8,7 +8,6 @@ import {
     Nav,
     NavItem,
     NavDropdown,
-    MenuItem,
     Label,
     FormControl,
     Button,
@@ -62,11 +61,11 @@ class NavbarsContainer extends RoutedComponent {
                                     <i className="fa fa-fw fa-bars"></i>
                                 </NavItem>
                                 <NavDropdown eventKey={3} title="Menu" id="basic-nav-dropdown">
-                                    <MenuItem eventKey={3.1}>Action</MenuItem>
-                                    <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.3}>Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey={3.3}>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
 
@@ -97,11 +96,11 @@ class NavbarsContainer extends RoutedComponent {
                                     )}
                                     id="basic-nav-usermenu"
                                 >
-                                    <MenuItem eventKey={3.1}>Action</MenuItem>
-                                    <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.3}>Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey={3.3}>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
@@ -135,11 +134,11 @@ class NavbarsContainer extends RoutedComponent {
                                     <i className="fa fa-fw fa-bars"></i>
                                 </NavItem>
                                 <NavDropdown eventKey={3} title="Menu" id="inverse-nav-dropdown">
-                                    <MenuItem eventKey={3.1}>Action</MenuItem>
-                                    <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.3}>Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey={3.3}>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
 
@@ -170,11 +169,11 @@ class NavbarsContainer extends RoutedComponent {
                                     )}
                                     id="inverse-nav-usermenu"
                                 >
-                                    <MenuItem eventKey={3.1}>Action</MenuItem>
-                                    <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.3}>Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey={3.3}>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
@@ -208,11 +207,11 @@ class NavbarsContainer extends RoutedComponent {
                                     <i className="fa fa-fw fa-bars"></i>
                                 </NavItem>
                                 <NavDropdown eventKey={3} title="Menu" id="inverse-nav-dropdown">
-                                    <MenuItem eventKey={3.1}>Action</MenuItem>
-                                    <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.3}>Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey={3.3}>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
 
@@ -243,11 +242,11 @@ class NavbarsContainer extends RoutedComponent {
                                     )}
                                     id="inverse-nav-usermenu"
                                 >
-                                    <MenuItem eventKey={3.1}>Action</MenuItem>
-                                    <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey={3.1}>Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.2}>Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey={3.3}>Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey={3.3}>Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>

@@ -8,7 +8,6 @@ import {
     Nav,
     NavItem,
     NavDropdown,
-    MenuItem
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -73,11 +72,11 @@ class TabsAndPillsContainer extends RoutedComponent {
                                 <NavItem eventKey="1" title="Home">Home</NavItem>
                                 <NavItem eventKey="2" title="Profile">Profile</NavItem>
                                 <NavDropdown eventKey="3" title="Dropdown" id="nav-dropdown-example">
-                                    <MenuItem eventKey="3.1">Action</MenuItem>
-                                    <MenuItem eventKey="3.2">Another action</MenuItem>
-                                    <MenuItem eventKey="3.3">Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey="3.4">Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey="3.1">Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="3.2">Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="3.3">Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey="3.4">Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Col>
@@ -168,11 +167,11 @@ class TabsAndPillsContainer extends RoutedComponent {
                                 <NavItem eventKey={1} disabled>Disabled</NavItem>
                                 <NavItem eventKey={2}>Profile</NavItem>
                                 <NavDropdown eventKey="3" title="Dropdown" id="nav-dropdown-within-tab">
-                                    <MenuItem eventKey="3.1">Action</MenuItem>
-                                    <MenuItem eventKey="3.2">Another action</MenuItem>
-                                    <MenuItem eventKey="3.3">Something else here</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey="3.4">Separated link</MenuItem>
+                                    <NavDropdown.Item eventKey="3.1">Action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="3.2">Another action</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="3.3">Something else here</NavDropdown.Item>
+                                    <NavDropdown.Item divider />
+                                    <NavDropdown.Item eventKey="3.4">Separated link</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Col>

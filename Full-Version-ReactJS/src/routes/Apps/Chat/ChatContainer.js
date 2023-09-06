@@ -14,7 +14,6 @@ import {
     Badge,
     Dropdown,
     DropdownButton,
-    MenuItem,
     Media,
     InputGroup,
     FormControl,
@@ -250,41 +249,41 @@ class ChatContainer extends RoutedComponent {
                                             <i className='fa fa-fw fa-gear'></i>
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <MenuItem eventKey="1">
+                                            <Dropdown.Item eventKey="1">
                                                 <i className='fa fa-fw fa-comment text-gray-lighter m-r-1'></i>
                                                 Private Message
-                                            </MenuItem>
-                                            <MenuItem eventKey="2">
+                                            </Dropdown.Item>
+                                            <Dropdown.Item eventKey="2">
                                                 <i className='fa fa-fw fa-search text-gray-lighter m-r-1'></i>
                                                 Search This Thread
-                                            </MenuItem>
+                                            </Dropdown.Item>
 
-                                            <MenuItem divider />
+                                            <Dropdown.Item divider />
 
-                                            <MenuItem eventKey="3">
+                                            <Dropdown.Item eventKey="3">
                                                 <i className='fa fa-fw fa-close text-gray-lighter m-r-1'></i>
                                                 Block User
-                                            </MenuItem>
+                                            </Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </Col>
                                 <Col xs={ 12 } lgHidden mdHidden smHidden>
                                     <DropdownButton id={`dropdown-chat-actions-mobile`} title='Options'>
-                                        <MenuItem eventKey="1">
+                                        <Dropdown.Item eventKey="1">
                                             <i className='fa fa-fw fa-comment text-gray-lighter m-r-1'></i>
                                             Private Message
-                                        </MenuItem>
-                                        <MenuItem eventKey="2">
+                                        </Dropdown.Item>
+                                        <Dropdown.Item eventKey="2">
                                             <i className='fa fa-fw fa-search text-gray-lighter m-r-1'></i>
                                             Search This Thread
-                                        </MenuItem>
+                                        </Dropdown.Item>
 
-                                        <MenuItem divider />
+                                        <Dropdown.Item divider />
 
-                                        <MenuItem eventKey="3">
+                                        <Dropdown.Item eventKey="3">
                                             <i className='fa fa-fw fa-close text-gray-lighter m-r-1'></i>
                                             Block User
-                                        </MenuItem>
+                                        </Dropdown.Item>
                                     </DropdownButton>
                                 </Col>
                             </Row>

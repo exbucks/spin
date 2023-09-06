@@ -13,7 +13,6 @@ import {
     ButtonGroup,
     ButtonToolbar,
     Dropdown,
-    MenuItem,
     Table,
     Media,
     Pagination,
@@ -135,51 +134,51 @@ const renderActionsDropdown = (toggleModal) => (
             <i className='fa fa-fw fa-bars m-r-1'></i>
         </Dropdown.Toggle>
         <Dropdown.Menu>
-            <MenuItem
+            <Dropdown.Item
                 eventKey="1"
                 onClick={ () => { toggleModal('callModal', true) } }
             >
                 <i className='fa fa-fw fa-phone text-gray-lighter m-r-1'></i>
                 Call
-            </MenuItem>
-            <MenuItem
+            </Dropdown.Item>
+            <Dropdown.Item
                 eventKey="2"
                 onClick={ () => { toggleModal('chatModal', true) } }
             >
                 <i className='fa fa-fw fa-comment text-gray-lighter m-r-1'></i>
                 Chat
-            </MenuItem>
-            <MenuItem
+            </Dropdown.Item>
+            <Dropdown.Item
                 eventKey="3"
                 onClick={ () => { toggleModal('videoModal', true) } }
             >
                 <i className='fa fa-fw fa-video-camera text-gray-lighter m-r-1'></i>
                 Video
-            </MenuItem>
-            <MenuItem
+            </Dropdown.Item>
+            <Dropdown.Item
                 eventKey="4"
                 onClick={ () => { toggleModal('profileModal', true) } }
             >
                 <i className='fa fa-fw fa-user text-gray-lighter m-r-1'></i>
                 Profile
-            </MenuItem>
-            <MenuItem
+            </Dropdown.Item>
+            <Dropdown.Item
                 eventKey="4"
                 onClick={ () => { toggleModal('editModal', true) } }
             >
                 <i className='fa fa-fw fa-pencil text-gray-lighter m-r-1'></i>
                 Edit
-            </MenuItem>
+            </Dropdown.Item>
 
-            <MenuItem divider />
+            <Dropdown.Item divider />
 
-            <MenuItem
+            <Dropdown.Item
                 eventKey="6"
                 onClick={ () => { toggleModal('deleteModal', true) } }
             >
                 <i className='fa fa-fw fa-trash text-gray-lighter m-r-1'></i>
                 Delete
-            </MenuItem>
+            </Dropdown.Item>
         </Dropdown.Menu>
     </Dropdown>
 );
@@ -190,44 +189,44 @@ const renderGridActionsDropdown = (toggleModal) => (
         id={`dropdown-user-actions-${ uuidv4() }`}
         onClick={ () => { toggleModal('profileModal', true) } }
     >
-        <MenuItem
+        <Dropdown.Item
             eventKey="1"
             onClick={ () => { toggleModal('callModal', true) } }
         >
             <i className='fa fa-fw fa-phone text-gray-lighter m-r-1'></i>
             Call
-        </MenuItem>
-        <MenuItem
+        </Dropdown.Item>
+        <Dropdown.Item
             eventKey="2"
             onClick={ () => { toggleModal('chatModal', true) } }
         >
             <i className='fa fa-fw fa-comment text-gray-lighter m-r-1'></i>
             Chat
-        </MenuItem>
-        <MenuItem
+        </Dropdown.Item>
+        <Dropdown.Item
             eventKey="3"
             onClick={ () => { toggleModal('videoModal', true) } }
         >
             <i className='fa fa-fw fa-video-camera text-gray-lighter m-r-1'></i>
             Video
-        </MenuItem>
-        <MenuItem
+        </Dropdown.Item>
+        <Dropdown.Item
             eventKey="4"
             onClick={ () => { toggleModal('editModal', true) } }
         >
             <i className='fa fa-fw fa-pencil text-gray-lighter m-r-1'></i>
             Edit
-        </MenuItem>
+        </Dropdown.Item>
 
-        <MenuItem divider />
+        <Dropdown.Item divider />
 
-        <MenuItem
+        <Dropdown.Item
             eventKey="6"
             onClick={ () => { toggleModal('deleteModal', true) } }
         >
             <i className='fa fa-fw fa-trash text-gray-lighter m-r-1'></i>
             Delete
-        </MenuItem>
+        </Dropdown.Item>
     </SplitButton>
 );
 
