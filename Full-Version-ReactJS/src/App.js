@@ -3,12 +3,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react';
 import DefaultLayout from './layouts/DefaultLayout';
 import configureStore from './store'
 import './App.scss';
 
 
-const store = configureStore()
+const { store, persistor } = configureStore()
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <PersistGate loading={null} persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
     </Provider>
   );
 }

@@ -386,7 +386,7 @@ const ACTION_HANDLERS = {
 
       switch(action.screenSize) {
             case SCREEN_SIZE_XS:
-                sidebarOverlay: true;
+                sidebarOverlay= true;
             case SCREEN_SIZE_LG:
                 sidebarStyle = SIDEBAR_STYLE_DEFAULT;
             break;
