@@ -345,8 +345,8 @@ class DataWidgetsContainer extends RoutedComponent {
 }
 
 export default connect(state => ({
-    contentView: state.layout.contentView,
-    headerEnabled: state.layout.headerEnabled,
-    headerStyle: state.layout.headerStyle,
-    currentScreenSize: state.layout.currentScreenSize
+    contentView: state.app.contentView,
+    headerEnabled: state.app.headerEnabled,
+    headerStyle: state.app.headerStyle,
+    currentScreenSize: state.app.currentScreenSize
 }))(DataWidgetsContainer);

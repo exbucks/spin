@@ -446,23 +446,23 @@ class LayoutOptions extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    navbarEnabled: state.layout.navbarEnabled,
-    navbarFixed: state.layout.navbarFixed,
-    navbarSkin: state.layout.navbarSkin,
-    sidebarEnabled: state.layout.sidebarEnabled,
-    sidebarStyle: state.layout.sidebarStyle,
-    sidebarFixed: state.layout.sidebarFixed,
-    sidebarAside: state.layout.sidebarAside,
-    sidebarAddon: state.layout.sidebarAddon,
-    sidebarSkin: state.layout.sidebarSkin,
-    contentView: state.layout.contentView,
-    footerEnabled: state.layout.footerEnabled,
-    footerFixed: state.layout.footerFixed,
-    optionsVisible: state.layout.optionsVisible,
-    headerStyle: state.layout.headerStyle,
-    headerEnabled: state.layout.headerEnabled,
-    headerFluid: state.layout.headerFluid,
-    skinColor: state.layout.skinColor
+    navbarEnabled: state.app.navbarEnabled,
+    navbarFixed: state.app.navbarFixed,
+    navbarSkin: state.app.navbarSkin,
+    sidebarEnabled: state.app.sidebarEnabled,
+    sidebarStyle: state.app.sidebarStyle,
+    sidebarFixed: state.app.sidebarFixed,
+    sidebarAside: state.app.sidebarAside,
+    sidebarAddon: state.app.sidebarAddon,
+    sidebarSkin: state.app.sidebarSkin,
+    contentView: state.app.contentView,
+    footerEnabled: state.app.footerEnabled,
+    footerFixed: state.app.footerFixed,
+    optionsVisible: state.app.optionsVisible,
+    headerStyle: state.app.headerStyle,
+    headerEnabled: state.app.headerEnabled,
+    headerFluid: state.app.headerFluid,
+    skinColor: state.app.skinColor
 });
 
 const mapActionCreators = {
