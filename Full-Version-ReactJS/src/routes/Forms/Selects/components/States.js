@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { Button, Checkbox, Radio } from 'components';
+import { Button, Form, Radio } from 'components';
 import _ from 'underscore';
 
 const STATES_AU = [
@@ -59,30 +59,30 @@ export default class States extends React.Component {
                 />
                 <div className='m-t-1'>
                     <Button onClick={ () => this.setFocus() } bsStyle='primary'>Focus</Button>
-                    <Checkbox
+                    <Form.Check
                         checked={ this.state.searchable}
                         onChange={ () => this.toggleState('searchable') }
                         inline
                         className='m-l-1'
                     >
                         Searchable
-                    </Checkbox>
-                    <Checkbox
+                    </Form.Check>
+                    <Form.Check
                         checked={ this.state.disabled}
                         onChange={ () => this.toggleState('disabled') }
                         inline
                         className='m-l-1'
                     >
                         Disabled
-                    </Checkbox>
-                    <Checkbox
+                    </Form.Check>
+                    <Form.Check
                         checked={ this.state.clearable}
                         onChange={ () => this.toggleState('clearable') }
                         inline
                         className='m-l-1'
                     >
                         Clearable
-                    </Checkbox>
+                    </Form.Check>
                 </div>
                 <div className='m-t-1'>
                     <Radio

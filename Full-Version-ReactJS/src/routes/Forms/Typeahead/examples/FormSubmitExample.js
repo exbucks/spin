@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Checkbox, InputGroup} from 'components';
+import {Button, Form, InputGroup} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 import options from './../exampleData';
@@ -29,12 +29,12 @@ class FormSubmitExample extends React.Component {
                         <Button type="submit">Submit</Button>
                     </InputGroup.Button>
                 </InputGroup>
-                <Checkbox
+                <Form.Check
                     checked={submitFormOnEnter}
                     onChange={e => this.setState({submitFormOnEnter: e.target.checked})}
                 >
                     Allow form submission
-                </Checkbox>
+                </Form.Check>
             </form>
         );
     }

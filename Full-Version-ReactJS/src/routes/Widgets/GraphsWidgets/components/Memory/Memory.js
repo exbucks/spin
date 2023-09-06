@@ -1,10 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
     Row,
     Col,
-    Panel,
     Media,
     Charts,
     CollapsablePanel
@@ -54,7 +53,7 @@ const Memory = (panelProps) => (
         </Media>
 
         <Row>
-            <Col sm={ 4 } key={ uid.v4() }>
+            <Col sm={ 4 } key={ uuidv4() }>
                 <small>
                     <i
                         className="fa fa-fw fa-circle"
@@ -63,7 +62,7 @@ const Memory = (panelProps) => (
                 <p className={ classes.memoryValue }>5079 MB</p>
                 <p>30%</p>
             </Col>
-            <Col sm={ 4 } key={ uid.v4() }>
+            <Col sm={ 4 } key={ uuidv4() }>
                 <small>
                     <i
                         className="fa fa-fw fa-circle"
@@ -72,7 +71,7 @@ const Memory = (panelProps) => (
                 <p className={ classes.memoryValue }>3789 MB</p>
                 <p>24%</p>
             </Col>
-            <Col sm={ 4 } key={ uid.v4() }>
+            <Col sm={ 4 } key={ uuidv4() }>
                 <small>
                     <i
                         className="fa fa-fw fa-circle"

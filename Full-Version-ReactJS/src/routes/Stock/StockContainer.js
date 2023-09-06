@@ -1,5 +1,4 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import deepAssign from 'assign-deep';
 import moment from 'moment';

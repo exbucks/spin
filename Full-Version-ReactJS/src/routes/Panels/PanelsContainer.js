@@ -12,7 +12,6 @@ import {
     Label,
     Badge,
     ButtonGroup,
-    ButtonToolbar,
     InputGroup,
     FormControl,
     OverlayTrigger,

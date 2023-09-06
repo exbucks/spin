@@ -1,5 +1,5 @@
-import faker from 'faker';
-import uid from 'node-uuid';
+import { faker } from '@faker-js/faker';
+import { v4 as uuidv4 } from 'uuid';
 
 import SingleContainer from './Single';
 import NestedContainer from './Nested';
@@ -7,11 +7,11 @@ import NestedContainer from './Nested';
 export function* people(count = 5) {
     for(let i = 0; i < count; i++) {
         yield {
-            id: uid.v4(),
-            firstName: faker.name.firstName(),
-            lastName: faker.name.lastName(),
+            id: uuidv4(),
+            firstName: faker.person.firstName(),
+            lastName: faker.person.lastName(),
             avatarUrl: faker.image.avatar(),
-            job: faker.name.jobTitle(),
+            job: faker.person.jobTitle(),
             people: []
         }
     }

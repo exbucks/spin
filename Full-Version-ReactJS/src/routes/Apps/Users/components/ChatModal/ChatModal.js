@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
 
 import {
@@ -21,7 +21,7 @@ import {
 const ChatModal = props => (
     <Modal show={ props.visible } onHide={ props.onClose }>
         <Modal.Header closeButton>
-            <Modal.Title>Chat with {`${faker.name.firstName()} ${faker.name.lastName()}`}</Modal.Title>
+            <Modal.Title>Chat with {`${faker.person.firstName()} ${faker.person.lastName()}`}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Chat messages={ _.first(messages, 4) } />

@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
     Table,
@@ -36,10 +36,10 @@ const StripedExampleTable = () => (
             <tr>
                 <td>1</td>
                 <td>
-                    { faker.name.firstName() }
+                    { faker.person.firstName() }
                 </td>
                 <td>
-                    { faker.name.lastName() }
+                    { faker.person.lastName() }
                 </td>
                 <td>
                     { faker.internet.email() }
@@ -53,17 +53,17 @@ const StripedExampleTable = () => (
                         bsStyle='primary'
                         className='text-uppercase'
                     >
-                        { faker.name.jobType() }
+                        { faker.person.jobType() }
                     </Label>
                 </td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>
-                    { faker.name.firstName() }
+                    { faker.person.firstName() }
                 </td>
                 <td>
-                    { faker.name.lastName() }
+                    { faker.person.lastName() }
                 </td>
                 <td>
                     { faker.internet.email() }
@@ -77,17 +77,17 @@ const StripedExampleTable = () => (
                         bsStyle='info'
                         className='text-uppercase'
                     >
-                        { faker.name.jobType() }
+                        { faker.person.jobType() }
                     </Label>
                 </td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>
-                    { faker.name.firstName() }
+                    { faker.person.firstName() }
                 </td>
                 <td>
-                    { faker.name.lastName() }
+                    { faker.person.lastName() }
                 </td>
                 <td>
                     { faker.internet.email() }
@@ -102,17 +102,17 @@ const StripedExampleTable = () => (
                         customColor={ Colors.brandPerfume }
                         className='text-uppercase'
                     >
-                        { faker.name.jobType() }
+                        { faker.person.jobType() }
                     </Label>
                 </td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>
-                    { faker.name.firstName() }
+                    { faker.person.firstName() }
                 </td>
                 <td>
-                    { faker.name.lastName() }
+                    { faker.person.lastName() }
                 </td>
                 <td>
                     { faker.internet.email() }
@@ -122,7 +122,7 @@ const StripedExampleTable = () => (
                 </td>
                 <td>
                     <Label outline className='text-uppercase'>
-                        { faker.name.jobType() }
+                        { faker.person.jobType() }
                     </Label>
                 </td>
             </tr>

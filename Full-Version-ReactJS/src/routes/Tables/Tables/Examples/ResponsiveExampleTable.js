@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
     Table,
@@ -30,7 +30,7 @@ const ResponsiveExampleTable = () => (
                     #{ faker.finance.mask() }
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     $ 895.00
@@ -43,10 +43,10 @@ const ResponsiveExampleTable = () => (
             </tr>
             <tr>
                 <td>
-                    #{ faker.finance.mask() }
+                    #{ faker.finance.accountNumber() }
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     $ 573.00
@@ -62,7 +62,7 @@ const ResponsiveExampleTable = () => (
                     #{ faker.finance.mask() }
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     $ 271.00
@@ -75,10 +75,10 @@ const ResponsiveExampleTable = () => (
             </tr>
             <tr>
                 <td>
-                    #{ faker.finance.mask() }
+                    #{ faker.finance.accountNumber() }
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     $ 357.00

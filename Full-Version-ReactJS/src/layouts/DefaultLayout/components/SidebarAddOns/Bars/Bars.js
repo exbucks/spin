@@ -1,14 +1,11 @@
 import React from 'react';
-import {
-    Media
-} from 'react-bootstrap';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import classNames from 'classnames';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     AvatarImage,
-    Charts,
+    Media,
     Sidebar,
     SlimProgressBar
 } from 'components';
@@ -17,7 +14,7 @@ import classes from './../AddOns.scss';
 import avatarImage from 'static/avatars/avatar-33.jpg';
 import { Colors } from 'consts';
 
-const UserName = `${faker.name.firstName()} ${faker.name.lastName()}`;
+const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`;
 
 const Bars = (props) => (
     <Sidebar.AddOn>

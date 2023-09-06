@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import { Divider } from 'components';
 
@@ -14,10 +14,10 @@ const Contact = {
     facebook: `http://fb.com/${faker.internet.userName()}`,
     twitter: `http://twitter.com/${faker.internet.userName()}`,
 
-    address: faker.address.streetAddress(),
-    city: faker.address.city(),
-    state: faker.address.state(),
-    zipCode: faker.address.zipCode()
+    address: faker.person.address.streetAddress(),
+    city: faker.person.address.city(),
+    state: faker.person.address.state(),
+    zipCode: faker.person.address.zipCode()
 };
 
 const DetailContact = () => (

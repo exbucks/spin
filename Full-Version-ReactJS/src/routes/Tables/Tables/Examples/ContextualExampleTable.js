@@ -1,10 +1,7 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
-import {
-    Table,
-    Label
-} from 'components';
+import { Table, Label } from 'components';
 
 const ContextualExampleTable = () => (
     <Table>
@@ -36,7 +33,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -50,7 +47,7 @@ const ContextualExampleTable = () => (
                     </Label>
                 </td>
                 <td>
-                    { faker.address.country() }
+                    { faker.person.address.country() }
                 </td>
             </tr>
 
@@ -59,7 +56,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -79,10 +76,10 @@ const ContextualExampleTable = () => (
 
             <tr className='success'>
                 <td>
-                    #{faker.finance.mask()}
+                    #{faker.finance.accountNumber()}
                 </td>
                 <td>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -90,7 +87,7 @@ const ContextualExampleTable = () => (
                 <td>
                     $ 510.00
                 </td>
-                <td className='text-right' className='text-right'>
+                <td className='text-right'>
                     <Label outline>
                         { faker.finance.accountName() }
                     </Label>
@@ -105,7 +102,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -119,7 +116,7 @@ const ContextualExampleTable = () => (
                     </Label>
                 </td>
                 <td>
-                    { faker.address.country() }
+                    { faker.person.address.country() }
                 </td>
             </tr>
 
@@ -128,7 +125,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -142,7 +139,7 @@ const ContextualExampleTable = () => (
                     </Label>
                 </td>
                 <td>
-                    { faker.address.country() }
+                    { faker.person.address.country() }
                 </td>
             </tr>
 
@@ -151,7 +148,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -174,7 +171,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -188,7 +185,7 @@ const ContextualExampleTable = () => (
                     </Label>
                 </td>
                 <td>
-                    { faker.address.country() }
+                    { faker.person.address.country() }
                 </td>
             </tr>
 
@@ -197,7 +194,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td className='text-white'>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -211,7 +208,7 @@ const ContextualExampleTable = () => (
                     </Label>
                 </td>
                 <td>
-                    { faker.address.country() }
+                    { faker.person.address.country() }
                 </td>
             </tr>
 
@@ -220,7 +217,7 @@ const ContextualExampleTable = () => (
                     #{faker.finance.mask()}
                 </td>
                 <td>
-                    {`${faker.name.firstName()} ${faker.name.lastName()}`}
+                    {`${faker.person.firstName()} ${faker.person.lastName()}`}
                 </td>
                 <td>
                     {`${faker.date.month()} 15, ${faker.date.weekday()}, 2015`}
@@ -234,7 +231,7 @@ const ContextualExampleTable = () => (
                     </Label>
                 </td>
                 <td>
-                    { faker.address.country() }
+                    { faker.person.address.country() }
                 </td>
             </tr>
         </tbody>

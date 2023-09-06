@@ -7,9 +7,8 @@ import {
     Form,
     FormGroup,
     FormControl,
-    Checkbox
 } from 'components';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout';
@@ -90,9 +89,9 @@ class RegisterContainer extends RoutedComponent {
                                         </label>
                                         <FormControl type='email' placeholder='Enter an Email...' />
                                     </FormGroup>
-                                    <Checkbox>
+                                    <Form.Check>
                                         Accept Terms & Privacy Policy
-                                    </Checkbox>
+                                    </Form.Check>
 
                                     <Button block bsStyle='primary' className='m-b-2'>
                                         Register

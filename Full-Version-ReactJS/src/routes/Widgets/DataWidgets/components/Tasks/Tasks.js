@@ -1,12 +1,12 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import { Link } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import {
+    Form,
     Media,
-    Checkbox,
     CollapsablePanel
 } from 'components';
 
@@ -14,28 +14,28 @@ import { Colors } from 'consts';
 
 const TasksList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         complete: false,
         priority: 'Urgent',
         title: faker.hacker.phrase(),
         date: '27-Jan-2016 02:10'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         complete: true,
         priority: 'Low',
         title: faker.hacker.phrase(),
         date: '19-Apr-2016 11:28'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         complete: true,
         priority: 'High',
         title: faker.hacker.phrase(),
         date: '13-Jun-2016 04:43'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         complete: false,
         priority: 'Medium',
         title: faker.hacker.phrase(),
@@ -68,7 +68,7 @@ const Tasks = (panelProps) => (
             _.map(TasksList, (task) => (
                 <Media key={ task.id }>
                     <Media.Left>
-                        <Checkbox className='m-y-0'/>
+                        <Form.Check className='m-y-0'/>
                     </Media.Left>
                     <Media.Body>
                         {

@@ -1,22 +1,16 @@
 import React from 'react';
-import faker from 'faker';
-import uid from 'node-uuid';
+import { faker } from '@faker-js/faker';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 import moment from 'moment';
 import {
     Row,
     Col,
     Panel,
-    InputGroup,
-    FormControl,
     Button,
     ButtonGroup,
-    Dropdown,
-    DropdownButton,
-    MenuItem,
     Table,
     Media,
-    Badge,
     Tooltip,
     OverlayTrigger,
     AvatarImage
@@ -29,11 +23,11 @@ import classes from './../ProfileDetails.scss';
 const messages = Array.from((function*(){
     for(let i = 0; i < 20; i++) {
         yield {
-            id: uid.v4(),
+            id: uuidv4(),
             User: {
-                Name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+                Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
                 Avatar: faker.image.avatar(),
-                State: faker.address.state(),
+                State: faker.person.address.state(),
                 StatusColor: [Colors.brandSuccess, Colors.brandWarning, Colors.brandDanger, Colors.gray][Math.floor(Math.random() * 4)],
             },
             Message: {
@@ -53,7 +47,7 @@ const Messages = () => (
         header={
             <Row>
                 <Col lg={ 6 }>
-                    { `Messages with ${faker.name.firstName()} ${faker.name.lastName()}` }
+                    { `Messages with ${faker.person.firstName()} ${faker.person.lastName()}` }
                 </Col>
                 <Col lg={ 6 } className='text-right'>
                     <ButtonGroup bsSize='small'>

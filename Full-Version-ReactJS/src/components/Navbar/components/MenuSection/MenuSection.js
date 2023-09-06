@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import routes, {
     findSectionBySlug,

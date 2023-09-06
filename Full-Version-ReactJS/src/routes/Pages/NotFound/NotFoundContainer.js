@@ -1,6 +1,5 @@
 import React from 'react';
-import uid from 'node-uuid';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import {
     Row,
     Col,

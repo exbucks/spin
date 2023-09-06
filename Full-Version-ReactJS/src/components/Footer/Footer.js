@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
-import {
-    Grid
-} from 'react-bootstrap';
+import { Grid } from 'components';
 
 const Footer = props => {
     const { fluid, children, ...otherProps } = props;

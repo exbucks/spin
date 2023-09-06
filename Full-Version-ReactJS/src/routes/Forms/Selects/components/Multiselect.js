@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { Button, Checkbox, Radio } from 'components';
+import { Form } from 'components';
 import _ from 'underscore';
 
 const FLAVOURS = [
@@ -53,18 +53,18 @@ export default class Multiselect extends React.Component {
                     onChange={ val => this.setState({ value: val }) }
                 />
                 <div className='m-t-1'>
-                    <Checkbox
+                    <Form.Check
                         checked={ this.state.disabled}
                         onChange={ () => this.toggleState('disabled') }
                     >
                         Disable the Control
-                    </Checkbox>
-                    <Checkbox
+                    </Form.Check>
+                    <Form.Check
                         checked={ this.state.crazy}
                         onChange={ e => this.toggleChocolate(e) }
                     >
                         I don't like Chocolate (disable the option)
-                    </Checkbox>
+                    </Form.Check>
                 </div>
             </div>
         )

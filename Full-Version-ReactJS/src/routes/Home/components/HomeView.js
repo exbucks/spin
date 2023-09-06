@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './HomeView.scss'
 import { RoutedComponent, connect } from './../../routedComponent'
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export class HomeView extends RoutedComponent {
     render() {

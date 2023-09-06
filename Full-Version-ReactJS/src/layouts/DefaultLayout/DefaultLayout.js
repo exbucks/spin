@@ -1,16 +1,14 @@
 import React from 'react';
 import _ from 'underscore';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import faker from 'faker';
+import { Link } from 'react-router-dom';
+import { faker } from '@faker-js/faker';
 import { LinkContainer } from 'react-router-bootstrap';
 import Notifications from 'react-notification-system-redux';
 
 import treeRandomizer from 'modules/treeRandomizer';
 import getLogoBySkin from './getLogoBySkin.js';
 import ROUTES, { findActiveNodes } from './../../routes/routesStructure';
-
-import { Colors } from 'consts';
 
 // Components
 import {
@@ -31,7 +29,6 @@ import {
     Tab,
     Header,
     Footer,
-    Button
 } from 'components';
 
 import classes from './DefaultLayout.scss';
@@ -40,12 +37,10 @@ import classes from './DefaultLayout.scss';
 import {
     setSidebarStyle,
     toggleRightSidebar,
-    toggleSidebarSlim,
     toggleOverlaySidebarOpen,
     setCurrentScreenSize,
     toggleNavbarExpanded,
     changeSidebarAddOn,
-    registerChangeHandler,
 
     SIDEBAR_ADDON_DEFAULT,
     SIDEBAR_ADDON_PROGRESS,
@@ -57,24 +52,11 @@ import {
 
     SIDEBAR_STYLE_DEFAULT,
     SIDEBAR_STYLE_SLIM,
-    SIDEBAR_STYLE_BIGICONS,
-    SIDEBAR_STYLE_BIGICONS_AVATAR,
 
-    SKIN_DARK,
-    SKIN_LIGHT,
     SKIN_COLOR,
 
     CONTENT_VIEW_STATIC,
-    CONTENT_VIEW_FLUID,
-    CONTENT_VIEW_BOXED,
 
-    HEADER_STYLE_DISABLED,
-    HEADER_STYLE_SIMPLE,
-    HEADER_STYLE_BREADCRUMBS,
-
-    SCREEN_SIZE_LG,
-    SCREEN_SIZE_MD,
-    SCREEN_SIZE_SM,
     SCREEN_SIZE_XS
 } from './modules/layout.js';
 
@@ -103,7 +85,7 @@ const sidebarAddOns = {
 }
 
 const profileUser = {
-    name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+    name: `${faker.person.firstName()} ${faker.person.lastName()}`,
     avatar: faker.image.avatar()
 };
 

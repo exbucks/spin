@@ -11,7 +11,6 @@ import {
     ControlLabel,
     Button,
     HelpBlock,
-    Checkbox
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -141,12 +140,12 @@ class NotificationsContainer extends RoutedComponent {
 
                             <FormGroup>
                                 <Col sm={ 9 } smOffset={ 3 }>
-                                    <Checkbox
+                                    <Form.Check
                                         checked={ this.state.dismissible }
                                         onChange={ e => this.setState({ dismissible: !this.state.dismissible }) }
                                     >
                                         Can User Dismiss
-                                    </Checkbox>
+                                    </Form.Check>
                                 </Col>
                             </FormGroup>
 

@@ -1,6 +1,6 @@
 import {range} from 'lodash';
 import React from 'react';
-import {Checkbox} from 'components';
+import {Form} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 
@@ -25,12 +25,12 @@ class LabelKeyExample extends React.Component {
                     paginate={paginate}
                     placeholder="Pick a number..."
                 />
-                <Checkbox
+                <Form.Check
                     checked={paginate}
                     onChange={e => this.setState({paginate: !!e.target.checked})}
                 >
                     Paginate results
-                </Checkbox>
+                </Form.Check>
             </div>
         );
     }

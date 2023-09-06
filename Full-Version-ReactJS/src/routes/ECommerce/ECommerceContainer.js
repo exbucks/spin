@@ -1,12 +1,11 @@
 import React from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
-import leftPad from 'left-pad';
 import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
 import classNames from 'classnames';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Row,
@@ -16,7 +15,6 @@ import {
     ButtonGroup,
     Button,
     Table,
-    Image,
     Charts,
     AvatarImage
 } from 'components';
@@ -25,8 +23,6 @@ import { RoutedComponent, connect } from 'routes/routedComponent'
 import treeRandomizer from 'modules/treeRandomizer';
 import renderSection from 'modules/sectionRender';
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-
-import { Colors } from 'consts';
 
 import classes from './ECommerce.scss';
 
@@ -67,7 +63,7 @@ const renderSummary = (summary) => {
 
         return (
             <Panel
-                key={ uid.v4() }
+                key={ uuidv4() }
                 className={ classes.summaryPanel }
                 header= {
                     <div>
@@ -124,7 +120,7 @@ const renderLatestTransactions = (transactions) => {
             });
 
         return (
-            <tr key={uid.v4()}>
+            <tr key={uuidv4()}>
                 <td>
                     <Media>
                         <Media.Left>
@@ -194,7 +190,7 @@ const renderLatestTransactions = (transactions) => {
 const renderLatestComments = (comments) => {
     const renderCommentPreview = (comment) => {
         return (
-            <li key={ uid.v4() }>
+            <li key={ uuidv4() }>
                 <Media>
                     <Media.Left>
                         <Link to='/apps/profile-details'>
@@ -254,7 +250,7 @@ const renderMostViewedItems = (mostViewed) => {
     };
 
     const renderMostViewedItem = (item) => (
-        <tr key={uid.v4()}>
+        <tr key={uuidv4()}>
             <td>
                 <Media>
                     <Media.Left>

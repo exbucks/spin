@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactInterval from 'react-interval';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import deepAssign from 'assign-deep';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Row,
@@ -16,9 +15,7 @@ import {
     Timeline,
     Charts,
     AvatarImage,
-    AvatarText
 } from 'components';
-import Faker from 'components/Faker';
 
 import { Colors } from 'consts';
 import { RoutedComponent, connect } from 'routes/routedComponent';

@@ -1,10 +1,8 @@
 import React from 'react';
-import faker from 'faker';
 
 import {
     Row,
     Col,
-    Divider
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';

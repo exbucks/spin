@@ -11,7 +11,6 @@ import {
     Col,
     Divider,
     Button,
-    Table,
     Panel,
     ListGroup,
     ListGroupItem,
@@ -22,9 +21,6 @@ import {
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
-
-import { Colors } from 'consts';
 
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 

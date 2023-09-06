@@ -1,22 +1,18 @@
 import React from 'react';
-import uid from 'node-uuid';
 import truncate from 'truncate';
 import _ from 'underscore';
 import moment from 'moment';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
     Row,
     Col,
-    Panel,
     Button,
     Badge,
     ButtonGroup,
     ButtonToolbar,
     Dropdown,
-    FormGroup,
     Label,
     MenuItem,
     Table,

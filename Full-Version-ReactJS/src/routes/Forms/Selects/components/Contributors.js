@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { Button, Checkbox, Radio } from 'components';
+import { Form } from 'components';
 import _ from 'underscore';
 
 const CONTRIBUTORS = [
@@ -73,12 +73,12 @@ export default class Contributors extends React.Component {
                     loadOptions={ (input, cb) => this.getContributors(input, cb) }
                 />
                 <div className='m-t-1'>
-                    <Checkbox checked={ this.state.multi } onChange={ () => this.switchToMulti() }>
+                    <Form.Check checked={ this.state.multi } onChange={ () => this.switchToMulti() }>
                         Multiselect
-                    </Checkbox>
-                    <Checkbox checked={ !this.state.multi } onChange={ () => this.switchToSingle() }>
+                    </Form.Check>
+                    <Form.Check checked={ !this.state.multi } onChange={ () => this.switchToSingle() }>
                         Single Value
-                    </Checkbox>
+                    </Form.Check>
                 </div>
             </div>
         );

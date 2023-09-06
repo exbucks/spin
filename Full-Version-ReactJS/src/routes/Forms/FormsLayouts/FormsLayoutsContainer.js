@@ -1,10 +1,5 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
-import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 
 import {
     Row,
@@ -16,15 +11,10 @@ import {
     FormGroup,
     ControlLabel,
     HelpBlock,
-    Checkbox,
-    Radio,
     Panel
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
-
-import { Colors } from 'consts';
 
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
@@ -68,9 +58,9 @@ const BasicExample = () => (
                                 Example block-level help text here.
                             </HelpBlock>
                         </FormGroup>
-                        <Checkbox>
+                        <Form.Check>
                             Check me out
-                        </Checkbox>
+                        </Form.Check>
                         <Button>
                             Submit
                         </Button>
@@ -124,9 +114,9 @@ const InlineExample = () => (
                 <FormGroup controlId='inlineUserPassword' className='m-r-1'>
                     <FormControl type='password' placeholder='Password' />
                 </FormGroup>
-                <Checkbox className='m-x-1'>
+                <Form.Check className='m-x-1'>
                     { ' Remember me' }
-                </Checkbox>
+                </Form.Check>
                 <Button>
                     Sign In
                 </Button>
@@ -190,9 +180,9 @@ const HorizontalExample = () => (
                         </FormGroup>
                         <FormGroup controlId="horizontalRemember">
                             <Col sm={ 10 } smOffset={ 2 }>
-                                <Checkbox>
+                                <Form.Check>
                                     { ' Remember me' }
-                                </Checkbox>
+                                </Form.Check>
                             </Col>
                         </FormGroup>
                         <FormGroup controlId="horizontalSubmit" className='m-b-0'>

@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
 
 const pad = (num, size) => {
     var s = "000000000" + num;

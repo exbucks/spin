@@ -4,7 +4,7 @@ import {
     Badge
 } from 'components';
 
-import uuid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 
 import { getMenuEntries as getSkinMenuEntries } from './Skins';
@@ -557,7 +557,7 @@ const CONFIG = [
 
 // Add keys to the sidebar definitions
 const assignKeys = (input, level = 0) => _.map(input, (def) => {
-    const newObj = { key: uuid.v4(), subMenuLevel: level };
+    const newObj = { key: uuidv4(), subMenuLevel: level };
     if(def.children) {
         newObj.children = assignKeys(def.children, level + 1);
     }

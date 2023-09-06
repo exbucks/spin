@@ -1,5 +1,5 @@
 import React from 'react';
-import {Checkbox} from 'components';
+import {Form} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 import options from './../exampleData';
@@ -34,12 +34,12 @@ class BodyContainerExample extends React.Component {
                         />
                     </div>
                 </div>
-                <Checkbox
+                <Form.Check
                     checked={bodyContainer}
                     onChange={e => this.setState({bodyContainer: e.target.checked})}
                 >
                     Attach menu to document body
-                </Checkbox>
+                </Form.Check>
             </div>
         );
     }

@@ -1,26 +1,20 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import moment from 'moment';
 import truncate from 'truncate';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import {
     Row,
     Col,
     Panel,
     Button,
-    Nav,
-    NavItem,
-    Badge,
     ButtonGroup,
     ButtonToolbar,
-    FormGroup,
     Label,
     Table,
     Media,
-    FormControl,
-    Checkbox,
+    Form,
     Pagination,
     OverlayTrigger,
     Tooltip,
@@ -215,7 +209,7 @@ const renderMessagesTable = (messages) => (
                         </td>
                         <td>
                             <div className='flex-space-between'>
-                                <Checkbox />
+                                <Form.Check />
                                 {
                                     (message.Starred) ?
                                         (

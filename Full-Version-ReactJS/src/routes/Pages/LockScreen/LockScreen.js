@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
-import faker from 'faker';
+import { Link } from 'react-router-dom';
+import { faker } from '@faker-js/faker';
 
 import {
     Row,
@@ -65,7 +65,7 @@ class LockScreenContainer extends RoutedComponent {
                                 )}
                             >
                                 <h2 className={ classes.panelHeader }>
-                                    { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                    { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                 </h2>
                                 <p className='text-center m-b-3'>
                                     Enter your password to access the application.

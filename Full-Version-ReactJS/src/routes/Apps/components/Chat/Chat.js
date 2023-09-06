@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
 import moment from 'moment';
-import uid from 'node-uuid';
 import hash from 'object-hash';
 
 import {

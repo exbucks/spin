@@ -1,8 +1,8 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import { Link } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import {
     Media,
@@ -11,7 +11,7 @@ import {
 
 const notificationsList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         text: faker.hacker.phrase(),
         icon: (
             <span className='fa-stack fa-lg text-danger'>
@@ -22,7 +22,7 @@ const notificationsList = [
         date: '10-Aug-2014, 09:39'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         text: faker.hacker.phrase(),
         icon: (
             <span className='fa-stack fa-lg text-primary'>
@@ -33,7 +33,7 @@ const notificationsList = [
         date: '24-Nov-2015, 09:42'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         text: faker.hacker.phrase(),
         icon: (
             <span className='fa-stack fa-lg text-success'>
@@ -44,7 +44,7 @@ const notificationsList = [
         date: '10-Dec-2011, 06:07'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         text: faker.hacker.phrase(),
         icon: (
             <span className='fa-stack fa-lg text-warning'>
@@ -55,7 +55,7 @@ const notificationsList = [
         date: '12-Jan-2014, 05:03'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         text: faker.hacker.phrase(),
         icon: (
             <span className='fa-stack fa-lg text-gray-lighter'>

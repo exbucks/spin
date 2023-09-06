@@ -1,21 +1,13 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import classNames from 'classnames';
 
-import {
-    Nav,
-    NavItem,
-    Badge
-} from 'components';
+import { Nav, NavItem, Badge } from 'components';
 
 import classes from './SideNav.scss';
 
 const SideNav = (props) => {
-    const { items, className, folderSelected } = props;
+    const { items, folderSelected } = props;
     const otherProps = _.omit(props, 'items', 'className', 'folderSelected');
-
-    const inboxClass = classNames(classes.foldersList, className);
 
     return (
         <Nav

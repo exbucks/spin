@@ -1,19 +1,16 @@
 import React from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 import treeRandomizer from './../../modules/treeRandomizer';
 import renderSection from './../../modules/sectionRender';
-import deepAssign from 'assign-deep';
-import numeral from 'numeral';
 import moment from 'moment';
 import classNames from 'classnames';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Panel,
     Button,
     Table,
-    Grid,
     Row,
     Col,
     ListGroup,
@@ -24,8 +21,6 @@ import { RoutedComponent, connect } from 'routes/routedComponent'
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
 import classes from './Financial.scss';
-
-import { Colors } from 'consts';
 
 import { MoneyMap, PerformanceChart } from './components';
 
@@ -99,7 +94,7 @@ const renderCashSummary = (data) => {
             <Row>
                 {
                     _.map(data, (item) => (
-                        <Col lg={ 3 } sm={ 6 } key={ uid.v4() }>
+                        <Col lg={ 3 } sm={ 6 } key={ uuidv4() }>
                             <Panel
                                 className={ classes.cashSummaryPanel }
                                 header={ item.Name }
@@ -171,7 +166,7 @@ const renderRecentFunding = (data) => (
                 <tbody>
                     {
                         _.map(data, (item) => (
-                            <tr key={uid.v4()}>
+                            <tr key={uuidv4()}>
                                 <td className="text-white">
                                     {item.Company}
                                 </td>
@@ -233,7 +228,7 @@ const renderInvoices = (data) => (
                 <tbody>
                     {
                         _.map(data, (item) => (
-                            <tr key={ uid.v4() }>
+                            <tr key={ uuidv4() }>
                                 <td className="text-white">
                                     {item.Company}
                                 </td>
@@ -288,7 +283,7 @@ const renderDashboardSettings = (data) => (
                 {
                      _.map(data, (setting) => (
                         <ListGroupItem
-                            key={ uid.v4() }
+                            key={ uuidv4() }
                             className={ classes.settingsListItem }
                         >
                             <span>{ setting.name }</span>

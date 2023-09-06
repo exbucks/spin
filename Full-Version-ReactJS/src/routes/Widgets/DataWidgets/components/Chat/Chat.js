@@ -1,14 +1,14 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { CollapsablePanel } from 'components';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import { Chat } from 'routes/Apps/components';
 
 const messages = [
     {
         User: {
-            Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             Avatar: faker.image.avatar(),
             Status: 'Away'
         },
@@ -18,7 +18,7 @@ const messages = [
     },
     {
         User: {
-            Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             Avatar: faker.image.avatar(),
             Status: 'Online'
         },
@@ -28,7 +28,7 @@ const messages = [
     },
     {
         User: {
-            Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             Avatar: faker.image.avatar(),
             Status: 'Online'
         },
@@ -38,7 +38,7 @@ const messages = [
     },
     {
         User: {
-            Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             Avatar: faker.image.avatar(),
             Status: 'Busy'
         },

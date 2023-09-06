@@ -8,7 +8,6 @@ import {
     Form,
     FormGroup,
     Button,
-    Checkbox
 } from 'components';
 
 import { people } from './';
@@ -102,7 +101,7 @@ class NestedContainer extends React.Component {
                     </FormGroup>
 
                     <FormGroup>
-                        <Checkbox onChange={(ev) => {this.setState({defaultCollapse: ev.target.value === 'on'})}}>&nbsp;Collapsed By Default</Checkbox>
+                        <Form.Check onChange={(ev) => {this.setState({defaultCollapse: ev.target.value === 'on'})}}>&nbsp;Collapsed By Default</Checkbox>
                     </FormGroup>
                 </Form>
             </div>

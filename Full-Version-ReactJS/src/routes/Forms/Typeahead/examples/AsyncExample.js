@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import React from 'react';
-import { Checkbox } from 'components';
+import { Form } from 'components';
 
 import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 
@@ -38,14 +38,14 @@ class AsyncExample extends React.Component {
         ];
 
         return checkboxes.map(({label, name}) => (
-            <Checkbox
+            <Form.Check
                 checked={this.state[name]}
                 key={name}
                 name={name}
                 onChange={this._handleChange}
             >
                 {label}
-            </Checkbox>
+            </Form.Check>
         ));
     }
 

@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import uid from 'node-uuid';
 import { Row, Col, Timeline } from 'components';
 import _ from 'underscore';
 import classNames from 'classnames';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Row,
@@ -9,7 +9,6 @@ import {
     Form,
     FormGroup,
     FormControl,
-    Checkbox
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -72,9 +71,9 @@ class LoginContainer extends RoutedComponent {
                                     <FormGroup>
                                         <FormControl type='password' placeholder='Your Password...' />
                                     </FormGroup>
-                                    <Checkbox>
+                                    <Form.Check>
                                         Remember Password?
-                                    </Checkbox>
+                                    </Form.Check>
 
                                     <Button block bsStyle='primary' className='m-b-2'>
                                         Login

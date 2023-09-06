@@ -1,15 +1,11 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import deepAssign from 'assign-deep';
 import numeral from 'numeral';
-import { Link } from 'react-router';
 
 import {
     Row,
     Col,
-    Panel,
-    Button,
     Pagination,
     Media,
     Label,
@@ -28,7 +24,6 @@ import {
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
 
 import { Colors } from 'consts';
 

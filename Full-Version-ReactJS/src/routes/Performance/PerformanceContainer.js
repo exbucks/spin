@@ -1,12 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import ReactInterval from 'react-interval';
-import leftPad from 'left-pad';
 import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
-import classNames from 'classnames';
 
 import {
     Table,
@@ -23,7 +20,6 @@ import renderSection from 'modules/sectionRender';
 import classes from './Performance.scss';
 
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-import { Colors } from 'consts';
 
 import performanceData from 'consts/data/performance.json';
 import performanceChartData from 'consts/data/performance-chart.json';

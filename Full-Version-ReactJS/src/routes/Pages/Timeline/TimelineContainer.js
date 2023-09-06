@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col, Panel, Label, Button, Media } from 'react-bootstrap';
-import uid from 'node-uuid';
+import { Row, Col, Panel, Button } from 'react-bootstrap';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 

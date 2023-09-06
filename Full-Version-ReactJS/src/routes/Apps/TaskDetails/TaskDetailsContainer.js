@@ -1,33 +1,26 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import moment from 'moment';
-import numeral from 'numeral';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import {
     Row,
     Col,
     Panel,
     Button,
-    DropdownButton,
-    MenuItem,
     ButtonGroup,
+    Form,
     FormControl,
-    Checkbox,
     ListGroup,
     ListGroupItem,
     Label,
     Badge,
-    Table,
     Media,
     ButtonToolbar,
     Tooltip,
     OverlayTrigger,
     InputGroup,
-    Input,
     Divider,
-    AvatarImage
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
@@ -249,7 +242,7 @@ const renderTaskPanel = data => (
                     }
                     placement='top'
                 >
-                    <Checkbox />
+                    <Form.Check />
                 </OverlayTrigger>
             </Media.Left>
             <Media.Body>

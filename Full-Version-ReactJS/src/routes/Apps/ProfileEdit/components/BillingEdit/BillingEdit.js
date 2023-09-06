@@ -1,8 +1,8 @@
 import React from 'react';
-import uid from 'node-uuid';
-import faker from 'faker';
+import { v4 as uuidv4 } from 'uuid';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Panel,
@@ -27,13 +27,11 @@ import {
 
 import { PricingTableClean } from 'routes/Tables/PricingTables';
 
-import { Colors } from 'consts';
-
 import classes from './../../ProfileEdit.scss';
 
 const pricingData = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Basic',
         bsStyle: 'info',
         description: 'Very good to start your business',
@@ -47,7 +45,7 @@ const pricingData = [
         ]
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Premium',
         bsStyle: 'primary',
         description: 'Our most popular package',
@@ -62,7 +60,7 @@ const pricingData = [
         active: true
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Pro',
         bsStyle: 'warning',
         description: 'When you have a lot of customers to take care of',
@@ -76,7 +74,7 @@ const pricingData = [
         ]
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Advanced',
         bsStyle: 'danger',
         description: 'For the most advanced users and teams',

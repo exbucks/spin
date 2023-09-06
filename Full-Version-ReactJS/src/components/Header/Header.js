@@ -1,6 +1,4 @@
 import React from 'react';
-import { IndexLink, Link } from 'react-router';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import {
     HEADER_STYLE_SIMPLE,
@@ -8,14 +6,11 @@ import {
 } from 'layouts/DefaultLayout/modules/layout';
 import { LinkContainer } from 'react-router-bootstrap';
 import {
-    Grid,
     Row,
     Col,
-    PageHeader,
     Breadcrumb
 } from 'react-bootstrap';
-
-import { Colors } from 'consts';
+import { Grid } from 'components'
 
 import ROUTES_STRUCTURE, { findActiveNodes } from 'routes/routesStructure';
 

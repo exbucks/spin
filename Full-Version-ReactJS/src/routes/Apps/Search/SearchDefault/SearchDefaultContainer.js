@@ -1,14 +1,10 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import deepAssign from 'assign-deep';
 import numeral from 'numeral';
-import { Link } from 'react-router';
 import {
     Row,
     Col,
-    Panel,
-    Button,
     Pagination,
     StarRating,
     Divider
@@ -24,10 +20,8 @@ import {
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
-import { Colors } from 'consts';
 import resultsData from 'consts/data/search-default.json';
 
 import classes from './../Search.scss';

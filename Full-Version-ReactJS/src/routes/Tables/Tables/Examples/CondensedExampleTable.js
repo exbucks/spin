@@ -1,11 +1,7 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
-import {
-    Table,
-    ButtonGroup,
-    Button
-} from 'components';
+import { Table } from 'components';
 
 const CondensedExampleTable = () => (
     <Table condensed>
@@ -34,7 +30,7 @@ const CondensedExampleTable = () => (
                     </a>
                 </td>
                 <td>
-                    { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                    { `${faker.person.firstName()} ${faker.person.lastName()}` }
                 </td>
                 <td>
                     $ 145.00
@@ -51,7 +47,7 @@ const CondensedExampleTable = () => (
                     </a>
                 </td>
                 <td>
-                    { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                    { `${faker.person.firstName()} ${faker.person.lastName()}` }
                 </td>
                 <td>
                     $ 821.00
@@ -64,11 +60,11 @@ const CondensedExampleTable = () => (
                 <td className='text-white'>
                     <a href="javascript:;">
                         Invoice #
-                        { faker.finance.mask() }
+                        { faker.finance.accountNumber() }
                     </a>
                 </td>
                 <td>
-                    { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                    { `${faker.person.firstName()} ${faker.person.lastName()}` }
                 </td>
                 <td>
                     $ 900.00
@@ -85,7 +81,7 @@ const CondensedExampleTable = () => (
                     </a>
                 </td>
                 <td>
-                    { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                    { `${faker.person.firstName()} ${faker.person.lastName()}` }
                 </td>
                 <td>
                     $ 5.00

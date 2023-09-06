@@ -1,18 +1,12 @@
 import React from 'react';
-import uid from 'node-uuid';
 
 import {
     Row,
     Col,
-    Panel,
-    Media,
     ListGroup,
     ListGroupItem,
-    SlimProgressBar,
     CollapsablePanel
 } from 'components';
-
-import { Colors } from 'consts';
 
 import classes from './Infobox.scss';
 

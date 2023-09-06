@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import classes from './wizard.scss';
@@ -32,8 +33,8 @@ WizardStep.propTypes = {
     complete: PropTypes.bool,
     disabled: PropTypes.bool,
     className: PropTypes.string,
-    id: PropTypes.string.required,
-    onClick: PropTypes.func.required,
+    id: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
     icon: PropTypes.node,
     successIcon: PropTypes.node,
     children: PropTypes.node

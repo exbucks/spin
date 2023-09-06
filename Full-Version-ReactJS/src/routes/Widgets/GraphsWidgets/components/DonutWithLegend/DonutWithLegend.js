@@ -1,20 +1,12 @@
 import React from 'react';
-import uid from 'node-uuid';
 
 import {
-    Row,
-    Col,
-    Panel,
     Media,
-    Table,
     Charts,
     CollapsablePanel,
-    Label
 } from 'components';
 
 import { Colors } from 'consts';
-
-import classes from './DonutWithLegend.scss';
 
 const DonutWithLegend = (panelProps) => (
     <CollapsablePanel

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import _ from 'underscore';
 import classNames from 'classnames';
 import velocity from 'velocity-animate';
@@ -14,7 +14,6 @@ import SIDEBAR_CONFIG, { findActiveNodes } from 'routes/routesStructure';
 import classes from './../../Sidebar.scss';
 
 let animationInProgress = false;
-let lastExpandedNodes = [];
 
 const findSubmenu = (parentNodeElement) => _.find(parentNodeElement.children,
     (childElement) => childElement.tagName === 'UL');
@@ -26,7 +25,7 @@ const animateOpenNode = (nodeElement, cbComplete, cbStart, animationSettings) =>
 
     subMenuElement.style.display = 'block';
 
-    Velocity(subMenuElement, {
+    velocity(subMenuElement, {
         height: [subMenuElement.scrollHeight, 0]
     }, {
         ...animationSettings,
@@ -51,7 +50,7 @@ const animateCloseNode = (nodeElement, cbComplete, cbStart, animationSettings) =
 
     animationInProgress = true;
 
-    Velocity(subMenuElement, {
+    velocity(subMenuElement, {
         height: [0, subMenuElement.scrollHeight]
     }, {
         ...animationSettings,

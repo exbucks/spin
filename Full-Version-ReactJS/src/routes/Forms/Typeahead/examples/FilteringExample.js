@@ -1,5 +1,5 @@
 import React from 'react';
-import {Checkbox} from 'components';
+import {Form} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 
@@ -51,18 +51,18 @@ class FilteringExample extends React.Component {
                     options={options}
                     placeholder="Cities in Poland..."
                 />
-                <Checkbox
+                <Form.Check
                     checked={caseSensitive}
                     onChange={e => this.setState({caseSensitive: e.target.checked})}
                 >
                     Case-sensitive filtering
-                </Checkbox>
-                <Checkbox
+                </Form.Check>
+                <Form.Check
                     checked={!ignoreDiacritics}
                     onChange={e => this.setState({ignoreDiacritics: !e.target.checked})}
                 >
                     Don't ignore diacritical marks
-                </Checkbox>
+                </Form.Check>
             </div>
         );
     }

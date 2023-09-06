@@ -1,9 +1,8 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import moment from 'moment';
 
 import {
-    Label,
     Button,
     Media,
     Timeline,

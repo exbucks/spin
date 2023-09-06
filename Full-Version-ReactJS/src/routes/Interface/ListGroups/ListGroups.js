@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
     AvatarImage,
@@ -254,10 +254,10 @@ class ListGroupsContainer extends RoutedComponent {
                                         </Media.Left>
                                         <Media.Body>
                                             <h5 className='m-y-0'>
-                                                { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                             </h5>
                                             <p className='small text-gray-lighter m-b-0'>
-                                                { faker.name.jobTitle() }
+                                                { faker.person.jobTitle() }
                                             </p>
                                         </Media.Body>
                                         <Media.Right align='middle'>
@@ -276,10 +276,10 @@ class ListGroupsContainer extends RoutedComponent {
                                         </Media.Left>
                                         <Media.Body>
                                             <h5 className='m-y-0'>
-                                                { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                             </h5>
                                             <p className='small text-gray-lighter m-b-0'>
-                                                { faker.name.jobTitle() }
+                                                { faker.person.jobTitle() }
                                             </p>
                                         </Media.Body>
                                         <Media.Right align='middle'>
@@ -298,10 +298,10 @@ class ListGroupsContainer extends RoutedComponent {
                                         </Media.Left>
                                         <Media.Body>
                                             <h5 className='m-y-0'>
-                                                { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                             </h5>
                                             <p className='small text-gray-lighter m-b-0'>
-                                                { faker.name.jobTitle() }
+                                                { faker.person.jobTitle() }
                                             </p>
                                         </Media.Body>
                                         <Media.Right align='middle'>
@@ -320,10 +320,10 @@ class ListGroupsContainer extends RoutedComponent {
                                         </Media.Left>
                                         <Media.Body>
                                             <h5 className='m-y-0'>
-                                                { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                             </h5>
                                             <p className='small text-gray-lighter m-b-0'>
-                                                { faker.name.jobTitle() }
+                                                { faker.person.jobTitle() }
                                             </p>
                                         </Media.Body>
                                         <Media.Right align='middle'>
@@ -358,7 +358,7 @@ class ListGroupsContainer extends RoutedComponent {
                                                 borders_action_items_bandwidth.skd
                                             </p>
                                             <span className='small'>
-                                                by { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                by { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                                 <span className="text-muted"> · </span>
                                                 { `${faker.finance.amount()} Kb` }
                                             </span>
@@ -378,7 +378,7 @@ class ListGroupsContainer extends RoutedComponent {
                                                 books_frozen_australian_dollar.afp
                                             </p>
                                             <span className='small'>
-                                                by { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                by { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                                 <span className="text-muted"> · </span>
                                                 { `${faker.finance.amount()} Kb` }
                                             </span>
@@ -398,7 +398,7 @@ class ListGroupsContainer extends RoutedComponent {
                                                 tasty_soft_mouse.txt
                                             </p>
                                             <span className='small'>
-                                                by { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                by { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                                 <span className="text-muted"> · </span>
                                                 { `${faker.finance.amount()} Kb` }
                                             </span>
@@ -418,7 +418,7 @@ class ListGroupsContainer extends RoutedComponent {
                                                 belize_connect_soap.hps
                                             </p>
                                             <span className='small'>
-                                                by { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                                                by { `${faker.person.firstName()} ${faker.person.lastName()}` }
                                                 <span className="text-muted"> · </span>
                                                 { `${faker.finance.amount()} Kb` }
                                             </span>

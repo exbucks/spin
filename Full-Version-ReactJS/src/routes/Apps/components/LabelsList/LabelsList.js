@@ -1,10 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import {
-    Nav,
-    NavItem
-} from 'components';
+import { Nav, NavItem } from 'components';
 
 import classes from './LabelsList.scss';
 

@@ -1,5 +1,5 @@
 import _ from 'underscore';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import moment from 'moment';
 import uid from 'node-uuid';
 

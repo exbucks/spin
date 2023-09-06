@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import _ from 'underscore';
-import { Radio, Checkbox } from 'components';
+import { Radio, Form } from 'components';
 import fetch from 'isomorphic-fetch';
 
 export default class GithubUsers extends React.Component {
@@ -74,12 +74,12 @@ export default class GithubUsers extends React.Component {
                     </Radio>
                 </div>
                 <div className='m-t-2'>
-                    <Checkbox checked={ this.state.creatable } onChange={ () => this.toggleState('creatable') } >
+                    <Form.Check checked={ this.state.creatable } onChange={ () => this.toggleState('creatable') } >
                         Creatable?
-                    </Checkbox>
-                    <Checkbox checked={ this.state.backspaceRemoves } onChange={ () => this.toggleState('backspaceRemoves') }>
+                    </Form.Check>
+                    <Form.Check checked={ this.state.backspaceRemoves } onChange={ () => this.toggleState('backspaceRemoves') }>
                         Backspace Removes?
-                    </Checkbox>
+                    </Form.Check>
                 </div>
             </div>
         )

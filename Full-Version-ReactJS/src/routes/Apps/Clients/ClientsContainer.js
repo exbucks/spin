@@ -1,31 +1,22 @@
 import React from 'react';
-import uid from 'node-uuid';
 import deepAssign from 'assign-deep';
 import _ from 'underscore';
 
 import {
     Row,
     Col,
-    Grid,
     Panel,
     Button,
     Nav,
     NavItem,
-    Badge,
-    ButtonGroup,
-    ButtonToolbar,
-    FormGroup,
     Label,
     Table,
     Media,
-    FormControl,
-    Checkbox,
-    Pagination,
+    Form,
     OverlayTrigger,
     Tooltip,
     Tab,
     Tabs,
-    ScrollBarContainer,
     AvatarImage,
     AvatarIcon,
     FavoriteStar,
@@ -187,7 +178,7 @@ const renderClients = (props) => {
                     _.map(clients, (client) => (
                         <tr key={ client._id } className={ client === selectedItem ? 'active' : null }>
                             <td>
-                                <Checkbox />
+                                <Form.Check />
                             </td>
                             <td>
                                 <FavoriteStar
@@ -253,12 +244,10 @@ const renderCompanies = (props) => {
                     _.map(companies, company => (
                         <tr key={ company._id } className={ company === selectedItem ? 'active' : null }>
                             <td>
-                                <Checkbox />
+                                <Form.Check />
                             </td>
                             <td>
-                                <FavoriteStar
-                                    favorited={ !!parseInt(company.Favoritted) }
-                                />
+                                <FavoriteStar favorited={ !!parseInt(company.Favoritted) } />
                             </td>
                             <td>
                                 <Media>

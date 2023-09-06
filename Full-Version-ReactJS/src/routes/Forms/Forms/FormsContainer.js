@@ -1,10 +1,5 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
-import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 
 import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask';
@@ -21,20 +16,15 @@ import {
     FormGroup,
     ControlLabel,
     HelpBlock,
-    Checkbox,
     Radio,
     DropdownButton,
     MenuItem,
-    SplitButton,
     Glyphicon,
     MaskedTextInput
 } from 'components';
 import Toggle from 'react-toggle';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
-
-import { Colors } from 'consts';
 
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
@@ -137,12 +127,12 @@ const CheckboxesRadios = () => (
                         Checkboxes & Radios
                     </Col>
                     <Col sm={9}>
-                        <Checkbox>
+                        <Form.Check>
                             Option one is this and that—be sure to include why it's great
-                        </Checkbox>
-                        <Checkbox disabled>
+                        </Form.Check>
+                        <Form.Check disabled>
                             Option two is disabled
-                        </Checkbox>
+                        </Form.Check>
                         <Radio name='radios-example' defaultChecked>
                             Option one is this and that—be sure to include why it's great
                         </Radio>
@@ -160,15 +150,15 @@ const CheckboxesRadios = () => (
                     </Col>
                     <Col sm={9}>
                         <p className='m-y-0'>
-                            <Checkbox inline>
+                            <Form.Check inline>
                                 One
-                            </Checkbox>
-                            <Checkbox inline>
+                            </Form.Check>
+                            <Form.Check inline>
                                 Two
-                            </Checkbox>
-                            <Checkbox inline>
+                            </Form.Check>
+                            <Form.Check inline>
                                 Three
-                            </Checkbox>
+                            </Form.Check>
                         </p>
                         <p className='m-y-0'>
                             <Radio name='inline-radios-example' inline defaultChecked>
@@ -216,15 +206,15 @@ const CheckboxesRadios = () => (
                         Checkboxes with Validation Helpers
                     </Col>
                     <Col sm={9}>
-                        <Checkbox validationState='success'>
+                        <Form.Check validationState='success'>
                             Checkbox with Success
-                        </Checkbox>
-                        <Checkbox validationState='warning'>
+                        </Form.Check>
+                        <Form.Check validationState='warning'>
                             Checkbox with Warning
-                        </Checkbox>
-                        <Checkbox validationState='error'>
+                        </Form.Check>
+                        <Form.Check validationState='error'>
                             Checkbox with Error
-                        </Checkbox>
+                        </Form.Check>
                     </Col>
                 </FormGroup>
             </Form>
@@ -693,12 +683,12 @@ class Switches extends React.Component {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <Checkbox
+                                            <Form.Check
                                                 checked={ this.state.milkIsReady }
                                                 onChange={ () => { this.setState({ milkIsReady: !this.state.milkIsReady }) } }
                                             >
                                                 Controlled Component
-                                            </Checkbox>
+                                            </Form.Check>
                                         </td>
                                         <td>
                                             <Toggle
@@ -710,12 +700,12 @@ class Switches extends React.Component {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <Checkbox
+                                            <Form.Check
                                                 checked={ this.state.toastIsReady }
                                                 onChange={ () => { this.setState({ toastIsReady: !this.state.toastIsReady }) } }
                                             >
                                                 Controlled Component without onChange
-                                            </Checkbox>
+                                            </Form.Check>
                                         </td>
                                         <td>
                                             <Toggle

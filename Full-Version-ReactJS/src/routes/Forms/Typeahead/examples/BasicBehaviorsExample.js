@@ -1,5 +1,5 @@
 import React from 'react';
-import {Checkbox, FormGroup} from 'components';
+import {Form, FormGroup} from 'components';
 
 import {Typeahead} from 'react-bootstrap-typeahead';
 
@@ -30,34 +30,34 @@ class BasicBehaviorsExample extends React.Component {
                     placeholder="Choose a state..."
                 />
                 <FormGroup>
-                    <Checkbox
+                    <Form.Check
                         checked={disabled}
                         name="disabled"
                         onChange={this._handleChange}
                     >
                         Disable
-                    </Checkbox>
-                    <Checkbox
+                    </Form.Check>
+                    <Form.Check
                         checked={dropup}
                         name="dropup"
                         onChange={this._handleChange}
                     >
                         Dropup menu
-                    </Checkbox>
-                    <Checkbox
+                    </Form.Check>
+                    <Form.Check
                         checked={!!minLength}
                         name="minLength"
                         onChange={this._handleChange}
                     >
                         Require minimum input before showing results (2 chars)
-                    </Checkbox>
-                    <Checkbox
+                    </Form.Check>
+                    <Form.Check
                         checked={emptyLabel}
                         name="emptyLabel"
                         onChange={this._handleChange}
                     >
                         Hide the menu when there are no results
-                    </Checkbox>
+                    </Form.Check>
                 </FormGroup>
             </div>
         );

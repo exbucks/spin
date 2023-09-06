@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 import classNames from 'classnames';
 import Velocity from 'velocity-animate';
@@ -18,7 +18,7 @@ class TreeNavigatorBranch extends React.Component {
 
     static defaultProps = {
         collapsed: true,
-        eventKey: uid.v4(),
+        eventKey: uuidv4(),
         onActiveLinkFound: () => { },
         onBranchSelected: () => { }
     };

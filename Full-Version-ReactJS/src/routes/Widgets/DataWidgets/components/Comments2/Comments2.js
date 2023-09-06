@@ -1,20 +1,17 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import numeral from 'numeral';
+import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
  
 import { CollapsablePanel } from 'components';
 
-import classes from './Comments2.scss';
-
 const commentsList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         Sender: {
-            Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             Avatar:  faker.image.avatar(),
             CurrentStatus: 'Away'
         },
@@ -23,9 +20,9 @@ const commentsList = [
         Likes: Math.round(Math.random() * 100),
         Replies: [
             {
-                id: uid.v4(),
+                id: uuidv4(),
                 Sender: {
-                    Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+                    Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
                     Avatar:  faker.image.avatar(),
                     CurrentStatus: 'Busy'
                 },
@@ -34,9 +31,9 @@ const commentsList = [
                 Likes: Math.round(Math.random() * 100),
                 Replies: [
                     {
-                        id: uid.v4(),
+                        id: uuidv4(),
                         Sender: {
-                            Name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+                            Name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
                             Avatar:  faker.image.avatar(),
                             CurrentStatus: 'Busy'
                         },

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import hash from 'object-hash';
 import _ from 'underscore';
 import numeral from 'numeral';
@@ -23,7 +23,7 @@ import classes from './PricingTables.scss';
 
 const tablesData = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Basic',
         bsStyle: 'info',
         description: 'Very good to start your business',
@@ -37,7 +37,7 @@ const tablesData = [
         ]
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Premium',
         bsStyle: 'primary',
         description: 'Our most popular package',
@@ -52,7 +52,7 @@ const tablesData = [
         active: true
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Pro',
         bsStyle: 'warning',
         description: 'When you have a lot of customers to take care of',
@@ -66,7 +66,7 @@ const tablesData = [
         ]
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         type: 'Advanced',
         bsStyle: 'danger',
         description: 'For the most advanced users and teams',

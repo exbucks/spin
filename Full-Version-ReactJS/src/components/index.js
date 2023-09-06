@@ -4,7 +4,6 @@ import {
     ButtonToolbar,
     Carousel,
     CarouselItem,
-    Checkbox,
     Clearfix,
     ControlLabel,
     Col,
@@ -16,7 +15,6 @@ import {
     FormControl,
     FormGroup,
     Glyphicon,
-    Grid,
     HelpBlock,
     InputGroup,
     Jumbotron,
@@ -35,15 +33,12 @@ import {
     Pagination,
     PanelGroup,
     Radio,
-    ResponsiveEmbed,
     Row,
-    SafeAnchor,
     SplitButton,
     Tab,
     TabContainer,
     TabContent,
     TabPane,
-    Well,
 } from 'react-bootstrap';
 
 import AffixWrap from './AffixWrap';
@@ -65,6 +60,7 @@ import FavoriteStar from './FavoriteStar';
 import Footer from './Footer';
 import FloatGrid from './FloatGrid';
 import GalleryThumbnail from './GalleryThumbnail';
+import Grid from './Grid'
 import Header from './Header';
 import Image from './Image';
 import Label from './Label';
@@ -77,6 +73,7 @@ import OutsideClick from './OutsideClick';
 import Panel from './Panel';
 import Popover from './Popover';
 import RightSidebar from './RightSidebar';
+import SafeAnchor from './SafeAnchor';
 import ScrollBarContainer from './ScrollBarContainer';
 import Sidebar from './Sidebar';
 import ProgressBar from './ProgressBar';
@@ -92,15 +89,12 @@ import Editor from './Editor';
 import Treebeard from './Treebeard';
 import Wizard from './Wizard';
 
-console.log(ColorPicker);
-
 export {
     Accordion,
     ButtonGroup,
     ButtonToolbar,
     Carousel,
     CarouselItem,
-    Checkbox,
     Clearfix,
     ControlLabel,
     Col,
@@ -130,7 +124,6 @@ export {
     Pagination,
     PanelGroup,
     Radio,
-    ResponsiveEmbed,
     Row,
     SafeAnchor,
     SplitButton,
@@ -138,7 +131,6 @@ export {
     TabContainer,
     TabContent,
     TabPane,
-    Well,
 
     AffixWrap,
     Alert,

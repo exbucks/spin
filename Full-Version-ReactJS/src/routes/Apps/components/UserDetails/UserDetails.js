@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
 
 import {
-    Panel,
     Media,
     Button,
     Tabs,

@@ -2,8 +2,6 @@
 with basic components styling */
 import React from 'react';
 import * as Recharts from 'recharts';
-import { Colors } from 'consts';
-import uid from 'node-uuid';
 
 const {
     YAxis: RechartsYAxis,

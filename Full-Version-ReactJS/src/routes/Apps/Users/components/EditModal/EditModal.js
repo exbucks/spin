@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
 
 import {
     Row,

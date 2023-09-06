@@ -1,5 +1,4 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import deepAssign from 'assign-deep';
 import numeral from 'numeral';
@@ -10,8 +9,6 @@ import {
     Col,
     Panel,
     Button,
-    DropdownButton,
-    MenuItem,
     ButtonGroup,
     Table,
     Charts

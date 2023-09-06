@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
 import num from 'numeral';
-import uid from 'node-uuid';
 import moment from 'moment';
 import {
     Table,
@@ -11,13 +10,12 @@ import {
     Media,
     Button,
     ButtonGroup,
-    Checkbox,
+    Form,
     AvatarImage
 } from 'components';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
-import renderSection from 'modules/sectionRender';
 import { statusToColor } from 'modules/helpers';
 
 import classes from './RightSidebar.scss';
@@ -159,7 +157,7 @@ const renderTasks = (tasks) => (
                         className={ classes.listEntry }
                         key={ task._id }
                     >
-                        <Checkbox defaultChecked={ task.Active }>
+                        <Form.Check defaultChecked={ task.Active }>
                             <Link to='/apps/task-details' className={ `${!task.Active ? classes.marked : ''}` }>
                                 { `${task.Title} ` }
                             </Link>
@@ -167,7 +165,7 @@ const renderTasks = (tasks) => (
                                 <i className='fa fa-history small text-gray-light'></i>
                                 {` ${ moment(task.Date).format('DD-MMM-YYYY HH:mm a')}`}
                             </span>
-                        </Checkbox>
+                        </Form.Check>
                     </ListGroupItem>
                 ))
             }

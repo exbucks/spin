@@ -1,14 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
 
 import {
-    Row,
-    Col,
     Panel,
     Media,
-    Table,
     Charts,
-    CollapsablePanel,
     Label
 } from 'components';
 
@@ -22,7 +17,7 @@ const CpuBox = () => (
         header={
             <Media>
                 <Media.Body>
-                    <p className='text-uppercase' className='m-y-0'>
+                    <p className='text-uppercase m-y-0'>
                         CPU
                     </p>
                     <p className='m-y-0'>

@@ -2,7 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 import _ from 'underscore';
 import { AvatarImage } from 'components';
-import faker from 'faker'
+import { faker } from '@faker-js/faker';
 
 const USERS = [
     { value: 'John Smith', label: 'John Smith', avatarUrl: faker.image.avatar() },

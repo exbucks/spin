@@ -1,12 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import {
-    Label as ReactBootstrapLabel
-} from 'react-bootstrap';
 
-/*
-    Extended ReactBootstrap Label. Added props: outline, pill, customColor, withIcon
-*/
 const Label = (props) => {
     let {
         className,
@@ -40,13 +34,13 @@ const Label = (props) => {
     }
 
     return (
-        <ReactBootstrapLabel
+        <div
             { ...otherProps }
             className={ labelClass }
             style={ customStyle }
         >
             { props.children }
-        </ReactBootstrapLabel>
+        </div>
     );
 }
 

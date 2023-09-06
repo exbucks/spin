@@ -1,16 +1,11 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
 import ReactGridLayout, {
     WidthProvider,
     Responsive
 } from 'react-grid-layout';
 
 import {
-    Row,
-    Col,
-    Table,
-    CollapsablePanel,
     Button,
     Grid,
     Header,
@@ -19,8 +14,6 @@ import {
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import { CONTENT_VIEW_STATIC, SCREEN_SIZE_XS, SCREEN_SIZE_SM } from 'layouts/DefaultLayout/modules/layout';
-
-import { Colors } from 'consts';
 
 /*
     Timeliens from Timeline examples
@@ -48,12 +41,6 @@ import {
 } from './components';
 
 import gridDefinition from './gridDefinition';
-
-const responsiveGridProps = {
-    breakpoints: {
-        lg: 1200, md: 992, sm: 768, xs: 576
-    }
-}
 
 import classes from './DataWidgets.scss';
 

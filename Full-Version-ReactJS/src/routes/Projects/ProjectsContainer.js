@@ -1,12 +1,11 @@
 import React from 'react';
-import uid from 'node-uuid';
 import hash from 'object-hash';
 import _ from 'underscore';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import deepAssign from 'assign-deep';
 import numeral from 'numeral';
 import moment from 'moment';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -15,9 +14,6 @@ import {
     Col,
     Panel,
     Button,
-    DropdownButton,
-    ButtonGroup,
-    Table,
     Media,
     Label,
     ListGroup,

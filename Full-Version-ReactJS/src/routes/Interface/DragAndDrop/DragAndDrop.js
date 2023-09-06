@@ -1,11 +1,9 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
     Grid,
-    Row,
-    Col,
     FloatGrid,
     Panel,
     Button,
@@ -25,20 +23,20 @@ class DragAndDropContainer extends RoutedComponent {
 
         this.state = {
             columns: [
-                { key: uid.v4(), md: 4, xs: 12},
-                { key: uid.v4(), md: 4, xs: 12 },
-                { key: uid.v4(), md: 4, xs: 12 },
+                { key: uuidv4(), md: 4, xs: 12},
+                { key: uuidv4(), md: 4, xs: 12 },
+                { key: uuidv4(), md: 4, xs: 12 },
 
-                { key: uid.v4(), lg: 6, sm: 6, xs: 12 },
-                { key: uid.v4(), lg: 3, sm: 6, xs: 12 },
-                { key: uid.v4(), lg: 3, sm: 6, xs: 12 },
+                { key: uuidv4(), lg: 6, sm: 6, xs: 12 },
+                { key: uuidv4(), lg: 3, sm: 6, xs: 12 },
+                { key: uuidv4(), lg: 3, sm: 6, xs: 12 },
 
-                { key: uid.v4(), lg: 4, md: 6, sm: 12 },
-                { key: uid.v4(), lg: 4, md: 6, sm: 12 },
-                { key: uid.v4(), lg: 4 },
+                { key: uuidv4(), lg: 4, md: 6, sm: 12 },
+                { key: uuidv4(), lg: 4, md: 6, sm: 12 },
+                { key: uuidv4(), lg: 4 },
 
-                { key: uid.v4(), lg: 2 },
-                { key: uid.v4(), lg: 10 }
+                { key: uuidv4(), lg: 2 },
+                { key: uuidv4(), lg: 10 }
             ]
         }
 

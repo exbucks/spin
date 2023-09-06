@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import deepAssign from 'assign-deep';
 import _ from 'underscore';
-import ReactHighstock from 'react-highcharts/bundle/ReactHighstock';
-import ReactHighcharts from 'react-highcharts/bundle/ReactHighcharts';
+// import ReactHighstock from 'react-highcharts/bundle/ReactHighstock';
+// import ReactHighcharts from 'react-highcharts/bundle/ReactHighcharts';
 
 import theme from './../../highcharts-theme';
 
@@ -60,7 +60,8 @@ class HighchartBase extends React.Component {
             chartConfig: deepAssign({}, theme, this.getChartConfig()
                 , this.props.config)
         });
-        this.Chart = this.isHighstock() ? ReactHighstock : ReactHighcharts;
+        // this.Chart = this.isHighstock() ? ReactHighstock : ReactHighcharts;
+        this.Chart = <div></div>;
     }
 
     componentWillReceiveProps(nextProps) {

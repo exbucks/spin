@@ -1,11 +1,7 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
-import faker from 'faker';
-import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
+import { faker } from '@faker-js/faker';
+import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -19,15 +15,10 @@ import {
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
-import { Colors } from 'consts';
-
-import classes from './ProfileEdit.scss';
-
 const userToEdit = {
-    Name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+    Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
     Avatar: faker.image.avatar()
 };
 

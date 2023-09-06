@@ -1,9 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
-import faker from 'faker';
+import { v4 as uuidv4 } from 'uuid';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -18,7 +18,7 @@ import {
 
 const notifications = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-danger"></i>
@@ -29,7 +29,7 @@ const notifications = [
         date: moment(faker.date.recent()).format('DD-MMM-YYYY, HH:mm')
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-primary"></i>
@@ -40,7 +40,7 @@ const notifications = [
         date: moment(faker.date.recent()).format('DD-MMM-YYYY, HH:mm')
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-success"></i>
@@ -51,7 +51,7 @@ const notifications = [
         date: moment(faker.date.recent()).format('DD-MMM-YYYY, HH:mm')
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-warning"></i>

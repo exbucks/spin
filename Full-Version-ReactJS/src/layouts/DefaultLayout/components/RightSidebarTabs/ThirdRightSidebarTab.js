@@ -1,32 +1,20 @@
 import React from 'react';
 import _ from 'underscore';
-import num from 'numeral';
-import uid from 'node-uuid';
 import moment from 'moment';
 import {
-    Table,
     Nav,
     NavItem,
-    Label,
     Media,
     Button,
-    ButtonGroup,
     FormControl,
     InputGroup,
     Badge,
     Panel,
-    Checkbox,
-    Row,
-    Col,
-    Grid,
     AvatarImage,
-    SlimProgressBar,
     RightSidebar
 } from 'components';
 
 import { statusToColor } from 'modules/helpers';
-
-import { Colors } from 'consts';
 
 import classes from './RightSidebar.scss';
 

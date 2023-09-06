@@ -1,14 +1,12 @@
-import React, { PropTypes } from 'react';
-import uid from 'node-uuid';
+import React from 'react';
 import {
     Panel,
     Tabs,
     Tab,
     Button,
+    Form,
     FormGroup,
-    ControlLabel,
     FormControl,
-    Checkbox,
     Radio
 } from 'components';
 
@@ -42,7 +40,6 @@ import {
     SIDEBAR_STYLE_DEFAULT,
     SIDEBAR_STYLE_SLIM,
     SIDEBAR_STYLE_BIGICONS,
-    SIDEBAR_STYLE_BIGICONS_AVATAR,
 
     SKIN_DARK,
     SKIN_LIGHT,
@@ -179,21 +176,21 @@ class LayoutOptions extends React.Component {
                                 <p className='small text-uppercase'>
                                     <strong>Navbar Options</strong>
                                 </p>
-                                <Checkbox
+                                <Form.Check
                                     onChange={ ev => this.props.toggleNavbar(ev.target.checked) }
                                     checked={ this.props.navbarEnabled }
                                     inline
                                 >
                                     Show / Hide
-                                </Checkbox>
-                                <Checkbox
+                                </Form.Check>
+                                <Form.Check
                                     onChange={ ev => this.props.toggleNavbarFixed(ev.target.checked) }
                                     checked={ this.props.navbarEnabled }
                                     inline
                                     disabled={!this.props.navbarEnabled}
                                 >
                                     Fixed
-                                </Checkbox>
+                                </Form.Check>
                             </FormGroup>
 
                             { /*    Header   */ }
@@ -201,13 +198,13 @@ class LayoutOptions extends React.Component {
                                 <p className='small text-uppercase'>
                                     <strong>Header Layout</strong>
                                 </p>
-                                <Checkbox
+                                <Form.Check
                                     onChange={ ev => this.props.toggleHeader(ev.target.checked) }
                                     checked={ this.props.headerEnabled }
                                     inline
                                 >
                                     Show / Hide
-                                </Checkbox>
+                                </Form.Check>
                             </FormGroup>
                             <FormControl
                                 componentClass="select"
@@ -227,12 +224,12 @@ class LayoutOptions extends React.Component {
                                 <p className='small text-uppercase'>
                                     <strong>Sidebar Options</strong>
                                 </p>
-                                <Checkbox
+                                <Form.Check
                                     onChange={ ev => this.props.toggleSidebar(ev.target.checked) }
                                     checked={ this.props.sidebarEnabled }
                                 >
                                     Show / Hide
-                                </Checkbox>
+                                </Form.Check>
                             </FormGroup>
                             <FormControl
                                 componentClass="select"
@@ -248,22 +245,22 @@ class LayoutOptions extends React.Component {
                                 }
                             </FormControl>
                             <FormGroup>
-                                <Checkbox
+                                <Form.Check
                                     onChange={ ev => this.props.toggleSidebarFixed(ev.target.checked) }
                                     checked={ this.props.sidebarFixed }
                                     disabled={ !this.props.sidebarEnabled }
                                     inline
                                 >
                                     Fixed
-                                </Checkbox>
-                                <Checkbox
+                                </Form.Check>
+                                <Form.Check
                                     onChange={ ev => this.props.toggleSidebarAside(ev.target.checked) }
                                     checked={ this.props.sidebarAside }
                                     disabled={ !this.props.sidebarEnabled }
                                     inline
                                 >
                                     Aside
-                                </Checkbox>
+                                </Form.Check>
                             </FormGroup>
 
                             { /*  Sidebar Appearance  */ }
@@ -306,21 +303,21 @@ class LayoutOptions extends React.Component {
                                 <p className='small text-uppercase'>
                                     <strong>Footer Options</strong>
                                 </p>
-                                <Checkbox
+                                <Form.Check
                                     onChange={ ev => this.props.toggleFooter(ev.target.checked) }
                                     checked={ this.props.footerEnabled }
                                     inline
                                 >
                                     Show / Hide
-                                </Checkbox>
-                                <Checkbox
+                                </Form.Check>
+                                <Form.Check
                                     onChange={ ev => this.props.toggleFooterFixed(ev.target.checked) }
                                     checked={ this.props.footerFixed }
                                     disabled={ !this.props.footerEnabled }
                                     inline
                                 >
                                     Fixed
-                                </Checkbox>
+                                </Form.Check>
                             </FormGroup>
                         </Tab>
 

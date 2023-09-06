@@ -1,8 +1,8 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import { Link } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import {
     Media,
@@ -23,9 +23,9 @@ const statusToColor = {
 
 const emailsList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+            name: `${faker.person.firstName()} ${faker.person.lastName()}`,
             avatar: faker.image.avatar(),
             status: 'Busy'
         },
@@ -34,9 +34,9 @@ const emailsList = [
 
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+            name: `${faker.person.firstName()} ${faker.person.lastName()}`,
             avatar: faker.image.avatar(),
             status: 'Online'
         },
@@ -45,9 +45,9 @@ const emailsList = [
 
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+            name: `${faker.person.firstName()} ${faker.person.lastName()}`,
             avatar: faker.image.avatar(),
             status: 'Away'
         },
@@ -56,9 +56,9 @@ const emailsList = [
 
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+            name: `${faker.person.firstName()} ${faker.person.lastName()}`,
             avatar: faker.image.avatar(),
             status: 'Offline'
         },

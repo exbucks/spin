@@ -1,20 +1,12 @@
 import React from 'react';
-import faker from 'faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import numeral from 'numeral';
-import moment from 'moment';
-import { Link } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import {
-    Media,
     ListGroup,
     ListGroupItem,
     CollapsablePanel,
-    Grid,
-    Row,
-    Col,
-    AvatarImage,
     SlimProgressBar,
     Label
 } from 'components';
@@ -23,15 +15,10 @@ import { Colors } from 'consts';
 
 import classes from './Projects.scss';
 
-const stats = {
-    followers: 12872,
-    following: 567,
-    comments: 6
-};
 
 const projectsList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         name: 'UX for webkom.co',
         label: {
             name: 'Active',
@@ -42,7 +29,7 @@ const projectsList = [
         daysDue: 58
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         name: 'New Company Website',
         label: {
             name: 'Timer',
@@ -53,7 +40,7 @@ const projectsList = [
         daysDue: 2
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         name: 'Charts to Newsletter',
         label: {
             name: 'Open',
@@ -64,7 +51,7 @@ const projectsList = [
         daysDue: 5
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         name: 'Design Concepts',
         label: {
             name: 'Support',

@@ -1,23 +1,14 @@
 import React from 'react';
-import Select from 'react-select';
 import _ from 'underscore';
 import { RoutedComponent, connect } from 'routes/routedComponent';
 
 import {
-    Grid,
     Row,
     Col,
     ColorPicker
 } from 'components';
 
-/*
-import { ChromePicker, CompactPicker, MaterialPicker, PhotoshopPicker,
-         SketchPicker, SliderPicker, SwatchesPicker, BlockPicker,
-         GithubPicker, TwitterPicker, HuePicker, AlphaPicker, CirclePicker } from 'react-color'
-*/
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-
-import style from './style';
 
 import classes from './reactColor.scss';
 

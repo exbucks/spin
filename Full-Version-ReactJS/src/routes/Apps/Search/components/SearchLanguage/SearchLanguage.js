@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-    Checkbox,
-    Divider
+    Divider,
+    Form
 } from 'components';
 
 const SearchLanguage = () => (
@@ -10,15 +10,15 @@ const SearchLanguage = () => (
             Language
         </Divider>
         <div>
-            <Checkbox defaultChecked>
+            <Form.Check defaultChecked>
                 English
-            </Checkbox>
-            <Checkbox disabled>
+            </Form.Check>
+            <Form.Check disabled>
                 French
-            </Checkbox>
-            <Checkbox>
+            </Form.Check>
+            <Form.Check>
                 Spanish
-            </Checkbox>
+            </Form.Check>
         </div>
     </div>
 );

@@ -1,10 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import moment from 'moment';
 import truncate from 'truncate';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -15,15 +14,13 @@ import {
     DropdownButton,
     MenuItem,
     ButtonGroup,
-    FormControl,
-    Checkbox,
+    Form,
     ListGroup,
     ListGroupItem,
     Label,
     Badge,
     Table,
     Media,
-    Tooltip,
     ButtonToolbar,
     Pagination,
     Divider,
@@ -157,7 +154,7 @@ const renderTasksList = (tasks) => (
                     _.map(tasks, task => (
                         <tr key={ task._id }>
                             <td style={ {minWidth: '30px'} }>
-                                <Checkbox />
+                                <Form.Check />
                             </td>
                             <td>
                                 <PriorityButton
@@ -239,7 +236,7 @@ const renderTasksGrid = (tasks) => {
 
             <Media>
                 <Media.Left align='middle'>
-                    <Checkbox className='m-t-0'/>
+                    <Form.Check className='m-t-0'/>
                 </Media.Left>
                 <Media.Body>
                     <h4 className='m-t-0 m-b-1'>

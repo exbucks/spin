@@ -1,10 +1,10 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import numeral from 'numeral';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Media,
@@ -17,8 +17,6 @@ import {
     AvatarImage
 } from 'components';
 
-import { Colors } from 'consts';
-
 import classes from './Comments.scss';
 
 const stats = {
@@ -29,9 +27,9 @@ const stats = {
 
 const commentsList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             avatar: faker.image.avatar()
         },
         date: faker.date.recent(),
@@ -39,9 +37,9 @@ const commentsList = [
         content: faker.lorem.paragraph()
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             avatar: faker.image.avatar()
         },
         date: faker.date.recent(),
@@ -49,9 +47,9 @@ const commentsList = [
         content: faker.lorem.paragraph()
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         user: {
-            name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+            name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
             avatar: faker.image.avatar()
         },
         date: faker.date.recent(),

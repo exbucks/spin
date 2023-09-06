@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactInterval from 'react-interval';
-import uid from 'node-uuid';
 import hash from 'object-hash';
 import _ from 'underscore';
 import numeral from 'numeral';
@@ -13,7 +12,6 @@ import {
     Table,
     ButtonGroup,
     Button,
-    ProgressBar,
     Label,
     Media,
     Charts,

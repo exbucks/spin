@@ -1,18 +1,10 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
 
 import {
-    Row,
-    Col,
     Button,
     Media,
-    AvatarImage,
-    Image,
     Modal,
-    Divider
 } from 'components';
-
-import { Colors } from 'consts';
 
 const DeleteModal = props => (
     <Modal show={ props.visible } onHide={ props.onClose } bsSize='large' bsStyle='danger'>

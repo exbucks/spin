@@ -1,5 +1,5 @@
 import React from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 import leftPad from 'left-pad';
 import numeral from 'numeral';
@@ -277,7 +277,7 @@ const renderNews = (newsList) => (
         </div>
         <Row>
             {_.map(newsList, (news) => (
-                <Col key={ uid.v4() } md={ 4 }>
+                <Col key={ uuidv4() } md={ 4 }>
                     <small>{news.Date}</small>
                     <h5 className={classes.newsTitle}>
                         <a>
@@ -321,7 +321,7 @@ const renderOrders = (orders) => {
             </thead>
             <tbody>
                 {_.map(data, (order) => (
-                    <tr key={uid.v4()}>
+                    <tr key={uuidv4()}>
                         { time ? renderTime(order.Time, order.Increase) : null }
                         <td className="text-white">
                             { order.Price }

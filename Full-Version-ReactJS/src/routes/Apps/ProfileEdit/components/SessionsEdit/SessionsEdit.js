@@ -1,23 +1,13 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
     Panel,
-    Form,
-    FormGroup,
-    Col,
-    FormControl,
-    ControlLabel,
-    Radio,
-    Button,
-    ProgressBar,
     Media,
     Table,
     OverlayTrigger,
     Tooltip
 } from 'components';
-
-import { Colors } from 'consts';
 
 import classes from './../../ProfileEdit.scss';
 

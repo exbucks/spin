@@ -1,23 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Panel,
     Form,
-    FormGroup,
-    Col,
-    Checkbox,
-    FormControl,
-    ControlLabel,
     Radio,
     Button,
-    Divider,
-    Label
 } from 'components';
-
-import { Colors } from 'consts';
-
-import classes from './../../ProfileEdit.scss';
 
 const SettingsEdit = () => (
     <div>
@@ -45,9 +34,9 @@ const SettingsEdit = () => (
                 <p>
                     Do you want receive our monthly newsletter about new products and offers?
                 </p>
-                <Checkbox>
+                <Form.Check>
                     Notify me
-                </Checkbox>
+                </Form.Check>
             </div>
 
             <div className='m-t-3'>
@@ -78,15 +67,15 @@ const SettingsEdit = () => (
                 <p>
                     Notify me via email when
                 </p>
-                <Checkbox defaultChecked inline>
+                <Form.Check defaultChecked inline>
                     Someone Comments
-                </Checkbox>
-                <Checkbox defaultChecked inline>
+                </Form.Check>
+                <Form.Check defaultChecked inline>
                     Someone Mentions
-                </Checkbox>
-                <Checkbox defaultChecked inline>
+                </Form.Check>
+                <Form.Check defaultChecked inline>
                     Anyone Follows Me
-                </Checkbox>
+                </Form.Check>
             </div>
         </Panel>
     </div>

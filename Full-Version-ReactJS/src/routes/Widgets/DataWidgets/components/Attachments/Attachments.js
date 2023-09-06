@@ -1,15 +1,14 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import numeral from 'numeral';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import {
     Media,
     ListGroup,
-    ListGroupItem,
     CollapsablePanel,
     AvatarIcon,
     Button
@@ -70,8 +69,8 @@ const attachments = _.map([
     }
 ], attachment => ({
     ...attachment,
-    id: uid.v4(),
-    author: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
+    id: uuidv4(),
+    author: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
     size: Math.random() * 1000,
     date: faker.date.recent()
 }));

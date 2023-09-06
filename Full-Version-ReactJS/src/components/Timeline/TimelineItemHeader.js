@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import { Media } from 'react-bootstrap';
 import classNames from 'classnames';
+import { Media } from 'components';
 
 import classes from './Timeline.scss';
 

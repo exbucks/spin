@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import _ from 'underscore';
-import { Radio, Checkbox } from 'components';
+import { Form } from 'components';
 
 export default class Numeric extends React.Component {
     constructor() {
@@ -51,18 +51,18 @@ export default class Numeric extends React.Component {
                     onChange={ val => { console.log(val); this.setState({ value: val }) } }
                 />
                 <div className='m-t-2'>
-                    <Checkbox checked={ this.state.multi } onChange={ () => this.toggleState('multi') } >
+                    <Form.Check checked={ this.state.multi } onChange={ () => this.toggleState('multi') } >
                         Multi-Select
-                    </Checkbox>
-                    <Checkbox checked={ this.state.matchValue } onChange={ () => this.toggleState('matchValue') } >
+                    </Form.Check>
+                    <Form.Check checked={ this.state.matchValue } onChange={ () => this.toggleState('matchValue') } >
                         Match value
-                    </Checkbox>
-                    <Checkbox checked={ this.state.matchLabel } onChange={ () => this.toggleState('matchLabel') } >
+                    </Form.Check>
+                    <Form.Check checked={ this.state.matchLabel } onChange={ () => this.toggleState('matchLabel') } >
                         Multi label
-                    </Checkbox>
-                    <Checkbox checked={ this.state.matchPos === 'start' } onChange={ e => this.onChangeMatchStart(e) } >
+                    </Form.Check>
+                    <Form.Check checked={ this.state.matchPos === 'start' } onChange={ e => this.onChangeMatchStart(e) } >
                         Only include matches from the start of the string
-                    </Checkbox>
+                    </Form.Check>
                 </div>
             </div>
         )

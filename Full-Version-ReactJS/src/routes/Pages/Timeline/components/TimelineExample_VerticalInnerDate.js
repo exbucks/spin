@@ -1,10 +1,8 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import {
     Label,
-    Button,
     AvatarImage,
-    AvatarText,
     Timeline
 } from 'components';
 

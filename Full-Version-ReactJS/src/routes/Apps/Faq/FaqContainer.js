@@ -1,10 +1,6 @@
 import React from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
-import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 
 import {
     Row,
@@ -22,8 +18,6 @@ import {
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import renderSection from 'modules/sectionRender';
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-
-import { Colors } from 'consts';
 
 import classes from './Faq.scss';
 
@@ -145,10 +139,10 @@ const renderAccordions = () => {
                     Getting Started
                 </h4>
                 <Accordion>
-                    { renderAccordionPart('Do you provide Photoshop files with your dashboard?', uid.v4()) }
-                    { renderAccordionPart('How do I install Dashboard on my server?', uid.v4()) }
-                    { renderAccordionPart('How do you provide support?', uid.v4()) }
-                    { renderAccordionPart('Signing up for a new Dashboard account', uid.v4()) }
+                    { renderAccordionPart('Do you provide Photoshop files with your dashboard?', uuidv4()) }
+                    { renderAccordionPart('How do I install Dashboard on my server?', uuidv4()) }
+                    { renderAccordionPart('How do you provide support?', uuidv4()) }
+                    { renderAccordionPart('Signing up for a new Dashboard account', uuidv4()) }
                 </Accordion>
                 <Button>
                     View All
@@ -158,8 +152,8 @@ const renderAccordions = () => {
                     Updates
                 </h4>
                 <Accordion>
-                    { renderAccordionPart('Updating Framework', uid.v4()) }
-                    { renderAccordionPart('Update Database', uid.v4()) }
+                    { renderAccordionPart('Updating Framework', uuidv4()) }
+                    { renderAccordionPart('Update Database', uuidv4()) }
                 </Accordion>
                 <Button>
                     View All
@@ -170,9 +164,9 @@ const renderAccordions = () => {
                     Plugins
                 </h4>
                 <Accordion>
-                    { renderAccordionPart('What is your refund policy?', uid.v4()) }
-                    { renderAccordionPart('Direct Operations Producer', uid.v4()) }
-                    { renderAccordionPart('Forward Communications Specialist', uid.v4()) }
+                    { renderAccordionPart('What is your refund policy?', uuidv4()) }
+                    { renderAccordionPart('Direct Operations Producer', uuidv4()) }
+                    { renderAccordionPart('Forward Communications Specialist', uuidv4()) }
                 </Accordion>
                 <Button>
                     View All

@@ -2,7 +2,6 @@ import { RoutedComponent, connect } from './../routedComponent'
 import React from 'react';
 import ReactInterval from 'react-interval';
 import _ from 'underscore';
-import uid from 'node-uuid';
 
 import {
     Row,

@@ -1,18 +1,13 @@
 import React from 'react';
-import uid from 'node-uuid';
 
 import {
     Grid,
     Row,
     Col,
-    Panel,
-    Media,
     Table,
     Charts,
     CollapsablePanel
 } from 'components';
-
-import { Colors } from 'consts';
 
 import classes from './Monitor.scss';
 

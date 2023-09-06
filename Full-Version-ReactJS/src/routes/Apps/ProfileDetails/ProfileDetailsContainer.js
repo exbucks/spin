@@ -1,20 +1,13 @@
 import React from 'react';
-import uid from 'node-uuid';
-import faker from 'faker';
-import moment from 'moment';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import truncate from 'truncate';
-import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
     Row,
     Col,
-    Panel,
     Button,
     Media,
-    Tabs,
     Tab,
     Nav,
     NavItem,
@@ -45,9 +38,9 @@ import {
 // Subcomponents
 // ------------------------------------
 const User = {
-    name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+    name: `${faker.person.firstName()} ${faker.person.lastName()}`,
     avatar: faker.image.avatar(),
-    position: faker.name.jobTitle(),
+    position: faker.person.jobTitle(),
     shortProfile: faker.lorem.paragraph(),
     labels: [
         faker.commerce.department(),

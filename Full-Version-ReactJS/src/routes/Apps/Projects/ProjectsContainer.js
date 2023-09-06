@@ -1,10 +1,8 @@
 import React, { PropTypes } from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
 import moment from 'moment';
-import truncate from 'truncate';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import Notifications from 'react-notification-system-redux';
 
@@ -16,17 +14,14 @@ import {
     DropdownButton,
     MenuItem,
     ButtonGroup,
-    FormControl,
     ListGroup,
     ListGroupItem,
     Label,
     Badge,
     Table,
     Media,
-    Tooltip,
     ButtonToolbar,
     Pagination,
-    OverlayTrigger,
     Divider,
     SlimProgressBar,
     AvatarImage,
@@ -35,7 +30,6 @@ import {
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
 
 import { Colors } from 'consts';
 

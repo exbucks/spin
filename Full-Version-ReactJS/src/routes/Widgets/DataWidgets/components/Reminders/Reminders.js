@@ -1,8 +1,7 @@
 import React from 'react';
-import faker from 'faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import { Link } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import {
     Media,
@@ -11,13 +10,11 @@ import {
     CollapsablePanel
 } from 'components';
 
-import { Colors } from 'consts';
-
 import classes from './Reminders.scss';
 
 const RemindersList = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className='fa-stack fa-lg'>
                 <i className='fa fa-square fa-stack-2x text-primary'></i>
@@ -28,7 +25,7 @@ const RemindersList = [
         title: 'Pending Orders'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className='fa-stack fa-lg'>
                 <i className='fa fa-square fa-stack-2x text-danger'></i>
@@ -39,7 +36,7 @@ const RemindersList = [
         title: 'Support Tickets'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className='fa-stack fa-lg'>
                 <i className='fa fa-square fa-stack-2x text-success'></i>
@@ -50,7 +47,7 @@ const RemindersList = [
         title: 'New Invoices'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className='fa-stack fa-lg'>
                 <i className='fa fa-square fa-stack-2x text-info'></i>
@@ -61,7 +58,7 @@ const RemindersList = [
         title: 'Comments'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className='fa-stack fa-lg'>
                 <i className='fa fa-square fa-stack-2x text-gray-lighter'></i>
@@ -72,7 +69,7 @@ const RemindersList = [
         title: 'Settings to Change'
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className='fa-stack fa-lg'>
                 <i className='fa fa-square fa-stack-2x text-warning'></i>

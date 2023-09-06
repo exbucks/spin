@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
 import hash from 'object-hash';
 import numeral from 'numeral';
 import moment from 'moment';

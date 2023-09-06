@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { Thumbnail } from 'react-bootstrap';
 import _ from 'underscore';
 import classNames from 'classnames';
 
@@ -13,7 +12,7 @@ const GalleryThumbnail = (props) => {
     }, classes.galleryThumbnail, className);
 
     return (
-        <Thumbnail { ...otherProps } className={ thumbnailClasses }/>
+        <div { ...otherProps } className={ thumbnailClasses }/>
     );
 };
 

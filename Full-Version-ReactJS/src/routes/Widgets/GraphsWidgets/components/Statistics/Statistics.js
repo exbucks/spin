@@ -1,11 +1,8 @@
 import React from 'react';
-import uid from 'node-uuid';
 
 import {
     Row,
     Col,
-    Panel,
-    Media,
     ListGroup,
     ListGroupItem,
     ProgressBar,

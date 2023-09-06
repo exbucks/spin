@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-    Media
-} from 'react-bootstrap';
-import faker from 'faker';
-import { Link } from 'react-router';
+import { faker } from '@faker-js/faker';
+import { Link } from 'react-router-dom';
 
 import {
     AvatarImage,
     Charts,
+    Media,
     Sidebar
 } from 'components';
 
@@ -16,7 +14,7 @@ import { Colors } from 'consts';
 
 const chartData = [1,3,9,6,5,9,7,3,5,2,4,5,6,9,7,8,5,4,2,4,6,7,3,9,8,7,6,9,2,6,5,4];
 
-const UserName = `${faker.name.firstName()} ${faker.name.lastName()}`;
+const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`;
 
 const AvatarAndStats = (props) => (
     <Sidebar.AddOn>
@@ -42,7 +40,7 @@ const AvatarAndStats = (props) => (
                             componentClass='h5'
                             className='m-y-0'
                         >
-                            { `${faker.name.firstName()} ${faker.name.lastName()}` }
+                            { `${faker.person.firstName()} ${faker.person.lastName()}` }
                         </Media.Heading>
                         <small>Senior Front-end Developer</small>
                     </div>

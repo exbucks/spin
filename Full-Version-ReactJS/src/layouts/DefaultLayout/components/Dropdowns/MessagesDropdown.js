@@ -1,9 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
-import faker from 'faker';
+import { v4 as uuidv4 } from 'uuid';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
@@ -26,9 +26,9 @@ const messages = Array.from((function*() {
     ];
     for(let i = 0; i < statusColors.length; i++) {
         yield {
-            id: uid.v4(),
+            id: uuidv4(),
             userAvatar: faker.image.avatar(),
-            userName: `${faker.name.firstName()} ${faker.name.lastName()}`,
+            userName: `${faker.person.firstName()} ${faker.person.lastName()}`,
             userStatusColor: statusColors[i],
             message: faker.lorem.sentence(),
             date: moment(faker.date.recent()).format('HH:mm')

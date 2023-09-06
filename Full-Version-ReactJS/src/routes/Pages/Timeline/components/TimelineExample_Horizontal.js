@@ -1,12 +1,10 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
     AvatarImage,
-    AvatarText,
     Timeline,
     Label,
-    Button
 } from 'components';
 
 import { Colors } from 'consts';
@@ -30,8 +28,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -39,9 +37,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -58,8 +56,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -67,9 +65,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -86,8 +84,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -95,9 +93,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -114,8 +112,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -123,9 +121,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -142,8 +140,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -151,9 +149,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -172,8 +170,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -181,9 +179,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -200,8 +198,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -209,9 +207,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -228,8 +226,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -237,9 +235,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -256,8 +254,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -265,9 +263,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>
@@ -284,8 +282,8 @@ const HorizontalTimeline = () => (
                         src={ faker.image.avatar() }
                         />
                 }
-                primaryText={`${faker.name.firstName()} ${faker.name.lastName()}`}
-                secondaryText={`Assigned to: ${faker.name.firstName()} ${faker.name.lastName()}`}
+                primaryText={`${faker.person.firstName()} ${faker.person.lastName()}`}
+                secondaryText={`Assigned to: ${faker.person.firstName()} ${faker.person.lastName()}`}
                 />
             <Timeline.ItemBody>
                 <a href="javascript:void(0)">
@@ -293,9 +291,9 @@ const HorizontalTimeline = () => (
                 </a>
                 <br />
                 <p className="text-nowrap">
-                    {`${faker.name.firstName()} ${faker.name.lastName()} `}
+                    {`${faker.person.firstName()} ${faker.person.lastName()} `}
                     <Label className="label-gray-lighter label-outline">
-                        {`#${faker.random.number()}`}
+                        {`#${faker.number.random()}`}
                     </Label>
                 </p>
             </Timeline.ItemBody>

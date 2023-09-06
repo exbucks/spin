@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
     Table,
@@ -77,7 +77,7 @@ const BasicExampleTable = () => (
                         </Media.Left>
                         <Media.Body>
                             <span className='text-white'>
-                                { `${ faker.name.firstName() } ${ faker.name.lastName() }` }
+                                { `${ faker.person.firstName() } ${ faker.person.lastName() }` }
                             </span>
                             <br />
                             <span>
@@ -130,7 +130,7 @@ const BasicExampleTable = () => (
                         </Media.Left>
                         <Media.Body>
                             <span className='text-white'>
-                                { `${ faker.name.firstName() } ${ faker.name.lastName() }` }
+                                { `${ faker.person.firstName() } ${ faker.person.lastName() }` }
                             </span>
                             <br />
                             <span>
@@ -183,7 +183,7 @@ const BasicExampleTable = () => (
                         </Media.Left>
                         <Media.Body>
                             <span className='text-white'>
-                                { `${ faker.name.firstName() } ${ faker.name.lastName() }` }
+                                { `${ faker.person.firstName() } ${ faker.person.lastName() }` }
                             </span>
                             <br />
                             <span>
@@ -236,7 +236,7 @@ const BasicExampleTable = () => (
                         </Media.Left>
                         <Media.Body>
                             <span className='text-white'>
-                                { `${ faker.name.firstName() } ${ faker.name.lastName() }` }
+                                { `${ faker.person.firstName() } ${ faker.person.lastName() }` }
                             </span>
                             <br />
                             <span>

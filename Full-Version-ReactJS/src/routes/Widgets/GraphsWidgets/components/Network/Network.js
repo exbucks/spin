@@ -1,26 +1,15 @@
 import React from 'react';
-import ReactInterval from 'react-interval';
 import _ from 'underscore';
-import uid from 'node-uuid';
 
 import {
     Grid,
     Row,
     Col,
-    ListGroup,
-    ListGroupItem,
-    ButtonGroup,
-    Button,
-    Table,
     CollapsablePanel,
     Charts
 } from 'components';
 
-import { Colors } from 'consts';
-
 import classes from './Network.scss';
-
-const CHART_TOTAL_POINTS = 22;
 
 const chartPoints = [2, 4, 0, 0, 0, 0, 1, 4, 4, 10, 10, 10, 10, 0, 0, 0, 4, 6, 5, 9, 10];
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {

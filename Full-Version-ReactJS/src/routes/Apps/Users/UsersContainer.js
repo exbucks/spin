@@ -1,24 +1,18 @@
 import React from 'react';
-import uid from 'node-uuid';
-import truncate from 'truncate';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
-import moment from 'moment';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
     Row,
     Col,
-    Checkbox,
+    Form,
     Panel,
     Button,
-    Badge,
     ButtonGroup,
     ButtonToolbar,
     Dropdown,
-    FormGroup,
-    Label,
     MenuItem,
     Table,
     Media,
@@ -28,14 +22,11 @@ import {
     SplitButton,
     Divider,
     AvatarImage,
-    Image,
     FavoriteStar,
-    Thumbnail,
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
 import { Colors } from 'consts';
@@ -139,7 +130,7 @@ const userSocialToIcons = (social) => {
 // Sub Elements
 // ------------------------------------
 const renderActionsDropdown = (toggleModal) => (
-    <Dropdown id={`dropdown-user-actions-${ uid.v4() }`} pullRight>
+    <Dropdown id={`dropdown-user-actions-${ uuidv4() }`} pullRight>
         <Dropdown.Toggle>
             <i className='fa fa-fw fa-bars m-r-1'></i>
         </Dropdown.Toggle>
@@ -196,7 +187,7 @@ const renderActionsDropdown = (toggleModal) => (
 const renderGridActionsDropdown = (toggleModal) => (
     <SplitButton
         title='Profile'
-        id={`dropdown-user-actions-${ uid.v4() }`}
+        id={`dropdown-user-actions-${ uuidv4() }`}
         onClick={ () => { toggleModal('profileModal', true) } }
     >
         <MenuItem
@@ -273,7 +264,7 @@ const renderUsersList = (users, toggleModal) => (
                     _.map(users, user => (
                         <tr key={ user._id }>
                             <td>
-                                <Checkbox />
+                                <Form.Check />
                             </td>
                             <td>
                                 <FavoriteStar favorited={ !!parseInt(user.Favorited) }/>

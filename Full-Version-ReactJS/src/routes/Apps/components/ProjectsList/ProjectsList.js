@@ -1,13 +1,7 @@
 import React from 'react';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import { browserHistory } from 'react-router';
 
-import {
-    Nav,
-    NavItem,
-    Badge
-} from 'components';
+import { Nav, NavItem, Badge } from 'components';
 
 import classes from './ProjectsList.scss';
 

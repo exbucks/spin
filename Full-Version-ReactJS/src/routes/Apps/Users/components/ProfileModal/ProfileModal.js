@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import {
     Modal,
     Button
@@ -12,9 +12,9 @@ import {
 const userData = {
     status: 'Online',
     avatar: faker.image.avatar(),
-    name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+    name: `${faker.person.firstName()} ${faker.person.lastName()}`,
     favoritted: (!!Math.round(Math.random())),
-    position: faker.name.jobTitle(),
+    position: faker.person.jobTitle(),
     shortProfile: faker.lorem.paragraph(),
     contact: {
         Email: faker.internet.email(),
@@ -29,10 +29,10 @@ const userData = {
         Twitter: '/' + faker.internet.userName()
     },
     address: {
-        Address: faker.address.streetAddress(),
-        City: faker.address.city(),
-        State: faker.address.state(),
-        ZipCode: faker.address.zipCode()
+        Address: faker.person.address.streetAddress(),
+        City: faker.person.address.city(),
+        State: faker.person.address.state(),
+        ZipCode: faker.person.address.zipCode()
     },
     labels: [
         'Computers',

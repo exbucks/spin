@@ -1,7 +1,7 @@
 import React from 'react';
 import Chartist from 'chartist';
 import _ from 'underscore';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Colors } from './../../../../consts';
 
@@ -13,7 +13,7 @@ const createDonutBackground = (width, height, radius, innerRadius, color) => {
     const iR = (typeof innerRadius === 'string' && innerRadius.includes('%')) ?
         (1 - (parseInt(innerRadius) / 100)) * radius : radius - innerRadius;
 
-    const id = uid.v4();
+    const id = uuidv4();
 
     return (
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"

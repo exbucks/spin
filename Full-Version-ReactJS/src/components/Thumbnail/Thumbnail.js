@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react';
-import {
-    SafeAnchor
-} from 'react-bootstrap';
 import classNames from 'classnames';
+import { SafeAnchor } from 'components';
 
 const Thumbnail = (props) => {
     const { src, alt, image, className, children, ...otherProps } = props;

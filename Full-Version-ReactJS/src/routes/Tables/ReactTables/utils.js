@@ -1,4 +1,4 @@
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 const startDate = new Date(2015, 0, 1);
 const endDate = new Date();
@@ -48,9 +48,9 @@ const jobFieldCreators = {
 const peopleCreators = {
     id: (i) => i,
     photo: () => faker.image.avatar(),
-    firstName: () => faker.name.firstName(),
-    lastName: () => faker.name.lastName(),
-    role: () => faker.name.jobType(),
+    firstName: () => faker.person.firstName(),
+    lastName: () => faker.person.lastName(),
+    role: () => faker.person.jobType(),
     status: () => (statuses)[Math.round(Math.random() * 4)],
     region: () => [regions[Math.round(Math.random() * (regions.length - 1))]],
     earnings: () => ({

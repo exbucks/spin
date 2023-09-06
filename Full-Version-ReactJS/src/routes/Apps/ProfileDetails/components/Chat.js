@@ -1,5 +1,5 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import {
     Row,
     Col,
@@ -17,11 +17,9 @@ import treeRandomizer from 'modules/treeRandomizer';
 
 import chatData from 'consts/data/app-chat.json';
 
-import classes from './../ProfileDetails.scss';
-
 const messages = treeRandomizer(chatData);
 
-const chatName = `${ faker.name.firstName() } ${ faker.name.lastName() }`;
+const chatName = `${ faker.person.firstName() } ${ faker.person.lastName() }`;
 
 const Chat = () => (
     <Panel

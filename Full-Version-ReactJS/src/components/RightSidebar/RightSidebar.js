@@ -1,14 +1,12 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import {
-    Grid,
-    Row
-} from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 import {
     AffixWrap,
+    Grid,
     ScrollBarContainer
-} from './../';
+} from 'components';
 
 import classes from './RightSidebar.scss';
 

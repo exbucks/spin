@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import {
     Modal,
     Button,
@@ -10,8 +10,8 @@ import { Colors } from 'consts';
 
 const callerData = {
     Avatar: faker.image.avatar(),
-    Name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-    Position: faker.name.jobTitle()
+    Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
+    Position: faker.person.jobTitle()
 };
 
 const CallModal = props => (

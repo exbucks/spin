@@ -1,22 +1,16 @@
 import React from 'react';
 import ReactInterval from 'react-interval';
 import _ from 'underscore';
-import uid from 'node-uuid';
 
 import {
-    Row,
-    Col,
     ListGroup,
     ListGroupItem,
     ButtonGroup,
     Button,
     Table,
-    SlimProgressBar,
     CollapsablePanel,
     Charts
 } from 'components';
-
-import { Colors } from 'consts';
 
 import classes from './Stock.scss';
 

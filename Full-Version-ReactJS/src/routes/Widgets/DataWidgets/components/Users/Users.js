@@ -1,10 +1,8 @@
 import React from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import _ from 'underscore';
-import uid from 'node-uuid';
-import numeral from 'numeral';
-import moment from 'moment';
-import { Link } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 import {
     Media,
@@ -12,8 +10,6 @@ import {
     ListGroupItem,
     CollapsablePanel,
     AvatarImage,
-    SlimProgressBar,
-    Label,
     InputGroup,
     FormControl,
     Button,
@@ -42,10 +38,10 @@ const users = _.map([
         { status: 'Offline' },
     ], status => ({
         ...status,
-        id: uid.v4(),
+        id: uuidv4(),
         avatar: faker.image.avatar(),
-        name: `${ faker.name.firstName() } ${ faker.name.lastName() }`,
-        address: `${ faker.address.city() }, ${ faker.address.stateAbbr() }`
+        name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
+        address: `${ faker.person.address.city() }, ${ faker.person.address.stateAbbr() }`
     }));
 
 const usersByStatus = _.groupBy(users, user => (user.status || '').toLowerCase());

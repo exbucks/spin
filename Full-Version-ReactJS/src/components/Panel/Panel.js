@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import { Panel as ReactBootstrapPanel } from 'react-bootstrap';
 import _ from 'underscore';
 import classNames from 'classnames';
 import perfectScroll from 'perfect-scrollbar';
@@ -249,7 +248,7 @@ class Panel extends React.Component {
             { ...style, overflow: 'hidden' } : style;
 
         return (
-            <ReactBootstrapPanel
+            <div
                 { ...otherProps }
                 className={ panelClass }
                 header={ header }
@@ -261,7 +260,7 @@ class Panel extends React.Component {
                 } }
             >
                 { children }
-            </ReactBootstrapPanel>
+            </div>
         );
     }
 }

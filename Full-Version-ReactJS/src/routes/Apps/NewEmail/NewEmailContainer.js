@@ -1,37 +1,19 @@
 import React from 'react';
-import uid from 'node-uuid';
 import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 import {
     Row,
     Col,
     Panel,
     Button,
-    Nav,
-    NavItem,
-    Badge,
-    ButtonGroup,
     ButtonToolbar,
-    FormGroup,
     InputGroup,
-    Label,
-    Table,
-    Media,
     FormControl,
-    Checkbox,
-    Pagination,
-    OverlayTrigger,
-    Tooltip,
     Divider,
-    AvatarImage
 } from 'components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
 import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
 
 import { Colors } from 'consts';

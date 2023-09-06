@@ -1,10 +1,9 @@
 import React from 'react';
-import uid from 'node-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import _ from 'underscore';
 import moment from 'moment';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import deepAssign from 'assign-deep';
-import { Link } from 'react-router';
 import {
     Row,
     Col,
@@ -16,18 +15,9 @@ import {
     Dropdown,
     DropdownButton,
     MenuItem,
-    ButtonGroup,
-    ButtonToolbar,
-    FormGroup,
-    Label,
-    Table,
     Media,
     InputGroup,
     FormControl,
-    Checkbox,
-    Pagination,
-    OverlayTrigger,
-    Tooltip,
     Divider,
     AvatarImage
 } from 'components';
@@ -43,7 +33,6 @@ import chatData from 'consts/data/app-chat.json';
 // Subcomponents
 // ------------------------------------
 import {
-    LabelsList,
     SearchBox,
     Chat
 } from './../components';
@@ -53,32 +42,24 @@ import {
 // ------------------------------------
 const getData = (inputData) => treeRandomizer(inputData);
 
-const messageLabelToColor = (label) => {
-    switch(label) {
-        case 'Work':
-            return Colors.brandSuccess;
-        case 'Friends':
-            return Colors.brandInfo;
-    }
-}
 
 const usersData = [
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
         statusColor: Colors.brandSuccess,
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         rightElement: (
             <Badge>4</Badge>
         )
     },
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
         statusColor: Colors.brandWarning,
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         rightElement: (
             <i
                 className='fa fa-circle fa-fw'
@@ -87,11 +68,11 @@ const usersData = [
         )
     },
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
         statusColor: Colors.brandDanger,
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         rightElement: (
             <Badge bsStyle='danger'>
                 13
@@ -99,38 +80,38 @@ const usersData = [
         )
     },
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         statusColor: Colors.brandSuccess
     },
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         statusColor: Colors.brandSuccess
     },
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         statusColor: Colors.brandWarning
     },
     {
-        id: uid.v4(),
-        name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+        id: uuidv4(),
+        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
         avatar: faker.image.avatar(),
-        position: faker.name.jobTitle(),
+        position: faker.person.jobTitle(),
         statusColor: Colors.grayLighter
     }
 ];
 
 const updatesData = [
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-danger"></i>
@@ -141,7 +122,7 @@ const updatesData = [
         date: faker.date.recent()
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-success"></i>
@@ -152,7 +133,7 @@ const updatesData = [
         date: faker.date.recent()
     },
     {
-        id: uid.v4(),
+        id: uuidv4(),
         icon: (
             <span className="fa-stack fa-lg">
                 <i className="fa fa-circle-thin fa-stack-2x text-primary"></i>
@@ -260,7 +241,7 @@ class ChatContainer extends RoutedComponent {
                             <Row>
                                 <Col sm={ 6 } xs={ 12 }>
                                     <h4 className='m-y-0'>
-                                        {`Chat with ${faker.name.firstName()} ${faker.name.lastName()}`}
+                                        {`Chat with ${faker.person.firstName()} ${faker.person.lastName()}`}
                                     </h4>
                                 </Col>
                                 <Col sm={ 6 } className='text-right' xsHidden>

@@ -1,21 +1,12 @@
 import React from 'react';
 import _ from 'underscore';
 import num from 'numeral';
-import uid from 'node-uuid';
-import moment from 'moment';
 import {
-    Table,
     ListGroup,
     ListGroupItem,
-    Label,
-    Media,
-    Button,
-    ButtonGroup,
-    Checkbox,
     Row,
     Col,
     Grid,
-    AvatarImage,
     Charts,
     SlimProgressBar
 } from 'components';

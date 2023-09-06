@@ -1,13 +1,11 @@
 import React, { PropTypes } from 'react';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 import {
     Row,
     Col,
     Modal,
-    Button,
     OverlayTrigger,
     Tooltip,
-    AvatarImage,
     Image,
     Divider
 } from 'components';
@@ -16,12 +14,12 @@ import { Colors } from 'consts';
 
 const callerData = {
     Callee: {
-        Name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-        Position: faker.name.jobTitle()
+        Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
+        Position: faker.person.jobTitle()
     },
     Caller: {
-        Name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-        Position: faker.name.jobTitle()
+        Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
+        Position: faker.person.jobTitle()
     }
 };
 

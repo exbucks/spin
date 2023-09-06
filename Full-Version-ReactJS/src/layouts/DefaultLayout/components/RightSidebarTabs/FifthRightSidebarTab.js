@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './RightSidebar.scss';
-import { Checkbox } from 'components';
+import { Form } from 'components';
 
 export default () => (
     <div>
@@ -10,7 +10,7 @@ export default () => (
         <div>
             <div className={ `${classes.flexSpaceBetween} m-b-1` }>
                 <span className='text-white'>Notifications</span>
-                <Checkbox className='m-b-0' />
+                <Form.Check className='m-b-0' />
             </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -19,7 +19,7 @@ export default () => (
         <div>
             <div className={ `${classes.flexSpaceBetween} m-b-1` }>
                 <span className='text-white'>Activity</span>
-                <Checkbox className='m-b-0' />
+                <Form.Check className='m-b-0' />
             </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -28,7 +28,7 @@ export default () => (
         <div>
             <div className={ `${classes.flexSpaceBetween} m-b-1` }>
                 <span className='text-white'>Statisticts</span>
-                <Checkbox className='m-b-0' />
+                <Form.Check className='m-b-0' />
             </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -37,7 +37,7 @@ export default () => (
         <div>
             <div className={ `${classes.flexSpaceBetween} m-b-1` }>
                 <span className='text-white'>Responsive Settings</span>
-                <Checkbox className='m-b-0' />
+                <Form.Check className='m-b-0' />
             </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
