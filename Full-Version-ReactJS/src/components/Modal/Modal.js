@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import PropTypes from 'prop-types'
 import { Modal as ReactBootstrapModal } from 'react-bootstrap';
 import _ from 'underscore';
 import classNames from 'classnames';

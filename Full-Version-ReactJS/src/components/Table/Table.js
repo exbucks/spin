@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import classNames from 'classnames';
 import {
     Table as ReactBootstrapTable
@@ -21,7 +22,7 @@ const Table = props => {
 };
 
 Table.propTypes = {
-    standard: React.PropTypes.bool
+    standard: PropTypes.bool
 };
 
 Table.defaultProps = {

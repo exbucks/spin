@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import {
     HEADER_STYLE_SIMPLE,
@@ -101,10 +102,10 @@ const Header = (props) => {
 }
 
 Header.propTypes = {
-    currentUrl: React.PropTypes.string.isRequired,
-    style: React.PropTypes.string.isRequired,
-    fluid: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.node
+    currentUrl: PropTypes.string.isRequired,
+    style: PropTypes.string.isRequired,
+    fluid: PropTypes.bool.isRequired,
+    children: PropTypes.node
 }
 
 Header.defaultProps = {

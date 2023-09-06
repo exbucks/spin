@@ -1,13 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import { LinkContainer } from 'react-router-bootstrap';
 
 import {
     InputGroup,
     Button,
-    FormGroup,
     FormControl,
-    NavItem,
-    Navbar
 } from 'components';
 
 import classes from './SearchBox.scss';

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import {
     Nav,
@@ -23,7 +24,7 @@ const FavoriteApps = (props) => (
 );
 
 FavoriteApps.propTypes = {
-    appSelected: React.PropTypes.func
+    appSelected: PropTypes.func
 };
 
 export default FavoriteApps;

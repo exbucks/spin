@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import {
     FormGroup,
@@ -28,8 +29,8 @@ const SearchBox = (props) => {
 };
 
 SearchBox.propTypes = {
-    buttonStyle: React.PropTypes.string,
-    phText: React.PropTypes.string
+    buttonStyle: PropTypes.string,
+    phText: PropTypes.string
 };
 
 SearchBox.defaultProps = {

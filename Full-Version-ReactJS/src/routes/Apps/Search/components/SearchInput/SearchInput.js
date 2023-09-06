@@ -1,11 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import numeral from 'numeral';
 import {
-    FormGroup,
     FormControl,
     InputGroup,
     Button,
-    Divider
 } from 'components';
 
 import classes from './../../Search.scss';

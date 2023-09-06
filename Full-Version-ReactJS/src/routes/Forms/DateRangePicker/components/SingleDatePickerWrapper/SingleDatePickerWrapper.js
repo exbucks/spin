@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import moment from 'moment';
 import DatePicker from 'react-date-picker';

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import MaskedInput from 'react-text-mask';
 import { FormControl } from 'components';
 

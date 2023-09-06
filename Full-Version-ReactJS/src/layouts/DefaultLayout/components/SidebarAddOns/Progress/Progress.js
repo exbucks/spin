@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { faker } from '@faker-js/faker';
 import { Link } from 'react-router-dom';
 
@@ -83,7 +84,7 @@ const Progress = (props) => (
 );
 
 Progress.propTypes = {
-    colorSidebar: React.PropTypes.bool
+    colorSidebar: PropTypes.bool
 };
 
 export default Progress;

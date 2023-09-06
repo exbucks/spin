@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import { Link } from 'react-router-dom';
 
@@ -25,9 +26,9 @@ const Timeline = (props) => (
 );
 
 Timeline.propTypes = {
-    children: React.PropTypes.element.isRequired,
-    title: React.PropTypes.string.isRequired,
-    onClose: React.PropTypes.func
+    children: PropTypes.element.isRequired,
+    title: PropTypes.string.isRequired,
+    onClose: PropTypes.func
 };
 
 Timeline.defaultProps = {

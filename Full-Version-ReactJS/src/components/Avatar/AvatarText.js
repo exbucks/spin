@@ -1,11 +1,12 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import Avatar from './Avatar.js';
 import classNames from 'classnames';
 
 import classes from './Avatar.scss';
 
-import { Colors } from './../../consts';
+import { Colors } from 'consts';
 
 const AvatarText = (props) => {
     const contentStyle = {

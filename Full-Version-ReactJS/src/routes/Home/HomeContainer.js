@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 class HomeContainer extends React.Component {
     static contextTypes = {
-        router: React.PropTypes.object.isRequired
+        router: PropTypes.object.isRequired
     }
 
     componentDidMount() {

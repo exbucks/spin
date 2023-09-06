@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import tinycolor from 'tinycolor2';
 import _ from 'underscore';
-import { Colors } from './../../../../consts';
+import { Colors } from 'consts';
 
 import { Charts } from 'components';
 

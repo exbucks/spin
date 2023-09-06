@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Select from 'react-select';
 import _ from 'underscore';
 import Slider, { Range } from 'rc-slider';
@@ -100,7 +101,7 @@ class CustomizedRange extends React.Component {
 
 class DynamicBounds extends React.Component {
     static propTypes = {
-        children: React.PropTypes.node.required
+        children: PropTypes.node.required
     }
 
     constructor(props) {

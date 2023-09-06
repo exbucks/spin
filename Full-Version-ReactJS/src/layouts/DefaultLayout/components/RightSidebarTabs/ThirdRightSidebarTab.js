@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import moment from 'moment';
 import {
@@ -84,7 +85,7 @@ class ThirdRightSidebarTab extends React.Component {
     }
 
     static propTypes = {
-        data: React.PropTypes.object.isRequired
+        data: PropTypes.object.isRequired
     }
 
     renderChat(chat) {

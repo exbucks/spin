@@ -1,10 +1,9 @@
-import React, { PropTypes } from 'react';
-import {
-    Alert as ReactBootstrapAlert
-} from 'react-bootstrap';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Alert as ReactBootstrapAlert } from 'react-bootstrap';
 import classNames from 'classnames';
 
-import { Colors } from './../../consts';
+import { Colors } from 'consts';
 
 import classes from './Alert.scss';
 

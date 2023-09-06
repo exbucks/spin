@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -95,7 +96,7 @@ let rightSidebarTriggerRef,
 
 class DefaultLayout extends React.Component {
     static propTypes = {
-        sidebarAddon: React.PropTypes.string
+        sidebarAddon: PropTypes.string
     };
 
     constructor(props, context) {

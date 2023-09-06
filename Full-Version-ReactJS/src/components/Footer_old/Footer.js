@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 export const Footer = (props) => (
     <footer>
@@ -11,7 +12,7 @@ export const Footer = (props) => (
 );
 
 Footer.propTypes = {
-    container: React.PropTypes.string
+    container: PropTypes.string
 };
 
 export default Footer;

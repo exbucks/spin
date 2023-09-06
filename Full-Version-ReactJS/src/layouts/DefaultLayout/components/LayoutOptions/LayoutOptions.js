@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import {
     Panel,
     Tabs,
@@ -98,40 +99,40 @@ const sidebarAppearanceSelect = [
 
 class LayoutOptions extends React.Component {
     static propTypes = {
-        optionsVisible: React.PropTypes.bool.isRequired,
+        optionsVisible: PropTypes.bool.isRequired,
 
         // State props
-        navbarEnabled: React.PropTypes.bool.isRequired,
-        navbarFixed: React.PropTypes.bool.isRequired,
-        sidebarEnabled: React.PropTypes.bool.isRequired,
-        sidebarStyle: React.PropTypes.string.isRequired,
-        sidebarFixed: React.PropTypes.bool.isRequired,
-        sidebarAside: React.PropTypes.bool.isRequired,
-        contentView: React.PropTypes.string.isRequired,
-        footerEnabled: React.PropTypes.bool.isRequired,
-        footerFixed: React.PropTypes.bool.isRequired,
-        headerStyle: React.PropTypes.string.isRequired,
-        skinColor: React.PropTypes.string.isRequired,
+        navbarEnabled: PropTypes.bool.isRequired,
+        navbarFixed: PropTypes.bool.isRequired,
+        sidebarEnabled: PropTypes.bool.isRequired,
+        sidebarStyle: PropTypes.string.isRequired,
+        sidebarFixed: PropTypes.bool.isRequired,
+        sidebarAside: PropTypes.bool.isRequired,
+        contentView: PropTypes.string.isRequired,
+        footerEnabled: PropTypes.bool.isRequired,
+        footerFixed: PropTypes.bool.isRequired,
+        headerStyle: PropTypes.string.isRequired,
+        skinColor: PropTypes.string.isRequired,
         // Actions
-        toggleOptions: React.PropTypes.func.isRequired,
-        restoreSettings: React.PropTypes.func.isRequired,
+        toggleOptions: PropTypes.func.isRequired,
+        restoreSettings: PropTypes.func.isRequired,
 
-        toggleNavbar: React.PropTypes.func.isRequired,
-        toggleNavbarFixed: React.PropTypes.func.isRequired,
-        toggleSidebar: React.PropTypes.func.isRequired,
-        toggleSidebarFixed: React.PropTypes.func.isRequired,
-        toggleSidebarAside: React.PropTypes.func.isRequired,
-        toggleFooter: React.PropTypes.func.isRequired,
-        toggleFooterFixed: React.PropTypes.func.isRequired,
-        setSidebarStyle: React.PropTypes.func.isRequired,
-        setContentView: React.PropTypes.func.isRequired,
+        toggleNavbar: PropTypes.func.isRequired,
+        toggleNavbarFixed: PropTypes.func.isRequired,
+        toggleSidebar: PropTypes.func.isRequired,
+        toggleSidebarFixed: PropTypes.func.isRequired,
+        toggleSidebarAside: PropTypes.func.isRequired,
+        toggleFooter: PropTypes.func.isRequired,
+        toggleFooterFixed: PropTypes.func.isRequired,
+        setSidebarStyle: PropTypes.func.isRequired,
+        setContentView: PropTypes.func.isRequired,
 
-        toggleHeader: React.PropTypes.func.isRequired,
-        setHeaderStyle: React.PropTypes.func.isRequired,
+        toggleHeader: PropTypes.func.isRequired,
+        setHeaderStyle: PropTypes.func.isRequired,
 
-        setSidebarSkin: React.PropTypes.func.isRequired,
-        setNavbarSkin: React.PropTypes.func.isRequired,
-        setSkinColor: React.PropTypes.func.isRequired
+        setSidebarSkin: PropTypes.func.isRequired,
+        setNavbarSkin: PropTypes.func.isRequired,
+        setSkinColor: PropTypes.func.isRequired
     }
 
     constructor(props, context) {

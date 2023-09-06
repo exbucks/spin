@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import classNames from 'classnames';
 
 import { ProgressBar } from 'components';
@@ -22,7 +23,7 @@ const SlimProgressBar = (props) => {
 };
 
 SlimProgressBar.propTypes = {
-    size: React.PropTypes.string
+    size: PropTypes.string
 };
 
 SlimProgressBar.defaultProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { faker } from '@faker-js/faker';
 import { Link } from 'react-router-dom';
 
@@ -102,7 +103,7 @@ const AvatarAndStats = (props) => (
 );
 
 AvatarAndStats.propTypes = {
-    colorSidebar: React.PropTypes.bool
+    colorSidebar: PropTypes.bool
 };
 
 export default AvatarAndStats;

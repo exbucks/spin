@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import hash from 'object-hash';
 import numeral from 'numeral';
@@ -114,9 +115,9 @@ const EmailAttachments = (props) => {
 };
 
 EmailAttachments.propTypes = {
-    items: React.PropTypes.array.isRequired,
-    actionIcon: React.PropTypes.string.isRequired,
-    actionTooltipText: React.PropTypes.string
+    items: PropTypes.array.isRequired,
+    actionIcon: PropTypes.string.isRequired,
+    actionTooltipText: PropTypes.string
 }
 
 EmailAttachments.defaultProps = {

@@ -1,12 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
 import _ from 'underscore';
 import classNames from 'classnames';
 import perfectScroll from 'perfect-scrollbar';
 
 import bsStyleToColor, { isCustomColor } from './../utils/bsStyleToColor';
-
-import { isMacintosh } from './../../modules/helpers';
 
 import classes from './Panel.scss';
 

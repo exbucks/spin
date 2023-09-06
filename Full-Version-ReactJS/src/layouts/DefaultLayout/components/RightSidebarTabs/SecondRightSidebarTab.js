@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import num from 'numeral';
 import {
@@ -182,7 +183,7 @@ const SecondRightSidebarTab = (props) => (
 );
 
 SecondRightSidebarTab.propTypes = {
-    data: React.PropTypes.object.isRequired
+    data: PropTypes.object.isRequired
 };
 
 export default SecondRightSidebarTab;

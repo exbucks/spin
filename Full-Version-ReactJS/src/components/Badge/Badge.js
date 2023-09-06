@@ -1,8 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import classNames from 'classnames';
-import {
-    Badge as ReactBootstrapBadge
-} from 'react-bootstrap';
+import { Badge as ReactBootstrapBadge } from 'react-bootstrap';
 
 /*
     Extended Badge from ReactBootstrap. Adds outline option, color changing by

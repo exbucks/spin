@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 
 import { Nav, NavItem, Badge } from 'components';
@@ -44,8 +45,8 @@ const SideNav = (props) => {
 };
 
 SideNav.propTypes = {
-    items: React.PropTypes.array.isRequired,
-    folderSelected: React.PropTypes.func
+    items: PropTypes.array.isRequired,
+    folderSelected: PropTypes.func
 }
 
 SideNav.defaultProps = {

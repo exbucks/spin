@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { Breadcrumb as ReactBootstrapBreadcrumb } from 'react-bootstrap';
 import classNames from 'classnames';
 
@@ -27,7 +28,7 @@ const Breadcrumb = (props) => {
 };
 
 Breadcrumb.propTypes = {
-    noBackground: React.PropTypes.bool
+    noBackground: PropTypes.bool
 }
 
 Breadcrumb.defaultProps = {

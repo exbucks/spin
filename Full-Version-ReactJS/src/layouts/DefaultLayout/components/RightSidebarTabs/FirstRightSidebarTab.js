@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import num from 'numeral';
 import moment from 'moment';
@@ -183,7 +184,7 @@ const FirstRightSidebarTab = (props) => (
 )
 
 FirstRightSidebarTab.propTypes = {
-    data: React.PropTypes.object.isRequired
+    data: PropTypes.object.isRequired
 };
 
 export default FirstRightSidebarTab;

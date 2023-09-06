@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Select from 'react-select';
 import Highlighter from 'react-highlight-words';
 import _ from 'underscore';
 
 export default class DisabledUpsellOptions extends React.Component {
     static propTypes = {
-        label: React.PropTypes.string
+        label: PropTypes.string
     }
 
     constructor() {

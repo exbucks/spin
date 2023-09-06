@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import classNames from 'classnames';
 
@@ -39,7 +40,7 @@ class NodeViewer extends React.Component {
 }
 
 NodeViewer.propTypes = {
-    node: React.PropTypes.object
+    node: PropTypes.object
 };
 
 class TreeSortableContainer extends RoutedComponent {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Select from 'react-select';
 import _ from 'underscore';
 import { AvatarImage } from 'components';
@@ -12,14 +13,14 @@ const USERS = [
 
 class AvatarOption extends React.Component {
     static propTypes = {
-		children: React.PropTypes.node,
-		className: React.PropTypes.string,
-		isDisabled: React.PropTypes.bool,
-		isFocused: React.PropTypes.bool,
-		isSelected: React.PropTypes.bool,
-		onFocus: React.PropTypes.func,
-		onSelect: React.PropTypes.func,
-		option: React.PropTypes.object.isRequired
+		children: PropTypes.node,
+		className: PropTypes.string,
+		isDisabled: PropTypes.bool,
+		isFocused: PropTypes.bool,
+		isSelected: PropTypes.bool,
+		onFocus: PropTypes.func,
+		onSelect: PropTypes.func,
+		option: PropTypes.object.isRequired
     }
 
     handleMouseDown (e) {
@@ -62,9 +63,9 @@ const AvatarValue = props => (
     </div>
 );
 AvatarValue.propTypes = {
-    children: React.PropTypes.node,
-	placeholder: React.PropTypes.string,
-	value: React.PropTypes.object
+    children: PropTypes.node,
+	placeholder: PropTypes.string,
+	value: PropTypes.object
 };
 
 function arrowRenderer () {

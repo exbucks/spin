@@ -1,7 +1,6 @@
-import React, { PropTypes } from 'react';
-import {
-    Button as BootstrapButton
-} from 'react-bootstrap';
+import React from 'react';
+import PropTypes from 'prop-types'
+import { Button as BootstrapButton } from 'react-bootstrap';
 import _ from 'underscore';
 import classNames from 'classnames';
 

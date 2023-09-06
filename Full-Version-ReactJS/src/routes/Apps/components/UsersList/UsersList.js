@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -84,7 +85,7 @@ const UsersList = (props) => {
 }
 
 UsersList.propTypes = {
-    items: React.PropTypes.array.isRequired
+    items: PropTypes.array.isRequired
 }
 
 export default UsersList;

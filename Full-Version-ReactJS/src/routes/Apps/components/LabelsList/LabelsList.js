@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import _ from 'underscore';
 import { Nav, NavItem } from 'components';
 
@@ -32,7 +33,7 @@ const LabelsList = (props) => {
 };
 
 LabelsList.propTypes = {
-    items: React.PropTypes.array.isRequired
+    items: PropTypes.array.isRequired
 };
 
 export default LabelsList;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import ReactInterval from 'react-interval';
 import _ from 'underscore';
 
@@ -30,7 +31,7 @@ class Stock extends React.Component {
     }
 
     static propTypes = {
-        onClose: React.PropTypes.func
+        onClose: PropTypes.func
     }
 
     addPointToChart() {
