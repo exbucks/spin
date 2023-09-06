@@ -78,13 +78,13 @@ const commandHandler = (params) => {
             commandString = commandString.concat((i > 0 ? ' ' : '') + `{{${str}}}`);
         });
 
-        return faker.fake(commandString);
+        return faker.random.word(commandString);
     }
 
     if(params.length == 2 && params[0] == 'fake') {
         var commandString = params[1].replace(/\[/g, '{{')
                                     .replace(/\]/g, '}}');
-        return faker.fake(commandString);
+        return faker.random.word(commandString);
     }
 
     if(params.length >= 2 && params[0] == 'dateDiff') {

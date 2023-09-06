@@ -55,7 +55,7 @@ const VerticalTimeline = () => (
                     </AvatarText>
                 }
                 primaryText='Invitiation Sent!'
-                secondaryText={ `From: ${faker.fake('{{name.firstName}} {{name.lastName}}')}` }
+                secondaryText={ `From: ${faker.random.word('{{name.firstName}} {{name.lastName}}')}` }
             />
             <Timeline.ItemBody>
                 <p>
@@ -96,7 +96,7 @@ const VerticalTimeline = () => (
                     </Media.Left>
                     <Media.Body>
                         <h6 className="m-t-0 m-b-0">
-                            { faker.fake('{{name.firstName}} {{name.lastName}}') }
+                            { faker.random.word('{{name.firstName}} {{name.lastName}}') }
                         </h6>
                         <p className="m-t-0">{ `Replied: ${moment(faker.date.recent()).format('DD MMM YYYY')}` }</p>
                     </Media.Body>
@@ -141,7 +141,7 @@ const VerticalTimeline = () => (
                     </AvatarText>
                 }
                 primaryText='Invitiation Sent!'
-                secondaryText={ `From: ${faker.fake('{{name.firstName}} {{name.lastName}}')}` }
+                secondaryText={ `From: ${faker.random.word('{{name.firstName}} {{name.lastName}}')}` }
             />
             <Timeline.ItemBody>
                 <p>
@@ -182,7 +182,7 @@ const VerticalTimeline = () => (
                     </Media.Left>
                     <Media.Body>
                         <h6 className="m-t-0 m-b-0">
-                            { faker.fake('{{name.firstName}} {{name.lastName}}') }
+                            { faker.random.word('{{name.firstName}} {{name.lastName}}') }
                         </h6>
                         <p className="m-t-0">{ `Replied: ${moment(faker.date.recent()).format('DD MMM YYYY')}` }</p>
                     </Media.Body>
