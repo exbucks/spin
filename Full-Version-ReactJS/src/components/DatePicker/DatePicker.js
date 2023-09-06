@@ -13,10 +13,11 @@ import {
     Button
 } from 'components';
 
+import classes from './datePicker.scss';
+
 const pickerPropTypes = {
     enableOutsideDays: PropTypes.bool,
     numberOfMonths: PropTypes.number,
-    orientation: ScrollableOrientationShape,
     withPortal: PropTypes.bool,
     initialVisibleMonth: PropTypes.func,
 
@@ -31,7 +32,6 @@ const pickerPropTypes = {
     monthFormat: PropTypes.string,
 }
 
-import classes from './datePicker.scss';
 
 class DatePicker extends React.Component {
     static propTypes = {
@@ -42,7 +42,7 @@ class DatePicker extends React.Component {
 
         placeholder: PropTypes.string,
 
-        initialDate: PropTypes.date,
+        initialDate: PropTypes.instanceOf(Date),
 
         bsSize: PropTypes.string,
         bsStyle: PropTypes.string,
@@ -133,6 +133,7 @@ class DatePicker extends React.Component {
             bsSize,
             bsStyle,
             bsStyleActive,
+            format,
         } = this.props;
 
         return (

@@ -35,7 +35,7 @@ const MenuSection = props => {
                                         key={ index }
                                         className={ urlMatcher(item, currentPath) ? classes.active : '' }
                                     >
-                                        <Link to={ item.url } onClick={ () => onNavigaiton() }>
+                                        <Link to={ item.url } onClick={ () => onNavigation() }>
                                             { item.title }
                                         </Link>
                                     </li>

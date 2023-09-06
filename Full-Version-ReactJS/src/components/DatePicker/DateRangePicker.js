@@ -15,10 +15,11 @@ import {
     Button
 } from 'components';
 
+import classes from './datePicker.scss';
+
 const pickerPropTypes = {
     enableOutsideDays: PropTypes.bool,
     numberOfMonths: PropTypes.number,
-    orientation: ScrollableOrientationShape,
     withPortal: PropTypes.bool,
     initialVisibleMonth: PropTypes.func,
 
@@ -33,7 +34,6 @@ const pickerPropTypes = {
     monthFormat: PropTypes.string,
 }
 
-import classes from './datePicker.scss';
 
 class DateRangePicker extends React.Component {
     static propTypes = {
@@ -46,8 +46,8 @@ class DateRangePicker extends React.Component {
         placeholderStart: PropTypes.string,
         placeholderEnd: PropTypes.string,
 
-        initialStartDate: PropTypes.date,
-        initialEndDate: PropTypes.date,
+        initialStartDate: PropTypes.instanceOf(Date),
+        initialEndDate: PropTypes.instanceOf(Date),
 
         bsSize: PropTypes.string,
         bsStyle: PropTypes.string,
