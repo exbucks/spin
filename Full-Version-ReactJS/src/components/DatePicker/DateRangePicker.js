@@ -3,9 +3,7 @@ import _ from 'underscore';
 import moment from 'moment';
 import classNames from 'classnames';
 
-import {
-    DayPickerRangeController,
-} from 'react-dates';
+import DatePicker from 'react-date-picker';
 
 import {
     FormControl,
@@ -268,15 +266,7 @@ class DateRangePicker extends React.Component {
                     {
                         (this.state.focusedInput || this.state.isInputFocused) && (
                             <div className={classes.pickerWrap}>
-                                <DayPickerRangeController
-                                    {...pickerProps}
-                                    onDatesChange={this.onDatesChange}
-                                    onFocusChange={this.onFocusChange}
-                                    startDate={startDateRaw}
-                                    endDate={endDateRaw}
-                                    focusedInput={this.state.focusedInput}
-                                    keepOpenOnDateSelect={false}
-                                />
+                                <DatePicker {...pickerProps} onChange={this.onDatesChange} />
                             </div>
                         )
                     }

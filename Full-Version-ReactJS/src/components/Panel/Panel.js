@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import _ from 'underscore';
 import classNames from 'classnames';
 import perfectScroll from 'perfect-scrollbar';
-import isMobile from 'ismobilejs';
 
 import bsStyleToColor, { isCustomColor } from './../utils/bsStyleToColor';
 
@@ -112,13 +111,6 @@ class Panel extends React.Component {
             bodyElement.style.overflowY = 'auto';
             bodyElement.style.paddingTop = (maxHeight === 0) ? 0 : null;
             bodyElement.style.paddingBottom = (maxHeight === 0) ? 0 : null;
-
-            //Falback to native scrollbar on mobile devices and OSXes
-            if(!bodyElement.classList.contains('ps-container') && !isMobile.any && !isMacintosh()) {
-                perfectScroll.initialize(bodyElement, {
-                    suppressScrollX: true
-                });
-            }
         } else {
             // Reset PanelBody style if no fix height is needed
             bodyElement.style.position = null;

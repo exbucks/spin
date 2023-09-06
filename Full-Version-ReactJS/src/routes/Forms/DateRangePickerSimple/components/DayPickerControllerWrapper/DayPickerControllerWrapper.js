@@ -1,15 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { forbidExtraProps } from 'airbnb-prop-types';
-import moment from 'moment';
 import omit from 'lodash/omit';
 
-import {
-    DayPickerSingleDateController,
-    ScrollableOrientationShape,
-
-    isInclusivelyAfterDay
-} from 'react-dates';
+import DatePicker from 'react-date-picker';
 
 import { HORIZONTAL_ORIENTATION } from './../../constants';
 
@@ -57,7 +51,6 @@ const defaultProps = {
     renderDay: null,
     minimumNights: 1,
     isDayBlocked: () => false,
-    isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
     isDayHighlighted: () => false,
     enableOutsideDays: false,
 
@@ -123,13 +116,7 @@ class DayPickerSingleDateControllerWrapper extends React.Component {
                     </div>
                 }
 
-                <DayPickerSingleDateController
-                    {...props}
-                    onDateChange={this.onDateChange}
-                    onFocusChange={this.onFocusChange}
-                    focused={focused}
-                    date={date}
-                />
+                <DatePicker {...props} onChange={this.onDateChange} />
             </div>
         );
     }

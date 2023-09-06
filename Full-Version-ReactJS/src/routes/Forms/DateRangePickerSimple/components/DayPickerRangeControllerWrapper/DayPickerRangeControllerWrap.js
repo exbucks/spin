@@ -2,11 +2,7 @@ import React, { PropTypes } from 'react';
 import _ from 'underscore';
 import moment from 'moment';
 
-import {
-    DayPickerRangeController,
-
-    isInclusivelyAfterDay
-} from 'react-dates';
+import DatePicker from 'react-date-picker';
 import { START_DATE, END_DATE, HORIZONTAL_ORIENTATION } from './../../constants';
 
 const propTypes = {
@@ -50,7 +46,6 @@ const defaultProps = {
     renderDay: null,
     minimumNights: 1,
     isDayBlocked: () => false,
-    isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
     isDayHighlighted: () => false,
     enableOutsideDays: false,
 
@@ -119,14 +114,7 @@ class DayPickerRangeControllerWrap extends React.Component {
                     </div>
                 }
 
-                <DayPickerRangeController
-                    {...props}
-                    onDatesChange={this.onDatesChange}
-                    onFocusChange={this.onFocusChange}
-                    focusedInput={focusedInput}
-                    startDate={startDate}
-                    endDate={endDate}
-                />
+                <DatePicker {...props} onChange={this.onDatesChange} />
             </div>
         );
     }

@@ -1,25 +1,14 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
 import moment from 'moment';
+import DatePicker from 'react-date-picker';
 
-import {
-    SingleDatePicker,
-    SingleDatePickerShape,
-
-    isInclusivelyAfterDay
-} from 'react-dates';
 import { HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from '../../constants';
 
 const propTypes = {
     // example props for the demo
     autoFocus: PropTypes.bool,
     initialDate: PropTypes.date,
-    ...(_.omit(SingleDatePickerShape, [
-        'date',
-        'onDateChange',
-        'focused',
-        'onFocusChange',
-    ])),
 };
 
 const defaultProps = {
@@ -56,7 +45,6 @@ const defaultProps = {
     renderDay: null,
     enableOutsideDays: false,
     isDayBlocked: () => false,
-    isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
     isDayHighlighted: () => {},
 
     // internationalization props
@@ -92,13 +80,9 @@ class SingleDatePickerWrapper extends React.Component {
         const { focused, date } = this.state;
 
         return (
-            <SingleDatePicker
+            <DatePicker
                 {...this.props}
-                id="date_input"
-                date={date}
-                focused={focused}
-                onDateChange={this.onDateChange}
-                onFocusChange={this.onFocusChange}
+                onChange={this.onDateChange}
             />
         );
     }

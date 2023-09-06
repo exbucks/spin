@@ -1,12 +1,11 @@
-import * as redux from 'react-redux';
 import React from 'react';
+import * as redux from 'react-redux';
 import {
     setCurrentPageSettings,
     setCurrentPageSettingsLiteral,
     setLayoutSettingsSafe
 } from 'layouts/DefaultLayout/modules/layout';
 import _ from 'underscore';
-import autocast from 'autocast';
 
 export class RoutedComponent extends React.Component{
     getLayoutOptions() { return {} };
@@ -21,7 +20,7 @@ export class RoutedComponent extends React.Component{
         // Apply the layout settings from the ones provided in the URL
         if(this.props.location.query) {
             const urlSettings = _.mapObject(this.props.location.query,
-                val => autocast(val));
+                val => val);
             this.props.setLayoutSettingsSafe(urlSettings);
         }
 

@@ -1,13 +1,8 @@
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
 import moment from 'moment';
+import DatePicker from 'react-date-picker';
 
-import {
-    DateRangePicker,
-    DateRangePickerShape,
-
-    isInclusivelyAfterDay
-} from 'react-dates';
 import { START_DATE, END_DATE, HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from '../../constants';
 
 const propTypes = {
@@ -16,14 +11,6 @@ const propTypes = {
     autoFocusEndDate: PropTypes.bool,
     initialStartDate: PropTypes.date,
     initialEndDate: PropTypes.date,
-
-    ...(_.omit(DateRangePickerShape, [
-        'startDate',
-        'endDate',
-        'onDatesChange',
-        'focusedInput',
-        'onFocusChange',
-    ])),
 };
 
 const defaultProps = {
@@ -68,7 +55,6 @@ const defaultProps = {
     minimumNights: 1,
     enableOutsideDays: false,
     isDayBlocked: () => false,
-    isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
     isDayHighlighted: () => false,
 
     // internationalization
@@ -121,14 +107,7 @@ class DateRangePickerWrapper extends React.Component {
 
         return (
             <div>
-                <DateRangePicker
-                    {...props}
-                    onDatesChange={this.onDatesChange}
-                    onFocusChange={this.onFocusChange}
-                    focusedInput={focusedInput}
-                    startDate={startDate}
-                    endDate={endDate}
-                />
+                <DatePicker {...props} onChange={this.onDatesChange} />
             </div>
         );
     }

@@ -1,6 +1,5 @@
 import React from 'react';
-import moment from 'moment';
-import { DayPicker } from 'react-dates';
+import DatePicker from 'react-date-picker';
 
 import {
     VERTICAL_ORIENTATION,
@@ -35,24 +34,21 @@ const dpPropsVariants = [
         key: 'dp-default',
         menuTitle: 'default',
         component: () => (
-            <DayPicker />
+            <DatePicker />
         )
     },
     {
         key: 'dp-more-than-month',
         menuTitle: 'more than one month',
         component: () => (
-            <DayPicker numberOfMonths={2} />
+            <DatePicker />
         )
     },
     {
         key: 'dp-vertical',
         menuTitle: 'vertical',
         component: () => (
-            <DayPicker
-                numberOfMonths={2}
-                orientation={VERTICAL_ORIENTATION}
-            />
+            <DatePicker />
         )
     },
     {
@@ -63,10 +59,7 @@ const dpPropsVariants = [
                 height: '568px',
                 maxWidth: '320px',
             }}>
-                <DayPicker
-                    numberOfMonths={12}
-                    orientation={VERTICAL_SCROLLABLE}
-                />
+                <DatePicker />
             </div>
         )
     },
@@ -74,19 +67,14 @@ const dpPropsVariants = [
         key: 'dp-w-custom-arrows',
         menuTitle: 'with custom arrows',
         component: () => (
-            <DayPicker
-                navPrev={<TestPrevIcon />}
-                navNext={<TestNextIcon />}
-            />
+            <DatePicker />
         )
     },
     {
         key: 'dp-w-custom-details',
         menuTitle: 'with custom details',
         component: () => (
-            <DayPicker
-                renderDay={day => (day.day() % 6 === 5 ? '😻' : day.format('D'))}
-            />
+            <DatePicker />
         )
     },
     {
@@ -94,10 +82,7 @@ const dpPropsVariants = [
         menuTitle: 'vertical with fixed-width container',
         component: () => (
             <div style={{ maxWidth: '400px' }}>
-                <DayPicker
-                    numberOfMonths={2}
-                    orientation={VERTICAL_ORIENTATION}
-                />
+                <DatePicker />
             </div>
         )
     },

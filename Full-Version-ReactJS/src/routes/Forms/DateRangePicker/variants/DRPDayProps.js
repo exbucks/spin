@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { isInclusivelyAfterDay, isSameDay } from 'react-dates';
 
 import {
     DateRangePickerWrapper
@@ -61,43 +60,28 @@ const drpDayPropsVariants = [
         key: 'drpdp-allows-next-two-weeks-only',
         menuTitle: 'allows next two weeks only',
         component: () => (
-            <DateRangePickerWrapper
-                isOutsideRange={day =>
-                    !isInclusivelyAfterDay(day, moment()) ||
-                    isInclusivelyAfterDay(day, moment().add(2, 'weeks'))
-                }
-                autoFocus
-            />
+            <DateRangePickerWrapper autoFocus />
         )
     },
     {
         key: 'drpdp-w-some-blocked-dates',
         menuTitle: 'with some blocked dates',
         component: () => (
-            <DateRangePickerWrapper
-                isDayBlocked={day1 => datesList.some(day2 => isSameDay(day1, day2))}
-                autoFocus
-            />
+            <DateRangePickerWrapper autoFocus />
         )
     },
     {
         key: 'drpdp-w-some-highlighted-dates',
         menuTitle: 'with some highlighted dates',
         component: () => (
-            <DateRangePickerWrapper
-                isDayHighlighted={day1 => datesList.some(day2 => isSameDay(day1, day2))}
-                autoFocus
-            />
+            <DateRangePickerWrapper autoFocus />
         )
     },
     {
         key: 'drpdp-blocks-fridays',
         menuTitle: 'blocks fridays',
         component: () => (
-            <DateRangePickerWrapper
-                isDayBlocked={day => moment.weekdays(day.weekday()) === 'Friday'}
-                autoFocus
-            />
+            <DateRangePickerWrapper autoFocus />
         )
     },
     {

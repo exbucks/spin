@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { isInclusivelyAfterDay, isSameDay } from 'react-dates';
 
 import {
     SingleDatePickerWrapper
@@ -39,33 +38,21 @@ const sdpDayPropsVariants = [
         key: 'sdpdp-allows-next-two-weeks-only',
         menuTitle: 'allows next two weeks only',
         component: () => (
-            <SingleDatePickerWrapper
-                isOutsideRange={day =>
-                    !isInclusivelyAfterDay(day, moment()) ||
-                    isInclusivelyAfterDay(day, moment().add(2, 'weeks'))
-                }
-                autoFocus
-            />
+            <SingleDatePickerWrapper autoFocus />
         )
     },
     {
         key: 'sdpdp-w-some-blocked-dates',
         menuTitle: 'with some blocked dates',
         component: () => (
-            <SingleDatePickerWrapper
-                isDayBlocked={day1 => datesList.some(day2 => isSameDay(day1, day2))}
-                autoFocus
-            />
+            <SingleDatePickerWrapper autoFocus />
         )
     },
     {
         key: 'sdpdp-w-some-highlighted-dates',
         menuTitle: 'with some highlighted dates',
         component: () => (
-            <SingleDatePickerWrapper
-                isDayHighlighted={day1 => datesList.some(day2 => isSameDay(day1, day2))}
-                autoFocus
-            />
+            <SingleDatePickerWrapper autoFocus />
         )
     },
     {

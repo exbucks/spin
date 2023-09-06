@@ -1,14 +1,9 @@
-// TODO: Need to implement DayPickerController. At this time it is in development
-// follow - https://github.com/airbnb/react-dates/issues/524
-
 import React, { PropTypes } from 'react';
 import _ from 'underscore';
 import moment from 'moment';
 import classNames from 'classnames';
 
-import {
-    DayPickerSingleDateController,
-} from 'react-dates';
+import ReactDatePicker from 'react-date-picker';
 
 import {
     FormControl,
@@ -223,15 +218,7 @@ class DatePicker extends React.Component {
                     {
                         this.state.focused && (
                             <div className={classes.pickerWrap}>
-                                <DayPickerSingleDateController
-                                    {...pickerProps}
-                                    onDateChange={this.onDateChange}
-                                    //onFocusChange={this.onFocusChange}
-                                    date={date}
-                                    focused={focused}
-                                    keepOpenOnDateSelect={false}
-                                    numberOfMonths={1}
-                                />
+                                <ReactDatePicker {...pickerProps} onChange={this.onDateChange} />
                             </div>
                         )
                     }

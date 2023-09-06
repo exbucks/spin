@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { isInclusivelyAfterDay, isSameDay } from 'react-dates';
 
 import {
     DateRangePicker,

@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import Holder from 'react-image-holder';
 import classNames from 'classnames';
 import _ from 'underscore';
 
@@ -80,7 +79,7 @@ class Image extends React.Component {
             );
         } else {
             return (
-                <Holder
+                <img
                     src='#'
                     width={ this.props.width || '100p' }
                     height={ this.props.height }

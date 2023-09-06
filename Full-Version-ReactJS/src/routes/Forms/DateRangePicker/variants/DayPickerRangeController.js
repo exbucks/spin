@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { isInclusivelyAfterDay, isSameDay } from 'react-dates';
 
 import {
     DayPickerRangeControllerWrapper
@@ -229,10 +228,6 @@ const sdpDayPropsVariants = [
                     onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
                     onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
                     onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-                    isOutsideRange={day =>
-                        !isInclusivelyAfterDay(day, moment()) ||
-                        isInclusivelyAfterDay(day, moment().add(2, 'weeks'))
-                    }
                 />
             );
         }
@@ -246,7 +241,6 @@ const sdpDayPropsVariants = [
                     onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
                     onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
                     onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-                    isDayBlocked={day1 => datesList.some(day2 => isSameDay(day1, day2))}
                 />
             );
         }
@@ -260,7 +254,6 @@ const sdpDayPropsVariants = [
                     onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
                     onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
                     onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
-                    isDayHighlighted={day1 => datesList.some(day2 => isSameDay(day1, day2))}
                 />
             );
         }
