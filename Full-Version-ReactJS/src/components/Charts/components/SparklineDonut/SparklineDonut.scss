@@ -1,12 +1,13 @@
-@import "~bootstrap/scss/utilities";
-@import '~bootstrap/scss/_variables.scss';
+@import "~bootstrap/scss/bootstrap";
+@import '~chartist/dist/_settings.scss';
+@import "custom.scss";
 
 .ctDonutChart {
     display: inline-block;
     position: relative;
 
     .ctSliceDonut {
-        @extend .ct-slice-donut;
+        @extend .ct-slice-donut !optional;
     }
 
     .ctDonutBackground{

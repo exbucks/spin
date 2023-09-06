@@ -1,5 +1,5 @@
-@import "~bootstrap/scss/utilities";
-@import '~bootstrap/scss/_variables.scss';
+@import "~bootstrap/scss/bootstrap";
+@import "custom.scss";
 
 @mixin darken-fill($refColor) {
     fill: rgba($refColor, .1);
@@ -9,7 +9,7 @@
     display: inline-block;
 
     .ctSlicePie {
-        @extend .ct-slice-pie;
+        @extend .ct-slice-pie !optional;
     }
 
     .secondaryPart { }

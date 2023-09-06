@@ -1,10 +1,6 @@
-@import "~bootstrap/scss/utilities";
-@import '~bootstrap/scss/_variables.scss';
-@import '~bootstrap/scss/_mixins.scss';
-@import '~bootstrap/scss/_thumbnails.scss';
+@import "custom.scss";
 
 .galleryThumbnail {
-    @extend .thumbnail;
     border: 2px solid $gray-darker;
     background: $gray-darker;
     transition: none;
