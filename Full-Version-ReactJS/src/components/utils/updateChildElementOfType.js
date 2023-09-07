@@ -5,18 +5,21 @@ export default function updateChildElementOfType(children, typesToPassthrough, _
   const configs = Array.isArray(_config) ? _config : [_config]
 
   const mapper = (child) => {
-    const targetConfig = _.findWhere(configs, { targetType: child.type })
-    if (targetConfig && child.type === targetConfig.targetType) {
-      if (_.isFunction(targetConfig.props)) {
-        return React.cloneElement(child, targetConfig.props(child.props))
+    if (child) {
+      const targetConfig = _.findWhere(configs, { targetType: child.type })
+      if (targetConfig && child.type === targetConfig.targetType) {
+        if (_.isFunction(targetConfig.props)) {
+          return React.cloneElement(child, targetConfig.props(child.props))
+        }
+        return React.cloneElement(child, targetConfig.props)
+      } else if (_.contains(typesToPassthrough, child.type)) {
+        return React.cloneElement(child, {
+          children: updateChildElementOfType(child.props.children, typesToPassthrough, configs)
+        })
       }
-      return React.cloneElement(child, targetConfig.props)
-    } else if (_.contains(typesToPassthrough, child.type)) {
-      return React.cloneElement(child, {
-        children: updateChildElementOfType(child.props.children, typesToPassthrough, configs)
-      })
+      return child
     }
-    return child
+    return null
   }
 
   return Array.isArray(children) ? React.Children.map(children, mapper) : mapper(children)

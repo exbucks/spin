@@ -108,11 +108,11 @@ class Layout extends React.Component {
   updateContentHeight(additionalHeight = 20) {
     const { contentElement, footerElement, navbarElement, sidebarElement, windowElement } = this
 
-    const sidebarRect = sidebarElement.getBoundingClientRect()
+    const sidebarRect = sidebarElement?.getBoundingClientRect()
 
-    const windowHeight = windowElement.innerHeight,
+    const windowHeight = windowElement?.innerHeight,
       sidebarHeight =
-        sidebarElement.scrollHeight + sidebarRect.top + window.scrollY + additionalHeight
+        sidebarElement?.scrollHeight + sidebarRect?.top + window.scrollY + additionalHeight
 
     // Determine to use window height ot sidebar height
     const targetHeight =
@@ -121,7 +121,7 @@ class Layout extends React.Component {
         : sidebarHeight
 
     // Reset the previous content minHeight
-    contentElement.style.minHeight = null
+    contentElement.style?.minHeight = null
 
     // Get footer height by visibility
     const footerHeight =
@@ -243,16 +243,14 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, className, ...otherProps } = this.props
+    const { children, className } = this.props
 
     const adjustedChildren = this.buildChildren(children)
 
     const appClasses = classNames(this.getConfigurationClasses(), className)
 
     return (
-      <div id="application" className={appClasses} ref={(parent) => this.findNodes(parent)}>
-        <div className="main-wrap">{adjustedChildren}</div>
-      </div>
+      <div>tesfasdfadsfasdfdfaddfasdf</div>
     )
   }
 }
