@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { DateRangePickerWrapper } from './../components';
+import { DateRangePickerWrapper } from './../components'
 
 const datesList = [
   moment(),
@@ -12,7 +12,7 @@ const datesList = [
   moment().add(11, 'days'),
   moment().add(12, 'days'),
   moment().add(13, 'days')
-];
+]
 
 const drpDayPropsVariants = [
   {
@@ -72,6 +72,6 @@ const drpDayPropsVariants = [
     menuTitle: 'with custom daily details',
     component: () => <DateRangePickerWrapper renderDay={(day) => day.format('ddd')} autoFocus />
   }
-];
+]
 
-export default drpDayPropsVariants;
+export default drpDayPropsVariants

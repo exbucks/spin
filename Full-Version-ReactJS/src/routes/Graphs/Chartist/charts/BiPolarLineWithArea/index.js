@@ -1,3 +1,3 @@
-import BiPolarLineWithArea from './BiPolarLineWithArea';
+import BiPolarLineWithArea from './BiPolarLineWithArea'
 
-export default BiPolarLineWithArea;
+export default BiPolarLineWithArea

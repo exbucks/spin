@@ -1,7 +1,7 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import SliderSwatch from './SliderSwatch';
+import SliderSwatch from './SliderSwatch'
 
 export const SliderSwatches = ({ onClick, hsl }) => {
   const styles = reactCSS({
@@ -19,7 +19,7 @@ export const SliderSwatches = ({ onClick, hsl }) => {
         clear: 'both'
       }
     }
-  });
+  })
 
   return (
     <div style={styles.swatches}>
@@ -67,7 +67,7 @@ export const SliderSwatches = ({ onClick, hsl }) => {
       </div>
       <div style={styles.clear} />
     </div>
-  );
-};
+  )
+}
 
-export default SliderSwatches;
+export default SliderSwatches

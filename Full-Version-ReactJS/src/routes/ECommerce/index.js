@@ -1,3 +1,3 @@
-import ECommerceContainer from './ECommerceContainer';
+import ECommerceContainer from './ECommerceContainer'
 
-export default ECommerceContainer;
+export default ECommerceContainer

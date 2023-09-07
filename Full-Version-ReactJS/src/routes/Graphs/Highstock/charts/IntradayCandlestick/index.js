@@ -1,3 +1,3 @@
-import IntradayCandlestick from './IntradayCandlestick';
+import IntradayCandlestick from './IntradayCandlestick'
 
-export default IntradayCandlestick;
+export default IntradayCandlestick

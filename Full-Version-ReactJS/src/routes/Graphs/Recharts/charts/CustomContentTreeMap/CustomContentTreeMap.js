@@ -1,13 +1,13 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, Treemap } = Charts.Recharts;
+const { ResponsiveContainer, Treemap } = Charts.Recharts
 
-import { dataTreeMap } from './../../data';
+import { dataTreeMap } from './../../data'
 
 const CustomizedContainer = (props) => {
-  const colors = ['#4EBCEB', '#46BDA8', '#8AAF56', '#E56B44', '#CA3E4C', '#B78FFD'];
-  const { root, depth, x, y, width, height, index, payload, rank, name } = props;
+  const colors = ['#4EBCEB', '#46BDA8', '#8AAF56', '#E56B44', '#CA3E4C', '#B78FFD']
+  const { root, depth, x, y, width, height, index, payload, rank, name } = props
 
   return (
     <g>
@@ -41,8 +41,8 @@ const CustomizedContainer = (props) => {
         </text>
       ) : null}
     </g>
-  );
-};
+  )
+}
 
 const CustomContentTreeMap = (props) => (
   <ResponsiveContainer height={300}>
@@ -55,6 +55,6 @@ const CustomContentTreeMap = (props) => (
       content={CustomizedContainer}
     />
   </ResponsiveContainer>
-);
+)
 
-export default CustomContentTreeMap;
+export default CustomContentTreeMap

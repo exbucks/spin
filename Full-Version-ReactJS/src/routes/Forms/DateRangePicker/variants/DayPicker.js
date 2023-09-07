@@ -1,7 +1,7 @@
-import React from 'react';
-import DatePicker from 'react-date-picker';
+import React from 'react'
+import DatePicker from 'react-date-picker'
 
-import { VERTICAL_ORIENTATION, VERTICAL_SCROLLABLE } from '../constants';
+import { VERTICAL_ORIENTATION, VERTICAL_SCROLLABLE } from '../constants'
 
 const TestPrevIcon = (props) => (
   <span
@@ -14,7 +14,7 @@ const TestPrevIcon = (props) => (
   >
     Prev
   </span>
-);
+)
 const TestNextIcon = (props) => (
   <span
     style={{
@@ -26,7 +26,7 @@ const TestNextIcon = (props) => (
   >
     Next
   </span>
-);
+)
 
 const dpPropsVariants = [
   {
@@ -77,6 +77,6 @@ const dpPropsVariants = [
       </div>
     )
   }
-];
+]
 
-export default dpPropsVariants;
+export default dpPropsVariants

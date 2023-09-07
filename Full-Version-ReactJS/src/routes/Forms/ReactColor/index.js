@@ -1,3 +1,3 @@
-import ReactColorContainer from './ReactColorContainer';
+import ReactColorContainer from './ReactColorContainer'
 
-export default ReactColorContainer;
+export default ReactColorContainer

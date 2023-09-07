@@ -1,3 +1,3 @@
-import VerticalLineChart from './VerticalLineChart';
+import VerticalLineChart from './VerticalLineChart'
 
-export default VerticalLineChart;
+export default VerticalLineChart

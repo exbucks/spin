@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   Row,
@@ -16,18 +16,18 @@ import {
   FavoriteStar,
   Divider,
   Label
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import renderSection from 'modules/sectionRender'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './ProfileDetails.scss';
+import classes from './ProfileDetails.scss'
 
-import { Chat, DetailContact, Messages, Overview } from './components';
+import { Chat, DetailContact, Messages, Overview } from './components'
 
 // ------------------------------------
 // Subcomponents
@@ -39,7 +39,7 @@ const User = {
   shortProfile: faker.lorem.paragraph(),
   labels: [faker.commerce.department(), faker.commerce.department(), faker.commerce.department()],
   favoritted: !!Math.round(Math.random())
-};
+}
 
 // ------------------------------------
 // Sub Elements
@@ -90,7 +90,7 @@ const renderUser = () => (
       ))}
     </div>
   </div>
-);
+)
 
 // ------------------------------------
 // Main Container
@@ -99,7 +99,7 @@ class ProfileDetailsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -135,8 +135,8 @@ class ProfileDetailsContainer extends RoutedComponent {
           </Tab.Container>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(ProfileDetailsContainer);
+export default connect()(ProfileDetailsContainer)

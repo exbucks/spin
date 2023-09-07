@@ -1,7 +1,7 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { Swatch } from 'react-color/lib/components/common';
+import { Swatch } from 'react-color/lib/components/common'
 
 export const CompactColor = ({ color, onClick = () => {}, onSwatchHover, active }) => {
   const styles = reactCSS(
@@ -44,7 +44,7 @@ export const CompactColor = ({ color, onClick = () => {}, onSwatchHover, active 
       }
     },
     { active, 'color-#FFFFFF': color === '#FFFFFF', transparent: color === 'transparent' }
-  );
+  )
 
   return (
     <Swatch
@@ -56,7 +56,7 @@ export const CompactColor = ({ color, onClick = () => {}, onSwatchHover, active 
     >
       <div style={styles.dot} />
     </Swatch>
-  );
-};
+  )
+}
 
-export default CompactColor;
+export default CompactColor

@@ -1,3 +1,3 @@
-import SearchVideoContainer from './SearchVideoContainer';
+import SearchVideoContainer from './SearchVideoContainer'
 
-export default SearchVideoContainer;
+export default SearchVideoContainer

@@ -1,9 +1,9 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { SingleDatePickerWrapper } from './../components';
+import { SingleDatePickerWrapper } from './../components'
 
-import { VERTICAL_ORIENTATION, ANCHOR_RIGHT } from '../constants';
+import { VERTICAL_ORIENTATION, ANCHOR_RIGHT } from '../constants'
 
 const TestPrevIcon = () => (
   <span
@@ -16,7 +16,7 @@ const TestPrevIcon = () => (
   >
     Prev
   </span>
-);
+)
 
 const TestNextIcon = () => (
   <span
@@ -29,7 +29,7 @@ const TestNextIcon = () => (
   >
     Next
   </span>
-);
+)
 
 const sdpCalendarPropsVariants = [
   {
@@ -93,6 +93,6 @@ const sdpCalendarPropsVariants = [
     menuTitle: 'with outside days enabled',
     component: () => <SingleDatePickerWrapper numberOfMonths={1} enableOutsideDays autoFocus />
   }
-];
+]
 
-export default sdpCalendarPropsVariants;
+export default sdpCalendarPropsVariants

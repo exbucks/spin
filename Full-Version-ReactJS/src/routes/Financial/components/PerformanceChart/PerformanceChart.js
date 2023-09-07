@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import tinycolor from 'tinycolor2';
-import _ from 'underscore';
-import { Colors } from 'consts';
+import React from 'react'
+import PropTypes from 'prop-types'
+import tinycolor from 'tinycolor2'
+import _ from 'underscore'
+import { Colors } from 'consts'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const getChartData = (data) => {
-  const colors = ['#CB3E4B', '#3BBDA8', '#A072FC'];
+  const colors = ['#CB3E4B', '#3BBDA8', '#A072FC']
 
   return _.map(data, (stream, i) => {
-    const color = i >= colors.length ? _.last(colors) : colors[i];
+    const color = i >= colors.length ? _.last(colors) : colors[i]
 
     return {
       name: stream.Year,
@@ -29,9 +29,9 @@ const getChartData = (data) => {
           [1, tinycolor(color).setAlpha(0).toString()]
         ]
       }
-    };
-  });
-};
+    }
+  })
+}
 
 const getChartConfig = (series) => ({
   chart: {
@@ -61,13 +61,13 @@ const getChartConfig = (series) => ({
   yAxis: {
     labels: {
       formatter: function () {
-        return this.value;
+        return this.value
       }
     }
   },
   tooltip: {
     formatter: function () {
-      return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y;
+      return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y
     }
   },
   plotOptions: {
@@ -79,14 +79,14 @@ const getChartConfig = (series) => ({
     }
   },
   series: series
-});
+})
 
 const PerformanceChart = (props) => (
   <Charts.HighchartBasicArea config={getChartConfig(getChartData(props.data))} />
-);
+)
 
 PerformanceChart.propTypes = {
   data: PropTypes.array.isRequired
-};
+}
 
-export default PerformanceChart;
+export default PerformanceChart

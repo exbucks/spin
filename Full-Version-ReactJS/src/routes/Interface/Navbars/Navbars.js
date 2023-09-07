@@ -1,5 +1,5 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
 import {
   Row,
@@ -15,18 +15,18 @@ import {
   FormGroup,
   InputGroup,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import logo from 'static/spin-logo-inverted.png';
+import logo from 'static/spin-logo-inverted.png'
 
 class NavbarsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -72,7 +72,7 @@ class NavbarsContainer extends RoutedComponent {
               <Form
                 className="navbar-form navbar-left"
                 onSubmit={(e) => {
-                  e.preventDefault();
+                  e.preventDefault()
                 }}
               >
                 <FormGroup>
@@ -146,7 +146,7 @@ class NavbarsContainer extends RoutedComponent {
               <Form
                 className="navbar-form navbar-left"
                 onSubmit={(e) => {
-                  e.preventDefault();
+                  e.preventDefault()
                 }}
               >
                 <FormGroup>
@@ -222,7 +222,7 @@ class NavbarsContainer extends RoutedComponent {
               <Form
                 className="navbar-form navbar-left"
                 onSubmit={(e) => {
-                  e.preventDefault();
+                  e.preventDefault()
                 }}
               >
                 <FormGroup>
@@ -284,7 +284,7 @@ class NavbarsContainer extends RoutedComponent {
               <Form
                 className="navbar-form navbar-left"
                 onSubmit={(e) => {
-                  e.preventDefault();
+                  e.preventDefault()
                 }}
               >
                 <FormGroup>
@@ -499,8 +499,8 @@ class NavbarsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(NavbarsContainer);
+export default connect()(NavbarsContainer)

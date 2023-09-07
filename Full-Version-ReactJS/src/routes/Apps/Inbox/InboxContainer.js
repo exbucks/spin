@@ -1,8 +1,8 @@
-import React from 'react';
-import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import _ from 'underscore'
+import moment from 'moment'
+import truncate from 'truncate'
+import { Link } from 'react-router-dom'
 import {
   Row,
   Col,
@@ -19,63 +19,63 @@ import {
   Tooltip,
   Divider,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import inboxData from 'consts/data/app-inbox.json';
+import { Colors } from 'consts'
+import inboxData from 'consts/data/app-inbox.json'
 
-import classes from './Inbox.scss';
+import classes from './Inbox.scss'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { LabelsList, SearchBox, SideNav } from './../components';
+import { LabelsList, SearchBox, SideNav } from './../components'
 
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const messageLabelToColor = (label) => {
   switch (label) {
     case 'Work':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Friends':
-      return Colors.brandInfo;
+      return Colors.brandInfo
   }
-};
+}
 
 const userStatusToColor = (status) => {
   switch (status) {
     default:
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const folders = [
   { title: 'Inbox', count: 4 },
   { title: 'Draft', count: 2 },
   { title: 'Sent', count: 7 },
   { title: 'Trash', count: 1 }
-];
+]
 
 const labels = [
   { title: 'Family', color: Colors.brandPrimary },
   { title: 'Friends', color: Colors.brandInfo },
   { title: 'Work', color: Colors.brandSuccess },
   { title: 'Other', color: Colors.brandDanger }
-];
+]
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -133,7 +133,7 @@ const renderPanelHeader = (router) => (
       </Button>
     </div>
   </div>
-);
+)
 
 const renderPanelFooter = () => (
   <div className="flex-space-between">
@@ -151,7 +151,7 @@ const renderPanelFooter = () => (
       ellipsis
     />
   </div>
-);
+)
 
 const renderMessagesTable = (messages) => (
   <Table responsive hover fill>
@@ -263,21 +263,21 @@ const renderMessagesTable = (messages) => (
       ))}
     </tbody>
   </Table>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class InboxContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(inboxData) };
+    this.state = { data: getData(inboxData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -289,7 +289,7 @@ class InboxContainer extends RoutedComponent {
               <SideNav
                 items={folders}
                 folderSelected={() => {
-                  this.props.history.push('/apps/inbox');
+                  this.props.history.push('/apps/inbox')
                 }}
               />
             </Col>
@@ -309,8 +309,8 @@ class InboxContainer extends RoutedComponent {
           </Panel>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(InboxContainer);
+export default connect()(InboxContainer)

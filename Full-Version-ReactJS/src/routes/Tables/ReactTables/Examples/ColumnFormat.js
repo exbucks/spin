@@ -1,12 +1,12 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { jobs } from './../utils';
+import { jobs } from './../utils'
 
-const ActiveFormatter = (props) => <input type="checkbox" defaultChecked={props.active} />;
+const ActiveFormatter = (props) => <input type="checkbox" defaultChecked={props.active} />
 
 const ColumnFormat = () => {
-  const data = Array.from(jobs(['id', 'name', 'active'], 5));
+  const data = Array.from(jobs(['id', 'name', 'active'], 5))
 
   return (
     <BootstrapTable data={data}>
@@ -21,7 +21,7 @@ const ColumnFormat = () => {
         Active
       </TableHeaderColumn>
     </BootstrapTable>
-  );
-};
+  )
+}
 
-export default ColumnFormat;
+export default ColumnFormat

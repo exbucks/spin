@@ -1,9 +1,9 @@
-import React from 'react';
-import _ from 'underscore';
-import Dropzone from 'react-dropzone';
-import classNames from 'classnames';
-import numeral from 'numeral';
-import moment from 'moment';
+import React from 'react'
+import _ from 'underscore'
+import Dropzone from 'react-dropzone'
+import classNames from 'classnames'
+import numeral from 'numeral'
+import moment from 'moment'
 
 import {
   Grid,
@@ -18,13 +18,13 @@ import {
   OverlayTrigger,
   Tooltip,
   Badge
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './DropzoneUploader.scss';
+import classes from './DropzoneUploader.scss'
 
 const typeToIcon = (type) => {
   const map = {
@@ -38,9 +38,9 @@ const typeToIcon = (type) => {
     ['image/png']: 'fa-file-image-o',
     ['audio/mp3']: 'fa-file-audio-o',
     ['text/plain']: 'fa-file-text-o'
-  };
-  return map[type] || null;
-};
+  }
+  return map[type] || null
+}
 
 const extToIcon = (filename) => {
   const map = {
@@ -50,46 +50,46 @@ const extToIcon = (filename) => {
     ['xlsx']: 'fa-file-excel-o',
     ['ppt']: 'fa-file-powerpoint-o',
     ['pdf']: 'fa-file-pdf-o'
-  };
+  }
 
-  return map[filename.split('.').pop()] || null;
-};
+  return map[filename.split('.').pop()] || null
+}
 
 const getFileIcon = (file) => {
-  return typeToIcon(file.type) || extToIcon(file.name) || 'fa-file-o';
-};
+  return typeToIcon(file.type) || extToIcon(file.name) || 'fa-file-o'
+}
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class DropzoneUploader extends RoutedComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isOver: false,
       files: [],
       listStyle: 'grid'
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   fileDropped(files) {
     this.setState({
       files: [...this.state.files, ...files],
       isOver: false
-    });
+    })
   }
 
   removeFile(file) {
     this.setState({
       files: _.reject(this.state.files, file)
-    });
+    })
   }
 
   renderList() {
@@ -130,7 +130,7 @@ class DropzoneUploader extends RoutedComponent {
           </ListGroupItem>
         ))}
       </ListGroup>
-    );
+    )
   }
 
   renderGrid() {
@@ -164,11 +164,11 @@ class DropzoneUploader extends RoutedComponent {
           </Col>
         ))}
       </Row>
-    );
+    )
   }
 
   renderFiles() {
-    const { listStyle } = this.state;
+    const { listStyle } = this.state
 
     return (
       <div className="m-t-3">
@@ -187,7 +187,7 @@ class DropzoneUploader extends RoutedComponent {
                   listStyle === 'list' && classes['action--active']
                 }`}
                 onClick={() => {
-                  this.setState({ listStyle: 'list' });
+                  this.setState({ listStyle: 'list' })
                 }}
                 href="javascript:;"
               >
@@ -204,7 +204,7 @@ class DropzoneUploader extends RoutedComponent {
                   listStyle === 'grid' && classes['action--active']
                 }`}
                 onClick={() => {
-                  this.setState({ listStyle: 'grid' });
+                  this.setState({ listStyle: 'grid' })
                 }}
                 href="javascript:;"
               >
@@ -218,17 +218,17 @@ class DropzoneUploader extends RoutedComponent {
           {listStyle === 'grid' && this.renderGrid()}
         </div>
       </div>
-    );
+    )
   }
 
   render() {
-    const { isOver } = this.state;
+    const { isOver } = this.state
     const dropzoneClass = classNames(
       {
         [classes['dropzone--active']]: isOver
       },
       classes['dropzone']
-    );
+    )
 
     return (
       <div className={classes.mainWrap}>
@@ -245,10 +245,10 @@ class DropzoneUploader extends RoutedComponent {
               className={dropzoneClass}
               multiple
               onDragEnter={(ev) => {
-                this.setState({ isOver: true });
+                this.setState({ isOver: true })
               }}
               onDragLeave={(ev) => {
-                this.setState({ isOver: false });
+                this.setState({ isOver: false })
               }}
               onDrop={this.fileDropped.bind(this)}
             >
@@ -268,8 +268,8 @@ class DropzoneUploader extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(DropzoneUploader);
+export default connect()(DropzoneUploader)

@@ -1,3 +1,3 @@
-import SparklineDonut from './SparklineDonut';
+import SparklineDonut from './SparklineDonut'
 
-export default SparklineDonut;
+export default SparklineDonut

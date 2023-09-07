@@ -1,3 +1,3 @@
-import ActiveShapeChart from './ActiveShapeChart';
+import ActiveShapeChart from './ActiveShapeChart'
 
-export default ActiveShapeChart;
+export default ActiveShapeChart

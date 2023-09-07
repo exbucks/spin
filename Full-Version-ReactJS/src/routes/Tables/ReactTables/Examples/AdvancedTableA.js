@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable'
+import moment from 'moment'
 import {
   Col,
   ButtonGroup,
@@ -11,59 +11,59 @@ import {
   DropdownButton,
   StarRating,
   Label
-} from 'components';
-import { products } from './../utils';
-import classes from './../ReactTables.scss';
+} from 'components'
+import { products } from './../utils'
+import classes from './../ReactTables.scss'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const data = Array.from(
   products(['id', 'name', 'price', 'quality_id', 'satisfaction', 'inStockDate'], 500)
-);
+)
 
 const qualityNames = {
   0: 'Bad',
   1: 'Good',
   2: 'Unknown'
-};
+}
 
-const satisfaction = [1, 2, 3, 4, 5, 6];
+const satisfaction = [1, 2, 3, 4, 5, 6]
 
-const enumFormatter = (cell, row, enumObject) => enumObject[cell];
-const dateFormatter = (cell) => moment(cell).format('DD/MM/YYYY');
-const satisfactionFormatter = (cell) => <StarRating max={6} at={cell} />;
+const enumFormatter = (cell, row, enumObject) => enumObject[cell]
+const dateFormatter = (cell) => moment(cell).format('DD/MM/YYYY')
+const satisfactionFormatter = (cell) => <StarRating max={6} at={cell} />
 const qualityFormatter = (cell, row, enumObject) => {
   const qualityToProps = {
     0: { bsStyle: 'danger' },
     1: { bsStyle: 'success' },
     2: { bsStyle: 'custom', customColor: Colors.grayLighter }
-  };
+  }
 
-  return <Label {...qualityToProps[cell]}>{enumObject[cell]}</Label>;
-};
+  return <Label {...qualityToProps[cell]}>{enumObject[cell]}</Label>
+}
 
 class AdvancedTableA extends React.Component {
   static propTypes = {
     name: PropTypes.string,
     pageSizes: PropTypes.array
-  };
+  }
 
   static defaultProps = {
     name: '',
     pageSizes: [5, 10, 25, 50]
-  };
+  }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       pageSize: 10
-    };
+    }
   }
 
   createCustomToolbar(props) {
-    const { name: tableName, pageSizes } = this.props;
-    const { btnGroup, searchField, clearBtn } = props.components;
+    const { name: tableName, pageSizes } = this.props
+    const { btnGroup, searchField, clearBtn } = props.components
 
     return (
       <div>
@@ -85,7 +85,7 @@ class AdvancedTableA extends React.Component {
                 onSelect={(eKey) => {
                   this.setState({
                     pageSize: pageSizes[eKey]
-                  });
+                  })
                 }}
               >
                 {pageSizes.map((pageSize, index) => (
@@ -98,7 +98,7 @@ class AdvancedTableA extends React.Component {
           </div>
         </Col>
       </div>
-    );
+    )
   }
 
   createCustomButtonGroup(props) {
@@ -108,11 +108,11 @@ class AdvancedTableA extends React.Component {
         {props.deleteBtn}
         {props.insertBtn}
       </ButtonGroup>
-    );
+    )
   }
 
   createPaginationPanel(props) {
-    const { totalText, pageList } = props.components;
+    const { totalText, pageList } = props.components
 
     return (
       <div>
@@ -123,15 +123,15 @@ class AdvancedTableA extends React.Component {
           })}
         </Col>
       </div>
-    );
+    )
   }
 
   handlerClickCleanFiltered() {
-    this.refs.name.cleanFiltered();
-    this.refs.quality.cleanFiltered();
-    this.refs.price.cleanFiltered();
-    this.refs.satisfaction.cleanFiltered();
-    this.refs.inStockDate.cleanFiltered();
+    this.refs.name.cleanFiltered()
+    this.refs.quality.cleanFiltered()
+    this.refs.price.cleanFiltered()
+    this.refs.satisfaction.cleanFiltered()
+    this.refs.inStockDate.cleanFiltered()
   }
 
   render() {
@@ -142,7 +142,7 @@ class AdvancedTableA extends React.Component {
       insertBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           Add <i className="fa fa-fw fa-plus text-success"></i>
@@ -151,7 +151,7 @@ class AdvancedTableA extends React.Component {
       deleteBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           Delete
@@ -160,7 +160,7 @@ class AdvancedTableA extends React.Component {
       exportCSVBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           Export
@@ -170,7 +170,7 @@ class AdvancedTableA extends React.Component {
       clearSearchBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           <i className="fa fa-search fa-fw"></i>
@@ -178,13 +178,13 @@ class AdvancedTableA extends React.Component {
       ),
       sizePerPage: this.state.pageSize,
       paginationShowsTotal: true
-    };
+    }
 
     const selectRowProp = {
       mode: 'checkbox',
       clickToSelect: true,
       onSelectAll: this.onSelectAll
-    };
+    }
 
     return (
       <BootstrapTable
@@ -255,8 +255,8 @@ class AdvancedTableA extends React.Component {
           In Stock From
         </TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default AdvancedTableA;
+export default AdvancedTableA

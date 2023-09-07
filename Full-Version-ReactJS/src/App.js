@@ -1,11 +1,11 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import DefaultLayout from './layouts/DefaultLayout';
-import configureStore from './store';
-import './App.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import DefaultLayout from './layouts/DefaultLayout'
+import configureStore from './store'
+import './App.scss'
 
-const { store, persistor } = configureStore();
+const { store, persistor } = configureStore()
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     path: 'about',
     element: <div>About</div>
   }
-]);
+])
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <RouterProvider router={router} />
       </PersistGate>
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

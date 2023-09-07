@@ -1,9 +1,9 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, PieChart, Pie } = Charts.Recharts;
+const { ResponsiveContainer, PieChart, Pie } = Charts.Recharts
 
-import { dataPieChart } from './../../data';
+import { dataPieChart } from './../../data'
 
 const StraightAnglePieChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -19,6 +19,6 @@ const StraightAnglePieChart = (props) => (
       />
     </PieChart>
   </ResponsiveContainer>
-);
+)
 
-export default StraightAnglePieChart;
+export default StraightAnglePieChart

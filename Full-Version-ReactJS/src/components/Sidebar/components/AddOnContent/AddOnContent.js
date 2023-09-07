@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import _ from 'underscore'
 
-import classes from './AddOnContent.scss';
+import classes from './AddOnContent.scss'
 
-import { SIDEBAR_STYLE_DEFAULT } from 'layouts/DefaultLayout/modules/layout';
+import { SIDEBAR_STYLE_DEFAULT } from 'layouts/DefaultLayout/modules/layout'
 
 const AddOnContent = (props) => {
-  const { supportedStyle, children, className } = props;
+  const { supportedStyle, children, className } = props
 
   const stylesNormalized =
-    typeof supportedStyle === 'array' ? props.supportedStyle : [supportedStyle];
+    typeof supportedStyle === 'array' ? props.supportedStyle : [supportedStyle]
 
   const addOnClass = classNames(
     {
@@ -30,18 +30,18 @@ const AddOnContent = (props) => {
     },
     'sidebar-section',
     className
-  );
+  )
 
-  return <div className={addOnClass}>{children}</div>;
-};
+  return <div className={addOnClass}>{children}</div>
+}
 
 AddOnContent.propTypes = {
   supportedStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   children: PropTypes.node.isRequired
-};
+}
 
 AddOnContent.defaultProps = {
   supportedStyle: SIDEBAR_STYLE_DEFAULT
-};
+}
 
-export default AddOnContent;
+export default AddOnContent

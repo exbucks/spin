@@ -1,3 +1,3 @@
-import FavoriteApps from './FavoriteApps';
+import FavoriteApps from './FavoriteApps'
 
-export default FavoriteApps;
+export default FavoriteApps

@@ -1,8 +1,8 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { ColorWrap, Alpha } from 'react-color/lib/components/common';
-import AlphaPointer from './AlphaPointer';
+import { ColorWrap, Alpha } from 'react-color/lib/components/common'
+import AlphaPointer from './AlphaPointer'
 
 export const AlphaPicker = ({
   rgb,
@@ -27,7 +27,7 @@ export const AlphaPicker = ({
         style
       }
     }
-  });
+  })
 
   return (
     <div style={styles.picker} className="alpha-picker">
@@ -41,14 +41,14 @@ export const AlphaPicker = ({
         direction={direction}
       />
     </div>
-  );
-};
+  )
+}
 
 AlphaPicker.defaultProps = {
   width: '316px',
   height: '16px',
   direction: 'horizontal',
   pointer: AlphaPointer
-};
+}
 
-export default ColorWrap(AlphaPicker);
+export default ColorWrap(AlphaPicker)

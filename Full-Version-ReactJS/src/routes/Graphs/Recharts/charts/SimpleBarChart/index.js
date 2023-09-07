@@ -1,3 +1,3 @@
-import SimpleBarChart from './SimpleBarChart';
+import SimpleBarChart from './SimpleBarChart'
 
-export default SimpleBarChart;
+export default SimpleBarChart

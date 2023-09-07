@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 export default {
   name: 'react-treebeard',
@@ -37,4 +37,4 @@ export default {
     { name: 'index.js' },
     { name: 'package.json' }
   ]
-};
+}

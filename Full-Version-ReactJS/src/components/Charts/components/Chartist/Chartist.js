@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 // import ChartistGraph from 'react-chartist';
 
-const Chartist = (props) => <div {...props}></div>;
+const Chartist = (props) => <div {...props}></div>
 
-export default Chartist;
+export default Chartist

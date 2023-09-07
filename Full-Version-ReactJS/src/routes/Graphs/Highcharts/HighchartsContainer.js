@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Panel, Button, Charts } from 'components';
+import { Row, Col, Panel, Button, Charts } from 'components'
 
-import classes from './Highcharts.scss';
+import classes from './Highcharts.scss'
 
-import { Colors } from 'consts';
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { Colors } from 'consts'
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 import {
   paymentReceived,
@@ -19,13 +19,13 @@ import {
   stackedArea,
   spiderWeb,
   scatterPlot
-} from './chartConfigs';
+} from './chartConfigs'
 
 class HighchartsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -144,8 +144,8 @@ class HighchartsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(HighchartsContainer);
+export default connect()(HighchartsContainer)

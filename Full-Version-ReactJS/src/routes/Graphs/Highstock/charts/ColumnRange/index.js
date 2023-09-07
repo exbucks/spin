@@ -1,3 +1,3 @@
-import ColumnRange from './ColumnRange';
+import ColumnRange from './ColumnRange'
 
-export default ColumnRange;
+export default ColumnRange

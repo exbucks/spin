@@ -1,3 +1,3 @@
-import TabsAndPillsContainer from './TabsAndPills';
+import TabsAndPillsContainer from './TabsAndPills'
 
-export default TabsAndPillsContainer;
+export default TabsAndPillsContainer

@@ -1,3 +1,3 @@
-import OverlayContentParent from './OverlayContentParent';
+import OverlayContentParent from './OverlayContentParent'
 
-export default OverlayContentParent;
+export default OverlayContentParent

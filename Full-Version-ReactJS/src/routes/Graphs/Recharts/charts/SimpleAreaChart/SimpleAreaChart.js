@@ -1,10 +1,10 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const { ResponsiveContainer, AreaChart, Area, CartesianGrid, Tooltip, Legend, YAxis, XAxis } =
-  Charts.Recharts;
+  Charts.Recharts
 
-import { data } from './../../data';
+import { data } from './../../data'
 
 const SimpleAreaChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -23,6 +23,6 @@ const SimpleAreaChart = (props) => (
       />
     </AreaChart>
   </ResponsiveContainer>
-);
+)
 
-export default SimpleAreaChart;
+export default SimpleAreaChart

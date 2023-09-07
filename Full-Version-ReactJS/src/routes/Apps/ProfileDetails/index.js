@@ -1,3 +1,3 @@
-import ProfileDetailsContainer from './ProfileDetailsContainer';
+import ProfileDetailsContainer from './ProfileDetailsContainer'
 
-export default ProfileDetailsContainer;
+export default ProfileDetailsContainer

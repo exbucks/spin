@@ -1,3 +1,3 @@
-import AnalyticsContainer from './AnalyticsContainer';
+import AnalyticsContainer from './AnalyticsContainer'
 
-export default AnalyticsContainer;
+export default AnalyticsContainer

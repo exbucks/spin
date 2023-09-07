@@ -1,3 +1,3 @@
-import PointMarkersOnly from './PointMarkersOnly';
+import PointMarkersOnly from './PointMarkersOnly'
 
-export default PointMarkersOnly;
+export default PointMarkersOnly

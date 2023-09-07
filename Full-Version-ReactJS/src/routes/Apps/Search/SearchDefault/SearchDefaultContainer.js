@@ -1,37 +1,37 @@
-import React from 'react';
-import _ from 'underscore';
-import numeral from 'numeral';
-import { Row, Col, Pagination, StarRating, Divider } from 'components';
+import React from 'react'
+import _ from 'underscore'
+import numeral from 'numeral'
+import { Row, Col, Pagination, StarRating, Divider } from 'components'
 
 // Sub Components
-import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components';
+import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import resultsData from 'consts/data/search-default.json';
+import resultsData from 'consts/data/search-default.json'
 
-import classes from './../Search.scss';
+import classes from './../Search.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class SearchDefaultContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(resultsData) };
+    this.state = { data: getData(resultsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -79,8 +79,8 @@ class SearchDefaultContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(SearchDefaultContainer);
+export default connect()(SearchDefaultContainer)

@@ -1,3 +1,3 @@
-import ClientsContainer from './ClientsContainer';
+import ClientsContainer from './ClientsContainer'
 
-export default ClientsContainer;
+export default ClientsContainer

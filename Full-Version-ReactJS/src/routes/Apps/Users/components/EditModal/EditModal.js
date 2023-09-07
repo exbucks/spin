@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   Col,
@@ -12,11 +12,11 @@ import {
   ControlLabel,
   Divider,
   Label
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { Upload } from 'routes/Apps/components';
+import { Upload } from 'routes/Apps/components'
 
 const EditModal = (props) => (
   <Modal show={props.visible} onHide={props.onClose}>
@@ -274,15 +274,15 @@ const EditModal = (props) => (
       <Button bsStyle="primary">Save</Button>
     </Modal.Footer>
   </Modal>
-);
+)
 
 EditModal.propTypes = {
   visible: PropTypes.bool,
   onClose: PropTypes.func
-};
+}
 
 EditModal.defaultProps = {
   onClose: () => {}
-};
+}
 
-export default EditModal;
+export default EditModal

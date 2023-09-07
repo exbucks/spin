@@ -1,27 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import _ from 'underscore';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import _ from 'underscore'
+import classNames from 'classnames'
 
-import { ListGroup, ScrollBarContainer } from 'components';
+import { ListGroup, ScrollBarContainer } from 'components'
 
-import classes from './DropdownList.scss';
+import classes from './DropdownList.scss'
 
 const adjustInnerListGroup = (listGroup) =>
   React.cloneElement(listGroup, {
     className: classNames(classes.adjustedListGroup, listGroup.props.className)
-  });
+  })
 
 const DropdownList = (props) => {
-  const otherProps = _.omit(props, [..._.keys(DropdownList.propTypes), 'className']);
+  const otherProps = _.omit(props, [..._.keys(DropdownList.propTypes), 'className'])
 
   const dropdownListClass = classNames(classes.dropdownList, props.className, {
     active: props.active
-  });
+  })
 
-  const child = React.Children.only(props.children);
-  const childToRender = child && child.type === ListGroup ? adjustInnerListGroup(child) : child;
+  const child = React.Children.only(props.children)
+  const childToRender = child && child.type === ListGroup ? adjustInnerListGroup(child) : child
 
   return (
     <div
@@ -48,8 +48,8 @@ const DropdownList = (props) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 DropdownList.propTypes = {
   header: PropTypes.node,
@@ -59,11 +59,11 @@ DropdownList.propTypes = {
   listHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   active: PropTypes.bool
-};
+}
 
 DropdownList.defaultProps = {
   listHeight: 250,
   width: 350
-};
+}
 
-export default DropdownList;
+export default DropdownList

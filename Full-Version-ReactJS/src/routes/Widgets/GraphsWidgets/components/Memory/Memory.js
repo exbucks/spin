@@ -1,11 +1,11 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
-import { Row, Col, Media, Charts, CollapsablePanel } from 'components';
+import { Row, Col, Media, Charts, CollapsablePanel } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Memory.scss';
+import classes from './Memory.scss'
 
 const Memory = (panelProps) => (
   <CollapsablePanel
@@ -69,6 +69,6 @@ const Memory = (panelProps) => (
       </Col>
     </Row>
   </CollapsablePanel>
-);
+)
 
-export default Memory;
+export default Memory

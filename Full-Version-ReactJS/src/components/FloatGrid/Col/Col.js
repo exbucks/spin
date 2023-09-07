@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import classNames from 'classnames'
 
-import { Col as BootstrapCol } from 'components';
+import { Col as BootstrapCol } from 'components'
 
-import classes from './../Float.scss';
+import classes from './../Float.scss'
 
 class Col extends React.Component {
   static propTypes = {
@@ -32,15 +32,15 @@ class Col extends React.Component {
     xsY: PropTypes.number,
 
     children: PropTypes.node
-  };
+  }
 
   static defaultProps = {
     active: true
-  };
+  }
 
   render() {
-    const { active, children, className } = this.props;
-    const bsColumnProps = _.pick(this.props, ['lg', 'md', 'sm', 'xs']);
+    const { active, children, className } = this.props
+    const bsColumnProps = _.pick(this.props, ['lg', 'md', 'sm', 'xs'])
     const otherProps = _.omit(this.props, [
       ..._.keys(Col.propTypes),
       'minW',
@@ -50,9 +50,9 @@ class Col extends React.Component {
       'static',
       'isDraggable',
       'isResizable'
-    ]);
+    ])
 
-    const floatColClasses = classNames(className, classes.floatCol);
+    const floatColClasses = classNames(className, classes.floatCol)
 
     return active ? (
       <div {...otherProps} className={floatColClasses}>
@@ -62,8 +62,8 @@ class Col extends React.Component {
       <BootstrapCol {..._.extend(bsColumnProps, otherProps)} className={className}>
         {children}
       </BootstrapCol>
-    );
+    )
   }
 }
 
-export default Col;
+export default Col

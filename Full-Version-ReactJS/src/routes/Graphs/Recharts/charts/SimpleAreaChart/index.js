@@ -1,3 +1,3 @@
-import SimpleAreaChart from './SimpleAreaChart';
+import SimpleAreaChart from './SimpleAreaChart'
 
-export default SimpleAreaChart;
+export default SimpleAreaChart

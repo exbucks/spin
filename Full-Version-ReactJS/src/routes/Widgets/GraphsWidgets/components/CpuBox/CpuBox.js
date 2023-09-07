@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Panel, Media, Charts, Label } from 'components';
+import { Panel, Media, Charts, Label } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './CpuBox.scss';
+import classes from './CpuBox.scss'
 
 const CpuBox = () => (
   <Panel
@@ -45,6 +45,6 @@ const CpuBox = () => (
       />
     </div>
   </Panel>
-);
+)
 
-export default CpuBox;
+export default CpuBox

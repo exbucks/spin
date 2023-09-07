@@ -1,3 +1,3 @@
-import PointsWithDataGrouping from './PointsWithDataGrouping';
+import PointsWithDataGrouping from './PointsWithDataGrouping'
 
-export default PointsWithDataGrouping;
+export default PointsWithDataGrouping

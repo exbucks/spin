@@ -1,3 +1,3 @@
-import PerformanceChart from './PerformanceChart';
+import PerformanceChart from './PerformanceChart'
 
-export default PerformanceChart;
+export default PerformanceChart

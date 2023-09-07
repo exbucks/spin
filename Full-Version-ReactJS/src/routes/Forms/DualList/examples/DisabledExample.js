@@ -1,5 +1,5 @@
-import React from 'react';
-import DualListBox from 'react-dual-listbox';
+import React from 'react'
+import DualListBox from 'react-dual-listbox'
 
 const options = [
   {
@@ -22,19 +22,19 @@ const options = [
       { value: 'callisto', label: 'Callisto' }
     ]
   }
-];
+]
 
 class DisabledExample extends React.Component {
   constructor() {
-    super();
+    super()
 
-    this.state = { selected: ['luna', 'io'] };
+    this.state = { selected: ['luna', 'io'] }
 
-    this.onChange = this.onChange.bind(this);
+    this.onChange = this.onChange.bind(this)
   }
 
   onChange(selected) {
-    this.setState({ selected });
+    this.setState({ selected })
   }
 
   render() {
@@ -47,7 +47,7 @@ class DisabledExample extends React.Component {
         selected={this.state.selected}
         onChange={this.onChange}
       />
-    );
+    )
   }
 }
-export default DisabledExample;
+export default DisabledExample

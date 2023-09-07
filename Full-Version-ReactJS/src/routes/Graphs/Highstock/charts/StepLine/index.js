@@ -1,3 +1,3 @@
-import StepLine from './StepLine';
+import StepLine from './StepLine'
 
-export default StepLine;
+export default StepLine

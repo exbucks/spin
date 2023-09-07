@@ -1,11 +1,11 @@
-import React from 'react';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
-import { Media, ListGroup, ListGroupItem, CollapsablePanel } from 'components';
+import { Media, ListGroup, ListGroupItem, CollapsablePanel } from 'components'
 
-import classes from './Reminders.scss';
+import classes from './Reminders.scss'
 
 const RemindersList = [
   {
@@ -74,7 +74,7 @@ const RemindersList = [
     count: 23,
     title: 'Warnings'
   }
-];
+]
 
 const Reminders = (panelProps) => (
   <CollapsablePanel
@@ -107,6 +107,6 @@ const Reminders = (panelProps) => (
       ))}
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Reminders;
+export default Reminders

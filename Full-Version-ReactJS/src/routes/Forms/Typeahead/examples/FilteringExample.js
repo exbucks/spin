@@ -1,7 +1,7 @@
-import React from 'react';
-import { Form } from 'components';
+import React from 'react'
+import { Form } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
+import { Typeahead } from 'react-bootstrap-typeahead'
 
 const options = [
   'Warsaw',
@@ -29,20 +29,20 @@ const options = [
   'Rzeszów',
   'Ruda Śląska',
   'Rybnik'
-];
+]
 
 class FilteringExample extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       caseSensitive: false,
       ignoreDiacritics: true
-    };
+    }
   }
 
   render() {
-    const { caseSensitive, ignoreDiacritics } = this.state;
+    const { caseSensitive, ignoreDiacritics } = this.state
 
     return (
       <div>
@@ -60,8 +60,8 @@ class FilteringExample extends React.Component {
           Don't ignore diacritical marks
         </Form.Check>
       </div>
-    );
+    )
   }
 }
 
-export default FilteringExample;
+export default FilteringExample

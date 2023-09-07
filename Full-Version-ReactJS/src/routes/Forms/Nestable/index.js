@@ -1,3 +1,3 @@
-import NestableContainer from './NestableContainer';
+import NestableContainer from './NestableContainer'
 
-export default NestableContainer;
+export default NestableContainer

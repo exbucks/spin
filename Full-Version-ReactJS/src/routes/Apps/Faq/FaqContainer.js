@@ -1,6 +1,6 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
 
 import {
   Row,
@@ -13,13 +13,13 @@ import {
   FormControl,
   Accordion,
   Divider
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './Faq.scss';
+import classes from './Faq.scss'
 
 // ------------------------------------
 // Sub Elements
@@ -59,7 +59,7 @@ const renderNavigation = () => (
       </NavItem>
     </Nav>
   </div>
-);
+)
 
 const renderBoxes = () => (
   <Row className="m-t-3">
@@ -108,7 +108,7 @@ const renderBoxes = () => (
       </Panel>
     </Col>
   </Row>
-);
+)
 
 const renderAccordions = () => {
   const renderAccordionPart = (title, id) => (
@@ -129,7 +129,7 @@ const renderAccordions = () => {
       Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
       haven't heard of them accusamus labore sustainable VHS.
     </Panel>
-  );
+  )
 
   return (
     <Row>
@@ -160,8 +160,8 @@ const renderAccordions = () => {
         <Button>View All</Button>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
 // ------------------------------------
 // Main Container
@@ -170,7 +170,7 @@ class FaqContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -203,8 +203,8 @@ class FaqContainer extends RoutedComponent {
           {renderSection(renderAccordions)}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(FaqContainer);
+export default connect()(FaqContainer)

@@ -1,7 +1,7 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   Row,
@@ -21,18 +21,18 @@ import {
   Divider,
   AvatarImage,
   FavoriteStar
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import usersData from 'consts/data/app-users.json';
+import { Colors } from 'consts'
+import usersData from 'consts/data/app-users.json'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { LabelsList, SideNav, SearchBox } from './../components';
+import { LabelsList, SideNav, SearchBox } from './../components'
 
 import {
   CallModal,
@@ -41,12 +41,12 @@ import {
   VideoModal,
   DeleteModal,
   EditModal
-} from './components';
+} from './components'
 
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const folders = [
   {
@@ -61,7 +61,7 @@ const folders = [
     title: 'Private',
     count: 7
   }
-];
+]
 
 const labels = [
   { title: 'Documents', color: Colors.brandPrimary },
@@ -69,25 +69,25 @@ const labels = [
   { title: 'Videos', color: Colors.brandSuccess },
   { title: 'Music', color: Colors.brandWarning },
   { title: 'Other', color: Colors.brandDanger }
-];
+]
 
 const userStatusToColor = (status) => {
   switch (status) {
     default:
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const userSocialToIcons = (social) => {
   if (!social || social.length === 0) {
-    return '-';
+    return '-'
   }
 
   return (
@@ -101,19 +101,19 @@ const userSocialToIcons = (social) => {
             {(() => {
               switch (s) {
                 case 'LinkedIn':
-                  return <i className="fa fa-linkedin-square text-muted fa-lg"></i>;
+                  return <i className="fa fa-linkedin-square text-muted fa-lg"></i>
                 case 'Facebook':
-                  return <i className="fa fa-facebook-square text-muted fa-lg"></i>;
+                  return <i className="fa fa-facebook-square text-muted fa-lg"></i>
                 case 'Twitter':
-                  return <i className="fa fa-twitter-square text-muted fa-lg"></i>;
+                  return <i className="fa fa-twitter-square text-muted fa-lg"></i>
               }
             })()}
           </OverlayTrigger>
         </a>
       ))}
     </div>
-  );
-};
+  )
+}
 
 // ------------------------------------
 // Sub Elements
@@ -127,7 +127,7 @@ const renderActionsDropdown = (toggleModal) => (
       <Dropdown.Item
         eventKey="1"
         onClick={() => {
-          toggleModal('callModal', true);
+          toggleModal('callModal', true)
         }}
       >
         <i className="fa fa-fw fa-phone text-gray-lighter m-r-1"></i>
@@ -136,7 +136,7 @@ const renderActionsDropdown = (toggleModal) => (
       <Dropdown.Item
         eventKey="2"
         onClick={() => {
-          toggleModal('chatModal', true);
+          toggleModal('chatModal', true)
         }}
       >
         <i className="fa fa-fw fa-comment text-gray-lighter m-r-1"></i>
@@ -145,7 +145,7 @@ const renderActionsDropdown = (toggleModal) => (
       <Dropdown.Item
         eventKey="3"
         onClick={() => {
-          toggleModal('videoModal', true);
+          toggleModal('videoModal', true)
         }}
       >
         <i className="fa fa-fw fa-video-camera text-gray-lighter m-r-1"></i>
@@ -154,7 +154,7 @@ const renderActionsDropdown = (toggleModal) => (
       <Dropdown.Item
         eventKey="4"
         onClick={() => {
-          toggleModal('profileModal', true);
+          toggleModal('profileModal', true)
         }}
       >
         <i className="fa fa-fw fa-user text-gray-lighter m-r-1"></i>
@@ -163,7 +163,7 @@ const renderActionsDropdown = (toggleModal) => (
       <Dropdown.Item
         eventKey="4"
         onClick={() => {
-          toggleModal('editModal', true);
+          toggleModal('editModal', true)
         }}
       >
         <i className="fa fa-fw fa-pencil text-gray-lighter m-r-1"></i>
@@ -175,7 +175,7 @@ const renderActionsDropdown = (toggleModal) => (
       <Dropdown.Item
         eventKey="6"
         onClick={() => {
-          toggleModal('deleteModal', true);
+          toggleModal('deleteModal', true)
         }}
       >
         <i className="fa fa-fw fa-trash text-gray-lighter m-r-1"></i>
@@ -183,20 +183,20 @@ const renderActionsDropdown = (toggleModal) => (
       </Dropdown.Item>
     </Dropdown.Menu>
   </Dropdown>
-);
+)
 
 const renderGridActionsDropdown = (toggleModal) => (
   <SplitButton
     title="Profile"
     id={`dropdown-user-actions-${uuidv4()}`}
     onClick={() => {
-      toggleModal('profileModal', true);
+      toggleModal('profileModal', true)
     }}
   >
     <Dropdown.Item
       eventKey="1"
       onClick={() => {
-        toggleModal('callModal', true);
+        toggleModal('callModal', true)
       }}
     >
       <i className="fa fa-fw fa-phone text-gray-lighter m-r-1"></i>
@@ -205,7 +205,7 @@ const renderGridActionsDropdown = (toggleModal) => (
     <Dropdown.Item
       eventKey="2"
       onClick={() => {
-        toggleModal('chatModal', true);
+        toggleModal('chatModal', true)
       }}
     >
       <i className="fa fa-fw fa-comment text-gray-lighter m-r-1"></i>
@@ -214,7 +214,7 @@ const renderGridActionsDropdown = (toggleModal) => (
     <Dropdown.Item
       eventKey="3"
       onClick={() => {
-        toggleModal('videoModal', true);
+        toggleModal('videoModal', true)
       }}
     >
       <i className="fa fa-fw fa-video-camera text-gray-lighter m-r-1"></i>
@@ -223,7 +223,7 @@ const renderGridActionsDropdown = (toggleModal) => (
     <Dropdown.Item
       eventKey="4"
       onClick={() => {
-        toggleModal('editModal', true);
+        toggleModal('editModal', true)
       }}
     >
       <i className="fa fa-fw fa-pencil text-gray-lighter m-r-1"></i>
@@ -235,14 +235,14 @@ const renderGridActionsDropdown = (toggleModal) => (
     <Dropdown.Item
       eventKey="6"
       onClick={() => {
-        toggleModal('deleteModal', true);
+        toggleModal('deleteModal', true)
       }}
     >
       <i className="fa fa-fw fa-trash text-gray-lighter m-r-1"></i>
       Delete
     </Dropdown.Item>
   </SplitButton>
-);
+)
 
 const renderUsersList = (users, toggleModal) => (
   <div className="m-t-2">
@@ -307,7 +307,7 @@ const renderUsersList = (users, toggleModal) => (
       />
     </div>
   </div>
-);
+)
 
 const renderUsersGrid = (users, toggleModal) => (
   <div className="m-t-2">
@@ -348,14 +348,14 @@ const renderUsersGrid = (users, toggleModal) => (
       />
     </div>
   </div>
-);
+)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class UsersContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       data: getData(usersData),
@@ -366,19 +366,19 @@ class UsersContainer extends RoutedComponent {
       videoModalVisible: false,
       editModalVisible: false,
       deleteModalVisible: false
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   toggleModal(modalName, open = true) {
     this.setState({
       [`${modalName}Visible`]: open
-    });
+    })
   }
 
   render() {
@@ -391,7 +391,7 @@ class UsersContainer extends RoutedComponent {
                 <SideNav
                   items={folders}
                   folderSelected={() => {
-                    this.props.history.push('/apps/inbox');
+                    this.props.history.push('/apps/inbox')
                   }}
                 />
               </Col>
@@ -483,42 +483,42 @@ class UsersContainer extends RoutedComponent {
         <EditModal
           visible={this.state.editModalVisible}
           onClose={() => {
-            this.toggleModal('editModal', false);
+            this.toggleModal('editModal', false)
           }}
         />
         <DeleteModal
           visible={this.state.deleteModalVisible}
           onClose={() => {
-            this.toggleModal('deleteModal', false);
+            this.toggleModal('deleteModal', false)
           }}
         />
         <VideoModal
           visible={this.state.videoModalVisible}
           onClose={() => {
-            this.toggleModal('videoModal', false);
+            this.toggleModal('videoModal', false)
           }}
         />
         <CallModal
           visible={this.state.callModalVisible}
           onClose={() => {
-            this.toggleModal('callModal', false);
+            this.toggleModal('callModal', false)
           }}
         />
         <ProfileModal
           visible={this.state.profileModalVisible}
           onClose={() => {
-            this.toggleModal('profileModal', false);
+            this.toggleModal('profileModal', false)
           }}
         />
         <ChatModal
           visible={this.state.chatModalVisible}
           onClose={() => {
-            this.toggleModal('chatModal', false);
+            this.toggleModal('chatModal', false)
           }}
         />
       </div>
-    );
+    )
   }
 }
 
-export default connect()(UsersContainer);
+export default connect()(UsersContainer)

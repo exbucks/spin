@@ -1,22 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, ListGroup, ListGroupItem, Charts, CollapsablePanel } from 'components';
+import { Row, Col, ListGroup, ListGroupItem, Charts, CollapsablePanel } from 'components'
 
-import classes from './Stats.scss';
+import classes from './Stats.scss'
 
 const generateRandomData = function* (count) {
   for (let i = 0; i < count; i++) {
-    yield Math.round(Math.random() * 10);
+    yield Math.round(Math.random() * 10)
   }
-};
+}
 
 const statChartsData = Array.from(
   (function* () {
     for (let i = 0; i < 5; i++) {
-      yield Array.from(generateRandomData(10));
+      yield Array.from(generateRandomData(10))
     }
   })()
-);
+)
 
 const Stats = (panelProps) => (
   <CollapsablePanel
@@ -124,6 +124,6 @@ const Stats = (panelProps) => (
       </ListGroupItem>
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Stats;
+export default Stats

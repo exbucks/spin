@@ -1,33 +1,33 @@
-import React from 'react';
-import ReactInterval from 'react-interval';
-import _ from 'underscore';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import ReactInterval from 'react-interval'
+import _ from 'underscore'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
 
-import { Row, Col, Panel, Label, Button, Media, Timeline, Charts, AvatarImage } from 'components';
+import { Row, Col, Panel, Label, Button, Media, Timeline, Charts, AvatarImage } from 'components'
 
-import { Colors } from 'consts';
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { Colors } from 'consts'
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import activityData from 'consts/data/team-activity.json';
+import activityData from 'consts/data/team-activity.json'
 
-import classes from './TeamActivity.scss';
+import classes from './TeamActivity.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const genChartData = (count = 20) => {
-  const output = [];
+  const output = []
   for (let i = 0; i < count; i++) {
-    output.push(Math.round(Math.random() * 100));
+    output.push(Math.round(Math.random() * 100))
   }
-  return output;
-};
+  return output
+}
 
 // ------------------------------------
 // Sub Elements
@@ -40,7 +40,7 @@ const renderSummary = (data) => {
         <span className={classes.chartLegendValue}>{` ${l.value}`}</span>
         {` ${l.name}`}
       </div>
-    ));
+    ))
 
   const renderLineChart = (name, data, color, unit = '') => (
     <Col md={12} sm={6} xs={6}>
@@ -50,7 +50,7 @@ const renderSummary = (data) => {
       </p>
       <Charts.SparklineLine data={data.Data} width={200} height={33} color={color} fullWidth />
     </Col>
-  );
+  )
 
   return (
     <Panel
@@ -127,23 +127,23 @@ const renderSummary = (data) => {
                   Colors.brandSuccess,
                   Colors.brandWarning,
                   Colors.brandDanger
-                ];
+                ]
 
                 const legend = _.map(data.Channels, (ch, i) => ({
                   name: ch.Name,
                   value: ch.Count,
                   color: colorList[i]
-                }));
+                }))
 
-                return renderChartLegend(legend);
+                return renderChartLegend(legend)
               })()}
             </Media.Body>
           </Media>
         </Col>
       </Row>
     </Panel>
-  );
-};
+  )
+}
 
 const renderTimeline = (data) => {
   const getItemParts = (itemType) => {
@@ -152,38 +152,38 @@ const renderTimeline = (data) => {
         return {
           icon: <i className="fa fa-fw fa-pause-circle"></i>,
           color: Colors.brandDanger
-        };
+        }
       case 'like':
         return {
           icon: <i className="fa fa-fw fa-gratipay"></i>,
           color: Colors.brandDanger
-        };
+        }
       case 'question':
         return {
           icon: <i className="fa fa-fw fa-question-circle"></i>,
           color: Colors.brandWarning
-        };
+        }
       case 'addition':
         return {
           icon: <i className="fa fa-fw fa-plus-circle"></i>,
           color: Colors.brandPrimary
-        };
+        }
       case 'approve':
         return {
           icon: <i className="fa fa-fw fa-check-circle"></i>,
           color: Colors.brandSuccess
-        };
+        }
       case 'info':
         return {
           icon: <i className="fa fa-fw fa-info-circle"></i>,
           color: Colors.brandInfo
-        };
+        }
     }
-  };
+  }
 
   const renderList = (activities) =>
     _.map(activities, (activity) => {
-      const itemParts = getItemParts(activity.Type);
+      const itemParts = getItemParts(activity.Type)
 
       return (
         <Timeline.Item
@@ -216,8 +216,8 @@ const renderTimeline = (data) => {
             </p>
           </Timeline.ItemBody>
         </Timeline.Item>
-      );
-    });
+      )
+    })
 
   return (
     <Timeline itemAlignment="horizontal">
@@ -228,14 +228,14 @@ const renderTimeline = (data) => {
         </div>
       ))}
     </Timeline>
-  );
-};
+  )
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class TeamActivityContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       ...getData(activityData),
@@ -253,15 +253,15 @@ class TeamActivityContainer extends RoutedComponent {
           Data: genChartData()
         }
       }
-    };
+    }
   }
 
   addChartData() {
     const genNewData = (input) => {
-      const val = Math.round(Math.random() * 100);
-      const lastData = _.last(input, input.length - 1);
-      return [...lastData, val];
-    };
+      const val = Math.round(Math.random() * 100)
+      const lastData = _.last(input, input.length - 1)
+      return [...lastData, val]
+    }
 
     this.setState({
       Summary: {
@@ -278,13 +278,13 @@ class TeamActivityContainer extends RoutedComponent {
           Data: genNewData(this.state.Summary.AvgResponseTime.Data)
         }
       }
-    });
+    })
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -300,8 +300,8 @@ class TeamActivityContainer extends RoutedComponent {
           {renderSection(renderSummary, this.state.Summary)}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(TeamActivityContainer);
+export default connect()(TeamActivityContainer)

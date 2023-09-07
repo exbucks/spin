@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Tabs, Tab, Nav, NavItem, NavDropdown } from 'components';
+import { Row, Col, Tabs, Tab, Nav, NavItem, NavDropdown } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class TabsAndPillsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -182,8 +182,8 @@ class TabsAndPillsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(TabsAndPillsContainer);
+export default connect()(TabsAndPillsContainer)

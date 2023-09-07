@@ -1,7 +1,7 @@
-import React from 'react';
-import _ from 'underscore';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import _ from 'underscore'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
 import {
   Row,
   Col,
@@ -20,49 +20,49 @@ import {
   OverlayTrigger,
   InputGroup,
   Divider
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import taskDetailsData from 'consts/data/app-task-details.json';
+import { Colors } from 'consts'
+import taskDetailsData from 'consts/data/app-task-details.json'
 
-import classes from './TaskDetails.scss';
+import classes from './TaskDetails.scss'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { UsersList, PriorityButton, EmailAttachments, Comments } from './../components';
+import { UsersList, PriorityButton, EmailAttachments, Comments } from './../components'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const taskLabelToColor = (label) => {
   switch (label) {
     case 'Bug':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     default:
     case 'Feature':
-      return Colors.brandInfo;
+      return Colors.brandInfo
     case 'Duplicate':
-      return Colors.brandPrimary;
+      return Colors.brandPrimary
     case 'Invalid':
-      return Colors.brandPerfume;
+      return Colors.brandPerfume
     case 'On Hold':
-      return Colors.brandEminence;
+      return Colors.brandEminence
     case 'Help':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'HTML':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'CSS':
-      return Colors.brandMintGreen;
+      return Colors.brandMintGreen
     case 'Next Phase':
-      return Colors.brandMalibu;
+      return Colors.brandMalibu
   }
-};
+}
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -113,7 +113,7 @@ const renderTaskDetails = (task) => (
       </div>
     </ListGroupItem>
   </ListGroup>
-);
+)
 
 const renderHeader = () => (
   <div className={`${classes.taskHeader} flex-space-between`}>
@@ -145,7 +145,7 @@ const renderHeader = () => (
       </ButtonGroup>
     </ButtonToolbar>
   </div>
-);
+)
 
 const renderAttachments = (attachments) => (
   <div>
@@ -154,7 +154,7 @@ const renderAttachments = (attachments) => (
       <a href="javascript: void(0)">Add More Files to this Task</a>
     </p>
   </div>
-);
+)
 
 const renderComments = (comments) => (
   <div className="m-t-3">
@@ -164,7 +164,7 @@ const renderComments = (comments) => (
     </Divider>
     <Comments data={comments} />
   </div>
-);
+)
 
 const renderTaskPanel = (data) => (
   <Panel
@@ -215,21 +215,21 @@ const renderTaskPanel = (data) => (
     {renderAttachments(data.Attachments)}
     {renderComments(data.Comments)}
   </Panel>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class TaskDetailsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(taskDetailsData) };
+    this.state = { data: getData(taskDetailsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -249,8 +249,8 @@ class TaskDetailsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(TaskDetailsContainer);
+export default connect()(TaskDetailsContainer)

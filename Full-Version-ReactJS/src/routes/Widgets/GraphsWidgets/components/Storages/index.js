@@ -1,3 +1,3 @@
-import Storages from './Storages';
+import Storages from './Storages'
 
-export default Storages;
+export default Storages

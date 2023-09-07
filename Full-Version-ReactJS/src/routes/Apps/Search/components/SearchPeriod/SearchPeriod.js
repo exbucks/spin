@@ -1,5 +1,5 @@
-import React from 'react';
-import { Divider, Form } from 'components';
+import React from 'react'
+import { Divider, Form } from 'components'
 
 const SearchPeriod = () => (
   <div>
@@ -19,6 +19,6 @@ const SearchPeriod = () => (
       </Form.Check>
     </div>
   </div>
-);
+)
 
-export default SearchPeriod;
+export default SearchPeriod

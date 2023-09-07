@@ -1,3 +1,3 @@
-import BarChartWithBrush from './BarChartWithBrush';
+import BarChartWithBrush from './BarChartWithBrush'
 
-export default BarChartWithBrush;
+export default BarChartWithBrush

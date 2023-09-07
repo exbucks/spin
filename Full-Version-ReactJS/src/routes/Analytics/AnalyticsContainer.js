@@ -1,25 +1,25 @@
-import React from 'react';
-import _ from 'underscore';
-import numeral from 'numeral';
-import moment from 'moment';
+import React from 'react'
+import _ from 'underscore'
+import numeral from 'numeral'
+import moment from 'moment'
 
-import { Row, Col, Panel, Button, ButtonGroup, Table, Charts } from 'components';
+import { Row, Col, Panel, Button, ButtonGroup, Table, Charts } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
 
-import { Colors } from 'consts';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { Colors } from 'consts'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import analyticsData from 'consts/data/analytics.json';
-import analyticsChartData from 'consts/data/analytics-chart.json';
+import analyticsData from 'consts/data/analytics.json'
+import analyticsChartData from 'consts/data/analytics-chart.json'
 
-import classes from './Analytics.scss';
+import classes from './Analytics.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const getChartConfig = (chartData) => ({
   title: '',
@@ -56,9 +56,9 @@ const getChartConfig = (chartData) => ({
       color: Colors.brandDanger
     }
   ]
-});
+})
 
-const secondsToTime = (secs) => moment.unix(secs).format('HH:mm:ss');
+const secondsToTime = (secs) => moment.unix(secs).format('HH:mm:ss')
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -69,7 +69,7 @@ const renderViewsChart = (data) => {
     Colors.brandSuccess,
     Colors.brandWarning,
     Colors.brandDanger
-  ];
+  ]
 
   const renderChartLegend = (legend, colors) =>
     _.map(legend, (l, index) => (
@@ -77,7 +77,7 @@ const renderViewsChart = (data) => {
         <i className="fa fa-fw fa-circle" style={{ color: colors[index] }}></i>
         {`  ${l.Name}`}
       </div>
-    ));
+    ))
 
   return (
     <Panel className={`${classes.boxPanel} ${classes.chartPanel}`}>
@@ -89,15 +89,15 @@ const renderViewsChart = (data) => {
       />
       <div className={classes.chartLegend}>{renderChartLegend(data, colors)}</div>
     </Panel>
-  );
-};
+  )
+}
 
 const renderViewsTable = (data, asLinks) => {
-  const totalViews = _.reduce(data, (memo, val) => memo + parseInt(val.Views), 0);
+  const totalViews = _.reduce(data, (memo, val) => memo + parseInt(val.Views), 0)
   const uniqueViews = (dataRow) => {
-    const n = parseInt(dataRow.UniqueViewsPercentage) / 100;
-    return Math.round(parseInt(dataRow.Views) / n);
-  };
+    const n = parseInt(dataRow.UniqueViewsPercentage) / 100
+    return Math.round(parseInt(dataRow.Views) / n)
+  }
 
   const renderRow = (rowData) => (
     <tr key={rowData._id}>
@@ -113,7 +113,7 @@ const renderViewsTable = (data, asLinks) => {
       <td>{numeral(rowData.TotalMinutes).format('0,0')}</td>
       <td>{secondsToTime(rowData.Duration)}</td>
     </tr>
-  );
+  )
   return (
     <Table responsive hover className={classes.viewsTable}>
       <thead>
@@ -129,8 +129,8 @@ const renderViewsTable = (data, asLinks) => {
       </thead>
       <tbody>{_.map(data, (rowData) => renderRow(rowData))}</tbody>
     </Table>
-  );
-};
+  )
+}
 
 const renderDetailedViewsChart = (chartConfig) => (
   <div>
@@ -149,7 +149,7 @@ const renderDetailedViewsChart = (chartConfig) => (
     </div>
     <Charts.HighchartBasicLine config={chartConfig} />
   </div>
-);
+)
 
 const renderViewsSummary = (views) => {
   const viewEntry = (title, value, large = false) => (
@@ -157,9 +157,9 @@ const renderViewsSummary = (views) => {
       <h5 className={classes.viewsEntryHeader}>{title}</h5>
       <p className={classes.viewsEntryValue}>{value}</p>
     </div>
-  );
+  )
 
-  const durationTime = moment.duration();
+  const durationTime = moment.duration()
 
   return (
     <Panel className={classes.boxPanel}>
@@ -169,8 +169,8 @@ const renderViewsSummary = (views) => {
       {viewEntry('Total Minutes Viewed', numeral(views.TotalMinutesViewed).format('0,0'))}
       {viewEntry('Average Duration', secondsToTime(views.AverageDuration))}
     </Panel>
-  );
-};
+  )
+}
 
 const renderRowTitle = (title) => (
   <Row>
@@ -181,21 +181,21 @@ const renderRowTitle = (title) => (
       </Button>
     </Col>
   </Row>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class AnalyticsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { ...getData(analyticsData), ViewChart: getChartConfig(analyticsChartData) };
+    this.state = { ...getData(analyticsData), ViewChart: getChartConfig(analyticsChartData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -217,8 +217,8 @@ class AnalyticsContainer extends RoutedComponent {
           <Col lg={2}>{renderViewsChart(this.state.MediaType)}</Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(AnalyticsContainer);
+export default connect()(AnalyticsContainer)

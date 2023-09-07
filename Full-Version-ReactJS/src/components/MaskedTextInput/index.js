@@ -1,3 +1,3 @@
-import MaskedTextInput from './MaskedTextInput';
+import MaskedTextInput from './MaskedTextInput'
 
-export default MaskedTextInput;
+export default MaskedTextInput

@@ -1,3 +1,3 @@
-import ChartistContainer from './ChartistContainer';
+import ChartistContainer from './ChartistContainer'
 
-export default ChartistContainer;
+export default ChartistContainer

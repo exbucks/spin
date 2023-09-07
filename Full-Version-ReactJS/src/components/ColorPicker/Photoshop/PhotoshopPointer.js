@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const PhotoshopPointerCircle = () => {
   const styles = reactCSS({
@@ -40,7 +40,7 @@ export const PhotoshopPointerCircle = () => {
         transform: 'translate(-8px, -5px)'
       }
     }
-  });
+  })
 
   return (
     <div style={styles.pointer}>
@@ -52,7 +52,7 @@ export const PhotoshopPointerCircle = () => {
         <div style={styles.rightInside} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PhotoshopPointerCircle;
+export default PhotoshopPointerCircle

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
-import classes from './../../Chartist.scss';
+import classes from './../../Chartist.scss'
 
 //================Settings=================
-const chartType = 'Bar';
+const chartType = 'Bar'
 const chartData = {
   labels: [
     'First quarter of the year',
@@ -18,7 +18,7 @@ const chartData = {
     [40000, 30000, 70000, 65000],
     [8000, 3000, 10000, 6000]
   ]
-};
+}
 const chartOptions = {
   seriesBarDistance: 10,
   axisX: {
@@ -27,11 +27,11 @@ const chartOptions = {
   axisY: {
     offset: 80,
     labelInterpolationFnc: function (value) {
-      return value + ' CHF';
+      return value + ' CHF'
     },
     scaleMinSpace: 15
   }
-};
+}
 
 //===============Component================
 const MultiLineLabels = () => (
@@ -41,6 +41,6 @@ const MultiLineLabels = () => (
     options={chartOptions}
     type={chartType}
   />
-);
+)
 
-export default MultiLineLabels;
+export default MultiLineLabels

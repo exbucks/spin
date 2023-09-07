@@ -1,3 +1,3 @@
-import MixBarChart from './MixBarChart';
+import MixBarChart from './MixBarChart'
 
-export default MixBarChart;
+export default MixBarChart

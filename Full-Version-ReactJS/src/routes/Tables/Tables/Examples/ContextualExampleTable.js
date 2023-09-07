@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table, Label } from 'components';
+import { Table, Label } from 'components'
 
 const ContextualExampleTable = () => (
   <Table>
@@ -116,6 +116,6 @@ const ContextualExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default ContextualExampleTable;
+export default ContextualExampleTable

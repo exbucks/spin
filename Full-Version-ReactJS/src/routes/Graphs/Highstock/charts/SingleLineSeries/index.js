@@ -1,3 +1,3 @@
-import SingleLineSeries from './SingleLineSeries';
+import SingleLineSeries from './SingleLineSeries'
 
-export default SingleLineSeries;
+export default SingleLineSeries

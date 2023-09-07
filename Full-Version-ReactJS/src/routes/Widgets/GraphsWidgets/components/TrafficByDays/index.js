@@ -1,3 +1,3 @@
-import TrafficByDays from './TrafficByDays';
+import TrafficByDays from './TrafficByDays'
 
-export default TrafficByDays;
+export default TrafficByDays

@@ -1,3 +1,3 @@
-import SparklineLine from './SparklineLine.js';
+import SparklineLine from './SparklineLine.js'
 
-export default SparklineLine;
+export default SparklineLine

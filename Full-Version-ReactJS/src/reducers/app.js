@@ -1,4 +1,4 @@
-import * as actions from 'consts/redux';
+import * as actions from 'consts/redux'
 import {
   SKIN_DARK,
   SIDEBAR_STYLE_DEFAULT,
@@ -6,7 +6,7 @@ import {
   CONTENT_VIEW_FLUID,
   HEADER_STYLE_BREADCRUMBS,
   SKIN_COLOR_PRIMARY
-} from 'consts/app';
+} from 'consts/app'
 
 const initialState = {
   navbarEnabled: true,
@@ -26,7 +26,7 @@ const initialState = {
   headerStyle: HEADER_STYLE_BREADCRUMBS,
   skinColor: SKIN_COLOR_PRIMARY,
   rawContent: false
-};
+}
 
 export default function appReducer(state = initialState, action) {
   switch (action.type) {
@@ -34,8 +34,8 @@ export default function appReducer(state = initialState, action) {
     case actions.GET_LYRICS_SUCCESS:
       return {
         lyrics: action.lyrics
-      };
+      }
     default:
-      return state;
+      return state
   }
 }

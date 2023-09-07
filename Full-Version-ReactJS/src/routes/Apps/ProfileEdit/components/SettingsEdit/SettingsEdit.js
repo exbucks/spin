@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Panel, Form, Button } from 'components';
+import { Panel, Form, Button } from 'components'
 
 const SettingsEdit = () => (
   <div>
@@ -53,6 +53,6 @@ const SettingsEdit = () => (
       </div>
     </Panel>
   </div>
-);
+)
 
-export default SettingsEdit;
+export default SettingsEdit

@@ -1,23 +1,23 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { Col, Dropdown, DropdownButton } from 'components';
+import { Col, Dropdown, DropdownButton } from 'components'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
-const data = Array.from(products(['id', 'name', 'price'], 100));
+const data = Array.from(products(['id', 'name', 'price'], 100))
 
-const PAGE_SIZES = [5, 10, 25, 50];
+const PAGE_SIZES = [5, 10, 25, 50]
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
 class CustomPagination extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       pageSize: 10
-    };
+    }
   }
 
   createCustomToolbar(props) {
@@ -34,7 +34,7 @@ class CustomPagination extends React.Component {
               onSelect={(eKey) => {
                 this.setState({
                   pageSize: PAGE_SIZES[eKey]
-                });
+                })
               }}
               pullRight
             >
@@ -45,11 +45,11 @@ class CustomPagination extends React.Component {
           </div>
         </div>
       </Col>
-    );
+    )
   }
 
   createPaginationPanel(props) {
-    const { totalText, pageList } = props.components;
+    const { totalText, pageList } = props.components
 
     return (
       <div>
@@ -60,7 +60,7 @@ class CustomPagination extends React.Component {
           })}
         </Col>
       </div>
-    );
+    )
   }
 
   render() {
@@ -94,7 +94,7 @@ class CustomPagination extends React.Component {
       firstPageTitle: 'Go to first', // First page button title
       lastPageTitle: 'Go to Last', // Last page button title
       paginationShowsTotal: true
-    };
+    }
 
     return (
       <BootstrapTable data={data} pagination={true} options={options}>
@@ -104,8 +104,8 @@ class CustomPagination extends React.Component {
         <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
         <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default CustomPagination;
+export default CustomPagination

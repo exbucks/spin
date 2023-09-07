@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col } from 'components';
+import { Row, Col } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import renderSection from 'modules/sectionRender'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 //import classes from './dualList.scss';
-import { SingleContainer, NestedContainer } from './containers';
+import { SingleContainer, NestedContainer } from './containers'
 
 // ------------------------------------
 // Main Container
@@ -17,7 +17,7 @@ class NestableContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -42,8 +42,8 @@ class NestableContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(NestableContainer);
+export default connect()(NestableContainer)

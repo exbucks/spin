@@ -1,24 +1,24 @@
-import React from 'react';
-import _ from 'underscore';
-import moment from 'moment';
-import classNames from 'classnames';
+import React from 'react'
+import _ from 'underscore'
+import moment from 'moment'
+import classNames from 'classnames'
 
-import { Row, Col, Panel, Label, Button, ButtonGroup, Table, Charts } from 'components';
+import { Row, Col, Panel, Label, Button, ButtonGroup, Table, Charts } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import stockData from 'consts/data/stock.json';
+import stockData from 'consts/data/stock.json'
 
-import classes from './Stock.scss';
+import classes from './Stock.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const getChartData = (inputData) => [
   {
@@ -40,7 +40,7 @@ const getChartData = (inputData) => [
       enabled: false
     }
   }
-];
+]
 
 const getChartConfig = (series) => ({
   title: '',
@@ -52,30 +52,30 @@ const getChartConfig = (series) => ({
     minTickInterval: moment.duration(1, 'year').asSeconds(),
     labels: {
       formatter: function () {
-        return moment.unix(this.value).format('MMM YYYY');
+        return moment.unix(this.value).format('MMM YYYY')
       }
     }
   },
   tooltip: {
     headerFormat: '',
     pointFormatter: function () {
-      return `<strong>${moment.unix(this.x).format('MMM YYYY')}<strong>: ${this.y}`;
+      return `<strong>${moment.unix(this.x).format('MMM YYYY')}<strong>: ${this.y}`
     }
   }
-});
+})
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
 const renderStockValue = (value, percentage, growth, additionalClass = '') => {
-  const isGrowth = !!parseInt(growth);
+  const isGrowth = !!parseInt(growth)
   const valueClass = classNames(classes.stockValue, additionalClass, {
     [`${classes.stockValue__growth}`]: isGrowth,
     [`${classes.stockValue__loss}`]: !isGrowth
-  });
+  })
   const iconClass = classNames('fa', 'fa-fw', {
     'fa-caret-up': isGrowth,
     'fa-caret-down': !isGrowth
-  });
+  })
 
   return (
     <div className={valueClass}>
@@ -88,8 +88,8 @@ const renderStockValue = (value, percentage, growth, additionalClass = '') => {
         </span>
       ) : null}
     </div>
-  );
-};
+  )
+}
 
 const renderFavoriteStocks = (favoriteStocks) => (
   <Panel>
@@ -137,7 +137,7 @@ const renderFavoriteStocks = (favoriteStocks) => (
       ))}
     </Row>
   </Panel>
-);
+)
 
 const renderStockStats = (stats) => (
   <Panel
@@ -169,7 +169,7 @@ const renderStockStats = (stats) => (
       </tbody>
     </Table>
   </Panel>
-);
+)
 
 const renderSelectedStocks = (name, stocks) => (
   <Panel header={name}>
@@ -201,24 +201,24 @@ const renderSelectedStocks = (name, stocks) => (
       </tbody>
     </Table>
   </Panel>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class StockContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       ...getData(stockData),
       chartConfig: getChartConfig(getChartData(stockData.DetailedStock.HistoryData))
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   renderDetailedStock(details) {
@@ -268,7 +268,7 @@ class StockContainer extends RoutedComponent {
       >
         <Charts.HighchartBasicLine config={this.state.chartConfig} />
       </Panel>
-    );
+    )
   }
 
   render() {
@@ -286,8 +286,8 @@ class StockContainer extends RoutedComponent {
           <Col lg={6}>{renderSelectedStocks('Expensive Stocks', this.state.ExpensiveStocks)}</Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(StockContainer);
+export default connect()(StockContainer)

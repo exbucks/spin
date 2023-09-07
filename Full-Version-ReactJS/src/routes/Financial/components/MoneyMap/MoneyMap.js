@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
 
-import { Panel, Button, ButtonGroup, Charts } from 'components';
+import { Panel, Button, ButtonGroup, Charts } from 'components'
 
-import classes from './MoneyMap.scss';
+import classes from './MoneyMap.scss'
 // ------------------------------------
 // Consts
 // ------------------------------------
@@ -13,12 +13,12 @@ const DataPeriod = {
   Today: 'today',
   ThisWeek: 'this-week',
   LastWeek: 'last-week'
-};
+}
 
 const ChartType = {
   Pie: 'pie',
   Bar: 'bar'
-};
+}
 // ------------------------------------
 // Chart Settings etc.
 // ------------------------------------
@@ -40,7 +40,7 @@ const getPieChartConfig = (data) => ({
       data
     }
   ]
-});
+})
 
 const getBarChartConfig = (series) => ({
   chart: {
@@ -81,75 +81,75 @@ const getBarChartConfig = (series) => ({
       text: ''
     }
   }
-});
+})
 
 const getChartData = (chartData, type, period) => {
-  const colorSequence = ['#2E9BDA', '#3BBDA8', '#CB3E4B', '#A072FC'];
+  const colorSequence = ['#2E9BDA', '#3BBDA8', '#CB3E4B', '#A072FC']
 
   if (type === ChartType.Pie) {
     return _.map(chartData, (serie, index) => {
-      let newData;
+      let newData
       const sumData = (data) =>
         _.reduce(
           _.map(data, (d) => d.y),
           (mem, val) => mem + val
-        );
+        )
 
       switch (period) {
         case DataPeriod.LastWeek:
-          newData = sumData(_.first(serie.data, 7));
-          break;
+          newData = sumData(_.first(serie.data, 7))
+          break
         case DataPeriod.ThisWeek:
-          newData = sumData(_.last(serie.data, 7));
-          break;
+          newData = sumData(_.last(serie.data, 7))
+          break
         case DataPeriod.Today:
-          newData = _.last(serie.data).y;
-          break;
+          newData = _.last(serie.data).y
+          break
       }
 
       return {
         name: serie.name,
         y: newData,
         color: colorSequence[index]
-      };
-    });
+      }
+    })
   } else {
     return _.map(chartData, (serie, index) => {
-      let newData;
+      let newData
 
       switch (period) {
         case DataPeriod.LastWeek:
-          newData = _.first(serie.data, 7);
-          break;
+          newData = _.first(serie.data, 7)
+          break
         case DataPeriod.ThisWeek:
         default:
-          newData = _.last(serie.data, 7);
-          break;
+          newData = _.last(serie.data, 7)
+          break
       }
 
       return {
         name: serie.name,
         data: newData,
         color: colorSequence[index]
-      };
-    });
+      }
+    })
   }
-};
+}
 // ------------------------------------
 // Component
 // ------------------------------------
 export default class MoneyMap extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       type: ChartType.Pie,
       period: DataPeriod.LastWeek
-    };
+    }
   }
 
   setPeriod(periodValue) {
@@ -157,7 +157,7 @@ export default class MoneyMap extends React.Component {
       Object.assign({}, this.state, {
         period: periodValue
       })
-    );
+    )
   }
 
   setType(chartType) {
@@ -166,18 +166,18 @@ export default class MoneyMap extends React.Component {
     const correctedPeriod =
       chartType == ChartType.Bar && this.state.period == DataPeriod.Today
         ? DataPeriod.ThisWeek
-        : this.state.period;
+        : this.state.period
 
     this.setState(
       Object.assign({}, this.state, {
         type: chartType,
         period: correctedPeriod
       })
-    );
+    )
   }
 
   render() {
-    const chartData = getChartData(this.props.data, this.state.type, this.state.period);
+    const chartData = getChartData(this.props.data, this.state.type, this.state.period)
 
     const panelHeader = (
       <div className={classes.controls}>
@@ -221,7 +221,7 @@ export default class MoneyMap extends React.Component {
           </Button>
         </ButtonGroup>
       </div>
-    );
+    )
 
     return (
       <Panel header={panelHeader} className={classes.panel}>
@@ -231,6 +231,6 @@ export default class MoneyMap extends React.Component {
           <Charts.HighchartBasicColumn config={getBarChartConfig(chartData)} />
         )}
       </Panel>
-    );
+    )
   }
 }

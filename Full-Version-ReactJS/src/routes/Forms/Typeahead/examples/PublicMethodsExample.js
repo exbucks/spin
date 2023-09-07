@@ -1,8 +1,8 @@
-import React from 'react';
-import { Button, ButtonToolbar } from 'components';
+import React from 'react'
+import { Button, ButtonToolbar } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
-import options from './../exampleData';
+import { Typeahead } from 'react-bootstrap-typeahead'
+import options from './../exampleData'
 
 /* example-start */
 class PublicMethodsExample extends React.Component {
@@ -22,18 +22,18 @@ class PublicMethodsExample extends React.Component {
           <Button onClick={() => this._typeahead.getInstance().focus()}>Focus</Button>
           <Button
             onClick={() => {
-              const instance = this._typeahead.getInstance();
-              instance.focus();
-              setTimeout(() => instance.blur(), 1000);
+              const instance = this._typeahead.getInstance()
+              instance.focus()
+              setTimeout(() => instance.blur(), 1000)
             }}
           >
             Focus, then blur after 1 second
           </Button>
         </ButtonToolbar>
       </div>
-    );
+    )
   }
 }
 /* example-end */
 
-export default PublicMethodsExample;
+export default PublicMethodsExample

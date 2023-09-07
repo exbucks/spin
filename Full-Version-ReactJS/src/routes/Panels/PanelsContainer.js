@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
 import {
   Row,
@@ -19,45 +19,45 @@ import {
   Alert,
   Media,
   Pagination
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 const loremParagraph = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quisquam ullam,
-    atque eveniet enim mollitia fugit quo aut molestiae voluptas!`;
+    atque eveniet enim mollitia fugit quo aut molestiae voluptas!`
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const panelNotice = (text) => (
   <p className="small text-uppercase">
     <strong>{text}</strong>
   </p>
-);
+)
 
 class PanelsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       closedPanels: []
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   isPanelOpen(panelId) {
-    return !_.contains(this.state.closedPanels, panelId);
+    return !_.contains(this.state.closedPanels, panelId)
   }
 
   closePanel(panelId) {
     this.setState({
       closedPanels: [...this.state.closedPanels, panelId]
-    });
+    })
   }
 
   render() {
@@ -862,8 +862,8 @@ class PanelsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(PanelsContainer);
+export default connect()(PanelsContainer)

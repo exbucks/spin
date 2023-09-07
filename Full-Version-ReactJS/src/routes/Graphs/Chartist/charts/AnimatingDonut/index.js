@@ -1,3 +1,3 @@
-import AnimatingDonut from './AnimatingDonut';
+import AnimatingDonut from './AnimatingDonut'
 
-export default AnimatingDonut;
+export default AnimatingDonut

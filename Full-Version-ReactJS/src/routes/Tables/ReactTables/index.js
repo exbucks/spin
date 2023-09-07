@@ -1,3 +1,3 @@
-import ReactTables from './ReactTables';
+import ReactTables from './ReactTables'
 
-export default ReactTables;
+export default ReactTables

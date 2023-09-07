@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, ListGroup, ListGroupItem, CollapsablePanel } from 'components';
+import { Row, Col, ListGroup, ListGroupItem, CollapsablePanel } from 'components'
 
-import classes from './Infobox.scss';
+import classes from './Infobox.scss'
 
 const Infobox = (panelProps) => (
   <CollapsablePanel
@@ -62,6 +62,6 @@ const Infobox = (panelProps) => (
       </ListGroupItem>
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Infobox;
+export default Infobox

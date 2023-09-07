@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const SliderPointer = ({ direction }) => {
   const styles = reactCSS(
@@ -21,9 +21,9 @@ export const SliderPointer = ({ direction }) => {
       }
     },
     { vertical: direction === 'vertical' }
-  );
+  )
 
-  return <div style={styles.picker}></div>;
-};
+  return <div style={styles.picker}></div>
+}
 
-export default SliderPointer;
+export default SliderPointer

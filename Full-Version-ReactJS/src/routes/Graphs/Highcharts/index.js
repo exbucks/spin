@@ -1,3 +1,3 @@
-import HighchartsContainer from './HighchartsContainer';
+import HighchartsContainer from './HighchartsContainer'
 
-export default HighchartsContainer;
+export default HighchartsContainer

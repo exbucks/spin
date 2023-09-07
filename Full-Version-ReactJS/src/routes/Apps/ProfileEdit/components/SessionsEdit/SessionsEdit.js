@@ -1,9 +1,9 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Panel, Media, Table, OverlayTrigger, Tooltip } from 'components';
+import { Panel, Media, Table, OverlayTrigger, Tooltip } from 'components'
 
-import classes from './../../ProfileEdit.scss';
+import classes from './../../ProfileEdit.scss'
 
 const SessionsEdit = () => (
   <div>
@@ -192,6 +192,6 @@ const SessionsEdit = () => (
       </Table>
     </Panel>
   </div>
-);
+)
 
-export default SessionsEdit;
+export default SessionsEdit

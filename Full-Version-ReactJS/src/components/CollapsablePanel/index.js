@@ -1,3 +1,3 @@
-import CollapsablePanel from './CollapsablePanel';
+import CollapsablePanel from './CollapsablePanel'
 
-export default CollapsablePanel;
+export default CollapsablePanel

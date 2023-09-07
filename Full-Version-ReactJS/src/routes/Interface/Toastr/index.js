@@ -1,3 +1,3 @@
-import ToastrContainer from './Toastr';
+import ToastrContainer from './Toastr'
 
-export default ToastrContainer;
+export default ToastrContainer

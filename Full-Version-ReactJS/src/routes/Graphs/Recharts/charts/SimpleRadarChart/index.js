@@ -1,3 +1,3 @@
-import SimpleRadarChart from './SimpleRadarChart';
+import SimpleRadarChart from './SimpleRadarChart'
 
-export default SimpleRadarChart;
+export default SimpleRadarChart

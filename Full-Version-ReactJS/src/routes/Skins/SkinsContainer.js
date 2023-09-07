@@ -1,62 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import _ from 'underscore';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import _ from 'underscore'
 
-import classes from './Skins.scss';
+import classes from './Skins.scss'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Row, Col, GalleryThumbnail, Divider, Badge } from 'components';
+import { Row, Col, GalleryThumbnail, Divider, Badge } from 'components'
 
-import skinConfigs from './skinConfigs';
+import skinConfigs from './skinConfigs'
 
-const thumbnailsContext = require.context('static/skins-thumbs', true, /^\.\/.*\.png/);
+const thumbnailsContext = require.context('static/skins-thumbs', true, /^\.\/.*\.png/)
 
 class SkinsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
   }
 
   getLayoutOptions() {
-    const { navbarSkin, sidebarSkin, skinColor } = this.props.routeParams;
+    const { navbarSkin, sidebarSkin, skinColor } = this.props.routeParams
 
     return {
       navbarSkin,
       sidebarSkin,
       skinColor,
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   componentDidUpdate(prevProps) {
-    const { navbarSkin, sidebarSkin, skinColor } = this.props.routeParams;
-    const { setCurrentPageSettings } = this.props;
+    const { navbarSkin, sidebarSkin, skinColor } = this.props.routeParams
+    const { setCurrentPageSettings } = this.props
 
     const targetDef = {
       navbarSkin,
       sidebarSkin,
       skinColor,
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
 
-    setCurrentPageSettings(targetDef);
+    setCurrentPageSettings(targetDef)
   }
 
   getThumbnail({ sidebarSkin, navbarSkin, skinColor }) {
-    let fileName = `./${sidebarSkin}-${navbarSkin}-${skinColor}.png`;
+    let fileName = `./${sidebarSkin}-${navbarSkin}-${skinColor}.png`
 
-    return thumbnailsContext(fileName);
+    return thumbnailsContext(fileName)
   }
 
   isThumbnailActive(item) {
-    const { navbarSkin, sidebarSkin, skinColor } = this.props.routeParams;
+    const { navbarSkin, sidebarSkin, skinColor } = this.props.routeParams
 
     return (
       navbarSkin === item.navbarSkin &&
       sidebarSkin === item.sidebarSkin &&
       skinColor === item.skinColor
-    );
+    )
   }
 
   render() {
@@ -94,8 +94,8 @@ class SkinsContainer extends RoutedComponent {
           ))}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(SkinsContainer);
+export default connect()(SkinsContainer)

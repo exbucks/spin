@@ -1,3 +1,3 @@
-import ProfileEdit from './ProfileEdit.js';
+import ProfileEdit from './ProfileEdit.js'
 
-export default ProfileEdit;
+export default ProfileEdit

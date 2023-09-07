@@ -1,11 +1,11 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
 
-import { CollapsablePanel } from 'components';
+import { CollapsablePanel } from 'components'
 
 const commentsList = [
   {
@@ -45,10 +45,10 @@ const commentsList = [
       }
     ]
   }
-];
+]
 
 // import comments container from other page view
-import { Comments } from 'routes/Apps/components';
+import { Comments } from 'routes/Apps/components'
 
 const Comments2 = (panelProps) => (
   <CollapsablePanel
@@ -66,6 +66,6 @@ const Comments2 = (panelProps) => (
   >
     <Comments data={commentsList} />
   </CollapsablePanel>
-);
+)
 
-export default Comments2;
+export default Comments2

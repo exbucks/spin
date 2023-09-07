@@ -1,13 +1,13 @@
-import HighchartBase, { connect } from './../HighchartBase';
+import HighchartBase, { connect } from './../HighchartBase'
 
 class HighStock extends HighchartBase {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
   }
 
   isHighstock() {
-    return true;
+    return true
   }
 }
 
-export default connect(HighStock);
+export default connect(HighStock)

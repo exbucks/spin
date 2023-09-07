@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import MaskedInput from 'react-text-mask';
-import { FormControl } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import MaskedInput from 'react-text-mask'
+import { FormControl } from 'components'
 
 const MaskedTextInput = (props) => {
-  return <FormControl {...props} componentClass={MaskedInput} />;
-};
+  return <FormControl {...props} componentClass={MaskedInput} />
+}
 
 // PropTypes copied from 'react-text-mask'
 MaskedTextInput.propTypes = {
@@ -22,6 +22,6 @@ MaskedTextInput.propTypes = {
   pipe: PropTypes.func,
   placeholderChar: PropTypes.string,
   keepCharPositions: PropTypes.bool
-};
+}
 
-export default MaskedTextInput;
+export default MaskedTextInput

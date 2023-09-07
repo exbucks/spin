@@ -1,3 +1,3 @@
-import ListGroupsContainer from './ListGroups';
+import ListGroupsContainer from './ListGroups'
 
-export default ListGroupsContainer;
+export default ListGroupsContainer

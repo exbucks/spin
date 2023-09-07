@@ -1,3 +1,3 @@
-import LabelsList from './LabelsList';
+import LabelsList from './LabelsList'
 
-export default LabelsList;
+export default LabelsList

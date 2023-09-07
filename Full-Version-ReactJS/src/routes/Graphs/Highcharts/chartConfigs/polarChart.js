@@ -19,7 +19,7 @@ const config = {
     max: 360,
     labels: {
       formatter: function () {
-        return this.value + '°';
+        return this.value + '°'
       }
     }
   },
@@ -70,6 +70,6 @@ const config = {
       }
     }
   ]
-};
+}
 
-export default config;
+export default config

@@ -1,4 +1,4 @@
-import HighchartBase, { connect } from './../HighchartBase';
+import HighchartBase, { connect } from './../HighchartBase'
 
 class HighchartBasicColumn extends HighchartBase {
   getChartConfig() {
@@ -38,8 +38,8 @@ class HighchartBasicColumn extends HighchartBase {
           borderWidth: 0
         }
       }
-    };
+    }
   }
 }
 
-export default connect(HighchartBasicColumn);
+export default connect(HighchartBasicColumn)

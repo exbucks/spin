@@ -1,3 +1,3 @@
-import SimpleLineChart from './SimpleLineChart';
+import SimpleLineChart from './SimpleLineChart'
 
-export default SimpleLineChart;
+export default SimpleLineChart

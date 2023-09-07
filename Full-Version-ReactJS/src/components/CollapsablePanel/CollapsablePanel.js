@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactDOM from 'react-dom'
+import classNames from 'classnames'
 
-import { Row, Col, Panel } from 'components';
+import { Row, Col, Panel } from 'components'
 
-import { isCustomColor } from './../utils/bsStyleToColor';
+import { isCustomColor } from './../utils/bsStyleToColor'
 
-import classes from './CollapsablePanel.scss';
+import classes from './CollapsablePanel.scss'
 
 class CollapasablePanel extends React.Component {
   static propTypes = {
@@ -19,42 +19,42 @@ class CollapasablePanel extends React.Component {
 
     onCollapse: PropTypes.func,
     onClose: PropTypes.func
-  };
+  }
 
   static defaultProps = {
     collapsed: false,
     footer: null,
     onCollapse: () => {},
     onClose: () => {}
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       collapsed: false,
       targetHeight: props.maxHeight || null
-    };
+    }
   }
 
   collapseHandler() {
-    this.setState({ collapsed: !this.state.collapsed });
-    this.props.onCollapse(!this.state.collapsed);
+    this.setState({ collapsed: !this.state.collapsed })
+    this.props.onCollapse(!this.state.collapsed)
   }
 
   closeHandler() {
-    this.props.onClose();
+    this.props.onClose()
   }
 
   panelRef(component) {
     if (component && this.state.targetHeight === null) {
-      const element = ReactDOM.findDOMNode(component);
+      const element = ReactDOM.findDOMNode(component)
 
       setTimeout(() => {
         this.setState({
           targetHeight: element.scrollHeight
-        });
-      }, 0);
+        })
+      }, 0)
     }
   }
 
@@ -65,13 +65,13 @@ class CollapasablePanel extends React.Component {
         collapsedPanel: this.state.collapsed
       },
       this.props.className
-    );
+    )
 
     const footerClass = classNames(classes.collapsablePanelFooter, {
       [`${classes.collapsedPanelFooter}`]: this.state.collapsed
-    });
+    })
 
-    const optionsColorClass = isCustomColor(this.props.background) ? 'text-white' : 'text-muted';
+    const optionsColorClass = isCustomColor(this.props.background) ? 'text-white' : 'text-muted'
 
     return (
       <Panel
@@ -79,7 +79,7 @@ class CollapasablePanel extends React.Component {
         footer={this.props.footer && <div className={footerClass}>{this.props.footer}</div>}
         fullBody
         ref={(panel) => {
-          this.panelRef(panel);
+          this.panelRef(panel)
         }}
         className={panelClass}
         header={
@@ -111,8 +111,8 @@ class CollapasablePanel extends React.Component {
           {this.props.children}
         </div>
       </Panel>
-    );
+    )
   }
 }
 
-export default CollapasablePanel;
+export default CollapasablePanel

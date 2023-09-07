@@ -51,6 +51,6 @@ const config = {
       color: '#383838'
     }
   ]
-};
+}
 
-export default config;
+export default config

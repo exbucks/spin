@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Media } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { Media } from 'components'
 
-import classes from './Timeline.scss';
+import classes from './Timeline.scss'
 
 const TimelineItemHeader = (props) => {
-  const { avatar, primaryText, secondaryText, className, ...otherProps } = props;
+  const { avatar, primaryText, secondaryText, className, ...otherProps } = props
 
-  const timelineItemHeaderClass = classNames(className, classes.timelineItemHeader);
+  const timelineItemHeaderClass = classNames(className, classes.timelineItemHeader)
 
   return (
     <Media className={timelineItemHeaderClass} {...otherProps}>
@@ -27,13 +27,13 @@ const TimelineItemHeader = (props) => {
         )}
       </Media.Body>
     </Media>
-  );
-};
+  )
+}
 
 TimelineItemHeader.propTypes = {
   avatar: PropTypes.node,
   primaryText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   secondaryText: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
-};
+}
 
-export default TimelineItemHeader;
+export default TimelineItemHeader

@@ -1,14 +1,14 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import { ButtonGroup, Row, Col, Button } from 'components';
-import { products } from './../utils';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
+import { ButtonGroup, Row, Col, Button } from 'components'
+import { products } from './../utils'
 
-const data = Array.from(products(['id', 'name', 'price'], 5));
+const data = Array.from(products(['id', 'name', 'price'], 5))
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
 const createCustomToolbar = (props) => {
-  const { btnGroup } = props.components;
+  const { btnGroup } = props.components
 
   return (
     <div>
@@ -19,8 +19,8 @@ const createCustomToolbar = (props) => {
         <div className={classes.actions}>{btnGroup}</div>
       </Col>
     </div>
-  );
-};
+  )
+}
 
 const createCustomButtonGroup = (props) => (
   <ButtonGroup bsSize="sm">
@@ -29,11 +29,11 @@ const createCustomButtonGroup = (props) => (
     {props.deleteBtn}
     {props.insertBtn}
   </ButtonGroup>
-);
+)
 
 const selectRow = {
   mode: 'checkbox'
-};
+}
 
 const options = {
   toolBar: createCustomToolbar,
@@ -41,7 +41,7 @@ const options = {
   insertBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       My Insert Row <i className="fa fa-fw fa-plus text-success"></i>
@@ -50,7 +50,7 @@ const options = {
   deleteBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       My Delete
@@ -59,13 +59,13 @@ const options = {
   exportCSVBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       My Export
     </Button>
   )
-};
+}
 
 const CustomButtons = () => (
   <BootstrapTable data={data} options={options} selectRow={selectRow} insertRow deleteRow exportCSV>
@@ -75,6 +75,6 @@ const CustomButtons = () => (
     <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
     <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
   </BootstrapTable>
-);
+)
 
-export default CustomButtons;
+export default CustomButtons

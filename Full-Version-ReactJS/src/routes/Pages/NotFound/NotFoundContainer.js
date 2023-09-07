@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Row, Col, Panel, InputGroup, FormControl, Button } from 'components';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Row, Col, Panel, InputGroup, FormControl, Button } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './../Pages.scss';
-import logo from 'static/spin-logo-inverted.png';
+import classes from './../Pages.scss'
+import logo from 'static/spin-logo-inverted.png'
 
 class NotFoundContainer extends RoutedComponent {
   getLayoutOptions() {
@@ -16,7 +16,7 @@ class NotFoundContainer extends RoutedComponent {
       sidebarEnabled: false,
       footerEnabled: false,
       headerEnabled: false
-    };
+    }
   }
 
   render() {
@@ -72,8 +72,8 @@ class NotFoundContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(NotFoundContainer);
+export default connect()(NotFoundContainer)

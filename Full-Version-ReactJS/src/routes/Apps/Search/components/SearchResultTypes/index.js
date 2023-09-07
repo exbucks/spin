@@ -1,3 +1,3 @@
-import SearchResultTypes from './SearchResultTypes.js';
+import SearchResultTypes from './SearchResultTypes.js'
 
-export default SearchResultTypes;
+export default SearchResultTypes

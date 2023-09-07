@@ -1,3 +1,3 @@
-import ProgressBarsContainer from './ProgressBars';
+import ProgressBarsContainer from './ProgressBars'
 
-export default ProgressBarsContainer;
+export default ProgressBarsContainer

@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { DateRangePicker, Form, FormGroup } from 'components';
+import { DateRangePicker, Form, FormGroup } from 'components'
 
 const bdrPropsVariants = [
   {
@@ -93,6 +93,6 @@ const bdrPropsVariants = [
       </Form>
     )
   }
-];
+]
 
-export default bdrPropsVariants;
+export default bdrPropsVariants

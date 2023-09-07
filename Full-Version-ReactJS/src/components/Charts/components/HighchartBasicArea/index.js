@@ -1,3 +1,3 @@
-import HighchartBasicArea from './HighchartBasicArea';
+import HighchartBasicArea from './HighchartBasicArea'
 
-export default HighchartBasicArea;
+export default HighchartBasicArea

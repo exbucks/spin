@@ -1,3 +1,3 @@
-import Memory from './Memory';
+import Memory from './Memory'
 
-export default Memory;
+export default Memory

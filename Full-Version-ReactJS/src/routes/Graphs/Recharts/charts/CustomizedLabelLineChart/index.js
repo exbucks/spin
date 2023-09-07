@@ -1,3 +1,3 @@
-import CustomizedLabelLineChart from './CustomizedLabelLineChart';
+import CustomizedLabelLineChart from './CustomizedLabelLineChart'
 
-export default CustomizedLabelLineChart;
+export default CustomizedLabelLineChart

@@ -1,9 +1,9 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { ColorWrap, Saturation, Hue, Alpha, Checkboard } from 'react-color/lib/components/common';
-import SketchFields from './SketchFields';
-import SketchPresetColors from './SketchPresetColors';
+import { ColorWrap, Saturation, Hue, Alpha, Checkboard } from 'react-color/lib/components/common'
+import SketchFields from './SketchFields'
+import SketchPresetColors from './SketchPresetColors'
 
 export const Sketch = ({
   width,
@@ -94,7 +94,7 @@ export const Sketch = ({
       }
     },
     { disableAlpha }
-  );
+  )
 
   return (
     <div style={styles.picker} className="sketch-picker">
@@ -125,8 +125,8 @@ export const Sketch = ({
       <SketchFields rgb={rgb} hsl={hsl} hex={hex} onChange={onChange} disableAlpha={disableAlpha} />
       <SketchPresetColors colors={presetColors} onClick={onChange} onSwatchHover={onSwatchHover} />
     </div>
-  );
-};
+  )
+}
 
 Sketch.defaultProps = {
   presetColors: [
@@ -147,6 +147,6 @@ Sketch.defaultProps = {
     '#FFFFFF'
   ],
   width: 200
-};
+}
 
-export default ColorWrap(Sketch);
+export default ColorWrap(Sketch)

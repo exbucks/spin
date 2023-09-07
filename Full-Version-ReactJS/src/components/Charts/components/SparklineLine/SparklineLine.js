@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
-import { Colors } from './../../../../consts';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Sparklines, SparklinesLine } from 'react-sparklines'
+import { Colors } from './../../../../consts'
+import _ from 'underscore'
 
 export default class SparklineLine extends React.Component {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class SparklineLine extends React.Component {
     style: PropTypes.object,
     chartStyle: PropTypes.object,
     fullWidth: PropTypes.bool
-  };
+  }
 
   static defaultProps = {
     color: Colors.brandPrimary,
@@ -26,23 +26,23 @@ export default class SparklineLine extends React.Component {
     style: {},
     chartStyle: {},
     fullWidth: false
-  };
+  }
 
   render() {
-    const data = this.props.children || this.props.data;
+    const data = this.props.children || this.props.data
     if (!data) {
-      throw new Error('Spin.SparklineLine: No data passed to the chart');
+      throw new Error('Spin.SparklineLine: No data passed to the chart')
     }
-    const { width, height, color, limit, chartStyle } = this.props;
+    const { width, height, color, limit, chartStyle } = this.props
 
     const style = {
       ...this.props.style,
       display: this.props.block ? 'block' : 'inline-block',
       width: this.props.fullWidth ? '100%' : `${width}px`,
       height: `${height}px`
-    };
+    }
 
-    const otherProps = _.omit(this.props, _.keys(SparklineLine.propTypes));
+    const otherProps = _.omit(this.props, _.keys(SparklineLine.propTypes))
 
     return (
       <Sparklines
@@ -55,6 +55,6 @@ export default class SparklineLine extends React.Component {
       >
         <SparklinesLine color={color} style={chartStyle} />
       </Sparklines>
-    );
+    )
   }
 }

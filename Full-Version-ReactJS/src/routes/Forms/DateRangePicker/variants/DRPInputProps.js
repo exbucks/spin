@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { DateRangePickerWrapper } from './../components';
+import { DateRangePickerWrapper } from './../components'
 
 const TestCustomInputIcon = () => (
   <span
@@ -14,7 +14,7 @@ const TestCustomInputIcon = () => (
   >
     C
   </span>
-);
+)
 
 const TestCustomArrowIcon = () => (
   <span
@@ -27,7 +27,7 @@ const TestCustomArrowIcon = () => (
   >
     {'--->'}
   </span>
-);
+)
 
 const drpInputPropsVariants = [
   {
@@ -107,6 +107,6 @@ const drpInputPropsVariants = [
       />
     )
   }
-];
+]
 
-export default drpInputPropsVariants;
+export default drpInputPropsVariants

@@ -1,3 +1,3 @@
-import SimpleLine from './SimpleLine';
+import SimpleLine from './SimpleLine'
 
-export default SimpleLine;
+export default SimpleLine

@@ -1,11 +1,11 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { DateRangePickerWrapper } from './../components';
+import { DateRangePickerWrapper } from './../components'
 
-import { VERTICAL_ORIENTATION, ANCHOR_RIGHT } from '../constants';
+import { VERTICAL_ORIENTATION, ANCHOR_RIGHT } from '../constants'
 
-console.log(VERTICAL_ORIENTATION);
+console.log(VERTICAL_ORIENTATION)
 
 const TestPrevIcon = () => (
   <span
@@ -18,7 +18,7 @@ const TestPrevIcon = () => (
   >
     Prev
   </span>
-);
+)
 
 const TestNextIcon = () => (
   <span
@@ -31,7 +31,7 @@ const TestNextIcon = () => (
   >
     Next
   </span>
-);
+)
 
 const drpCalendarPropsVariants = [
   {
@@ -113,6 +113,6 @@ const drpCalendarPropsVariants = [
       <DateRangePickerWrapper initialVisibleMonth={() => moment('04 2017', 'MM YYYY')} autoFocus />
     )
   }
-];
+]
 
-export default drpCalendarPropsVariants;
+export default drpCalendarPropsVariants

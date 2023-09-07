@@ -1,3 +1,3 @@
-import DropzoneUploader from './DropzoneUploader';
+import DropzoneUploader from './DropzoneUploader'
 
-export default DropzoneUploader;
+export default DropzoneUploader

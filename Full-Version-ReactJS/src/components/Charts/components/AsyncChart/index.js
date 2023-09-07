@@ -1,3 +1,3 @@
-import AsyncChart from './AsyncChart';
+import AsyncChart from './AsyncChart'
 
-export default AsyncChart;
+export default AsyncChart

@@ -1,3 +1,3 @@
-import SearchLanguage from './SearchLanguage';
+import SearchLanguage from './SearchLanguage'
 
-export default SearchLanguage;
+export default SearchLanguage

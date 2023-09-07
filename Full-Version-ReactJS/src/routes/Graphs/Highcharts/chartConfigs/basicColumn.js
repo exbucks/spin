@@ -50,6 +50,6 @@ const config = {
       data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
     }
   ]
-};
+}
 
-export default config;
+export default config

@@ -1,11 +1,11 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
-import { Grid, Row, Col, CollapsablePanel, Charts } from 'components';
+import { Grid, Row, Col, CollapsablePanel, Charts } from 'components'
 
-import classes from './Network.scss';
+import classes from './Network.scss'
 
-const chartPoints = [2, 4, 0, 0, 0, 0, 1, 4, 4, 10, 10, 10, 10, 0, 0, 0, 4, 6, 5, 9, 10];
+const chartPoints = [2, 4, 0, 0, 0, 0, 1, 4, 4, 10, 10, 10, 10, 0, 0, 0, 4, 6, 5, 9, 10]
 
 const Network = (panelProps) => (
   <CollapsablePanel
@@ -38,6 +38,6 @@ const Network = (panelProps) => (
       </Row>
     </Grid>
   </CollapsablePanel>
-);
+)
 
-export default Network;
+export default Network

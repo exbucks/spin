@@ -1,10 +1,10 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
 const LargeTable = () => {
-  const data = Array.from(products(['id', 'name', 'price'], 5));
+  const data = Array.from(products(['id', 'name', 'price'], 5))
 
   return (
     <BootstrapTable data={data}>
@@ -45,7 +45,7 @@ const LargeTable = () => {
         ProductName
       </TableHeaderColumn>
     </BootstrapTable>
-  );
-};
+  )
+}
 
-export default LargeTable;
+export default LargeTable

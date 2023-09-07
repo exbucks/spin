@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-import classes from './wizard.scss';
+import classes from './wizard.scss'
 
 const WizardStep = (props) => {
   const stepClass = classNames(
@@ -13,7 +13,7 @@ const WizardStep = (props) => {
     },
     classes['wizard-step'],
     props.className
-  );
+  )
 
   return (
     <a href="javascript:;" className={stepClass} onClick={() => !props.disabled && props.onClick()}>
@@ -22,13 +22,13 @@ const WizardStep = (props) => {
       </div>
       <div className={classes['wizard-step__content']}>{props.children}</div>
     </a>
-  );
-};
+  )
+}
 
 WizardStep.defaultProps = {
   successIcon: <i className="fa fa-check fa-fw"></i>,
   onClick: () => {}
-};
+}
 
 WizardStep.propTypes = {
   active: PropTypes.bool,
@@ -40,6 +40,6 @@ WizardStep.propTypes = {
   icon: PropTypes.node,
   successIcon: PropTypes.node,
   children: PropTypes.node
-};
+}
 
-export default WizardStep;
+export default WizardStep

@@ -1,11 +1,11 @@
-import React from 'react';
-import hash from 'object-hash';
-import _ from 'underscore';
-import { Link } from 'react-router-dom';
-import numeral from 'numeral';
-import moment from 'moment';
-import { faker } from '@faker-js/faker';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import hash from 'object-hash'
+import _ from 'underscore'
+import { Link } from 'react-router-dom'
+import numeral from 'numeral'
+import moment from 'moment'
+import { faker } from '@faker-js/faker'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   AvatarImage,
@@ -21,22 +21,22 @@ import {
   Charts,
   Timeline,
   Divider
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
 
-import { Colors } from 'consts';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { Colors } from 'consts'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import projectsData from 'consts/data/projects.json';
+import projectsData from 'consts/data/projects.json'
 
-import classes from './Projects.scss';
+import classes from './Projects.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 // ------------------------------------
 // Sub Elements
@@ -61,7 +61,7 @@ const renderChartWithLegend = (chartData) => (
       ))}
     </Media.Body>
   </Media>
-);
+)
 
 const renderPayments = (payments) => {
   const renderRow = (title, data) => (
@@ -81,7 +81,7 @@ const renderPayments = (payments) => {
         ))}
       </Row>
     </div>
-  );
+  )
 
   return (
     <div>
@@ -110,8 +110,8 @@ const renderPayments = (payments) => {
         }
       ])}
     </div>
-  );
-};
+  )
+}
 
 const renderAllTasks = (tasks) => (
   <div>
@@ -125,7 +125,7 @@ const renderAllTasks = (tasks) => (
       { value: tasks.Completed, title: 'Completed', color: '#222d33' }
     ])}
   </div>
-);
+)
 
 const renderAllProjects = (projects) => (
   <div>
@@ -136,7 +136,7 @@ const renderAllProjects = (projects) => (
       { value: projects.Completed, title: 'Completed', color: '#2b2f26' }
     ])}
   </div>
-);
+)
 
 const renderMyStats = (stats) => {
   return (
@@ -169,12 +169,12 @@ const renderMyStats = (stats) => {
         </ListGroupItem>
       </ListGroup>
     </div>
-  );
-};
+  )
+}
 
 const renderTasksPanel = (tasks) => {
   const typeToColor = (type) =>
-    [Colors.brandPrimary, Colors.brandDanger, Colors.brandSuccess, Colors.grayLighter][type];
+    [Colors.brandPrimary, Colors.brandDanger, Colors.brandSuccess, Colors.grayLighter][type]
 
   const renderTask = (task) => (
     <Media>
@@ -196,7 +196,7 @@ const renderTasksPanel = (tasks) => {
         <i className="fa fa-fw fa-circle" style={{ color: typeToColor(task.Type) }}></i>
       </Media.Right>
     </Media>
-  );
+  )
 
   return (
     <Panel
@@ -227,8 +227,8 @@ const renderTasksPanel = (tasks) => {
         ))}
       </ListGroup>
     </Panel>
-  );
-};
+  )
+}
 
 const renderMyProjectsPanel = (projects) => {
   const statusToColor = (status) => {
@@ -237,9 +237,9 @@ const renderMyProjectsPanel = (projects) => {
       timer: Colors.grayLighter,
       open: Colors.brandPrimary,
       support: Colors.brandInfo
-    };
-    return map[status.toLowerCase()];
-  };
+    }
+    return map[status.toLowerCase()]
+  }
 
   const renderProject = (project) => (
     <div>
@@ -267,7 +267,7 @@ const renderMyProjectsPanel = (projects) => {
         </Col>
       </Row>
     </div>
-  );
+  )
 
   return (
     <Panel
@@ -299,8 +299,8 @@ const renderMyProjectsPanel = (projects) => {
         ))}
       </ListGroup>
     </Panel>
-  );
-};
+  )
+}
 
 const renderTimeline = (timeline) => {
   const titleToColor = (title) => {
@@ -311,9 +311,9 @@ const renderTimeline = (timeline) => {
       message: Colors.brandPrimary,
       success: Colors.brandSuccess,
       obsolete: Colors.gray
-    };
-    return map[title.toLowerCase()];
-  };
+    }
+    return map[title.toLowerCase()]
+  }
 
   const titleToIcon = (title) => {
     const map = {
@@ -323,9 +323,9 @@ const renderTimeline = (timeline) => {
       message: <i className="fa fa-fw fa-plus-circle"></i>,
       success: <i className="fa fa-fw fa-check-circle"></i>,
       obsolete: <i className="fa fa-fw fa-circle"></i>
-    };
-    return map[title.toLowerCase()];
-  };
+    }
+    return map[title.toLowerCase()]
+  }
 
   const bodyElements = (element) => {
     const map = {
@@ -351,9 +351,9 @@ const renderTimeline = (timeline) => {
         </Timeline.ItemBody>
       ),
       messageExtra: <Timeline.ItemBody>{element.ExtraText}</Timeline.ItemBody>
-    };
-    return map[element.Type] || null;
-  };
+    }
+    return map[element.Type] || null
+  }
 
   const renderTimelineItem = (entry) => (
     <Timeline.Item
@@ -379,7 +379,7 @@ const renderTimeline = (timeline) => {
       />
       {bodyElements(entry)}
     </Timeline.Item>
-  );
+  )
 
   return (
     <Panel
@@ -401,23 +401,23 @@ const renderTimeline = (timeline) => {
         {_.map(timeline, (timelineEntry) => renderTimelineItem(timelineEntry))}
       </Timeline>
     </Panel>
-  );
-};
+  )
+}
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class ProjectsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { ...getData(projectsData) };
+    this.state = { ...getData(projectsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -444,8 +444,8 @@ class ProjectsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ProjectsContainer);
+export default connect()(ProjectsContainer)

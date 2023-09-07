@@ -1,3 +1,3 @@
-import PaginationAndPagerContainer from './PaginationAndPager';
+import PaginationAndPagerContainer from './PaginationAndPager'
 
-export default PaginationAndPagerContainer;
+export default PaginationAndPagerContainer

@@ -1,3 +1,3 @@
-import FavoriteStar from './FavoriteStar';
+import FavoriteStar from './FavoriteStar'
 
-export default FavoriteStar;
+export default FavoriteStar

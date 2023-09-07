@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Breadcrumb } from 'components';
+import { Row, Col, Breadcrumb } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class BreadcrumbsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -95,8 +95,8 @@ class BreadcrumbsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(BreadcrumbsContainer);
+export default connect()(BreadcrumbsContainer)

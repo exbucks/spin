@@ -1,3 +1,3 @@
-import SingleDatePickerWrapper from './SingleDatePickerWrapper';
+import SingleDatePickerWrapper from './SingleDatePickerWrapper'
 
-export default SingleDatePickerWrapper;
+export default SingleDatePickerWrapper

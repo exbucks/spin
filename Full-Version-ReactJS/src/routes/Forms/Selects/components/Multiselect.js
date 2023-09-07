@@ -1,7 +1,7 @@
-import React from 'react';
-import Select from 'react-select';
-import { Form } from 'components';
-import _ from 'underscore';
+import React from 'react'
+import Select from 'react-select'
+import { Form } from 'components'
+import _ from 'underscore'
 
 const FLAVOURS = [
   { label: 'Chocolate', value: 'chocolate' },
@@ -10,36 +10,36 @@ const FLAVOURS = [
   { label: 'Caramel', value: 'caramel' },
   { label: 'Cookies and Cream', value: 'cookiescream' },
   { label: 'Peppermint', value: 'peppermint' }
-];
+]
 
 const WHY_WOULD_YOU = [
   { label: 'Chocolate (are you crazy?)', value: 'chocolate', disabled: true }
-].concat(FLAVOURS.slice(1));
+].concat(FLAVOURS.slice(1))
 
 export default class Multiselect extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       options: FLAVOURS,
       disabled: false,
       crazy: false,
       value: []
-    };
+    }
   }
 
   toggleState(stateKey) {
     this.setState({
       [`${stateKey}`]: !this.state[stateKey]
-    });
+    })
   }
 
   toggleChocolate(e) {
-    let crazy = e.target.checked;
+    let crazy = e.target.checked
     this.setState({
       crazy: crazy,
       options: crazy ? WHY_WOULD_YOU : FLAVOURS
-    });
+    })
   }
 
   render() {
@@ -61,6 +61,6 @@ export default class Multiselect extends React.Component {
           </Form.Check>
         </div>
       </div>
-    );
+    )
   }
 }

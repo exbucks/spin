@@ -1,23 +1,23 @@
-import React from 'react';
-import { Form, FormGroup } from 'components';
+import React from 'react'
+import { Form, FormGroup } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
+import { Typeahead } from 'react-bootstrap-typeahead'
 
-import options from './../exampleData';
+import options from './../exampleData'
 
 class BasicBehaviorsExample extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       disabled: false,
       dropup: false,
       minLength: 0
-    };
+    }
   }
 
   render() {
-    const { disabled, dropup, emptyLabel, minLength } = this.state;
+    const { disabled, dropup, emptyLabel, minLength } = this.state
 
     return (
       <div>
@@ -44,19 +44,19 @@ class BasicBehaviorsExample extends React.Component {
           </Form.Check>
         </FormGroup>
       </div>
-    );
+    )
   }
 
   _handleChange = (e) => {
-    const { checked, name } = e.target;
-    const newState = { [name]: checked };
+    const { checked, name } = e.target
+    const newState = { [name]: checked }
 
     if (name === 'minLength') {
-      newState.minLength = checked ? 2 : 0;
+      newState.minLength = checked ? 2 : 0
     }
 
-    this.setState(newState);
-  };
+    this.setState(newState)
+  }
 }
 
-export default BasicBehaviorsExample;
+export default BasicBehaviorsExample

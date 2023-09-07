@@ -1,37 +1,37 @@
-import React from 'react';
-import _ from 'underscore';
-import { faker } from '@faker-js/faker';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import _ from 'underscore'
+import { faker } from '@faker-js/faker'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { Row, Col, Media, Nav, NavItem, AvatarImage, Label } from 'components';
+import { Row, Col, Media, Nav, NavItem, AvatarImage, Label } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 const userToEdit = {
   Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   Avatar: faker.image.avatar()
-};
+}
 
 const urlSectionToName = (section) => {
   switch (section) {
     case 'profile':
-      return 'Profile Edit';
+      return 'Profile Edit'
     case 'account':
-      return 'Account Edit';
+      return 'Account Edit'
     case 'billing':
-      return 'Billing Edit';
+      return 'Billing Edit'
     case 'settings':
-      return 'Settings Edit';
+      return 'Settings Edit'
     case 'sessions':
-      return 'Sessions Edit';
+      return 'Sessions Edit'
   }
-};
+}
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
-import { ProfileEdit, AccountEdit, BillingEdit, SettingsEdit, SessionsEdit } from './components';
+import { ProfileEdit, AccountEdit, BillingEdit, SettingsEdit, SessionsEdit } from './components'
 
 // ------------------------------------
 // Main Container
@@ -40,11 +40,11 @@ class ProfileEditContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
-    const { section: sectionName } = this.props.routeParams;
+    const { section: sectionName } = this.props.routeParams
     return (
       <div>
         <Row>
@@ -108,8 +108,8 @@ class ProfileEditContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ProfileEditContainer);
+export default connect()(ProfileEditContainer)

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Grid, Row, Col, Table, Charts, CollapsablePanel } from 'components';
+import { Grid, Row, Col, Table, Charts, CollapsablePanel } from 'components'
 
-import classes from './Monitor.scss';
+import classes from './Monitor.scss'
 
 const Monitor = (panelProps) => (
   <CollapsablePanel
@@ -132,6 +132,6 @@ const Monitor = (panelProps) => (
       </Row>
     </Grid>
   </CollapsablePanel>
-);
+)
 
-export default Monitor;
+export default Monitor

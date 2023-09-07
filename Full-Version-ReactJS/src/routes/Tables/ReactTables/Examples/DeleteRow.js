@@ -1,19 +1,19 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import { Col, Row, Button } from 'components';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
+import { Col, Row, Button } from 'components'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
-const data = Array.from(products(['id', 'name', 'price'], 5));
+const data = Array.from(products(['id', 'name', 'price'], 5))
 
 const selectRowProp = {
   mode: 'checkbox'
-};
+}
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
 const createCustomToolbar = (props) => {
-  const { btnGroup } = props.components;
+  const { btnGroup } = props.components
 
   return (
     <div>
@@ -24,21 +24,21 @@ const createCustomToolbar = (props) => {
         <div className={classes.actions}>{btnGroup}</div>
       </Col>
     </div>
-  );
-};
+  )
+}
 
 const options = {
   toolBar: createCustomToolbar,
   deleteBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       Delete <i className="fa fa-fw fa-trash-o"></i>
     </Button>
   )
-};
+}
 
 const DeleteRow = () => (
   <BootstrapTable data={data} deleteRow={true} selectRow={selectRowProp} options={options}>
@@ -48,6 +48,6 @@ const DeleteRow = () => (
     <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
     <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
   </BootstrapTable>
-);
+)
 
-export default DeleteRow;
+export default DeleteRow

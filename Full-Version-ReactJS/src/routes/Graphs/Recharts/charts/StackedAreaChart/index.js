@@ -1,3 +1,3 @@
-import StackedAreaChart from './StackedAreaChart';
+import StackedAreaChart from './StackedAreaChart'
 
-export default StackedAreaChart;
+export default StackedAreaChart

@@ -1,3 +1,3 @@
-import PanelsContainer from './PanelsContainer';
+import PanelsContainer from './PanelsContainer'
 
-export default PanelsContainer;
+export default PanelsContainer

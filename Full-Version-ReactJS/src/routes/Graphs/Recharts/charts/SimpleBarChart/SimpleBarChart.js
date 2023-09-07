@@ -1,10 +1,10 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const { ResponsiveContainer, BarChart, Bar, CartesianGrid, Tooltip, Legend, YAxis, XAxis } =
-  Charts.Recharts;
+  Charts.Recharts
 
-import { data } from './../../data';
+import { data } from './../../data'
 
 const SimpleBarChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -18,6 +18,6 @@ const SimpleBarChart = (props) => (
       <Bar dataKey="uv" fill="#3BBDA8" />
     </BarChart>
   </ResponsiveContainer>
-);
+)
 
-export default SimpleBarChart;
+export default SimpleBarChart

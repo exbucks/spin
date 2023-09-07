@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col } from 'components';
+import { Row, Col } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import * as Examples from './Examples';
+import * as Examples from './Examples'
 
 class Tables extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -81,8 +81,8 @@ class Tables extends RoutedComponent {
           {Examples.ContextualExampleTable()}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(Tables);
+export default connect()(Tables)

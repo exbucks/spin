@@ -1,22 +1,22 @@
-import React from 'react';
-import _ from 'underscore';
-import ReactGridLayout, { WidthProvider, Responsive } from 'react-grid-layout';
+import React from 'react'
+import _ from 'underscore'
+import ReactGridLayout, { WidthProvider, Responsive } from 'react-grid-layout'
 
-import { Button, Grid, Header, FloatGrid } from 'components';
+import { Button, Grid, Header, FloatGrid } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 import {
   CONTENT_VIEW_STATIC,
   SCREEN_SIZE_XS,
   SCREEN_SIZE_SM
-} from 'layouts/DefaultLayout/modules/layout';
+} from 'layouts/DefaultLayout/modules/layout'
 
 /*
     Timeliens from Timeline examples
 */
-import TimelineExample1 from 'routes/Pages/Timeline/components/TimelineExample_VerticalInnerDate';
-import TimelineExample2 from 'routes/Pages/Timeline/components/TimelineExample_Horizontal';
-import TimelineExample3 from 'routes/Pages/Timeline/components/TimelineExample_Vertical';
+import TimelineExample1 from 'routes/Pages/Timeline/components/TimelineExample_VerticalInnerDate'
+import TimelineExample2 from 'routes/Pages/Timeline/components/TimelineExample_Horizontal'
+import TimelineExample3 from 'routes/Pages/Timeline/components/TimelineExample_Vertical'
 
 /*
     Page specific components
@@ -34,17 +34,17 @@ import {
   Attachments,
   Comments2,
   Chat
-} from './components';
+} from './components'
 
-import gridDefinition from './gridDefinition';
+import gridDefinition from './gridDefinition'
 
-import classes from './DataWidgets.scss';
+import classes from './DataWidgets.scss'
 
-const deepClone = (o) => JSON.parse(JSON.stringify(o));
+const deepClone = (o) => JSON.parse(JSON.stringify(o))
 
 class DataWidgetsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       closedPanels: [],
@@ -52,65 +52,65 @@ class DataWidgetsContainer extends RoutedComponent {
       thinWidgetsColumns: {},
       largeWidgetsColumns: {},
       layouts: deepClone(gridDefinition)
-    };
+    }
 
-    this.initialState = _.clone(this.state);
+    this.initialState = _.clone(this.state)
 
-    this.ResponsiveGridLayout = WidthProvider(Responsive);
+    this.ResponsiveGridLayout = WidthProvider(Responsive)
   }
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC,
       rawContent: true
-    };
+    }
   }
 
   isPanelOpen(panelId) {
-    return !_.contains(this.state.closedPanels, panelId);
+    return !_.contains(this.state.closedPanels, panelId)
   }
 
   closePanel(panelId) {
     this.setState({
       closedPanels: [...this.state.closedPanels, panelId]
-    });
+    })
   }
 
   componentWillUpdate(nextProps) {
     if (nextProps.contentView !== this.props.contentView) {
       requestAnimationFrame(() => {
-        this.ResponsiveGridLayout = WidthProvider(Responsive);
-      });
+        this.ResponsiveGridLayout = WidthProvider(Responsive)
+      })
     }
   }
 
   changeLayout(layout) {
     const modifiedLayout = _.map(this.state.layouts, (column) => {
-      const elementToReplace = _.findWhere(layout, { key: column.key });
-      return elementToReplace || column;
-    });
+      const elementToReplace = _.findWhere(layout, { key: column.key })
+      return elementToReplace || column
+    })
 
     this.setState({
       layouts: modifiedLayout
-    });
+    })
   }
 
   resetLayout() {
-    this.setState(this.initialState);
+    this.setState(this.initialState)
   }
 
   gridEnabled() {
     return (
       this.props.currentScreenSize !== SCREEN_SIZE_XS &&
       this.props.currentScreenSize !== SCREEN_SIZE_SM
-    );
+    )
   }
 
   getColumnDef(key) {
-    return _.findWhere(this.state.layouts, { key });
+    return _.findWhere(this.state.layouts, { key })
   }
 
   render() {
-    const { ResponsiveGridLayout } = this;
+    const { ResponsiveGridLayout } = this
 
     return (
       <div style={{ paddingTop: !this.props.headerEnabled ? '19px' : '0' }}>
@@ -292,7 +292,7 @@ class DataWidgetsContainer extends RoutedComponent {
           </div>
         </Grid>
       </div>
-    );
+    )
   }
 }
 
@@ -301,4 +301,4 @@ export default connect((state) => ({
   headerEnabled: state.app.headerEnabled,
   headerStyle: state.app.headerStyle,
   currentScreenSize: state.app.currentScreenSize
-}))(DataWidgetsContainer);
+}))(DataWidgetsContainer)

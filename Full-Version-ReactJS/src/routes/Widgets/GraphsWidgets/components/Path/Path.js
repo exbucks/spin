@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Grid, Row, Col, Charts, Label, CollapsablePanel } from 'components';
+import { Grid, Row, Col, Charts, Label, CollapsablePanel } from 'components'
 
-import classes from './Path.scss';
+import classes from './Path.scss'
 
 const Path = (panelProps) => (
   <CollapsablePanel
@@ -46,6 +46,6 @@ const Path = (panelProps) => (
       </Grid>
     </div>
   </CollapsablePanel>
-);
+)
 
-export default Path;
+export default Path

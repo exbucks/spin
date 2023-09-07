@@ -1,3 +1,3 @@
-import Area from './Area';
+import Area from './Area'
 
-export default Area;
+export default Area

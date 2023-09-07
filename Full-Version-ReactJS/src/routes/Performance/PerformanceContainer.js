@@ -1,27 +1,27 @@
-import React from 'react';
-import _ from 'underscore';
-import ReactInterval from 'react-interval';
-import numeral from 'numeral';
-import moment from 'moment';
+import React from 'react'
+import _ from 'underscore'
+import ReactInterval from 'react-interval'
+import numeral from 'numeral'
+import moment from 'moment'
 
-import { Table, Panel, Row, Col, Charts } from 'components';
+import { Table, Panel, Row, Col, Charts } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
 
-import classes from './Performance.scss';
+import classes from './Performance.scss'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import performanceData from 'consts/data/performance.json';
-import performanceChartData from 'consts/data/performance-chart.json';
+import performanceData from 'consts/data/performance.json'
+import performanceChartData from 'consts/data/performance-chart.json'
 
 // ------------------------------------
 // Variables
 // ------------------------------------
-const initialDataLength = performanceChartData.length;
-const totalSeconds = 0;
+const initialDataLength = performanceChartData.length
+const totalSeconds = 0
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
@@ -32,27 +32,27 @@ const getChartData = (chartData) =>
       .subtract(chartData.length - i, 'seconds')
       .valueOf(),
     y: val
-  }));
+  }))
 
 const getData = (inputData) => {
-  const initialData = treeRandomizer(inputData);
+  const initialData = treeRandomizer(inputData)
   const generateChartData = (count = 20) => {
-    const output = [];
+    const output = []
 
     for (let i = 0; i < count; i++) {
-      output.push(Math.round(Math.random() * 100));
+      output.push(Math.round(Math.random() * 100))
     }
 
-    return output;
-  };
+    return output
+  }
   initialData.PartsPerformance.forEach((perf) => {
-    perf.DataThrughtput = generateChartData();
-    perf.DataResponse = generateChartData();
-    perf.DataCpuBurn = generateChartData();
-  });
+    perf.DataThrughtput = generateChartData()
+    perf.DataResponse = generateChartData()
+    perf.DataCpuBurn = generateChartData()
+  })
 
-  return initialData;
-};
+  return initialData
+}
 
 const prepareHighchartSeries = (data) => ({
   /*xAxis: {
@@ -65,10 +65,10 @@ const prepareHighchartSeries = (data) => ({
       data: _.last(data, initialDataLength)
     }
   ]
-});
+})
 
 const getChartConfig = (data) => {
-  const series = prepareHighchartSeries(data);
+  const series = prepareHighchartSeries(data)
   const config = {
     xAxis: {
       type: 'datetime',
@@ -80,12 +80,12 @@ const getChartConfig = (data) => {
         minute: '%I:%M %p'
       }
     }
-  };
+  }
 
-  return Object.assign({}, series, config);
-};
+  return Object.assign({}, series, config)
+}
 
-const avgRequestsCount = Math.round(5000 * Math.random());
+const avgRequestsCount = Math.round(5000 * Math.random())
 
 // ------------------------------------
 // Sub Elements
@@ -118,7 +118,7 @@ const renderDetailedSummary = (data) => {
         <Charts.SparklineLine data={row.DataCpuBurn} width={130} height={20} />
       </td>
     </tr>
-  );
+  )
 
   return (
     <Panel className={classes.detailedSummary}>
@@ -137,61 +137,61 @@ const renderDetailedSummary = (data) => {
         <tbody>{_.map(data, (item) => renderRow(item))}</tbody>
       </Table>
     </Panel>
-  );
-};
+  )
+}
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class PerformanceContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       ResponseTimeData: getChartData(performanceChartData),
       avgRequestsCount: performanceChartData.length + Math.round(Math.random() * 10000),
       ...getData(performanceData)
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   generateMoreData() {
-    const isSpike = Math.random() <= 0.05;
-    let newVal = 0;
+    const isSpike = Math.random() <= 0.05
+    let newVal = 0
     if (!isSpike) {
-      const lastValues = _.pluck(_.last(this.state.ResponseTimeData, 10), 'y');
-      const minValue = _.min(lastValues);
-      const maxValue = _.max(lastValues);
+      const lastValues = _.pluck(_.last(this.state.ResponseTimeData, 10), 'y')
+      const minValue = _.min(lastValues)
+      const maxValue = _.max(lastValues)
 
-      newVal = Math.round(minValue + (maxValue - minValue) * Math.random());
+      newVal = Math.round(minValue + (maxValue - minValue) * Math.random())
     } else {
-      newVal = 200 + Math.round(Math.random() * 150);
+      newVal = 200 + Math.round(Math.random() * 150)
     }
     const newPoint = {
       x: moment().utc().add(totalSeconds, 'seconds').valueOf(),
       y: newVal
-    };
+    }
 
     this.setState(
       Object.assign({}, this.state, {
         ResponseTimeData: [...this.state.ResponseTimeData, newPoint],
         avgRequestsCount: this.state.avgRequestsCount + Math.round(Math.random() * 10000)
       })
-    );
+    )
   }
 
   render() {
-    const avgResponseTime = _.last(this.state.ResponseTimeData).y;
+    const avgResponseTime = _.last(this.state.ResponseTimeData).y
 
-    const avgRequestsCount = this.state.avgRequestsCount;
-    const avgRequestsCountDuration = Math.round(this.state.ResponseTimeData.length / 60);
+    const avgRequestsCount = this.state.avgRequestsCount
+    const avgRequestsCountDuration = Math.round(this.state.ResponseTimeData.length / 60)
 
-    const avgRequestsCountDay = Math.round(10000000000 + Math.random() * 1000000000);
+    const avgRequestsCountDay = Math.round(10000000000 + Math.random() * 1000000000)
 
     return (
       <Row className={classes.mainWrap}>
@@ -233,8 +233,8 @@ class PerformanceContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(PerformanceContainer);
+export default connect()(PerformanceContainer)

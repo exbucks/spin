@@ -1,3 +1,3 @@
-import SlidersContainer from './SlidersContainer';
+import SlidersContainer from './SlidersContainer'
 
-export default SlidersContainer;
+export default SlidersContainer

@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { SingleDatePickerWrapper } from './../components';
+import { SingleDatePickerWrapper } from './../components'
 
 const datesList = [
   moment(),
@@ -12,7 +12,7 @@ const datesList = [
   moment().add(11, 'days'),
   moment().add(12, 'days'),
   moment().add(13, 'days')
-];
+]
 
 const sdpDayPropsVariants = [
   {
@@ -61,6 +61,6 @@ const sdpDayPropsVariants = [
       />
     )
   }
-];
+]
 
-export default sdpDayPropsVariants;
+export default sdpDayPropsVariants

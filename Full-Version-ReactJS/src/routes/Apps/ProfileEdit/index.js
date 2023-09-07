@@ -1,3 +1,3 @@
-import ProfileEditContainer from './ProfileEditContainer';
+import ProfileEditContainer from './ProfileEditContainer'
 
-export default ProfileEditContainer;
+export default ProfileEditContainer

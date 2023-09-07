@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
 import {
   Wizard,
@@ -16,14 +16,14 @@ import {
   Dropdown,
   DropdownButton,
   ButtonGroup
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-const sequence = ['your-cart', 'shipping', 'payment', 'summary'];
+const sequence = ['your-cart', 'shipping', 'payment', 'summary']
 
-import classes from './wizardSteps.scss';
+import classes from './wizardSteps.scss'
 
 const items = [
   {
@@ -46,21 +46,21 @@ const items = [
     quantity: 15,
     price: '$501.00'
   }
-];
+]
 
 class WizardStepsContainer extends RoutedComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       currentStep: 'your-cart'
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   renderCart() {
@@ -118,7 +118,7 @@ class WizardStepsContainer extends RoutedComponent {
           </Table>
         </Col>
       </Row>
-    );
+    )
   }
 
   renderShipping() {
@@ -239,7 +239,7 @@ class WizardStepsContainer extends RoutedComponent {
           </Form>
         </Col>
       </Row>
-    );
+    )
   }
 
   renderPayment() {
@@ -356,7 +356,7 @@ class WizardStepsContainer extends RoutedComponent {
           </Panel>
         </Col>
       </Row>
-    );
+    )
   }
 
   renderSummary() {
@@ -481,28 +481,28 @@ class WizardStepsContainer extends RoutedComponent {
           </dl>
         </Col>
       </Row>
-    );
+    )
   }
 
   nextStep() {
-    const index = sequence.indexOf(this.state.currentStep);
+    const index = sequence.indexOf(this.state.currentStep)
     this.setState({
       currentStep: sequence[index + 1]
-    });
+    })
   }
 
   prevStep() {
-    const index = sequence.indexOf(this.state.currentStep);
+    const index = sequence.indexOf(this.state.currentStep)
     this.setState({
       currentStep: sequence[index - 1]
-    });
+    })
   }
 
   isComplete(id) {
-    const currentIndex = sequence.indexOf(this.state.currentStep);
-    const testIndex = sequence.indexOf(id);
+    const currentIndex = sequence.indexOf(this.state.currentStep)
+    const testIndex = sequence.indexOf(id)
 
-    return testIndex < currentIndex;
+    return testIndex < currentIndex
   }
 
   render() {
@@ -551,7 +551,7 @@ class WizardStepsContainer extends RoutedComponent {
                   {this.state.currentStep !== 'your-cart' && (
                     <Button
                       onClick={() => {
-                        this.prevStep();
+                        this.prevStep()
                       }}
                       className="m-r-1"
                     >
@@ -572,13 +572,13 @@ class WizardStepsContainer extends RoutedComponent {
                 {(() => {
                   switch (this.state.currentStep) {
                     case 'your-cart':
-                      return this.renderCart();
+                      return this.renderCart()
                     case 'shipping':
-                      return this.renderShipping();
+                      return this.renderShipping()
                     case 'payment':
-                      return this.renderPayment();
+                      return this.renderPayment()
                     case 'summary':
-                      return this.renderSummary();
+                      return this.renderSummary()
                   }
                 })()}
               </div>
@@ -586,8 +586,8 @@ class WizardStepsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(WizardStepsContainer);
+export default connect()(WizardStepsContainer)

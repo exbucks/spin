@@ -1,9 +1,9 @@
-import { OverlayContent, ScrollArea, OverlayContentParent } from './components';
+import { OverlayContent, ScrollArea, OverlayContentParent } from './components'
 
-import RightSidebar from './RightSidebar';
+import RightSidebar from './RightSidebar'
 
-RightSidebar.OverlayContentParent = OverlayContentParent;
-RightSidebar.OverlayContent = OverlayContent;
-RightSidebar.ScrollArea = ScrollArea;
+RightSidebar.OverlayContentParent = OverlayContentParent
+RightSidebar.OverlayContent = OverlayContent
+RightSidebar.ScrollArea = ScrollArea
 
-export default RightSidebar;
+export default RightSidebar

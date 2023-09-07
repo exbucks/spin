@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Panel, Tabs, Tab, Button, Form, FormGroup, FormControl } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Panel, Tabs, Tab, Button, Form, FormGroup, FormControl } from 'components'
 
-import classes from './LayoutOptions.scss';
+import classes from './LayoutOptions.scss'
 
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import {
   toggleOptions,
   restoreSettings,
@@ -46,7 +46,7 @@ import {
   SIDEBAR_ADDON_AVATAR_AND_BARS,
   SIDEBAR_ADDON_AVATAR_AND_NUMBERS,
   SIDEBAR_ADDON_AVATAR_AND_STATS
-} from 'layouts/DefaultLayout/modules/layout';
+} from 'layouts/DefaultLayout/modules/layout'
 
 // ------------------------------------
 // SelectBoxes data sets
@@ -55,18 +55,18 @@ const sidebarStyleSelect = [
   { text: 'Default Sidebar', val: SIDEBAR_STYLE_DEFAULT },
   { text: 'Slim Sidebar', val: SIDEBAR_STYLE_SLIM },
   { text: 'Big Icons Sidebar', val: SIDEBAR_STYLE_BIGICONS }
-];
+]
 
 const layoutTypeSelect = [
   { text: 'Container', val: CONTENT_VIEW_STATIC },
   { text: 'Container Fluid', val: CONTENT_VIEW_FLUID },
   { text: 'Boxed Layout', val: CONTENT_VIEW_BOXED }
-];
+]
 
 const headerStyleSelect = [
   { text: 'Header 1', val: HEADER_STYLE_BREADCRUMBS },
   { text: 'Header 2', val: HEADER_STYLE_SIMPLE }
-];
+]
 
 const sidebarAppearanceSelect = [
   { text: 'Default', val: SIDEBAR_ADDON_DEFAULT },
@@ -76,7 +76,7 @@ const sidebarAppearanceSelect = [
   { text: 'With Avatar & Bars', val: SIDEBAR_ADDON_AVATAR_AND_BARS },
   { text: 'With Avatar & Numbers', val: SIDEBAR_ADDON_AVATAR_AND_NUMBERS },
   { text: 'With Avatar & Stats', val: SIDEBAR_ADDON_AVATAR_AND_STATS }
-];
+]
 
 class LayoutOptions extends React.Component {
   static propTypes = {
@@ -114,22 +114,22 @@ class LayoutOptions extends React.Component {
     setSidebarSkin: PropTypes.func.isRequired,
     setNavbarSkin: PropTypes.func.isRequired,
     setSkinColor: PropTypes.func.isRequired
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       navbarGroupActive: true,
       sidebarGroupActive: true,
       contentGroupActive: true,
       footerGroupActive: true
-    };
+    }
   }
 
   render() {
-    const { toggleOptions, optionsVisible } = this.props;
-    const parentClasses = `layout-options ${optionsVisible ? 'active' : ''} ${classes.parent}`;
+    const { toggleOptions, optionsVisible } = this.props
+    const parentClasses = `layout-options ${optionsVisible ? 'active' : ''} ${classes.parent}`
 
     return (
       <div className={parentClasses}>
@@ -422,7 +422,7 @@ class LayoutOptions extends React.Component {
           </Tabs>
         </Panel>
       </div>
-    );
+    )
   }
 }
 
@@ -444,7 +444,7 @@ const mapStateToProps = (state) => ({
   headerEnabled: state.app.headerEnabled,
   headerFluid: state.app.headerFluid,
   skinColor: state.app.skinColor
-});
+})
 
 const mapActionCreators = {
   toggleOptions,
@@ -469,6 +469,6 @@ const mapActionCreators = {
   setSidebarSkin,
   setNavbarSkin,
   setSkinColor
-};
+}
 
-export default connect(mapStateToProps, mapActionCreators)(LayoutOptions);
+export default connect(mapStateToProps, mapActionCreators)(LayoutOptions)

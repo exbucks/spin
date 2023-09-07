@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const OverlayContent = (props) => {
-  const { active, children, className, style } = props;
+  const { active, children, className, style } = props
 
   const contentClass = classNames(
     {
@@ -11,7 +11,7 @@ const OverlayContent = (props) => {
     },
     'right-sidebar-extra-content',
     className
-  );
+  )
 
   const mergedStyle = {
     ...style,
@@ -19,18 +19,18 @@ const OverlayContent = (props) => {
     overflowY: 'hidden',
     top: '0px',
     height: '100%'
-  };
+  }
 
   return (
     <div className={contentClass} style={mergedStyle}>
       {children}
     </div>
-  );
-};
+  )
+}
 
 OverlayContent.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.node
-};
+}
 
-export default OverlayContent;
+export default OverlayContent

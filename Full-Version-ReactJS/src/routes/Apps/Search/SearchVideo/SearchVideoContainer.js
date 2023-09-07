@@ -1,56 +1,56 @@
-import React from 'react';
-import _ from 'underscore';
-import numeral from 'numeral';
+import React from 'react'
+import _ from 'underscore'
+import numeral from 'numeral'
 
-import { Row, Col, Pagination, Media, Label, Image, Divider, StarRating } from 'components';
+import { Row, Col, Pagination, Media, Label, Image, Divider, StarRating } from 'components'
 
 // Sub Components
-import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components';
+import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import resultsData from 'consts/data/search-video.json';
+import resultsData from 'consts/data/search-video.json'
 
-import classes from './../Search.scss';
+import classes from './../Search.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const serviceNameToBsStyle = (serviceName) => {
   switch (serviceName) {
     case 'Youtube':
-      return 'danger';
+      return 'danger'
     case 'Vimeo':
-      return 'primary';
+      return 'primary'
     case 'Dailymotion':
-      return 'info';
+      return 'info'
     case 'Metacafe':
-      return 'warning';
+      return 'warning'
     default:
     case 'Other':
-      return 'default';
+      return 'default'
   }
-};
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class SearchVideoContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(resultsData) };
+    this.state = { data: getData(resultsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -121,8 +121,8 @@ class SearchVideoContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(SearchVideoContainer);
+export default connect()(SearchVideoContainer)

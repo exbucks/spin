@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
 import {
   Row,
@@ -20,46 +20,46 @@ import {
   AvatarIcon,
   FavoriteStar,
   Divider
-} from 'components';
+} from 'components'
 
-import renderSection from 'modules/sectionRender';
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import renderSection from 'modules/sectionRender'
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import clientsData from 'consts/data/app-clients.json';
+import { Colors } from 'consts'
+import clientsData from 'consts/data/app-clients.json'
 
-import classes from './Clients.scss';
+import classes from './Clients.scss'
 
-import { UserDetails } from './../components';
+import { UserDetails } from './../components'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const ENTRY_TYPE_USER = 'user';
-const ENTRY_TYPE_COMPANY = 'company';
+const ENTRY_TYPE_USER = 'user'
+const ENTRY_TYPE_COMPANY = 'company'
 
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const statusToColor = (status) => {
   switch (status) {
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const labelToBsStyle = (label) => {
-  const labelStyles = ['primary', 'success', 'warning', 'danger'];
+  const labelStyles = ['primary', 'success', 'warning', 'danger']
 
-  return labelStyles[Math.floor(Math.random() * labelStyles.length)];
-};
+  return labelStyles[Math.floor(Math.random() * labelStyles.length)]
+}
 
 const commerceToBsStyle = (commerce) => {
   const map = {
@@ -73,10 +73,10 @@ const commerceToBsStyle = (commerce) => {
     Movies: 'success',
     Industrial: 'warning',
     Automotive: 'danger'
-  };
+  }
 
-  return map[commerce] || 'primary';
-};
+  return map[commerce] || 'primary'
+}
 
 const companyIcons = (copmanyName) => {
   const icons = {
@@ -125,16 +125,16 @@ const companyIcons = (copmanyName) => {
       color: '#10BFF2',
       background: Colors.brandWhite
     }
-  };
+  }
 
-  return icons[copmanyName] || null;
-};
+  return icons[copmanyName] || null
+}
 
 // ------------------------------------
 // Partial sections
 // ------------------------------------
 const renderCompanyIcon = (companyName, size = 'default') => {
-  const iconSettings = companyIcons(companyName);
+  const iconSettings = companyIcons(companyName)
 
   if (iconSettings) {
     return (
@@ -146,14 +146,14 @@ const renderCompanyIcon = (companyName, size = 'default') => {
       >
         {iconSettings.icon}
       </AvatarIcon>
-    );
+    )
   }
 
-  return null;
-};
+  return null
+}
 
 const renderClients = (props) => {
-  const { clients, changeItem, selectedItem } = props;
+  const { clients, changeItem, selectedItem } = props
 
   return (
     <Table responsive hover className={classes.peopleTable}>
@@ -205,11 +205,11 @@ const renderClients = (props) => {
         ))}
       </tbody>
     </Table>
-  );
-};
+  )
+}
 
 const renderCompanies = (props) => {
-  const { companies, selectedItem, changeItem } = props;
+  const { companies, selectedItem, changeItem } = props
 
   return (
     <Table responsive hover className={classes.companiesTable}>
@@ -270,8 +270,8 @@ const renderCompanies = (props) => {
         ))}
       </tbody>
     </Table>
-  );
-};
+  )
+}
 
 const renderUserDetails = (user) => {
   const props = {
@@ -285,14 +285,14 @@ const renderUserDetails = (user) => {
     contact: user.Contact,
     social: user.Social,
     address: user.Address
-  };
+  }
 
   return (
     <Panel className={classes.companiesPanel}>
       <UserDetails {...props} />
     </Panel>
-  );
-};
+  )
+}
 
 const renderCompanyDetails = (company) => (
   <Panel className={classes.companiesPanel}>
@@ -384,31 +384,31 @@ const renderCompanyDetails = (company) => (
       </Tab>
     </Tabs>
   </Panel>
-);
+)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class ClientsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    const data = getData(clientsData);
+    const data = getData(clientsData)
 
-    this.state = { data, selected: _.first(data.People), selectedType: ENTRY_TYPE_USER };
+    this.state = { data, selected: _.first(data.People), selectedType: ENTRY_TYPE_USER }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   changeActiveItem(activeItem, type = ENTRY_TYPE_USER) {
     this.setState({
       selected: activeItem,
       selectedType: type
-    });
+    })
   }
 
   render() {
@@ -462,8 +462,8 @@ class ClientsContainer extends RoutedComponent {
             : renderSection(renderCompanyDetails, this.state.selected)}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(ClientsContainer);
+export default connect()(ClientsContainer)

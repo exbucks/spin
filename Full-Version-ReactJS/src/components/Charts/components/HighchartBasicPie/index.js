@@ -1,3 +1,3 @@
-import HighchartBasicPie from './HighchartBasicPie.js';
+import HighchartBasicPie from './HighchartBasicPie.js'
 
-export default HighchartBasicPie;
+export default HighchartBasicPie

@@ -1,45 +1,45 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { products, currencies, regions } from './../utils';
+import { products, currencies, regions } from './../utils'
 
 const cellEditProp = {
   mode: 'click'
-};
+}
 
-const data = Array.from(products(['id', 'name', 'priceDetailed', 'regions'], 5));
+const data = Array.from(products(['id', 'name', 'priceDetailed', 'regions'], 5))
 
-import { FormControl, Button } from 'components';
+import { FormControl, Button } from 'components'
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
 class NameEditor extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.updateData = this.updateData.bind(this);
+    this.updateData = this.updateData.bind(this)
     this.state = {
       name: props.defaultValue,
       open: true
-    };
+    }
   }
 
   focus() {
-    this.refs.inputRef.focus();
+    this.refs.inputRef.focus()
   }
 
   updateData() {
-    this.props.onUpdate(this.state.name);
+    this.props.onUpdate(this.state.name)
   }
 
   close = () => {
-    this.setState({ open: false });
-    this.props.onUpdate(this.props.defaultValue);
-  };
+    this.setState({ open: false })
+    this.props.onUpdate(this.props.defaultValue)
+  }
 
   render() {
-    const fadeIn = this.state.open ? 'in' : '';
-    const display = this.state.open ? 'block' : 'none';
+    const fadeIn = this.state.open ? 'in' : ''
+    const display = this.state.open ? 'block' : 'none'
     return (
       <div className={`modal fade ${fadeIn}`} id="myModal" role="dialog" style={{ display }}>
         <div className="modal-dialog">
@@ -52,7 +52,7 @@ class NameEditor extends React.Component {
                 type="text"
                 value={this.state.name}
                 onChange={(e) => {
-                  this.setState({ name: e.currentTarget.value });
+                  this.setState({ name: e.currentTarget.value })
                 }}
               />
             </div>
@@ -67,19 +67,19 @@ class NameEditor extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
 class PriceEditor extends React.Component {
   constructor(props) {
-    super(props);
-    this.updateData = this.updateData.bind(this);
-    this.state = { amount: props.defaultValue.amount, currency: props.defaultValue.currency };
+    super(props)
+    this.updateData = this.updateData.bind(this)
+    this.state = { amount: props.defaultValue.amount, currency: props.defaultValue.currency }
   }
 
   updateData() {
-    this.props.onUpdate({ amount: this.state.amount, currency: this.state.currency });
+    this.props.onUpdate({ amount: this.state.amount, currency: this.state.currency })
   }
   render() {
     return (
@@ -93,7 +93,7 @@ class PriceEditor extends React.Component {
           value={this.state.amount}
           onKeyDown={this.props.onKeyDown}
           onChange={(ev) => {
-            this.setState({ amount: parseInt(ev.currentTarget.value, 10) });
+            this.setState({ amount: parseInt(ev.currentTarget.value, 10) })
           }}
         />
         <FormControl
@@ -102,7 +102,7 @@ class PriceEditor extends React.Component {
           value={this.state.currency}
           onKeyDown={this.props.onKeyDown}
           onChange={(ev) => {
-            this.setState({ currency: ev.currentTarget.value });
+            this.setState({ currency: ev.currentTarget.value })
           }}
         >
           {currencies.map((currency) => (
@@ -115,28 +115,28 @@ class PriceEditor extends React.Component {
           Save
         </Button>
       </div>
-    );
+    )
   }
 }
 
 class RegionsEditor extends React.Component {
   constructor(props) {
-    super(props);
-    this.updateData = this.updateData.bind(this);
-    this.state = { regions: props.defaultValue };
-    this.onToggleRegion = this.onToggleRegion.bind(this);
+    super(props)
+    this.updateData = this.updateData.bind(this)
+    this.state = { regions: props.defaultValue }
+    this.onToggleRegion = this.onToggleRegion.bind(this)
   }
   focus() {}
   onToggleRegion(event) {
-    const region = event.currentTarget.name;
+    const region = event.currentTarget.name
     if (this.state.regions.indexOf(region) < 0) {
-      this.setState({ regions: this.state.regions.concat([region]) });
+      this.setState({ regions: this.state.regions.concat([region]) })
     } else {
-      this.setState({ regions: this.state.regions.filter((r) => r !== region) });
+      this.setState({ regions: this.state.regions.filter((r) => r !== region) })
     }
   }
   updateData() {
-    this.props.onUpdate(this.state.regions);
+    this.props.onUpdate(this.state.regions)
   }
   render() {
     const regionCheckBoxes = regions.map((region) => (
@@ -153,7 +153,7 @@ class RegionsEditor extends React.Component {
           {region}
         </label>
       </span>
-    ));
+    ))
     return (
       <div ref="inputRef" className={classes.regionChecks}>
         {regionCheckBoxes}
@@ -161,24 +161,24 @@ class RegionsEditor extends React.Component {
           Save
         </button>
       </div>
-    );
+    )
   }
 }
 
 function priceFormatter(cell, row) {
-  return `<i class='glyphicon glyphicon-${cell.currency.toLowerCase()}'></i> ${cell.amount}`;
+  return `<i class='glyphicon glyphicon-${cell.currency.toLowerCase()}'></i> ${cell.amount}`
 }
 
-const regionsFormatter = (cell, row) => <span>{(cell || []).join(' ')}</span>;
+const regionsFormatter = (cell, row) => <span>{(cell || []).join(' ')}</span>
 
 /*
 The getElement function take two arguments,
 1. onUpdate: if you want to apply the modified data, call this function
 2. props: contain customEditorParameters, whole row data, defaultValue and attrs
 */
-const createNameEditor = (onUpdate, props) => <NameEditor onUpdate={onUpdate} {...props} />;
-const createPriceEditor = (onUpdate, props) => <PriceEditor onUpdate={onUpdate} {...props} />;
-const createRegionsEditor = (onUpdate, props) => <RegionsEditor onUpdate={onUpdate} {...props} />;
+const createNameEditor = (onUpdate, props) => <NameEditor onUpdate={onUpdate} {...props} />
+const createPriceEditor = (onUpdate, props) => <PriceEditor onUpdate={onUpdate} {...props} />
+const createRegionsEditor = (onUpdate, props) => <RegionsEditor onUpdate={onUpdate} {...props} />
 
 class CustomCellEditTable extends React.Component {
   render() {
@@ -208,8 +208,8 @@ class CustomCellEditTable extends React.Component {
           Regions
         </TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default CustomCellEditTable;
+export default CustomCellEditTable

@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Button, Media, Modal } from 'components';
+import { Button, Media, Modal } from 'components'
 
 const DeleteModal = (props) => (
   <Modal show={props.visible} onHide={props.onClose} bsSize="large" bsStyle="danger">
@@ -27,15 +27,15 @@ const DeleteModal = (props) => (
       <Button bsStyle="danger">Yes, Delete</Button>
     </Modal.Footer>
   </Modal>
-);
+)
 
 DeleteModal.propTypes = {
   visible: PropTypes.bool,
   onClose: PropTypes.func
-};
+}
 
 DeleteModal.defaultProps = {
   onClose: () => {}
-};
+}
 
-export default DeleteModal;
+export default DeleteModal

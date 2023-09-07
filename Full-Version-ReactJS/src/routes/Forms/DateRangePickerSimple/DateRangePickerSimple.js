@@ -1,20 +1,20 @@
-import React from 'react';
-import _ from 'underscore';
-import moment from 'moment';
+import React from 'react'
+import _ from 'underscore'
+import moment from 'moment'
 
-import { Row, Col, DateRangePicker, DatePicker, Form, InputGroup, FormGroup } from 'components';
+import { Row, Col, DateRangePicker, DatePicker, Form, InputGroup, FormGroup } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import renderSection from 'modules/sectionRender';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import renderSection from 'modules/sectionRender'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { DayPickerRangeControllerWrapper, DayPickerControllerWrapper } from './components';
+import { DayPickerRangeControllerWrapper, DayPickerControllerWrapper } from './components'
 //import classes from './Forms.scss';
 
 const action = (functionName) => {
-  console.log(`DayPickerRangeController: triggered action - ${functionName}`);
-};
+  console.log(`DayPickerRangeController: triggered action - ${functionName}`)
+}
 
 // ------------------------------------
 // Main Container
@@ -23,7 +23,7 @@ class DateRangePickerSimple extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -243,8 +243,8 @@ class DateRangePickerSimple extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(DateRangePickerSimple);
+export default connect()(DateRangePickerSimple)

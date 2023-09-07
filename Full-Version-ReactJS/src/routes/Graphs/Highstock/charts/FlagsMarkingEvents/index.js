@@ -1,3 +1,3 @@
-import FlagsMarkingEvents from './FlagsMarkingEvents';
+import FlagsMarkingEvents from './FlagsMarkingEvents'
 
-export default FlagsMarkingEvents;
+export default FlagsMarkingEvents

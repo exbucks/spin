@@ -1,3 +1,3 @@
-import WizardStepsContainer from './WizardStepsContainer';
+import WizardStepsContainer from './WizardStepsContainer'
 
-export default WizardStepsContainer;
+export default WizardStepsContainer

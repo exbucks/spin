@@ -1,3 +1,3 @@
-import PerformanceContainer from './PerformanceContainer';
+import PerformanceContainer from './PerformanceContainer'
 
-export default PerformanceContainer;
+export default PerformanceContainer

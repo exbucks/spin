@@ -1,19 +1,19 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
-import { Media, Button, ButtonGroup, AvatarImage, CollapsablePanel } from 'components';
+import { Media, Button, ButtonGroup, AvatarImage, CollapsablePanel } from 'components'
 
-import { Colors } from './../../../../../consts';
+import { Colors } from './../../../../../consts'
 
 const statusToColor = {
   Online: Colors.brandSuccess,
   Busy: Colors.brandDanger,
   Away: Colors.brandWarning,
   Offline: Colors.grayLighter
-};
+}
 
 const emailsList = [
   {
@@ -56,7 +56,7 @@ const emailsList = [
     messageTime: '04:24',
     shortMessage: faker.lorem.sentence()
   }
-];
+]
 
 const Emails = (panelProps) => (
   <CollapsablePanel
@@ -103,6 +103,6 @@ const Emails = (panelProps) => (
       </Media>
     ))}
   </CollapsablePanel>
-);
+)
 
-export default Emails;
+export default Emails

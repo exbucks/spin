@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const getJson = (cb) => {
   require.ensure([], (require) => {
-    const { data } = require('consts/data/highstock/data-aapl-ohlcv.json');
-    cb(data);
-  });
-};
+    const { data } = require('consts/data/highstock/data-aapl-ohlcv.json')
+    cb(data)
+  })
+}
 
 const getConfig = (data) => {
   // split the data set into ohlc and volume
@@ -22,7 +22,7 @@ const getConfig = (data) => {
       ],
       ['month', [1, 2, 3, 4, 6]]
     ],
-    i = 0;
+    i = 0
 
   for (i; i < dataLength; i += 1) {
     ohlc.push([
@@ -31,12 +31,12 @@ const getConfig = (data) => {
       data[i][2], // high
       data[i][3], // low
       data[i][4] // close
-    ]);
+    ])
 
     volume.push([
       data[i][0], // the date
       data[i][5] // the volume
-    ]);
+    ])
   }
 
   const config = {
@@ -105,15 +105,15 @@ const getConfig = (data) => {
         }
       }
     ]
-  };
+  }
 
-  return config;
-};
+  return config
+}
 
 const TwoPanesCandlestickVolume = () => (
   <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
     <Charts.HighStock />
   </Charts.AsyncChart>
-);
+)
 
-export default TwoPanesCandlestickVolume;
+export default TwoPanesCandlestickVolume

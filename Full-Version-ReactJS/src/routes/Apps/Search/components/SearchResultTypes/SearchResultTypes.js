@@ -1,7 +1,7 @@
-import React from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { Nav, NavItem, Badge } from 'components';
+import { Nav, NavItem, Badge } from 'components'
 
 const SearchResultTypes = () => (
   <Nav bsStyle="pills" stacked activeKey={1}>
@@ -33,6 +33,6 @@ const SearchResultTypes = () => (
       </NavItem>
     </LinkContainer>
   </Nav>
-);
+)
 
-export default SearchResultTypes;
+export default SearchResultTypes

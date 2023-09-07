@@ -1,13 +1,13 @@
-import React from 'react';
-import { Row, Col, Panel, Button, Form, FormGroup, FormControl } from 'components';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Row, Col, Panel, Button, Form, FormGroup, FormControl } from 'components'
+import { Link } from 'react-router-dom'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './../Pages.scss';
+import classes from './../Pages.scss'
 
-import logo from 'static/spin-logo-inverted.png';
+import logo from 'static/spin-logo-inverted.png'
 
 class RegisterContainer extends RoutedComponent {
   getLayoutOptions() {
@@ -17,7 +17,7 @@ class RegisterContainer extends RoutedComponent {
       navbarEnabled: false,
       footerEnabled: false,
       headerEnabled: false
-    };
+    }
   }
 
   render() {
@@ -87,8 +87,8 @@ class RegisterContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(RegisterContainer);
+export default connect()(RegisterContainer)

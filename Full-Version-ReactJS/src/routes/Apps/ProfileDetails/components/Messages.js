@@ -1,8 +1,8 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import moment from 'moment';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import moment from 'moment'
 import {
   Row,
   Col,
@@ -14,11 +14,11 @@ import {
   Tooltip,
   OverlayTrigger,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './../ProfileDetails.scss';
+import classes from './../ProfileDetails.scss'
 
 const messages = Array.from(
   (function* () {
@@ -40,10 +40,10 @@ const messages = Array.from(
         Date: faker.date.recent(),
         Attachment: !!Math.round(Math.random()),
         Active: i <= 1
-      };
+      }
     }
   })()
-);
+)
 
 const Messages = () => (
   <Panel
@@ -139,6 +139,6 @@ const Messages = () => (
       </tbody>
     </Table>
   </Panel>
-);
+)
 
-export default Messages;
+export default Messages

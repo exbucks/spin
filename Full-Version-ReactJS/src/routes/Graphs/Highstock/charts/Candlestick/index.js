@@ -1,3 +1,3 @@
-import Candlestick from './Candlestick';
+import Candlestick from './Candlestick'
 
-export default Candlestick;
+export default Candlestick

@@ -1,75 +1,75 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import classNames from 'classnames'
 
-import { Row, Col, InputGroup, Button, FormControl, Treebeard } from 'components';
+import { Row, Col, InputGroup, Button, FormControl, Treebeard } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './TreeSortable.scss';
+import classes from './TreeSortable.scss'
 
-import data from './data';
-import * as filters from './filter';
+import data from './data'
+import * as filters from './filter'
 
-const HELP_MSG = 'Select A Node To See Its Data Structure Here...';
+const HELP_MSG = 'Select A Node To See Its Data Structure Here...'
 
 class NodeViewer extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
   render() {
-    let json = JSON.stringify(this.props.node, null, 4);
+    let json = JSON.stringify(this.props.node, null, 4)
     if (!json) {
-      json = HELP_MSG;
+      json = HELP_MSG
     }
     return (
       <pre className={classes.code}>
         <code>{json}</code>
       </pre>
-    );
+    )
   }
 }
 
 NodeViewer.propTypes = {
   node: PropTypes.object
-};
+}
 
 class TreeSortableContainer extends RoutedComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = { data };
+    this.state = { data }
 
-    this.onToggle = this.onToggle.bind(this);
+    this.onToggle = this.onToggle.bind(this)
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   onToggle(node, toggled) {
     if (this.state.cursor) {
-      this.state.cursor.active = false;
+      this.state.cursor.active = false
     }
-    node.active = true;
+    node.active = true
     if (node.children) {
-      node.toggled = toggled;
+      node.toggled = toggled
     }
-    this.setState({ cursor: node });
+    this.setState({ cursor: node })
   }
 
   onFilterKeyUp(e) {
-    const filter = e.target.value.trim();
+    const filter = e.target.value.trim()
     if (!filter) {
-      return this.setState({ data });
+      return this.setState({ data })
     }
-    var filtered = filters.filterTree(data, filter);
-    filtered = filters.expandFilteredNodes(filtered, filter);
-    this.setState({ data: filtered });
+    var filtered = filters.filterTree(data, filter)
+    filtered = filters.expandFilteredNodes(filtered, filter)
+    this.setState({ data: filtered })
   }
 
   render() {
@@ -92,8 +92,8 @@ class TreeSortableContainer extends RoutedComponent {
           <NodeViewer node={this.state.cursor} />
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(TreeSortableContainer);
+export default connect()(TreeSortableContainer)

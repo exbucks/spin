@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
 import {
   Row,
@@ -9,16 +9,16 @@ import {
   DropdownButton,
   SplitButton,
   Button
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class ButtonsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       firstCheckButtons: [0],
@@ -30,51 +30,51 @@ class ButtonsContainer extends RoutedComponent {
 
       isLoading: false,
       toggled: false
-    };
+    }
   }
 
   toggleCheckboxButton(buttonId, checkboxRow) {
-    const isSelected = _.contains(this.state[checkboxRow], buttonId);
+    const isSelected = _.contains(this.state[checkboxRow], buttonId)
     this.setState({
       ...this.state,
       [`${checkboxRow}`]: isSelected
         ? _.without(this.state[checkboxRow], buttonId)
         : [...this.state[checkboxRow], buttonId]
-    });
+    })
   }
 
   setRadioValue(buttonId, radioRow) {
     this.setState({
       ...this.state,
       [`${radioRow}`]: buttonId
-    });
+    })
   }
 
   toggleButton() {
     this.setState({
       ...this.state,
       toggled: !this.state.toggled
-    });
+    })
   }
 
   startLoading() {
     this.setState({
       ...this.state,
       isLoading: true
-    });
+    })
 
     setTimeout(() => {
       this.setState({
         ...this.state,
         isLoading: false
-      });
-    }, 2000);
+      })
+    }, 2000)
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -843,8 +843,8 @@ class ButtonsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(ButtonsContainer);
+export default connect()(ButtonsContainer)

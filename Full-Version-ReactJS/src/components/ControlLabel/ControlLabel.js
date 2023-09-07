@@ -1,3 +1,3 @@
-const ControlLabel = (props) => <div></div>;
+const ControlLabel = (props) => <div></div>
 
-export default ControlLabel;
+export default ControlLabel

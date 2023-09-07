@@ -1,10 +1,10 @@
-import { faker } from '@faker-js/faker';
+import { faker } from '@faker-js/faker'
 
-const startDate = new Date(2015, 0, 1);
-const endDate = new Date();
-const regions = ['North', 'South', 'East', 'West'];
-const statuses = ['Active', 'Suspended', 'Waiting', 'Unknown', 'Inactive'];
-const currencies = ['USD', 'EUR', 'GBP'];
+const startDate = new Date(2015, 0, 1)
+const endDate = new Date()
+const regions = ['North', 'South', 'East', 'West']
+const statuses = ['Active', 'Suspended', 'Waiting', 'Unknown', 'Inactive']
+const currencies = ['USD', 'EUR', 'GBP']
 
 const productFieldCreators = {
   id: (index) => index,
@@ -38,13 +38,13 @@ const productFieldCreators = {
       fieldD: '123eedd' + i
     }
   ]
-};
+}
 
 const jobFieldCreators = {
   id: (index) => index,
   name: (index) => `Application_Name_${index}`,
   active: () => !!Math.round(Math.random())
-};
+}
 
 const peopleCreators = {
   id: (i) => i,
@@ -66,24 +66,24 @@ const peopleCreators = {
     selectedPlan: 'Premium',
     planEnd: faker.date.recent()
   })
-};
+}
 
 function itemsGen(fieldsCreators) {
   return function* (fieldsList = ['id', 'name'], count = 5) {
     for (let i = 0; i < count; i++) {
-      const product = {};
+      const product = {}
 
       for (let fieldName of fieldsList) {
-        product[fieldName] = fieldsCreators[fieldName] ? fieldsCreators[fieldName](i) : '';
+        product[fieldName] = fieldsCreators[fieldName] ? fieldsCreators[fieldName](i) : ''
       }
 
-      yield product;
+      yield product
     }
-  };
+  }
 }
 
 const products = itemsGen(productFieldCreators),
   jobs = itemsGen(jobFieldCreators),
-  people = itemsGen(peopleCreators);
+  people = itemsGen(peopleCreators)
 
-export { products, jobs, people, regions, currencies, statuses };
+export { products, jobs, people, regions, currencies, statuses }

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Panel, Charts, CollapsablePanel } from 'components';
+import { Row, Col, Panel, Charts, CollapsablePanel } from 'components'
 
-import analyticsChartData from './../../../../../consts/data/analytics-chart.json';
+import analyticsChartData from './../../../../../consts/data/analytics-chart.json'
 
 const chartConfig = {
   title: '',
@@ -42,7 +42,7 @@ const chartConfig = {
       lineWidth: 1
     }
   ]
-};
+}
 
 const CustomerOverview = (panelProps) => (
   <CollapsablePanel
@@ -58,6 +58,6 @@ const CustomerOverview = (panelProps) => (
   >
     <Charts.HighchartBasicLine config={chartConfig} />
   </CollapsablePanel>
-);
+)
 
-export default CustomerOverview;
+export default CustomerOverview

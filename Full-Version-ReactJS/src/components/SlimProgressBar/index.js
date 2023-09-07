@@ -1,3 +1,3 @@
-import SlimProgressBar from './SlimProgressBar';
+import SlimProgressBar from './SlimProgressBar'
 
-export default SlimProgressBar;
+export default SlimProgressBar

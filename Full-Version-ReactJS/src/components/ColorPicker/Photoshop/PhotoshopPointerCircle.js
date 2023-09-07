@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const PhotoshopPointerCircle = ({ hsl }) => {
   const styles = reactCSS(
@@ -20,9 +20,9 @@ export const PhotoshopPointerCircle = ({ hsl }) => {
       }
     },
     { 'black-outline': hsl.l > 0.5 }
-  );
+  )
 
-  return <div style={styles.picker}></div>;
-};
+  return <div style={styles.picker}></div>
+}
 
-export default PhotoshopPointerCircle;
+export default PhotoshopPointerCircle

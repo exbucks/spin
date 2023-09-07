@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { DatePicker, Form, FormGroup } from 'components';
+import { DatePicker, Form, FormGroup } from 'components'
 
 const bdrPropsVariants = [
   {
@@ -14,6 +14,6 @@ const bdrPropsVariants = [
       </Form>
     )
   }
-];
+]
 
-export default bdrPropsVariants;
+export default bdrPropsVariants

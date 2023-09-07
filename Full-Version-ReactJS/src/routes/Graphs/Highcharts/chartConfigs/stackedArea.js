@@ -33,7 +33,7 @@ const config = {
     },
     labels: {
       formatter: function () {
-        return this.value / 1000;
+        return this.value / 1000
       }
     }
   },
@@ -81,6 +81,6 @@ const config = {
       }
     }
   ]
-};
+}
 
-export default config;
+export default config

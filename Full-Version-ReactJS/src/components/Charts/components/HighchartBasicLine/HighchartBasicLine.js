@@ -1,5 +1,5 @@
-import HighchartBase, { connect } from './../HighchartBase';
+import HighchartBase, { connect } from './../HighchartBase'
 
 class HighchartBasicLine extends HighchartBase {}
 
-export default connect(HighchartBasicLine);
+export default connect(HighchartBasicLine)

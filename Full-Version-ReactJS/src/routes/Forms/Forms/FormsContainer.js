@@ -1,9 +1,9 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
-import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe';
-import createNumberMask from 'text-mask-addons/dist/createNumberMask';
-import emailMask from 'text-mask-addons/dist/emailMask';
+import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'
+import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+import emailMask from 'text-mask-addons/dist/emailMask'
 
 import {
   Row,
@@ -17,20 +17,20 @@ import {
   ControlLabel,
   DropdownButton,
   MaskedTextInput
-} from 'components';
-import Toggle from 'react-toggle';
+} from 'components'
+import Toggle from 'react-toggle'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './Forms.scss';
+import classes from './Forms.scss'
 
-const autoCorrectedDatePipe = createAutoCorrectedDatePipe('mm/dd/yyyy');
-const dolarsMask = createNumberMask({ prefix: '$' });
-const dolarsMaskDecimal = createNumberMask({ prefix: '$', allowDecimal: true });
-const percentageMask = createNumberMask({ prefix: '', suffix: '%', integerLimit: 3 });
-const upperCasePipe = (conformedValue) => conformedValue.toUpperCase();
+const autoCorrectedDatePipe = createAutoCorrectedDatePipe('mm/dd/yyyy')
+const dolarsMask = createNumberMask({ prefix: '$' })
+const dolarsMaskDecimal = createNumberMask({ prefix: '$', allowDecimal: true })
+const percentageMask = createNumberMask({ prefix: '', suffix: '%', integerLimit: 3 })
+const upperCasePipe = (conformedValue) => conformedValue.toUpperCase()
 // ----------------------------------- -
 // Sub Elements
 // ------------------------------------
@@ -93,7 +93,7 @@ const BasicElements = () => (
       </Form>
     </Col>
   </Row>
-);
+)
 
 const CheckboxesRadios = () => (
   <Row>
@@ -187,7 +187,7 @@ const CheckboxesRadios = () => (
       </Form>
     </Col>
   </Row>
-);
+)
 
 const Sizing = () => (
   <Row>
@@ -248,7 +248,7 @@ const Sizing = () => (
       </Row>
     </Col>
   </Row>
-);
+)
 
 const AdditionalElements = () => (
   <Row>
@@ -397,7 +397,7 @@ const AdditionalElements = () => (
       </Row>
     </Col>
   </Row>
-);
+)
 
 const ValidationStates = () => (
   <Row>
@@ -458,7 +458,7 @@ const ValidationStates = () => (
       </Row>
     </Col>
   </Row>
-);
+)
 
 const MaskedInputs = () => (
   <Row>
@@ -607,11 +607,11 @@ const MaskedInputs = () => (
       </Row>
     </Col>
   </Row>
-);
+)
 
 class Switches extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       baconIsReady: true,
@@ -622,7 +622,7 @@ class Switches extends React.Component {
       toastIsReady: false,
       soupIsReady: true,
       tofuIsReady: false
-    };
+    }
   }
   render() {
     return (
@@ -645,7 +645,7 @@ class Switches extends React.Component {
                       <Form.Check
                         checked={this.state.milkIsReady}
                         onChange={() => {
-                          this.setState({ milkIsReady: !this.state.milkIsReady });
+                          this.setState({ milkIsReady: !this.state.milkIsReady })
                         }}
                       >
                         Controlled Component
@@ -657,7 +657,7 @@ class Switches extends React.Component {
                         name="milkIsReady"
                         value="yes"
                         onChange={() => {
-                          this.setState({ milkIsReady: !this.state.milkIsReady });
+                          this.setState({ milkIsReady: !this.state.milkIsReady })
                         }}
                       />
                     </td>
@@ -667,7 +667,7 @@ class Switches extends React.Component {
                       <Form.Check
                         checked={this.state.toastIsReady}
                         onChange={() => {
-                          this.setState({ toastIsReady: !this.state.toastIsReady });
+                          this.setState({ toastIsReady: !this.state.toastIsReady })
                         }}
                       >
                         Controlled Component without onChange
@@ -709,7 +709,7 @@ class Switches extends React.Component {
                           unchecked: null
                         }}
                         onChange={() => {
-                          this.setState({ soupIsReady: !this.state.soupIsReady });
+                          this.setState({ soupIsReady: !this.state.soupIsReady })
                         }}
                       />
                     </td>
@@ -721,7 +721,7 @@ class Switches extends React.Component {
                         defaultChecked={this.state.tofuIsReady}
                         icons={false}
                         onChange={() => {
-                          this.setState({ tofuIsReady: !this.state.tofuIsReady });
+                          this.setState({ tofuIsReady: !this.state.tofuIsReady })
                         }}
                       />
                     </td>
@@ -745,7 +745,7 @@ class Switches extends React.Component {
                           className="v-a-m"
                           defaultChecked={this.state.baconIsReady}
                           onChange={() => {
-                            this.setState({ baconIsReady: !this.state.baconIsReady });
+                            this.setState({ baconIsReady: !this.state.baconIsReady })
                           }}
                         />
                         <span className="v-a-m m-l-1">Wrapper label tag</span>
@@ -759,7 +759,7 @@ class Switches extends React.Component {
                         className="v-a-m"
                         defaultChecked={this.state.cheeseIsReady}
                         onChange={() => {
-                          this.setState({ cheeseIsReady: !this.state.cheeseIsReady });
+                          this.setState({ cheeseIsReady: !this.state.cheeseIsReady })
                         }}
                       />
                       <label htmlFor="cheese-status" className="v-a-m m-l-1">
@@ -775,7 +775,7 @@ class Switches extends React.Component {
                         defaultChecked={this.state.biscuitIsReady}
                         aria-labelledby="biscuit-label"
                         onChange={() => {
-                          this.setState({ biscuitIsReady: !this.state.biscuitIsReady });
+                          this.setState({ biscuitIsReady: !this.state.biscuitIsReady })
                         }}
                       />
                       <span id="biscuit-label" className="v-a-m m-l-1">
@@ -790,7 +790,7 @@ class Switches extends React.Component {
                         defaultChecked={this.state.eggsAreReady}
                         aria-label="No label tag"
                         onChange={() => {
-                          this.setState({ eggsAreReady: !this.state.eggsAreReady });
+                          this.setState({ eggsAreReady: !this.state.eggsAreReady })
                         }}
                       />
                       <span className="v-a-m m-l-1">No label tag</span>
@@ -802,7 +802,7 @@ class Switches extends React.Component {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 // ------------------------------------
@@ -812,7 +812,7 @@ class FormsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -836,8 +836,8 @@ class FormsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(FormsContainer);
+export default connect()(FormsContainer)

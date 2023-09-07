@@ -1,5 +1,5 @@
-import React from 'react';
-import DualListBox from 'react-dual-listbox';
+import React from 'react'
+import DualListBox from 'react-dual-listbox'
 
 const options = [
   { value: 'luna', label: 'Moon' },
@@ -15,40 +15,40 @@ const options = [
   { value: 'rhea', label: 'Rhea' },
   { value: 'titan', label: 'Titan' },
   { value: 'iapetus', label: 'Iapetus' }
-];
+]
 
 const planets = {
   earth: { name: 'Earth', moons: ['luna'] },
   mars: { name: 'Mars', moons: ['phobos', 'deimos'] },
   jupiter: { name: 'Jupiter', moons: ['io', 'europa', 'ganymede', 'callisto'] },
   saturn: { name: 'Saturn', moons: ['mimas', 'enceladus', 'tehys', 'rhea', 'titan', 'iapetus'] }
-};
+}
 
 class RestrictAvailableExample extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       planet: 'earth',
       selected: ['phobos', 'titan']
-    };
+    }
 
-    this.onChange = this.onChange.bind(this);
-    this.onPlanetChange = this.onPlanetChange.bind(this);
+    this.onChange = this.onChange.bind(this)
+    this.onPlanetChange = this.onPlanetChange.bind(this)
   }
 
   onChange(selected) {
-    this.setState({ selected });
+    this.setState({ selected })
   }
 
   onPlanetChange(event) {
-    const planet = event.currentTarget.value;
+    const planet = event.currentTarget.value
 
-    this.setState({ planet });
+    this.setState({ planet })
   }
 
   renderPlanets() {
-    const selectedPlanet = this.state.planet;
+    const selectedPlanet = this.state.planet
 
     return Object.keys(planets).map((planet) => (
       <div className="radio-inline">
@@ -64,11 +64,11 @@ class RestrictAvailableExample extends React.Component {
           {planets[planet].name}
         </label>
       </div>
-    ));
+    ))
   }
 
   render() {
-    const { selected, planet } = this.state;
+    const { selected, planet } = this.state
 
     return (
       <div className="restrict-available-container">
@@ -80,8 +80,8 @@ class RestrictAvailableExample extends React.Component {
           onChange={this.onChange}
         />
       </div>
-    );
+    )
   }
 }
 
-export default RestrictAvailableExample;
+export default RestrictAvailableExample

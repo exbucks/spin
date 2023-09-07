@@ -1,10 +1,10 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   NavDropdown,
@@ -15,9 +15,9 @@ import {
   Button,
   Navbar,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const messages = Array.from(
   (function* () {
@@ -28,7 +28,7 @@ const messages = Array.from(
       Colors.brandDanger,
       Colors.brandWarning,
       Colors.brandSuccess
-    ];
+    ]
     for (let i = 0; i < statusColors.length; i++) {
       yield {
         id: uuidv4(),
@@ -37,18 +37,18 @@ const messages = Array.from(
         userStatusColor: statusColors[i],
         message: faker.lorem.sentence(),
         date: moment(faker.date.recent()).format('HH:mm')
-      };
+      }
     }
   })()
-);
+)
 
 class MessagesDropdown extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       open: false
-    };
+    }
   }
 
   render() {
@@ -84,7 +84,7 @@ class MessagesDropdown extends React.Component {
                 <Button
                   bsSize="xs"
                   onClick={() => {
-                    this.setState({ open: false });
+                    this.setState({ open: false })
                   }}
                 >
                   <i className="fa fa-pencil fa-fw"></i>
@@ -126,8 +126,8 @@ class MessagesDropdown extends React.Component {
           </ListGroup>
         </Navbar.DropdownList>
       </NavDropdown>
-    );
+    )
   }
 }
 
-export default MessagesDropdown;
+export default MessagesDropdown

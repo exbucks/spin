@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
 
-import DatePicker from 'react-date-picker';
-import { START_DATE, END_DATE, HORIZONTAL_ORIENTATION } from './../../constants';
+import DatePicker from 'react-date-picker'
+import { START_DATE, END_DATE, HORIZONTAL_ORIENTATION } from './../../constants'
 
 const propTypes = {
   // example props for the demo
@@ -35,7 +35,7 @@ const propTypes = {
 
   // i18n
   monthFormat: PropTypes.string
-};
+}
 
 const defaultProps = {
   // example props for the demo
@@ -66,45 +66,45 @@ const defaultProps = {
 
   // internationalization
   monthFormat: 'MMMM YYYY'
-};
+}
 
 class DayPickerRangeControllerWrap extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       focusedInput: props.autoFocusEndDate ? END_DATE : START_DATE,
       startDate: props.initialStartDate,
       endDate: props.initialEndDate
-    };
+    }
 
-    this.onDatesChange = this.onDatesChange.bind(this);
-    this.onFocusChange = this.onFocusChange.bind(this);
+    this.onDatesChange = this.onDatesChange.bind(this)
+    this.onFocusChange = this.onFocusChange.bind(this)
   }
 
   onDatesChange({ startDate, endDate }) {
-    this.setState({ startDate, endDate });
+    this.setState({ startDate, endDate })
   }
 
   onFocusChange(focusedInput) {
     this.setState({
       // Force the focusedInput to always be truthy so that dates are always selectable
       focusedInput: !focusedInput ? START_DATE : focusedInput
-    });
+    })
   }
 
   render() {
-    const { showInputs } = this.props;
-    const { focusedInput, startDate, endDate } = this.state;
+    const { showInputs } = this.props
+    const { focusedInput, startDate, endDate } = this.state
 
     const props = _.omit(this.props, [
       'autoFocus',
       'autoFocusEndDate',
       'initialStartDate',
       'initialEndDate'
-    ]);
+    ])
 
-    const startDateString = startDate && startDate.format('YYYY-MM-DD');
-    const endDateString = endDate && endDate.format('YYYY-MM-DD');
+    const startDateString = startDate && startDate.format('YYYY-MM-DD')
+    const endDateString = endDate && endDate.format('YYYY-MM-DD')
 
     return (
       <div>
@@ -117,11 +117,11 @@ class DayPickerRangeControllerWrap extends React.Component {
 
         <DatePicker {...props} onChange={this.onDatesChange} />
       </div>
-    );
+    )
   }
 }
 
-DayPickerRangeControllerWrap.propTypes = propTypes;
-DayPickerRangeControllerWrap.defaultProps = defaultProps;
+DayPickerRangeControllerWrap.propTypes = propTypes
+DayPickerRangeControllerWrap.defaultProps = defaultProps
 
-export default DayPickerRangeControllerWrap;
+export default DayPickerRangeControllerWrap

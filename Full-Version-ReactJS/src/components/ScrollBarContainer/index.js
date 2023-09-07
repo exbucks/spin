@@ -1,3 +1,3 @@
-import ScrollBarContainer from './ScrollBarContainer';
+import ScrollBarContainer from './ScrollBarContainer'
 
-export default ScrollBarContainer;
+export default ScrollBarContainer

@@ -1,20 +1,20 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { ColorWrap, Saturation, Hue } from 'react-color/lib/components/common';
-import PhotoshopFields from './PhotoshopFields';
-import PhotoshopPointerCircle from './PhotoshopPointerCircle';
-import PhotoshopPointer from './PhotoshopPointer';
-import PhotoshopButton from './PhotoshopButton';
-import PhotoshopPreviews from './PhotoshopPreviews';
+import { ColorWrap, Saturation, Hue } from 'react-color/lib/components/common'
+import PhotoshopFields from './PhotoshopFields'
+import PhotoshopPointerCircle from './PhotoshopPointerCircle'
+import PhotoshopPointer from './PhotoshopPointer'
+import PhotoshopButton from './PhotoshopButton'
+import PhotoshopPreviews from './PhotoshopPreviews'
 
 export class Photoshop extends React.Component {
   constructor(props) {
-    super();
+    super()
 
     this.state = {
       currentColor: props.hex
-    };
+    }
   }
 
   render() {
@@ -73,7 +73,7 @@ export class Photoshop extends React.Component {
           marginLeft: '20px'
         }
       }
-    });
+    })
 
     return (
       <div style={styles.picker} className="photoshop-picker">
@@ -115,12 +115,12 @@ export class Photoshop extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
 Photoshop.defaultProps = {
   header: 'Color Picker'
-};
+}
 
-export default ColorWrap(Photoshop);
+export default ColorWrap(Photoshop)

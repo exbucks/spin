@@ -1,8 +1,8 @@
-import React from 'react';
-import moment from 'moment';
-import { FormControl, FormGroup, Form } from 'components';
+import React from 'react'
+import moment from 'moment'
+import { FormControl, FormGroup, Form } from 'components'
 
-import { SingleDatePickerWrapper } from './../components';
+import { SingleDatePickerWrapper } from './../components'
 
 const singeDatePickerVariants = [
   {
@@ -34,7 +34,7 @@ const singeDatePickerVariants = [
     key: 'sdp-non-english',
     menuTitle: 'non-english locale',
     component: () => {
-      moment.locale('zh-cn');
+      moment.locale('zh-cn')
       return (
         <SingleDatePickerWrapper
           placeholder="入住日期"
@@ -44,9 +44,9 @@ const singeDatePickerVariants = [
             clearDate: '清除日期'
           }}
         />
-      );
+      )
     }
   }
-];
+]
 
-export default singeDatePickerVariants;
+export default singeDatePickerVariants

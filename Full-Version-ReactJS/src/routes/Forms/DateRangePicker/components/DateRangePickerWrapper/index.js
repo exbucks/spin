@@ -1,3 +1,3 @@
-import DateRangePickerWrapper from './DateRangePickerWrapper';
+import DateRangePickerWrapper from './DateRangePickerWrapper'
 
-export default DateRangePickerWrapper;
+export default DateRangePickerWrapper

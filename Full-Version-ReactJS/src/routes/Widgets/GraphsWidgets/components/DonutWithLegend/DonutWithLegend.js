@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Media, Charts, CollapsablePanel } from 'components';
+import { Media, Charts, CollapsablePanel } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const DonutWithLegend = (panelProps) => (
   <CollapsablePanel
@@ -44,6 +44,6 @@ const DonutWithLegend = (panelProps) => (
       </Media.Body>
     </Media>
   </CollapsablePanel>
-);
+)
 
-export default DonutWithLegend;
+export default DonutWithLegend

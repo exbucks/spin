@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const SliderSwatch = ({ hsl, offset, onClick = () => {}, active, first, last }) => {
   const styles = reactCSS(
@@ -29,7 +29,7 @@ export const SliderSwatch = ({ hsl, offset, onClick = () => {}, active, first, l
       }
     },
     { active, first, last }
-  );
+  )
 
   const handleClick = (e) =>
     onClick(
@@ -40,9 +40,9 @@ export const SliderSwatch = ({ hsl, offset, onClick = () => {}, active, first, l
         source: 'hsl'
       },
       e
-    );
+    )
 
-  return <div style={styles.swatch} onClick={handleClick} />;
-};
+  return <div style={styles.swatch} onClick={handleClick} />
+}
 
-export default SliderSwatch;
+export default SliderSwatch

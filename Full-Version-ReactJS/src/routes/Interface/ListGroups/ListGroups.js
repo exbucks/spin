@@ -1,5 +1,5 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
 import {
   AvatarImage,
@@ -11,18 +11,18 @@ import {
   Badge,
   Media,
   Button
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './ListGroups.scss';
+import classes from './ListGroups.scss'
 
 class ListGroupsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -348,8 +348,8 @@ class ListGroupsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(ListGroupsContainer);
+export default connect()(ListGroupsContainer)

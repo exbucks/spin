@@ -1,9 +1,9 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table, Label } from 'components';
+import { Table, Label } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const StripedExampleTable = () => (
   <Table>
@@ -73,6 +73,6 @@ const StripedExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default StripedExampleTable;
+export default StripedExampleTable

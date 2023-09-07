@@ -1,6 +1,6 @@
-import React from 'react';
-import _ from 'underscore';
-import moment from 'moment';
+import React from 'react'
+import _ from 'underscore'
+import moment from 'moment'
 
 import {
   Row,
@@ -13,48 +13,48 @@ import {
   Media,
   Divider,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import emailData from 'consts/data/app-email-details.json';
+import { Colors } from 'consts'
+import emailData from 'consts/data/app-email-details.json'
 
-import classes from './EmailDetails.scss';
+import classes from './EmailDetails.scss'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { LabelsList, SideNav, EmailAttachments } from './../components';
+import { LabelsList, SideNav, EmailAttachments } from './../components'
 
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const messageLabelToColor = (label) => {
   switch (label) {
     case 'Work':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Friends':
-      return Colors.brandInfo;
+      return Colors.brandInfo
   }
-};
+}
 
 const folders = [
   { title: 'Inbox', count: 4 },
   { title: 'Draft', count: 2 },
   { title: 'Sent', count: 7 },
   { title: 'Trash', count: 1 }
-];
+]
 
 const labels = [
   { title: 'Family', color: Colors.brandPrimary },
   { title: 'Friends', color: Colors.brandInfo },
   { title: 'Work', color: Colors.brandSuccess },
   { title: 'Other', color: Colors.brandDanger }
-];
+]
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -101,7 +101,7 @@ const renderActionBar = (router, backButton = true) => (
       <Button
         bsStyle="primary"
         onClick={() => {
-          router.push('/apps/new-email');
+          router.push('/apps/new-email')
         }}
       >
         <i className="fa fa-fw fa-reply"></i>
@@ -109,7 +109,7 @@ const renderActionBar = (router, backButton = true) => (
       </Button>
     </ButtonToolbar>
   </div>
-);
+)
 
 const renderMessage = (message, router) => (
   <Panel header={renderActionBar(router)} footer={renderActionBar(router, false)}>
@@ -158,21 +158,21 @@ const renderMessage = (message, router) => (
 
     <EmailAttachments items={message.Attachments} />
   </Panel>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class EmailDetailsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(emailData) };
+    this.state = { data: getData(emailData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -184,7 +184,7 @@ class EmailDetailsContainer extends RoutedComponent {
               <SideNav
                 items={folders}
                 folderSelected={() => {
-                  this.props.history.push('/apps/inbox');
+                  this.props.history.push('/apps/inbox')
                 }}
               />
             </Col>
@@ -196,8 +196,8 @@ class EmailDetailsContainer extends RoutedComponent {
         </Col>
         <Col lg={10}>{renderMessage(this.state.data.Message, this.props.history)}</Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(EmailDetailsContainer);
+export default connect()(EmailDetailsContainer)

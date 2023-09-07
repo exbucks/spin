@@ -1,24 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
 
-import { Media, AvatarImage, OverlayTrigger, Tooltip } from 'components';
+import { Media, AvatarImage, OverlayTrigger, Tooltip } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const statusToColor = (status) => {
   switch (status) {
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const renderComment = (comment, index) => (
   <Media key={comment._id || comment.id || index} className="m-t-2">
@@ -62,16 +62,16 @@ const renderComment = (comment, index) => (
       <div>{_.map(comment.Replies, (reply, index) => renderComment(reply, index))}</div>
     </Media.Body>
   </Media>
-);
+)
 
 const Comments = (props) => {
-  const { data } = props;
+  const { data } = props
 
-  return <div>{_.map(data, (comment, index) => renderComment(comment, index))}</div>;
-};
+  return <div>{_.map(data, (comment, index) => renderComment(comment, index))}</div>
+}
 
 Comments.propTypes = {
   data: PropTypes.array
-};
+}
 
-export default Comments;
+export default Comments

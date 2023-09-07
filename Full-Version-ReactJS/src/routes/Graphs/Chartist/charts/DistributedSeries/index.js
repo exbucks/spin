@@ -1,3 +1,3 @@
-import DistributedSeries from './DistributedSeries';
+import DistributedSeries from './DistributedSeries'
 
-export default DistributedSeries;
+export default DistributedSeries

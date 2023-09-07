@@ -1,3 +1,3 @@
-import CallModal from './CallModal';
+import CallModal from './CallModal'
 
-export default CallModal;
+export default CallModal

@@ -1,26 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Row } from 'react-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { Row } from 'react-bootstrap'
 
-import { AffixWrap, Grid, ScrollBarContainer } from 'components';
+import { AffixWrap, Grid, ScrollBarContainer } from 'components'
 
-import classes from './RightSidebar.scss';
+import classes from './RightSidebar.scss'
 
 class RightSidebar extends React.Component {
   static propTypes = {
     active: PropTypes.bool,
     affixOffset: PropTypes.number,
     children: PropTypes.node.isRequired
-  };
+  }
 
   static defaultProps = {
     active: false,
     affixOffset: 0
-  };
+  }
 
   render() {
-    const { active, affixOffset, children, className, ...otherProps } = this.props;
+    const { active, affixOffset, children, className, ...otherProps } = this.props
 
     const parentClasses = classNames(
       {
@@ -28,7 +28,7 @@ class RightSidebar extends React.Component {
       },
       'right-sidebar',
       className
-    );
+    )
 
     return (
       <AffixWrap
@@ -46,8 +46,8 @@ class RightSidebar extends React.Component {
           </Grid>
         </div>
       </AffixWrap>
-    );
+    )
   }
 }
 
-export default RightSidebar;
+export default RightSidebar

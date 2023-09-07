@@ -1,3 +1,3 @@
-import DonutChart from './DonutChart';
+import DonutChart from './DonutChart'
 
-export default DonutChart;
+export default DonutChart

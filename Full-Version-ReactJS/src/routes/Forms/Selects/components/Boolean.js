@@ -1,10 +1,10 @@
-import React from 'react';
-import Select from 'react-select';
-import _ from 'underscore';
+import React from 'react'
+import Select from 'react-select'
+import _ from 'underscore'
 
 export default class Boolean extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       options: [
@@ -12,7 +12,7 @@ export default class Boolean extends React.Component {
         { value: false, label: 'No' }
       ],
       value: null
-    };
+    }
   }
 
   render() {
@@ -24,6 +24,6 @@ export default class Boolean extends React.Component {
           simpleValue
         />
       </div>
-    );
+    )
   }
 }

@@ -1,3 +1,3 @@
-import FontAwesomeContainer from './FontAwesomeContainer';
+import FontAwesomeContainer from './FontAwesomeContainer'
 
-export default FontAwesomeContainer;
+export default FontAwesomeContainer

@@ -1,3 +1,3 @@
-import SparklinesContainer from './SparklinesContainer';
+import SparklinesContainer from './SparklinesContainer'
 
-export default SparklinesContainer;
+export default SparklinesContainer

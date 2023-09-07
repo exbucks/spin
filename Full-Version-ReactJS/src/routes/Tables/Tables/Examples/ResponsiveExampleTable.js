@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table, Badge } from 'components';
+import { Table, Badge } from 'components'
 
 const ResponsiveExampleTable = () => (
   <Table responsive>
@@ -48,6 +48,6 @@ const ResponsiveExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default ResponsiveExampleTable;
+export default ResponsiveExampleTable

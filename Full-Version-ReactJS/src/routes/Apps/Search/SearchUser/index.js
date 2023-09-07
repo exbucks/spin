@@ -1,3 +1,3 @@
-import SearchUserContainer from './SearchUserContainer';
+import SearchUserContainer from './SearchUserContainer'
 
-export default SearchUserContainer;
+export default SearchUserContainer

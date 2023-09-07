@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
 import {
   Row,
@@ -11,56 +11,56 @@ import {
   AvatarImage,
   FavoriteStar,
   Divider
-} from 'components';
+} from 'components'
 
 // Sub Components
-import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components';
+import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import resultsData from 'consts/data/search-users.json';
+import { Colors } from 'consts'
+import resultsData from 'consts/data/search-users.json'
 
-import classes from './../Search.scss';
+import classes from './../Search.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const statusToColor = (status) => {
   switch (status) {
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const networkToIconClass = (network) => {
   switch (network) {
     case 'LinkedIn':
-      return 'fa fa-linkedin-square';
+      return 'fa fa-linkedin-square'
     case 'Facebook':
-      return 'fa fa-facebook-square';
+      return 'fa fa-facebook-square'
     case 'Twitter':
-      return 'fa fa-twitter-square';
+      return 'fa fa-twitter-square'
     case 'Pinterest':
-      return 'fa fa-pinterest-square';
+      return 'fa fa-pinterest-square'
     case 'GitHub':
-      return 'fa fa-github-square';
+      return 'fa fa-github-square'
     case 'Xing':
-      return 'fa fa-xing-square';
+      return 'fa fa-xing-square'
   }
 
-  return null;
-};
+  return null
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
@@ -77,19 +77,19 @@ const renderUserNetworks = (networks) => (
       </OverlayTrigger>
     ))}
   </div>
-);
+)
 
 class SearchUserContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(resultsData) };
+    this.state = { data: getData(resultsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -145,8 +145,8 @@ class SearchUserContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(SearchUserContainer);
+export default connect()(SearchUserContainer)

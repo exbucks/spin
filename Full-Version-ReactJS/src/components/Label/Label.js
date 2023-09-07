@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const Label = (props) => {
-  let { className, pill, children, outline, customColor, withIcon, bsStyle, ...otherProps } = props;
+  let { className, pill, children, outline, customColor, withIcon, bsStyle, ...otherProps } = props
 
   const labelClass = classNames(className, {
     'label-outline': outline,
     'label-pill': pill,
     'label-gray-lighter': bsStyle === 'default' || !bsStyle,
     'label-with-icon': withIcon
-  });
+  })
 
-  let customStyle = {};
+  let customStyle = {}
 
   if (bsStyle === 'custom') {
     customStyle = outline
@@ -22,17 +22,17 @@ const Label = (props) => {
         }
       : {
           backgroundColor: props.customColor
-        };
+        }
   } else {
-    otherProps = { ...otherProps, bsStyle };
+    otherProps = { ...otherProps, bsStyle }
   }
 
   return (
     <div {...otherProps} className={labelClass} style={customStyle}>
       {props.children}
     </div>
-  );
-};
+  )
+}
 
 Label.propTypes = {
   outline: PropTypes.bool,
@@ -40,12 +40,12 @@ Label.propTypes = {
   children: PropTypes.node.isRequired,
   customColor: PropTypes.string,
   withIcon: PropTypes.bool
-};
+}
 
 Label.defaultProps = {
   outline: false,
   pill: false,
   customColor: '#fff'
-};
+}
 
-export default Label;
+export default Label

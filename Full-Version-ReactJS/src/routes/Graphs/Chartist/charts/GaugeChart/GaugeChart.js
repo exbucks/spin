@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
-import classes from './../../Chartist.scss';
+import classes from './../../Chartist.scss'
 
 //================Settings=================
-const chartType = 'Pie';
+const chartType = 'Pie'
 const chartData = {
   series: [20, 10, 30, 40]
-};
+}
 const chartOptions = {
   donut: true,
   donutWidth: 60,
   startAngle: 270,
   total: 200,
   showLabel: false
-};
+}
 
 //===============Component================
 const GaugeChart = () => (
@@ -25,6 +25,6 @@ const GaugeChart = () => (
     options={chartOptions}
     type={chartType}
   />
-);
+)
 
-export default GaugeChart;
+export default GaugeChart

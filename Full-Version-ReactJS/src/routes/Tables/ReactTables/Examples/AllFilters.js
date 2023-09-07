@@ -1,32 +1,32 @@
-import React from 'react';
-import moment from 'moment';
-import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable';
+import React from 'react'
+import moment from 'moment'
+import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
 const data = Array.from(
   products(['id', 'name', 'quality_id', 'price', 'satisfaction', 'inStockDate'], 5)
-);
+)
 
 const qualityNames = {
   0: 'good',
   1: 'bad',
   2: 'unknown'
-};
+}
 
-const satisfaction = [1, 2, 3, 4, 5, 6];
+const satisfaction = [1, 2, 3, 4, 5, 6]
 
-const enumFormatter = (cell, row, enumObject) => enumObject[cell];
-const dateFormatter = (cell) => moment(cell).format('DD/MM/YYYY');
+const enumFormatter = (cell, row, enumObject) => enumObject[cell]
+const dateFormatter = (cell) => moment(cell).format('DD/MM/YYYY')
 
 class AllFilters extends React.Component {
   handlerClickCleanFiltered() {
-    this.refs.name1.cleanFiltered();
-    this.refs.name2.cleanFiltered();
-    this.refs.quality.cleanFiltered();
-    this.refs.price.cleanFiltered();
-    this.refs.satisfaction.cleanFiltered();
-    this.refs.inStockDate.cleanFiltered();
+    this.refs.name1.cleanFiltered()
+    this.refs.name2.cleanFiltered()
+    this.refs.quality.cleanFiltered()
+    this.refs.price.cleanFiltered()
+    this.refs.satisfaction.cleanFiltered()
+    this.refs.inStockDate.cleanFiltered()
   }
 
   render() {
@@ -85,8 +85,8 @@ class AllFilters extends React.Component {
           In Stock From
         </TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default AllFilters;
+export default AllFilters

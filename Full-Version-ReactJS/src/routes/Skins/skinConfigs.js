@@ -7,7 +7,7 @@ import {
   SKIN_COLOR_SUCCESS,
   SKIN_COLOR_WARNING,
   SKIN_COLOR_DANGER
-} from 'layouts/DefaultLayout/modules/layout';
+} from 'layouts/DefaultLayout/modules/layout'
 
 const configs = [
   {
@@ -325,6 +325,6 @@ const configs = [
       }
     ]
   }
-];
+]
 
-export default configs;
+export default configs

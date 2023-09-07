@@ -1,8 +1,8 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import leftPad from 'left-pad';
-import numeral from 'numeral';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import leftPad from 'left-pad'
+import numeral from 'numeral'
 
 import {
   Row,
@@ -16,26 +16,26 @@ import {
   InputGroup,
   Charts,
   Divider
-} from 'components';
+} from 'components'
 
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import classes from './ExchangeAndTrading.scss';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-import { Colors } from 'consts';
+import classes from './ExchangeAndTrading.scss'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
+import { Colors } from 'consts'
 
-import tradeData from 'consts/data/exchange-trading.json';
-import highStockData from 'consts/data/highStock-USDEUR.json';
+import tradeData from 'consts/data/exchange-trading.json'
+import highStockData from 'consts/data/highStock-USDEUR.json'
 
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const getChartData = (inputData) => {
-  const data = inputData;
+  const data = inputData
 
   let startDate = new Date(data[data.length - 1][0]),
     minRate = 1,
@@ -43,22 +43,22 @@ const getChartData = (inputData) => {
     startPeriod,
     date,
     rate,
-    index;
+    index
 
-  startDate.setMonth(startDate.getMonth() - 3); // a quarter of a year before last data point
-  startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+  startDate.setMonth(startDate.getMonth() - 3) // a quarter of a year before last data point
+  startPeriod = Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate())
 
   for (index = data.length - 1; index >= 0; index = index - 1) {
-    date = data[index][0]; // data[i][0] is date
-    rate = data[index][1]; // data[i][1] is exchange rate
+    date = data[index][0] // data[i][0] is date
+    rate = data[index][1] // data[i][1] is exchange rate
     if (date < startPeriod) {
-      break; // stop measuring highs and lows
+      break // stop measuring highs and lows
     }
     if (rate > maxRate) {
-      maxRate = rate;
+      maxRate = rate
     }
     if (rate < minRate) {
-      minRate = rate;
+      minRate = rate
     }
   }
 
@@ -66,8 +66,8 @@ const getChartData = (inputData) => {
     minRate,
     maxRate,
     data: data
-  };
-};
+  }
+}
 
 const getChartConfig = (state) => ({
   rangeSelector: {
@@ -120,14 +120,13 @@ const getChartConfig = (state) => ({
       }
     }
   ]
-});
+})
 
 const generateOrdersData = (count) => {
-  const output = [];
+  const output = []
   const randomBetweenFloat = (min, max, fixedLength = 2) =>
-    (min + Math.random() * (max - min)).toFixed(fixedLength);
-  const randomBetween = (min, max) =>
-    Math.ceil(parseFloat(randomBetweenFloat(min, max))).toString();
+    (min + Math.random() * (max - min)).toFixed(fixedLength)
+  const randomBetween = (min, max) => Math.ceil(parseFloat(randomBetweenFloat(min, max))).toString()
 
   for (let i = 0; i < count; i++) {
     const newOrder = {
@@ -136,11 +135,11 @@ const generateOrdersData = (count) => {
       Usd: randomBetweenFloat(1000, 10000000),
       Time: leftPad(randomBetween(1, 24), 2, 0) + ':' + leftPad(randomBetween(1, 60), 2, 0),
       Increase: Math.random() > 0.5
-    };
-    output.push(newOrder);
+    }
+    output.push(newOrder)
   }
-  return output;
-};
+  return output
+}
 
 // ------------------------------------
 // Sub Elements
@@ -219,7 +218,7 @@ const renderSummary = (summaryData) => (
       </Col>
     </Row>
   </div>
-);
+)
 
 const renderExchangePanel = () => (
   <Panel className={classes.exchangePanel}>
@@ -253,7 +252,7 @@ const renderExchangePanel = () => (
       </div>
     </Form>
   </Panel>
-);
+)
 
 const renderNews = (newsList) => (
   <div className={classes.news}>
@@ -275,7 +274,7 @@ const renderNews = (newsList) => (
       ))}
     </Row>
   </div>
-);
+)
 
 const renderOrders = (orders) => {
   const renderTime = (time, increase) => (
@@ -287,7 +286,7 @@ const renderOrders = (orders) => {
       ></i>
       {time}
     </td>
-  );
+  )
 
   const renderOrdersList = (data, time = false) => (
     <Table condensed hover className={classes.ordersTable}>
@@ -311,7 +310,7 @@ const renderOrders = (orders) => {
         ))}
       </tbody>
     </Table>
-  );
+  )
 
   return (
     <Row className={classes.orders}>
@@ -337,14 +336,14 @@ const renderOrders = (orders) => {
         {renderOrdersList(orders.All, true)}
       </Col>
     </Row>
-  );
-};
+  )
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class ExchangeAndTradingContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = Object.assign(
       {},
@@ -359,13 +358,13 @@ class ExchangeAndTradingContainer extends RoutedComponent {
           All: generateOrdersData(16)
         }
       }
-    );
+    )
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -393,8 +392,8 @@ class ExchangeAndTradingContainer extends RoutedComponent {
           <Col md={12}>{renderSection(renderNews, this.state.News)}</Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ExchangeAndTradingContainer);
+export default connect()(ExchangeAndTradingContainer)

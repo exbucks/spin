@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import num from 'numeral';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import num from 'numeral'
+import moment from 'moment'
 import {
   Table,
   ListGroup,
@@ -13,13 +13,13 @@ import {
   ButtonGroup,
   Form,
   AvatarImage
-} from 'components';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+} from 'components'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { statusToColor } from 'modules/helpers';
+import { statusToColor } from 'modules/helpers'
 
-import classes from './RightSidebar.scss';
+import classes from './RightSidebar.scss'
 
 const renderWeather = (weather) => (
   <div className={classes.weather}>
@@ -33,7 +33,7 @@ const renderWeather = (weather) => (
       </a>
     </div>
   </div>
-);
+)
 
 const renderStock = (stock) => (
   <div>
@@ -55,7 +55,7 @@ const renderStock = (stock) => (
       </tbody>
     </Table>
   </div>
-);
+)
 
 const renderEmails = (emails) => (
   <div>
@@ -104,7 +104,7 @@ const renderEmails = (emails) => (
       ))}
     </ListGroup>
   </div>
-);
+)
 
 const renderTasks = (tasks) => (
   <div>
@@ -125,7 +125,7 @@ const renderTasks = (tasks) => (
       ))}
     </ListGroup>
   </div>
-);
+)
 
 const FirstRightSidebarTab = (props) => (
   <div>
@@ -134,10 +134,10 @@ const FirstRightSidebarTab = (props) => (
     {renderEmails(props.data.Emails)}
     {renderTasks(props.data.Tasks)}
   </div>
-);
+)
 
 FirstRightSidebarTab.propTypes = {
   data: PropTypes.object.isRequired
-};
+}
 
-export default FirstRightSidebarTab;
+export default FirstRightSidebarTab

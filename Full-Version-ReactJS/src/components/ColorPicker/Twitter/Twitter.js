@@ -1,9 +1,9 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
+import * as color from 'react-color/lib/helpers/color'
 
-import { ColorWrap, EditableInput, Swatch } from 'react-color/lib/components/common';
+import { ColorWrap, EditableInput, Swatch } from 'react-color/lib/components/common'
 
 export const Twitter = ({ onChange, onSwatchHover, hex, colors, width, triangle }) => {
   const styles = reactCSS(
@@ -116,7 +116,7 @@ export const Twitter = ({ onChange, onSwatchHover, hex, colors, width, triangle 
       'top-left-triangle': triangle === 'top-left',
       'top-right-triangle': triangle === 'top-right'
     }
-  );
+  )
 
   const handleChange = (hexcode, e) => {
     color.isValidHex(hexcode) &&
@@ -126,8 +126,8 @@ export const Twitter = ({ onChange, onSwatchHover, hex, colors, width, triangle 
           source: 'hex'
         },
         e
-      );
-  };
+      )
+  }
 
   return (
     <div style={styles.card} className="twitter-picker">
@@ -148,7 +148,7 @@ export const Twitter = ({ onChange, onSwatchHover, hex, colors, width, triangle 
                 boxShadow: `0 0 4px ${c}`
               }}
             />
-          );
+          )
         })}
         <div style={styles.hash}>#</div>
         <EditableInput
@@ -159,8 +159,8 @@ export const Twitter = ({ onChange, onSwatchHover, hex, colors, width, triangle 
         <div style={styles.clear} />
       </div>
     </div>
-  );
-};
+  )
+}
 
 Twitter.defaultProps = {
   width: '276px',
@@ -177,6 +177,6 @@ Twitter.defaultProps = {
     '#9900EF'
   ],
   triangle: 'top-left'
-};
+}
 
-export default ColorWrap(Twitter);
+export default ColorWrap(Twitter)

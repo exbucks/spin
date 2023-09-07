@@ -1,3 +1,3 @@
-import AvatarAndNumbers from './AvatarAndNumbers';
+import AvatarAndNumbers from './AvatarAndNumbers'
 
-export default AvatarAndNumbers;
+export default AvatarAndNumbers

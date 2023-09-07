@@ -1,15 +1,15 @@
-import DateRangePicker from './DateRangePicker';
-import DateRangeInputProps from './DRPInputProps';
-import DateRangeCalendarProps from './DRPCalendarProps';
-import DateRangeDayProps from './DRPDayProps';
-import SingleDatePicker from './SingleDatePicker';
-import SingleDateInputProps from './SDPInputProps';
-import SingleDateCalendarProps from './SDPCalendarProps';
-import SingleDateDayProps from './SDPDayProps';
-import DayPickerRangeController from './DayPickerRangeController';
-import DayPickerProps from './DayPicker';
-import BootstrapDateRangeProps from './BootstrapDateRangeProps';
-import BootstrapDateProps from './BootstrapDateProps';
+import DateRangePicker from './DateRangePicker'
+import DateRangeInputProps from './DRPInputProps'
+import DateRangeCalendarProps from './DRPCalendarProps'
+import DateRangeDayProps from './DRPDayProps'
+import SingleDatePicker from './SingleDatePicker'
+import SingleDateInputProps from './SDPInputProps'
+import SingleDateCalendarProps from './SDPCalendarProps'
+import SingleDateDayProps from './SDPDayProps'
+import DayPickerRangeController from './DayPickerRangeController'
+import DayPickerProps from './DayPicker'
+import BootstrapDateRangeProps from './BootstrapDateRangeProps'
+import BootstrapDateProps from './BootstrapDateProps'
 
 const mergedVariants = [].concat(
   DateRangePicker,
@@ -27,7 +27,7 @@ const mergedVariants = [].concat(
 
   BootstrapDateRangeProps,
   BootstrapDateProps
-);
+)
 
 export {
   DateRangePicker,
@@ -43,4 +43,4 @@ export {
   BootstrapDateRangeProps,
   BootstrapDateProps,
   mergedVariants
-};
+}

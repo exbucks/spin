@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
-import options from './../exampleData';
+import { Typeahead } from 'react-bootstrap-typeahead'
+import options from './../exampleData'
 
 const SelectionsExample = (props) => (
   <Typeahead
@@ -12,6 +12,6 @@ const SelectionsExample = (props) => (
     options={options}
     placeholder="Choose a state..."
   />
-);
+)
 
-export default SelectionsExample;
+export default SelectionsExample

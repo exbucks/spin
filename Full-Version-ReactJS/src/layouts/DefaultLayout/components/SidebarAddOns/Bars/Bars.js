@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 
-import { AvatarImage, Media, Sidebar, SlimProgressBar } from 'components';
+import { AvatarImage, Media, Sidebar, SlimProgressBar } from 'components'
 
-import classes from './../AddOns.scss';
-import avatarImage from 'static/avatars/avatar-33.jpg';
-import { Colors } from 'consts';
+import classes from './../AddOns.scss'
+import avatarImage from 'static/avatars/avatar-33.jpg'
+import { Colors } from 'consts'
 
-const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`;
+const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`
 
 const Bars = (props) => (
   <Sidebar.AddOn>
@@ -92,10 +92,10 @@ const Bars = (props) => (
       </Link>
     </Sidebar.AddOnContent>
   </Sidebar.AddOn>
-);
+)
 
 Bars.propTypes = {
   colorSidebar: PropTypes.bool
-};
+}
 
-export default Bars;
+export default Bars

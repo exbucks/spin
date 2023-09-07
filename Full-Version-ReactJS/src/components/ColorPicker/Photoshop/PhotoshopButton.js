@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const PhotoshopBotton = ({ onClick, label, children, active }) => {
   const styles = reactCSS(
@@ -26,13 +26,13 @@ export const PhotoshopBotton = ({ onClick, label, children, active }) => {
       }
     },
     { active }
-  );
+  )
 
   return (
     <div style={styles.button} onClick={onClick}>
       {label || children}
     </div>
-  );
-};
+  )
+}
 
-export default PhotoshopBotton;
+export default PhotoshopBotton

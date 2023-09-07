@@ -1,25 +1,25 @@
-import React from 'react';
-import { Form } from 'components';
+import React from 'react'
+import { Form } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
-import options from './../exampleData';
+import { Typeahead } from 'react-bootstrap-typeahead'
+import options from './../exampleData'
 
 class InputSizeExample extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       bsSize: undefined
-    };
+    }
   }
 
   render() {
-    const { bsSize } = this.state;
+    const { bsSize } = this.state
     const radios = [
       { label: 'Small', value: 'small' },
       { label: 'Default', value: undefined },
       { label: 'Large', value: 'large' }
-    ];
+    ]
 
     return (
       <div>
@@ -41,8 +41,8 @@ class InputSizeExample extends React.Component {
           </Form.Check>
         ))}
       </div>
-    );
+    )
   }
 }
 
-export default InputSizeExample;
+export default InputSizeExample

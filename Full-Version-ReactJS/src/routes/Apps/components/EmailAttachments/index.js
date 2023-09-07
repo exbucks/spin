@@ -1,3 +1,3 @@
-import EmailAttachments from './EmailAttachments';
+import EmailAttachments from './EmailAttachments'
 
-export default EmailAttachments;
+export default EmailAttachments

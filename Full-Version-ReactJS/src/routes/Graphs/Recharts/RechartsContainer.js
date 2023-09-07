@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Row, Col, Divider, Panel } from 'components';
+import { Row, Col, Divider, Panel } from 'components'
 
 import {
   SimpleLineChart,
@@ -26,16 +26,16 @@ import {
   SimpleTreeMap,
   CustomContentTreeMap,
   CustomizedLabelLineChart
-} from './charts';
+} from './charts'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class RechartsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -162,8 +162,8 @@ class RechartsContainer extends RoutedComponent {
                     */}
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(RechartsContainer);
+export default connect()(RechartsContainer)

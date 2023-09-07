@@ -1,11 +1,11 @@
-import React from 'react';
-import Select from 'react-select';
-import _ from 'underscore';
-import { Form } from 'components';
+import React from 'react'
+import Select from 'react-select'
+import _ from 'underscore'
+import { Form } from 'components'
 
 export default class Numeric extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       options: [
@@ -20,28 +20,28 @@ export default class Numeric extends React.Component {
       matchLabel: true,
       value: null,
       multi: false
-    };
+    }
   }
 
   onChangeMatchStart(e) {
     this.setState({
       matchPos: e.target.checked ? 'start' : 'any'
-    });
+    })
   }
 
   toggleState(stateKey) {
     this.setState({
       [`${stateKey}`]: !this.state[stateKey]
-    });
+    })
   }
 
   render() {
-    let matchProp = 'any';
+    let matchProp = 'any'
     if (this.state.matchLabel && !this.state.matchValue) {
-      matchProp = 'label';
+      matchProp = 'label'
     }
     if (!this.state.matchLabel && this.state.matchValue) {
-      matchProp = 'value';
+      matchProp = 'value'
     }
 
     return (
@@ -49,8 +49,8 @@ export default class Numeric extends React.Component {
         <Select
           {..._.pick(this.state, ['matchPos', 'matchProp', 'multi', 'options', 'value'])}
           onChange={(val) => {
-            console.log(val);
-            this.setState({ value: val });
+            console.log(val)
+            this.setState({ value: val })
           }}
         />
         <div className="m-t-2">
@@ -77,6 +77,6 @@ export default class Numeric extends React.Component {
           </Form.Check>
         </div>
       </div>
-    );
+    )
   }
 }

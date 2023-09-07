@@ -1,3 +1,3 @@
-import MonitorContainer from './MonitorContainer.js';
+import MonitorContainer from './MonitorContainer.js'
 
-export default MonitorContainer;
+export default MonitorContainer

@@ -1,38 +1,38 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
-import { Row, Col, Pagination, Badge, Divider, Thumbnail, Image } from 'components';
+import { Row, Col, Pagination, Badge, Divider, Thumbnail, Image } from 'components'
 
 // Sub Components
-import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components';
+import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import resultsData from 'consts/data/search-images.json';
+import { Colors } from 'consts'
+import resultsData from 'consts/data/search-images.json'
 
-import classes from './../Search.scss';
+import classes from './../Search.scss'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class SearchImageContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(resultsData) };
+    this.state = { data: getData(resultsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -85,8 +85,8 @@ class SearchImageContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(SearchImageContainer);
+export default connect()(SearchImageContainer)

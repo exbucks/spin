@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const ChromePointerCircle = () => {
   const styles = reactCSS({
@@ -12,9 +12,9 @@ export const ChromePointerCircle = () => {
         transform: 'translate(-6px, -6px)'
       }
     }
-  });
+  })
 
-  return <div style={styles.picker} />;
-};
+  return <div style={styles.picker} />
+}
 
-export default ChromePointerCircle;
+export default ChromePointerCircle

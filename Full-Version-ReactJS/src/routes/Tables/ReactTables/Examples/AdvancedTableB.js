@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable'
+import moment from 'moment'
 import {
   Row,
   Grid,
@@ -14,23 +14,23 @@ import {
   DropdownButton,
   Label,
   AvatarImage
-} from 'components';
-import { people, currencies, regions, statuses } from './../utils';
-import classes from './../ReactTables.scss';
+} from 'components'
+import { people, currencies, regions, statuses } from './../utils'
+import classes from './../ReactTables.scss'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const data = Array.from(
   people(
     ['id', 'photo', 'firstName', 'lastName', 'role', 'status', 'region', 'earnings', 'details'],
     500
   )
-);
+)
 
-const avatarFormatter = (cell) => <AvatarImage src={cell} />;
+const avatarFormatter = (cell) => <AvatarImage src={cell} />
 
 function priceFormatter(cell, row) {
-  return `<i class='glyphicon glyphicon-${cell.currency.toLowerCase()}'></i> ${cell.amount}`;
+  return `<i class='glyphicon glyphicon-${cell.currency.toLowerCase()}'></i> ${cell.amount}`
 }
 
 const statusFormatter = (cell, row) => {
@@ -40,24 +40,24 @@ const statusFormatter = (cell, row) => {
     ['Waiting']: { bsStyle: 'info' },
     ['Unknown']: { bsStyle: 'custom', customColor: Colors.grayLighter },
     ['Inactive']: { bsStyle: 'warning' }
-  };
+  }
 
-  return <Label {...statusToProps[cell]}>{cell}</Label>;
-};
+  return <Label {...statusToProps[cell]}>{cell}</Label>
+}
 
-const regionFormatter = (cell) => cell.join(' ');
+const regionFormatter = (cell) => cell.join(' ')
 
 class PriceEditor extends React.Component {
   constructor(props) {
-    super(props);
-    this.updateData = this.updateData.bind(this);
-    this.state = { amount: props.defaultValue.amount, currency: props.defaultValue.currency };
+    super(props)
+    this.updateData = this.updateData.bind(this)
+    this.state = { amount: props.defaultValue.amount, currency: props.defaultValue.currency }
   }
   focus() {
-    this.refs.inputRef.focus();
+    this.refs.inputRef.focus()
   }
   updateData() {
-    this.props.onUpdate({ amount: this.state.amount, currency: this.state.currency });
+    this.props.onUpdate({ amount: this.state.amount, currency: this.state.currency })
   }
   render() {
     return (
@@ -71,7 +71,7 @@ class PriceEditor extends React.Component {
           value={this.state.amount}
           onKeyDown={this.props.onKeyDown}
           onChange={(ev) => {
-            this.setState({ amount: parseInt(ev.currentTarget.value, 10) });
+            this.setState({ amount: parseInt(ev.currentTarget.value, 10) })
           }}
         />
         <FormControl
@@ -80,7 +80,7 @@ class PriceEditor extends React.Component {
           value={this.state.currency}
           onKeyDown={this.props.onKeyDown}
           onChange={(ev) => {
-            this.setState({ currency: ev.currentTarget.value });
+            this.setState({ currency: ev.currentTarget.value })
           }}
         >
           {currencies.map((currency) => (
@@ -93,28 +93,28 @@ class PriceEditor extends React.Component {
           Save
         </Button>
       </div>
-    );
+    )
   }
 }
 
 class RegionsEditor extends React.Component {
   constructor(props) {
-    super(props);
-    this.updateData = this.updateData.bind(this);
-    this.state = { regions: props.defaultValue };
-    this.onToggleRegion = this.onToggleRegion.bind(this);
+    super(props)
+    this.updateData = this.updateData.bind(this)
+    this.state = { regions: props.defaultValue }
+    this.onToggleRegion = this.onToggleRegion.bind(this)
   }
   focus() {}
   onToggleRegion(event) {
-    const region = event.currentTarget.name;
+    const region = event.currentTarget.name
     if (this.state.regions.indexOf(region) < 0) {
-      this.setState({ regions: this.state.regions.concat([region]) });
+      this.setState({ regions: this.state.regions.concat([region]) })
     } else {
-      this.setState({ regions: this.state.regions.filter((r) => r !== region) });
+      this.setState({ regions: this.state.regions.filter((r) => r !== region) })
     }
   }
   updateData() {
-    this.props.onUpdate(this.state.regions);
+    this.props.onUpdate(this.state.regions)
   }
   render() {
     const regionCheckBoxes = regions.map((region) => (
@@ -131,7 +131,7 @@ class RegionsEditor extends React.Component {
           {region}
         </label>
       </span>
-    ));
+    ))
     return (
       <div ref="inputRef" className={classes.regionChecks}>
         {regionCheckBoxes}
@@ -139,17 +139,17 @@ class RegionsEditor extends React.Component {
           Save
         </button>
       </div>
-    );
+    )
   }
 }
 
 class TextEditor extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       value: props.defaultValue
-    };
+    }
   }
 
   render() {
@@ -160,11 +160,11 @@ class TextEditor extends React.Component {
         onChange={(e) => this.setState({ value: e.target.value })}
         onKeyPress={(e) => {
           if (e.charCode === 13) {
-            this.props.onUpdate(this.state.value);
+            this.props.onUpdate(this.state.value)
           }
         }}
       />
-    );
+    )
   }
 }
 
@@ -183,21 +183,21 @@ class SelectionEditor extends React.Component {
           </option>
         ))}
       </FormControl>
-    );
+    )
   }
 }
 
 //const createNameEditor = (onUpdate, props) => (<NameEditor onUpdate={ onUpdate } {...props}/>);
 //const createPriceEditor = (onUpdate, props) => (<PriceEditor onUpdate={ onUpdate } {...props}/>);
-const createRegionsEditor = (onUpdate, props) => <RegionsEditor onUpdate={onUpdate} {...props} />;
-const createPriceEditor = (onUpdate, props) => <PriceEditor onUpdate={onUpdate} {...props} />;
+const createRegionsEditor = (onUpdate, props) => <RegionsEditor onUpdate={onUpdate} {...props} />
+const createPriceEditor = (onUpdate, props) => <PriceEditor onUpdate={onUpdate} {...props} />
 const createSelectionEditor = (onUpdate, props, options) => (
   <SelectionEditor onUpdate={onUpdate} items={options} {...props} />
-);
-const createTextEditor = (onUpdate, props) => <TextEditor onUpdate={onUpdate} {...props} />;
+)
+const createTextEditor = (onUpdate, props) => <TextEditor onUpdate={onUpdate} {...props} />
 
 const ExpandedComponent = (props) => {
-  const { lastLogin, ip, browser, os, selectedPlan, planEnd } = props.data;
+  const { lastLogin, ip, browser, os, selectedPlan, planEnd } = props.data
 
   return (
     <Grid fluid className={classes.expandedRow}>
@@ -228,31 +228,31 @@ const ExpandedComponent = (props) => {
         </Col>
       </Row>
     </Grid>
-  );
-};
+  )
+}
 
 class AdvancedTableB extends React.Component {
   static propTypes = {
     name: PropTypes.string,
     pageSizes: PropTypes.array
-  };
+  }
 
   static defaultProps = {
     name: '',
     pageSizes: [5, 10, 25, 50]
-  };
+  }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       pageSize: 10
-    };
+    }
   }
 
   createCustomToolbar(props) {
-    const { name: tableName, pageSizes } = this.props;
-    const { btnGroup, searchField, clearBtn } = props.components;
+    const { name: tableName, pageSizes } = this.props
+    const { btnGroup, searchField, clearBtn } = props.components
 
     return (
       <div>
@@ -274,7 +274,7 @@ class AdvancedTableB extends React.Component {
                 onSelect={(eKey) => {
                   this.setState({
                     pageSize: pageSizes[eKey]
-                  });
+                  })
                 }}
               >
                 {pageSizes.map((pageSize, index) => (
@@ -287,7 +287,7 @@ class AdvancedTableB extends React.Component {
           </div>
         </Col>
       </div>
-    );
+    )
   }
 
   createCustomButtonGroup(props) {
@@ -297,11 +297,11 @@ class AdvancedTableB extends React.Component {
         {props.deleteBtn}
         {props.insertBtn}
       </ButtonGroup>
-    );
+    )
   }
 
   createPaginationPanel(props) {
-    const { totalText, pageList } = props.components;
+    const { totalText, pageList } = props.components
 
     return (
       <div>
@@ -312,15 +312,15 @@ class AdvancedTableB extends React.Component {
           })}
         </Col>
       </div>
-    );
+    )
   }
 
   handlerClickCleanFiltered() {
-    this.refs.name.cleanFiltered();
-    this.refs.quality.cleanFiltered();
-    this.refs.price.cleanFiltered();
-    this.refs.satisfaction.cleanFiltered();
-    this.refs.inStockDate.cleanFiltered();
+    this.refs.name.cleanFiltered()
+    this.refs.quality.cleanFiltered()
+    this.refs.price.cleanFiltered()
+    this.refs.satisfaction.cleanFiltered()
+    this.refs.inStockDate.cleanFiltered()
   }
 
   render() {
@@ -331,7 +331,7 @@ class AdvancedTableB extends React.Component {
       insertBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           Add <i className="fa fa-fw fa-plus text-success"></i>
@@ -340,7 +340,7 @@ class AdvancedTableB extends React.Component {
       deleteBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           Delete
@@ -349,7 +349,7 @@ class AdvancedTableB extends React.Component {
       exportCSVBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           Export
@@ -359,7 +359,7 @@ class AdvancedTableB extends React.Component {
       clearSearchBtn: (onClick) => (
         <Button
           onClick={() => {
-            onClick();
+            onClick()
           }}
         >
           <i className="fa fa-search fa-fw"></i>
@@ -369,11 +369,11 @@ class AdvancedTableB extends React.Component {
       paginationShowsTotal: true,
       expandParentClass: 'tr-expanded'
       //expandRowBgColor: '#2f2f2f'
-    };
+    }
 
     const cellEditProp = {
       mode: 'click'
-    };
+    }
 
     const expandOptions = {
       expandColumnVisible: true,
@@ -383,7 +383,7 @@ class AdvancedTableB extends React.Component {
         ) : (
           <i className="fa fa-angle-right fa-2x"></i>
         )
-    };
+    }
 
     return (
       <BootstrapTable
@@ -468,8 +468,8 @@ class AdvancedTableB extends React.Component {
           Earnings
         </TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default AdvancedTableB;
+export default AdvancedTableB

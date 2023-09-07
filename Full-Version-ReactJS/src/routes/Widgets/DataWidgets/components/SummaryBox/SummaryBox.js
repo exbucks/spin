@@ -1,16 +1,16 @@
-import React, { PropTypes } from 'react';
-import classNames from 'classnames';
+import React, { PropTypes } from 'react'
+import classNames from 'classnames'
 
-import { Panel, Row, Col } from 'components';
+import { Panel, Row, Col } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './SummaryBox.scss';
+import classes from './SummaryBox.scss'
 
 const getModifiedIcon = (iconElement, targetColor) =>
   React.cloneElement(iconElement, {
     className: classNames(classes.mainIcon, iconElement.props.className, `text-${targetColor}`)
-  });
+  })
 
 const SummaryBox = (props) => (
   <Panel
@@ -30,7 +30,7 @@ const SummaryBox = (props) => (
       </Col>
     </Row>
   </Panel>
-);
+)
 
 SummaryBox.propTypes = {
   title: PropTypes.string.isRequired,
@@ -39,13 +39,13 @@ SummaryBox.propTypes = {
   footer: PropTypes.node,
   icon: PropTypes.node,
   color: PropTypes.string
-};
+}
 
 SummaryBox.defaultProps = {
   unit: null,
   footer: null,
   icon: null,
   color: Colors.brandPrimary
-};
+}
 
-export default SummaryBox;
+export default SummaryBox

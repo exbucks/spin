@@ -1,3 +1,3 @@
-import SimpleTreeMap from './SimpleTreeMap';
+import SimpleTreeMap from './SimpleTreeMap'
 
-export default SimpleTreeMap;
+export default SimpleTreeMap

@@ -1,3 +1,3 @@
-import CustomContentTreeMap from './CustomContentTreeMap';
+import CustomContentTreeMap from './CustomContentTreeMap'
 
-export default CustomContentTreeMap;
+export default CustomContentTreeMap

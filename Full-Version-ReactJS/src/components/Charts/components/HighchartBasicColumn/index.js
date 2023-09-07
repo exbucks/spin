@@ -1,3 +1,3 @@
-import HighchartBasicColumn from './HighchartBasicColumn';
+import HighchartBasicColumn from './HighchartBasicColumn'
 
-export default HighchartBasicColumn;
+export default HighchartBasicColumn

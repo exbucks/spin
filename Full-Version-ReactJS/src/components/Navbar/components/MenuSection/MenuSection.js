@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { Link } from 'react-router-dom'
 
-import routes, { findSectionBySlug, urlMatcher } from 'routes/routesStructure';
+import routes, { findSectionBySlug, urlMatcher } from 'routes/routesStructure'
 
-import classes from './MenuSection.scss';
+import classes from './MenuSection.scss'
 
 const MenuSection = (props) => {
-  const { slug, currentPath, onNavigation, ...otherProps } = props;
+  const { slug, currentPath, onNavigation, ...otherProps } = props
 
-  const section = findSectionBySlug(routes, slug);
+  const section = findSectionBySlug(routes, slug)
 
   return (
     <div className={classes.menuSection} {...otherProps}>
@@ -39,17 +39,17 @@ const MenuSection = (props) => {
         </ul>
       )}
     </div>
-  );
-};
+  )
+}
 
 MenuSection.propTypes = {
   slug: PropTypes.string.isRequired,
   currentPath: PropTypes.string.isRequired,
   onNavigation: PropTypes.func
-};
+}
 
 MenuSection.defaultProps = {
   onNavigation: () => {}
-};
+}
 
-export default MenuSection;
+export default MenuSection

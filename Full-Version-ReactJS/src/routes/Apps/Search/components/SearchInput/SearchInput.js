@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import numeral from 'numeral';
-import { FormControl, InputGroup, Button } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import numeral from 'numeral'
+import { FormControl, InputGroup, Button } from 'components'
 
-import classes from './../../Search.scss';
+import classes from './../../Search.scss'
 
 const SearchInput = (props) => (
   <div>
@@ -23,18 +23,18 @@ const SearchInput = (props) => (
       </InputGroup.Button>
     </InputGroup>
   </div>
-);
+)
 
 SearchInput.propTypes = {
   query: PropTypes.string,
   resultTime: PropTypes.number,
   resultCount: PropTypes.number
-};
+}
 
 SearchInput.defaultProps = {
   query: '',
   resultTime: null,
   resultCount: null
-};
+}
 
-export default SearchInput;
+export default SearchInput

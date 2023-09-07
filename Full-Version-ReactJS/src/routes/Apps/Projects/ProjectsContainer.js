@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   Row,
@@ -24,40 +24,40 @@ import {
   SlimProgressBar,
   AvatarImage,
   FavoriteStar
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import projectsData from 'consts/data/app-projects.json';
+import projectsData from 'consts/data/app-projects.json'
 
-import classes from './Projects.scss';
+import classes from './Projects.scss'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { FavoriteApps, SearchBox, ProjectsList, UsersList } from './../components';
+import { FavoriteApps, SearchBox, ProjectsList, UsersList } from './../components'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const projectStatusToColor = (status) => {
   switch (status) {
     case 'Active':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Waiting':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'Suspended':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     default:
     case 'Disabled':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 // ------------------------------------
 // Sub Elements
@@ -88,7 +88,7 @@ const renderActionsDropdown = (isSmall = false, dropup = false) => (
       Delete
     </Dropdown.Item>
   </DropdownButton>
-);
+)
 
 const ProjectsTable = (props) => (
   <div className="m-t-1">
@@ -165,7 +165,7 @@ const ProjectsTable = (props) => (
       <Pagination items={10} activePage={1} boundaryLinks prev next first last ellipsis />
     </div>
   </div>
-);
+)
 
 const ProjectsGrid = (props) => {
   const renderProjectTile = (project) => (
@@ -227,7 +227,7 @@ const ProjectsGrid = (props) => {
         </ListGroupItem>
       </ListGroup>
     </Panel>
-  );
+  )
 
   return (
     <div className="m-t-1">
@@ -235,14 +235,14 @@ const ProjectsGrid = (props) => {
         <Col md={6}>
           {_.map(props.projects, (project, index) => {
             if (index % 2 === 0) {
-              return renderProjectTile(project);
+              return renderProjectTile(project)
             }
           })}
         </Col>
         <Col md={6}>
           {_.map(props.projects, (project, index) => {
             if (index % 2 !== 0) {
-              return renderProjectTile(project);
+              return renderProjectTile(project)
             }
           })}
         </Col>
@@ -261,41 +261,41 @@ const ProjectsGrid = (props) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class ProjectsContainer extends RoutedComponent {
   static contextTypes = {
     store: PropTypes.object
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(projectsData) };
+    this.state = { data: getData(projectsData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   _favoriteHandler(projectId, favorited) {
     // Modify state
-    const modifiedProjects = _.clone(this.state.data.Projects);
-    const projectToModify = _.findWhere(modifiedProjects, { _id: projectId });
+    const modifiedProjects = _.clone(this.state.data.Projects)
+    const projectToModify = _.findWhere(modifiedProjects, { _id: projectId })
 
-    projectToModify.Favorite = favorited;
+    projectToModify.Favorite = favorited
 
     this.setState({
       data: {
         ...this.state.data,
         Projects: modifiedProjects
       }
-    });
+    })
 
     // const notification = favorited ?
     //     Notifications.success({
@@ -309,7 +309,7 @@ class ProjectsContainer extends RoutedComponent {
     //     });
 
     // Show Notification
-    this.context.store.dispatch(notification);
+    this.context.store.dispatch(notification)
   }
 
   render() {
@@ -330,7 +330,7 @@ class ProjectsContainer extends RoutedComponent {
             className={classes.leftPanelSection}
             items={this.state.data.ProjectsList}
             projectSelected={() => {
-              this.props.history.push('/apps/tasks');
+              this.props.history.push('/apps/tasks')
             }}
           />
 
@@ -396,8 +396,8 @@ class ProjectsContainer extends RoutedComponent {
           )}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(ProjectsContainer);
+export default connect()(ProjectsContainer)

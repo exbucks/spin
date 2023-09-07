@@ -1,9 +1,9 @@
-import React from 'react';
-import { TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { TableHeaderColumn } from 'react-bootstrap-table'
 
 class CustomTableHeaderColumn extends React.Component {
   renderCaret(direction) {
-    return <i className={`fa fa-fw fa-sort${direction ? '-' + direction : ''}`}></i>;
+    return <i className={`fa fa-fw fa-sort${direction ? '-' + direction : ''}`}></i>
   }
 
   render() {
@@ -12,14 +12,14 @@ class CustomTableHeaderColumn extends React.Component {
           ...this.props,
           caretRender: this.props.dataSort ? this.renderCaret : () => ''
         }
-      : this.props;
+      : this.props
 
-    return <TableHeaderColumn {...props} />;
+    return <TableHeaderColumn {...props} />
   }
 }
 
 CustomTableHeaderColumn.propTypes = {
   ...TableHeaderColumn.propTypes
-};
+}
 
-export default CustomTableHeaderColumn;
+export default CustomTableHeaderColumn

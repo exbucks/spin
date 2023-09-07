@@ -1,22 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Select from 'react-select';
-import Highlighter from 'react-highlight-words';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Select from 'react-select'
+import Highlighter from 'react-highlight-words'
+import _ from 'underscore'
 
 export default class DisabledUpsellOptions extends React.Component {
   static propTypes = {
     label: PropTypes.string
-  };
+  }
 
   constructor() {
-    super();
+    super()
 
     this.state = {
       value: null
-    };
+    }
 
-    this.displayName = 'DisabledUpsellOptions';
+    this.displayName = 'DisabledUpsellOptions'
   }
 
   renderLink() {
@@ -24,15 +24,15 @@ export default class DisabledUpsellOptions extends React.Component {
       <a style={{ marginLeft: 5 }} href="#">
         Upgrade here!
       </a>
-    );
+    )
   }
 
   renderOption(option) {
-    return <Highlighter searchWords={[this._inputValue]} textToHighlight={option.label} />;
+    return <Highlighter searchWords={[this._inputValue]} textToHighlight={option.label} />
   }
 
   renderValue(option) {
-    return <strong style={{ color: option.color }}>{option.label}</strong>;
+    return <strong style={{ color: option.color }}>{option.label}</strong>
   }
 
   render() {
@@ -40,7 +40,7 @@ export default class DisabledUpsellOptions extends React.Component {
       { label: 'Basic customer support', value: 'basic', color: '#E31864' },
       { label: 'Premium customer support', value: 'premium', color: '#6216A3' },
       { label: 'Pro customer support', value: 'pro', disabled: true, link: this.renderLink() }
-    ];
+    ]
 
     return (
       <div>
@@ -53,6 +53,6 @@ export default class DisabledUpsellOptions extends React.Component {
           valueRenderer={this.renderValue}
         />
       </div>
-    );
+    )
   }
 }

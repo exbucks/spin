@@ -1,5 +1,5 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const {
   ResponsiveContainer,
@@ -9,9 +9,9 @@ const {
   PolarAngleAxis,
   PolarRadiusAxis,
   Legend
-} = Charts.Recharts;
+} = Charts.Recharts
 
-import { dataRadarChart } from './../../data';
+import { dataRadarChart } from './../../data'
 
 const SpecifiedDomainRadarChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -24,6 +24,6 @@ const SpecifiedDomainRadarChart = (props) => (
       <PolarRadiusAxis angle={30} domain={[0, 150]} stroke="#fff" />
     </RadarChart>
   </ResponsiveContainer>
-);
+)
 
-export default SpecifiedDomainRadarChart;
+export default SpecifiedDomainRadarChart

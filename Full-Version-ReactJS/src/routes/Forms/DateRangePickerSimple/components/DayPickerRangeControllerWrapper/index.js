@@ -1,3 +1,3 @@
-import DayPickerRangeControllerWrap from './DayPickerRangeControllerWrap';
+import DayPickerRangeControllerWrap from './DayPickerRangeControllerWrap'
 
-export default DayPickerRangeControllerWrap;
+export default DayPickerRangeControllerWrap

@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import reactCSS from 'reactcss';
+import React from 'react'
+import PropTypes from 'prop-types'
+import reactCSS from 'reactcss'
 
-import { Swatch } from 'react-color/lib/components/common';
+import { Swatch } from 'react-color/lib/components/common'
 
 export const SketchPresetColors = ({ colors, onClick = () => {}, onSwatchHover }) => {
   const styles = reactCSS(
@@ -35,7 +35,7 @@ export const SketchPresetColors = ({ colors, onClick = () => {}, onSwatchHover }
     {
       'no-presets': !colors || !colors.length
     }
-  );
+  )
 
   const handleClick = (hex, e) => {
     onClick(
@@ -44,14 +44,14 @@ export const SketchPresetColors = ({ colors, onClick = () => {}, onSwatchHover }
         source: 'hex'
       },
       e
-    );
-  };
+    )
+  }
 
   return (
     <div style={styles.colors} className="flexbox-fix">
       {colors.map((colorObjOrString) => {
         const c =
-          typeof colorObjOrString === 'string' ? { color: colorObjOrString } : colorObjOrString;
+          typeof colorObjOrString === 'string' ? { color: colorObjOrString } : colorObjOrString
         return (
           <div key={c.color} style={styles.swatchWrap}>
             <Swatch
@@ -64,11 +64,11 @@ export const SketchPresetColors = ({ colors, onClick = () => {}, onSwatchHover }
               }}
             />
           </div>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 SketchPresetColors.propTypes = {
   colors: PropTypes.arrayOf(
     PropTypes.oneOfType([
@@ -79,6 +79,6 @@ SketchPresetColors.propTypes = {
       })
     ])
   )
-};
+}
 
-export default SketchPresetColors;
+export default SketchPresetColors

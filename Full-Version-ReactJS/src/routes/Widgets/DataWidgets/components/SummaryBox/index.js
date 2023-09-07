@@ -1,3 +1,3 @@
-import SummaryBox from './SummaryBox.js';
+import SummaryBox from './SummaryBox.js'
 
-export default SummaryBox;
+export default SummaryBox

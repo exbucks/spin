@@ -1,21 +1,21 @@
-import { range } from 'lodash';
-import React from 'react';
-import { Form } from 'components';
+import { range } from 'lodash'
+import React from 'react'
+import { Form } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
+import { Typeahead } from 'react-bootstrap-typeahead'
 
 /* eslint-disable no-console */
 class LabelKeyExample extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       paginate: true
-    };
+    }
   }
 
   render() {
-    const { paginate } = this.state;
+    const { paginate } = this.state
 
     return (
       <div>
@@ -32,9 +32,9 @@ class LabelKeyExample extends React.Component {
           Paginate results
         </Form.Check>
       </div>
-    );
+    )
   }
 }
 /* eslint-disable no-console */
 
-export default LabelKeyExample;
+export default LabelKeyExample

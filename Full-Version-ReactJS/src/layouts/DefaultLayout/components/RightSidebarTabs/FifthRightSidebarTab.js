@@ -1,6 +1,6 @@
-import React from 'react';
-import classes from './RightSidebar.scss';
-import { Form } from 'components';
+import React from 'react'
+import classes from './RightSidebar.scss'
+import { Form } from 'components'
 
 export default () => (
   <div>
@@ -34,4 +34,4 @@ export default () => (
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
   </div>
-);
+)

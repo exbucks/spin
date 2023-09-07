@@ -1,3 +1,3 @@
-import AreaRange from './AreaRange';
+import AreaRange from './AreaRange'
 
-export default AreaRange;
+export default AreaRange

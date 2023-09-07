@@ -1,9 +1,9 @@
-import React from 'react';
-import SkinsContainer from './SkinsContainer';
-import skinsConfig from './skinConfigs';
-import _ from 'underscore';
+import React from 'react'
+import SkinsContainer from './SkinsContainer'
+import skinsConfig from './skinConfigs'
+import _ from 'underscore'
 
-export default SkinsContainer;
+export default SkinsContainer
 
 export function getMenuEntries() {
   return _.map(skinsConfig, (group) => ({
@@ -17,5 +17,5 @@ export function getMenuEntries() {
         </small>
       )
     }))
-  }));
+  }))
 }

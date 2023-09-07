@@ -1,3 +1,3 @@
-import GaugeChart from './GaugeChart';
+import GaugeChart from './GaugeChart'
 
-export default GaugeChart;
+export default GaugeChart

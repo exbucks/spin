@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
-import classes from './../../Chartist.scss';
+import classes from './../../Chartist.scss'
 
 //================Settings=================
-const sum = (a, b) => a + b;
+const sum = (a, b) => a + b
 
-const chartType = 'Pie';
+const chartType = 'Pie'
 const chartData = {
   series: [5, 3, 4]
-};
+}
 const chartOptions = {
   labelInterpolationFnc: (value) => Math.round((value / chartData.series.reduce(sum)) * 100) + '%'
-};
+}
 
 //===============Component================
 const SimplePieChart = () => (
@@ -23,6 +23,6 @@ const SimplePieChart = () => (
     options={chartOptions}
     type={chartType}
   />
-);
+)
 
-export default SimplePieChart;
+export default SimplePieChart

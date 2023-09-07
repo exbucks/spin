@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, ListGroup, ListGroupItem, SlimProgressBar, CollapsablePanel } from 'components';
+import { Row, Col, ListGroup, ListGroupItem, SlimProgressBar, CollapsablePanel } from 'components'
 
-import classes from './Statistics3.scss';
+import classes from './Statistics3.scss'
 
 const Statistics3 = (panelProps) => (
   <CollapsablePanel
@@ -79,6 +79,6 @@ const Statistics3 = (panelProps) => (
       </ListGroupItem>
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Statistics3;
+export default Statistics3

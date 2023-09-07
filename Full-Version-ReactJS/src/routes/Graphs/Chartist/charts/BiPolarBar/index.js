@@ -1,3 +1,3 @@
-import BiPolarBar from './BiPolarBar';
+import BiPolarBar from './BiPolarBar'
 
-export default BiPolarBar;
+export default BiPolarBar

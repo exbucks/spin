@@ -1,12 +1,12 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import * as color from 'react-color/lib/helpers/color'
 
-import { ColorWrap, EditableInput, Checkboard } from 'react-color/lib/components/common';
-import BlockSwatches from './BlockSwatches';
+import { ColorWrap, EditableInput, Checkboard } from 'react-color/lib/components/common'
+import BlockSwatches from './BlockSwatches'
 
 export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle }) => {
-  const transparent = hex === 'transparent';
+  const transparent = hex === 'transparent'
   const handleChange = (hexCode, e) => {
     color.isValidHex(hexCode) &&
       onChange(
@@ -15,8 +15,8 @@ export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle })
           source: 'hex'
         },
         e
-      );
-  };
+      )
+  }
 
   const styles = reactCSS(
     {
@@ -79,7 +79,7 @@ export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle })
       }
     },
     { 'hide-triangle': triangle === 'hide' }
-  );
+  )
 
   return (
     <div style={styles.card} className="block-picker">
@@ -95,8 +95,8 @@ export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle })
         <EditableInput style={{ input: styles.input }} value={hex} onChange={handleChange} />
       </div>
     </div>
-  );
-};
+  )
+}
 
 Block.defaultProps = {
   width: '170px',
@@ -112,6 +112,6 @@ Block.defaultProps = {
     '#ba68c8'
   ],
   triangle: 'top'
-};
+}
 
-export default ColorWrap(Block);
+export default ColorWrap(Block)

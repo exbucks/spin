@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
-import classes from './../../Chartist.scss';
+import classes from './../../Chartist.scss'
 
 //================Settings=================
-const chartType = 'Line';
+const chartType = 'Line'
 const chartData = {
   labels: [1, 2, 3, 4, 5, 6, 7, 8],
   series: [
@@ -14,7 +14,7 @@ const chartData = {
     [0, 0, 0, 1, 2, 2.5, 2, 1],
     [2.5, 2, 1, 0.5, 1, 0.5, -1, -2.5]
   ]
-};
+}
 const chartOptions = {
   high: 3,
   low: -3,
@@ -26,7 +26,7 @@ const chartOptions = {
     showLabel: false,
     showGrid: false
   }
-};
+}
 
 //===============Component================
 const BiPolarLineWithArea = () => (
@@ -36,6 +36,6 @@ const BiPolarLineWithArea = () => (
     options={chartOptions}
     type={chartType}
   />
-);
+)
 
-export default BiPolarLineWithArea;
+export default BiPolarLineWithArea

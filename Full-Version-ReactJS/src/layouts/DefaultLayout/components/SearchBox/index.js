@@ -1,6 +1,6 @@
-import SearchBox from './SearchBox';
-import SearchBoxMobile from './SearchBoxMobile';
+import SearchBox from './SearchBox'
+import SearchBoxMobile from './SearchBoxMobile'
 
-export default SearchBox;
+export default SearchBox
 
-export { SearchBox, SearchBoxMobile };
+export { SearchBox, SearchBoxMobile }

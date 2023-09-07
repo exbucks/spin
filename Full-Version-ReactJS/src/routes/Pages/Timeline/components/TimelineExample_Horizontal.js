@@ -1,9 +1,9 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { AvatarImage, Timeline, Label } from 'components';
+import { AvatarImage, Timeline, Label } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 // ------------------------------------
 // Horizontal Timeline Example
 // ------------------------------------
@@ -213,9 +213,9 @@ const HorizontalTimeline = () => (
       </Timeline.ItemBody>
     </Timeline.Item>
   </Timeline>
-);
+)
 
 // Force Static Output
-const staticResult = HorizontalTimeline();
+const staticResult = HorizontalTimeline()
 
-export default () => staticResult;
+export default () => staticResult

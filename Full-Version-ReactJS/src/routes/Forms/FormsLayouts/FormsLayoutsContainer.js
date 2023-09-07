@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
 import {
   Row,
@@ -11,13 +11,13 @@ import {
   FormGroup,
   ControlLabel,
   Panel
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './FormsLayouts.scss';
+import classes from './FormsLayouts.scss'
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -54,7 +54,7 @@ const BasicExample = () => (
       </Row>
     </Panel>
   </div>
-);
+)
 
 const InlineExample = () => (
   <div>
@@ -105,7 +105,7 @@ const InlineExample = () => (
       </Form>
     </Panel>
   </div>
-);
+)
 
 const HorizontalExample = () => (
   <div>
@@ -150,7 +150,7 @@ const HorizontalExample = () => (
       </Row>
     </Panel>
   </div>
-);
+)
 
 // ------------------------------------
 // Main Container
@@ -159,7 +159,7 @@ class FormsLayoutsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -173,8 +173,8 @@ class FormsLayoutsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(FormsLayoutsContainer);
+export default connect()(FormsLayoutsContainer)

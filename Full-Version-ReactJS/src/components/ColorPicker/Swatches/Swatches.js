@@ -1,12 +1,12 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
-import * as color from 'react-color/lib/helpers/color';
-import * as material from 'material-colors';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
+import * as color from 'react-color/lib/helpers/color'
+import * as material from 'material-colors'
 
-import { ColorWrap } from 'react-color/lib/components/common';
-import { Raised } from 'react-color/lib/components/common';
-import SwatchesGroup from './SwatchesGroup';
+import { ColorWrap } from 'react-color/lib/components/common'
+import { Raised } from 'react-color/lib/components/common'
+import SwatchesGroup from './SwatchesGroup'
 
 export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex }) => {
   const styles = reactCSS({
@@ -27,7 +27,7 @@ export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex }
         clear: 'both'
       }
     }
-  });
+  })
 
   const handleChange = (data, e) => {
     color.isValidHex(data) &&
@@ -37,8 +37,8 @@ export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex }
           source: 'hex'
         },
         e
-      );
-  };
+      )
+  }
 
   return (
     <div style={styles.picker} className="swatches-picker">
@@ -59,8 +59,8 @@ export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex }
         </div>
       </Raised>
     </div>
-  );
-};
+  )
+}
 
 /* eslint-disable max-len */
 Swatches.defaultProps = {
@@ -195,6 +195,6 @@ Swatches.defaultProps = {
     ],
     ['#000000', '#525252', '#969696', '#D9D9D9', '#FFFFFF']
   ]
-};
+}
 
-export default ColorWrap(Swatches);
+export default ColorWrap(Swatches)

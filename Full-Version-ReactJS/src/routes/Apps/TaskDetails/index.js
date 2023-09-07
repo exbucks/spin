@@ -1,3 +1,3 @@
-import TaskDetailsContainer from './TaskDetailsContainer';
+import TaskDetailsContainer from './TaskDetailsContainer'
 
-export default TaskDetailsContainer;
+export default TaskDetailsContainer

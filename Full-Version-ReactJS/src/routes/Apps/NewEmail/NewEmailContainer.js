@@ -1,5 +1,5 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 import {
   Row,
   Col,
@@ -9,17 +9,17 @@ import {
   InputGroup,
   FormControl,
   Divider
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { LabelsList, SideNav, EmailAttachments } from './../components';
+import { LabelsList, SideNav, EmailAttachments } from './../components'
 
 // ------------------------------------
 // Config / Data Generator
@@ -29,14 +29,14 @@ const folders = [
   { title: 'Draft', count: 2 },
   { title: 'Sent', count: 7 },
   { title: 'Trash', count: 1 }
-];
+]
 
 const labels = [
   { title: 'Family', color: Colors.brandPrimary },
   { title: 'Friends', color: Colors.brandInfo },
   { title: 'Work', color: Colors.brandSuccess },
   { title: 'Other', color: Colors.brandDanger }
-];
+]
 
 const attachments = [
   {
@@ -60,7 +60,7 @@ const attachments = [
     Owner: '{{fake:[name.firstName] [name.lastName]}}',
     DateAdded: '{{faker:date.recent}}'
   }
-];
+]
 
 // ------------------------------------
 // Sub Elements
@@ -134,21 +134,21 @@ const renderMessageCreator = (attachments, router) => (
     </div>
     <EmailAttachments items={attachments} actionIcon="fa fa-close" actionTooltipText="Remove" />
   </Panel>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class NewEmailContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { attachments: treeRandomizer(attachments) };
+    this.state = { attachments: treeRandomizer(attachments) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -160,7 +160,7 @@ class NewEmailContainer extends RoutedComponent {
               <SideNav
                 items={folders}
                 folderSelected={() => {
-                  this.props.history.push('/apps/inbox');
+                  this.props.history.push('/apps/inbox')
                 }}
               />
             </Col>
@@ -172,8 +172,8 @@ class NewEmailContainer extends RoutedComponent {
         </Col>
         <Col lg={10}>{renderMessageCreator(this.state.attachments, this.props.history)}</Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(NewEmailContainer);
+export default connect()(NewEmailContainer)

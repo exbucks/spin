@@ -1,3 +1,3 @@
-import GlyphIconsContainer from './GlyphIconsContainer';
+import GlyphIconsContainer from './GlyphIconsContainer'
 
-export default GlyphIconsContainer;
+export default GlyphIconsContainer

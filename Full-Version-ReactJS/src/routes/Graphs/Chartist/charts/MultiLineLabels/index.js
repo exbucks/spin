@@ -1,3 +1,3 @@
-import MultiLineLabels from './MultiLineLabels';
+import MultiLineLabels from './MultiLineLabels'
 
-export default MultiLineLabels;
+export default MultiLineLabels

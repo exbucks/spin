@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import hash from 'object-hash';
-import numeral from 'numeral';
-import moment from 'moment';
-import { Badge, Media, OverlayTrigger, Tooltip, Button, Divider } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import hash from 'object-hash'
+import numeral from 'numeral'
+import moment from 'moment'
+import { Badge, Media, OverlayTrigger, Tooltip, Button, Divider } from 'components'
 
-import classes from './EmailAttachments.scss';
+import classes from './EmailAttachments.scss'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const fileTypeToIcon = (fileType) => {
   const filesMap = {
@@ -24,7 +24,7 @@ const fileTypeToIcon = (fileType) => {
       icon: 'fa-file-excel-o',
       color: Colors.brandSuccess
     }
-  };
+  }
 
   return (
     <span className="fa-stack fa-lg">
@@ -34,12 +34,12 @@ const fileTypeToIcon = (fileType) => {
                 fa-inverse text-white"`}
       ></i>
     </span>
-  );
-};
+  )
+}
 
 const EmailAttachments = (props) => {
-  const { items } = props;
-  const otherProps = _.omit(props, 'items', 'actionIcon', 'actionTooltipText');
+  const { items } = props
+  const otherProps = _.omit(props, 'items', 'actionIcon', 'actionTooltipText')
 
   return (
     <div {...otherProps}>
@@ -89,18 +89,18 @@ const EmailAttachments = (props) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 EmailAttachments.propTypes = {
   items: PropTypes.array.isRequired,
   actionIcon: PropTypes.string.isRequired,
   actionTooltipText: PropTypes.string
-};
+}
 
 EmailAttachments.defaultProps = {
   actionIcon: 'fa fa-download',
   actionTooltipText: 'Download'
-};
+}
 
-export default EmailAttachments;
+export default EmailAttachments

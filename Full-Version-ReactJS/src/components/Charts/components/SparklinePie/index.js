@@ -1,3 +1,3 @@
-import SparklinePie from './SparklinePie';
+import SparklinePie from './SparklinePie'
 
-export default SparklinePie;
+export default SparklinePie

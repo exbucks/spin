@@ -1,3 +1,3 @@
-import TreeSortableContainer from './TreeSortableContainer';
+import TreeSortableContainer from './TreeSortableContainer'
 
-export default TreeSortableContainer;
+export default TreeSortableContainer

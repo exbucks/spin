@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import tinycolor from 'tinycolor2';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import tinycolor from 'tinycolor2'
 
-import * as Chartist from 'chartist';
+import * as Chartist from 'chartist'
 
-import { Colors } from 'consts';
-import classes from './SparklinePie.scss';
+import { Colors } from 'consts'
+import classes from './SparklinePie.scss'
 
 export default class SparklinePie extends React.Component {
   static propTypes = {
@@ -18,7 +18,7 @@ export default class SparklinePie extends React.Component {
     color: PropTypes.string,
     animated: PropTypes.bool,
     animationDuration: PropTypes.number
-  };
+  }
 
   static defaultProps = {
     radius: 30,
@@ -31,7 +31,7 @@ export default class SparklinePie extends React.Component {
       Colors.brandSuccess
     ],
     color: Colors.brandPrimary
-  };
+  }
 
   getChartSettings() {
     return {
@@ -43,12 +43,12 @@ export default class SparklinePie extends React.Component {
         chartPie: classes.ctPieChart,
         slicePie: classes.ctSlicePie
       }
-    };
+    }
   }
 
   getData(props) {
-    const dataProps = props || this.props;
-    const data = dataProps.children || dataProps.data || [this.props.value];
+    const dataProps = props || this.props
+    const data = dataProps.children || dataProps.data || [this.props.value]
 
     if (data.length > 1) {
       // When there are more then 1 values =>
@@ -56,10 +56,10 @@ export default class SparklinePie extends React.Component {
         return {
           value: item,
           className: `sparkline-slice-${index}`
-        };
-      });
+        }
+      })
 
-      return { series: multipleSeries };
+      return { series: multipleSeries }
     } else if (data.length === 1) {
       const gaugeSeries = Object.assign({}, data, {
         series: [
@@ -72,68 +72,68 @@ export default class SparklinePie extends React.Component {
             className: 'sparkline-slice-1'
           }
         ]
-      });
+      })
 
-      return gaugeSeries;
+      return gaugeSeries
     } else {
-      throw new Error('Spin.SparklinePie: No data provided for the chart');
+      throw new Error('Spin.SparklinePie: No data provided for the chart')
     }
   }
 
   applySliceColor(sliceElement, color) {
-    sliceElement.style.fill = color;
+    sliceElement.style.fill = color
   }
 
   getColors(isSingleValue = false) {
     return isSingleValue
       ? this.props.colors
-      : [this.props.color, tinycolor(this.props.color).setAlpha(0.1).toRgbString()];
+      : [this.props.color, tinycolor(this.props.color).setAlpha(0.1).toRgbString()]
   }
 
   applySlicesColors(container, series) {
-    const colors = this.getColors(typeof this.props.data !== 'undefined');
+    const colors = this.getColors(typeof this.props.data !== 'undefined')
 
     series.forEach((value, index) => {
-      const sliceElement = container.querySelector(`.sparkline-slice-${index} > path`);
+      const sliceElement = container.querySelector(`.sparkline-slice-${index} > path`)
       if (sliceElement) {
-        const colorIndex = index >= colors.length ? index % colors.length : index;
-        this.applySliceColor(sliceElement, colors[colorIndex]);
+        const colorIndex = index >= colors.length ? index % colors.length : index
+        this.applySliceColor(sliceElement, colors[colorIndex])
       }
-    });
+    })
   }
 
   initChart(element) {
-    const data = this.getData();
-    const defaultSettings = this.getChartSettings();
+    const data = this.getData()
+    const defaultSettings = this.getChartSettings()
 
-    this.chart = new Chartist.PieChart(this.refs.pieContainer, data, defaultSettings);
+    this.chart = new Chartist.PieChart(this.refs.pieContainer, data, defaultSettings)
     this.chart.on('created', () => {
-      this.applySlicesColors(this.refs.pieContainer, data.series || []);
-    });
+      this.applySlicesColors(this.refs.pieContainer, data.series || [])
+    })
   }
 
   componentDidMount() {
-    this.initChart(this.refs.pieContainer);
+    this.initChart(this.refs.pieContainer)
   }
 
   componentWillReceiveProps(nextProps) {
     if (!_.isEqual(this.props, nextProps)) {
-      const newSettings = this.getChartSettings();
-      const data = this.getData(classes, nextProps);
+      const newSettings = this.getChartSettings()
+      const data = this.getData(classes, nextProps)
 
-      this.chart.update(data, newSettings);
+      this.chart.update(data, newSettings)
     }
   }
 
   componentWillUnmount() {
     if (this.chart) {
-      this.chart.detach();
+      this.chart.detach()
     }
   }
 
   render() {
-    const otherProps = _.omit(this.props, _.keys(SparklinePie.propTypes));
+    const otherProps = _.omit(this.props, _.keys(SparklinePie.propTypes))
 
-    return <div className={classes['ctPieChart']} ref="pieContainer" {...otherProps}></div>;
+    return <div className={classes['ctPieChart']} ref="pieContainer" {...otherProps}></div>
   }
 }

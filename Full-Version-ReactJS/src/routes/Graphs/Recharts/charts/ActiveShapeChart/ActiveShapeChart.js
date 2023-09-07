@@ -1,25 +1,25 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, PieChart, Pie, Sector } = Charts.Recharts;
+const { ResponsiveContainer, PieChart, Pie, Sector } = Charts.Recharts
 
-import { dataPieChart } from './../../data';
+import { dataPieChart } from './../../data'
 
 class ActiveShapeChart extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       activeIndex: 0
-    };
+    }
   }
 
   onPieEnter(data, index) {
-    this.setState({ activeIndex: index });
+    this.setState({ activeIndex: index })
   }
 
   renderActiveShape(props) {
-    const RADIAN = Math.PI / 180;
+    const RADIAN = Math.PI / 180
     const {
       cx,
       cy,
@@ -33,16 +33,16 @@ class ActiveShapeChart extends React.Component {
       payload,
       percent,
       value
-    } = props;
-    const sin = Math.sin(-RADIAN * midAngle);
-    const cos = Math.cos(-RADIAN * midAngle);
-    const sx = cx + (outerRadius + 10) * cos;
-    const sy = cy + (outerRadius + 10) * sin;
-    const mx = cx + (outerRadius + 30) * cos;
-    const my = cy + (outerRadius + 30) * sin;
-    const ex = mx + (cos >= 0 ? 1 : -1) * 22;
-    const ey = my;
-    const textAnchor = cos >= 0 ? 'start' : 'end';
+    } = props
+    const sin = Math.sin(-RADIAN * midAngle)
+    const cos = Math.cos(-RADIAN * midAngle)
+    const sx = cx + (outerRadius + 10) * cos
+    const sy = cy + (outerRadius + 10) * sin
+    const mx = cx + (outerRadius + 30) * cos
+    const my = cy + (outerRadius + 30) * sin
+    const ex = mx + (cos >= 0 ? 1 : -1) * 22
+    const ey = my
+    const textAnchor = cos >= 0 ? 'start' : 'end'
 
     return (
       <g>
@@ -81,7 +81,7 @@ class ActiveShapeChart extends React.Component {
           {`(Rate ${(percent * 100).toFixed(2)}%)`}
         </text>
       </g>
-    );
+    )
   }
 
   render() {
@@ -98,8 +98,8 @@ class ActiveShapeChart extends React.Component {
           />
         </PieChart>
       </ResponsiveContainer>
-    );
+    )
   }
 }
 
-export default ActiveShapeChart;
+export default ActiveShapeChart

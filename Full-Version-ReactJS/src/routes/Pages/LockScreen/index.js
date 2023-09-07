@@ -1,3 +1,3 @@
-import LockScreenContainer from './LockScreen';
+import LockScreenContainer from './LockScreen'
 
-export default LockScreenContainer;
+export default LockScreenContainer

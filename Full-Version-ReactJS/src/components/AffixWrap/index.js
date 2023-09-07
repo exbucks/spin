@@ -1,3 +1,3 @@
-import AffixWrap from './AffixWrap';
+import AffixWrap from './AffixWrap'
 
-export default AffixWrap;
+export default AffixWrap

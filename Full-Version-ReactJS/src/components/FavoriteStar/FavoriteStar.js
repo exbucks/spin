@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 
 /*
     Renders a two-state Favorite Star, with Information Tooltip attached
@@ -14,9 +14,9 @@ const FavoriteStar = (props) => {
     tooltipTextInActive,
     tooltipPlacement,
     ...otherProps
-  } = props;
+  } = props
 
-  const tooltipText = !favorited ? tooltipTextInActive : tooltipTextActive;
+  const tooltipText = !favorited ? tooltipTextInActive : tooltipTextActive
 
   return (
     <OverlayTrigger
@@ -31,8 +31,8 @@ const FavoriteStar = (props) => {
         )}
       </a>
     </OverlayTrigger>
-  );
-};
+  )
+}
 
 FavoriteStar.propTypes = {
   favorited: PropTypes.bool,
@@ -40,7 +40,7 @@ FavoriteStar.propTypes = {
   tooltipTextActive: PropTypes.string,
   tooltipTextInActive: PropTypes.string,
   tooltipPlacement: PropTypes.string
-};
+}
 
 FavoriteStar.defaultProps = {
   favorited: false,
@@ -48,6 +48,6 @@ FavoriteStar.defaultProps = {
   tooltipTextActive: 'Remove from favorites',
   tooltipTextInActive: 'Add to favorites',
   tooltipPlacement: 'top'
-};
+}
 
-export default FavoriteStar;
+export default FavoriteStar

@@ -1,3 +1,3 @@
-import SpecifiedDomainRadarChart from './SpecifiedDomainRadarChart';
+import SpecifiedDomainRadarChart from './SpecifiedDomainRadarChart'
 
-export default SpecifiedDomainRadarChart;
+export default SpecifiedDomainRadarChart

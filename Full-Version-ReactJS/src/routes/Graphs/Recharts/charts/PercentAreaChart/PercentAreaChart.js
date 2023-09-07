@@ -1,26 +1,26 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const { ResponsiveContainer, AreaChart, Area, CartesianGrid, Tooltip, Legend, YAxis, XAxis } =
-  Charts.Recharts;
+  Charts.Recharts
 
-import { dataPercentArea } from './../../data';
+import { dataPercentArea } from './../../data'
 
-import classes from './percentAreaChart.scss';
+import classes from './percentAreaChart.scss'
 
 const getPercent = (value, total) => {
-  const ratio = total > 0 ? value / total : 0;
+  const ratio = total > 0 ? value / total : 0
 
-  return toPercent(ratio, 2);
-};
+  return toPercent(ratio, 2)
+}
 
 const toPercent = (decimal, fixed = 0) => {
-  return `${(decimal * 100).toFixed(fixed)}%`;
-};
+  return `${(decimal * 100).toFixed(fixed)}%`
+}
 
 const renderTooltipContent = (o) => {
-  const { payload, label } = o;
-  const total = payload.reduce((result, entry) => result + entry.value, 0);
+  const { payload, label } = o
+  const total = payload.reduce((result, entry) => result + entry.value, 0)
 
   return (
     <div className={classes.customizedTooltipContent}>
@@ -33,8 +33,8 @@ const renderTooltipContent = (o) => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
 const PercentAreaChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -71,6 +71,6 @@ const PercentAreaChart = (props) => (
       />
     </AreaChart>
   </ResponsiveContainer>
-);
+)
 
-export default PercentAreaChart;
+export default PercentAreaChart

@@ -1,3 +1,3 @@
-import FilesManagerContainer from './FilesManagerContainer';
+import FilesManagerContainer from './FilesManagerContainer'
 
-export default FilesManagerContainer;
+export default FilesManagerContainer

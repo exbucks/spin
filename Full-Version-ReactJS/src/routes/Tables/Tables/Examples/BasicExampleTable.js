@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table, Media, Dropdown, DropdownButton, AvatarImage } from 'components';
+import { Table, Media, Dropdown, DropdownButton, AvatarImage } from 'components'
 
 const renderActionsDropdown = (index) => (
   <DropdownButton title="Action" id={`dropdown-basic-${index}`}>
@@ -18,7 +18,7 @@ const renderActionsDropdown = (index) => (
       Show Profile
     </Dropdown.Item>
   </DropdownButton>
-);
+)
 
 const BasicExampleTable = () => (
   <Table>
@@ -182,6 +182,6 @@ const BasicExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default BasicExampleTable;
+export default BasicExampleTable

@@ -1,3 +1,3 @@
-import ButtonsContainer from './Buttons';
+import ButtonsContainer from './Buttons'
 
-export default ButtonsContainer;
+export default ButtonsContainer

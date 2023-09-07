@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import _ from 'underscore';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import _ from 'underscore'
 
-import { Row, Col, GalleryThumbnail, Divider } from 'components';
+import { Row, Col, GalleryThumbnail, Divider } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
 import {
   CONTENT_VIEW_STATIC,
@@ -18,9 +18,9 @@ import {
   SIDEBAR_ADDON_AVATAR_AND_BARS,
   SIDEBAR_ADDON_AVATAR_AND_NUMBERS,
   SIDEBAR_ADDON_AVATAR_AND_STATS
-} from 'layouts/DefaultLayout/modules/layout';
+} from 'layouts/DefaultLayout/modules/layout'
 
-const thumbnailsContext = require.context('static/sidebars-thumbs', true, /^\.\/.*\.png/);
+const thumbnailsContext = require.context('static/sidebars-thumbs', true, /^\.\/.*\.png/)
 
 export const sidebars = [
   {
@@ -120,42 +120,42 @@ export const sidebars = [
     },
     thumb: './spin-sidebar-slim.png'
   }
-];
+]
 
-const getSidebarByKey = (key) => _.findWhere(sidebars, { key: key }) || {};
+const getSidebarByKey = (key) => _.findWhere(sidebars, { key: key }) || {}
 
 class SidebarsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
   }
 
   getLayoutOptions() {
-    const { sidebarKey } = this.props.routeParams;
+    const { sidebarKey } = this.props.routeParams
 
-    const sidebarDef = getSidebarByKey(sidebarKey);
+    const sidebarDef = getSidebarByKey(sidebarKey)
 
     return {
       ...sidebarDef.def,
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   componentDidUpdate(prevProps) {
-    const { sidebarKey } = this.props.routeParams;
-    const { setCurrentPageSettings } = this.props;
+    const { sidebarKey } = this.props.routeParams
+    const { setCurrentPageSettings } = this.props
 
-    const sidebarDef = getSidebarByKey(sidebarKey);
+    const sidebarDef = getSidebarByKey(sidebarKey)
 
     const targetDef = {
       ...sidebarDef.def,
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
 
-    setCurrentPageSettings(targetDef);
+    setCurrentPageSettings(targetDef)
   }
 
   render() {
-    const { sidebarKey } = this.props.routeParams;
+    const { sidebarKey } = this.props.routeParams
 
     return (
       <Row>
@@ -188,8 +188,8 @@ class SidebarsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(SidebarsContainer);
+export default connect()(SidebarsContainer)

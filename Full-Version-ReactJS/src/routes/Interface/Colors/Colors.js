@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Row, Col, Panel } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Row, Col, Panel } from 'components'
 
-import { Colors } from 'consts';
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { Colors } from 'consts'
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './Colors.scss';
+import classes from './Colors.scss'
 
 const ColorSwatch = (props) => (
   <Panel
@@ -41,7 +41,7 @@ const ColorSwatch = (props) => (
   >
     <div className={classes.swatchBody} style={{ backgroundColor: props.color }}></div>
   </Panel>
-);
+)
 
 ColorSwatch.propTypes = {
   name: PropTypes.string.isRequired,
@@ -50,13 +50,13 @@ ColorSwatch.propTypes = {
   rgbColor: PropTypes.string.isRequired,
   cmykColor: PropTypes.string.isRequired,
   scssVariable: PropTypes.string.isRequired
-};
+}
 
 class ColorsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -328,8 +328,8 @@ class ColorsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ColorsContainer);
+export default connect()(ColorsContainer)

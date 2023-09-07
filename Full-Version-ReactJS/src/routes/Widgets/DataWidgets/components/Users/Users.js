@@ -1,8 +1,8 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
 import {
   Media,
@@ -15,11 +15,11 @@ import {
   Button,
   OverlayTrigger,
   Tooltip
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Users.scss';
+import classes from './Users.scss'
 
 const users = _.map(
   [
@@ -45,23 +45,23 @@ const users = _.map(
     name: `${faker.person.firstName()} ${faker.person.lastName()}`,
     address: `${faker.person.address.city()}, ${faker.person.address.stateAbbr()}`
   })
-);
+)
 
-const usersByStatus = _.groupBy(users, (user) => (user.status || '').toLowerCase());
+const usersByStatus = _.groupBy(users, (user) => (user.status || '').toLowerCase())
 
 const statusToColor = (status) => {
   switch (status.toLowerCase()) {
     case 'online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const renderUser = (user) => (
   <ListGroupItem key={user.id}>
@@ -80,7 +80,7 @@ const renderUser = (user) => (
       </Media.Right>
     </Media>
   </ListGroupItem>
-);
+)
 
 const Users = (panelProps) => (
   <CollapsablePanel
@@ -136,6 +136,6 @@ const Users = (panelProps) => (
       {_.map(usersByStatus['offline'], (user) => renderUser(user))}
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Users;
+export default Users

@@ -1,7 +1,7 @@
-import React from 'react';
-import Select from 'react-select';
-import { Button, Form } from 'components';
-import _ from 'underscore';
+import React from 'react'
+import Select from 'react-select'
+import { Button, Form } from 'components'
+import _ from 'underscore'
 
 const STATES_AU = [
   { value: 'australian-capital-territory', label: 'Australian Capital Territory' },
@@ -10,7 +10,7 @@ const STATES_AU = [
   { value: 'south-australia', label: 'South Australia' },
   { value: 'tasmania', label: 'Tasmania' },
   { value: 'northern-territory', label: 'Northern Territory' }
-];
+]
 
 const STATES_US = [
   { value: 'AZ', label: 'Arizona' },
@@ -22,30 +22,30 @@ const STATES_US = [
   { value: 'MT', label: 'Montana' },
   { value: 'NY', label: 'New York' },
   { value: 'WA', label: 'Washington' }
-];
+]
 
 export default class States extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       options: STATES_AU,
       searchable: false,
       disabled: false,
       clearable: false
-    };
+    }
   }
 
   setFocus() {
     if (this.refs.stateSelect) {
-      this.refs.stateSelect.focus();
+      this.refs.stateSelect.focus()
     }
   }
 
   toggleState(stateKey) {
     this.setState({
       [`${stateKey}`]: !this.state[stateKey]
-    });
+    })
   }
 
   render() {
@@ -92,7 +92,7 @@ export default class States extends React.Component {
             inline
             checked={this.state.options === STATES_AU}
             onChange={() => {
-              this.setState({ options: STATES_AU, value: null });
+              this.setState({ options: STATES_AU, value: null })
             }}
           >
             Australia
@@ -102,7 +102,7 @@ export default class States extends React.Component {
             inline
             checked={this.state.options === STATES_US}
             onChange={() => {
-              this.setState({ options: STATES_US, value: null });
+              this.setState({ options: STATES_US, value: null })
             }}
             className="m-l-1"
           >
@@ -110,6 +110,6 @@ export default class States extends React.Component {
           </Form.Check>
         </div>
       </div>
-    );
+    )
   }
 }

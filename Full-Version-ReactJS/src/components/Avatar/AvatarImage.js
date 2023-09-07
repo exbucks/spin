@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import classNames from 'classnames'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import Avatar from './Avatar';
+import Avatar from './Avatar'
 
-import classes from './Avatar.scss';
+import classes from './Avatar.scss'
 
 class AvatarImage extends React.Component {
   static defaultProps = {
@@ -15,33 +15,33 @@ class AvatarImage extends React.Component {
     placeholder: <i className="fa fa-user"></i>,
     phColor: Colors.grayLight,
     phBackgroundColor: Colors.grayDark
-  };
+  }
 
   static propTypes = {
     src: PropTypes.string,
     placeholder: PropTypes.node,
     phColor: PropTypes.string,
     phBackgroundColor: PropTypes.string
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       imageLoaded: false,
       imageLoadFailed: false
-    };
+    }
   }
 
   render() {
-    const otherProps = _.omit(this.props, ['src', 'placeholder', 'phColor', 'phBackgroundColor']);
+    const otherProps = _.omit(this.props, ['src', 'placeholder', 'phColor', 'phBackgroundColor'])
 
     const phStyle = {
       color: this.props.phColor,
       background: this.props.phBackgroundColor
-    };
+    }
 
-    const phClass = classNames(classes.avatarPlaceholder, classes.avatarContent);
+    const phClass = classNames(classes.avatarPlaceholder, classes.avatarContent)
 
     return (
       <Avatar {...otherProps}>
@@ -59,8 +59,8 @@ class AvatarImage extends React.Component {
           </div>
         ) : null}
       </Avatar>
-    );
+    )
   }
 }
 
-export default AvatarImage;
+export default AvatarImage

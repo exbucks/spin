@@ -1,13 +1,13 @@
-import React from 'react';
-import _ from 'underscore';
-import { Row, Col } from 'components';
+import React from 'react'
+import _ from 'underscore'
+import { Row, Col } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import iconsData from 'consts/data/icons.json';
+import iconsData from 'consts/data/icons.json'
 
-import classes from './GlyphIcons.scss';
+import classes from './GlyphIcons.scss'
 // ------------------------------------
 // Main Container
 // ------------------------------------
@@ -15,7 +15,7 @@ class GlyphIconsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -39,8 +39,8 @@ class GlyphIconsContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(GlyphIconsContainer);
+export default connect()(GlyphIconsContainer)

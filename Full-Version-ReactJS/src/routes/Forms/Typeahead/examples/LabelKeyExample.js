@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typeahead } from 'react-bootstrap-typeahead';
+import React from 'react'
+import { Typeahead } from 'react-bootstrap-typeahead'
 
 class LabelKeyExample extends React.Component {
   render() {
@@ -16,8 +16,8 @@ class LabelKeyExample extends React.Component {
         ]}
         placeholder="Who's the coolest cat?"
       />
-    );
+    )
   }
 }
 
-export default LabelKeyExample;
+export default LabelKeyExample

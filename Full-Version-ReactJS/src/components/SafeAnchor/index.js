@@ -1,3 +1,3 @@
-import SafeAnchor from './SafeAnchor';
+import SafeAnchor from './SafeAnchor'
 
-export default SafeAnchor;
+export default SafeAnchor

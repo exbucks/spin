@@ -1,3 +1,3 @@
-import BreadcrumbsContainer from './Breadcrumbs';
+import BreadcrumbsContainer from './Breadcrumbs'
 
-export default BreadcrumbsContainer;
+export default BreadcrumbsContainer

@@ -1,3 +1,3 @@
-import StraightAnglePieChart from './StraightAnglePieChart';
+import StraightAnglePieChart from './StraightAnglePieChart'
 
-export default StraightAnglePieChart;
+export default StraightAnglePieChart

@@ -1,3 +1,3 @@
-import EmailDetailsContainer from './EmailDetailsContainer';
+import EmailDetailsContainer from './EmailDetailsContainer'
 
-export default EmailDetailsContainer;
+export default EmailDetailsContainer

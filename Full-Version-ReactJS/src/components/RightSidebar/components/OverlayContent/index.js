@@ -1,3 +1,3 @@
-import OverlayContent from './OverlayContent';
+import OverlayContent from './OverlayContent'
 
-export default OverlayContent;
+export default OverlayContent

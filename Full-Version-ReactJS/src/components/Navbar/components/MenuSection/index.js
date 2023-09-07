@@ -1,3 +1,3 @@
-import MenuSection from './MenuSection';
+import MenuSection from './MenuSection'
 
-export default MenuSection;
+export default MenuSection

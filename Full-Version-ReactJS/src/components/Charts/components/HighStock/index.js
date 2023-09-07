@@ -1,3 +1,3 @@
-import HighStock from './HighStock.js';
+import HighStock from './HighStock.js'
 
-export default HighStock;
+export default HighStock

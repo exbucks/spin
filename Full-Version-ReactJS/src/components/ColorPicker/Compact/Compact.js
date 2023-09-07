@@ -1,12 +1,12 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
+import * as color from 'react-color/lib/helpers/color'
 
-import { Raised } from 'react-color/lib/components/common';
-import { ColorWrap } from 'react-color/lib/components/common';
-import CompactColor from './CompactColor';
-import CompactFields from './CompactFields';
+import { Raised } from 'react-color/lib/components/common'
+import { ColorWrap } from 'react-color/lib/components/common'
+import CompactColor from './CompactColor'
+import CompactFields from './CompactFields'
 
 export const Compact = ({ onChange, onSwatchHover, colors, hex, rgb }) => {
   const styles = reactCSS({
@@ -27,7 +27,7 @@ export const Compact = ({ onChange, onSwatchHover, colors, hex, rgb }) => {
         clear: 'both'
       }
     }
-  });
+  })
 
   const handleChange = (data, e) => {
     if (data.hex) {
@@ -38,11 +38,11 @@ export const Compact = ({ onChange, onSwatchHover, colors, hex, rgb }) => {
             source: 'hex'
           },
           e
-        );
+        )
     } else {
-      onChange(data, e);
+      onChange(data, e)
     }
-  };
+  }
 
   return (
     <Raised style={styles.Compact}>
@@ -62,8 +62,8 @@ export const Compact = ({ onChange, onSwatchHover, colors, hex, rgb }) => {
         <CompactFields hex={hex} rgb={rgb} onChange={handleChange} />
       </div>
     </Raised>
-  );
-};
+  )
+}
 
 Compact.defaultProps = {
   colors: [
@@ -104,6 +104,6 @@ Compact.defaultProps = {
     '#653294',
     '#AB149E'
   ]
-};
+}
 
-export default ColorWrap(Compact);
+export default ColorWrap(Compact)

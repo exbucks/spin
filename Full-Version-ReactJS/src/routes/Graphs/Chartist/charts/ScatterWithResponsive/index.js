@@ -1,3 +1,3 @@
-import ScatterWithResponsive from './ScatterWithResponsive';
+import ScatterWithResponsive from './ScatterWithResponsive'
 
-export default ScatterWithResponsive;
+export default ScatterWithResponsive

@@ -1,3 +1,3 @@
-import SelectsContainer from './SelectsContainer';
+import SelectsContainer from './SelectsContainer'
 
-export default SelectsContainer;
+export default SelectsContainer

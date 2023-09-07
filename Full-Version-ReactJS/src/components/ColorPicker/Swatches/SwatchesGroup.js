@@ -1,8 +1,8 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
 
-import SwatchesColor from './SwatchesColor';
+import SwatchesColor from './SwatchesColor'
 
 export const SwatchesGroup = ({ onClick, onSwatchHover, group, active }) => {
   const styles = reactCSS({
@@ -14,7 +14,7 @@ export const SwatchesGroup = ({ onClick, onSwatchHover, group, active }) => {
         marginRight: '10px'
       }
     }
-  });
+  })
 
   return (
     <div style={styles.group}>
@@ -30,7 +30,7 @@ export const SwatchesGroup = ({ onClick, onSwatchHover, group, active }) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default SwatchesGroup;
+export default SwatchesGroup

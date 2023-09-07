@@ -1,20 +1,20 @@
-import React from 'react';
-import { Button, Form, InputGroup } from 'components';
+import React from 'react'
+import { Button, Form, InputGroup } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
-import options from './../exampleData';
+import { Typeahead } from 'react-bootstrap-typeahead'
+import options from './../exampleData'
 
 class FormSubmitExample extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       submitFormOnEnter: true
-    };
+    }
   }
 
   render() {
-    const { submitFormOnEnter } = this.state;
+    const { submitFormOnEnter } = this.state
 
     return (
       <form onSubmit={(e) => alert('Form submitted!')}>
@@ -36,8 +36,8 @@ class FormSubmitExample extends React.Component {
           Allow form submission
         </Form.Check>
       </form>
-    );
+    )
   }
 }
 
-export default FormSubmitExample;
+export default FormSubmitExample

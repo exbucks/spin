@@ -1,7 +1,7 @@
-import React from 'react';
-import reactCSS, { handleHover } from 'reactcss';
+import React from 'react'
+import reactCSS, { handleHover } from 'reactcss'
 
-import { Swatch } from 'react-color/lib/components/common';
+import { Swatch } from 'react-color/lib/components/common'
 
 export const CircleSwatch = ({
   color,
@@ -42,7 +42,7 @@ export const CircleSwatch = ({
       }
     },
     { hover, active }
-  );
+  )
 
   return (
     <div style={styles.swatch}>
@@ -54,12 +54,12 @@ export const CircleSwatch = ({
         focusStyle={{ boxShadow: `${styles.Swatch.boxShadow}, 0 0 5px ${color}` }}
       />
     </div>
-  );
-};
+  )
+}
 
 CircleSwatch.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
-};
+}
 
-export default handleHover(CircleSwatch);
+export default handleHover(CircleSwatch)

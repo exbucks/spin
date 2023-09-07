@@ -1,3 +1,3 @@
-import SettingsEdit from './SettingsEdit.js';
+import SettingsEdit from './SettingsEdit.js'
 
-export default SettingsEdit;
+export default SettingsEdit

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Label, Badge } from 'components';
+import React from 'react'
+import { Label, Badge } from 'components'
 
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
 
-import { getMenuEntries as getSkinMenuEntries } from './Skins';
-import { getMenuEntries as getSidebarsMenuEntries } from './Sidebars';
+import { getMenuEntries as getSkinMenuEntries } from './Skins'
+import { getMenuEntries as getSidebarsMenuEntries } from './Sidebars'
 
 const CONFIG = [
   {
@@ -562,67 +562,67 @@ const CONFIG = [
     icon: 'fa fa-html5 fa-lg',
     url: '//spin.webkom.co'
   }
-];
+]
 
 // Add keys to the sidebar definitions
 const assignKeys = (input, level = 0) =>
   _.map(input, (def) => {
-    const newObj = { key: uuidv4(), subMenuLevel: level };
+    const newObj = { key: uuidv4(), subMenuLevel: level }
     if (def.children) {
-      newObj.children = assignKeys(def.children, level + 1);
+      newObj.children = assignKeys(def.children, level + 1)
     }
-    return Object.assign({}, def, newObj);
-  });
+    return Object.assign({}, def, newObj)
+  })
 
 export function urlMatcher(node, url) {
   if (node.matcher && !!url.match(node.matcher)) {
-    return true;
+    return true
   }
 
-  return node.url === url;
+  return node.url === url
 }
 
 export function findActiveNodes(nodes, url) {
-  const activeNodes = [];
+  const activeNodes = []
 
   const nodeIterator = (nodes) => {
-    let found = false;
+    let found = false
 
     nodes.forEach((node) => {
       if (node.children && nodeIterator(node.children)) {
-        activeNodes.push(node);
-        found = true;
+        activeNodes.push(node)
+        found = true
       } else if (node.url && urlMatcher(node, url)) {
-        activeNodes.push(node);
-        found = true;
+        activeNodes.push(node)
+        found = true
       }
-    });
+    })
 
-    return found;
-  };
+    return found
+  }
 
-  nodeIterator(nodes);
+  nodeIterator(nodes)
 
-  return activeNodes;
+  return activeNodes
 }
 
 export function findSectionBySlug(nodes, slugName) {
   // Returns flatten sections
   const getSections = function* (nodesTree) {
     for (let node of nodesTree) {
-      yield node;
+      yield node
 
       if (node.children) {
         for (let section of getSections(node.children)) {
-          yield section;
+          yield section
         }
       }
     }
-  };
+  }
 
-  const sections = Array.from(getSections(nodes));
+  const sections = Array.from(getSections(nodes))
 
-  return _.findWhere(sections, { slug: slugName });
+  return _.findWhere(sections, { slug: slugName })
 }
 
-export default assignKeys(CONFIG);
+export default assignKeys(CONFIG)

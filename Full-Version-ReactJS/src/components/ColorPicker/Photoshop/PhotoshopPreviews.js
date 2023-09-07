@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const PhotoshopPreviews = ({ rgb, currentColor }) => {
   const styles = reactCSS({
@@ -26,7 +26,7 @@ export const PhotoshopPreviews = ({ rgb, currentColor }) => {
         textAlign: 'center'
       }
     }
-  });
+  })
 
   return (
     <div>
@@ -37,7 +37,7 @@ export const PhotoshopPreviews = ({ rgb, currentColor }) => {
       </div>
       <div style={styles.label}>current</div>
     </div>
-  );
-};
+  )
+}
 
-export default PhotoshopPreviews;
+export default PhotoshopPreviews

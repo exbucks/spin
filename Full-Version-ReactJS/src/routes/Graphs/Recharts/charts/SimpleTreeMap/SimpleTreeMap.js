@@ -1,9 +1,9 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, Treemap } = Charts.Recharts;
+const { ResponsiveContainer, Treemap } = Charts.Recharts
 
-import { dataTreeMap } from './../../data';
+import { dataTreeMap } from './../../data'
 
 const SimpleTreeMap = (props) => (
   <ResponsiveContainer height={300}>
@@ -15,6 +15,6 @@ const SimpleTreeMap = (props) => (
       fill="#50BEEA"
     />
   </ResponsiveContainer>
-);
+)
 
-export default SimpleTreeMap;
+export default SimpleTreeMap

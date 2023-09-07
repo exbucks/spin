@@ -1,3 +1,3 @@
-import FormsLayoutsContainer from './FormsLayoutsContainer';
+import FormsLayoutsContainer from './FormsLayoutsContainer'
 
-export default FormsLayoutsContainer;
+export default FormsLayoutsContainer

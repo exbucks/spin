@@ -1,5 +1,5 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 import {
   Row,
   Col,
@@ -9,16 +9,16 @@ import {
   Button,
   Dropdown,
   DropdownButton
-} from 'components';
+} from 'components'
 
-import { Chat as ChatExample } from 'routes/Apps/components';
-import treeRandomizer from 'modules/treeRandomizer';
+import { Chat as ChatExample } from 'routes/Apps/components'
+import treeRandomizer from 'modules/treeRandomizer'
 
-import chatData from 'consts/data/app-chat.json';
+import chatData from 'consts/data/app-chat.json'
 
-const messages = treeRandomizer(chatData);
+const messages = treeRandomizer(chatData)
 
-const chatName = `${faker.person.firstName()} ${faker.person.lastName()}`;
+const chatName = `${faker.person.firstName()} ${faker.person.lastName()}`
 
 const Chat = () => (
   <Panel
@@ -85,6 +85,6 @@ const Chat = () => (
   >
     <ChatExample messages={messages.Messages} />
   </Panel>
-);
+)
 
-export default Chat;
+export default Chat

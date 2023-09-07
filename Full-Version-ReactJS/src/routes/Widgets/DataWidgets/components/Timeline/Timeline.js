@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { Link } from 'react-router-dom'
 
-import { CollapsablePanel } from 'components';
+import { CollapsablePanel } from 'components'
 
 const Timeline = (props) => (
   <CollapsablePanel
@@ -21,16 +21,16 @@ const Timeline = (props) => (
   >
     {props.children}
   </CollapsablePanel>
-);
+)
 
 Timeline.propTypes = {
   children: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   onClose: PropTypes.func
-};
+}
 
 Timeline.defaultProps = {
   onClose: null
-};
+}
 
-export default Timeline;
+export default Timeline

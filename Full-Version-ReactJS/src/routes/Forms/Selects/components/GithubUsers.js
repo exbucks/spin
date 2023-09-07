@@ -1,58 +1,58 @@
-import React from 'react';
-import Select from 'react-select';
-import _ from 'underscore';
-import { Form } from 'components';
-import fetch from 'isomorphic-fetch';
+import React from 'react'
+import Select from 'react-select'
+import _ from 'underscore'
+import { Form } from 'components'
+import fetch from 'isomorphic-fetch'
 
 export default class GithubUsers extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       backspaceRemoves: true,
       multi: true,
       value: []
-    };
+    }
   }
 
   switchToMulti() {
     this.setState({
       multi: true,
       value: [this.state.value]
-    });
+    })
   }
 
   switchToSingle() {
     this.setState({
       multi: false,
       value: this.state.value ? this.state.value[0] : null
-    });
+    })
   }
 
   getUsers(input) {
     if (!input) {
-      return Promise.resolve({ options: [] });
+      return Promise.resolve({ options: [] })
     }
 
     return fetch(`https://api.github.com/search/users?q=${input}`)
       .then((response) => response.json())
       .then((json) => {
-        return { options: json.items };
-      });
+        return { options: json.items }
+      })
   }
 
   gotoUser(value, event) {
-    window.open(value.html_url);
+    window.open(value.html_url)
   }
 
   toggleState(stateKey) {
     this.setState({
       [`${stateKey}`]: !this.state[stateKey]
-    });
+    })
   }
 
   render() {
-    const AsyncComponent = this.state.creatable ? Select.AsyncCreatable : Select.Async;
+    const AsyncComponent = this.state.creatable ? Select.AsyncCreatable : Select.Async
     return (
       <div>
         <AsyncComponent
@@ -87,6 +87,6 @@ export default class GithubUsers extends React.Component {
           </Form.Check>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,8 +1,8 @@
-import SidebarAddOns from './SidebarAddOns';
-import LayoutOptions from './LayoutOptions';
-import SearchBox, { SearchBoxMobile } from './SearchBox';
-import { MessagesDropdown, NotificationsDropdown } from './Dropdowns';
-import RightSidebarTabs from './RightSidebarTabs';
+import SidebarAddOns from './SidebarAddOns'
+import LayoutOptions from './LayoutOptions'
+import SearchBox, { SearchBoxMobile } from './SearchBox'
+import { MessagesDropdown, NotificationsDropdown } from './Dropdowns'
+import RightSidebarTabs from './RightSidebarTabs'
 
 export {
   SidebarAddOns,
@@ -12,4 +12,4 @@ export {
   MessagesDropdown,
   NotificationsDropdown,
   RightSidebarTabs
-};
+}

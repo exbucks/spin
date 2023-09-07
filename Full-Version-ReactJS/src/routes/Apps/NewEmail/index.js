@@ -1,3 +1,3 @@
-import NewEmailContainer from './NewEmailContainer';
+import NewEmailContainer from './NewEmailContainer'
 
-export default NewEmailContainer;
+export default NewEmailContainer

@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import _ from 'underscore'
 
-import { Colors } from './../../consts';
+import { Colors } from './../../consts'
 
-import classes from './Image.scss';
+import classes from './Image.scss'
 
 const getDimension = (dimension) => {
-  if (!dimension) return '100%';
+  if (!dimension) return '100%'
 
-  if (typeof dimension === 'string') return dimension;
+  if (typeof dimension === 'string') return dimension
 
-  return `${parseInt(dimension)}px`;
-};
+  return `${parseInt(dimension)}px`
+}
 
 class Image extends React.Component {
   static propTypes = {
@@ -27,7 +27,7 @@ class Image extends React.Component {
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     block: PropTypes.bool
-  };
+  }
 
   static defaultProps = {
     phIcon: null,
@@ -39,14 +39,14 @@ class Image extends React.Component {
     width: null,
     height: '100px',
     block: false
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       imageLoaded: false
-    };
+    }
   }
 
   _renderPlaceholder() {
@@ -56,7 +56,7 @@ class Image extends React.Component {
           color: this.props.phForegroundColor
         },
         className: classNames(this.props.phIcon.props.className, classes.icon)
-      });
+      })
 
       return (
         <div
@@ -69,7 +69,7 @@ class Image extends React.Component {
         >
           {icon}
         </div>
-      );
+      )
     } else {
       return (
         <img
@@ -84,7 +84,7 @@ class Image extends React.Component {
             bg: this.props.phBackgroundColor.replace('#', '')
           }}
         />
-      );
+      )
     }
   }
 
@@ -92,9 +92,9 @@ class Image extends React.Component {
     const wrapClass = classNames(classes.imageWrap, this.props.className, {
       'img-rounded': this.props.shape === 'rounded',
       'img-circle': this.props.shape === 'circle'
-    });
+    })
 
-    const otherProps = _.omit(this.props, _.keys(Image.propTypes));
+    const otherProps = _.omit(this.props, _.keys(Image.propTypes))
 
     return (
       <div
@@ -117,12 +117,12 @@ class Image extends React.Component {
           alt={this.props.alt}
           className={classes.image}
           onLoad={() => {
-            this.setState({ imageLoaded: true });
+            this.setState({ imageLoaded: true })
           }}
         />
       </div>
-    );
+    )
   }
 }
 
-export default Image;
+export default Image

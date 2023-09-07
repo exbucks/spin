@@ -1,3 +1,3 @@
-import PaddingAngleHalf from './PaddingAngleHalf';
+import PaddingAngleHalf from './PaddingAngleHalf'
 
-export default PaddingAngleHalf;
+export default PaddingAngleHalf

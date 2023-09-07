@@ -1,3 +1,3 @@
-import SatisfactionResults from './SatisfactionResults';
+import SatisfactionResults from './SatisfactionResults'
 
-export default SatisfactionResults;
+export default SatisfactionResults

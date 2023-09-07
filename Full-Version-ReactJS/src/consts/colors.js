@@ -31,6 +31,6 @@ const colors = {
   brandCaper: '#AECA89',
   brandChelseaCucumber: '#88B152',
   brandGreenDarker: '#2b2f26'
-};
+}
 
-export default colors;
+export default colors

@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Badge as ReactBootstrapBadge } from 'react-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { Badge as ReactBootstrapBadge } from 'react-bootstrap'
 
 /*
     Extended Badge from ReactBootstrap. Adds outline option, color changing by
     bsStyle and withIcon which adjusts the badge position next to an icon element
 */
 const Badge = (props) => {
-  const { className, outline, bsStyle, withIcon, children, ...otherProps } = props;
+  const { className, outline, bsStyle, withIcon, children, ...otherProps } = props
 
   const badgeClass = classNames(className, {
     'badge-outline': outline,
@@ -20,26 +20,26 @@ const Badge = (props) => {
     'badge-danger': bsStyle === 'danger',
 
     'badge-with-icon': props.withIcon
-  });
+  })
 
   return (
     <ReactBootstrapBadge {...otherProps} className={badgeClass}>
       {props.children}
     </ReactBootstrapBadge>
-  );
-};
+  )
+}
 
 Badge.propTypes = {
   outline: PropTypes.bool,
   bsStyle: PropTypes.string,
   children: PropTypes.node.isRequired,
   withIcon: PropTypes.bool
-};
+}
 
 Badge.defaultProps = {
   outline: false,
   bsStyle: '',
   withIcon: false
-};
+}
 
-export default Badge;
+export default Badge

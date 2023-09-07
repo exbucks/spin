@@ -1,19 +1,19 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Row, Col, Label, Badge, AvatarImage, AvatarText, AvatarIcon } from 'components';
+import { Row, Col, Label, Badge, AvatarImage, AvatarText, AvatarIcon } from 'components'
 
-import { Colors } from 'consts';
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { Colors } from 'consts'
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './Avatars.scss';
+import classes from './Avatars.scss'
 
 class AvatarsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -305,8 +305,8 @@ class AvatarsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(AvatarsContainer);
+export default connect()(AvatarsContainer)

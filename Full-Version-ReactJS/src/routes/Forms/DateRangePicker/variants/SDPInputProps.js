@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { SingleDatePickerWrapper } from './../components';
+import { SingleDatePickerWrapper } from './../components'
 
 const sdpInputPropsVariants = [
   {
@@ -42,6 +42,6 @@ const sdpInputPropsVariants = [
       />
     )
   }
-];
+]
 
-export default sdpInputPropsVariants;
+export default sdpInputPropsVariants

@@ -1,7 +1,7 @@
-import { RoutedComponent, connect } from './../routedComponent';
-import React from 'react';
-import ReactInterval from 'react-interval';
-import _ from 'underscore';
+import { RoutedComponent, connect } from './../routedComponent'
+import React from 'react'
+import ReactInterval from 'react-interval'
+import _ from 'underscore'
 
 import {
   Row,
@@ -15,23 +15,23 @@ import {
   Charts,
   SlimProgressBar,
   Divider
-} from 'components';
+} from 'components'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-import { Colors } from 'consts';
-import classes from './Monitor.scss';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
+import { Colors } from 'consts'
+import classes from './Monitor.scss'
 
-import sectionRender from 'modules/sectionRender';
-import treeRandomizer from 'modules/treeRandomizer';
+import sectionRender from 'modules/sectionRender'
+import treeRandomizer from 'modules/treeRandomizer'
 
-import monitorData from 'consts/data/monitor.json';
+import monitorData from 'consts/data/monitor.json'
 
 // ------------------------------------
 // Helper functions
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
-const calcPercentage = (val, max) => Math.ceil((val / max) * 100);
+const calcPercentage = (val, max) => Math.ceil((val / max) * 100)
 
 // ------------------------------------
 // Sub Elements
@@ -53,7 +53,7 @@ const renderCpuPanel = (cpuData) => (
       </Row>
     ))}
   </ListGroupItem>
-);
+)
 
 const renderMemoryPanel = (memoryData) => (
   <ListGroupItem className={classes.panelGroupItem}>
@@ -103,7 +103,7 @@ const renderMemoryPanel = (memoryData) => (
       )}
     </Row>
   </ListGroupItem>
-);
+)
 
 const renderOsPanel = (buildName) => (
   <ListGroupItem className={classes.panelGroupItem}>
@@ -112,7 +112,7 @@ const renderOsPanel = (buildName) => (
       {buildName} <i className="fa fa-fw fa-info-circle"></i>
     </p>
   </ListGroupItem>
-);
+)
 
 const renderNetworkPanel = (networkData) => (
   <ListGroupItem className={classes.networkGroupItem}>
@@ -124,7 +124,7 @@ const renderNetworkPanel = (networkData) => (
     </p>
     <Charts.SparklineLine data={networkData.Traffic} width={329} height={60} />
   </ListGroupItem>
-);
+)
 
 const renderTemperaturePanel = (tempData) => (
   <ListGroupItem className={classes.tempGroupItem} key={tempData._id}>
@@ -153,7 +153,7 @@ const renderTemperaturePanel = (tempData) => (
     </p>
     <Charts.SparklineLine data={tempData.History} width={329} height={60} />
   </ListGroupItem>
-);
+)
 
 const renderVolumesPanel = (volumesData) => {
   const volumeColors = [
@@ -161,7 +161,7 @@ const renderVolumesPanel = (volumesData) => {
     { color: Colors.brandSuccess, colorName: 'BrandSuccess' },
     { color: Colors.brandWarning, colorName: 'BrandWarning' },
     { color: Colors.brandDanger, colorName: 'BrandDanger' }
-  ];
+  ]
 
   return (
     <Row>
@@ -212,8 +212,8 @@ const renderVolumesPanel = (volumesData) => {
         </Col>
       ))}
     </Row>
-  );
-};
+  )
+}
 
 const renderDrivesList = (drivesData) => (
   <Table className={classes.drivesTable} responsive>
@@ -260,34 +260,34 @@ const renderDrivesList = (drivesData) => (
       ))}
     </tbody>
   </Table>
-);
+)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class MonitorContainer extends RoutedComponent {
   constructor() {
-    super();
+    super()
 
-    this.state = Object.assign({}, this.state, getData(monitorData));
+    this.state = Object.assign({}, this.state, getData(monitorData))
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   simulateNetworkTraffic() {
-    const newValue = Math.ceil(Math.random() * 10);
-    const prevTraffic = _.last(this.state.Network.Traffic, this.state.Network.Traffic.length - 1);
-    const newTraffic = [...prevTraffic, newValue];
+    const newValue = Math.ceil(Math.random() * 10)
+    const prevTraffic = _.last(this.state.Network.Traffic, this.state.Network.Traffic.length - 1)
+    const newTraffic = [...prevTraffic, newValue]
     const newState = {
       Network: Object.assign({}, this.state.Network, {
         Traffic: newTraffic
       })
-    };
-    this.setState(Object.assign({}, this.state, newState));
+    }
+    this.setState(Object.assign({}, this.state, newState))
   }
 
   render() {
@@ -333,8 +333,8 @@ class MonitorContainer extends RoutedComponent {
           {sectionRender(renderDrivesList, this.state.Drives)}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(MonitorContainer);
+export default connect()(MonitorContainer)

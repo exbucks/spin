@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const getJson = (cb) => {
   require.ensure([], (require) => {
-    const data = require('consts/data/highstock/data-large.json');
-    cb(data);
-  });
-};
+    const data = require('consts/data/highstock/data-large.json')
+    cb(data)
+  })
+}
 
 const getConfig = (data) => {
   // Create a timer
-  let start = +new Date();
+  let start = +new Date()
 
   // Create the chart
   const config = {
@@ -21,7 +21,7 @@ const getConfig = (data) => {
           if (!window.isComparing) {
             this.setTitle(null, {
               text: ''
-            });
+            })
           }
         }
       },
@@ -97,15 +97,15 @@ const getConfig = (data) => {
         }
       }
     ]
-  };
+  }
 
-  return config;
-};
+  return config
+}
 
 const PointsWithDataGrouping = () => (
   <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
     <Charts.HighStock />
   </Charts.AsyncChart>
-);
+)
 
-export default PointsWithDataGrouping;
+export default PointsWithDataGrouping

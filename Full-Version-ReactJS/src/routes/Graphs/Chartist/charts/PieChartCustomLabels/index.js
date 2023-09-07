@@ -1,3 +1,3 @@
-import PieChartCustomLabels from './PieChartCustomLabels';
+import PieChartCustomLabels from './PieChartCustomLabels'
 
-export default PieChartCustomLabels;
+export default PieChartCustomLabels

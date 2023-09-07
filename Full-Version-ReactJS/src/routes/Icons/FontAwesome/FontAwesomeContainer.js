@@ -1,12 +1,12 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import { Row, Col } from 'components';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import { Row, Col } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import iconsData from 'consts/data/icons.json';
+import iconsData from 'consts/data/icons.json'
 // ------------------------------------
 // Main Container
 // ------------------------------------
@@ -14,7 +14,7 @@ class FontAwesomeContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -44,8 +44,8 @@ class FontAwesomeContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(FontAwesomeContainer);
+export default connect()(FontAwesomeContainer)

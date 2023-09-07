@@ -1,7 +1,7 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
-import { DayPickerRangeControllerWrapper } from './../components';
+import { DayPickerRangeControllerWrapper } from './../components'
 
 const TestPrevIcon = () => (
   <span
@@ -14,7 +14,7 @@ const TestPrevIcon = () => (
   >
     Prev
   </span>
-);
+)
 
 const TestNextIcon = () => (
   <span
@@ -27,7 +27,7 @@ const TestNextIcon = () => (
   >
     Next
   </span>
-);
+)
 
 const datesList = [
   moment(),
@@ -38,11 +38,11 @@ const datesList = [
   moment().add(11, 'days'),
   moment().add(12, 'days'),
   moment().add(13, 'days')
-];
+]
 
 const action = (functionName) => {
-  console.log(`DayPickerRangeController: triggered action - ${functionName}`);
-};
+  console.log(`DayPickerRangeController: triggered action - ${functionName}`)
+}
 
 const sdpDayPropsVariants = [
   {
@@ -72,7 +72,7 @@ const sdpDayPropsVariants = [
     key: 'dprc-non-english',
     menuTitle: 'non-english locale',
     component: () => {
-      moment.locale('zh-cn');
+      moment.locale('zh-cn')
       return (
         <DayPickerRangeControllerWrapper
           onOutsideClick={action('DayPickerRangeController::onOutsideClick')}
@@ -80,7 +80,7 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           monthFormat="YYYY[年]MMMM"
         />
-      );
+      )
     }
   },
   {
@@ -94,7 +94,7 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           numberOfMonths={1}
         />
-      );
+      )
     }
   },
   /*
@@ -124,7 +124,7 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           orientation={VERTICAL_ORIENTATION}
         />
-      );
+      )
     }
   },
   {
@@ -139,7 +139,7 @@ const sdpDayPropsVariants = [
           navPrev={<TestPrevIcon />}
           navNext={<TestNextIcon />}
         />
-      );
+      )
     }
   },
   {
@@ -154,7 +154,7 @@ const sdpDayPropsVariants = [
           numberOfMonths={1}
           enableOutsideDays
         />
-      );
+      )
     }
   },
   {
@@ -168,7 +168,7 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           initialVisibleMonth={() => moment('04 2017', 'MM YYYY')}
         />
-      );
+      )
     }
   },
   {
@@ -184,7 +184,7 @@ const sdpDayPropsVariants = [
           initialStartDate={moment().add(3, 'days')}
           autoFocusEndDate
         />
-      );
+      )
     }
   },
   {
@@ -200,7 +200,7 @@ const sdpDayPropsVariants = [
           initialStartDate={moment().add(3, 'days')}
           autoFocusEndDate
         />
-      );
+      )
     }
   },
   {
@@ -214,7 +214,7 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           isOutsideRange={() => false}
         />
-      );
+      )
     }
   },
   {
@@ -227,7 +227,7 @@ const sdpDayPropsVariants = [
           onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
         />
-      );
+      )
     }
   },
   {
@@ -240,7 +240,7 @@ const sdpDayPropsVariants = [
           onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
         />
-      );
+      )
     }
   },
   {
@@ -253,7 +253,7 @@ const sdpDayPropsVariants = [
           onPrevMonthClick={action('DayPickerRangeController::onPrevMonthClick')}
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
         />
-      );
+      )
     }
   },
   {
@@ -267,7 +267,7 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           isDayBlocked={(day) => moment.weekdays(day.weekday()) === 'Friday'}
         />
-      );
+      )
     }
   },
   {
@@ -281,9 +281,9 @@ const sdpDayPropsVariants = [
           onNextMonthClick={action('DayPickerRangeController::onNextMonthClick')}
           renderDay={(day) => day.format('ddd')}
         />
-      );
+      )
     }
   }
-];
+]
 
-export default sdpDayPropsVariants;
+export default sdpDayPropsVariants

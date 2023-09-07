@@ -1,3 +1,3 @@
-import TypeaheadContainer from './TypeaheadContainer';
+import TypeaheadContainer from './TypeaheadContainer'
 
-export default TypeaheadContainer;
+export default TypeaheadContainer

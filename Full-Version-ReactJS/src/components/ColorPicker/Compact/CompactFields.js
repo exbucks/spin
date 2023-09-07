@@ -1,7 +1,7 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { EditableInput } from 'react-color/lib/components/common';
+import { EditableInput } from 'react-color/lib/components/common'
 
 export const CompactFields = ({ hex, rgb, onChange }) => {
   const styles = reactCSS({
@@ -63,7 +63,7 @@ export const CompactFields = ({ hex, rgb, onChange }) => {
         color: '#585858'
       }
     }
-  });
+  })
 
   const handleChange = (data, e) => {
     if (data.r || data.g || data.b) {
@@ -75,7 +75,7 @@ export const CompactFields = ({ hex, rgb, onChange }) => {
           source: 'rgb'
         },
         e
-      );
+      )
     } else {
       onChange(
         {
@@ -83,9 +83,9 @@ export const CompactFields = ({ hex, rgb, onChange }) => {
           source: 'hex'
         },
         e
-      );
+      )
     }
-  };
+  }
 
   return (
     <div style={styles.fields} className="flexbox-fix">
@@ -115,7 +115,7 @@ export const CompactFields = ({ hex, rgb, onChange }) => {
         onChange={handleChange}
       />
     </div>
-  );
-};
+  )
+}
 
-export default CompactFields;
+export default CompactFields

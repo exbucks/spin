@@ -1,3 +1,3 @@
-import LineWithArea from './LineWithArea';
+import LineWithArea from './LineWithArea'
 
-export default LineWithArea;
+export default LineWithArea

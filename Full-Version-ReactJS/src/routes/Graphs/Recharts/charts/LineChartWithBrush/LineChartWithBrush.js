@@ -1,5 +1,5 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const {
   ResponsiveContainer,
@@ -11,9 +11,9 @@ const {
   YAxis,
   XAxis,
   Brush
-} = Charts.Recharts;
+} = Charts.Recharts
 
-import { data } from './../../data';
+import { data } from './../../data'
 
 const LineChartWithBrush = (props) => (
   <ResponsiveContainer height={300}>
@@ -28,6 +28,6 @@ const LineChartWithBrush = (props) => (
       <Brush />
     </LineChart>
   </ResponsiveContainer>
-);
+)
 
-export default LineChartWithBrush;
+export default LineChartWithBrush

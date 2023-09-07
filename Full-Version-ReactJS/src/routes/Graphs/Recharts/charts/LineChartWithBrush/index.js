@@ -1,3 +1,3 @@
-import LineChartWithBrush from './LineChartWithBrush';
+import LineChartWithBrush from './LineChartWithBrush'
 
-export default LineChartWithBrush;
+export default LineChartWithBrush

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Panel, Charts, SlimProgressBar, CollapsablePanel } from 'components';
+import { Row, Col, Panel, Charts, SlimProgressBar, CollapsablePanel } from 'components'
 
 const chartConfig = {
   chart: {
@@ -51,7 +51,7 @@ const chartConfig = {
   },
   tooltip: {
     formatter: function () {
-      return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y;
+      return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y
     }
   },
   plotOptions: {
@@ -85,7 +85,7 @@ const chartConfig = {
       }
     }
   ]
-};
+}
 
 const valueStyle = {
   fontSize: '3.5rem',
@@ -93,7 +93,7 @@ const valueStyle = {
   lineHeight: 1.6,
   margin: 0,
   color: '#fff'
-};
+}
 
 const Results = (panelProps) => (
   <CollapsablePanel
@@ -111,6 +111,6 @@ const Results = (panelProps) => (
     <p>981 Companies</p>
     <Charts.HighchartBasicLine config={chartConfig} />
   </CollapsablePanel>
-);
+)
 
-export default Results;
+export default Results

@@ -1,3 +1,3 @@
-import GalleryThumbnail from './GalleryThumbnail';
+import GalleryThumbnail from './GalleryThumbnail'
 
-export default GalleryThumbnail;
+export default GalleryThumbnail

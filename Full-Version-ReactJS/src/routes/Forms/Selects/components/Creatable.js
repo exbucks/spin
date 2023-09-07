@@ -1,11 +1,11 @@
-import React from 'react';
-import Select from 'react-select';
-import _ from 'underscore';
-import { Form } from 'components';
+import React from 'react'
+import Select from 'react-select'
+import _ from 'underscore'
+import { Form } from 'components'
 
 export default class Creatable extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       multi: true,
@@ -16,19 +16,19 @@ export default class Creatable extends React.Component {
         { value: 'B', label: 'Blue' }
       ],
       value: undefined
-    };
+    }
   }
 
   handleOnChange(value) {
     if (this.state.multi) {
-      this.setState({ multiValue: value });
+      this.setState({ multiValue: value })
     } else {
-      this.setState({ value });
+      this.setState({ value })
     }
   }
 
   render() {
-    const { multi, multiValue, value } = this.state;
+    const { multi, multiValue, value } = this.state
 
     return (
       <div>
@@ -54,6 +54,6 @@ export default class Creatable extends React.Component {
           </Form.Check>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,17 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import {
-  HEADER_STYLE_SIMPLE,
-  HEADER_STYLE_BREADCRUMBS
-} from 'layouts/DefaultLayout/modules/layout';
-import { LinkContainer } from 'react-router-bootstrap';
-import { Row, Col, Breadcrumb } from 'react-bootstrap';
-import { Grid } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { HEADER_STYLE_SIMPLE, HEADER_STYLE_BREADCRUMBS } from 'layouts/DefaultLayout/modules/layout'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Row, Col, Breadcrumb } from 'react-bootstrap'
+import { Grid } from 'components'
 
-import ROUTES_STRUCTURE, { findActiveNodes } from 'routes/routesStructure';
+import ROUTES_STRUCTURE, { findActiveNodes } from 'routes/routesStructure'
 
-import classes from './Header.scss';
+import classes from './Header.scss'
 
 const headers = {
   [HEADER_STYLE_SIMPLE]: (title, path, containerFluid, children) => (
@@ -70,24 +67,24 @@ const headers = {
       </Grid>
     </div>
   )
-};
+}
 
 const Header = (props) => {
-  const path = findActiveNodes(ROUTES_STRUCTURE, props.currentUrl);
-  const { title } = path && path.length > 0 ? path[0] : '';
+  const path = findActiveNodes(ROUTES_STRUCTURE, props.currentUrl)
+  const { title } = path && path.length > 0 ? path[0] : ''
 
-  return headers[props.style](title, path, props.fluid, props.children);
-};
+  return headers[props.style](title, path, props.fluid, props.children)
+}
 
 Header.propTypes = {
   currentUrl: PropTypes.string.isRequired,
   style: PropTypes.string.isRequired,
   fluid: PropTypes.bool.isRequired,
   children: PropTypes.node
-};
+}
 
 Header.defaultProps = {
   children: null
-};
+}
 
-export default Header;
+export default Header

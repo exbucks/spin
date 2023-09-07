@@ -1,19 +1,19 @@
-import React from 'react';
-import { Row, Col, Panel, Button } from 'react-bootstrap';
+import React from 'react'
+import { Row, Col, Panel, Button } from 'react-bootstrap'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { HorizontalTimeline, VerticalTimeline, VerticalInnerDateTimeline } from './components';
+import { HorizontalTimeline, VerticalTimeline, VerticalInnerDateTimeline } from './components'
 
-import classes from './Timeline.scss';
+import classes from './Timeline.scss'
 
 class TimelineContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -52,8 +52,8 @@ class TimelineContainer extends RoutedComponent {
           <HorizontalTimeline />
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(TimelineContainer);
+export default connect()(TimelineContainer)

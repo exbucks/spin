@@ -1,3 +1,3 @@
-import IntradayArea from './IntradayArea';
+import IntradayArea from './IntradayArea'
 
-export default IntradayArea;
+export default IntradayArea

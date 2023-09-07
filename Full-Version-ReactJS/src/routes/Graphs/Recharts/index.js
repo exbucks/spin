@@ -1,3 +1,3 @@
-import RechartsContainer from './RechartsContainer';
+import RechartsContainer from './RechartsContainer'
 
-export default RechartsContainer;
+export default RechartsContainer

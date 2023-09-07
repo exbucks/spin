@@ -1,30 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Row, Col, GalleryThumbnail, Divider } from 'components';
+import { Row, Col, GalleryThumbnail, Divider } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
 import {
   CONTENT_VIEW_STATIC,
   CONTENT_VIEW_FLUID,
   CONTENT_VIEW_BOXED
-} from 'layouts/DefaultLayout/modules/layout';
+} from 'layouts/DefaultLayout/modules/layout'
 
 // Thumbnail Images
-import thumbDefaultPage from 'static/docs/spin-layout-options-sidebar-default.png';
-import thumbDefaultFixed from 'static/docs/spin-layout-options-sidebar-fixed.png';
-import thumbWithoutNavbar from 'static/docs/spin-layout-options-without-navbar.png';
-import thumbWithoutFooter from 'static/docs/spin-layout-options-without-footer.png';
-import thumbFooterFixed from 'static/docs/spin-layout-options-with-footer-fixed.png';
-import thumbOnlyNavbar from 'static/docs/spin-layout-options-navbar-only.png';
-import thumbNavbarFixed from 'static/docs/spin-layout-options-navbar-only.png';
-import thumbNavbarContainer from 'static/docs/spin-layout-options-navbar-container.png';
-import thumbFullWidth from 'static/docs/spin-layout-options-fullwidth.png';
-import thumbEmptyPage from 'static/docs/spin-layout-options-empty-page.png';
-import thumbBoxedLayout from 'static/docs/spin-layout-options-boxed.png';
+import thumbDefaultPage from 'static/docs/spin-layout-options-sidebar-default.png'
+import thumbDefaultFixed from 'static/docs/spin-layout-options-sidebar-fixed.png'
+import thumbWithoutNavbar from 'static/docs/spin-layout-options-without-navbar.png'
+import thumbWithoutFooter from 'static/docs/spin-layout-options-without-footer.png'
+import thumbFooterFixed from 'static/docs/spin-layout-options-with-footer-fixed.png'
+import thumbOnlyNavbar from 'static/docs/spin-layout-options-navbar-only.png'
+import thumbNavbarFixed from 'static/docs/spin-layout-options-navbar-only.png'
+import thumbNavbarContainer from 'static/docs/spin-layout-options-navbar-container.png'
+import thumbFullWidth from 'static/docs/spin-layout-options-fullwidth.png'
+import thumbEmptyPage from 'static/docs/spin-layout-options-empty-page.png'
+import thumbBoxedLayout from 'static/docs/spin-layout-options-boxed.png'
 
-import classes from './Layouts.scss';
+import classes from './Layouts.scss'
 
 const layoutsDefs = {
   default: {
@@ -72,36 +72,36 @@ const layoutsDefs = {
     navbarEnabled: false,
     headerEnabled: false
   }
-};
+}
 
 class LayoutsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
   }
 
   getLayoutOptions() {
-    const { layoutType } = this.props.routeParams;
+    const { layoutType } = this.props.routeParams
 
     return (
       layoutsDefs[layoutType] || {
         contentView: CONTENT_VIEW_STATIC
       }
-    );
+    )
   }
 
   componentDidUpdate(prevProps) {
-    const { layoutType } = this.props.routeParams;
-    const { setCurrentPageSettings } = this.props;
+    const { layoutType } = this.props.routeParams
+    const { setCurrentPageSettings } = this.props
 
     const targetDef = layoutsDefs[layoutType] || {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
 
-    setCurrentPageSettings(targetDef);
+    setCurrentPageSettings(targetDef)
   }
 
   render() {
-    const { layoutType } = this.props.routeParams;
+    const { layoutType } = this.props.routeParams
 
     if (layoutType === 'empty-page') {
       return (
@@ -113,7 +113,7 @@ class LayoutsContainer extends RoutedComponent {
               href="javascript:;"
               onClick={() => {
                 if (!this.props.history.goBack()) {
-                  this.props.history.push('/start/projects');
+                  this.props.history.push('/start/projects')
                 }
               }}
             >
@@ -121,7 +121,7 @@ class LayoutsContainer extends RoutedComponent {
             </a>
           </Col>
         </Row>
-      );
+      )
     }
 
     return (
@@ -252,8 +252,8 @@ class LayoutsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(LayoutsContainer);
+export default connect()(LayoutsContainer)

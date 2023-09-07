@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { Nav, NavItem } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { Nav, NavItem } from 'components'
 
 const FavoriteApps = (props) => (
   <div {..._.omit(props, 'appSelected')}>
@@ -16,10 +16,10 @@ const FavoriteApps = (props) => (
       </NavItem>
     </Nav>
   </div>
-);
+)
 
 FavoriteApps.propTypes = {
   appSelected: PropTypes.func
-};
+}
 
-export default FavoriteApps;
+export default FavoriteApps

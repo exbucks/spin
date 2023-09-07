@@ -1,23 +1,23 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const { ResponsiveContainer, LineChart, Line, CartesianGrid, Tooltip, Legend, YAxis, XAxis } =
-  Charts.Recharts;
+  Charts.Recharts
 
-import { data } from './../../data';
+import { data } from './../../data'
 
 const CustomizedLabel = (props) => {
-  const { x, y, stroke, value } = props;
+  const { x, y, stroke, value } = props
 
   return (
     <text x={x} y={y} dy={-4} fill={stroke} fontSize={10} textAnchor="middle">
       {value}
     </text>
-  );
-};
+  )
+}
 
 const CustomizedAxisTick = (props) => {
-  const { x, y, stroke, payload } = props;
+  const { x, y, stroke, payload } = props
 
   return (
     <g transform={`translate(${x},${y})`}>
@@ -25,8 +25,8 @@ const CustomizedAxisTick = (props) => {
         {payload.value}
       </text>
     </g>
-  );
-};
+  )
+}
 
 const CustomizedLabelLineChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -51,6 +51,6 @@ const CustomizedLabelLineChart = (props) => (
       <Line type="monotone" dataKey="uv" stroke="#3BBDA8" dot={{ fill: '#3BBDA8' }} />
     </LineChart>
   </ResponsiveContainer>
-);
+)
 
-export default CustomizedLabelLineChart;
+export default CustomizedLabelLineChart

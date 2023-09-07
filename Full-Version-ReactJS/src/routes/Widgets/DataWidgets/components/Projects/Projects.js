@@ -1,13 +1,13 @@
-import React from 'react';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
-import { ListGroup, ListGroupItem, CollapsablePanel, SlimProgressBar, Label } from 'components';
+import { ListGroup, ListGroupItem, CollapsablePanel, SlimProgressBar, Label } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Projects.scss';
+import classes from './Projects.scss'
 
 const projectsList = [
   {
@@ -54,7 +54,7 @@ const projectsList = [
     myTasks: 0,
     daysDue: 346
   }
-];
+]
 
 const Projects = (panelProps) => (
   <CollapsablePanel
@@ -98,6 +98,6 @@ const Projects = (panelProps) => (
       ))}
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Projects;
+export default Projects

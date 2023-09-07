@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
 import {
   Nav,
   NavItem,
@@ -13,11 +13,11 @@ import {
   Panel,
   AvatarImage,
   RightSidebar
-} from 'components';
+} from 'components'
 
-import { statusToColor } from 'modules/helpers';
+import { statusToColor } from 'modules/helpers'
 
-import classes from './RightSidebar.scss';
+import classes from './RightSidebar.scss'
 
 const renderUsers = (userGroups, cbUserClicked) => (
   <div>
@@ -57,20 +57,20 @@ const renderUsers = (userGroups, cbUserClicked) => (
       ))
     )}
   </div>
-);
+)
 
 class ThirdRightSidebarTab extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       chatPanelOpen: false
-    };
+    }
   }
 
   static propTypes = {
     data: PropTypes.object.isRequired
-  };
+  }
 
   renderChat(chat) {
     return (
@@ -156,15 +156,15 @@ class ThirdRightSidebarTab extends React.Component {
           )
         )}
       </Panel>
-    );
+    )
   }
 
   toggleChat(state = true) {
-    this.setState(Object.assign({}, this.state, { chatPanelOpen: state }));
+    this.setState(Object.assign({}, this.state, { chatPanelOpen: state }))
   }
 
   render() {
-    const users = _.groupBy(this.props.data.List, (val) => val.Status);
+    const users = _.groupBy(this.props.data.List, (val) => val.Status)
 
     return (
       <div>
@@ -186,8 +186,8 @@ class ThirdRightSidebarTab extends React.Component {
           </RightSidebar.OverlayContent>
         </RightSidebar.OverlayContentParent>
       </div>
-    );
+    )
   }
 }
 
-export default ThirdRightSidebarTab;
+export default ThirdRightSidebarTab

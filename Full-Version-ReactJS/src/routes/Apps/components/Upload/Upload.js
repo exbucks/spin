@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { Panel } from 'components';
+import { Panel } from 'components'
 
-import classes from './Upload.scss';
+import classes from './Upload.scss'
 
 const Upload = () => (
   <Panel className={`text-center ${classes.uploadPanel}`}>
@@ -18,6 +18,6 @@ const Upload = () => (
       300px.
     </p>
   </Panel>
-);
+)
 
-export default Upload;
+export default Upload

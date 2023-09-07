@@ -1,9 +1,9 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
 
-import { ColorWrap } from 'react-color/lib/components/common';
-import GithubSwatch from './GithubSwatch';
+import { ColorWrap } from 'react-color/lib/components/common'
+import GithubSwatch from './GithubSwatch'
 
 export const Github = ({ width, colors, onChange, onSwatchHover, triangle }) => {
   const styles = reactCSS(
@@ -80,9 +80,9 @@ export const Github = ({ width, colors, onChange, onSwatchHover, triangle }) => 
       'top-right-triangle': triangle === 'top-right',
       'bottom-right-triangle': triangle === 'bottom-right'
     }
-  );
+  )
 
-  const handleChange = (hex, e) => onChange({ hex, source: 'hex' }, e);
+  const handleChange = (hex, e) => onChange({ hex, source: 'hex' }, e)
 
   return (
     <div style={styles.card} className="github-picker">
@@ -92,8 +92,8 @@ export const Github = ({ width, colors, onChange, onSwatchHover, triangle }) => 
         <GithubSwatch color={c} key={c} onClick={handleChange} onSwatchHover={onSwatchHover} />
       ))}
     </div>
-  );
-};
+  )
+}
 
 Github.defaultProps = {
   width: '200px',
@@ -116,6 +116,6 @@ Github.defaultProps = {
     '#D4C4FB'
   ],
   triangle: 'top-left'
-};
+}
 
-export default ColorWrap(Github);
+export default ColorWrap(Github)

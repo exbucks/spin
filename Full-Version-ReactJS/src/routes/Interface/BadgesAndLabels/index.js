@@ -1,3 +1,3 @@
-import BadgesAndLabelsContainer from './BadgesAndLabels';
+import BadgesAndLabelsContainer from './BadgesAndLabels'
 
-export default BadgesAndLabelsContainer;
+export default BadgesAndLabelsContainer

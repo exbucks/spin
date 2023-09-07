@@ -1,3 +1,3 @@
-import AccountEdit from './AccountEdit';
+import AccountEdit from './AccountEdit'
 
-export default AccountEdit;
+export default AccountEdit

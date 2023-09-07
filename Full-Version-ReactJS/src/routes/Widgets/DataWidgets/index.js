@@ -1,3 +1,3 @@
-import DataWidgetsContainer from './DataWidgetsContainer';
+import DataWidgetsContainer from './DataWidgetsContainer'
 
-export default DataWidgetsContainer;
+export default DataWidgetsContainer

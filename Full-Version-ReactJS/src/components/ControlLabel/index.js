@@ -1,3 +1,3 @@
-import ControlLabel from './ControlLabel';
+import ControlLabel from './ControlLabel'
 
-export default ControlLabel;
+export default ControlLabel

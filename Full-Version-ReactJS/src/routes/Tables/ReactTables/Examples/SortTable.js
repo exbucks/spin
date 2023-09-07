@@ -1,10 +1,10 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
 const SortTable = () => {
-  const data = Array.from(products(['id', 'name', 'price'], 5));
+  const data = Array.from(products(['id', 'name', 'price'], 5))
 
   return (
     <BootstrapTable data={data}>
@@ -16,7 +16,7 @@ const SortTable = () => {
       </TableHeaderColumn>
       <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
     </BootstrapTable>
-  );
-};
+  )
+}
 
-export default SortTable;
+export default SortTable

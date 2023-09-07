@@ -1,12 +1,12 @@
-import React from 'react';
-import { Row, Col, Alert, Media, Button } from 'components';
+import React from 'react'
+import { Row, Col, Alert, Media, Button } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class AlertsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       disAlert1: true,
@@ -23,13 +23,13 @@ class AlertsContainer extends RoutedComponent {
       disAlert10: true,
       disAlert11: true,
       disAlert12: true
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -472,8 +472,8 @@ class AlertsContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(AlertsContainer);
+export default connect()(AlertsContainer)

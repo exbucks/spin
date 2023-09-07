@@ -1,3 +1,3 @@
-import AreaSpline from './AreaSpline';
+import AreaSpline from './AreaSpline'
 
-export default AreaSpline;
+export default AreaSpline

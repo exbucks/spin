@@ -1,3 +1,3 @@
-import CpuBox from './CpuBox';
+import CpuBox from './CpuBox'
 
-export default CpuBox;
+export default CpuBox

@@ -1,12 +1,12 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
 const EmptyData = () => {
-  const data = [];
+  const data = []
 
   const options = {
     noDataText: 'This is custom text for empty data'
-  };
+  }
 
   return (
     <BootstrapTable data={data} options={options}>
@@ -16,7 +16,7 @@ const EmptyData = () => {
       <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
       <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
     </BootstrapTable>
-  );
-};
+  )
+}
 
-export default EmptyData;
+export default EmptyData

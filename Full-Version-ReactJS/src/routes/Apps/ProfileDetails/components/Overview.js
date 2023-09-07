@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Panel, Label, Divider } from 'components';
+import { Row, Col, Panel, Label, Divider } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { VerticalTimeline } from 'routes/Pages/Timeline/components';
+import { VerticalTimeline } from 'routes/Pages/Timeline/components'
 
-import classes from './../ProfileDetails.scss';
+import classes from './../ProfileDetails.scss'
 
 const Overview = () => (
   <div>
@@ -94,6 +94,6 @@ const Overview = () => (
       </Col>
     </Row>
   </div>
-);
+)
 
-export default Overview;
+export default Overview

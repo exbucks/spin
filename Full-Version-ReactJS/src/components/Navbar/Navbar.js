@@ -1,17 +1,17 @@
-import React from 'react';
-import { Navbar as ReactBootstrapNavbar } from 'react-bootstrap';
-import { OutsideClick } from 'components';
+import React from 'react'
+import { Navbar as ReactBootstrapNavbar } from 'react-bootstrap'
+import { OutsideClick } from 'components'
 
-import classNames from 'classnames';
+import classNames from 'classnames'
 
-import classes from './Navbar.scss';
+import classes from './Navbar.scss'
 
-import updateChildElementOfType from './../utils/updateChildElementOfType';
+import updateChildElementOfType from './../utils/updateChildElementOfType'
 
 const Navbar = (props) => {
-  const { className, children, ...otherProps } = props;
+  const { className, children, ...otherProps } = props
 
-  const navbarClass = classNames(className, classes.navbar);
+  const navbarClass = classNames(className, classes.navbar)
 
   const updatedChildren = updateChildElementOfType(
     children,
@@ -24,13 +24,13 @@ const Navbar = (props) => {
         })
       }
     ]
-  );
+  )
 
   return (
     <ReactBootstrapNavbar className={navbarClass} {...otherProps}>
       {updatedChildren}
     </ReactBootstrapNavbar>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

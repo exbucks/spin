@@ -1,8 +1,8 @@
-import React from 'react';
-import truncate from 'truncate';
-import _ from 'underscore';
-import moment from 'moment';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import truncate from 'truncate'
+import _ from 'underscore'
+import moment from 'moment'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   Row,
@@ -20,26 +20,26 @@ import {
   AvatarImage,
   Image,
   Thumbnail
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import filesData from 'consts/data/app-files.json';
+import { Colors } from 'consts'
+import filesData from 'consts/data/app-files.json'
 
-import classes from './FilesManager.scss';
+import classes from './FilesManager.scss'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { LabelsList, SideNav } from './../components';
+import { LabelsList, SideNav } from './../components'
 
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const folders = [
   {
@@ -70,7 +70,7 @@ const folders = [
     icon: <i className="fa fa-fw fa-trash"></i>,
     title: 'Deleted'
   }
-];
+]
 
 const labels = [
   { title: 'Documents', color: Colors.brandPrimary },
@@ -78,7 +78,7 @@ const labels = [
   { title: 'Videos', color: Colors.brandSuccess },
   { title: 'Music', color: Colors.brandWarning },
   { title: 'Other', color: Colors.brandDanger }
-];
+]
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -179,7 +179,7 @@ const renderDirectoriesList = (directories) => (
       />
     </div>
   </div>
-);
+)
 
 const renderFilesGrid = (files) => (
   <div className="m-t-2">
@@ -246,22 +246,22 @@ const renderFilesGrid = (files) => (
       />
     </div>
   </div>
-);
+)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class FilesManagerContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(filesData) };
+    this.state = { data: getData(filesData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -371,8 +371,8 @@ class FilesManagerContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(FilesManagerContainer);
+export default connect()(FilesManagerContainer)

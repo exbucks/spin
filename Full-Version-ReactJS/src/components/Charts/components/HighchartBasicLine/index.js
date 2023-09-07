@@ -1,3 +1,3 @@
-import HighchartBasicLine from './HighchartBasicLine.js';
+import HighchartBasicLine from './HighchartBasicLine.js'
 
-export default HighchartBasicLine;
+export default HighchartBasicLine

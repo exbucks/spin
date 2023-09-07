@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import { Link } from 'react-router-dom'
 
-import { AvatarImage, Media, SlimProgressBar, Sidebar } from 'components';
+import { AvatarImage, Media, SlimProgressBar, Sidebar } from 'components'
 
-import avatarImage from 'static/avatars/avatar-34.jpg';
-import { Colors } from 'consts';
+import avatarImage from 'static/avatars/avatar-34.jpg'
+import { Colors } from 'consts'
 
-const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`;
+const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`
 
 const Progress = (props) => (
   <Sidebar.AddOn>
@@ -68,10 +68,10 @@ const Progress = (props) => (
       </Link>
     </Sidebar.AddOnContent>
   </Sidebar.AddOn>
-);
+)
 
 Progress.propTypes = {
   colorSidebar: PropTypes.bool
-};
+}
 
-export default Progress;
+export default Progress

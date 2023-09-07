@@ -1,20 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Row, Col, Divider } from 'components';
+import { Row, Col, Divider } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import * as Charts from './charts';
+import * as Charts from './charts'
 
-import classes from './Chartist.scss';
+import classes from './Chartist.scss'
 
 class ChartistContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -180,8 +180,8 @@ class ChartistContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ChartistContainer);
+export default connect()(ChartistContainer)

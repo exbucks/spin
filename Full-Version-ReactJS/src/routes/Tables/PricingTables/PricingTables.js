@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
-import hash from 'object-hash';
-import _ from 'underscore';
-import numeral from 'numeral';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { v4 as uuidv4 } from 'uuid'
+import hash from 'object-hash'
+import _ from 'underscore'
+import numeral from 'numeral'
 
-import { Row, Col, Table, Panel, Button, Label, Divider } from 'components';
+import { Row, Col, Table, Panel, Button, Label, Divider } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './PricingTables.scss';
+import classes from './PricingTables.scss'
 
 const tablesData = [
   {
@@ -72,20 +72,20 @@ const tablesData = [
       { key: 'Data Storage', value: '4GB' }
     ]
   }
-];
+]
 
 const typeToColor = (style) => {
   switch (style) {
     case 'info':
-      return Colors.brandInfo;
+      return Colors.brandInfo
     case 'primary':
-      return Colors.brandPrimary;
+      return Colors.brandPrimary
     case 'warning':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'danger':
-      return Colors.brandDanger;
+      return Colors.brandDanger
   }
-};
+}
 
 const PricingTableClean = (props) => (
   <div className={classes.tableClean}>
@@ -118,7 +118,7 @@ const PricingTableClean = (props) => (
       <Button block>Upgrade</Button>
     )}
   </div>
-);
+)
 
 const PricingTable = (props) => (
   <Panel
@@ -149,7 +149,7 @@ const PricingTable = (props) => (
     </Table>
     <Button block>Upgrade</Button>
   </Panel>
-);
+)
 
 PricingTable.propTypes = PricingTableClean.propTypes = {
   description: PropTypes.string.isRequired,
@@ -158,13 +158,13 @@ PricingTable.propTypes = PricingTableClean.propTypes = {
   bsStyle: PropTypes.string.isRequired,
   capabilities: PropTypes.array.isRequired,
   active: PropTypes.bool
-};
+}
 
 class PricingTables extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -187,9 +187,9 @@ class PricingTables extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(PricingTables);
-export { PricingTable, PricingTableClean };
+export default connect()(PricingTables)
+export { PricingTable, PricingTableClean }

@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
-import DatePicker from 'react-date-picker';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
+import DatePicker from 'react-date-picker'
 
-import { HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from '../../constants';
+import { HORIZONTAL_ORIENTATION, ANCHOR_LEFT } from '../../constants'
 
 const propTypes = {
   // example props for the demo
   autoFocus: PropTypes.bool,
   initialDate: PropTypes.date
-};
+}
 
 const defaultProps = {
   // example props for the demo
@@ -55,36 +55,36 @@ const defaultProps = {
     closeDatePicker: 'Close',
     clearDate: 'Clear Date'
   }
-};
+}
 
 class SingleDatePickerWrapper extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       focused: props.autoFocus,
       date: props.initialDate
-    };
+    }
 
-    this.onDateChange = this.onDateChange.bind(this);
-    this.onFocusChange = this.onFocusChange.bind(this);
+    this.onDateChange = this.onDateChange.bind(this)
+    this.onFocusChange = this.onFocusChange.bind(this)
   }
 
   onDateChange(date) {
-    this.setState({ date });
+    this.setState({ date })
   }
 
   onFocusChange({ focused }) {
-    this.setState({ focused });
+    this.setState({ focused })
   }
 
   render() {
-    const { focused, date } = this.state;
+    const { focused, date } = this.state
 
-    return <DatePicker {...this.props} onChange={this.onDateChange} />;
+    return <DatePicker {...this.props} onChange={this.onDateChange} />
   }
 }
 
-SingleDatePickerWrapper.propTypes = propTypes;
-SingleDatePickerWrapper.defaultProps = defaultProps;
+SingleDatePickerWrapper.propTypes = propTypes
+SingleDatePickerWrapper.defaultProps = defaultProps
 
-export default SingleDatePickerWrapper;
+export default SingleDatePickerWrapper

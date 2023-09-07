@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Avatar.scss';
+import classes from './Avatar.scss'
 
 const Avatar = (props) => {
   const avatarClass = classNames(
@@ -16,22 +16,22 @@ const Avatar = (props) => {
       [`${classes.avatarLg}`]: props.size === 'large'
     },
     props.className
-  );
+  )
 
   const statusStyle = {
     borderColor: props.statusBorderColor,
     backgroundColor: props.statusColor
-  };
+  }
 
   const statusClass = classNames(classes.avatarStatus, {
     [`${classes.avatarStatusBottom}`]: props.statusPlacement == 'bottom'
-  });
+  })
 
   const avatarStyle = props.info
     ? {
         marginRight: '5px'
       }
-    : {};
+    : {}
 
   return (
     <div className={avatarClass} style={avatarStyle}>
@@ -39,8 +39,8 @@ const Avatar = (props) => {
       {props.showStatus ? <i className={statusClass} style={statusStyle}></i> : null}
       {props.info ? <div className={classes.infoWrap}>{props.info}</div> : null}
     </div>
-  );
-};
+  )
+}
 
 Avatar.defaultProps = {
   size: 'default',
@@ -50,7 +50,7 @@ Avatar.defaultProps = {
   statusBorderColor: Colors.grayDarker,
   statusPlacement: 'top',
   info: null
-};
+}
 
 Avatar.propTypes = {
   size: PropTypes.string,
@@ -61,6 +61,6 @@ Avatar.propTypes = {
   statusPlacement: PropTypes.string,
   info: PropTypes.node,
   children: PropTypes.node.isRequired
-};
+}
 
-export default Avatar;
+export default Avatar

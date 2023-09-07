@@ -1,5 +1,5 @@
-import React from 'react';
-import DualListBox from 'react-dual-listbox';
+import React from 'react'
+import DualListBox from 'react-dual-listbox'
 
 const options = [
   { value: 'luna', label: 'Moon' },
@@ -15,26 +15,26 @@ const options = [
   { value: 'rhea', label: 'Rhea' },
   { value: 'titan', label: 'Titan' },
   { value: 'iapetus', label: 'Iapetus' }
-];
+]
 
 class BasicExample extends React.Component {
   constructor() {
-    super();
+    super()
 
-    this.state = { selected: ['phobos', 'titan'] };
+    this.state = { selected: ['phobos', 'titan'] }
 
-    this.onChange = this.onChange.bind(this);
+    this.onChange = this.onChange.bind(this)
   }
 
   onChange(selected) {
-    this.setState({ selected });
+    this.setState({ selected })
   }
 
   render() {
-    const { selected } = this.state;
+    const { selected } = this.state
 
-    return <DualListBox options={options} selected={selected} onChange={this.onChange} />;
+    return <DualListBox options={options} selected={selected} onChange={this.onChange} />
   }
 }
 
-export default BasicExample;
+export default BasicExample

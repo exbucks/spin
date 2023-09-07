@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { forbidExtraProps } from 'airbnb-prop-types';
-import omit from 'lodash/omit';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { forbidExtraProps } from 'airbnb-prop-types'
+import omit from 'lodash/omit'
 
-import DatePicker from 'react-date-picker';
+import DatePicker from 'react-date-picker'
 
-import { HORIZONTAL_ORIENTATION } from './../../constants';
+import { HORIZONTAL_ORIENTATION } from './../../constants'
 
 const propTypes = forbidExtraProps({
   // example props for the demo
@@ -39,7 +39,7 @@ const propTypes = forbidExtraProps({
   monthFormat: PropTypes.string,
 
   isRTL: PropTypes.bool
-});
+})
 
 const defaultProps = {
   // example props for the demo
@@ -72,37 +72,37 @@ const defaultProps = {
 
   // internationalization
   monthFormat: 'MMMM YYYY'
-};
+}
 
 class DayPickerSingleDateControllerWrapper extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       focused: true,
       date: props.initialDate
-    };
+    }
 
-    this.onDateChange = this.onDateChange.bind(this);
-    this.onFocusChange = this.onFocusChange.bind(this);
+    this.onDateChange = this.onDateChange.bind(this)
+    this.onFocusChange = this.onFocusChange.bind(this)
   }
 
   onDateChange(date) {
-    this.setState({ date });
+    this.setState({ date })
   }
 
   onFocusChange() {
     // Force the focused states to always be truthy so that date is always selectable
-    this.setState({ focused: true });
+    this.setState({ focused: true })
   }
 
   render() {
-    const { showInput } = this.props;
-    const { focused, date } = this.state;
+    const { showInput } = this.props
+    const { focused, date } = this.state
 
-    const props = omit(this.props, ['autoFocus', 'initialDate', 'showInput']);
+    const props = omit(this.props, ['autoFocus', 'initialDate', 'showInput'])
 
-    const dateString = date && date.format('YYYY-MM-DD');
+    const dateString = date && date.format('YYYY-MM-DD')
 
     return (
       <div>
@@ -114,11 +114,11 @@ class DayPickerSingleDateControllerWrapper extends React.Component {
 
         <DatePicker {...props} onChange={this.onDateChange} />
       </div>
-    );
+    )
   }
 }
 
-DayPickerSingleDateControllerWrapper.propTypes = propTypes;
-DayPickerSingleDateControllerWrapper.defaultProps = defaultProps;
+DayPickerSingleDateControllerWrapper.propTypes = propTypes
+DayPickerSingleDateControllerWrapper.defaultProps = defaultProps
 
-export default DayPickerSingleDateControllerWrapper;
+export default DayPickerSingleDateControllerWrapper

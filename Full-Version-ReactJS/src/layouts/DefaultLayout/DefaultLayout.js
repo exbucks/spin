@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { faker } from '@faker-js/faker';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { faker } from '@faker-js/faker'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import treeRandomizer from 'modules/treeRandomizer';
-import ROUTES, { findActiveNodes } from 'routes/routesStructure';
-import getLogoBySkin from './getLogoBySkin.js';
+import treeRandomizer from 'modules/treeRandomizer'
+import ROUTES, { findActiveNodes } from 'routes/routesStructure'
+import getLogoBySkin from './getLogoBySkin.js'
 
 // Components
 import {
@@ -28,9 +28,9 @@ import {
   Tab,
   Header,
   Footer
-} from 'components';
+} from 'components'
 
-import classes from './DefaultLayout.scss';
+import classes from './DefaultLayout.scss'
 
 // Redux Module imports
 import {
@@ -52,7 +52,7 @@ import {
   SKIN_COLOR,
   CONTENT_VIEW_STATIC,
   SCREEN_SIZE_XS
-} from './modules/layout.js';
+} from './modules/layout.js'
 
 // Sub Components
 import {
@@ -63,11 +63,11 @@ import {
   MessagesDropdown,
   NotificationsDropdown,
   RightSidebarTabs
-} from './components';
+} from './components'
 
-import rightSidebarDataRaw from 'consts/data/right-sidebar.json';
+import rightSidebarDataRaw from 'consts/data/right-sidebar.json'
 
-const titleBase = 'SPIN (React) - ';
+const titleBase = 'SPIN (React) - '
 
 const sidebarAddOns = {
   [SIDEBAR_ADDON_PROGRESS]: (props) => <SidebarAddOns.ProgressAddOn {...props} />,
@@ -76,41 +76,41 @@ const sidebarAddOns = {
   [SIDEBAR_ADDON_AVATAR_AND_BARS]: (props) => <SidebarAddOns.AvatarAndBarsAddOn {...props} />,
   [SIDEBAR_ADDON_AVATAR_AND_NUMBERS]: (props) => <SidebarAddOns.AvatarAndNumbersAddOn {...props} />,
   [SIDEBAR_ADDON_AVATAR_AND_STATS]: (props) => <SidebarAddOns.AvatarAndStatsAddOn {...props} />
-};
+}
 
 const profileUser = {
   name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   avatar: faker.image.avatar()
-};
+}
 
-const rightSidebarData = treeRandomizer(rightSidebarDataRaw);
+const rightSidebarData = treeRandomizer(rightSidebarDataRaw)
 
-let rightSidebarTriggerRef, sidebarTriggerRef, navbarTriggerRef;
+let rightSidebarTriggerRef, sidebarTriggerRef, navbarTriggerRef
 
 class DefaultLayout extends React.Component {
   static propTypes = {
     sidebarAddon: PropTypes.string
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.beforeSlimSidebarStyle = SIDEBAR_STYLE_DEFAULT;
+    this.beforeSlimSidebarStyle = SIDEBAR_STYLE_DEFAULT
   }
 
   toggleSidebarSlim() {
-    const { sidebarStyle, setSidebarStyle } = this.props;
+    const { sidebarStyle, setSidebarStyle } = this.props
 
     if (sidebarStyle === SIDEBAR_STYLE_SLIM) {
-      setSidebarStyle(this.beforeSlimSidebarStyle);
+      setSidebarStyle(this.beforeSlimSidebarStyle)
     } else {
-      this.beforeSlimSidebarStyle = sidebarStyle;
-      setSidebarStyle(SIDEBAR_STYLE_SLIM);
+      this.beforeSlimSidebarStyle = sidebarStyle
+      setSidebarStyle(SIDEBAR_STYLE_SLIM)
     }
   }
 
   componentDidMount() {
-    this.bodyElement = document.querySelector('body');
+    this.bodyElement = document.querySelector('body')
   }
 
   componentDidUpdate(prevProps) {
@@ -119,16 +119,16 @@ class DefaultLayout extends React.Component {
       this.props.currentScreenSize === SCREEN_SIZE_XS &&
       (this.props.navbarExpanded || this.props.overlaySidebarOpen || this.props.rightSidebarEnabled)
         ? 'hidden'
-        : 'auto';
+        : 'auto'
 
     // Update page title
-    const activeRoute = _.first(findActiveNodes(ROUTES, this.props.location.pathname));
-    document.title = titleBase + activeRoute.title;
+    const activeRoute = _.first(findActiveNodes(ROUTES, this.props.location.pathname))
+    document.title = titleBase + activeRoute.title
   }
 
   render() {
     const staticFootNavContainer =
-      !this.props.sidebarEnabled && this.props.contentView === CONTENT_VIEW_STATIC;
+      !this.props.sidebarEnabled && this.props.contentView === CONTENT_VIEW_STATIC
 
     const navbarLogo = getLogoBySkin.navbar(this.props.navbarSkin, this.props.skinColor),
       sidebarOverlayLogo = getLogoBySkin.sidebar(
@@ -137,7 +137,7 @@ class DefaultLayout extends React.Component {
         this.props.skinColor
       ),
       sidebarBigLogo = getLogoBySkin.sidebar(this.props.sidebarSkin, 'big', this.props.skinColor),
-      sidebarSlimLogo = getLogoBySkin.sidebar(this.props.sidebarSkin, 'slim', this.props.skinColor);
+      sidebarSlimLogo = getLogoBySkin.sidebar(this.props.sidebarSkin, 'slim', this.props.skinColor)
 
     return (
       <Layout
@@ -166,7 +166,7 @@ class DefaultLayout extends React.Component {
                     className="btn btn-outline navbar-toggle"
                     onClick={() => this.props.toggleRightSidebar(!this.props.rightSidebarEnabled)}
                     ref={(ref) => {
-                      rightSidebarTriggerRef = ref;
+                      rightSidebarTriggerRef = ref
                     }}
                   >
                     <i className="fa fa-fw fa-align-right text-white"></i>
@@ -175,7 +175,7 @@ class DefaultLayout extends React.Component {
                     className="btn btn-outline navbar-toggle"
                     onClick={() => this.props.toggleNavbarExpanded(!this.props.navbarExpanded)}
                     ref={(ref) => {
-                      navbarTriggerRef = ref;
+                      navbarTriggerRef = ref
                     }}
                   >
                     <i className="fa fa-fw fa-user text-white"></i>
@@ -186,7 +186,7 @@ class DefaultLayout extends React.Component {
                       this.props.toggleOverlaySidebarOpen(!this.props.overlaySidebarOpen)
                     }
                     ref={(ref) => {
-                      sidebarTriggerRef = ref;
+                      sidebarTriggerRef = ref
                     }}
                   >
                     <i className="fa fa-fw fa-bars text-white"></i>
@@ -197,7 +197,7 @@ class DefaultLayout extends React.Component {
 
             <OutsideClick
               onClickOutside={() => {
-                this.props.toggleNavbarExpanded(false);
+                this.props.toggleNavbarExpanded(false)
               }}
               excludedElements={[navbarTriggerRef]}
             >
@@ -307,7 +307,7 @@ class DefaultLayout extends React.Component {
           <OutsideClick
             active={this.props.currentScreenSize === SCREEN_SIZE_XS}
             onClickOutside={() => {
-              this.props.toggleOverlaySidebarOpen(false);
+              this.props.toggleOverlaySidebarOpen(false)
             }}
             excludedElements={[sidebarTriggerRef]}
           >
@@ -337,11 +337,11 @@ class DefaultLayout extends React.Component {
                       <img className="logo-default" width={53} src={sidebarBigLogo} />
                       <img className="logo-slim" height={13} src={sidebarSlimLogo} />
                     </div>
-                  );
+                  )
                 } else {
                   return sidebarAddOns[this.props.sidebarAddon]({
                     colorSidebar: this.props.sidebarSkin === SKIN_COLOR
-                  });
+                  })
                 }
               })()}
               <div className="sidebar-default-visible text-muted small text-uppercase sidebar-section p-y-2">
@@ -374,7 +374,7 @@ class DefaultLayout extends React.Component {
           excludedElements={[rightSidebarTriggerRef]}
           onClickOutside={() => {
             if (this.props.rightSidebarEnabled) {
-              this.props.toggleRightSidebar(false);
+              this.props.toggleRightSidebar(false)
             }
           }}
         >
@@ -424,7 +424,7 @@ class DefaultLayout extends React.Component {
           </p>
         </Footer>
       </Layout>
-    );
+    )
   }
 }
 
@@ -449,7 +449,7 @@ const mapStateToProps = (state) => ({
   currentScreenSize: state.app.currentScreenSize,
   skinColor: state.app.skinColor,
   rawContent: state.app.rawContent
-});
+})
 
 const mapActionCreators = {
   setSidebarStyle,
@@ -458,6 +458,6 @@ const mapActionCreators = {
   toggleNavbarExpanded,
   setCurrentScreenSize,
   changeSidebarAddOn
-};
+}
 
-export default connect(mapStateToProps, mapActionCreators)(DefaultLayout);
+export default connect(mapStateToProps, mapActionCreators)(DefaultLayout)

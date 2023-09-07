@@ -1,8 +1,8 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { Link } from 'react-router-dom'
 
 import {
   Panel,
@@ -22,11 +22,11 @@ import {
   Divider,
   Label,
   SlimProgressBar
-} from 'components';
+} from 'components'
 
-import { PricingTableClean } from 'routes/Tables/PricingTables';
+import { PricingTableClean } from 'routes/Tables/PricingTables'
 
-import classes from './../../ProfileEdit.scss';
+import classes from './../../ProfileEdit.scss'
 
 const pricingData = [
   {
@@ -86,22 +86,22 @@ const pricingData = [
       { key: 'Data Storage', value: '4GB' }
     ]
   }
-];
+]
 
-const payPalUserName = faker.internet.email();
+const payPalUserName = faker.internet.email()
 const payPalUserName1 = faker.internet.email(),
   payPalUserName2 = faker.internet.email(),
-  payPalUserName3 = faker.internet.email();
+  payPalUserName3 = faker.internet.email()
 
 class BillingEdit extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       planModalOpen: false,
       paymentModalOpen: false,
       paymentModalType: 'credit'
-    };
+    }
   }
   render() {
     return (
@@ -165,7 +165,7 @@ class BillingEdit extends React.Component {
               <Media.Right>
                 <Button
                   onClick={() => {
-                    this.setState({ planModalOpen: true });
+                    this.setState({ planModalOpen: true })
                   }}
                 >
                   Change Plan
@@ -199,7 +199,7 @@ class BillingEdit extends React.Component {
               <Media.Right>
                 <Button
                   onClick={() => {
-                    this.setState({ paymentModalOpen: true });
+                    this.setState({ paymentModalOpen: true })
                   }}
                 >
                   Change Payment
@@ -392,7 +392,7 @@ class BillingEdit extends React.Component {
                   type="radio"
                   checked={this.state.paymentModalType === 'credit'}
                   onChange={() => {
-                    this.setState({ paymentModalType: 'credit' });
+                    this.setState({ paymentModalType: 'credit' })
                   }}
                 >
                   Credit Card
@@ -402,7 +402,7 @@ class BillingEdit extends React.Component {
                   type="radio"
                   checked={this.state.paymentModalType === 'paypal'}
                   onChange={() => {
-                    this.setState({ paymentModalType: 'paypal' });
+                    this.setState({ paymentModalType: 'paypal' })
                   }}
                 >
                   PayPal Account
@@ -437,7 +437,7 @@ class BillingEdit extends React.Component {
                             {_.map(
                               Array.from(
                                 (function* () {
-                                  for (let i = 1; i <= 12; i++) yield i;
+                                  for (let i = 1; i <= 12; i++) yield i
                                 })()
                               ),
                               (month, i) => (
@@ -451,7 +451,7 @@ class BillingEdit extends React.Component {
                             {_.map(
                               Array.from(
                                 (function* () {
-                                  for (let i = 0; i < 10; i++) yield 16 + i;
+                                  for (let i = 0; i < 10; i++) yield 16 + i
                                 })()
                               ),
                               (year, i) => (
@@ -519,8 +519,8 @@ class BillingEdit extends React.Component {
           </Modal.Footer>
         </Modal>
       </div>
-    );
+    )
   }
 }
 
-export default BillingEdit;
+export default BillingEdit

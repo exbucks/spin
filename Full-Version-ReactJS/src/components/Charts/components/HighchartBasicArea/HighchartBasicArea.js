@@ -1,6 +1,6 @@
-import HighchartBase, { connect } from './../HighchartBase';
-import { Colors } from './../../../../consts';
-import tinycolor from 'tinycolor2';
+import HighchartBase, { connect } from './../HighchartBase'
+import { Colors } from './../../../../consts'
+import tinycolor from 'tinycolor2'
 
 class HighchartBasicArea extends HighchartBase {
   getChartConfig() {
@@ -55,8 +55,8 @@ class HighchartBasicArea extends HighchartBase {
           threshold: null
         }
       }
-    };
+    }
   }
 }
 
-export default connect(HighchartBasicArea);
+export default connect(HighchartBasicArea)

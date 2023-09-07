@@ -55,6 +55,6 @@ const config = {
       pointPlacement: 'on'
     }
   ]
-};
+}
 
-export default config;
+export default config

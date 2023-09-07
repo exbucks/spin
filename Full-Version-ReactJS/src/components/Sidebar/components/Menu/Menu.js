@@ -1,30 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import _ from 'underscore';
-import classNames from 'classnames';
-import velocity from 'velocity-animate';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import _ from 'underscore'
+import classNames from 'classnames'
+import velocity from 'velocity-animate'
 
 import {
   SIDEBAR_STYLE_SLIM,
   SIDEBAR_STYLE_DEFAULT,
   SIDEBAR_STYLE_BIGICONS
-} from 'layouts/DefaultLayout/modules/layout';
-import SIDEBAR_CONFIG, { findActiveNodes } from 'routes/routesStructure';
+} from 'layouts/DefaultLayout/modules/layout'
+import SIDEBAR_CONFIG, { findActiveNodes } from 'routes/routesStructure'
 
-import classes from './../../Sidebar.scss';
+import classes from './../../Sidebar.scss'
 
-let animationInProgress = false;
+let animationInProgress = false
 
 const findSubmenu = (parentNodeElement) =>
-  _.find(parentNodeElement.children, (childElement) => childElement.tagName === 'UL');
+  _.find(parentNodeElement.children, (childElement) => childElement.tagName === 'UL')
 
 // Animate open and close
 const animateOpenNode = (nodeElement, cbComplete, cbStart, animationSettings) => {
-  const subMenuElement = findSubmenu(nodeElement);
-  animationInProgress = true;
+  const subMenuElement = findSubmenu(nodeElement)
+  animationInProgress = true
 
-  subMenuElement.style.display = 'block';
+  subMenuElement.style.display = 'block'
 
   velocity(
     subMenuElement,
@@ -34,26 +34,26 @@ const animateOpenNode = (nodeElement, cbComplete, cbStart, animationSettings) =>
     {
       ...animationSettings,
       complete: () => {
-        subMenuElement.style.height = null;
-        animationInProgress = false;
-        cbComplete();
+        subMenuElement.style.height = null
+        animationInProgress = false
+        cbComplete()
       }
     }
-  );
+  )
 
   cbStart({
     heightDiff: subMenuElement.scrollHeight
-  });
-};
+  })
+}
 
 const animateCloseNode = (nodeElement, cbComplete, cbStart, animationSettings) => {
-  const subMenuElement = findSubmenu(nodeElement);
+  const subMenuElement = findSubmenu(nodeElement)
 
   if (!subMenuElement) {
-    return;
+    return
   }
 
-  animationInProgress = true;
+  animationInProgress = true
 
   velocity(
     subMenuElement,
@@ -63,17 +63,17 @@ const animateCloseNode = (nodeElement, cbComplete, cbStart, animationSettings) =
     {
       ...animationSettings,
       complete: () => {
-        subMenuElement.style.height = null;
-        animationInProgress = false;
-        cbComplete();
+        subMenuElement.style.height = null
+        animationInProgress = false
+        cbComplete()
       }
     }
-  );
+  )
 
   cbStart({
     heightDiff: -subMenuElement.scrollHeight
-  });
-};
+  })
+}
 
 class Menu extends React.Component {
   static propTypes = {
@@ -83,7 +83,7 @@ class Menu extends React.Component {
 
     animationDuration: PropTypes.node,
     animationEasing: PropTypes.string
-  };
+  }
 
   static defaultProps = {
     sidebarStyle: SIDEBAR_STYLE_DEFAULT,
@@ -91,91 +91,91 @@ class Menu extends React.Component {
 
     animationDuration: 300,
     animationEasing: 'ease-in-out'
-  };
+  }
 
   constructor() {
-    super();
+    super()
 
     this.state = Object.assign({}, this.state, {
       expandedNodes: []
-    });
+    })
   }
 
   expandNode(nodeDef, expand = true) {
     if (animationInProgress) {
-      return;
+      return
     }
 
-    const { state, setState } = this;
+    const { state, setState } = this
 
     const currentLevelExpandedNode = _.find(
       state.expandedNodes,
       (node) => node.subMenuLevel === nodeDef.subMenuLevel
-    );
+    )
 
-    const nextExpandedNodes = _.without(state.expandedNodes, currentLevelExpandedNode);
+    const nextExpandedNodes = _.without(state.expandedNodes, currentLevelExpandedNode)
 
     const updateState = (expandedNodes) => {
-      const newState = Object.assign({}, state, { expandedNodes });
-      this.setState(newState);
-    };
+      const newState = Object.assign({}, state, { expandedNodes })
+      this.setState(newState)
+    }
     // Animate close and update state if no other node will be expanded
     if (currentLevelExpandedNode) {
       animateCloseNode(
         currentLevelExpandedNode.element,
         () => !expand && updateState(nextExpandedNodes),
         (e) => {
-          this.props.onHeightChange(e.heightDiff);
+          this.props.onHeightChange(e.heightDiff)
         }
-      );
+      )
     }
 
     if (expand) {
-      nextExpandedNodes.push(nodeDef);
+      nextExpandedNodes.push(nodeDef)
 
       animateOpenNode(
         nodeDef.element,
         () => updateState(nextExpandedNodes),
         (e) => {
-          this.props.onHeightChange(e.heightDiff);
+          this.props.onHeightChange(e.heightDiff)
         }
-      );
+      )
     }
   }
 
   isNodeExpanded(nodeDef) {
-    const { state } = this;
+    const { state } = this
 
     return _.some(
       state.expandedNodes,
       (node) => node.subMenuLevel === nodeDef.subMenuLevel && node.key === nodeDef.key
-    );
+    )
   }
 
   toggleNode(nodeDef) {
-    const isExpanded = this.isNodeExpanded(nodeDef);
-    this.expandNode(nodeDef, !isExpanded);
+    const isExpanded = this.isNodeExpanded(nodeDef)
+    this.expandNode(nodeDef, !isExpanded)
   }
 
   setSidebarNodesHighlights(url) {
     if (this.props.currentUrl) {
-      const activeNodes = findActiveNodes(SIDEBAR_CONFIG, url);
+      const activeNodes = findActiveNodes(SIDEBAR_CONFIG, url)
 
-      this.setState(Object.assign({}, this.state, { activeNodes, expandedNodes: activeNodes }));
+      this.setState(Object.assign({}, this.state, { activeNodes, expandedNodes: activeNodes }))
     }
   }
 
   generateLink(nodeDef) {
-    const linkContent = [];
+    const linkContent = []
 
     const clickHandler = (nodeDef) => {
       if (
         this.props.sidebarStyle === SIDEBAR_STYLE_DEFAULT ||
         (this.props.sidebarStyle === SIDEBAR_STYLE_BIGICONS && nodeDef.subMenuLevel > 0)
       ) {
-        this.toggleNode(nodeDef);
+        this.toggleNode(nodeDef)
       }
-    };
+    }
 
     if (nodeDef.children) {
       return (
@@ -192,7 +192,7 @@ class Menu extends React.Component {
             <i className="fa arrow"></i>
           ) : null}
         </a>
-      );
+      )
     } else {
       return nodeDef.external ? (
         <a
@@ -214,7 +214,7 @@ class Menu extends React.Component {
             {nodeDef.sidebarElement}
           </div>
         </Link>
-      );
+      )
     }
   }
 
@@ -225,14 +225,14 @@ class Menu extends React.Component {
         expanded: this.props.sidebarStyle !== SIDEBAR_STYLE_SLIM && this.isNodeExpanded(nodeDef),
         'nested-active': nodeDef.children && _.contains(this.state.activeNodes, nodeDef),
         active: nodeDef.url && _.contains(this.state.activeNodes, nodeDef)
-      });
+      })
       return (
         <li key={nodeDef.key} className={classes} ref={(element) => (nodeDef.element = element)}>
           {this.generateLink(nodeDef)}
           {nodeDef.children ? this.generateSubNodes(nodeDef.children, subMenuLevel + 1) : null}
         </li>
-      );
-    });
+      )
+    })
 
     return (
       <ul
@@ -242,11 +242,11 @@ class Menu extends React.Component {
       >
         {nodes}
       </ul>
-    );
+    )
   }
 
   generateRootNodes(nodeDefs) {
-    const { state } = this;
+    const { state } = this
 
     const nodes = _.map(nodeDefs, (nodeDef) => {
       const classes = classNames('primary-submenu', {
@@ -254,40 +254,40 @@ class Menu extends React.Component {
         expanded: this.props.sidebarStyle === SIDEBAR_STYLE_DEFAULT && this.isNodeExpanded(nodeDef),
         'nested-active': nodeDef.children && _.contains(this.state.activeNodes, nodeDef),
         active: nodeDef.url && _.contains(this.state.activeNodes, nodeDef)
-      });
+      })
 
       return (
         <li key={nodeDef.key} className={classes} ref={(element) => (nodeDef.element = element)}>
           {this.generateLink(nodeDef)}
           {nodeDef.children ? this.generateSubNodes(nodeDef.children, 1, nodeDef.title) : null}
         </li>
-      );
-    });
+      )
+    })
 
-    return nodes;
+    return nodes
   }
 
   componentWillMount() {
-    this.setSidebarNodesHighlights(this.props.currentUrl);
+    this.setSidebarNodesHighlights(this.props.currentUrl)
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUrl !== this.props.currentUrl) {
-      this.setSidebarNodesHighlights(nextProps.currentUrl);
+      this.setSidebarNodesHighlights(nextProps.currentUrl)
     }
 
     if (nextProps.sidebarStyle !== this.props.sidebarStyle) {
       if (nextProps.sidebarStyle !== SIDEBAR_STYLE_DEFAULT) {
-        this.setState(Object.assign({}, this.state, { expandedNodes: [] }));
+        this.setState(Object.assign({}, this.state, { expandedNodes: [] }))
       } else {
-        this.setSidebarNodesHighlights(this.props.currentUrl);
+        this.setSidebarNodesHighlights(this.props.currentUrl)
       }
     }
   }
 
   render() {
-    return <ul className="side-menu">{this.generateRootNodes(SIDEBAR_CONFIG)}</ul>;
+    return <ul className="side-menu">{this.generateRootNodes(SIDEBAR_CONFIG)}</ul>
   }
 }
 
-export default Menu;
+export default Menu

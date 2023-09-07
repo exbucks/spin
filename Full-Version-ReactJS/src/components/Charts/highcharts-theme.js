@@ -205,6 +205,6 @@ const highchartsTheme = {
   textColor: 'blue',
   contrastTextColor: '#F0F0F3',
   maskColor: 'rgba(255,255,255,0.3)'
-};
+}
 
-export default highchartsTheme;
+export default highchartsTheme

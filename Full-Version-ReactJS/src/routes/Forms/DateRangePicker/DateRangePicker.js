@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import _ from 'underscore';
-import moment from 'moment';
-import { Row, Col, TreeNavigator } from 'components';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import _ from 'underscore'
+import moment from 'moment'
+import { Row, Col, TreeNavigator } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 import {
   DateRangePicker as VariantDateRangePicker,
@@ -22,7 +22,7 @@ import {
   BootstrapDateRangeProps as VariantBootstrapDateRangeProps,
   BootstrapDateProps as VariantBootstrapDateProps,
   mergedVariants
-} from './variants';
+} from './variants'
 
 const renderNavBranch = (variantsList, name, key) => (
   <TreeNavigator.Branch title={name} eventKey={key}>
@@ -32,21 +32,21 @@ const renderNavBranch = (variantsList, name, key) => (
       </Link>
     ))}
   </TreeNavigator.Branch>
-);
+)
 
 class DateRangePickerContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
     // Reset Moment
-    moment.locale('en');
+    moment.locale('en')
 
-    const { dateRangeOption } = this.props.routeParams;
-    const variantToRender = _.findWhere(mergedVariants, { key: dateRangeOption });
+    const { dateRangeOption } = this.props.routeParams
+    const variantToRender = _.findWhere(mergedVariants, { key: dateRangeOption })
 
     return (
       <Row className="m-t-3">
@@ -112,8 +112,8 @@ class DateRangePickerContainer extends RoutedComponent {
           </TreeNavigator>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(DateRangePickerContainer);
+export default connect()(DateRangePickerContainer)

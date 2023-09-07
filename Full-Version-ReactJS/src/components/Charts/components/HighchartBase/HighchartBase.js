@@ -1,64 +1,64 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
 // import ReactHighstock from 'react-highcharts/bundle/ReactHighstock';
 // import ReactHighcharts from 'react-highcharts/bundle/ReactHighcharts';
 
-import theme from './../../highcharts-theme';
+import theme from './../../highcharts-theme'
 
 const updateChartSeries = (chart, currentSeries, nextSeries) => {
-  let result = false;
+  let result = false
 
   for (let i = 0; i < currentSeries.length; i++) {
-    const currentSerie = currentSeries[i];
-    const nextSerie = nextSeries[i];
+    const currentSerie = currentSeries[i]
+    const nextSerie = nextSeries[i]
 
-    const addedData = _.difference(nextSerie.data, currentSerie.data);
-    const removedData = _.difference(currentSerie.data, nextSerie.data);
+    const addedData = _.difference(nextSerie.data, currentSerie.data)
+    const removedData = _.difference(currentSerie.data, nextSerie.data)
 
     if (addedData.length > 0) {
       addedData.forEach((data) => {
-        chart.series[i].addPoint(data);
-      });
-      result = true;
+        chart.series[i].addPoint(data)
+      })
+      result = true
     }
 
     if (removedData.length > 0) {
       removedData.forEach((data) => {
-        chart.series[i].removePoint(data);
-      });
-      result = true;
+        chart.series[i].removePoint(data)
+      })
+      result = true
     }
   }
 
-  return result;
-};
+  return result
+}
 
 class HighchartBase extends React.Component {
   static propTypes = {
     config: PropTypes.object,
     dynamicUpdate: PropTypes.bool
-  };
+  }
 
   static defaultProps = {
     config: {},
     dynamicUpdate: false
-  };
+  }
 
   getChartConfig() {
-    return {};
+    return {}
   }
 
   isHighstock() {
-    return false;
+    return false
   }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { ...theme, ...this.getChartConfig(), ...props.config };
+    this.state = { ...theme, ...this.getChartConfig(), ...props.config }
     // this.Chart = this.isHighstock() ? ReactHighstock : ReactHighcharts;
-    this.Chart = <div></div>;
+    this.Chart = <div></div>
   }
 
   componentWillReceiveProps(nextProps) {
@@ -66,17 +66,17 @@ class HighchartBase extends React.Component {
       this.props.dynamicUpdate &&
       updateChartSeries(this.chartObject, this.props.config.series, nextProps.config.series)
     ) {
-      return;
+      return
     }
 
-    this.setState({ chartConfig: { ...theme, ...this.getChartConfig(), ...nextProps.config() } });
+    this.setState({ chartConfig: { ...theme, ...this.getChartConfig(), ...nextProps.config() } })
   }
 
   componentDidMount() {
     // Reflow when the browser finishes rendering
     setTimeout(() => {
-      this.chartObject.reflow();
-    }, 0);
+      this.chartObject.reflow()
+    }, 0)
   }
 
   render() {
@@ -86,7 +86,7 @@ class HighchartBase extends React.Component {
       'sidebarStyle',
       'sidebarEnabled',
       'dispatch'
-    ]);
+    ])
 
     return (
       <div {...otherProps}>
@@ -96,8 +96,8 @@ class HighchartBase extends React.Component {
           callback={(chart) => (this.chartObject = chart)}
         />
       </div>
-    );
+    )
   }
 }
 
-export default HighchartBase;
+export default HighchartBase

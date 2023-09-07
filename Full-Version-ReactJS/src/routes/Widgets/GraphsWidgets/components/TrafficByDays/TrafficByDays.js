@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, CollapsablePanel, SlimProgressBar, Charts } from 'components';
+import { Row, Col, CollapsablePanel, SlimProgressBar, Charts } from 'components'
 
-import classes from './TrafficByDays.scss';
+import classes from './TrafficByDays.scss'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const chartConfig = {
   chart: {
@@ -65,13 +65,13 @@ const chartConfig = {
     tickColor: 'white',
     labels: {
       formatter: function () {
-        return this.value;
+        return this.value
       }
     }
   },
   tooltip: {
     formatter: function () {
-      return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y;
+      return '<b>' + this.series.name + '</b><br/>' + this.x + ': ' + this.y
     }
   },
   plotOptions: {
@@ -105,7 +105,7 @@ const chartConfig = {
       }
     }
   ]
-};
+}
 
 const TrafficByDays = (panelProps) => (
   <CollapsablePanel
@@ -139,6 +139,6 @@ const TrafficByDays = (panelProps) => (
   >
     <Charts.HighchartBasicLine config={chartConfig} />
   </CollapsablePanel>
-);
+)
 
-export default TrafficByDays;
+export default TrafficByDays

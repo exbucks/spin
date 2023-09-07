@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Select from 'react-select';
-import _ from 'underscore';
-import Slider, { Range } from 'rc-slider';
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Select from 'react-select'
+import _ from 'underscore'
+import Slider, { Range } from 'rc-slider'
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { Row, Col, Form, FormGroup, FormControl, ControlLabel, Button } from 'components';
+import { Row, Col, Form, FormGroup, FormControl, ControlLabel, Button } from 'components'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import Colors from 'consts/colors';
+import Colors from 'consts/colors'
 
 const marks = {
   '-10': '-10°C',
@@ -23,32 +23,32 @@ const marks = {
     },
     label: <strong>100°C</strong>
   }
-};
+}
 
 class CustomizedRange extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       lowerBound: 20,
       upperBound: 40,
       value: [20, 40]
-    };
+    }
   }
   onLowerBoundChange(e) {
-    this.setState({ lowerBound: +e.target.value });
+    this.setState({ lowerBound: +e.target.value })
   }
   onUpperBoundChange(e) {
-    this.setState({ upperBound: +e.target.value });
+    this.setState({ upperBound: +e.target.value })
   }
   onSliderChange(value) {
     this.setState({
       value
-    });
+    })
   }
   handleApply() {
-    const { lowerBound, upperBound } = this.state;
-    this.setState({ value: [lowerBound, upperBound] });
+    const { lowerBound, upperBound } = this.state
+    this.setState({ value: [lowerBound, upperBound] })
   }
   render() {
     return (
@@ -95,39 +95,39 @@ class CustomizedRange extends React.Component {
           />
         </div>
       </div>
-    );
+    )
   }
 }
 
 class DynamicBounds extends React.Component {
   static propTypes = {
     children: PropTypes.node.required
-  };
+  }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       min: 0,
       max: 100
-    };
+    }
   }
   onMinChange(e) {
     this.setState({
       min: +e.target.value || 0
-    });
+    })
   }
   onMaxChange(e) {
     this.setState({
       max: +e.target.value || 100
-    });
+    })
   }
   render() {
-    const { children } = this.props;
+    const { children } = this.props
     const updatedChild = React.cloneElement(React.Children.only(children), {
       min: this.state.min,
       max: this.state.max
-    });
+    })
 
     return (
       <div>
@@ -154,54 +154,54 @@ class DynamicBounds extends React.Component {
         </Form>
         <div className={classes.sliderWrap}>{updatedChild}</div>
       </div>
-    );
+    )
   }
 }
 
 class ControlledRange extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       value: [20, 40, 60, 80]
-    };
+    }
   }
   handleChange = (value) => {
     this.setState({
       value
-    });
-  };
+    })
+  }
   render() {
-    return <Range value={this.state.value} onChange={this.handleChange} />;
+    return <Range value={this.state.value} onChange={this.handleChange} />
   }
 }
 
 class CustomizedSlider extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       value: 50
-    };
+    }
   }
 
   onSliderChange(value) {
     this.setState({
       value
-    });
+    })
   }
 
   render() {
-    return <Slider value={this.state.value} onChange={this.onSliderChange.bind(this)} />;
+    return <Slider value={this.state.value} onChange={this.onSliderChange.bind(this)} />
   }
 }
 
-import classes from './SlidersContainer.scss';
+import classes from './SlidersContainer.scss'
 
 class SlidersContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -455,8 +455,8 @@ class SlidersContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(SlidersContainer);
+export default connect()(SlidersContainer)

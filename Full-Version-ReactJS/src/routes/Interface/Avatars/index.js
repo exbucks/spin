@@ -1,3 +1,3 @@
-import AvatarsContainer from './Avatars';
+import AvatarsContainer from './Avatars'
 
-export default AvatarsContainer;
+export default AvatarsContainer

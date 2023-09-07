@@ -1,19 +1,19 @@
-import React from 'react';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
+import React from 'react'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
 
-import { Grid, FloatGrid, Panel, Button, Header } from 'components';
+import { Grid, FloatGrid, Panel, Button, Header } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './DragAndDrop.scss';
+import classes from './DragAndDrop.scss'
 
-const deepClone = (source) => JSON.parse(JSON.stringify(source));
+const deepClone = (source) => JSON.parse(JSON.stringify(source))
 
 class DragAndDropContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       columns: [
@@ -32,20 +32,20 @@ class DragAndDropContainer extends RoutedComponent {
         { key: uuidv4(), lg: 2 },
         { key: uuidv4(), lg: 10 }
       ]
-    };
+    }
 
-    this.initialColumns = deepClone(this.state.columns);
+    this.initialColumns = deepClone(this.state.columns)
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC,
       rawContent: true
-    };
+    }
   }
 
   layoutChanged(layout) {
-    this.setState({ columns: layout });
+    this.setState({ columns: layout })
   }
 
   render() {
@@ -73,18 +73,18 @@ class DragAndDropContainer extends RoutedComponent {
             <FloatGrid>
               <FloatGrid.Row
                 onLayoutChange={(layout) => {
-                  this.layoutChanged(layout);
+                  this.layoutChanged(layout)
                 }}
                 optimalColumns={false}
               >
                 {_.map(this.state.columns, (column, index) => {
-                  const colDefs = _.omit(column, 'key');
-                  const valuesToShow = _.pick(column, ['lg', 'md', 'sm', 'xs']);
+                  const colDefs = _.omit(column, 'key')
+                  const valuesToShow = _.pick(column, ['lg', 'md', 'sm', 'xs'])
                   const labels = _.keys(valuesToShow).map((colKey, i) => (
                     <span key={i}>
                       col-{colKey}-{colDefs[colKey]}
                     </span>
-                  ));
+                  ))
 
                   return (
                     <FloatGrid.Col {...colDefs} key={column.key}>
@@ -92,14 +92,14 @@ class DragAndDropContainer extends RoutedComponent {
                         <kbd className={classes.labels}>{labels}</kbd>
                       </Panel>
                     </FloatGrid.Col>
-                  );
+                  )
                 })}
               </FloatGrid.Row>
             </FloatGrid>
           </div>
         </Grid>
       </div>
-    );
+    )
   }
 }
 
@@ -108,4 +108,4 @@ export default connect((state) => ({
   headerEnabled: state.app.headerEnabled,
   headerStyle: state.app.headerStyle,
   currentScreenSize: state.app.currentScreenSize
-}))(DragAndDropContainer);
+}))(DragAndDropContainer)

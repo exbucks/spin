@@ -1,4 +1,4 @@
-const path = require(`path`);
+const path = require(`path`)
 
 module.exports = {
   webpack: {
@@ -6,4 +6,4 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/components')
     }
   }
-};
+}

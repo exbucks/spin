@@ -1,10 +1,10 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const { ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis } =
-  Charts.Recharts;
+  Charts.Recharts
 
-import { dataRadarChart } from './../../data';
+import { dataRadarChart } from './../../data'
 
 const SimpleRadarChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -15,6 +15,6 @@ const SimpleRadarChart = (props) => (
       <PolarRadiusAxis />
     </RadarChart>
   </ResponsiveContainer>
-);
+)
 
-export default SimpleRadarChart;
+export default SimpleRadarChart

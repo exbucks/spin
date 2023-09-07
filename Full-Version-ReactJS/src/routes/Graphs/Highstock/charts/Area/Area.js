@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const getJson = (cb) => {
   require.ensure([], (require) => {
-    const { data } = require('consts/data/highstock/data-aapl-c.json');
-    cb(data);
-  });
-};
+    const { data } = require('consts/data/highstock/data-aapl-c.json')
+    cb(data)
+  })
+}
 
 const getConfig = (data) => ({
   rangeSelector: {
@@ -50,12 +50,12 @@ const getConfig = (data) => ({
       }
     }
   ]
-});
+})
 
 const Area = () => (
   <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
     <Charts.HighStock />
   </Charts.AsyncChart>
-);
+)
 
-export default Area;
+export default Area

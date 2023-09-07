@@ -1,3 +1,3 @@
-import SessionsEdit from './SessionsEdit.js';
+import SessionsEdit from './SessionsEdit.js'
 
-export default SessionsEdit;
+export default SessionsEdit

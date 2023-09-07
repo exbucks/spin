@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table } from 'components';
+import { Table } from 'components'
 
 const CondensedExampleTable = () => (
   <Table condensed>
@@ -48,6 +48,6 @@ const CondensedExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default CondensedExampleTable;
+export default CondensedExampleTable

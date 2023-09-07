@@ -1,36 +1,36 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
-import classes from './../../Chartist.scss';
+import classes from './../../Chartist.scss'
 
 //================Settings=================
-const times = (n) => Array.apply(null, new Array(n));
+const times = (n) => Array.apply(null, new Array(n))
 
-const chartType = 'Line';
+const chartType = 'Line'
 const chartData = times(52)
   .map(Math.random)
   .reduce(
     (data, rnd, index) => {
-      data.labels.push(index + 1);
+      data.labels.push(index + 1)
       data.series.forEach((series) => {
-        series.push(Math.random() * 100);
-      });
+        series.push(Math.random() * 100)
+      })
 
-      return data;
+      return data
     },
     {
       labels: [],
       series: times(4).map(() => new Array())
     }
-  );
+  )
 
 const chartOptions = {
   showLine: false,
   axisX: {
     labelInterpolationFnc: (value, index) => (index % 13 === 0 ? 'W' + value : null)
   }
-};
+}
 
 const responsiveOptions = [
   [
@@ -41,7 +41,7 @@ const responsiveOptions = [
       }
     }
   ]
-];
+]
 
 //===============Component================
 const ScatterWithResponsive = () => (
@@ -52,6 +52,6 @@ const ScatterWithResponsive = () => (
     responsiveOptions={responsiveOptions}
     type={chartType}
   />
-);
+)
 
-export default ScatterWithResponsive;
+export default ScatterWithResponsive

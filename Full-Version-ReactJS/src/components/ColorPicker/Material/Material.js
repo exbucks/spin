@@ -1,9 +1,9 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import * as color from 'react-color/lib/helpers/color'
 
-import { Raised } from 'react-color/lib/components/common';
-import { ColorWrap, EditableInput } from 'react-color/lib/components/common';
+import { Raised } from 'react-color/lib/components/common'
+import { ColorWrap, EditableInput } from 'react-color/lib/components/common'
 
 export const Material = ({ onChange, hex, rgb }) => {
   const styles = reactCSS({
@@ -71,7 +71,7 @@ export const Material = ({ onChange, hex, rgb }) => {
         paddingRight: '10px'
       }
     }
-  });
+  })
 
   const handleChange = (data, e) => {
     if (data.hex) {
@@ -82,7 +82,7 @@ export const Material = ({ onChange, hex, rgb }) => {
             source: 'hex'
           },
           e
-        );
+        )
     } else if (data.r || data.g || data.b) {
       onChange(
         {
@@ -92,9 +92,9 @@ export const Material = ({ onChange, hex, rgb }) => {
           source: 'rgb'
         },
         e
-      );
+      )
     }
-  };
+  }
 
   return (
     <Raised>
@@ -133,7 +133,7 @@ export const Material = ({ onChange, hex, rgb }) => {
         </div>
       </div>
     </Raised>
-  );
-};
+  )
+}
 
-export default ColorWrap(Material);
+export default ColorWrap(Material)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Panel,
@@ -10,11 +10,11 @@ import {
   Button,
   Divider,
   Label
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { Upload } from 'routes/Apps/components';
+import { Upload } from 'routes/Apps/components'
 
 const ProfileEdit = () => (
   <div>
@@ -119,6 +119,6 @@ const ProfileEdit = () => (
       </Form>
     </Panel>
   </div>
-);
+)
 
-export default ProfileEdit;
+export default ProfileEdit

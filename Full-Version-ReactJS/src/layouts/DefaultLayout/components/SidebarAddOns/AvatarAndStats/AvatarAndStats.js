@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import { Link } from 'react-router-dom'
 
-import { AvatarImage, Charts, Media, Sidebar } from 'components';
+import { AvatarImage, Charts, Media, Sidebar } from 'components'
 
-import avatarImage from 'static/avatars/avatar-5.jpg';
-import { Colors } from 'consts';
+import avatarImage from 'static/avatars/avatar-5.jpg'
+import { Colors } from 'consts'
 
 const chartData = [
   1, 3, 9, 6, 5, 9, 7, 3, 5, 2, 4, 5, 6, 9, 7, 8, 5, 4, 2, 4, 6, 7, 3, 9, 8, 7, 6, 9, 2, 6, 5, 4
-];
+]
 
-const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`;
+const UserName = `${faker.person.firstName()} ${faker.person.lastName()}`
 
 const AvatarAndStats = (props) => (
   <Sidebar.AddOn>
@@ -88,10 +88,10 @@ const AvatarAndStats = (props) => (
       </Link>
     </Sidebar.AddOnContent>
   </Sidebar.AddOn>
-);
+)
 
 AvatarAndStats.propTypes = {
   colorSidebar: PropTypes.bool
-};
+}
 
-export default AvatarAndStats;
+export default AvatarAndStats

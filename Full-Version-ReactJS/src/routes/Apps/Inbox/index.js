@@ -1,3 +1,3 @@
-import InboxContainer from './InboxContainer';
+import InboxContainer from './InboxContainer'
 
-export default InboxContainer;
+export default InboxContainer

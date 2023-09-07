@@ -1,10 +1,10 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const { ResponsiveContainer, BarChart, Bar, CartesianGrid, Tooltip, Legend, YAxis, XAxis } =
-  Charts.Recharts;
+  Charts.Recharts
 
-import { dataGender } from './../../data';
+import { dataGender } from './../../data'
 
 const MixBarChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -19,6 +19,6 @@ const MixBarChart = (props) => (
       <Bar dataKey="uv" fill="#86B34D" />
     </BarChart>
   </ResponsiveContainer>
-);
+)
 
-export default MixBarChart;
+export default MixBarChart

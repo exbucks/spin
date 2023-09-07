@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
 
-import { Modal, Button, FormControl, InputGroup } from 'components';
+import { Modal, Button, FormControl, InputGroup } from 'components'
 
-import treeRandomizer from 'modules/treeRandomizer';
-import chatData from 'consts/data/app-chat.json';
+import treeRandomizer from 'modules/treeRandomizer'
+import chatData from 'consts/data/app-chat.json'
 
-const messages = treeRandomizer(chatData).Messages;
+const messages = treeRandomizer(chatData).Messages
 
-import { Chat } from 'routes/Apps/components';
+import { Chat } from 'routes/Apps/components'
 
 const ChatModal = (props) => (
   <Modal show={props.visible} onHide={props.onClose}>
@@ -31,15 +31,15 @@ const ChatModal = (props) => (
       </InputGroup>
     </Modal.Footer>
   </Modal>
-);
+)
 
 ChatModal.propTypes = {
   visible: PropTypes.bool,
   onClose: PropTypes.func
-};
+}
 
 ChatModal.defaultProps = {
   onClose: () => {}
-};
+}
 
-export default ChatModal;
+export default ChatModal

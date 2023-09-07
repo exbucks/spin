@@ -1,3 +1,3 @@
-import Attachments from './Attachments';
+import Attachments from './Attachments'
 
-export default Attachments;
+export default Attachments

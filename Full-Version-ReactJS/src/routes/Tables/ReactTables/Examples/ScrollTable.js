@@ -1,10 +1,10 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
 const ScrollTable = () => {
-  const data = Array.from(products(['id', 'name', 'price'], 5));
+  const data = Array.from(products(['id', 'name', 'price'], 5))
 
   return (
     <BootstrapTable data={data} height="150" scrollTop={'Bottom'}>
@@ -14,7 +14,7 @@ const ScrollTable = () => {
       <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
       <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
     </BootstrapTable>
-  );
-};
+  )
+}
 
-export default ScrollTable;
+export default ScrollTable

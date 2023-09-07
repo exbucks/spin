@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typeahead } from 'react-bootstrap-typeahead';
+import React from 'react'
+import { Typeahead } from 'react-bootstrap-typeahead'
 
 class CustomSelectionsExample extends React.Component {
   render() {
@@ -11,8 +11,8 @@ class CustomSelectionsExample extends React.Component {
         options={[]}
         placeholder="Type anything..."
       />
-    );
+    )
   }
 }
 
-export default CustomSelectionsExample;
+export default CustomSelectionsExample

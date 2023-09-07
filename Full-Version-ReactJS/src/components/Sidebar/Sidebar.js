@@ -1,35 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Velocity from 'velocity-animate';
-import _ from 'underscore';
-import classNames from 'classnames';
-import { Menu as SidebarMenu } from './components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Velocity from 'velocity-animate'
+import _ from 'underscore'
+import classNames from 'classnames'
+import { Menu as SidebarMenu } from './components'
 
-import classes from './Sidebar.scss';
+import classes from './Sidebar.scss'
 
-import { AffixWrap, ScrollBarContainer } from './../';
+import { AffixWrap, ScrollBarContainer } from './../'
 
-import { SIDEBAR_STYLE_DEFAULT } from 'layouts/DefaultLayout/modules/layout';
+import { SIDEBAR_STYLE_DEFAULT } from 'layouts/DefaultLayout/modules/layout'
 
 // Aggregates SideMenu height changes into one diff for further processing
 class HeightChangeAggregator {
   constructor(aggregateResultCallback) {
-    this.aggrgateTimeout = 5;
-    this.aggregateResultCallback = aggregateResultCallback;
-    this.diffs = [];
-    this.lastRequestId = null;
+    this.aggrgateTimeout = 5
+    this.aggregateResultCallback = aggregateResultCallback
+    this.diffs = []
+    this.lastRequestId = null
   }
 
   handler() {
-    const sumOfDiffs = _.reduce(this.diffs, (mem, val) => mem + val, 0);
-    this.aggregateResultCallback(sumOfDiffs);
-    this.diffs = [];
+    const sumOfDiffs = _.reduce(this.diffs, (mem, val) => mem + val, 0)
+    this.aggregateResultCallback(sumOfDiffs)
+    this.diffs = []
   }
 
   registerHeightChanged(diffValue) {
-    window.cancelAnimationFrame(this.lastRequestId);
-    this.diffs.push(diffValue);
-    this.lastRequestId = window.requestAnimationFrame(() => this.handler());
+    window.cancelAnimationFrame(this.lastRequestId)
+    this.diffs.push(diffValue)
+    this.lastRequestId = window.requestAnimationFrame(() => this.handler())
   }
 }
 
@@ -49,7 +49,7 @@ class Sidebar extends React.Component {
 
     onHeightChange: PropTypes.func,
     onOverlayClosed: PropTypes.func
-  };
+  }
 
   static defaultProps = {
     style: SIDEBAR_STYLE_DEFAULT,
@@ -63,12 +63,12 @@ class Sidebar extends React.Component {
 
     onOverlayClosed: () => {},
     onHeightChange: () => {}
-  };
+  }
 
   animateOverlayOpen(element) {
-    element.style.display = 'block';
+    element.style.display = 'block'
 
-    Velocity(element, 'finish');
+    Velocity(element, 'finish')
     Velocity(
       element,
       {
@@ -78,11 +78,11 @@ class Sidebar extends React.Component {
         duration: this.props.overlayAnimationDuration,
         easing: this.props.overlayAnimationEasingOpen
       }
-    );
+    )
   }
 
   animateOverlayClose(element, completeCallback) {
-    Velocity(element, 'finish');
+    Velocity(element, 'finish')
     Velocity(
       element,
       {
@@ -92,18 +92,18 @@ class Sidebar extends React.Component {
         duration: this.props.overlayAnimationDuration,
         easing: this.props.overlayAnimationEasingOpen,
         complete: () => {
-          element.style.left = 'auto';
-          element.style.display = 'none';
+          element.style.left = 'auto'
+          element.style.display = 'none'
         }
       }
-    );
+    )
   }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.sidebarElement = null;
-    this.heightChangeAggr = new HeightChangeAggregator(this.props.onHeightChange);
+    this.sidebarElement = null
+    this.heightChangeAggr = new HeightChangeAggregator(this.props.onHeightChange)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -115,12 +115,12 @@ class Sidebar extends React.Component {
     ) {
       nextProps.overlayVisible
         ? this.animateOverlayOpen(this.refs.sidebar)
-        : this.animateOverlayClose(this.refs.sidebar, this.props.onOverlayClosed);
+        : this.animateOverlayClose(this.refs.sidebar, this.props.onOverlayClosed)
     }
 
     if (this.props.overlay !== nextProps.overlay) {
       this.refs.sidebar.style.display =
-        !nextProps.overlay || (nextProps.overlay && nextProps.overlayVisible) ? 'block' : 'none';
+        !nextProps.overlay || (nextProps.overlay && nextProps.overlayVisible) ? 'block' : 'none'
     }
   }
 
@@ -130,15 +130,15 @@ class Sidebar extends React.Component {
         return React.cloneElement(child, {
           onHeightChange: (val) => this.heightChangeAggr.registerHeightChanged(val),
           sidebarStyle: this.props.style
-        });
+        })
       }
 
-      return child;
-    });
+      return child
+    })
   }
 
   render() {
-    const otherProps = _.omit(this.props, [..._.keys(Sidebar.propTypes), 'className']);
+    const otherProps = _.omit(this.props, [..._.keys(Sidebar.propTypes), 'className'])
     const sidebarClass = classNames(
       'sidebar',
       {
@@ -146,7 +146,7 @@ class Sidebar extends React.Component {
         [`${classes.fullHeight}`]: this.props.fullHeight
       },
       this.props.className
-    );
+    )
 
     return (
       <AffixWrap offset={this.props.affixOffset} affixAdditionalClass={classes.affixed}>
@@ -166,8 +166,8 @@ class Sidebar extends React.Component {
           </ScrollBarContainer>
         </aside>
       </AffixWrap>
-    );
+    )
   }
 }
 
-export default Sidebar;
+export default Sidebar

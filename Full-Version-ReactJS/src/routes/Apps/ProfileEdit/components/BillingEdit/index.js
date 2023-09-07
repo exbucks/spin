@@ -1,3 +1,3 @@
-import BillingEdit from './BillingEdit.js';
+import BillingEdit from './BillingEdit.js'
 
-export default BillingEdit;
+export default BillingEdit

@@ -1,22 +1,22 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import { Col, Dropdown, DropdownButton } from 'components';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
+import { Col, Dropdown, DropdownButton } from 'components'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
-const PAGE_SIZES = [5, 10, 25, 50];
+const PAGE_SIZES = [5, 10, 25, 50]
 
-const data = Array.from(products(['id', 'name', 'price'], 50));
+const data = Array.from(products(['id', 'name', 'price'], 50))
 
 class SelectAll extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       pageSize: 10
-    };
+    }
   }
 
   createCustomToolbar(props) {
@@ -34,7 +34,7 @@ class SelectAll extends React.Component {
               onSelect={(eKey) => {
                 this.setState({
                   pageSize: PAGE_SIZES[eKey]
-                });
+                })
               }}
             >
               {PAGE_SIZES.map((pageSize, index) => (
@@ -44,11 +44,11 @@ class SelectAll extends React.Component {
           </div>
         </div>
       </Col>
-    );
+    )
   }
 
   createPaginationPanel(props) {
-    const { totalText, pageList } = props.components;
+    const { totalText, pageList } = props.components
 
     return (
       <div>
@@ -58,24 +58,24 @@ class SelectAll extends React.Component {
           })}
         </Col>
       </div>
-    );
+    )
   }
 
-  onSelectAll = (isSelected) => (isSelected ? data.map((row) => row.id) : []);
+  onSelectAll = (isSelected) => (isSelected ? data.map((row) => row.id) : [])
 
   render() {
     const selectRowProp = {
       mode: 'checkbox',
       clickToSelect: true,
       onSelectAll: this.onSelectAll
-    };
+    }
 
     const options = {
       toolBar: this.createCustomToolbar.bind(this),
       paginationPanel: this.createPaginationPanel,
       sizePerPage: this.state.pageSize,
       paginationShowsTotal: true
-    };
+    }
 
     return (
       <BootstrapTable
@@ -91,8 +91,8 @@ class SelectAll extends React.Component {
         <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
         <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default SelectAll;
+export default SelectAll

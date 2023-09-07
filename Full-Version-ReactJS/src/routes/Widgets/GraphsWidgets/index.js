@@ -1,3 +1,3 @@
-import GraphsWidgetsContainer from './GraphsWidgetsContainer';
+import GraphsWidgetsContainer from './GraphsWidgetsContainer'
 
-export default GraphsWidgetsContainer;
+export default GraphsWidgetsContainer

@@ -1,3 +1,3 @@
-import InvoiceContainer from './Invoice';
+import InvoiceContainer from './Invoice'
 
-export default InvoiceContainer;
+export default InvoiceContainer

@@ -1,3 +1,3 @@
-import MoneyMap from './MoneyMap';
+import MoneyMap from './MoneyMap'
 
-export default MoneyMap;
+export default MoneyMap

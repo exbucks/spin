@@ -1,4 +1,4 @@
-import MessagesDropdown from './MessagesDropdown';
-import NotificationsDropdown from './NotificationsDropdown';
+import MessagesDropdown from './MessagesDropdown'
+import NotificationsDropdown from './NotificationsDropdown'
 
-export { MessagesDropdown, NotificationsDropdown };
+export { MessagesDropdown, NotificationsDropdown }

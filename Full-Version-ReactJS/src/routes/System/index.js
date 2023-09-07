@@ -1,3 +1,3 @@
-import SystemContainer from './SystemContainer';
+import SystemContainer from './SystemContainer'
 
-export default SystemContainer;
+export default SystemContainer

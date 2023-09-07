@@ -1,8 +1,8 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
 
-import { Swatch } from 'react-color/lib/components/common';
+import { Swatch } from 'react-color/lib/components/common'
 
 export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
   const styles = reactCSS({
@@ -22,7 +22,7 @@ export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
         clear: 'both'
       }
     }
-  });
+  })
 
   return (
     <div style={styles.swatches}>
@@ -40,7 +40,7 @@ export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
       ))}
       <div style={styles.clear} />
     </div>
-  );
-};
+  )
+}
 
-export default BlockSwatches;
+export default BlockSwatches

@@ -1,16 +1,16 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import numeral from 'numeral';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import numeral from 'numeral'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
 
-import { Media, ListGroup, CollapsablePanel, AvatarIcon, Button } from 'components';
+import { Media, ListGroup, CollapsablePanel, AvatarIcon, Button } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Attachments.scss';
+import classes from './Attachments.scss'
 
 const attachments = _.map(
   [
@@ -70,7 +70,7 @@ const attachments = _.map(
     size: Math.random() * 1000,
     date: faker.date.recent()
   })
-);
+)
 
 const Attachments = (panelProps) => (
   <CollapsablePanel
@@ -116,6 +116,6 @@ const Attachments = (panelProps) => (
       ))}
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Attachments;
+export default Attachments

@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Footer = (props) => (
   <footer>
@@ -12,10 +12,10 @@ export const Footer = (props) => (
       </p>
     </div>
   </footer>
-);
+)
 
 Footer.propTypes = {
   container: PropTypes.string
-};
+}
 
-export default Footer;
+export default Footer

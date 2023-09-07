@@ -1,10 +1,10 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import map from 'lodash/map';
-import * as material from 'material-colors';
+import React from 'react'
+import reactCSS from 'reactcss'
+import map from 'lodash/map'
+import * as material from 'material-colors'
 
-import { ColorWrap } from 'react-color/lib/components/common';
-import CircleSwatch from './CircleSwatch';
+import { ColorWrap } from 'react-color/lib/components/common'
+import CircleSwatch from './CircleSwatch'
 
 export const Circle = ({
   width,
@@ -25,9 +25,9 @@ export const Circle = ({
         marginBottom: -circleSpacing
       }
     }
-  });
+  })
 
-  const handleChange = (hexCode, e) => onChange({ hex: hexCode, source: 'hex' }, e);
+  const handleChange = (hexCode, e) => onChange({ hex: hexCode, source: 'hex' }, e)
 
   return (
     <div style={styles.card} className="circle-picker">
@@ -43,8 +43,8 @@ export const Circle = ({
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
 Circle.defaultProps = {
   width: '252px',
@@ -70,6 +70,6 @@ Circle.defaultProps = {
     material.brown['500'],
     material.blueGrey['500']
   ]
-};
+}
 
-export default ColorWrap(Circle);
+export default ColorWrap(Circle)

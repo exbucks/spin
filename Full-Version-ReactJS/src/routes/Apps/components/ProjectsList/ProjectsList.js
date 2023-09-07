@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
 
-import { Nav, NavItem, Badge } from 'components';
+import { Nav, NavItem, Badge } from 'components'
 
-import classes from './ProjectsList.scss';
+import classes from './ProjectsList.scss'
 
 const ProjectsList = (props) => {
-  const { items, projectSelected } = props;
-  const otherProps = _.omit(props, 'items', 'projectSelected');
+  const { items, projectSelected } = props
+  const otherProps = _.omit(props, 'items', 'projectSelected')
 
   return (
     <div {...otherProps}>
@@ -19,7 +19,7 @@ const ProjectsList = (props) => {
             className={classes.flexSpaceBetween}
             key={index}
             onClick={() => {
-              projectSelected();
+              projectSelected()
             }}
           >
             <div>
@@ -38,16 +38,16 @@ const ProjectsList = (props) => {
         </NavItem>
       </Nav>
     </div>
-  );
-};
+  )
+}
 
 ProjectsList.propTypes = {
   items: PropTypes.array.isRequired,
   projectSelected: PropTypes.func
-};
+}
 
 ProjectsList.defaultProps = {
   projectSelected: () => {}
-};
+}
 
-export default ProjectsList;
+export default ProjectsList

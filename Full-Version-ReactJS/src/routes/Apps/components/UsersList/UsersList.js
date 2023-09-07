@@ -1,29 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { Nav, NavItem, Media, OverlayTrigger, Tooltip, AvatarImage } from 'components';
+import { Nav, NavItem, Media, OverlayTrigger, Tooltip, AvatarImage } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const statusToColor = (status) => {
   switch (status) {
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const UsersList = (props) => {
-  const { items } = props;
-  const otherProps = _.omit(props, 'items');
+  const { items } = props
+  const otherProps = _.omit(props, 'items')
 
   return (
     <Nav {...otherProps}>
@@ -60,11 +60,11 @@ const UsersList = (props) => {
         </span>
       </NavItem>
     </Nav>
-  );
-};
+  )
+}
 
 UsersList.propTypes = {
   items: PropTypes.array.isRequired
-};
+}
 
-export default UsersList;
+export default UsersList

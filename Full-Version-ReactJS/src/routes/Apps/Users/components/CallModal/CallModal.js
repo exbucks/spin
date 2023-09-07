@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import { Modal, Button, AvatarImage } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import { Modal, Button, AvatarImage } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const callerData = {
   Avatar: faker.image.avatar(),
   Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   Position: faker.person.jobTitle()
-};
+}
 
 const CallModal = (props) => (
   <Modal show={props.visible} onHide={props.onClose} bsSize="small">
@@ -38,15 +38,15 @@ const CallModal = (props) => (
       </Button>
     </Modal.Footer>
   </Modal>
-);
+)
 
 CallModal.propTypes = {
   visible: PropTypes.bool,
   onClose: PropTypes.func
-};
+}
 
 CallModal.defaultProps = {
   onClose: () => {}
-};
+}
 
-export default CallModal;
+export default CallModal

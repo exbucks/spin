@@ -1,5 +1,5 @@
-import reactCss from 'reactcss';
-import { Colors } from 'consts';
+import reactCss from 'reactcss'
+import { Colors } from 'consts'
 
 const style = reactCss({
   default: {
@@ -129,6 +129,6 @@ const style = reactCss({
       position: 'relative'
     }
   }
-});
+})
 
-export default style;
+export default style

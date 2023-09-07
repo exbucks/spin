@@ -1,36 +1,36 @@
-import React from 'react';
-import _ from 'underscore';
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import React from 'react'
+import _ from 'underscore'
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { Row, Col, ColorPicker } from 'components';
+import { Row, Col, ColorPicker } from 'components'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './reactColor.scss';
+import classes from './reactColor.scss'
 
 class ReactColorContainer extends RoutedComponent {
   constructor() {
-    super();
+    super()
 
     this.state = {
       h: 150,
       s: 0.5,
       l: 0.2,
       a: 1
-    };
+    }
 
-    this.handleChangeComplete = this.handleChangeComplete.bind(this);
+    this.handleChangeComplete = this.handleChangeComplete.bind(this)
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   handleChangeComplete(data) {
     if (data.hsl !== this.state) {
-      this.setState(data.hsl);
+      this.setState(data.hsl)
     }
   }
 
@@ -195,8 +195,8 @@ class ReactColorContainer extends RoutedComponent {
                 </Row>
                 */}
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ReactColorContainer);
+export default connect()(ReactColorContainer)

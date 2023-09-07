@@ -1,5 +1,5 @@
-import React from 'react';
-import DualListBox from 'react-dual-listbox';
+import React from 'react'
+import DualListBox from 'react-dual-listbox'
 
 const options = [
   {
@@ -22,19 +22,19 @@ const options = [
       { value: 'callisto', label: 'Callisto' }
     ]
   }
-];
+]
 
 class PreserveSelectOrderExample extends React.Component {
   constructor() {
-    super();
+    super()
 
-    this.state = { selected: ['io', 'luna'] };
+    this.state = { selected: ['io', 'luna'] }
 
-    this.onChange = this.onChange.bind(this);
+    this.onChange = this.onChange.bind(this)
   }
 
   onChange(selected) {
-    this.setState({ selected });
+    this.setState({ selected })
   }
 
   render() {
@@ -46,7 +46,7 @@ class PreserveSelectOrderExample extends React.Component {
         selected={this.state.selected}
         onChange={this.onChange}
       />
-    );
+    )
   }
 }
-export default PreserveSelectOrderExample;
+export default PreserveSelectOrderExample

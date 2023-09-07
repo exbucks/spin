@@ -1,3 +1,3 @@
-import AddOnContent from './AddOnContent';
+import AddOnContent from './AddOnContent'
 
-export default AddOnContent;
+export default AddOnContent

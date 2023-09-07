@@ -1,36 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Row, Col, TreeNavigator, Divider, GalleryThumbnail } from 'components';
+import { Row, Col, TreeNavigator, Divider, GalleryThumbnail } from 'components'
 
-import * as Charts from './charts';
+import * as Charts from './charts'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 // Thumbnail Images
-import thumbSingleLine from 'static/highstock-thumbs/highstock-single-line-series.png';
-import thumbTwoPanesCandlestick from 'static/highstock-thumbs/highstock-two-panes-candlestick-and-volume.png';
-import thumbCompareMultipleSeries from 'static/highstock-thumbs/highstock-compare-multiple-series.png';
-import thumbPointsWithDataGrouping from 'static/highstock-thumbs/highstock-52000-points-with-data-grouping.png';
-import thumbAsyncLoading from 'static/highstock-thumbs/highstock-17million-points-with-async-loading.png';
-import thumbIntradayArea from 'static/highstock-thumbs/highstock-intraday-area.png';
-import thumbIntradayWithBreaks from 'static/highstock-thumbs/highstock-Intraday-with-breaks.png';
-import thumbIntradayCandlestick from 'static/highstock-thumbs/highstock-intraday-candlestick.png';
-import thumbFlagsMarkingEvents from 'static/highstock-thumbs/highstock-flags-marking-events.png';
-import thumbDynamicData from 'static/highstock-thumbs/highstock-Dynamically-updated-data.png';
+import thumbSingleLine from 'static/highstock-thumbs/highstock-single-line-series.png'
+import thumbTwoPanesCandlestick from 'static/highstock-thumbs/highstock-two-panes-candlestick-and-volume.png'
+import thumbCompareMultipleSeries from 'static/highstock-thumbs/highstock-compare-multiple-series.png'
+import thumbPointsWithDataGrouping from 'static/highstock-thumbs/highstock-52000-points-with-data-grouping.png'
+import thumbAsyncLoading from 'static/highstock-thumbs/highstock-17million-points-with-async-loading.png'
+import thumbIntradayArea from 'static/highstock-thumbs/highstock-intraday-area.png'
+import thumbIntradayWithBreaks from 'static/highstock-thumbs/highstock-Intraday-with-breaks.png'
+import thumbIntradayCandlestick from 'static/highstock-thumbs/highstock-intraday-candlestick.png'
+import thumbFlagsMarkingEvents from 'static/highstock-thumbs/highstock-flags-marking-events.png'
+import thumbDynamicData from 'static/highstock-thumbs/highstock-Dynamically-updated-data.png'
 
-import thumbSpline from 'static/highstock-thumbs/highstock-spline.png';
-import thumbStepLine from 'static/highstock-thumbs/highstock-step-line.png';
-import thumbArea from 'static/highstock-thumbs/highstock-area.png';
-import thumbAreaSpline from 'static/highstock-thumbs/highstock-area-spline.png';
-import thumbAreaRange from 'static/highstock-thumbs/highstock-area-range.png';
-import thumbSplineRange from 'static/highstock-thumbs/highstock-area-spline-range.png';
-import thumbCandlestick from 'static/highstock-thumbs/highstock-candlestick.png';
-import thumbOhlc from 'static/highstock-thumbs/highstock-ohlc.png';
-import thumbColumn from 'static/highstock-thumbs/highstock-column.png';
-import thumbColumnRange from 'static/highstock-thumbs/highstock-column-range.png';
-import thumbPointMarkersOnly from 'static/highstock-thumbs/highstock-point-markers-only.png';
+import thumbSpline from 'static/highstock-thumbs/highstock-spline.png'
+import thumbStepLine from 'static/highstock-thumbs/highstock-step-line.png'
+import thumbArea from 'static/highstock-thumbs/highstock-area.png'
+import thumbAreaSpline from 'static/highstock-thumbs/highstock-area-spline.png'
+import thumbAreaRange from 'static/highstock-thumbs/highstock-area-range.png'
+import thumbSplineRange from 'static/highstock-thumbs/highstock-area-spline-range.png'
+import thumbCandlestick from 'static/highstock-thumbs/highstock-candlestick.png'
+import thumbOhlc from 'static/highstock-thumbs/highstock-ohlc.png'
+import thumbColumn from 'static/highstock-thumbs/highstock-column.png'
+import thumbColumnRange from 'static/highstock-thumbs/highstock-column-range.png'
+import thumbPointMarkersOnly from 'static/highstock-thumbs/highstock-point-markers-only.png'
 
 const chartsMap = {
   'single-line-series': Charts.SingleLineSeries,
@@ -54,7 +54,7 @@ const chartsMap = {
   column: Charts.Column,
   'column-range': Charts.ColumnRange,
   'point-markers-only': Charts.PointMarkersOnly
-};
+}
 
 const renderGalleryItem = (name, link, image) => (
   <Col md={6}>
@@ -67,7 +67,7 @@ const renderGalleryItem = (name, link, image) => (
       </GalleryThumbnail>
     </Link>
   </Col>
-);
+)
 
 const renderGallery = () => (
   <div>
@@ -135,17 +135,17 @@ const renderGallery = () => (
       )}
     </Row>
   </div>
-);
+)
 
 class HighstockContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
-    const Chart = chartsMap[this.props.routeParams.chartId] || null;
+    const Chart = chartsMap[this.props.routeParams.chartId] || null
 
     return (
       <Row className="m-t-3">
@@ -201,8 +201,8 @@ class HighstockContainer extends RoutedComponent {
           </TreeNavigator>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(HighstockContainer);
+export default connect()(HighstockContainer)

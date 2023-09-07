@@ -6,7 +6,7 @@ const data = [
   { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
   { name: 'Page F', uv: 2390, pv: 3800, amt: 2500 },
   { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 }
-];
+]
 
 const dataGender = [
   { name: 'Page A', uv: 4000, female: 2400, male: 2400 },
@@ -16,7 +16,7 @@ const dataGender = [
   { name: 'Page E', uv: 1890, female: 4800, male: 2181 },
   { name: 'Page F', uv: 2390, female: 3800, male: 2500 },
   { name: 'Page G', uv: 3490, female: 4300, male: 2100 }
-];
+]
 
 const dataPositiveNegative = [
   { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
@@ -26,7 +26,7 @@ const dataPositiveNegative = [
   { name: 'Page E', uv: -1890, pv: 4800, amt: 2181 },
   { name: 'Page F', uv: 2390, pv: -3800, amt: 2500 },
   { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 }
-];
+]
 
 const dataPercentArea = [
   { month: '2015.01', a: 4000, b: 2400, c: 2400 },
@@ -36,7 +36,7 @@ const dataPercentArea = [
   { month: '2015.05', a: 1890, b: 4800, c: 2181 },
   { month: '2015.06', a: 2390, b: 3800, c: 2500 },
   { month: '2015.07', a: 3490, b: 4300, c: 2100 }
-];
+]
 
 const dataPieChart = {
   data01: [
@@ -58,7 +58,7 @@ const dataPieChart = {
     { name: 'D1', value: 150 },
     { name: 'D2', value: 50 }
   ]
-};
+}
 
 const dataRadarChart = [
   { subject: 'Math', A: 120, B: 110, fullMark: 150 },
@@ -67,7 +67,7 @@ const dataRadarChart = [
   { subject: 'Geography', A: 99, B: 100, fullMark: 150 },
   { subject: 'Physics', A: 85, B: 90, fullMark: 150 },
   { subject: 'History', A: 65, B: 85, fullMark: 150 }
-];
+]
 
 const dataTreeMap = [
   {
@@ -200,7 +200,7 @@ const dataTreeMap = [
       { name: 'SortOperator', size: 2023 }
     ]
   }
-];
+]
 
 export {
   data,
@@ -210,4 +210,4 @@ export {
   dataPieChart,
   dataRadarChart,
   dataTreeMap
-};
+}

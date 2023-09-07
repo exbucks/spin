@@ -1,8 +1,8 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import moment from 'moment';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import moment from 'moment'
+import { faker } from '@faker-js/faker'
 import {
   Row,
   Col,
@@ -18,24 +18,24 @@ import {
   FormControl,
   Divider,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import chatData from 'consts/data/app-chat.json';
+import { Colors } from 'consts'
+import chatData from 'consts/data/app-chat.json'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { SearchBox, Chat } from './../components';
+import { SearchBox, Chat } from './../components'
 
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const usersData = [
   {
@@ -90,7 +90,7 @@ const usersData = [
     position: faker.person.jobTitle(),
     statusColor: Colors.grayLighter
   }
-];
+]
 
 const updatesData = [
   {
@@ -126,7 +126,7 @@ const updatesData = [
     title: faker.hacker.phrase(),
     date: faker.date.recent()
   }
-];
+]
 
 // ------------------------------------
 // Sub Elements
@@ -154,7 +154,7 @@ const renderUsers = () => (
       </NavItem>
     ))}
   </Nav>
-);
+)
 
 const renderUpdates = () => (
   <Nav bsStyle="pills" stacked activeKey={0} className="m-b-2">
@@ -170,22 +170,22 @@ const renderUpdates = () => (
       </Media>
     ))}
   </Nav>
-);
+)
 
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class ChatContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(chatData) };
+    this.state = { data: getData(chatData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -272,8 +272,8 @@ class ChatContainer extends RoutedComponent {
           </Panel>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(ChatContainer);
+export default connect()(ChatContainer)

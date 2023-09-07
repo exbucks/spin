@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const getJson = (cb) => {
   require.ensure([], (require) => {
@@ -17,10 +17,10 @@ const getJson = (cb) => {
         name: 'GOOG',
         data: require('consts/data/highstock/data-goog-c.json').data
       }
-    ];
-    cb(data);
-  });
-};
+    ]
+    cb(data)
+  })
+}
 
 const getConfig = (data) => ({
   rangeSelector: {
@@ -30,7 +30,7 @@ const getConfig = (data) => ({
   yAxis: {
     labels: {
       formatter: function () {
-        return (this.value > 0 ? ' + ' : '') + this.value + '%';
+        return (this.value > 0 ? ' + ' : '') + this.value + '%'
       }
     },
     plotLines: [
@@ -54,12 +54,12 @@ const getConfig = (data) => ({
     valueDecimals: 2
   },
   series: data
-});
+})
 
 const CompareMultiple = () => (
   <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
     <Charts.HighStock />
   </Charts.AsyncChart>
-);
+)
 
-export default CompareMultiple;
+export default CompareMultiple

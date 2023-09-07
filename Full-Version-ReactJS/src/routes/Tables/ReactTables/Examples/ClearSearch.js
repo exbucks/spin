@@ -1,13 +1,13 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { Col, Row, InputGroup } from 'components';
+import { Col, Row, InputGroup } from 'components'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
-const data = Array.from(products(['id', 'name', 'price'], 5));
+const data = Array.from(products(['id', 'name', 'price'], 5))
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
 const createCustomSearchField = (props) => {
   return (
@@ -16,11 +16,11 @@ const createCustomSearchField = (props) => {
       defaultValue={props.defaultSearch}
       placeholder={props.searchPlaceholder}
     />
-  );
-};
+  )
+}
 
 const createCustomToolbar = (props) => {
-  const { searchField, clearBtn } = props.components;
+  const { searchField, clearBtn } = props.components
 
   return (
     <div>
@@ -36,14 +36,14 @@ const createCustomToolbar = (props) => {
         </div>
       </Col>
     </div>
-  );
-};
+  )
+}
 
 const options = {
   clearSearch: true,
   searchField: createCustomSearchField,
   toolBar: createCustomToolbar
-};
+}
 
 const ClearSearch = () => (
   <BootstrapTable data={data} options={options} search>
@@ -53,6 +53,6 @@ const ClearSearch = () => (
     <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
     <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
   </BootstrapTable>
-);
+)
 
-export default ClearSearch;
+export default ClearSearch

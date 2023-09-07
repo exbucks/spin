@@ -1,21 +1,21 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { Row, Col, Table, Charts } from 'components';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { Row, Col, Table, Charts } from 'components'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-import { Colors } from 'consts';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
+import { Colors } from 'consts'
 
-import classes from './Sparklines.scss';
+import classes from './Sparklines.scss'
 
-const piesData = [15, 60, 35, 15, 70, 40];
+const piesData = [15, 60, 35, 15, 70, 40]
 
 class SparklinesContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -419,8 +419,8 @@ class SparklinesContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(SparklinesContainer);
+export default connect()(SparklinesContainer)

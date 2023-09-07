@@ -1,26 +1,26 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import treeRandomizer from './../../modules/treeRandomizer';
-import renderSection from './../../modules/sectionRender';
-import moment from 'moment';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import treeRandomizer from './../../modules/treeRandomizer'
+import renderSection from './../../modules/sectionRender'
+import moment from 'moment'
+import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 
-import { Panel, Button, Table, Row, Col, ListGroup, ListGroupItem } from 'components';
+import { Panel, Button, Table, Row, Col, ListGroup, ListGroupItem } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './Financial.scss';
+import classes from './Financial.scss'
 
-import { MoneyMap, PerformanceChart } from './components';
+import { MoneyMap, PerformanceChart } from './components'
 
-import financialData from './../../consts/data/financial.json';
+import financialData from './../../consts/data/financial.json'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 const generateMoneyMapChartData = (length = 14) => {
   const streams = [
     {
@@ -39,22 +39,22 @@ const generateMoneyMapChartData = (length = 14) => {
       name: 'Secure Holdings',
       data: []
     }
-  ];
+  ]
 
   for (let i = 0; i < length; i++) {
-    let value = 100;
+    let value = 100
     for (let j = 0; j < streams.length; j++) {
-      const val = j === streams.length - 1 ? value : Math.random() * value;
-      value -= val;
+      const val = j === streams.length - 1 ? value : Math.random() * value
+      value -= val
       streams[j].data[length - 1 - i] = {
         x: moment().utc().subtract(i, 'days').valueOf(),
         y: val
-      };
+      }
     }
   }
 
-  return streams;
-};
+  return streams
+}
 
 const dashboardSettings = [
   { name: 'My Cash', enabled: true },
@@ -66,9 +66,9 @@ const dashboardSettings = [
   { name: 'Sales Lead', enabled: true },
   { name: 'Q & A', enabled: true },
   { name: 'Account Performance', enabled: true }
-];
+]
 
-const moneyMapChartData = generateMoneyMapChartData();
+const moneyMapChartData = generateMoneyMapChartData()
 
 // ------------------------------------
 // Sub Elements
@@ -78,8 +78,8 @@ const renderCashSummary = (data) => {
     return classNames('fa', 'fa-fw', {
       [`${classes.cashSummaryDiffInc} fa-caret-up`]: value > 0,
       [`${classes.cashSummaryDiffDec} fa-caret-down`]: value < 0
-    });
-  };
+    })
+  }
 
   return (
     <div className={classes.cashSummary}>
@@ -109,8 +109,8 @@ const renderCashSummary = (data) => {
         ))}
       </Row>
     </div>
-  );
-};
+  )
+}
 
 const renderMoneyMapChart = (data) => (
   <div>
@@ -119,7 +119,7 @@ const renderMoneyMapChart = (data) => (
     </div>
     <MoneyMap data={data} />
   </div>
-);
+)
 
 const renderRecentFunding = (data) => (
   <div>
@@ -158,7 +158,7 @@ const renderRecentFunding = (data) => (
       </Table>
     </Panel>
   </div>
-);
+)
 
 const renderInvoices = (data) => (
   <div>
@@ -201,7 +201,7 @@ const renderInvoices = (data) => (
       </Table>
     </Panel>
   </div>
-);
+)
 
 const renderPerformanceChart = (data) => {
   return (
@@ -213,8 +213,8 @@ const renderPerformanceChart = (data) => {
         <PerformanceChart data={data} />
       </Panel>
     </div>
-  );
-};
+  )
+}
 
 const renderDashboardSettings = (data) => (
   <div>
@@ -232,23 +232,23 @@ const renderDashboardSettings = (data) => (
       </ListGroup>
     </Panel>
   </div>
-);
+)
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class FinancialContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = Object.assign({}, this.state, getData(financialData), {
       dashboardSettings: dashboardSettings
-    });
+    })
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -269,8 +269,8 @@ class FinancialContainer extends RoutedComponent {
           <Col lg={3}>{renderSection(renderDashboardSettings, this.state.dashboardSettings)}</Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(FinancialContainer);
+export default connect()(FinancialContainer)

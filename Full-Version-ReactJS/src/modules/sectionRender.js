@@ -1,25 +1,25 @@
-import _ from 'underscore';
+import _ from 'underscore'
 
-const funcs = [];
+const funcs = []
 
 const sectionRender = (funcRender, state) => {
-  let func = _.find(funcs, (f) => f.function === funcRender);
+  let func = _.find(funcs, (f) => f.function === funcRender)
 
   if (!func) {
     func = {
       function: funcRender,
       lastState: state,
       rendered: funcRender(state)
-    };
-    funcs.push(func);
+    }
+    funcs.push(func)
   }
 
   if (func.lastState !== state) {
-    func.rendered = funcRender(state);
-    func.lastState = state;
+    func.rendered = funcRender(state)
+    func.lastState = state
   }
 
-  return func.rendered;
-};
+  return func.rendered
+}
 
-export default sectionRender;
+export default sectionRender

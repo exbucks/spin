@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Divider } from 'components';
+import { Divider } from 'components'
 
 const Contact = {
   phone: faker.phone.phoneNumberFormat(),
@@ -18,7 +18,7 @@ const Contact = {
   city: faker.person.address.city(),
   state: faker.person.address.state(),
   zipCode: faker.person.address.zipCode()
-};
+}
 
 const DetailContact = () => (
   <div>
@@ -75,6 +75,6 @@ const DetailContact = () => (
       <dd className="text-white">{Contact.zipCode}</dd>
     </dl>
   </div>
-);
+)
 
-export default DetailContact;
+export default DetailContact

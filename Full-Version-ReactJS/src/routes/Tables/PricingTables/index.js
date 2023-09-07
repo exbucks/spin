@@ -1,4 +1,4 @@
-import PricingTables, { PricingTable, PricingTableClean } from './PricingTables';
+import PricingTables, { PricingTable, PricingTableClean } from './PricingTables'
 
-export default PricingTables;
-export { PricingTable, PricingTableClean };
+export default PricingTables
+export { PricingTable, PricingTableClean }

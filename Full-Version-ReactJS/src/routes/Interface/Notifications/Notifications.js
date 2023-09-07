@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Row, Col, Panel, Form, FormControl, FormGroup, ControlLabel, Button } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Row, Col, Panel, Form, FormControl, FormGroup, ControlLabel, Button } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout'
 
 class NotificationsContainer extends RoutedComponent {
   static contextTypes = {
     store: PropTypes.object
-  };
+  }
 
   constructor(context, props) {
-    super(context, props);
+    super(context, props)
 
     this.state = {
       title: 'Default Title',
@@ -20,17 +20,17 @@ class NotificationsContainer extends RoutedComponent {
       position: 'tr',
       autoDismiss: 5,
       dismissible: true
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_FLUID
-    };
+    }
   }
 
   formSubmit(ev) {
-    ev.preventDefault();
+    ev.preventDefault()
 
     // const notificationAction = Notifications.show(this.state, this.state.level);
     // this.context.store.dispatch(notificationAction);
@@ -151,8 +151,8 @@ class NotificationsContainer extends RoutedComponent {
           </Panel>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(NotificationsContainer);
+export default connect()(NotificationsContainer)

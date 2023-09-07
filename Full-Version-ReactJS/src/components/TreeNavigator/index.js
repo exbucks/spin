@@ -1,6 +1,6 @@
-import TreeNavigator from './TreeNavigator';
-import TreeNavigatorBranch from './TreeNavigatorBranch';
+import TreeNavigator from './TreeNavigator'
+import TreeNavigatorBranch from './TreeNavigatorBranch'
 
-TreeNavigator.Branch = TreeNavigatorBranch;
+TreeNavigator.Branch = TreeNavigatorBranch
 
-export default TreeNavigator;
+export default TreeNavigator

@@ -1,3 +1,3 @@
-import IntradayWithBreaks from './IntradayWithBreaks';
+import IntradayWithBreaks from './IntradayWithBreaks'
 
-export default IntradayWithBreaks;
+export default IntradayWithBreaks

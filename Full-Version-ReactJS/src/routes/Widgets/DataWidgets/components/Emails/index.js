@@ -1,3 +1,3 @@
-import Emails from './Emails';
+import Emails from './Emails'
 
-export default Emails;
+export default Emails

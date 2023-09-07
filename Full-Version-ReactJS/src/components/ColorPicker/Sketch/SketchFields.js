@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
 
-import React from 'react';
-import reactCSS from 'reactcss';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import * as color from 'react-color/lib/helpers/color'
 
-import { EditableInput } from 'react-color/lib/components/common';
+import { EditableInput } from 'react-color/lib/components/common'
 
 export const ShetchFields = ({ onChange, rgb, hsl, hex, disableAlpha }) => {
   const styles = reactCSS(
@@ -51,7 +51,7 @@ export const ShetchFields = ({ onChange, rgb, hsl, hex, disableAlpha }) => {
       }
     },
     { disableAlpha }
-  );
+  )
 
   const handleChange = (data, e) => {
     if (data.hex) {
@@ -62,7 +62,7 @@ export const ShetchFields = ({ onChange, rgb, hsl, hex, disableAlpha }) => {
             source: 'hex'
           },
           e
-        );
+        )
     } else if (data.r || data.g || data.b) {
       onChange(
         {
@@ -73,15 +73,15 @@ export const ShetchFields = ({ onChange, rgb, hsl, hex, disableAlpha }) => {
           source: 'rgb'
         },
         e
-      );
+      )
     } else if (data.a) {
       if (data.a < 0) {
-        data.a = 0;
+        data.a = 0
       } else if (data.a > 100) {
-        data.a = 100;
+        data.a = 100
       }
 
-      data.a = data.a / 100;
+      data.a = data.a / 100
       onChange(
         {
           h: hsl.h,
@@ -91,9 +91,9 @@ export const ShetchFields = ({ onChange, rgb, hsl, hex, disableAlpha }) => {
           source: 'rgb'
         },
         e
-      );
+      )
     }
-  };
+  }
 
   return (
     <div style={styles.fields} className="flexbox-fix">
@@ -146,7 +146,7 @@ export const ShetchFields = ({ onChange, rgb, hsl, hex, disableAlpha }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ShetchFields;
+export default ShetchFields

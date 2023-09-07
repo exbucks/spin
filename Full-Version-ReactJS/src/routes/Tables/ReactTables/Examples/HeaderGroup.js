@@ -1,22 +1,22 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable';
-import { ButtonGroup, Row, Col, Button } from 'components';
-import { products } from './../utils';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'components/ReactTable'
+import { ButtonGroup, Row, Col, Button } from 'components'
+import { products } from './../utils'
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
 const selectRow = {
   mode: 'checkbox',
   bgColor: 'rgb(238, 193, 213)'
-};
+}
 
 const cellEdit = {
   mode: 'click',
   blurToSave: true
-};
+}
 
 const createCustomToolbar = (props) => {
-  const { btnGroup } = props.components;
+  const { btnGroup } = props.components
 
   return (
     <div>
@@ -27,8 +27,8 @@ const createCustomToolbar = (props) => {
         <div className={classes.actions}>{btnGroup}</div>
       </Col>
     </div>
-  );
-};
+  )
+}
 
 const createCustomButtonGroup = (props) => (
   <ButtonGroup bsSize="sm">
@@ -37,7 +37,7 @@ const createCustomButtonGroup = (props) => (
     {props.deleteBtn}
     {props.insertBtn}
   </ButtonGroup>
-);
+)
 
 const options = {
   toolBar: createCustomToolbar,
@@ -45,7 +45,7 @@ const options = {
   insertBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       Insert <i className="fa fa-fw fa-plus text-success"></i>
@@ -54,7 +54,7 @@ const options = {
   deleteBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       Delete
@@ -63,18 +63,18 @@ const options = {
   exportCSVBtn: (onClick) => (
     <Button
       onClick={() => {
-        onClick();
+        onClick()
       }}
     >
       Export
     </Button>
   )
-};
+}
 
 const HeaderGroup = () => {
   const data = Array.from(
     products(['id', 'name', 'price', 'coupon', 'status', 'customer', 'order'], 5)
-  );
+  )
 
   return (
     <BootstrapTable
@@ -119,7 +119,7 @@ const HeaderGroup = () => {
         order
       </TableHeaderColumn>
     </BootstrapTable>
-  );
-};
+  )
+}
 
-export default HeaderGroup;
+export default HeaderGroup

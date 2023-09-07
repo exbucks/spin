@@ -1,3 +1,3 @@
-import TooltipsAndPopoversContainer from './TooltipsAndPopovers';
+import TooltipsAndPopoversContainer from './TooltipsAndPopovers'
 
-export default TooltipsAndPopoversContainer;
+export default TooltipsAndPopoversContainer

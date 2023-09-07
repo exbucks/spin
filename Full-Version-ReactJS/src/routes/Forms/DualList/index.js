@@ -1,3 +1,3 @@
-import DualListContainer from './DualListContainer';
+import DualListContainer from './DualListContainer'
 
-export default DualListContainer;
+export default DualListContainer

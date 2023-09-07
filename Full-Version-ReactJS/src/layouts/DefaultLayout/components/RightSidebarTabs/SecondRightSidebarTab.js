@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import num from 'numeral';
-import { ListGroup, ListGroupItem, Row, Col, Grid, Charts, SlimProgressBar } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import num from 'numeral'
+import { ListGroup, ListGroupItem, Row, Col, Grid, Charts, SlimProgressBar } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './RightSidebar.scss';
+import classes from './RightSidebar.scss'
 
 const renderStatistics = (stats) => (
   <div>
@@ -29,7 +29,7 @@ const renderStatistics = (stats) => (
       </Row>
     </Grid>
   </div>
-);
+)
 
 const renderNetwork = (network) => (
   <div>
@@ -43,7 +43,7 @@ const renderNetwork = (network) => (
       </span>
     </p>
   </div>
-);
+)
 
 const renderSystemTable = (system) => (
   <div className="m-t-2">
@@ -62,7 +62,7 @@ const renderSystemTable = (system) => (
       ))}
     </ListGroup>
   </div>
-);
+)
 
 const renderLanTable = (lan) => (
   <div className="m-t-2">
@@ -98,7 +98,7 @@ const renderLanTable = (lan) => (
       </ListGroupItem>
     </ListGroup>
   </div>
-);
+)
 
 const renderMachines = (machines) => (
   <ListGroup>
@@ -124,7 +124,7 @@ const renderMachines = (machines) => (
       </ListGroupItem>
     ))}
   </ListGroup>
-);
+)
 
 const SecondRightSidebarTab = (props) => (
   <div>
@@ -134,10 +134,10 @@ const SecondRightSidebarTab = (props) => (
     {renderLanTable(props.data.SystemStatus.Lan)}
     {renderMachines(props.data.SystemStatus.VirtualMachines)}
   </div>
-);
+)
 
 SecondRightSidebarTab.propTypes = {
   data: PropTypes.object.isRequired
-};
+}
 
-export default SecondRightSidebarTab;
+export default SecondRightSidebarTab

@@ -1,7 +1,7 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table, ButtonGroup, Button, SlimProgressBar } from 'components';
+import { Table, ButtonGroup, Button, SlimProgressBar } from 'components'
 
 const BorderedExampleTable = () => (
   <Table bordered>
@@ -92,6 +92,6 @@ const BorderedExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default BorderedExampleTable;
+export default BorderedExampleTable

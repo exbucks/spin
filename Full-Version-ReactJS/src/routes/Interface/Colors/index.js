@@ -1,3 +1,3 @@
-import ColorsContainer from './Colors.js';
+import ColorsContainer from './Colors.js'
 
-export default ColorsContainer;
+export default ColorsContainer

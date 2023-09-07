@@ -1,3 +1,3 @@
-import PercentAreaChart from './PercentAreaChart';
+import PercentAreaChart from './PercentAreaChart'
 
-export default PercentAreaChart;
+export default PercentAreaChart

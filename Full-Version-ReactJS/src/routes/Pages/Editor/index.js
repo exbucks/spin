@@ -1,3 +1,3 @@
-import EditorContainer from './EditorContainer';
+import EditorContainer from './EditorContainer'
 
-export default EditorContainer;
+export default EditorContainer

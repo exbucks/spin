@@ -1,3 +1,3 @@
-import FaqContainer from './FaqContainer';
+import FaqContainer from './FaqContainer'
 
-export default FaqContainer;
+export default FaqContainer

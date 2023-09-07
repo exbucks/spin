@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Row, Col, Panel, Button, Form, FormGroup, FormControl } from 'components';
+import { Row, Col, Panel, Button, Form, FormGroup, FormControl } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './../Pages.scss';
+import classes from './../Pages.scss'
 
-import logo from 'static/spin-logo-inverted.png';
+import logo from 'static/spin-logo-inverted.png'
 
 class LoginContainer extends RoutedComponent {
   getLayoutOptions() {
@@ -18,7 +18,7 @@ class LoginContainer extends RoutedComponent {
       navbarEnabled: false,
       footerEnabled: false,
       headerEnabled: false
-    };
+    }
   }
 
   render() {
@@ -77,8 +77,8 @@ class LoginContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(LoginContainer);
+export default connect()(LoginContainer)

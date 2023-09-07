@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { faker } from '@faker-js/faker'
 
-import { Row, Col, Panel, Button, Form, FormGroup, FormControl, AvatarImage } from 'components';
+import { Row, Col, Panel, Button, Form, FormGroup, FormControl, AvatarImage } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_FLUID } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './../Pages.scss';
+import classes from './../Pages.scss'
 
-import logo from 'static/spin-logo-inverted.png';
+import logo from 'static/spin-logo-inverted.png'
 
 class LockScreenContainer extends RoutedComponent {
   getLayoutOptions() {
@@ -21,7 +21,7 @@ class LockScreenContainer extends RoutedComponent {
       navbarEnabled: false,
       footerEnabled: false,
       headerEnabled: false
-    };
+    }
   }
 
   render() {
@@ -79,8 +79,8 @@ class LockScreenContainer extends RoutedComponent {
           </Row>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(LockScreenContainer);
+export default connect()(LockScreenContainer)

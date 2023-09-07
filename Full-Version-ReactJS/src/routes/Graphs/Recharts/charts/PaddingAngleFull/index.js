@@ -1,3 +1,3 @@
-import PaddingAngleFull from './PaddingAngleFull';
+import PaddingAngleFull from './PaddingAngleFull'
 
-export default PaddingAngleFull;
+export default PaddingAngleFull

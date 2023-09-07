@@ -1,9 +1,9 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, PieChart, Pie, Tooltip } = Charts.Recharts;
+const { ResponsiveContainer, PieChart, Pie, Tooltip } = Charts.Recharts
 
-import { dataPieChart } from './../../data';
+import { dataPieChart } from './../../data'
 
 const DonutChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -12,6 +12,6 @@ const DonutChart = (props) => (
       <Tooltip itemStyle={{ color: '#fff' }} />
     </PieChart>
   </ResponsiveContainer>
-);
+)
 
-export default DonutChart;
+export default DonutChart

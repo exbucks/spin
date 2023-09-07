@@ -1,19 +1,19 @@
-import React from 'react';
-import { Form } from 'components';
+import React from 'react'
+import { Form } from 'components'
 
-import { Typeahead } from 'react-bootstrap-typeahead';
-import options from './../exampleData';
+import { Typeahead } from 'react-bootstrap-typeahead'
+import options from './../exampleData'
 
 class BodyContainerExample extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       bodyContainer: false
-    };
+    }
   }
 
   render() {
-    const { bodyContainer } = this.state;
+    const { bodyContainer } = this.state
 
     return (
       <div>
@@ -41,8 +41,8 @@ class BodyContainerExample extends React.Component {
           Attach menu to document body
         </Form.Check>
       </div>
-    );
+    )
   }
 }
 
-export default BodyContainerExample;
+export default BodyContainerExample

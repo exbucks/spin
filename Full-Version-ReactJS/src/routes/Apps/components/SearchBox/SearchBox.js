@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { FormGroup, InputGroup, FormControl, Button } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { FormGroup, InputGroup, FormControl, Button } from 'components'
 
 const SearchBox = (props) => {
-  const otherProps = _.omit(props, 'buttonStyle', 'phText');
-  const { buttonStyle, phText } = props;
+  const otherProps = _.omit(props, 'buttonStyle', 'phText')
+  const { buttonStyle, phText } = props
 
   return (
     <div {...otherProps}>
@@ -20,17 +20,17 @@ const SearchBox = (props) => {
         </InputGroup>
       </FormGroup>
     </div>
-  );
-};
+  )
+}
 
 SearchBox.propTypes = {
   buttonStyle: PropTypes.string,
   phText: PropTypes.string
-};
+}
 
 SearchBox.defaultProps = {
   buttonStyle: 'primary',
   phText: 'Search...'
-};
+}
 
-export default SearchBox;
+export default SearchBox

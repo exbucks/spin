@@ -1,3 +1,3 @@
-import DayPickerControllerWrapper from './DayPickerControllerWrapper';
+import DayPickerControllerWrapper from './DayPickerControllerWrapper'
 
-export default DayPickerControllerWrapper;
+export default DayPickerControllerWrapper

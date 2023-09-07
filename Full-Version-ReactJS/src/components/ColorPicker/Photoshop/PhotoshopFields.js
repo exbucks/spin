@@ -1,8 +1,8 @@
-import React from 'react';
-import reactCSS from 'reactcss';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import * as color from 'react-color/lib/helpers/color'
 
-import { EditableInput } from 'react-color/lib/components/common';
+import { EditableInput } from 'react-color/lib/components/common'
 
 export const PhotoshopPicker = ({ onChange, rgb, hsv, hex }) => {
   const styles = reactCSS({
@@ -74,7 +74,7 @@ export const PhotoshopPicker = ({ onChange, rgb, hsv, hex }) => {
         paddingBottom: '7px'
       }
     }
-  });
+  })
 
   const handleChange = (data, e) => {
     if (data['#']) {
@@ -85,7 +85,7 @@ export const PhotoshopPicker = ({ onChange, rgb, hsv, hex }) => {
             source: 'hex'
           },
           e
-        );
+        )
     } else if (data.r || data.g || data.b) {
       onChange(
         {
@@ -95,7 +95,7 @@ export const PhotoshopPicker = ({ onChange, rgb, hsv, hex }) => {
           source: 'rgb'
         },
         e
-      );
+      )
     } else if (data.h || data.s || data.v) {
       onChange(
         {
@@ -105,9 +105,9 @@ export const PhotoshopPicker = ({ onChange, rgb, hsv, hex }) => {
           source: 'hsv'
         },
         e
-      );
+      )
     }
-  };
+  }
 
   return (
     <div style={styles.fields}>
@@ -161,7 +161,7 @@ export const PhotoshopPicker = ({ onChange, rgb, hsv, hex }) => {
         <div style={styles.symbol}>%</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PhotoshopPicker;
+export default PhotoshopPicker

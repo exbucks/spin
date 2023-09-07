@@ -1,10 +1,10 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import moment from 'moment';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import moment from 'moment'
 
-import { Button, Media, Timeline, AvatarImage, AvatarText } from 'components';
+import { Button, Media, Timeline, AvatarImage, AvatarText } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 // ------------------------------------
 // Vertical Timeline Example
 // ------------------------------------
@@ -128,9 +128,9 @@ const VerticalTimeline = () => (
       </Timeline.ItemBody>
     </Timeline.Item>
   </Timeline>
-);
+)
 
 // Force Static Output
-var staticResult = VerticalTimeline();
+var staticResult = VerticalTimeline()
 
-export default () => staticResult;
+export default () => staticResult

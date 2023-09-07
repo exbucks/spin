@@ -6,10 +6,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Monitor').default);
+          cb(null, require('./Monitor').default)
         },
         'start-monitor'
-      );
+      )
     }
   },
   {
@@ -19,10 +19,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./ExchangeAndTrading').default);
+          cb(null, require('./ExchangeAndTrading').default)
         },
         'start-exchange-trading'
-      );
+      )
     }
   },
   {
@@ -32,10 +32,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./ECommerce').default);
+          cb(null, require('./ECommerce').default)
         },
         'start-e-commerce'
-      );
+      )
     }
   },
   {
@@ -45,10 +45,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Performance').default);
+          cb(null, require('./Performance').default)
         },
         'start-performance'
-      );
+      )
     }
   },
   {
@@ -58,10 +58,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Financial').default);
+          cb(null, require('./Financial').default)
         },
         'start-financial'
-      );
+      )
     }
   },
   {
@@ -71,10 +71,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./System').default);
+          cb(null, require('./System').default)
         },
         'start-system'
-      );
+      )
     }
   },
   {
@@ -84,10 +84,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./TeamActivity').default);
+          cb(null, require('./TeamActivity').default)
         },
         'start-team-activity'
-      );
+      )
     }
   },
   {
@@ -97,10 +97,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Stock').default);
+          cb(null, require('./Stock').default)
         },
         'start-stock'
-      );
+      )
     }
   },
   {
@@ -110,10 +110,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Analytics').default);
+          cb(null, require('./Analytics').default)
         },
         'start-analytics'
-      );
+      )
     }
   },
   {
@@ -123,10 +123,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Projects').default);
+          cb(null, require('./Projects').default)
         },
         'start-projects'
-      );
+      )
     }
   },
   // Widgets
@@ -275,10 +275,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Forms/DateRangePicker').default);
+          cb(null, require('./Forms/DateRangePicker').default)
         },
         'forms-daterangepicker'
-      );
+      )
     }
   },
   {
@@ -364,10 +364,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Pages/TreeSortable').default);
+          cb(null, require('./Pages/TreeSortable').default)
         },
         'apps-task-details'
-      );
+      )
     }
   },
   {
@@ -383,10 +383,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Tasks').default);
+          cb(null, require('./Apps/Tasks').default)
         },
         'apps-tasks'
-      );
+      )
     }
   },
   {
@@ -396,10 +396,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/TaskDetails').default);
+          cb(null, require('./Apps/TaskDetails').default)
         },
         'apps-task-details'
-      );
+      )
     }
   },
   {
@@ -409,10 +409,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Projects').default);
+          cb(null, require('./Apps/Projects').default)
         },
         'apps-projects'
-      );
+      )
     }
   },
   {
@@ -422,10 +422,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Inbox').default);
+          cb(null, require('./Apps/Inbox').default)
         },
         'apps-inbox'
-      );
+      )
     }
   },
   {
@@ -435,10 +435,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/NewEmail').default);
+          cb(null, require('./Apps/NewEmail').default)
         },
         'apps-new-email'
-      );
+      )
     }
   },
   {
@@ -448,10 +448,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/EmailDetails').default);
+          cb(null, require('./Apps/EmailDetails').default)
         },
         'apps-email-details'
-      );
+      )
     }
   },
   {
@@ -461,10 +461,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Search/SearchDefault').default);
+          cb(null, require('./Apps/Search/SearchDefault').default)
         },
         'apps-search-default'
-      );
+      )
     }
   },
   {
@@ -474,10 +474,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Search/SearchImage').default);
+          cb(null, require('./Apps/Search/SearchImage').default)
         },
         'apps-search-image'
-      );
+      )
     }
   },
   {
@@ -487,10 +487,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Search/SearchVideo').default);
+          cb(null, require('./Apps/Search/SearchVideo').default)
         },
         'apps-search-video'
-      );
+      )
     }
   },
   {
@@ -500,10 +500,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Search/SearchUser').default);
+          cb(null, require('./Apps/Search/SearchUser').default)
         },
         'apps-search-user'
-      );
+      )
     }
   },
   {
@@ -513,10 +513,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Clients').default);
+          cb(null, require('./Apps/Clients').default)
         },
         'apps-clients'
-      );
+      )
     }
   },
   {
@@ -526,10 +526,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/FilesManager').default);
+          cb(null, require('./Apps/FilesManager').default)
         },
         'apps-file-manager'
-      );
+      )
     }
   },
   {
@@ -539,10 +539,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Chat').default);
+          cb(null, require('./Apps/Chat').default)
         },
         'apps-chat'
-      );
+      )
     }
   },
   {
@@ -552,10 +552,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Faq').default);
+          cb(null, require('./Apps/Faq').default)
         },
         'apps-faq'
-      );
+      )
     }
   },
   {
@@ -565,10 +565,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/Users').default);
+          cb(null, require('./Apps/Users').default)
         },
         'apps-users'
-      );
+      )
     }
   },
   {
@@ -578,10 +578,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/ProfileEdit').default);
+          cb(null, require('./Apps/ProfileEdit').default)
         },
         'apps-profile-edit'
-      );
+      )
     }
   },
   {
@@ -591,10 +591,10 @@ export default [
       require.ensure(
         [],
         (require) => {
-          cb(null, require('./Apps/ProfileDetails').default);
+          cb(null, require('./Apps/ProfileDetails').default)
         },
         'apps-profile-details'
-      );
+      )
     }
   },
   // Icons
@@ -617,4 +617,4 @@ export default [
     path: '*',
     component: require('./Pages/NotFound').default
   }
-];
+]

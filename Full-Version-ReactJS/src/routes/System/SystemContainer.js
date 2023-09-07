@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactInterval from 'react-interval';
-import hash from 'object-hash';
-import _ from 'underscore';
-import numeral from 'numeral';
+import React from 'react'
+import ReactInterval from 'react-interval'
+import hash from 'object-hash'
+import _ from 'underscore'
+import numeral from 'numeral'
 
 import {
   Row,
@@ -15,32 +15,32 @@ import {
   Media,
   Charts,
   SlimProgressBar
-} from 'components';
+} from 'components'
 
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import classes from './System.scss';
+import classes from './System.scss'
 
-import { Colors } from 'consts';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { Colors } from 'consts'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import systemData from 'consts/data/system.json';
+import systemData from 'consts/data/system.json'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const genInitialPerfData = (source) => {
   const initialData = (maxVal, count = 20) => {
-    const output = [];
+    const output = []
     for (let i = 0; i < count; i++) {
-      const val = Math.round(Math.random() * maxVal);
-      output.push(val);
+      const val = Math.round(Math.random() * maxVal)
+      output.push(val)
     }
-    return output;
-  };
+    return output
+  }
 
   return _.map(source, (s) => ({
     ...s,
@@ -63,16 +63,16 @@ const genInitialPerfData = (source) => {
       Data: initialData(s.ProcessCount.Max),
       Color: Colors.brandPrimary
     }
-  }));
-};
+  }))
+}
 
 const genComponentData = (count = 16) => {
-  const output = [];
+  const output = []
   for (let i = 0; i < count; i++) {
-    output.push(Math.round(Math.random() * 100));
+    output.push(Math.round(Math.random() * 100))
   }
-  return output;
-};
+  return output
+}
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -123,12 +123,12 @@ const renderComponentStatus = (name, component, color, metric = '%') => (
       />
     </Panel>
   </Col>
-);
+)
 
 const renderProcessDetails = (processData) => {
   const processGeneral = (processName, minVal, maxVal, version) => {
-    const usagePercentage = Math.round((minVal / maxVal) * 100);
-    const spaceLeft = maxVal - minVal;
+    const usagePercentage = Math.round((minVal / maxVal) * 100)
+    const spaceLeft = maxVal - minVal
 
     return (
       <div key={hash(processName)}>
@@ -144,15 +144,15 @@ const renderProcessDetails = (processData) => {
           <span>{numeral(spaceLeft).format('0,0')} GB Left</span>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const processComponent = (data, color, metric = '') => (
     <div>
       <p className={classes.processComponentVal}>{`${_.last(data)} ${metric}`}</p>
       <Charts.SparklineLine data={data} width={200} height={33} color={color} />
     </div>
-  );
+  )
 
   return (
     <Panel
@@ -204,16 +204,16 @@ const renderProcessDetails = (processData) => {
         </tbody>
       </Table>
     </Panel>
-  );
-};
+  )
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class SystemContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    const randBool = () => Math.random() > 0.5;
+    const randBool = () => Math.random() > 0.5
 
     this.state = {
       ...getData(systemData),
@@ -234,15 +234,15 @@ class SystemContainer extends RoutedComponent {
         DiffInc: randBool()
       },
       ProcessDetails: genInitialPerfData(systemData.ProcessDetails)
-    };
+    }
   }
 
   simulateProcessData() {
     const genNewData = (input, max) => {
-      const val = Math.round(Math.random() * max);
-      const lastData = _.last(input, input.length - 1);
-      return [...lastData, val];
-    };
+      const val = Math.round(Math.random() * max)
+      const lastData = _.last(input, input.length - 1)
+      return [...lastData, val]
+    }
 
     this.setState({
       ProcessDetails: _.map(this.state.ProcessDetails, (pd) => ({
@@ -260,13 +260,13 @@ class SystemContainer extends RoutedComponent {
           Data: genNewData(pd.ProcessCount.Data, pd.ProcessCount.Max)
         }
       }))
-    });
+    })
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -283,8 +283,8 @@ class SystemContainer extends RoutedComponent {
           <Col lg={12}>{renderSection(renderProcessDetails, this.state.ProcessDetails)}</Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(SystemContainer);
+export default connect()(SystemContainer)

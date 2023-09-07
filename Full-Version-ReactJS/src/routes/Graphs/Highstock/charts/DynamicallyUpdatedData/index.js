@@ -1,3 +1,3 @@
-import DynamicallyUpdatedData from './DynamicallyUpdatedData';
+import DynamicallyUpdatedData from './DynamicallyUpdatedData'
 
-export default DynamicallyUpdatedData;
+export default DynamicallyUpdatedData

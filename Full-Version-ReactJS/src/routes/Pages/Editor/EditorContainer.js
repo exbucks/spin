@@ -1,22 +1,22 @@
-import React from 'react';
-import { Row, Col, Editor } from 'components';
+import React from 'react'
+import { Row, Col, Editor } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 //import classes from './../Pages.scss';
 
 class EditorContainer extends RoutedComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = {};
+    this.state = {}
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -30,8 +30,8 @@ class EditorContainer extends RoutedComponent {
           />
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(EditorContainer);
+export default connect()(EditorContainer)

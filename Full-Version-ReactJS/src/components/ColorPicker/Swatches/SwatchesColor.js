@@ -1,7 +1,7 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { Swatch } from 'react-color/lib/components/common';
+import { Swatch } from 'react-color/lib/components/common'
 
 export const SwatchesColor = ({
   color,
@@ -65,7 +65,7 @@ export const SwatchesColor = ({
       'color-#FFFFFF': color === '#FFFFFF',
       transparent: color === 'transparent'
     }
-  );
+  )
 
   return (
     <Swatch
@@ -81,7 +81,7 @@ export const SwatchesColor = ({
         </svg>
       </div>
     </Swatch>
-  );
-};
+  )
+}
 
-export default SwatchesColor;
+export default SwatchesColor

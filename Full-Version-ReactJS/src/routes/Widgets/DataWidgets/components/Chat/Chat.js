@@ -1,9 +1,9 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import { CollapsablePanel } from 'components';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import { CollapsablePanel } from 'components'
+import { Link } from 'react-router-dom'
 
-import { Chat } from 'routes/Apps/components';
+import { Chat } from 'routes/Apps/components'
 
 const messages = [
   {
@@ -46,7 +46,7 @@ const messages = [
     Content: faker.lorem.sentences(),
     Active: 0
   }
-];
+]
 
 const ChatWidget = (panelProps) => (
   <CollapsablePanel
@@ -64,6 +64,6 @@ const ChatWidget = (panelProps) => (
   >
     <Chat messages={messages} />
   </CollapsablePanel>
-);
+)
 
-export default ChatWidget;
+export default ChatWidget

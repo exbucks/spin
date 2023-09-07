@@ -3,7 +3,7 @@ export const summaries = [
   { key: 'summary-revenue', lg: 3, md: 3, maxH: 1 },
   { key: 'summary-errors', lg: 3, md: 3, maxH: 1 },
   { key: 'summary-alerts', lg: 3, md: 3, maxH: 1 }
-];
+]
 
 export const thinListWidgets = [
   { key: 'notifiactions', lg: 4, maxH: 1 },
@@ -17,7 +17,7 @@ export const thinListWidgets = [
   { key: 'projects', lg: 4, maxH: 1 },
   { key: 'users', lg: 4, maxH: 1 },
   { key: 'chat', lg: 4, maxH: 1 }
-];
+]
 
 export const largeListWidgets = [
   { key: 'comments-2', lg: 6, maxH: 1 },
@@ -25,8 +25,8 @@ export const largeListWidgets = [
 
   { key: 'timeline-2', lg: 6, maxH: 1 },
   { key: 'timeline-3', lg: 6, maxH: 1 }
-];
+]
 
-const gridDefinition = [].concat(summaries, thinListWidgets, largeListWidgets);
+const gridDefinition = [].concat(summaries, thinListWidgets, largeListWidgets)
 
-export default gridDefinition;
+export default gridDefinition

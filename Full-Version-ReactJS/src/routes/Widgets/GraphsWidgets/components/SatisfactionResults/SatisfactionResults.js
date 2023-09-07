@@ -1,32 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactInterval from 'react-interval';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactInterval from 'react-interval'
+import _ from 'underscore'
 
-import { CollapsablePanel, Charts } from 'components';
+import { CollapsablePanel, Charts } from 'components'
 
-import classes from './SatisfactionResults.scss';
+import classes from './SatisfactionResults.scss'
 
-const CHART_TOTAL_POINTS = 22;
+const CHART_TOTAL_POINTS = 22
 
 class SatisfactionResults extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       chartPoints: Array.from(
         (function* () {
           for (let i = 0; i < CHART_TOTAL_POINTS; i++) {
-            yield Math.round(Math.random() * 100);
+            yield Math.round(Math.random() * 100)
           }
         })()
       )
-    };
+    }
   }
 
   static propTypes = {
     onClose: PropTypes.func
-  };
+  }
 
   addPointToChart() {
     this.setState({
@@ -34,7 +34,7 @@ class SatisfactionResults extends React.Component {
         ..._.last(this.state.chartPoints, CHART_TOTAL_POINTS - 1),
         Math.round(Math.random() * 100)
       ]
-    });
+    })
   }
 
   render() {
@@ -74,13 +74,13 @@ class SatisfactionResults extends React.Component {
             timeout={1000}
             enabled={true}
             callback={() => {
-              this.addPointToChart();
+              this.addPointToChart()
             }}
           />
         </div>
       </CollapsablePanel>
-    );
+    )
   }
 }
 
-export default SatisfactionResults;
+export default SatisfactionResults

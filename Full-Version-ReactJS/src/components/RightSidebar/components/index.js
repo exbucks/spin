@@ -1,5 +1,5 @@
-import OverlayContent from './OverlayContent';
-import OverlayContentParent from './OverlayContentParent';
-import ScrollArea from './ScrollArea';
+import OverlayContent from './OverlayContent'
+import OverlayContentParent from './OverlayContentParent'
+import ScrollArea from './ScrollArea'
 
-export { OverlayContent, ScrollArea, OverlayContentParent };
+export { OverlayContent, ScrollArea, OverlayContentParent }

@@ -1,3 +1,3 @@
-import SearchPeriod from './SearchPeriod';
+import SearchPeriod from './SearchPeriod'
 
-export default SearchPeriod;
+export default SearchPeriod

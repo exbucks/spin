@@ -1,3 +1,3 @@
-import SearchImageContainer from './SearchImageContainer';
+import SearchImageContainer from './SearchImageContainer'
 
-export default SearchImageContainer;
+export default SearchImageContainer

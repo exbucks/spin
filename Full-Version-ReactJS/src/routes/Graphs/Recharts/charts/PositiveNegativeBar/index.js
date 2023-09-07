@@ -1,3 +1,3 @@
-import PositiveNegativeBar from './PositiveNegativeBar';
+import PositiveNegativeBar from './PositiveNegativeBar'
 
-export default PositiveNegativeBar;
+export default PositiveNegativeBar

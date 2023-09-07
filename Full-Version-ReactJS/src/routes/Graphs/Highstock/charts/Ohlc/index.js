@@ -1,3 +1,3 @@
-import Ohlc from './Ohlc';
+import Ohlc from './Ohlc'
 
-export default Ohlc;
+export default Ohlc

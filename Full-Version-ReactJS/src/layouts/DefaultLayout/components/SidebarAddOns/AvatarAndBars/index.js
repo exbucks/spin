@@ -1,3 +1,3 @@
-import AvatarAndBars from './AvatarAndBars';
+import AvatarAndBars from './AvatarAndBars'
 
-export default AvatarAndBars;
+export default AvatarAndBars

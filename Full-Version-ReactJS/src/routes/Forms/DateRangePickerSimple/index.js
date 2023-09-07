@@ -1,3 +1,3 @@
-import DateRangePickerSimple from './DateRangePickerSimple';
+import DateRangePickerSimple from './DateRangePickerSimple'
 
-export default DateRangePickerSimple;
+export default DateRangePickerSimple

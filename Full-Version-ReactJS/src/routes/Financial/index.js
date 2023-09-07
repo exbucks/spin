@@ -1,3 +1,3 @@
-import FinancialContainer from './FinancialContainer';
+import FinancialContainer from './FinancialContainer'
 
-export default FinancialContainer;
+export default FinancialContainer

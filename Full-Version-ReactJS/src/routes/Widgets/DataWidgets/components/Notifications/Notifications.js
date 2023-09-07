@@ -1,10 +1,10 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
-import { Media, CollapsablePanel } from 'components';
+import { Media, CollapsablePanel } from 'components'
 
 const notificationsList = [
   {
@@ -62,7 +62,7 @@ const notificationsList = [
     ),
     date: '09-Feb-2012, 02:05'
   }
-];
+]
 
 const Notifications = (panelProps) => (
   <CollapsablePanel
@@ -88,6 +88,6 @@ const Notifications = (panelProps) => (
       </Media>
     ))}
   </CollapsablePanel>
-);
+)
 
-export default Notifications;
+export default Notifications

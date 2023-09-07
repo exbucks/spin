@@ -1,46 +1,36 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import _ from 'underscore';
-import numeral from 'numeral';
-import moment from 'moment';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import _ from 'underscore'
+import numeral from 'numeral'
+import moment from 'moment'
+import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 
-import {
-  Row,
-  Col,
-  Media,
-  Panel,
-  ButtonGroup,
-  Button,
-  Table,
-  Charts,
-  AvatarImage
-} from 'components';
+import { Row, Col, Media, Panel, ButtonGroup, Button, Table, Charts, AvatarImage } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './ECommerce.scss';
+import classes from './ECommerce.scss'
 
-import eCommerceData from 'consts/data/e-commerce.json';
+import eCommerceData from 'consts/data/e-commerce.json'
 
 const DataSet = {
   Revenue: 'Revenue',
   ItemsSold: 'ItemsSold'
-};
+}
 
 const TransactionStatus = {
   Waiting: 0,
   Confirmed: 1,
   Expired: 2
-};
+}
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const getChartData = (data, name) => ({
   xAxis: {
@@ -52,15 +42,15 @@ const getChartData = (data, name) => ({
       data: _.map(data, (entry) => parseFloat(entry.value))
     }
   ]
-});
+})
 
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
 const renderSummary = (summary) => {
   const renderSummaryBox = (title, data, currency = '') => {
-    const beginDate = moment().subtract(7, 'days');
-    const endDate = moment();
+    const beginDate = moment().subtract(7, 'days')
+    const endDate = moment()
 
     return (
       <Panel
@@ -89,8 +79,8 @@ const renderSummary = (summary) => {
           {data.diff}%<small>from last week</small>
         </span>
       </Panel>
-    );
-  };
+    )
+  }
 
   return (
     <Row>
@@ -98,8 +88,8 @@ const renderSummary = (summary) => {
       <Col md={4}>{renderSummaryBox('Total Items Sold', summary.TotalItemsSold)}</Col>
       <Col md={4}>{renderSummaryBox('Total Visitors', summary.TotalVisitors)}</Col>
     </Row>
-  );
-};
+  )
+}
 
 const renderLatestTransactions = (transactions) => {
   const renderTransactionRow = (transaction) => {
@@ -107,7 +97,7 @@ const renderLatestTransactions = (transactions) => {
       [`${classes.transactionStatusSuccess}`]: transaction.status == TransactionStatus.Confirmed,
       [`${classes.transactionStatusDanger}`]: transaction.status == TransactionStatus.Expired,
       [`${classes.transactionStatusWarning}`]: transaction.status == TransactionStatus.Waiting
-    });
+    })
 
     return (
       <tr key={uuidv4()}>
@@ -135,8 +125,8 @@ const renderLatestTransactions = (transactions) => {
           {transaction.status == TransactionStatus.Waiting ? 'Waiting for Payment' : null}
         </td>
       </tr>
-    );
-  };
+    )
+  }
 
   return (
     <div className={classes.latestTransactions}>
@@ -158,8 +148,8 @@ const renderLatestTransactions = (transactions) => {
         <tbody>{_.map(transactions, (transaction) => renderTransactionRow(transaction))}</tbody>
       </Table>
     </div>
-  );
-};
+  )
+}
 
 const renderLatestComments = (comments) => {
   const renderCommentPreview = (comment) => {
@@ -186,8 +176,8 @@ const renderLatestComments = (comments) => {
           </Media.Body>
         </Media>
       </li>
-    );
-  };
+    )
+  }
 
   return (
     <div className={classes.latestComments}>
@@ -202,8 +192,8 @@ const renderLatestComments = (comments) => {
         {_.map(comments, (comment) => renderCommentPreview(comment))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
 const renderMostViewedItems = (mostViewed) => {
   const getQuantityStatusClass = (quantity) => {
@@ -211,8 +201,8 @@ const renderMostViewedItems = (mostViewed) => {
       [`${classes.mostViewedItemStatusSuccess}`]: quantity > 100,
       [`${classes.mostViewedItemStatusWarning}`]: quantity <= 100 && quantity > 10,
       [`${classes.mostViewedItemStatusDanger}`]: quantity <= 10
-    });
-  };
+    })
+  }
 
   const renderMostViewedItem = (item) => (
     <tr key={uuidv4()}>
@@ -247,7 +237,7 @@ const renderMostViewedItems = (mostViewed) => {
         <span className="text-white">{item.countLeft}</span> Items Left
       </td>
     </tr>
-  );
+  )
 
   return (
     <div className={classes.mostViewedItems}>
@@ -275,39 +265,39 @@ const renderMostViewedItems = (mostViewed) => {
         <tbody>{_.map(mostViewed, (item) => renderMostViewedItem(item))}</tbody>
       </Table>
     </div>
-  );
-};
+  )
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class ECommerceContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { Report: { selected: 'Revenue' }, ...getData(eCommerceData) };
+    this.state = { Report: { selected: 'Revenue' }, ...getData(eCommerceData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   renderChart(data) {
-    const dataset = data[data.selected];
-    const datasetName = data.selected === DataSet.Revenue ? 'Revenue' : 'Items Sold';
-    const chartData = getChartData(dataset, datasetName);
+    const dataset = data[data.selected]
+    const datasetName = data.selected === DataSet.Revenue ? 'Revenue' : 'Items Sold'
+    const chartData = getChartData(dataset, datasetName)
 
-    const chartPeriodStart = moment(_.first(dataset).date).format('MMM YYYY');
-    const chartPeriodEnd = moment(_.last(dataset).date).format('MMM YYYY');
+    const chartPeriodStart = moment(_.first(dataset).date).format('MMM YYYY')
+    const chartPeriodEnd = moment(_.last(dataset).date).format('MMM YYYY')
 
     const changeDataSet = (datasetName) => {
       this.setState({
         Report: {
           selected: datasetName
         }
-      });
-    };
+      })
+    }
 
     return (
       <div className={classes.chart}>
@@ -333,7 +323,7 @@ class ECommerceContainer extends RoutedComponent {
         </div>
         <Charts.HighchartBasicColumn className={classes.chartObject} config={chartData} />
       </div>
-    );
+    )
   }
 
   render() {
@@ -351,8 +341,8 @@ class ECommerceContainer extends RoutedComponent {
           <Col md={6}>{renderSection(renderMostViewedItems, this.state.MostViewedItems)}</Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ECommerceContainer);
+export default connect()(ECommerceContainer)

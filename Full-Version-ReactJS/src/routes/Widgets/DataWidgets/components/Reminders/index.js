@@ -1,3 +1,3 @@
-import Reminders from './Reminders';
+import Reminders from './Reminders'
 
-export default Reminders;
+export default Reminders

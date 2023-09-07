@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Tooltip, Popover, Panel, OverlayTrigger, Button } from 'components';
+import { Row, Col, Tooltip, Popover, Panel, OverlayTrigger, Button } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class TooltipsAndPopoversContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -314,8 +314,8 @@ class TooltipsAndPopoversContainer extends RoutedComponent {
           </Panel>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(TooltipsAndPopoversContainer);
+export default connect()(TooltipsAndPopoversContainer)

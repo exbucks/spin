@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 
-import { Grid, Row, Col, Panel, Modal, Button, Tooltip, Popover, OverlayTrigger } from 'components';
+import { Grid, Row, Col, Panel, Modal, Button, Tooltip, Popover, OverlayTrigger } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import classes from './Modals.scss';
+import classes from './Modals.scss'
 
 class ModalsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       demoModal: false,
       largeModal: false,
       smallModal: false,
       gridModal: false
-    };
+    }
   }
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -290,8 +290,8 @@ class ModalsContainer extends RoutedComponent {
           </Modal.Body>
         </Modal>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(ModalsContainer);
+export default connect()(ModalsContainer)

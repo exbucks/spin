@@ -1,4 +1,4 @@
-import HighchartBase, { connect } from './../HighchartBase';
+import HighchartBase, { connect } from './../HighchartBase'
 
 class HighchartBasicPie extends HighchartBase {
   getChartConfig() {
@@ -38,8 +38,8 @@ class HighchartBasicPie extends HighchartBase {
           showInLegend: true
         }
       }
-    };
+    }
   }
 }
 
-export default connect(HighchartBasicPie);
+export default connect(HighchartBasicPie)

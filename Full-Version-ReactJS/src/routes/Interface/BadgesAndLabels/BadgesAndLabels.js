@@ -1,16 +1,16 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Row, Col, Button, Nav, NavItem, Badge, Label, AvatarImage } from 'components';
+import { Row, Col, Button, Nav, NavItem, Badge, Label, AvatarImage } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 class BadgesAndLabelsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -294,8 +294,8 @@ class BadgesAndLabelsContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(BadgesAndLabelsContainer);
+export default connect()(BadgesAndLabelsContainer)

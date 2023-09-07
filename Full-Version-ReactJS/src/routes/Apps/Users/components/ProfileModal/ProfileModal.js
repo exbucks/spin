@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import { Modal, Button } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import { Modal, Button } from 'components'
 
-import { UserDetails } from 'routes/Apps/components';
+import { UserDetails } from 'routes/Apps/components'
 
 const userData = {
   status: 'Online',
@@ -31,7 +31,7 @@ const userData = {
     ZipCode: faker.person.address.zipCode()
   },
   labels: ['Computers', faker.commerce.department(), faker.commerce.department()]
-};
+}
 
 const ProfileModal = (props) => (
   <Modal show={props.visible} onHide={props.onClose}>
@@ -45,15 +45,15 @@ const ProfileModal = (props) => (
       <Button onClick={props.onClose}>Close</Button>
     </Modal.Footer>
   </Modal>
-);
+)
 
 ProfileModal.propTypes = {
   visible: PropTypes.bool,
   onClose: PropTypes.func
-};
+}
 
 ProfileModal.defaultProps = {
   onClose: () => {}
-};
+}
 
-export default ProfileModal;
+export default ProfileModal

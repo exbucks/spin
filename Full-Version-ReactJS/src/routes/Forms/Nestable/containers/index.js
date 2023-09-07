@@ -1,8 +1,8 @@
-import { faker } from '@faker-js/faker';
-import { v4 as uuidv4 } from 'uuid';
+import { faker } from '@faker-js/faker'
+import { v4 as uuidv4 } from 'uuid'
 
-import SingleContainer from './Single';
-import NestedContainer from './Nested';
+import SingleContainer from './Single'
+import NestedContainer from './Nested'
 
 export function* people(count = 5) {
   for (let i = 0; i < count; i++) {
@@ -13,8 +13,8 @@ export function* people(count = 5) {
       avatarUrl: faker.image.avatar(),
       job: faker.person.jobTitle(),
       people: []
-    };
+    }
   }
 }
 
-export { SingleContainer, NestedContainer };
+export { SingleContainer, NestedContainer }

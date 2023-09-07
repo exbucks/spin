@@ -1,12 +1,12 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
-import { Form, Media, CollapsablePanel } from 'components';
+import { Form, Media, CollapsablePanel } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const TasksList = [
   {
@@ -37,14 +37,14 @@ const TasksList = [
     title: faker.hacker.phrase(),
     date: '15-Dec-2015 09:49'
   }
-];
+]
 
 const priorityToColor = {
   Urgent: Colors.brandDanger,
   High: Colors.brandPrimary,
   Medium: Colors.brandSuccess,
   Low: Colors.grayLighter
-};
+}
 
 const Tasks = (panelProps) => (
   <CollapsablePanel
@@ -86,6 +86,6 @@ const Tasks = (panelProps) => (
       </Media>
     ))}
   </CollapsablePanel>
-);
+)
 
-export default Tasks;
+export default Tasks

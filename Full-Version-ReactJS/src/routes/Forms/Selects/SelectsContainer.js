@@ -1,11 +1,11 @@
-import React from 'react';
-import Select from 'react-select';
-import _ from 'underscore';
-import { RoutedComponent, connect } from 'routes/routedComponent';
+import React from 'react'
+import Select from 'react-select'
+import _ from 'underscore'
+import { RoutedComponent, connect } from 'routes/routedComponent'
 
-import { Grid, Row, Col, Button, Radio, Checkbox } from 'components';
+import { Grid, Row, Col, Button, Radio, Checkbox } from 'components'
 
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
 import {
   States,
@@ -17,13 +17,13 @@ import {
   CustomRender,
   Creatable,
   CustomComponents
-} from './components';
+} from './components'
 
 class SelectsContainer extends RoutedComponent {
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
@@ -80,8 +80,8 @@ class SelectsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(SelectsContainer);
+export default connect()(SelectsContainer)

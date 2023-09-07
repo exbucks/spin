@@ -1,3 +1,3 @@
-import DragAndDropContainer from './DragAndDrop';
+import DragAndDropContainer from './DragAndDrop'
 
-export default DragAndDropContainer;
+export default DragAndDropContainer

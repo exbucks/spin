@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import classNames from 'classnames'
 
-import { Sidebar, OutsideClick, Navbar } from 'components';
+import { Sidebar, OutsideClick, Navbar } from 'components'
 
-import updateChildElementOfType from './../utils/updateChildElementOfType';
+import updateChildElementOfType from './../utils/updateChildElementOfType'
 
 import {
   CONTENT_VIEW_STATIC,
@@ -23,7 +23,7 @@ import {
   SCREEN_SIZE_MD,
   SCREEN_SIZE_SM,
   SCREEN_SIZE_XS
-} from 'layouts/DefaultLayout/modules/layout';
+} from 'layouts/DefaultLayout/modules/layout'
 
 class Layout extends React.Component {
   static propTypes = {
@@ -47,7 +47,7 @@ class Layout extends React.Component {
     sidebarSkin: PropTypes.string,
     navbarSkin: PropTypes.string,
     skinColor: PropTypes.string
-  };
+  }
 
   static defaultProps = {
     screenSizeChanged: () => {},
@@ -68,12 +68,12 @@ class Layout extends React.Component {
     sidebarSkin: SKIN_DARK,
     navbarSkin: SKIN_DARK,
     skinColor: SKIN_COLOR_PRIMARY
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.currentScreenSize = SCREEN_SIZE_LG;
+    this.currentScreenSize = SCREEN_SIZE_LG
   }
 
   buildChildren(children) {
@@ -102,95 +102,95 @@ class Layout extends React.Component {
           })
         }
       ]
-    );
+    )
   }
 
   updateContentHeight(additionalHeight = 20) {
-    const { contentElement, footerElement, navbarElement, sidebarElement, windowElement } = this;
+    const { contentElement, footerElement, navbarElement, sidebarElement, windowElement } = this
 
-    const sidebarRect = sidebarElement.getBoundingClientRect();
+    const sidebarRect = sidebarElement.getBoundingClientRect()
 
     const windowHeight = windowElement.innerHeight,
       sidebarHeight =
-        sidebarElement.scrollHeight + sidebarRect.top + window.scrollY + additionalHeight;
+        sidebarElement.scrollHeight + sidebarRect.top + window.scrollY + additionalHeight
 
     // Determine to use window height ot sidebar height
     const targetHeight =
       windowHeight > sidebarHeight || !this.props.sidebarEnabled || this.props.sidebarFixed
         ? windowHeight
-        : sidebarHeight;
+        : sidebarHeight
 
     // Reset the previous content minHeight
-    contentElement.style.minHeight = null;
+    contentElement.style.minHeight = null
 
     // Get footer height by visibility
     const footerHeight =
       footerElement && this.props.footerEnabled && !this.props.footerFixed
         ? footerElement.offsetHeight
-        : 0;
+        : 0
     // Get navbar height based on visibility
-    const navbarHeight = navbarElement && this.props.navbarEnabled ? navbarElement.offsetHeight : 0;
+    const navbarHeight = navbarElement && this.props.navbarEnabled ? navbarElement.offsetHeight : 0
 
     // Calculate the height diff and apply it
-    const minHeight = targetHeight - footerHeight - navbarHeight;
+    const minHeight = targetHeight - footerHeight - navbarHeight
 
-    contentElement.style.minHeight = minHeight + 'px';
+    contentElement.style.minHeight = minHeight + 'px'
   }
 
   findNodes(parent) {
     if (parent) {
-      this.contentElement = parent.querySelector('.main-wrap > .content');
-      this.sidebarElement = parent.querySelector('.main-wrap > .navigation > .sidebar');
-      this.navbarElement = parent.querySelector('.main-wrap > .navigation .navbar');
-      this.footerElement = parent.querySelector('.main-wrap > footer');
+      this.contentElement = parent.querySelector('.main-wrap > .content')
+      this.sidebarElement = parent.querySelector('.main-wrap > .navigation > .sidebar')
+      this.navbarElement = parent.querySelector('.main-wrap > .navigation .navbar')
+      this.footerElement = parent.querySelector('.main-wrap > footer')
 
-      this.windowElement = window;
+      this.windowElement = window
     }
   }
 
   responsiveHandler() {
-    let newScreenSize = '';
+    let newScreenSize = ''
 
     if (window.matchMedia('(max-width: 767px)').matches) {
-      newScreenSize = SCREEN_SIZE_XS;
+      newScreenSize = SCREEN_SIZE_XS
     } else if (window.matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {
-      newScreenSize = SCREEN_SIZE_SM;
+      newScreenSize = SCREEN_SIZE_SM
     } else if (window.matchMedia('(min-width: 992px) and (max-width: 1199px)').matches) {
-      newScreenSize = SCREEN_SIZE_MD;
+      newScreenSize = SCREEN_SIZE_MD
     } else if (window.matchMedia('(min-width: 1200px)').matches) {
-      newScreenSize = SCREEN_SIZE_LG;
+      newScreenSize = SCREEN_SIZE_LG
     }
 
     if (newScreenSize !== this.currentScreenSize) {
-      this.currentScreenSize = newScreenSize;
-      this.props.screenSizeChanged(newScreenSize);
+      this.currentScreenSize = newScreenSize
+      this.props.screenSizeChanged(newScreenSize)
     }
   }
 
   getSidebarSkinClass(sidebarSkin, skinColor) {
     switch (sidebarSkin) {
       case SKIN_DARK:
-        return `sidebar-dark-${skinColor}`;
+        return `sidebar-dark-${skinColor}`
       case SKIN_LIGHT:
-        return `sidebar-light-${skinColor}`;
+        return `sidebar-light-${skinColor}`
       case SKIN_COLOR:
-        return `sidebar-${skinColor}`;
+        return `sidebar-${skinColor}`
     }
   }
 
   getNavbarSkinClass(navbarSkin, skinColor) {
     switch (navbarSkin) {
       case SKIN_DARK:
-        return 'navbar-inverse';
+        return 'navbar-inverse'
       case SKIN_LIGHT:
-        return 'navbar-default';
+        return 'navbar-default'
       case SKIN_COLOR:
-        return `navbar-${skinColor}`;
+        return `navbar-${skinColor}`
     }
   }
 
   getConfigurationClasses() {
-    const skinClasses = this.getSidebarSkinClass(this.props.sidebarSkin, this.props.skinColor);
+    const skinClasses = this.getSidebarSkinClass(this.props.sidebarSkin, this.props.skinColor)
 
     return classNames(
       {
@@ -211,20 +211,20 @@ class Layout extends React.Component {
         'sidebar-overlay__open': this.props.overlaySidebarOpen
       },
       skinClasses
-    );
+    )
   }
 
   componentDidMount() {
     window.addEventListener('resize', () => {
-      this.updateContentHeight();
-      this.responsiveHandler();
-    });
+      this.updateContentHeight()
+      this.responsiveHandler()
+    })
 
     setTimeout(() => {
-      this.updateContentHeight();
-    }, 5);
+      this.updateContentHeight()
+    }, 5)
 
-    this.responsiveHandler();
+    this.responsiveHandler()
   }
 
   componentDidUpdate(prevProps) {
@@ -235,26 +235,26 @@ class Layout extends React.Component {
       'sidebarStyle',
       'footerEnabled',
       'footerFixed'
-    ];
+    ]
 
     if (!_.isEqual(_.pick(prevProps, propsToCheck), _.pick(this.props, propsToCheck))) {
-      this.updateContentHeight();
+      this.updateContentHeight()
     }
   }
 
   render() {
-    const { children, className, ...otherProps } = this.props;
+    const { children, className, ...otherProps } = this.props
 
-    const adjustedChildren = this.buildChildren(children);
+    const adjustedChildren = this.buildChildren(children)
 
-    const appClasses = classNames(this.getConfigurationClasses(), className);
+    const appClasses = classNames(this.getConfigurationClasses(), className)
 
     return (
       <div id="application" className={appClasses} ref={(parent) => this.findNodes(parent)}>
         <div className="main-wrap">{adjustedChildren}</div>
       </div>
-    );
+    )
   }
 }
 
-export default Layout;
+export default Layout

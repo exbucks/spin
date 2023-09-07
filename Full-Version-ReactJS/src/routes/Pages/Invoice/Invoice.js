@@ -1,36 +1,36 @@
-import React from 'react';
-import numeral from 'numeral';
-import _ from 'underscore';
+import React from 'react'
+import numeral from 'numeral'
+import _ from 'underscore'
 
-import { Row, Col, Table, Panel, Button, Dropdown, DropdownButton } from 'components';
+import { Row, Col, Table, Panel, Button, Dropdown, DropdownButton } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
-import treeRandomizer from 'modules/treeRandomizer';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
+import treeRandomizer from 'modules/treeRandomizer'
 
-import data from 'consts/data/invoice.json';
+import data from 'consts/data/invoice.json'
 
-import classes from './../Pages.scss';
+import classes from './../Pages.scss'
 
 class InvoiceContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = treeRandomizer(data);
+    this.state = treeRandomizer(data)
   }
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
-    const { Invoice } = this.state;
+    const { Invoice } = this.state
     const priceSum = _.reduce(
       Invoice.Items,
       (memo, item) => memo + parseInt(item.Quantity) * parseFloat(item.Price),
       0
-    );
+    )
 
     return (
       <Row>
@@ -162,8 +162,8 @@ class InvoiceContainer extends RoutedComponent {
           </div>
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(InvoiceContainer);
+export default connect()(InvoiceContainer)

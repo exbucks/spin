@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactInterval from 'react-interval';
+import React from 'react'
+import ReactInterval from 'react-interval'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const generateInitialData = () => {
   let data = [],
     time = new Date().getTime(),
-    i;
+    i
 
   for (i = -999; i <= 0; i += 1) {
-    data.push([time + i * 1000, Math.round(Math.random() * 100)]);
+    data.push([time + i * 1000, Math.round(Math.random() * 100)])
   }
 
-  return data;
-};
+  return data
+}
 
 const getConfig = (data) => ({
   rangeSelector: {
@@ -55,15 +55,15 @@ const getConfig = (data) => ({
       data: data
     }
   ]
-});
+})
 
 class DynamicallyUpdatedData extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       data: generateInitialData()
-    };
+    }
   }
 
   generateMoreData() {
@@ -75,7 +75,7 @@ class DynamicallyUpdatedData extends React.Component {
           y: Math.round(Math.random() * 100)
         }
       ]
-    });
+    })
   }
 
   render() {
@@ -84,8 +84,8 @@ class DynamicallyUpdatedData extends React.Component {
         <Charts.HighStock dynamicUpdate={true} config={getConfig(this.state.data)} />
         <ReactInterval timeout={1000} enabled={true} callback={() => this.generateMoreData()} />
       </div>
-    );
+    )
   }
 }
 
-export default DynamicallyUpdatedData;
+export default DynamicallyUpdatedData

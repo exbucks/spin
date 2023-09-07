@@ -1,11 +1,11 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, PieChart, Pie, Cell } = Charts.Recharts;
+const { ResponsiveContainer, PieChart, Pie, Cell } = Charts.Recharts
 
-import { dataPieChart } from './../../data';
+import { dataPieChart } from './../../data'
 
-const COLORS = ['#4CBAED', '#88B152', '#CB3E4B', '#E66C40'];
+const COLORS = ['#4CBAED', '#88B152', '#CB3E4B', '#E66C40']
 
 const PaddingAngleFull = (props) => (
   <ResponsiveContainer height={300}>
@@ -17,6 +17,6 @@ const PaddingAngleFull = (props) => (
       </Pie>
     </PieChart>
   </ResponsiveContainer>
-);
+)
 
-export default PaddingAngleFull;
+export default PaddingAngleFull

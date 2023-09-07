@@ -1,3 +1,3 @@
-import TypographyContainer from './Typography';
+import TypographyContainer from './Typography'
 
-export default TypographyContainer;
+export default TypographyContainer

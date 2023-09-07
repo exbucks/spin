@@ -1,32 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { InputGroup, Button, FormControl } from 'components';
+import { InputGroup, Button, FormControl } from 'components'
 
-import classes from './SearchBox.scss';
+import classes from './SearchBox.scss'
 
 class SearchBox extends React.Component {
   static propTypes = {
     placeholder: PropTypes.string
-  };
+  }
 
   constructor() {
-    super();
+    super()
 
     this.state = {
       opened: false
-    };
+    }
   }
 
   render() {
-    const placeholderText = this.props.placeholder || 'Search for...';
+    const placeholderText = this.props.placeholder || 'Search for...'
 
     const activeIcon = this.state.opened ? (
       <i className="fa fa-close fa-lg icon-active"></i>
     ) : (
       <i className="fa fa-search fa-lg icon-inactive"></i>
-    );
+    )
 
     return (
       <li className={`hidden-xs spin-search-box ${this.state.opened ? 'active' : ''}`}>
@@ -34,7 +34,7 @@ class SearchBox extends React.Component {
           href="javascript:void(0)"
           className="pull-left"
           onClick={() => {
-            this.setState({ opened: !this.state.opened });
+            this.setState({ opened: !this.state.opened })
           }}
         >
           {activeIcon}
@@ -50,8 +50,8 @@ class SearchBox extends React.Component {
           </InputGroup.Button>
         </InputGroup>
       </li>
-    );
+    )
   }
 }
 
-export default SearchBox;
+export default SearchBox

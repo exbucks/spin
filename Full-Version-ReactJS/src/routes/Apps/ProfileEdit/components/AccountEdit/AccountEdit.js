@@ -1,6 +1,6 @@
-import React from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Link } from 'react-router-dom'
 
 import {
   Panel,
@@ -12,13 +12,13 @@ import {
   Radio,
   Button,
   Divider
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import { Upload } from 'routes/Apps/components';
+import { Upload } from 'routes/Apps/components'
 
-import classes from './../../ProfileEdit.scss';
+import classes from './../../ProfileEdit.scss'
 
 const AccountEdit = () => (
   <div>
@@ -97,6 +97,6 @@ const AccountEdit = () => (
       </Button>
     </Panel>
   </div>
-);
+)
 
-export default AccountEdit;
+export default AccountEdit

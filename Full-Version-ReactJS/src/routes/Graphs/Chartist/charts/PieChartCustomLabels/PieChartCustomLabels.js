@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
-import classes from './../../Chartist.scss';
+import classes from './../../Chartist.scss'
 
 //================Settings=================
-const chartType = 'Pie';
+const chartType = 'Pie'
 const chartData = {
   labels: ['Bananas', 'Apples', 'Grapes'],
   series: [20, 15, 40]
-};
+}
 const chartOptions = {
   labelInterpolationFnc: (value) => value[0]
-};
+}
 const responsiveOptions = [
   [
     'screen and (min-width: 640px)',
@@ -30,7 +30,7 @@ const responsiveOptions = [
       chartPadding: 20
     }
   ]
-];
+]
 //===============Component================
 const PieChartCustomLabels = () => (
   <Charts.Chartist
@@ -40,6 +40,6 @@ const PieChartCustomLabels = () => (
     responsiveOptions={responsiveOptions}
     type={chartType}
   />
-);
+)
 
-export default PieChartCustomLabels;
+export default PieChartCustomLabels

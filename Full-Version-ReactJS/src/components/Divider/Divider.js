@@ -1,27 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-import classes from './Divider.scss';
+import classes from './Divider.scss'
 
 class Divider extends React.Component {
   static propTypes = {
     textPosition: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     componentClass: PropTypes.string
-  };
+  }
 
   static defaultProps = {
     textPosition: 'left',
     componentClass: 'h6'
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       customBackgroundColor: ''
-    };
+    }
   }
 
   componentDidMount() {
@@ -34,20 +34,20 @@ class Divider extends React.Component {
       if (element && element.parentElement && element.parentElement.tagName !== 'BODY') {
         return element.parentElement.classList.contains('modal-content')
           ? element.parentElement
-          : findModalUnderneath(element.parentElement);
+          : findModalUnderneath(element.parentElement)
       }
-      return null;
-    };
+      return null
+    }
 
-    const modal = findModalUnderneath(this.refs.divider);
+    const modal = findModalUnderneath(this.refs.divider)
 
     if (modal) {
-      const computedStyle = window.getComputedStyle(modal);
-      const modalBackgroundColor = computedStyle.getPropertyValue('background-color');
+      const computedStyle = window.getComputedStyle(modal)
+      const modalBackgroundColor = computedStyle.getPropertyValue('background-color')
 
       this.setState({
         customBackgroundColor: modalBackgroundColor
-      });
+      })
     }
   }
 
@@ -58,7 +58,7 @@ class Divider extends React.Component {
       componentClass: ComponentClass,
       children,
       ...otherProps
-    } = this.props;
+    } = this.props
 
     const dividerClass = classNames(
       {
@@ -69,18 +69,18 @@ class Divider extends React.Component {
       'hr-text',
       className,
       classes.header
-    );
+    )
 
     const targetStyle = this.state.customBackgroundColor
       ? { backgroundColor: this.state.customBackgroundColor }
-      : {};
+      : {}
 
     return (
       <div {...otherProps} className={dividerClass} ref="divider">
         <ComponentClass style={targetStyle}>{children}</ComponentClass>
       </div>
-    );
+    )
   }
 }
 
-export default Divider;
+export default Divider

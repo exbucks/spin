@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Row, Col, Panel, Charts, CollapsablePanel } from 'components';
+import { Row, Col, Panel, Charts, CollapsablePanel } from 'components'
 
 const chartConfig = {
   chart: {
@@ -53,7 +53,7 @@ const chartConfig = {
       data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
     }
   ]
-};
+}
 
 const Results = (panelProps) => (
   <CollapsablePanel
@@ -69,6 +69,6 @@ const Results = (panelProps) => (
   >
     <Charts.HighchartBasicColumn config={chartConfig} />
   </CollapsablePanel>
-);
+)
 
-export default Results;
+export default Results

@@ -1,15 +1,15 @@
-import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import { Col, Row, InputGroup } from 'components';
+import React from 'react'
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
+import { Col, Row, InputGroup } from 'components'
 
-import { products } from './../utils';
+import { products } from './../utils'
 
-import classes from './../ReactTables.scss';
+import classes from './../ReactTables.scss'
 
-const data = Array.from(products(['id', 'name', 'price', 'expand'], 5));
+const data = Array.from(products(['id', 'name', 'price', 'expand'], 5))
 
 const createCustomToolbar = (props) => {
-  const { searchField, clearBtn } = props.components;
+  const { searchField, clearBtn } = props.components
 
   return (
     <div>
@@ -24,8 +24,8 @@ const createCustomToolbar = (props) => {
         </div>
       </Col>
     </div>
-  );
-};
+  )
+}
 
 class BSTable extends React.Component {
   render() {
@@ -39,32 +39,32 @@ class BSTable extends React.Component {
           <TableHeaderColumn dataField="fieldC">Field C</TableHeaderColumn>
           <TableHeaderColumn dataField="fieldD">Field D</TableHeaderColumn>
         </BootstrapTable>
-      );
+      )
     } else {
-      return <p>?</p>;
+      return <p>?</p>
     }
   }
 }
 
 class ExpandRow extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   isExpandableRow(row) {
-    if (row.id < 2) return true;
-    else return false;
+    if (row.id < 2) return true
+    else return false
   }
 
   expandComponent(row) {
-    return <BSTable data={row.expand} />;
+    return <BSTable data={row.expand} />
   }
 
   render() {
     const options = {
       expandRowBgColor: 'rgb(242, 255, 163)',
       toolBar: createCustomToolbar
-    };
+    }
     return (
       <BootstrapTable
         data={data}
@@ -80,8 +80,8 @@ class ExpandRow extends React.Component {
         <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
         <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
       </BootstrapTable>
-    );
+    )
   }
 }
 
-export default ExpandRow;
+export default ExpandRow

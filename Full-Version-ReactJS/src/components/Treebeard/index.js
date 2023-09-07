@@ -1,3 +1,3 @@
-import Treebeard from './Treebeard';
+import Treebeard from './Treebeard'
 
-export default Treebeard;
+export default Treebeard

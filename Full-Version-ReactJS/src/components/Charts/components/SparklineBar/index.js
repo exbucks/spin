@@ -1,3 +1,3 @@
-import SparklineBar from './SparklineBar.js';
+import SparklineBar from './SparklineBar.js'
 
-export default SparklineBar;
+export default SparklineBar

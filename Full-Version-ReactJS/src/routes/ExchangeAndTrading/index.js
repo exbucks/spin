@@ -1,3 +1,3 @@
-import ExchangeAndTradingContainer from './ExchangeAndTradingContainer';
+import ExchangeAndTradingContainer from './ExchangeAndTradingContainer'
 
-export default ExchangeAndTradingContainer;
+export default ExchangeAndTradingContainer

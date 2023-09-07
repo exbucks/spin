@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import { Nav, NavItem } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import { Nav, NavItem } from 'components'
 
-import classes from './LabelsList.scss';
+import classes from './LabelsList.scss'
 
 const LabelsList = (props) => {
-  const { items } = props;
-  const otherProps = _.omit(props, 'items');
+  const { items } = props
+  const otherProps = _.omit(props, 'items')
 
   return (
     <Nav {...otherProps} stacked>
@@ -24,11 +24,11 @@ const LabelsList = (props) => {
         </span>
       </NavItem>
     </Nav>
-  );
-};
+  )
+}
 
 LabelsList.propTypes = {
   items: PropTypes.array.isRequired
-};
+}
 
-export default LabelsList;
+export default LabelsList

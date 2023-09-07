@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { ListGroup, ListGroupItem, SlimProgressBar, CollapsablePanel } from 'components';
+import { ListGroup, ListGroupItem, SlimProgressBar, CollapsablePanel } from 'components'
 
-import classes from './Storages.scss';
+import classes from './Storages.scss'
 
 const Storages = (panelProps) => (
   <CollapsablePanel
@@ -53,6 +53,6 @@ const Storages = (panelProps) => (
       </ListGroupItem>
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Storages;
+export default Storages

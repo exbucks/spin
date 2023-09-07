@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ProgressBar as ReactBootstrapProgressBar } from 'react-bootstrap';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ProgressBar as ReactBootstrapProgressBar } from 'react-bootstrap'
 
-import bsStyleToColor from './../utils/bsStyleToColor';
+import bsStyleToColor from './../utils/bsStyleToColor'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const ProgressBar = (props) => {
-  const { bsStyle, customColor, style, children, ...otherProps } = props;
+  const { bsStyle, customColor, style, children, ...otherProps } = props
 
   const customStyle =
     bsStyle === 'custom'
@@ -15,7 +15,7 @@ const ProgressBar = (props) => {
           ...style,
           backgroundColor: bsStyleToColor({ bsStyle, customColor })
         }
-      : style;
+      : style
 
   return (
     <ReactBootstrapProgressBar
@@ -25,19 +25,19 @@ const ProgressBar = (props) => {
     >
       {children}
     </ReactBootstrapProgressBar>
-  );
-};
+  )
+}
 
 ProgressBar.props = {
   bsStyle: PropTypes.string,
   customColor: PropTypes.string,
   style: PropTypes.object
-};
+}
 
 ProgressBar.defaultProps = {
   bsStyle: null,
   customColor: Colors.brandPrimary,
   style: {}
-};
+}
 
-export default ProgressBar;
+export default ProgressBar

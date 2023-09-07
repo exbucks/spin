@@ -1,7 +1,7 @@
-import React from 'react';
-import classes from './HomeView.scss';
-import { RoutedComponent, connect } from './../../routedComponent';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import classes from './HomeView.scss'
+import { RoutedComponent, connect } from './../../routedComponent'
+import { Link } from 'react-router-dom'
 
 export class HomeView extends RoutedComponent {
   render() {
@@ -79,8 +79,8 @@ export class HomeView extends RoutedComponent {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(HomeView);
+export default connect()(HomeView)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Row,
@@ -8,11 +8,11 @@ import {
   ProgressBar,
   SlimProgressBar,
   CollapsablePanel
-} from 'components';
+} from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Statistics.scss';
+import classes from './Statistics.scss'
 
 const Statistics = (panelProps) => (
   <CollapsablePanel
@@ -120,6 +120,6 @@ const Statistics = (panelProps) => (
       </ListGroupItem>
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Statistics;
+export default Statistics

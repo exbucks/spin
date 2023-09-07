@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import { Media, ListGroup, ListGroupItem, CollapsablePanel, Charts } from 'components';
+import { Media, ListGroup, ListGroupItem, CollapsablePanel, Charts } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './Statistics2.scss';
+import classes from './Statistics2.scss'
 
 const Statistics2 = (panelProps) => (
   <CollapsablePanel
@@ -106,6 +106,6 @@ const Statistics2 = (panelProps) => (
       </ListGroupItem>
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Statistics2;
+export default Statistics2

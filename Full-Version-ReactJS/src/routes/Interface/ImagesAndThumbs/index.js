@@ -1,3 +1,3 @@
-import ImagesAndThumbsContainer from './ImagesAndThumbs';
+import ImagesAndThumbsContainer from './ImagesAndThumbs'
 
-export default ImagesAndThumbsContainer;
+export default ImagesAndThumbsContainer

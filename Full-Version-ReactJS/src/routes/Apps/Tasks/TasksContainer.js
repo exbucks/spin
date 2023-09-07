@@ -1,9 +1,9 @@
-import React from 'react';
-import _ from 'underscore';
-import moment from 'moment';
-import truncate from 'truncate';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import _ from 'underscore'
+import moment from 'moment'
+import truncate from 'truncate'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import {
   Row,
@@ -23,77 +23,77 @@ import {
   Pagination,
   Divider,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import treeRandomizer from 'modules/treeRandomizer';
-import renderSection from 'modules/sectionRender';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import treeRandomizer from 'modules/treeRandomizer'
+import renderSection from 'modules/sectionRender'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
-import tasksData from 'consts/data/tasks.json';
+import { Colors } from 'consts'
+import tasksData from 'consts/data/tasks.json'
 
-import classes from './Tasks.scss';
+import classes from './Tasks.scss'
 // ------------------------------------
 // Subcomponents
 // ------------------------------------
-import { FavoriteApps, SearchBox, ProjectsList, UsersList, PriorityButton } from './../components';
+import { FavoriteApps, SearchBox, ProjectsList, UsersList, PriorityButton } from './../components'
 // ------------------------------------
 // Config / Data Generator
 // ------------------------------------
-const getData = (inputData) => treeRandomizer(inputData);
+const getData = (inputData) => treeRandomizer(inputData)
 
 const statusToColor = (status) => {
   switch (status) {
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const priorityToColor = (priority) => {
   switch (priority) {
     case 'Low':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     default:
     case 'Normal':
-      return Colors.brandPrimary;
+      return Colors.brandPrimary
     case 'High':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'Highest':
-      return Colors.brandDanger;
+      return Colors.brandDanger
   }
-};
+}
 
 const taskLabelToColor = (label) => {
   switch (label) {
     case 'Bug':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     default:
     case 'Feature':
-      return Colors.brandInfo;
+      return Colors.brandInfo
     case 'Duplicate':
-      return Colors.brandPrimary;
+      return Colors.brandPrimary
     case 'Invalid':
-      return Colors.brandPerfume;
+      return Colors.brandPerfume
     case 'On Hold':
-      return Colors.brandEminence;
+      return Colors.brandEminence
     case 'Help':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     case 'HTML':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'CSS':
-      return Colors.brandMintGreen;
+      return Colors.brandMintGreen
     case 'Next Phase':
-      return Colors.brandMalibu;
+      return Colors.brandMalibu
   }
-};
+}
 // ------------------------------------
 // Sub Elements
 // ------------------------------------
@@ -124,7 +124,7 @@ const renderActionsDropdown = (small = false) => (
       Delete
     </Dropdown.Item>
   </DropdownButton>
-);
+)
 
 const renderTasksList = (tasks) => (
   <div className="m-t-1">
@@ -195,7 +195,7 @@ const renderTasksList = (tasks) => (
       />
     </div>
   </div>
-);
+)
 
 const renderTasksGrid = (tasks) => {
   const renderTaskTile = (task) => (
@@ -261,7 +261,7 @@ const renderTasksGrid = (tasks) => {
         </ListGroupItem>
       </ListGroup>
     </Panel>
-  );
+  )
 
   return (
     <div className="m-t-1">
@@ -269,14 +269,14 @@ const renderTasksGrid = (tasks) => {
         <Col md={6}>
           {_.map(tasks, (task, index) => {
             if (index % 2 === 0) {
-              return renderTaskTile(task);
+              return renderTaskTile(task)
             }
           })}
         </Col>
         <Col md={6}>
           {_.map(tasks, (task, index) => {
             if (index % 2 !== 0) {
-              return renderTaskTile(task);
+              return renderTaskTile(task)
             }
           })}
         </Col>
@@ -295,26 +295,26 @@ const renderTasksGrid = (tasks) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 // ------------------------------------
 // Main Container
 // ------------------------------------
 class TasksContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
-    this.state = { data: getData(tasksData) };
+    this.state = { data: getData(tasksData) }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   render() {
-    const { listStyle } = this.props.routeParams;
+    const { listStyle } = this.props.routeParams
     return (
       <Row>
         <Col lg={3}>
@@ -332,7 +332,7 @@ class TasksContainer extends RoutedComponent {
             className={classes.leftPanelSection}
             items={this.state.data.ProjectsList}
             projectSelected={() => {
-              this.props.history.push('/apps/tasks');
+              this.props.history.push('/apps/tasks')
             }}
           />
 
@@ -392,8 +392,8 @@ class TasksContainer extends RoutedComponent {
             : renderSection(renderTasksGrid, this.state.data.Tasks)}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default connect()(TasksContainer);
+export default connect()(TasksContainer)

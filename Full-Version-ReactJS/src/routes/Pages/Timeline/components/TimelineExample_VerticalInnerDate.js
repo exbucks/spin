@@ -1,8 +1,8 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import { Label, AvatarImage, Timeline } from 'components';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import { Label, AvatarImage, Timeline } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 // ------------------------------------
 // Vertical Inner Date Timeline Example
 // ------------------------------------
@@ -140,9 +140,9 @@ const VerticalInnerDateTimeline = () => (
       />
     </Timeline.Item>
   </Timeline>
-);
+)
 
 // Force Static Output
-var staticResult = VerticalInnerDateTimeline();
+var staticResult = VerticalInnerDateTimeline()
 
-export default () => staticResult;
+export default () => staticResult

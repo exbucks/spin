@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactInterval from 'react-interval';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactInterval from 'react-interval'
+import _ from 'underscore'
 
 import {
   ListGroup,
@@ -11,30 +11,30 @@ import {
   Table,
   CollapsablePanel,
   Charts
-} from 'components';
+} from 'components'
 
-import classes from './Stock.scss';
+import classes from './Stock.scss'
 
-const CHART_TOTAL_POINTS = 15;
+const CHART_TOTAL_POINTS = 15
 
 class Stock extends React.Component {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       chartPoints: Array.from(
         (function* () {
           for (let i = 0; i < CHART_TOTAL_POINTS; i++) {
-            yield Math.round(Math.random() * 100);
+            yield Math.round(Math.random() * 100)
           }
         })()
       )
-    };
+    }
   }
 
   static propTypes = {
     onClose: PropTypes.func
-  };
+  }
 
   addPointToChart() {
     this.setState({
@@ -42,7 +42,7 @@ class Stock extends React.Component {
         ..._.last(this.state.chartPoints, CHART_TOTAL_POINTS - 1),
         Math.round(Math.random() * 100)
       ]
-    });
+    })
   }
 
   render() {
@@ -83,7 +83,7 @@ class Stock extends React.Component {
               timeout={1000}
               enabled={true}
               callback={() => {
-                this.addPointToChart();
+                this.addPointToChart()
               }}
             />
           </ListGroupItem>
@@ -134,8 +134,8 @@ class Stock extends React.Component {
           </tbody>
         </Table>
       </CollapsablePanel>
-    );
+    )
   }
 }
 
-export default Stock;
+export default Stock

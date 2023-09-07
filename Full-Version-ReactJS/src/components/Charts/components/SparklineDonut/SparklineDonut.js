@@ -1,22 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as Chartist from 'chartist';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
+import React from 'react'
+import PropTypes from 'prop-types'
+import * as Chartist from 'chartist'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import SparklinePie from './../SparklinePie';
+import SparklinePie from './../SparklinePie'
 
-import classes from './SparklineDonut.scss';
+import classes from './SparklineDonut.scss'
 
 const createDonutBackground = (width, height, radius, innerRadius, color) => {
   const iR =
     typeof innerRadius === 'string' && innerRadius.includes('%')
       ? (1 - parseInt(innerRadius) / 100) * radius
-      : radius - innerRadius;
+      : radius - innerRadius
 
-  const id = uuidv4();
+  const id = uuidv4()
 
   return (
     <svg
@@ -43,20 +43,20 @@ const createDonutBackground = (width, height, radius, innerRadius, color) => {
         style={{ opacity: 0.1 }}
       />
     </svg>
-  );
-};
+  )
+}
 
 const createSimpleDonutAnimation =
   (animationDuration, animationPlayed = false) =>
   (data) => {
     if (data.type === 'slice' && data.index == 0 && !animationPlayed) {
-      var pathLength = data.element._node.getTotalLength();
+      var pathLength = data.element._node.getTotalLength()
 
       // Set the dasharray so that we can animate
       // the dash-arrayoffset later
       data.element.attr({
         'stroke-dasharray': `${pathLength}px ${pathLength}px`
-      });
+      })
 
       // Preapre the animation object
       const animationDefActiveHalf = {
@@ -68,17 +68,17 @@ const createSimpleDonutAnimation =
           easing: Chartist.Svg.easeOutQuint,
           fill: 'freeze'
         }
-      };
+      }
 
       data.element.attr({
         'stroke-dashoffset': `${-pathLength}px`
-      });
+      })
 
-      data.element.animate(animationDefActiveHalf, false);
+      data.element.animate(animationDefActiveHalf, false)
 
-      animationPlayed = true;
+      animationPlayed = true
     }
-  };
+  }
 
 export default class SparklineDonut extends SparklinePie {
   static propTypes = {
@@ -90,7 +90,7 @@ export default class SparklineDonut extends SparklinePie {
     color: PropTypes.string,
     animated: PropTypes.bool,
     animationDuration: PropTypes.number
-  };
+  }
 
   static defaultProps = {
     radius: 30,
@@ -106,7 +106,7 @@ export default class SparklineDonut extends SparklinePie {
       Colors.brandSuccess
     ],
     color: Colors.brandPrimary
-  };
+  }
 
   getChartSettings() {
     return {
@@ -120,28 +120,28 @@ export default class SparklineDonut extends SparklinePie {
         chartDonut: classes.ctDonutChart,
         sliceDonut: classes.ctSliceDonut
       }
-    };
+    }
   }
 
   componentDidMount() {
-    this.initChart(this.refs.pieContainer);
+    this.initChart(this.refs.pieContainer)
 
-    this.isChartSimple = typeof this.props.data === 'undefined';
+    this.isChartSimple = typeof this.props.data === 'undefined'
 
     if (this.props.animated) {
       if (this.isChartSimple && !this.animationPlayed) {
-        this.chart.on('draw', createSimpleDonutAnimation(this.props.animationDuration));
-        this.animationPlayed = true;
+        this.chart.on('draw', createSimpleDonutAnimation(this.props.animationDuration))
+        this.animationPlayed = true
       }
     }
   }
 
   applySliceColor(sliceElement, color) {
-    sliceElement.style.stroke = color;
+    sliceElement.style.stroke = color
   }
 
   getColors(isSingleValue) {
-    return isSingleValue ? this.props.colors : [this.props.color, 'transparent'];
+    return isSingleValue ? this.props.colors : [this.props.color, 'transparent']
   }
 
   render() {
@@ -151,15 +151,15 @@ export default class SparklineDonut extends SparklinePie {
       this.props.radius / 2,
       this.props.innerRadius,
       this.props.color
-    );
+    )
 
-    const otherProps = _.omit(this.props, _.keys(SparklineDonut.propTypes));
+    const otherProps = _.omit(this.props, _.keys(SparklineDonut.propTypes))
 
     return (
       <div className={classes.ctDonutChart} {...otherProps}>
         {donutBackground}
         <div className={classes.ctDonutFill} ref="pieContainer"></div>
       </div>
-    );
+    )
   }
 }

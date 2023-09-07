@@ -1,5 +1,5 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
 const {
   ResponsiveContainer,
@@ -11,9 +11,9 @@ const {
   ReferenceLine,
   YAxis,
   XAxis
-} = Charts.Recharts;
+} = Charts.Recharts
 
-import { dataPositiveNegative } from './../../data';
+import { dataPositiveNegative } from './../../data'
 
 const PositiveNegativeBar = (props) => (
   <ResponsiveContainer height={300}>
@@ -32,6 +32,6 @@ const PositiveNegativeBar = (props) => (
       <Bar dataKey="uv" fill="#3BBDA8" />
     </BarChart>
   </ResponsiveContainer>
-);
+)
 
-export default PositiveNegativeBar;
+export default PositiveNegativeBar

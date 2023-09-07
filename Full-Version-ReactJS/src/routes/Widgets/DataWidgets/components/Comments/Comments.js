@@ -1,10 +1,10 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import { v4 as uuidv4 } from 'uuid';
-import numeral from 'numeral';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import { v4 as uuidv4 } from 'uuid'
+import numeral from 'numeral'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
 
 import {
   Media,
@@ -15,15 +15,15 @@ import {
   Row,
   Col,
   AvatarImage
-} from 'components';
+} from 'components'
 
-import classes from './Comments.scss';
+import classes from './Comments.scss'
 
 const stats = {
   followers: 12872,
   following: 567,
   comments: 6
-};
+}
 
 const commentsList = [
   {
@@ -56,7 +56,7 @@ const commentsList = [
     category: faker.commerce.department(),
     content: faker.lorem.paragraph()
   }
-];
+]
 
 const Comments = (panelProps) => (
   <CollapsablePanel
@@ -113,6 +113,6 @@ const Comments = (panelProps) => (
       ))}
     </ListGroup>
   </CollapsablePanel>
-);
+)
 
-export default Comments;
+export default Comments

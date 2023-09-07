@@ -1,9 +1,9 @@
-import React from 'react';
-import { Charts } from 'components';
+import React from 'react'
+import { Charts } from 'components'
 
-const { ResponsiveContainer, PieChart, Pie } = Charts.Recharts;
+const { ResponsiveContainer, PieChart, Pie } = Charts.Recharts
 
-import { dataPieChart } from './../../data';
+import { dataPieChart } from './../../data'
 
 const TwoLevelPieChart = (props) => (
   <ResponsiveContainer height={300}>
@@ -12,6 +12,6 @@ const TwoLevelPieChart = (props) => (
       <Pie data={dataPieChart.data02} innerRadius={70} outerRadius={90} fill="#41BDA8" label />
     </PieChart>
   </ResponsiveContainer>
-);
+)
 
-export default TwoLevelPieChart;
+export default TwoLevelPieChart

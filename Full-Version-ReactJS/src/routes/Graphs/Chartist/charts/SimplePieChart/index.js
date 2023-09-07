@@ -1,3 +1,3 @@
-import SimplePieChart from './SimplePieChart';
+import SimplePieChart from './SimplePieChart'
 
-export default SimplePieChart;
+export default SimplePieChart

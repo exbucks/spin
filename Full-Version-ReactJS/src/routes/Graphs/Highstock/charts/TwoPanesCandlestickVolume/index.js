@@ -1,3 +1,3 @@
-import TwoPanesCandlestickVolume from './TwoPanesCandlestickVolume';
+import TwoPanesCandlestickVolume from './TwoPanesCandlestickVolume'
 
-export default TwoPanesCandlestickVolume;
+export default TwoPanesCandlestickVolume

@@ -1,10 +1,10 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
-import { ColorWrap, Saturation, Hue, Alpha, Checkboard } from 'react-color/lib/components/common';
-import ChromeFields from './ChromeFields';
-import ChromePointer from './ChromePointer';
-import ChromePointerCircle from './ChromePointerCircle';
+import { ColorWrap, Saturation, Hue, Alpha, Checkboard } from 'react-color/lib/components/common'
+import ChromeFields from './ChromeFields'
+import ChromePointer from './ChromePointer'
+import ChromePointerCircle from './ChromePointerCircle'
 
 export const Chrome = ({ onChange, disableAlpha, rgb, hsl, hsv, hex, renderers }) => {
   const styles = reactCSS(
@@ -90,7 +90,7 @@ export const Chrome = ({ onChange, disableAlpha, rgb, hsl, hsv, hex, renderers }
       }
     },
     { disableAlpha }
-  );
+  )
 
   return (
     <div style={styles.picker} className="chrome-picker">
@@ -136,7 +136,7 @@ export const Chrome = ({ onChange, disableAlpha, rgb, hsl, hsv, hex, renderers }
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ColorWrap(Chrome);
+export default ColorWrap(Chrome)

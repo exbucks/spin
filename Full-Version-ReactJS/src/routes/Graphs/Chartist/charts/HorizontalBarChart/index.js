@@ -1,3 +1,3 @@
-import HorizontalBarChart from './HorizontalBarChart';
+import HorizontalBarChart from './HorizontalBarChart'
 
-export default HorizontalBarChart;
+export default HorizontalBarChart

@@ -1,43 +1,43 @@
 /* eslint-disable react/no-did-mount-set-state, no-param-reassign */
 
-import React from 'react';
-import reactCSS from 'reactcss';
-import * as color from 'react-color/lib/helpers/color';
+import React from 'react'
+import reactCSS from 'reactcss'
+import * as color from 'react-color/lib/helpers/color'
 
-import { EditableInput } from 'react-color/lib/components/common';
+import { EditableInput } from 'react-color/lib/components/common'
 
 export class ChromeFields extends React.Component {
   state = {
     view: ''
-  };
+  }
 
   componentDidMount() {
     if (this.props.hsl.a === 1 && this.state.view !== 'hex') {
-      this.setState({ view: 'hex' });
+      this.setState({ view: 'hex' })
     } else if (this.state.view !== 'rgb' && this.state.view !== 'hsl') {
-      this.setState({ view: 'rgb' });
+      this.setState({ view: 'rgb' })
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.hsl.a !== 1 && this.state.view === 'hex') {
-      this.setState({ view: 'rgb' });
+      this.setState({ view: 'rgb' })
     }
   }
 
   toggleViews = () => {
     if (this.state.view === 'hex') {
-      this.setState({ view: 'rgb' });
+      this.setState({ view: 'rgb' })
     } else if (this.state.view === 'rgb') {
-      this.setState({ view: 'hsl' });
+      this.setState({ view: 'hsl' })
     } else if (this.state.view === 'hsl') {
       if (this.props.hsl.a === 1) {
-        this.setState({ view: 'hex' });
+        this.setState({ view: 'hex' })
       } else {
-        this.setState({ view: 'rgb' });
+        this.setState({ view: 'rgb' })
       }
     }
-  };
+  }
 
   handleChange = (data, e) => {
     if (data.hex) {
@@ -48,7 +48,7 @@ export class ChromeFields extends React.Component {
             source: 'hex'
           },
           e
-        );
+        )
     } else if (data.r || data.g || data.b) {
       this.props.onChange(
         {
@@ -58,12 +58,12 @@ export class ChromeFields extends React.Component {
           source: 'rgb'
         },
         e
-      );
+      )
     } else if (data.a) {
       if (data.a < 0) {
-        data.a = 0;
+        data.a = 0
       } else if (data.a > 1) {
-        data.a = 1;
+        data.a = 1
       }
 
       this.props.onChange(
@@ -75,7 +75,7 @@ export class ChromeFields extends React.Component {
           source: 'rgb'
         },
         e
-      );
+      )
     } else if (data.h || data.s || data.l) {
       this.props.onChange(
         {
@@ -85,17 +85,17 @@ export class ChromeFields extends React.Component {
           source: 'hsl'
         },
         e
-      );
+      )
     }
-  };
+  }
 
   showHighlight = (e) => {
-    e.target.style.background = '#eee';
-  };
+    e.target.style.background = '#eee'
+  }
 
   hideHighlight = (e) => {
-    e.target.style.background = 'transparent';
-  };
+    e.target.style.background = 'transparent'
+  }
 
   render() {
     const styles = reactCSS(
@@ -176,9 +176,9 @@ export class ChromeFields extends React.Component {
       },
       this.props,
       this.state
-    );
+    )
 
-    let fields;
+    let fields
     if (this.state.view === 'hex') {
       fields = (
         <div style={styles.fields} className="flexbox-fix">
@@ -191,7 +191,7 @@ export class ChromeFields extends React.Component {
             />
           </div>
         </div>
-      );
+      )
     } else if (this.state.view === 'rgb') {
       fields = (
         <div style={styles.fields} className="flexbox-fix">
@@ -229,7 +229,7 @@ export class ChromeFields extends React.Component {
             />
           </div>
         </div>
-      );
+      )
     } else if (this.state.view === 'hsl') {
       fields = (
         <div style={styles.fields} className="flexbox-fix">
@@ -267,7 +267,7 @@ export class ChromeFields extends React.Component {
             />
           </div>
         </div>
-      );
+      )
     }
 
     return (
@@ -296,8 +296,8 @@ export class ChromeFields extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default ChromeFields;
+export default ChromeFields

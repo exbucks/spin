@@ -1,3 +1,3 @@
-import GridsContainer from './GridsContainer';
+import GridsContainer from './GridsContainer'
 
-export default GridsContainer;
+export default GridsContainer

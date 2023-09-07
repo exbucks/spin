@@ -1,3 +1,3 @@
-import OverlappingBars from './OverlappingBars';
+import OverlappingBars from './OverlappingBars'
 
-export default OverlappingBars;
+export default OverlappingBars

@@ -1,3 +1,3 @@
-import DonutWithLegend from './DonutWithLegend';
+import DonutWithLegend from './DonutWithLegend'
 
-export default DonutWithLegend;
+export default DonutWithLegend

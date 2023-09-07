@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Charts } from 'components';
+import { Charts } from 'components'
 
 const getJson = (cb) => {
   require.ensure([], (require) => {
-    const { data } = require('consts/data/highstock/data-range.json');
-    cb(data);
-  });
-};
+    const { data } = require('consts/data/highstock/data-range.json')
+    cb(data)
+  })
+}
 
 const getConfig = (data) => ({
   chart: {
@@ -40,12 +40,12 @@ const getConfig = (data) => ({
       data: data
     }
   ]
-});
+})
 
 const AreaSpline = () => (
   <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
     <Charts.HighStock />
   </Charts.AsyncChart>
-);
+)
 
-export default AreaSpline;
+export default AreaSpline

@@ -1,3 +1,3 @@
-import StackedBarChart from './StackedBarChart';
+import StackedBarChart from './StackedBarChart'
 
-export default StackedBarChart;
+export default StackedBarChart

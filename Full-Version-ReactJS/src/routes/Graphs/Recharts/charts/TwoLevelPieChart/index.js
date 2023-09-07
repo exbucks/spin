@@ -1,3 +1,3 @@
-import TwoLevelPieChart from './TwoLevelPieChart';
+import TwoLevelPieChart from './TwoLevelPieChart'
 
-export default TwoLevelPieChart;
+export default TwoLevelPieChart

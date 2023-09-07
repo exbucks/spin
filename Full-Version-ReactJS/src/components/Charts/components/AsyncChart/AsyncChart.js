@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import classes from './AsyncChart.scss';
+import classes from './AsyncChart.scss'
 
-const getSize = (value) => (typeof value === 'string' ? value : `${parseInt(value)}px`);
+const getSize = (value) => (typeof value === 'string' ? value : `${parseInt(value)}px`)
 
 class AsyncChart extends React.Component {
   static propTypes = {
@@ -12,27 +12,27 @@ class AsyncChart extends React.Component {
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     getConfig: PropTypes.func.isRequired,
     getJson: PropTypes.func.isRequired
-  };
+  }
 
   static defaultProps = {
     width: '100%',
     height: '400px'
-  };
+  }
 
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       chartData: null
-    };
+    }
   }
 
   componentDidMount() {
     this.props.getJson((data) => {
       this.setState({
         data
-      });
-    });
+      })
+    })
   }
 
   getLoader() {
@@ -58,28 +58,28 @@ class AsyncChart extends React.Component {
           ></path>
         </g>
       </svg>
-    );
+    )
   }
 
   getConfigInjectedChild() {
-    const onlyChild = React.Children.only(this.props.children);
+    const onlyChild = React.Children.only(this.props.children)
     return React.cloneElement(onlyChild, {
       config: this.props.getConfig(this.state.data)
-    });
+    })
   }
 
   render() {
     const wrapStyle = {
       width: getSize(this.props.width),
       height: getSize(this.props.height)
-    };
+    }
 
     return (
       <div className={classes.asyncWrap} style={wrapStyle}>
         {this.state.data ? this.getConfigInjectedChild() : this.getLoader()}
       </div>
-    );
+    )
   }
 }
 
-export default AsyncChart;
+export default AsyncChart

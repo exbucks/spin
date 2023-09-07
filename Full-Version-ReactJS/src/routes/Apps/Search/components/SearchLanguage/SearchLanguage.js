@@ -1,5 +1,5 @@
-import React from 'react';
-import { Divider, Form } from 'components';
+import React from 'react'
+import { Divider, Form } from 'components'
 
 const SearchLanguage = () => (
   <div>
@@ -10,6 +10,6 @@ const SearchLanguage = () => (
       <Form.Check>Spanish</Form.Check>
     </div>
   </div>
-);
+)
 
-export default SearchLanguage;
+export default SearchLanguage

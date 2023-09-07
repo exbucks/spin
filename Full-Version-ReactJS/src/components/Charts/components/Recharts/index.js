@@ -1,7 +1,7 @@
 /* Perfect Component, nothing to Wrap here - just export the module
 with basic components styling */
-import React from 'react';
-import * as Recharts from 'recharts';
+import React from 'react'
+import * as Recharts from 'recharts'
 
 const {
   YAxis: RechartsYAxis,
@@ -14,18 +14,18 @@ const {
   Pie: RechartsPie,
   Treemap: RechartsTreemap,
   ReferenceLine: RechartsReferenceLine
-} = Recharts;
+} = Recharts
 
 class XAxis extends RechartsXAxis {
   static defaultProps = Object.assign({}, RechartsXAxis.defaultProps, {
     stroke: '#404040'
-  });
+  })
 }
 
 class YAxis extends RechartsYAxis {
   static defaultProps = Object.assign({}, RechartsYAxis.defaultProps, {
     stroke: '#404040'
-  });
+  })
 }
 
 const CartesianGrid = (props) => {
@@ -33,19 +33,19 @@ const CartesianGrid = (props) => {
     ...props,
     strokeDasharray: '3 3',
     stroke: '#303030'
-  };
+  }
 
-  return <RechartsCartesianGrid {...extendedProps} />;
-};
+  return <RechartsCartesianGrid {...extendedProps} />
+}
 
 const PolarGrid = (props) => {
   const extendedProps = {
     ...props,
     stroke: '#404040'
-  };
+  }
 
-  return <ReachartsPolarGrid {...extendedProps} />;
-};
+  return <ReachartsPolarGrid {...extendedProps} />
+}
 
 const Tooltip = (props) => {
   const extendedProps = {
@@ -56,10 +56,10 @@ const Tooltip = (props) => {
       borderWidth: '1px',
       borderColor: '#282828'
     }
-  };
+  }
 
-  return <RechartsTooltip {...extendedProps} />;
-};
+  return <RechartsTooltip {...extendedProps} />
+}
 
 class Line extends RechartsLine {
   static defaultProps = {
@@ -75,7 +75,7 @@ class Line extends RechartsLine {
       strokeWidth: '2',
       r: 10
     }
-  };
+  }
 }
 
 class Area extends RechartsArea {
@@ -92,21 +92,21 @@ class Area extends RechartsArea {
       strokeWidth: '2',
       r: 10
     }
-  };
+  }
 }
 
 class Pie extends RechartsPie {
   static defaultProps = {
     ...RechartsPie.defaultProps,
     stroke: '#212121'
-  };
+  }
 }
 
 class Treemap extends RechartsTreemap {
   static defaultProps = {
     ...RechartsTreemap.defaultProps,
     stroke: '#212121'
-  };
+  }
 }
 
 const ReferenceLine = (props) => {
@@ -116,10 +116,10 @@ const ReferenceLine = (props) => {
       stroke: '#000'
     },
     props
-  );
+  )
 
-  return <RechartsReferenceLine {...extendedProps} />;
-};
+  return <RechartsReferenceLine {...extendedProps} />
+}
 
 export default Object.assign({}, Recharts, {
   XAxis,
@@ -132,4 +132,4 @@ export default Object.assign({}, Recharts, {
   Pie,
   Treemap,
   ReferenceLine
-});
+})

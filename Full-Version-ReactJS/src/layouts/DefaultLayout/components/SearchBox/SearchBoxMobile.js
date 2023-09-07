@@ -1,5 +1,5 @@
-import React from 'react';
-import { Navbar, NavItem, FormGroup, InputGroup, Button, FormControl } from 'react-bootstrap';
+import React from 'react'
+import { Navbar, NavItem, FormGroup, InputGroup, Button, FormControl } from 'react-bootstrap'
 
 const SearchBoxMobile = (props) => (
   <NavItem className="visible-xs">
@@ -16,6 +16,6 @@ const SearchBoxMobile = (props) => (
       </FormGroup>
     </Navbar.Form>
   </NavItem>
-);
+)
 
-export default SearchBoxMobile;
+export default SearchBoxMobile

@@ -1,5 +1,5 @@
-import BootstrapTable from './customBootstrapTable';
-import TableHeaderColumn from './customTableHeaderColumn';
+import BootstrapTable from './customBootstrapTable'
+import TableHeaderColumn from './customTableHeaderColumn'
 
 import {
   InsertModalHeader,
@@ -13,7 +13,7 @@ import {
   SearchField,
   ButtonGroup,
   SizePerPageDropDown
-} from 'react-bootstrap-table';
+} from 'react-bootstrap-table'
 
 export {
   BootstrapTable,
@@ -29,4 +29,4 @@ export {
   SearchField,
   ButtonGroup,
   SizePerPageDropDown
-};
+}

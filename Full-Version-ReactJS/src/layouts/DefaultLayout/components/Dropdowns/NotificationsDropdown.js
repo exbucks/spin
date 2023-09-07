@@ -1,12 +1,12 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { faker } from '@faker-js/faker';
-import _ from 'underscore';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
+import { faker } from '@faker-js/faker'
+import _ from 'underscore'
+import moment from 'moment'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { NavDropdown, Label, ListGroup, ListGroupItem, Media, Button, Navbar } from 'components';
+import { NavDropdown, Label, ListGroup, ListGroupItem, Media, Button, Navbar } from 'components'
 
 const notifications = [
   {
@@ -53,15 +53,15 @@ const notifications = [
     title: faker.hacker.phrase(),
     date: moment(faker.date.recent()).format('DD-MMM-YYYY, HH:mm')
   }
-];
+]
 
 class NotificationsDropdown extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       open: false
-    };
+    }
   }
 
   render() {
@@ -71,7 +71,7 @@ class NotificationsDropdown extends React.Component {
         noCaret
         open={this.state.open}
         onToggle={() => {
-          this.setState({ open: !this.state.open });
+          this.setState({ open: !this.state.open })
         }}
         title={
           <span>
@@ -99,7 +99,7 @@ class NotificationsDropdown extends React.Component {
                 <Button
                   bsSize="xs"
                   onClick={() => {
-                    this.setState({ open: false });
+                    this.setState({ open: false })
                   }}
                 >
                   <i className="fa fa-gear fa-fw"></i>
@@ -131,8 +131,8 @@ class NotificationsDropdown extends React.Component {
           </ListGroup>
         </Navbar.DropdownList>
       </NavDropdown>
-    );
+    )
   }
 }
 
-export default NotificationsDropdown;
+export default NotificationsDropdown

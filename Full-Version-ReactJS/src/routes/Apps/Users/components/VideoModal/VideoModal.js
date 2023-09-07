@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { faker } from '@faker-js/faker';
-import { Row, Col, Modal, OverlayTrigger, Tooltip, Image, Divider } from 'components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { faker } from '@faker-js/faker'
+import { Row, Col, Modal, OverlayTrigger, Tooltip, Image, Divider } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const callerData = {
   Callee: {
@@ -14,7 +14,7 @@ const callerData = {
     Name: `${faker.person.firstName()} ${faker.person.lastName()}`,
     Position: faker.person.jobTitle()
   }
-};
+}
 
 const VideoModal = (props) => (
   <Modal show={props.visible} onHide={props.onClose} bsSize="large">
@@ -87,15 +87,15 @@ const VideoModal = (props) => (
       </Row>
     </Modal.Body>
   </Modal>
-);
+)
 
 VideoModal.propTypes = {
   visible: PropTypes.bool,
   onClose: PropTypes.func
-};
+}
 
 VideoModal.defaultProps = {
   onClose: () => {}
-};
+}
 
-export default VideoModal;
+export default VideoModal

@@ -1,3 +1,3 @@
-import TeamActivityContainer from './TeamActivityContainer.js';
+import TeamActivityContainer from './TeamActivityContainer.js'
 
-export default TeamActivityContainer;
+export default TeamActivityContainer

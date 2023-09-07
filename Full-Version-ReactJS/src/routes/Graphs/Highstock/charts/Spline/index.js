@@ -1,3 +1,3 @@
-import Spline from './Spline';
+import Spline from './Spline'
 
-export default Spline;
+export default Spline

@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
+import classNames from 'classnames'
 
-import ReactDatePicker from 'react-date-picker';
+import ReactDatePicker from 'react-date-picker'
 
-import { FormControl, InputGroup, OutsideClick, Button } from 'components';
+import { FormControl, InputGroup, OutsideClick, Button } from 'components'
 
-import classes from './datePicker.scss';
+import classes from './datePicker.scss'
 
 const pickerPropTypes = {
   enableOutsideDays: PropTypes.bool,
@@ -25,7 +25,7 @@ const pickerPropTypes = {
   renderDay: PropTypes.func,
 
   monthFormat: PropTypes.string
-};
+}
 
 class DatePicker extends React.Component {
   static propTypes = {
@@ -52,7 +52,7 @@ class DatePicker extends React.Component {
     positionVertical: PropTypes.string,
 
     absolute: PropTypes.bool
-  };
+  }
 
   static defaultProps = {
     prefixAddOn: <i className="fa fa-calendar fa-fw"></i>,
@@ -87,52 +87,52 @@ class DatePicker extends React.Component {
     positionVertical: 'left',
 
     absolute: true
-  };
+  }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       date: props.initialDate || null,
       focused: false
-    };
+    }
 
-    this.onDateChange = this.onDateChange.bind(this);
-    this.onFocusChange = this.onFocusChange.bind(this);
+    this.onDateChange = this.onDateChange.bind(this)
+    this.onFocusChange = this.onFocusChange.bind(this)
   }
 
   onDateChange(date) {
-    const { onDateSelected } = this.props;
+    const { onDateSelected } = this.props
 
-    this.setState({ focused: false, date });
+    this.setState({ focused: false, date })
 
-    onDateSelected(date);
+    onDateSelected(date)
   }
 
   onFocusChange(focused) {
     this.setState({
       focused
-    });
+    })
   }
 
   onReset() {
     this.setState({
       date: this.props.initialDate || null
-    });
+    })
   }
 
   renderButtons({ date, focused }) {
-    const { placeholder, bsSize, bsStyle, bsStyleActive, format } = this.props;
+    const { placeholder, bsSize, bsStyle, bsStyleActive, format } = this.props
 
     return (
       <Button onClick={() => this.onFocusChange(true)} bsStyle={focused ? bsStyleActive : bsStyle}>
         {date ? moment(date).format(format) : placeholder}
       </Button>
-    );
+    )
   }
 
   renderInputs({ date, focused }) {
-    const { prefixAddOn, postfixButton, placeholder, bsSize, format } = this.props;
+    const { prefixAddOn, postfixButton, placeholder, bsSize, format } = this.props
 
     return prefixAddOn || postfixButton ? (
       <InputGroup bsSize={bsSize}>
@@ -164,16 +164,16 @@ class DatePicker extends React.Component {
         onFocus={() => this.onFocusChange(true)}
         className={focused && classes.focusedInput}
       />
-    );
+    )
   }
 
   render() {
-    const { format, type, className } = this.props;
+    const { format, type, className } = this.props
 
-    const { focused, date: dateRaw } = this.state;
-    const pickerProps = _.pick(this.props, _.keys(pickerPropTypes));
+    const { focused, date: dateRaw } = this.state
+    const pickerProps = _.pick(this.props, _.keys(pickerPropTypes))
 
-    const date = dateRaw && moment(dateRaw);
+    const date = dateRaw && moment(dateRaw)
 
     const wrapClass = classNames(
       {
@@ -184,12 +184,12 @@ class DatePicker extends React.Component {
         [classes['wrap--bottom']]: this.props.positionVertical === 'bottom'
       },
       className
-    );
+    )
 
     return (
       <OutsideClick
         onClickOutside={() => {
-          this.onFocusChange(false);
+          this.onFocusChange(false)
         }}
       >
         <div className={wrapClass}>
@@ -203,8 +203,8 @@ class DatePicker extends React.Component {
           )}
         </div>
       </OutsideClick>
-    );
+    )
   }
 }
 
-export default DatePicker;
+export default DatePicker

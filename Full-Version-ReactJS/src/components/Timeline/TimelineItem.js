@@ -1,29 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Row, Col, Timeline } from 'components';
-import _ from 'underscore';
-import classNames from 'classnames';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Row, Col, Timeline } from 'components'
+import _ from 'underscore'
+import classNames from 'classnames'
+import moment from 'moment'
 
-import { Colors } from './../../consts';
+import { Colors } from './../../consts'
 
-import classes from './Timeline.scss';
+import classes from './Timeline.scss'
 
 const findItemOfType = (children, type) => {
-  let foundItem = null;
+  let foundItem = null
 
   React.Children.forEach(children, (child) => {
     if (!foundItem && !!child && child.type === type) {
-      foundItem = child;
+      foundItem = child
     }
-  });
+  })
 
-  return foundItem;
-};
+  return foundItem
+}
 
 const reformatDate = (date, format) => {
-  const formattedDate = moment(date).format(format);
-  const dateParts = formattedDate.split('\n');
+  const formattedDate = moment(date).format(format)
+  const dateParts = formattedDate.split('\n')
 
   return _.map(dateParts, (part, index) =>
     index > 0 ? (
@@ -34,16 +34,16 @@ const reformatDate = (date, format) => {
     ) : (
       <span key={index}>{part}</span>
     )
-  );
-};
+  )
+}
 
 const TimelineItem = (props) => {
-  const headerItem = findItemOfType(props.children, Timeline.ItemHeader);
-  const bodyItem = findItemOfType(props.children, Timeline.ItemBody);
+  const headerItem = findItemOfType(props.children, Timeline.ItemHeader)
+  const bodyItem = findItemOfType(props.children, Timeline.ItemBody)
   const isVertical =
-    props.itemAlignment === 'vertical' || props.itemAlignment === 'vertical-inner-date';
-  const otherProps = _.omit(props, _.keys(TimelineItem.propTypes));
-  const timelineItemClass = classNames(props.className, classes.timelineItem);
+    props.itemAlignment === 'vertical' || props.itemAlignment === 'vertical-inner-date'
+  const otherProps = _.omit(props, _.keys(TimelineItem.propTypes))
+  const timelineItemClass = classNames(props.className, classes.timelineItem)
 
   return (
     <div className={timelineItemClass} {...otherProps}>
@@ -66,20 +66,20 @@ const TimelineItem = (props) => {
                   <Col lg={2} className={classes.timelineItemTime}>
                     {reformatDate(props.date, props.dateFormat)}
                   </Col>
-                );
+                )
               case 'vertical':
                 return (
                   <div className={classes.timelineItemTime}>
                     {reformatDate(props.date, props.dateFormat)}
                   </div>
-                );
+                )
             }
           }
         })()}
       </Row>
     </div>
-  );
-};
+  )
+}
 
 TimelineItem.defaultProps = {
   date: '',
@@ -88,7 +88,7 @@ TimelineItem.defaultProps = {
   icon: <i className="fa fa-circle-o"></i>,
   itemAlignment: 'horizontal',
   className: ''
-};
+}
 
 TimelineItem.propTypes = {
   children: PropTypes.node.isRequired,
@@ -98,6 +98,6 @@ TimelineItem.propTypes = {
   icon: PropTypes.node,
   itemAlignment: PropTypes.string,
   className: PropTypes.string
-};
+}
 
-export default TimelineItem;
+export default TimelineItem

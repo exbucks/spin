@@ -1,3 +1,3 @@
-import AlertsContainer from './Alerts';
+import AlertsContainer from './Alerts'
 
-export default AlertsContainer;
+export default AlertsContainer

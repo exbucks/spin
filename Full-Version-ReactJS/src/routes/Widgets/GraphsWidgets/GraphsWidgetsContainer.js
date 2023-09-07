@@ -1,12 +1,12 @@
-import React from 'react';
-import _ from 'underscore';
+import React from 'react'
+import _ from 'underscore'
 
-import { Row, Col, Table, CollapsablePanel } from 'components';
+import { Row, Col, Table, CollapsablePanel } from 'components'
 
-import { RoutedComponent, connect } from 'routes/routedComponent';
-import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout';
+import { RoutedComponent, connect } from 'routes/routedComponent'
+import { CONTENT_VIEW_STATIC } from 'layouts/DefaultLayout/modules/layout'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 /*
     Page specific components
@@ -30,31 +30,31 @@ import {
   Stats,
   CpuBox,
   DonutWithLegend
-} from './components';
+} from './components'
 
 class GraphsWidgetsContainer extends RoutedComponent {
   constructor(props, context) {
-    super(props, context);
+    super(props, context)
 
     this.state = {
       closedPanels: []
-    };
+    }
   }
 
   getLayoutOptions() {
     return {
       contentView: CONTENT_VIEW_STATIC
-    };
+    }
   }
 
   isPanelOpen(panelId) {
-    return !_.contains(this.state.closedPanels, panelId);
+    return !_.contains(this.state.closedPanels, panelId)
   }
 
   closePanel(panelId) {
     this.setState({
       closedPanels: [...this.state.closedPanels, panelId]
-    });
+    })
   }
 
   render() {
@@ -126,8 +126,8 @@ class GraphsWidgetsContainer extends RoutedComponent {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default connect()(GraphsWidgetsContainer);
+export default connect()(GraphsWidgetsContainer)

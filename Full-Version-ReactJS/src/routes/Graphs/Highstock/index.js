@@ -1,3 +1,3 @@
-import HighstockContainer from './HighstockContainer';
+import HighstockContainer from './HighstockContainer'
 
-export default HighstockContainer;
+export default HighstockContainer

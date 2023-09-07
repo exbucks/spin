@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
-import moment from 'moment';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
+import moment from 'moment'
+import classNames from 'classnames'
 
-import DatePicker from 'react-date-picker';
+import DatePicker from 'react-date-picker'
 
 import {
   FormControl,
@@ -13,9 +13,9 @@ import {
   ButtonGroup,
   ButtonToolbar,
   Button
-} from 'components';
+} from 'components'
 
-import classes from './datePicker.scss';
+import classes from './datePicker.scss'
 
 const pickerPropTypes = {
   enableOutsideDays: PropTypes.bool,
@@ -32,7 +32,7 @@ const pickerPropTypes = {
   renderDay: PropTypes.func,
 
   monthFormat: PropTypes.string
-};
+}
 
 class DateRangePicker extends React.Component {
   static propTypes = {
@@ -62,7 +62,7 @@ class DateRangePicker extends React.Component {
     positionVertical: PropTypes.string,
 
     absolute: PropTypes.bool
-  };
+  }
 
   static defaultProps = {
     separatorAddOn: <i className="fa fa-angle-right fa-fw"></i>,
@@ -99,40 +99,40 @@ class DateRangePicker extends React.Component {
     positionVertical: 'left',
 
     absolute: true
-  };
+  }
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       startDate: props.initialStartDate || null,
       endDate: props.initialEndDate || null,
       focusedInput: ''
-    };
+    }
 
-    this.onDatesChange = this.onDatesChange.bind(this);
-    this.onFocusChange = this.onFocusChange.bind(this);
+    this.onDatesChange = this.onDatesChange.bind(this)
+    this.onFocusChange = this.onFocusChange.bind(this)
   }
 
   onDatesChange({ startDate, endDate }) {
-    const { onDateSelected } = this.props;
+    const { onDateSelected } = this.props
 
-    this.setState({ startDate, endDate });
+    this.setState({ startDate, endDate })
 
-    onDateSelected({ startDate, endDate });
+    onDateSelected({ startDate, endDate })
   }
 
   onFocusChange(focusedInput) {
     this.setState({
       focusedInput
-    });
+    })
   }
 
   onReset() {
     this.setState({
       startDate: this.props.initialStartDate || null,
       endDate: this.props.initialEndDate || null
-    });
+    })
   }
 
   renderButtons({ startDate, endDate, focusedInput }) {
@@ -145,7 +145,7 @@ class DateRangePicker extends React.Component {
       bsSize,
       bsStyle,
       bsStyleActive
-    } = this.props;
+    } = this.props
 
     return (
       <ButtonToolbar bsSize={bsSize}>
@@ -173,12 +173,12 @@ class DateRangePicker extends React.Component {
           </Button>
         </ButtonGroup>
       </ButtonToolbar>
-    );
+    )
   }
 
   renderInputs({ startDate, endDate, focusedInput }) {
     const { prefixAddOn, separatorAddOn, postfixButton, placeholderStart, placeholderEnd, bsSize } =
-      this.props;
+      this.props
 
     return (
       <InputGroup bsSize={bsSize}>
@@ -226,17 +226,17 @@ class DateRangePicker extends React.Component {
           </InputGroup.Button>
         )}
       </InputGroup>
-    );
+    )
   }
 
   render() {
-    const { format, type, className } = this.props;
+    const { format, type, className } = this.props
 
-    const { focusedInput, startDate: startDateRaw, endDate: endDateRaw } = this.state;
-    const pickerProps = _.pick(this.props, _.keys(pickerPropTypes));
+    const { focusedInput, startDate: startDateRaw, endDate: endDateRaw } = this.state
+    const pickerProps = _.pick(this.props, _.keys(pickerPropTypes))
 
-    const startDate = startDateRaw && moment(startDateRaw).format(format);
-    const endDate = endDateRaw && moment(endDateRaw).format(format);
+    const startDate = startDateRaw && moment(startDateRaw).format(format)
+    const endDate = endDateRaw && moment(endDateRaw).format(format)
 
     const wrapClass = classNames(
       {
@@ -248,12 +248,12 @@ class DateRangePicker extends React.Component {
         [classes['wrap--buttons']]: type === 'button'
       },
       className
-    );
+    )
 
     return (
       <OutsideClick
         onClickOutside={() => {
-          this.onFocusChange('');
+          this.onFocusChange('')
         }}
       >
         <div className={wrapClass}>
@@ -267,8 +267,8 @@ class DateRangePicker extends React.Component {
           )}
         </div>
       </OutsideClick>
-    );
+    )
   }
 }
 
-export default DateRangePicker;
+export default DateRangePicker

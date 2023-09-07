@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import _ from 'underscore';
+import React from 'react'
+import PropTypes from 'prop-types'
+import _ from 'underscore'
 
 import {
   Media,
@@ -13,27 +13,27 @@ import {
   Label,
   ScrollBarContainer,
   FavoriteStar
-} from 'components';
+} from 'components'
 
-import TimelineExample from 'routes/Pages/Timeline/components/TimelineExample_VerticalInnerDate';
+import TimelineExample from 'routes/Pages/Timeline/components/TimelineExample_VerticalInnerDate'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
-import classes from './UserDetails.scss';
+import classes from './UserDetails.scss'
 
 const statusToColor = (status) => {
   switch (status) {
     case 'Online':
-      return Colors.brandSuccess;
+      return Colors.brandSuccess
     case 'Busy':
-      return Colors.brandDanger;
+      return Colors.brandDanger
     case 'Away':
-      return Colors.brandWarning;
+      return Colors.brandWarning
     default:
     case 'Offline':
-      return Colors.grayLighter;
+      return Colors.grayLighter
   }
-};
+}
 
 const UserDetails = (props) => (
   <div className={classes.userDetails}>
@@ -138,7 +138,7 @@ const UserDetails = (props) => (
       </Tab>
     </Tabs>
   </div>
-);
+)
 
 UserDetails.propTypes = {
   status: PropTypes.string,
@@ -151,6 +151,6 @@ UserDetails.propTypes = {
   contact: PropTypes.object,
   social: PropTypes.object,
   address: PropTypes.object
-};
+}
 
-export default UserDetails;
+export default UserDetails

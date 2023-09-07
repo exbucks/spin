@@ -1,5 +1,5 @@
-import React from 'react';
-import reactCSS from 'reactcss';
+import React from 'react'
+import reactCSS from 'reactcss'
 
 export const AlphaPointer = ({ direction }) => {
   const styles = reactCSS(
@@ -21,9 +21,9 @@ export const AlphaPointer = ({ direction }) => {
       }
     },
     { vertical: direction === 'vertical' }
-  );
+  )
 
-  return <div style={styles.picker} />;
-};
+  return <div style={styles.picker} />
+}
 
-export default AlphaPointer;
+export default AlphaPointer

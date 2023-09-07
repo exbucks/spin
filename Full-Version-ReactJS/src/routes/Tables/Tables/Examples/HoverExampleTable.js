@@ -1,9 +1,9 @@
-import React from 'react';
-import { faker } from '@faker-js/faker';
+import React from 'react'
+import { faker } from '@faker-js/faker'
 
-import { Table, Charts } from 'components';
+import { Table, Charts } from 'components'
 
-import { Colors } from 'consts';
+import { Colors } from 'consts'
 
 const HoverExampleTable = () => (
   <Table hover>
@@ -89,6 +89,6 @@ const HoverExampleTable = () => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
-export default HoverExampleTable;
+export default HoverExampleTable

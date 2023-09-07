@@ -1,3 +1,3 @@
-import CompareMultiple from './CompareMultiple';
+import CompareMultiple from './CompareMultiple'
 
-export default CompareMultiple;
+export default CompareMultiple
