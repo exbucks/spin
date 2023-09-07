@@ -65,15 +65,6 @@ import {
 
 import rightSidebarDataRaw from 'consts/data/right-sidebar.json'
 
-const sidebarAddOns = {
-  [SIDEBAR_ADDON_PROGRESS]: (props) => <SidebarAddOns.ProgressAddOn {...props} />,
-  [SIDEBAR_ADDON_MENU]: (props) => <SidebarAddOns.MenuAddOn {...props} />,
-  [SIDEBAR_ADDON_BARS]: (props) => <SidebarAddOns.BarsAddOn {...props} />,
-  [SIDEBAR_ADDON_AVATAR_AND_BARS]: (props) => <SidebarAddOns.AvatarAndBarsAddOn {...props} />,
-  [SIDEBAR_ADDON_AVATAR_AND_NUMBERS]: (props) => <SidebarAddOns.AvatarAndNumbersAddOn {...props} />,
-  [SIDEBAR_ADDON_AVATAR_AND_STATS]: (props) => <SidebarAddOns.AvatarAndStatsAddOn {...props} />
-}
-
 const profileUser = {
   name: `${faker.person.firstName()} ${faker.person.lastName()}`,
   avatar: faker.image.avatar()
@@ -87,6 +78,24 @@ const DefaultLayout = (props) => {
   const location = useLocation()
   let beforeSlimSidebarStyle
 
+  const handleSidebar = (type, prs) => {
+    switch (type) {
+      case SIDEBAR_ADDON_PROGRESS:
+        return <SidebarAddOns.ProgressAddOn {...prs} />
+      case SIDEBAR_ADDON_MENU:
+        return <SidebarAddOns.MenuAddOn {...prs} />
+      case SIDEBAR_ADDON_BARS:
+        return <SidebarAddOns.BarsAddOn {...prs} />
+      case SIDEBAR_ADDON_AVATAR_AND_BARS:
+        return <SidebarAddOns.AvatarAndBarsAddOn {...prs} />
+      case SIDEBAR_ADDON_AVATAR_AND_NUMBERS:
+        return <SidebarAddOns.AvatarAndNumbersAddOn {...prs} />
+      case SIDEBAR_ADDON_AVATAR_AND_STATS:
+        return <SidebarAddOns.AvatarAndStatsAddOn {...prs} />
+      default:
+        return <SidebarAddOns.ProgressAddOn {...prs} />
+    }
+  }
   const handleSelect = () => {}
   const handleToggleSidebar = () => {
     const { sidebarStyle, setSidebarStyle } = props
@@ -301,7 +310,7 @@ const DefaultLayout = (props) => {
                   </div>
                 )
               } else {
-                return sidebarAddOns[props.sidebarAddon]({
+                return handleSidebar(props.sidebarAddon, {
                   colorSidebar: props.sidebarSkin === SKIN_COLOR
                 })
               }
@@ -309,7 +318,7 @@ const DefaultLayout = (props) => {
             <div className="sidebar-default-visible text-muted small text-uppercase sidebar-section p-y-2">
               <strong>Navigation</strong>
             </div>
-            <Sidebar.Menu currentUrl={props.location.pathname} />
+            <Sidebar.Menu currentUrl={location.pathname} />
           </Sidebar>
         </OutsideClick>
       </Layout.Navigation>
@@ -323,7 +332,7 @@ const DefaultLayout = (props) => {
             <Header
               style={props.headerStyle}
               fluid={props.contentView !== CONTENT_VIEW_STATIC}
-              currentUrl={props.location.pathname}
+              currentUrl={location.pathname}
             />
             <Grid fluid={props.contentView !== CONTENT_VIEW_STATIC}>{props.children}</Grid>
           </Layout.Content>
