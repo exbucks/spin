@@ -1,5 +1,5 @@
 import React from 'react'
-import { Label, Badge } from 'components'
+import { Badge } from 'components'
 
 import { v4 as uuidv4 } from 'uuid'
 import _ from 'underscore'
@@ -69,11 +69,7 @@ const CONFIG = [
         url: '/widgets/graphs-widgets'
       }
     ],
-    sidebarElement: (
-      <Label bsStyle="primary" outline className="pull-right">
-        New
-      </Label>
-    )
+    sidebarElement: (<span>New</span>)
   },
   {
     slug: 'layouts',

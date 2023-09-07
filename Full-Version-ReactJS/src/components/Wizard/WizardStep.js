@@ -1,26 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-
-import classes from './wizard.scss'
+import './Wizard.scss'
 
 const WizardStep = (props) => {
   const stepClass = classNames(
     {
-      [classes['wizard-step--active']]: props.active,
-      [classes['wizard-step--complete']]: props.complete,
-      [classes['wizard-step--disabled']]: props.disabled
+      'wizard-step--active': props.active,
+      'wizard-step--complete': props.complete,
+      'wizard-step--disabled': props.disabled
     },
-    classes['wizard-step'],
+    'wizard-step',
     props.className
   )
 
   return (
-    <a href="javascript:;" className={stepClass} onClick={() => !props.disabled && props.onClick()}>
-      <div className={classes['wizard-step__icon']}>
-        {!props.complete ? props.icon : props.successIcon}
+    <a className={stepClass} onClick={() => !props.disabled && props.onClick()}>
+      <div className='wizard-step__icon'>
+        {props.complete ? props.successIcon : props.icon}
       </div>
-      <div className={classes['wizard-step__content']}>{props.children}</div>
+      <div className='wizard-step__content'>{props.children}</div>
     </a>
   )
 }
