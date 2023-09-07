@@ -1,21 +1,21 @@
-import React from 'react'
-import reactCSS from 'reactcss'
-import * as color from 'react-color/lib/helpers/color'
+import React from 'react';
+import reactCSS from 'reactcss';
+import * as color from 'react-color/lib/helpers/color';
 
-import { Raised } from 'react-color/lib/components/common'
-import { ColorWrap, EditableInput } from 'react-color/lib/components/common'
+import { Raised } from 'react-color/lib/components/common';
+import { ColorWrap, EditableInput } from 'react-color/lib/components/common';
 
 export const Material = ({ onChange, hex, rgb }) => {
   const styles = reactCSS({
-    'default': {
+    default: {
       material: {
         width: '98px',
         height: '98px',
         padding: '16px',
-        fontFamily: 'Roboto',
+        fontFamily: 'Roboto'
       },
       HEXwrap: {
-        position: 'relative',
+        position: 'relative'
       },
       HEXinput: {
         width: '100%',
@@ -24,9 +24,9 @@ export const Material = ({ onChange, hex, rgb }) => {
         color: '#333',
         padding: '0px',
         border: '0px',
-        borderBottom: `2px solid ${ hex }`,
+        borderBottom: `2px solid ${hex}`,
         outline: 'none',
-        height: '30px',
+        height: '30px'
       },
       HEXlabel: {
         position: 'absolute',
@@ -34,15 +34,13 @@ export const Material = ({ onChange, hex, rgb }) => {
         left: '0px',
         fontSize: '11px',
         color: '#999999',
-        textTransform: 'capitalize',
+        textTransform: 'capitalize'
       },
       Hex: {
-        style: {
-
-        },
+        style: {}
       },
       RGBwrap: {
-        position: 'relative',
+        position: 'relative'
       },
       RGBinput: {
         width: '100%',
@@ -53,7 +51,7 @@ export const Material = ({ onChange, hex, rgb }) => {
         border: '0px',
         borderBottom: '1px solid #eee',
         outline: 'none',
-        height: '30px',
+        height: '30px'
       },
       RGBlabel: {
         position: 'absolute',
@@ -61,73 +59,81 @@ export const Material = ({ onChange, hex, rgb }) => {
         left: '0px',
         fontSize: '11px',
         color: '#999999',
-        textTransform: 'capitalize',
+        textTransform: 'capitalize'
       },
       split: {
         display: 'flex',
         marginRight: '-10px',
-        paddingTop: '11px',
+        paddingTop: '11px'
       },
       third: {
         flex: '1',
-        paddingRight: '10px',
-      },
-    },
-  })
+        paddingRight: '10px'
+      }
+    }
+  });
 
   const handleChange = (data, e) => {
     if (data.hex) {
-      color.isValidHex(data.hex) && onChange({
-        hex: data.hex,
-        source: 'hex',
-      }, e)
+      color.isValidHex(data.hex) &&
+        onChange(
+          {
+            hex: data.hex,
+            source: 'hex'
+          },
+          e
+        );
     } else if (data.r || data.g || data.b) {
-      onChange({
-        r: data.r || rgb.r,
-        g: data.g || rgb.g,
-        b: data.b || rgb.b,
-        source: 'rgb',
-      }, e)
+      onChange(
+        {
+          r: data.r || rgb.r,
+          g: data.g || rgb.g,
+          b: data.b || rgb.b,
+          source: 'rgb'
+        },
+        e
+      );
     }
-  }
+  };
 
   return (
     <Raised>
-      <div style={ styles.material } className="material-picker">
+      <div style={styles.material} className="material-picker">
         <EditableInput
           style={{ wrap: styles.HEXwrap, input: styles.HEXinput, label: styles.HEXlabel }}
           label="hex"
-          value={ hex }
-          onChange={ handleChange }
+          value={hex}
+          onChange={handleChange}
         />
-        <div style={ styles.split } className="flexbox-fix">
-          <div style={ styles.third }>
+        <div style={styles.split} className="flexbox-fix">
+          <div style={styles.third}>
             <EditableInput
               style={{ wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel }}
-              label="r" value={ rgb.r }
-              onChange={ handleChange }
+              label="r"
+              value={rgb.r}
+              onChange={handleChange}
             />
           </div>
-          <div style={ styles.third }>
+          <div style={styles.third}>
             <EditableInput
               style={{ wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel }}
               label="g"
-              value={ rgb.g }
-              onChange={ handleChange }
+              value={rgb.g}
+              onChange={handleChange}
             />
           </div>
-          <div style={ styles.third }>
+          <div style={styles.third}>
             <EditableInput
               style={{ wrap: styles.RGBwrap, input: styles.RGBinput, label: styles.RGBlabel }}
               label="b"
-              value={ rgb.b }
-              onChange={ handleChange }
+              value={rgb.b}
+              onChange={handleChange}
             />
           </div>
         </div>
       </div>
     </Raised>
-  )
-}
+  );
+};
 
-export default ColorWrap(Material)
+export default ColorWrap(Material);

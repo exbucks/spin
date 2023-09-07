@@ -4,10 +4,8 @@ import Timeline from 'routes/Pages/Timeline/components/TimelineExample_VerticalI
 import classes from './RightSidebar.scss';
 
 export default () => (
-    <div>
-        <h6 className={ classes.sectionTitle }>
-            Timeline
-        </h6>
-        <Timeline />
-    </div>
+  <div>
+    <h6 className={classes.sectionTitle}>Timeline</h6>
+    <Timeline />
+  </div>
 );

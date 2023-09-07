@@ -3,102 +3,109 @@ import React from 'react';
 import { Charts } from 'components';
 
 const getJson = (cb) => {
-    require.ensure([], (require) => {
-        const data = require('consts/data/highstock/data-large.json');
-        cb(data);
-    });
-}
+  require.ensure([], (require) => {
+    const data = require('consts/data/highstock/data-large.json');
+    cb(data);
+  });
+};
 
 const getConfig = (data) => {
-    // Create a timer
-    let start = +new Date();
+  // Create a timer
+  let start = +new Date();
 
-    // Create the chart
-    const config = {
-        chart: {
-            events: {
-                load: function () {
-                    if (!window.isComparing) {
-                        this.setTitle(null, {
-                            text: ''
-                        });
-                    }
-                }
-            },
-            zoomType: 'x'
+  // Create the chart
+  const config = {
+    chart: {
+      events: {
+        load: function () {
+          if (!window.isComparing) {
+            this.setTitle(null, {
+              text: ''
+            });
+          }
+        }
+      },
+      zoomType: 'x'
+    },
+
+    credits: {
+      enabled: false
+    },
+
+    exporting: {
+      enabled: false
+    },
+
+    rangeSelector: {
+      buttons: [
+        {
+          type: 'day',
+          count: 3,
+          text: '3d'
         },
-
-        credits: {
-            enabled: false
+        {
+          type: 'week',
+          count: 1,
+          text: '1w'
         },
-
-        exporting: {
-            enabled: false
+        {
+          type: 'month',
+          count: 1,
+          text: '1m'
         },
-
-        rangeSelector: {
-
-            buttons: [{
-                type: 'day',
-                count: 3,
-                text: '3d'
-            }, {
-                type: 'week',
-                count: 1,
-                text: '1w'
-            }, {
-                type: 'month',
-                count: 1,
-                text: '1m'
-            }, {
-                type: 'month',
-                count: 6,
-                text: '6m'
-            }, {
-                type: 'year',
-                count: 1,
-                text: '1y'
-            }, {
-                type: 'all',
-                text: 'All'
-            }],
-            selected: 3
+        {
+          type: 'month',
+          count: 6,
+          text: '6m'
         },
-
-        yAxis: {
-            title: {
-                text: 'Temperature (°C)'
-            }
+        {
+          type: 'year',
+          count: 1,
+          text: '1y'
         },
+        {
+          type: 'all',
+          text: 'All'
+        }
+      ],
+      selected: 3
+    },
 
-        title: {
-            text: ''
-        },
+    yAxis: {
+      title: {
+        text: 'Temperature (°C)'
+      }
+    },
 
-        subtitle: {
-            text: 'Built chart in ...' // dummy text to reserve space for dynamic subtitle
-        },
+    title: {
+      text: ''
+    },
 
-        series: [{
-            name: 'Temperature',
-            data: data.data,
-            pointStart: data.pointStart,
-            pointInterval: data.pointInterval,
-            tooltip: {
-                valueDecimals: 1,
-                valueSuffix: '°C'
-            }
-        }]
+    subtitle: {
+      text: 'Built chart in ...' // dummy text to reserve space for dynamic subtitle
+    },
 
-    };
+    series: [
+      {
+        name: 'Temperature',
+        data: data.data,
+        pointStart: data.pointStart,
+        pointInterval: data.pointInterval,
+        tooltip: {
+          valueDecimals: 1,
+          valueSuffix: '°C'
+        }
+      }
+    ]
+  };
 
-    return config;
+  return config;
 };
 
 const PointsWithDataGrouping = () => (
-    <Charts.AsyncChart getConfig={ getConfig } getJson={ getJson } >
-        <Charts.HighStock />
-    </Charts.AsyncChart>
-)
+  <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
+    <Charts.HighStock />
+  </Charts.AsyncChart>
+);
 
 export default PointsWithDataGrouping;

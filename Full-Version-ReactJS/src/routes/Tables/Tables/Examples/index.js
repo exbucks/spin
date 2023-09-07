@@ -7,11 +7,11 @@ import ResponsiveExampleTable from './ResponsiveExampleTable';
 import StripedExampleTable from './StripedExampleTable';
 
 export {
-    BasicExampleTable,
-    BorderedExampleTable,
-    CondensedExampleTable,
-    ContextualExampleTable,
-    HoverExampleTable,
-    ResponsiveExampleTable,
-    StripedExampleTable
+  BasicExampleTable,
+  BorderedExampleTable,
+  CondensedExampleTable,
+  ContextualExampleTable,
+  HoverExampleTable,
+  ResponsiveExampleTable,
+  StripedExampleTable
 };

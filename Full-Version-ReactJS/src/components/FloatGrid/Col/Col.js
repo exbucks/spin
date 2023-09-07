@@ -1,65 +1,69 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import _ from 'underscore';
 import classNames from 'classnames';
 
-import {
-    Col as BootstrapCol
-} from 'components';
+import { Col as BootstrapCol } from 'components';
 
 import classes from './../Float.scss';
 
 class Col extends React.Component {
-    static propTypes = {
-        active: PropTypes.bool,
+  static propTypes = {
+    active: PropTypes.bool,
 
-        lg: PropTypes.number,
-        md: PropTypes.number,
-        sm: PropTypes.number,
-        xs: PropTypes.number,
+    lg: PropTypes.number,
+    md: PropTypes.number,
+    sm: PropTypes.number,
+    xs: PropTypes.number,
 
-        lgH: PropTypes.number,
-        mdH: PropTypes.number,
-        smH: PropTypes.number,
-        xsH: PropTypes.number,
+    lgH: PropTypes.number,
+    mdH: PropTypes.number,
+    smH: PropTypes.number,
+    xsH: PropTypes.number,
 
-        lgX: PropTypes.number,
-        mdX: PropTypes.number,
-        smX: PropTypes.number,
-        xsX: PropTypes.number,
+    lgX: PropTypes.number,
+    mdX: PropTypes.number,
+    smX: PropTypes.number,
+    xsX: PropTypes.number,
 
-        lgY: PropTypes.number,
-        mdY: PropTypes.number,
-        smY: PropTypes.number,
-        xsY: PropTypes.number,
+    lgY: PropTypes.number,
+    mdY: PropTypes.number,
+    smY: PropTypes.number,
+    xsY: PropTypes.number,
 
-        children: PropTypes.node
-    }
+    children: PropTypes.node
+  };
 
-    static defaultProps = {
-        active: true
-    }
+  static defaultProps = {
+    active: true
+  };
 
-    render() {
-        const { active, children, className } = this.props;
-        const bsColumnProps = _.pick(this.props, ['lg', 'md', 'sm', 'xs']);
-        const otherProps = _.omit(this.props, [..._.keys(Col.propTypes),
-            'minW', 'maxW', 'minH', 'moved', 'static', 'isDraggable', 'isResizable']);
+  render() {
+    const { active, children, className } = this.props;
+    const bsColumnProps = _.pick(this.props, ['lg', 'md', 'sm', 'xs']);
+    const otherProps = _.omit(this.props, [
+      ..._.keys(Col.propTypes),
+      'minW',
+      'maxW',
+      'minH',
+      'moved',
+      'static',
+      'isDraggable',
+      'isResizable'
+    ]);
 
-        const floatColClasses = classNames(className, classes.floatCol);
+    const floatColClasses = classNames(className, classes.floatCol);
 
-        return (
-            active ? (
-                <div { ...otherProps } className={ floatColClasses }>
-                    { children }
-                </div>
-            ) : (
-                <BootstrapCol { ...(_.extend(bsColumnProps, otherProps)) } className={ className }>
-                    { children }
-                </BootstrapCol>
-            )
-        );
-    }
+    return active ? (
+      <div {...otherProps} className={floatColClasses}>
+        {children}
+      </div>
+    ) : (
+      <BootstrapCol {..._.extend(bsColumnProps, otherProps)} className={className}>
+        {children}
+      </BootstrapCol>
+    );
+  }
 }
 
 export default Col;

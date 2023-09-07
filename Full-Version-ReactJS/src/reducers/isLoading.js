@@ -1,16 +1,15 @@
-const getLoadingMatches = (actionType) =>
-    /(.*)_(REQUEST|SUCCESS|FAILURE)/.exec(actionType)
+const getLoadingMatches = (actionType) => /(.*)_(REQUEST|SUCCESS|FAILURE)/.exec(actionType);
 
 const isLoadingReducer = (state = {}, action) => {
-    const matches = getLoadingMatches(action.type)
+  const matches = getLoadingMatches(action.type);
 
-    if (!matches) return state
+  if (!matches) return state;
 
-    const [, requestName, requestStatus] = matches
-    return {
-        ...state,
-        [requestName]: requestStatus === 'REQUEST'
-    }
-}
+  const [, requestName, requestStatus] = matches;
+  return {
+    ...state,
+    [requestName]: requestStatus === 'REQUEST'
+  };
+};
 
-export default isLoadingReducer
+export default isLoadingReducer;

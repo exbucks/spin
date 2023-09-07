@@ -43,6 +43,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "format": "prettier --write './**/*.{js,jsx,css,md,json}' --config ./.prettierrc",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -65,6 +66,9 @@
     ]
   },
   "devDependencies": {
-    "craco": "^0.0.3"
+    "craco": "^0.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.3"
   }
 }

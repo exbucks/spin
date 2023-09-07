@@ -1,14 +1,14 @@
-import React from 'react'
-import reactCSS from 'reactcss'
-import map from 'lodash/map'
+import React from 'react';
+import reactCSS from 'reactcss';
+import map from 'lodash/map';
 
-import { Swatch } from 'react-color/lib/components/common'
+import { Swatch } from 'react-color/lib/components/common';
 
 export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
   const styles = reactCSS({
-    'default': {
+    default: {
       swatches: {
-        marginRight: '-10px',
+        marginRight: '-10px'
       },
       swatch: {
         width: '22px',
@@ -16,31 +16,31 @@ export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
         float: 'left',
         marginRight: '10px',
         marginBottom: '10px',
-        borderRadius: '4px',
+        borderRadius: '4px'
       },
       clear: {
-        clear: 'both',
-      },
-    },
-  })
+        clear: 'both'
+      }
+    }
+  });
 
   return (
-    <div style={ styles.swatches }>
-      { map(colors, (c) => (
+    <div style={styles.swatches}>
+      {map(colors, (c) => (
         <Swatch
-          key={ c }
-          color={ c }
-          style={ styles.swatch }
-          onClick={ onClick }
-          onHover={ onSwatchHover }
+          key={c}
+          color={c}
+          style={styles.swatch}
+          onClick={onClick}
+          onHover={onSwatchHover}
           focusStyle={{
-            boxShadow: `0 0 4px ${ c }`,
+            boxShadow: `0 0 4px ${c}`
           }}
         />
-      )) }
-      <div style={ styles.clear } />
+      ))}
+      <div style={styles.clear} />
     </div>
-  )
-}
+  );
+};
 
-export default BlockSwatches
+export default BlockSwatches;

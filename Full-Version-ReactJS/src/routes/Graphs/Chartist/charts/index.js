@@ -14,18 +14,18 @@ import SimplePieChart from './SimplePieChart';
 import StackedBarChart from './StackedBarChart';
 
 export {
-    SimpleLine,
-    AnimatingDonut,
-    BiPolarBar,
-    BiPolarLineWithArea,
-    DistributedSeries,
-    GaugeChart,
-    HorizontalBarChart,
-    LineWithArea,
-    MultiLineLabels,
-    OverlappingBars,
-    PieChartCustomLabels,
-    ScatterWithResponsive,
-    SimplePieChart,
-    StackedBarChart
+  SimpleLine,
+  AnimatingDonut,
+  BiPolarBar,
+  BiPolarLineWithArea,
+  DistributedSeries,
+  GaugeChart,
+  HorizontalBarChart,
+  LineWithArea,
+  MultiLineLabels,
+  OverlappingBars,
+  PieChartCustomLabels,
+  ScatterWithResponsive,
+  SimplePieChart,
+  StackedBarChart
 };

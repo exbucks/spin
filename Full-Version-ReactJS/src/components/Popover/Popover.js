@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { Popover as ReactBootstrapPopover } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import _ from 'underscore';
@@ -12,41 +12,41 @@ import bsStyleToColor from './../utils/bsStyleToColor';
     Extended ReactBootstrap Popover. Added bsStyle and customColor which changeges the background in the title bar
 */
 const Popover = (props) => {
-    const popoverAdjustment = (reference) => {
-        const popoverElement = ReactDOM.findDOMNode(reference);
+  const popoverAdjustment = (reference) => {
+    const popoverElement = ReactDOM.findDOMNode(reference);
 
-        if(!popoverElement) {
-            return;
-        }
+    if (!popoverElement) {
+      return;
+    }
 
-        const titleElement = popoverElement.querySelector('.popover-title');
+    const titleElement = popoverElement.querySelector('.popover-title');
 
-        if(titleElement) {
-            const background = bsStyleToColor(props);
+    if (titleElement) {
+      const background = bsStyleToColor(props);
 
-            titleElement.style.background = background;
-            titleElement.style.borderBottomWidth = !!background ? 0 : null;
-        }
-    };
+      titleElement.style.background = background;
+      titleElement.style.borderBottomWidth = !!background ? 0 : null;
+    }
+  };
 
-    const otherProps = _.omit(props, _.keys(Popover.propTypes));
+  const otherProps = _.omit(props, _.keys(Popover.propTypes));
 
-    return (
-        <ReactBootstrapPopover ref={ popoverAdjustment } {...otherProps}>
-            { props.children }
-        </ReactBootstrapPopover>
-    );
-}
+  return (
+    <ReactBootstrapPopover ref={popoverAdjustment} {...otherProps}>
+      {props.children}
+    </ReactBootstrapPopover>
+  );
+};
 
 Popover.propTypes = {
-    bsStyle: PropTypes.string,
-    customColor: PropTypes.string,
-    children: PropTypes.node.isRequired
-}
+  bsStyle: PropTypes.string,
+  customColor: PropTypes.string,
+  children: PropTypes.node.isRequired
+};
 
 Popover.defaultProps = {
-    customColor: Colors.brandPrimary,
-    bsStyle: ''
-}
+  customColor: Colors.brandPrimary,
+  bsStyle: ''
+};
 
 export default Popover;

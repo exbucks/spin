@@ -1,3 +1,3 @@
 export function isMacintosh() {
-  return navigator.platform.indexOf('Mac') > -1
+  return navigator.platform.indexOf('Mac') > -1;
 }

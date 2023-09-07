@@ -1,11 +1,7 @@
 import { Navbar as ReactBootstrapNavbar } from 'react-bootstrap';
 
 import Navbar from './Navbar';
-import {
-    Menu,
-    DropdownList,
-    MenuSection
-} from './components';
+import { Menu, DropdownList, MenuSection } from './components';
 
 Navbar.Menu = Menu;
 Navbar.MenuSection = MenuSection;

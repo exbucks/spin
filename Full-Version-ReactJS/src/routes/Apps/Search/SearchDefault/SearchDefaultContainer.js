@@ -1,21 +1,10 @@
 import React from 'react';
 import _ from 'underscore';
 import numeral from 'numeral';
-import {
-    Row,
-    Col,
-    Pagination,
-    StarRating,
-    Divider
-} from 'components';
+import { Row, Col, Pagination, StarRating, Divider } from 'components';
 
 // Sub Components
-import {
-    SearchResultTypes,
-    SearchPeriod,
-    SearchLanguage,
-    SearchInput
-} from './../components';
+import { SearchResultTypes, SearchPeriod, SearchLanguage, SearchInput } from './../components';
 
 import { RoutedComponent, connect } from 'routes/routedComponent';
 import treeRandomizer from 'modules/treeRandomizer';
@@ -33,75 +22,65 @@ const getData = (inputData) => treeRandomizer(inputData);
 // Main Container
 // ------------------------------------
 class SearchDefaultContainer extends RoutedComponent {
-    constructor(props, context) {
-        super(props, context);
+  constructor(props, context) {
+    super(props, context);
 
-        this.state = { data: getData(resultsData) };
-    }
+    this.state = { data: getData(resultsData) };
+  }
 
-    getLayoutOptions() {
-        return {
-            contentView: CONTENT_VIEW_STATIC
-        }
-    }
+  getLayoutOptions() {
+    return {
+      contentView: CONTENT_VIEW_STATIC
+    };
+  }
 
-    render() {
-        return (
-            <Row>
-                <Col lg={ 2 }>
-                    <SearchResultTypes />
-                    <SearchPeriod />
-                    <SearchLanguage />
-                </Col>
-                <Col lg={ 10 }>
-                    <SearchInput
-                        resultCount={ this.state.data.ResultsCount }
-                        resultTime={ this.state.data.Time }
-                        query={ this.state.data.Query }
-                    />
-                    <Divider className='m-t-3 m-b-2'>
-                        All Results
-                    </Divider>
-                    <div>
-                        {
-                            _.map(this.state.data.Results, (result) => (
-                                <div className={ classes.searchResultDefault } key={result._id}>
-                                    <h4 className='m-b-0'>
-                                        <a href='javascript:void(0)'>
-                                            { result.Title }
-                                        </a>
-                                    </h4>
-                                    <a href='javascript:void(0)' className='text-success m-r-2'>
-                                        { result.Url }
-                                    </a>
-                                    <StarRating at={ parseInt(result.Rating) } className='m-r-2'/>
-                                    <span>
-                                        { numeral(result.Votes).format('0,0') } Votes
-                                    </span>
-                                    <p className='m-y-1'>
-                                        { result.ShortDesc }
-                                    </p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className='text-center'>
-                        <Pagination
-                            bsSize="medium"
-                            items={5}
-                            activePage={1}
-                            boundaryLinks
-                            prev
-                            next
-                            first
-                            last
-                            ellipsis
-                        />
-                    </div>
-                </Col>
-            </Row>
-        );
-    }
+  render() {
+    return (
+      <Row>
+        <Col lg={2}>
+          <SearchResultTypes />
+          <SearchPeriod />
+          <SearchLanguage />
+        </Col>
+        <Col lg={10}>
+          <SearchInput
+            resultCount={this.state.data.ResultsCount}
+            resultTime={this.state.data.Time}
+            query={this.state.data.Query}
+          />
+          <Divider className="m-t-3 m-b-2">All Results</Divider>
+          <div>
+            {_.map(this.state.data.Results, (result) => (
+              <div className={classes.searchResultDefault} key={result._id}>
+                <h4 className="m-b-0">
+                  <a href="javascript:void(0)">{result.Title}</a>
+                </h4>
+                <a href="javascript:void(0)" className="text-success m-r-2">
+                  {result.Url}
+                </a>
+                <StarRating at={parseInt(result.Rating)} className="m-r-2" />
+                <span>{numeral(result.Votes).format('0,0')} Votes</span>
+                <p className="m-y-1">{result.ShortDesc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Pagination
+              bsSize="medium"
+              items={5}
+              activePage={1}
+              boundaryLinks
+              prev
+              next
+              first
+              last
+              ellipsis
+            />
+          </div>
+        </Col>
+      </Row>
+    );
+  }
 }
 
 export default connect()(SearchDefaultContainer);

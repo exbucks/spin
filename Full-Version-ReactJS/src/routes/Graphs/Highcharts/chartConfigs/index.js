@@ -10,14 +10,14 @@ import stackedArea from './stackedArea';
 import stackedColumn from './stackedColumn';
 
 export {
-    basicBar,
-    basicColumn,
-    basicColumnAlt,
-    paymentReceived,
-    pieWithLegend,
-    polarChart,
-    scatterPlot,
-    spiderWeb,
-    stackedArea,
-    stackedColumn
+  basicBar,
+  basicColumn,
+  basicColumnAlt,
+  paymentReceived,
+  pieWithLegend,
+  polarChart,
+  scatterPlot,
+  spiderWeb,
+  stackedArea,
+  stackedColumn
 };

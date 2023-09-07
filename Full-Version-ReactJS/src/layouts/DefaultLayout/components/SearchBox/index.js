@@ -3,7 +3,4 @@ import SearchBoxMobile from './SearchBoxMobile';
 
 export default SearchBox;
 
-export {
-    SearchBox,
-    SearchBoxMobile
-};
+export { SearchBox, SearchBoxMobile };

@@ -9,13 +9,13 @@ import Creatable from './Creatable';
 import CustomComponents from './CustomComponents';
 
 export {
-    States,
-    Multiselect,
-    Contributors,
-    GithubUsers,
-    Numeric,
-    Boolean,
-    CustomRender,
-    Creatable,
-    CustomComponents
-}
+  States,
+  Multiselect,
+  Contributors,
+  GithubUsers,
+  Numeric,
+  Boolean,
+  CustomRender,
+  Creatable,
+  CustomComponents
+};

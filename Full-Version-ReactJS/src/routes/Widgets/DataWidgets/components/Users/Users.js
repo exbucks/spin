@@ -5,154 +5,137 @@ import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 
 import {
-    Media,
-    ListGroup,
-    ListGroupItem,
-    CollapsablePanel,
-    AvatarImage,
-    InputGroup,
-    FormControl,
-    Button,
-    OverlayTrigger,
-    Tooltip
+  Media,
+  ListGroup,
+  ListGroupItem,
+  CollapsablePanel,
+  AvatarImage,
+  InputGroup,
+  FormControl,
+  Button,
+  OverlayTrigger,
+  Tooltip
 } from 'components';
 
 import { Colors } from 'consts';
 
 import classes from './Users.scss';
 
-const users = _.map([
-        { status: 'Online' },
-        { status: 'Online' },
-        { status: 'Online' },
+const users = _.map(
+  [
+    { status: 'Online' },
+    { status: 'Online' },
+    { status: 'Online' },
 
-        { status: 'Busy' },
-        { status: 'Busy' },
-        { status: 'Busy' },
+    { status: 'Busy' },
+    { status: 'Busy' },
+    { status: 'Busy' },
 
-        { status: 'Away' },
-        { status: 'Away' },
+    { status: 'Away' },
+    { status: 'Away' },
 
-        { status: 'Offline' },
-        { status: 'Offline' },
-        { status: 'Offline' },
-    ], status => ({
-        ...status,
-        id: uuidv4(),
-        avatar: faker.image.avatar(),
-        name: `${ faker.person.firstName() } ${ faker.person.lastName() }`,
-        address: `${ faker.person.address.city() }, ${ faker.person.address.stateAbbr() }`
-    }));
+    { status: 'Offline' },
+    { status: 'Offline' },
+    { status: 'Offline' }
+  ],
+  (status) => ({
+    ...status,
+    id: uuidv4(),
+    avatar: faker.image.avatar(),
+    name: `${faker.person.firstName()} ${faker.person.lastName()}`,
+    address: `${faker.person.address.city()}, ${faker.person.address.stateAbbr()}`
+  })
+);
 
-const usersByStatus = _.groupBy(users, user => (user.status || '').toLowerCase());
+const usersByStatus = _.groupBy(users, (user) => (user.status || '').toLowerCase());
 
-const statusToColor = status => {
-    switch(status.toLowerCase()) {
-        case 'online':
-            return Colors.brandSuccess;
-        case 'busy':
-            return Colors.brandDanger;
-        case 'away':
-            return Colors.brandWarning;
-        default:
-        case 'offline':
-            return Colors.grayLighter;
-    }
+const statusToColor = (status) => {
+  switch (status.toLowerCase()) {
+    case 'online':
+      return Colors.brandSuccess;
+    case 'busy':
+      return Colors.brandDanger;
+    case 'away':
+      return Colors.brandWarning;
+    default:
+    case 'offline':
+      return Colors.grayLighter;
+  }
 };
 
-const renderUser = user => (
-    <ListGroupItem key={ user.id }>
-        <Media>
-            <Media.Left align='middle'>
-                <AvatarImage src={ user.avatar } size='small' />
-            </Media.Left>
-            <Media.Body>
-                <p className='m-y-0 text-white'>
-                    { user.name }
-                </p>
-                <small className='text-muted'>
-                    { user.address }
-                </small>
-            </Media.Body>
-            <Media.Right align='middle'>
-                <OverlayTrigger
-                    overlay={
-                        <Tooltip>
-                            { user.status }
-                        </Tooltip>
-                    }
-                    placement='left'
-                >
-                    <i
-                        className='fa fa-fw fa-circle'
-                        style={ { color: statusToColor(user.status) } }
-                    ></i>
-                </OverlayTrigger>
-            </Media.Right>
-        </Media>
-    </ListGroupItem>
+const renderUser = (user) => (
+  <ListGroupItem key={user.id}>
+    <Media>
+      <Media.Left align="middle">
+        <AvatarImage src={user.avatar} size="small" />
+      </Media.Left>
+      <Media.Body>
+        <p className="m-y-0 text-white">{user.name}</p>
+        <small className="text-muted">{user.address}</small>
+      </Media.Body>
+      <Media.Right align="middle">
+        <OverlayTrigger overlay={<Tooltip>{user.status}</Tooltip>} placement="left">
+          <i className="fa fa-fw fa-circle" style={{ color: statusToColor(user.status) }}></i>
+        </OverlayTrigger>
+      </Media.Right>
+    </Media>
+  </ListGroupItem>
 );
 
 const Users = (panelProps) => (
-    <CollapsablePanel
-        maxHeight={ 300 }
-        title='Users'
-        footer={
-            <p className='text-center m-y-0'>
-                <Link to='/apps/users/list'>
-                    See More
-                    <i className='fa fa-angle-right m-l-1'></i>
-                </Link>
-            </p>
-        }
-        { ...panelProps }
-    >
-        <ListGroup className={ classes.filledListGroup }>
-            { /*    Search    */}
-            <ListGroupItem>
-                <InputGroup bsSize='sm'>
-                    <FormControl placeholder="Search for"/>
-                    <InputGroup.Button>
-                        <Button>
-                            <i className='fa fa-search'></i>
-                        </Button>
-                    </InputGroup.Button>
-                </InputGroup>
-            </ListGroupItem>
+  <CollapsablePanel
+    maxHeight={300}
+    title="Users"
+    footer={
+      <p className="text-center m-y-0">
+        <Link to="/apps/users/list">
+          See More
+          <i className="fa fa-angle-right m-l-1"></i>
+        </Link>
+      </p>
+    }
+    {...panelProps}
+  >
+    <ListGroup className={classes.filledListGroup}>
+      {/*    Search    */}
+      <ListGroupItem>
+        <InputGroup bsSize="sm">
+          <FormControl placeholder="Search for" />
+          <InputGroup.Button>
+            <Button>
+              <i className="fa fa-search"></i>
+            </Button>
+          </InputGroup.Button>
+        </InputGroup>
+      </ListGroupItem>
 
-            { /*    Online     */}
-            <ListGroupItem>
-                <small className='text-uppercasse'>Online ({ (usersByStatus['online'] || []).length })</small>
-            </ListGroupItem>
-            {
-                _.map(usersByStatus['online'], (user) => renderUser(user))
-            }
+      {/*    Online     */}
+      <ListGroupItem>
+        <small className="text-uppercasse">Online ({(usersByStatus['online'] || []).length})</small>
+      </ListGroupItem>
+      {_.map(usersByStatus['online'], (user) => renderUser(user))}
 
-            { /*    Busy     */}
-            <ListGroupItem>
-                <small className='text-uppercasse'>Busy ({ (usersByStatus['busy'] || []).length })</small>
-            </ListGroupItem>
-            {
-                _.map(usersByStatus['busy'], (user) => renderUser(user))
-            }
+      {/*    Busy     */}
+      <ListGroupItem>
+        <small className="text-uppercasse">Busy ({(usersByStatus['busy'] || []).length})</small>
+      </ListGroupItem>
+      {_.map(usersByStatus['busy'], (user) => renderUser(user))}
 
-            { /*    Away     */}
-            <ListGroupItem>
-                <small className='text-uppercasse'>Away ({ (usersByStatus['away'] || []).length })</small>
-            </ListGroupItem>
-            {
-                _.map(usersByStatus['away'], (user) => renderUser(user))
-            }
+      {/*    Away     */}
+      <ListGroupItem>
+        <small className="text-uppercasse">Away ({(usersByStatus['away'] || []).length})</small>
+      </ListGroupItem>
+      {_.map(usersByStatus['away'], (user) => renderUser(user))}
 
-            { /*    Offline     */}
-            <ListGroupItem>
-                <small className='text-uppercasse'>Offline ({ (usersByStatus['offline'] || []).length })</small>
-            </ListGroupItem>
-            {
-                _.map(usersByStatus['offline'], (user) => renderUser(user))
-            }
-        </ListGroup>
-    </CollapsablePanel>
+      {/*    Offline     */}
+      <ListGroupItem>
+        <small className="text-uppercasse">
+          Offline ({(usersByStatus['offline'] || []).length})
+        </small>
+      </ListGroupItem>
+      {_.map(usersByStatus['offline'], (user) => renderUser(user))}
+    </ListGroup>
+  </CollapsablePanel>
 );
 
 export default Users;

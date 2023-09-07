@@ -5,11 +5,11 @@ import { MessagesDropdown, NotificationsDropdown } from './Dropdowns';
 import RightSidebarTabs from './RightSidebarTabs';
 
 export {
-    SidebarAddOns,
-    LayoutOptions,
-    SearchBox,
-    SearchBoxMobile,
-    MessagesDropdown,
-    NotificationsDropdown,
-    RightSidebarTabs
-}
+  SidebarAddOns,
+  LayoutOptions,
+  SearchBox,
+  SearchBoxMobile,
+  MessagesDropdown,
+  NotificationsDropdown,
+  RightSidebarTabs
+};

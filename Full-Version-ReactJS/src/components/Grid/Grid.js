@@ -1,3 +1,3 @@
-const Grid = (props) => <div></div>
+const Grid = (props) => <div></div>;
 
-export default Grid
+export default Grid;

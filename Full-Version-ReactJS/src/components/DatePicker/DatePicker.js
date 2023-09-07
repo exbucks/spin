@@ -1,233 +1,210 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import _ from 'underscore';
 import moment from 'moment';
 import classNames from 'classnames';
 
 import ReactDatePicker from 'react-date-picker';
 
-import {
-    FormControl,
-    InputGroup,
-    OutsideClick,
-    Button
-} from 'components';
+import { FormControl, InputGroup, OutsideClick, Button } from 'components';
 
 import classes from './datePicker.scss';
 
 const pickerPropTypes = {
-    enableOutsideDays: PropTypes.bool,
-    numberOfMonths: PropTypes.number,
-    withPortal: PropTypes.bool,
-    initialVisibleMonth: PropTypes.func,
+  enableOutsideDays: PropTypes.bool,
+  numberOfMonths: PropTypes.number,
+  withPortal: PropTypes.bool,
+  initialVisibleMonth: PropTypes.func,
 
-    navPrev: PropTypes.node,
-    navNext: PropTypes.node,
+  navPrev: PropTypes.node,
+  navNext: PropTypes.node,
 
-    onPrevMonthClick: PropTypes.func,
-    onNextMonthClick: PropTypes.func,
-    onOutsideClick: PropTypes.func,
-    renderDay: PropTypes.func,
+  onPrevMonthClick: PropTypes.func,
+  onNextMonthClick: PropTypes.func,
+  onOutsideClick: PropTypes.func,
+  renderDay: PropTypes.func,
 
-    monthFormat: PropTypes.string,
-}
-
+  monthFormat: PropTypes.string
+};
 
 class DatePicker extends React.Component {
-    static propTypes = {
-        ...pickerPropTypes,
+  static propTypes = {
+    ...pickerPropTypes,
 
-        prefixAddOn: PropTypes.node,
-        postfixButton: PropTypes.node,
+    prefixAddOn: PropTypes.node,
+    postfixButton: PropTypes.node,
 
-        placeholder: PropTypes.string,
+    placeholder: PropTypes.string,
 
-        initialDate: PropTypes.instanceOf(Date),
+    initialDate: PropTypes.instanceOf(Date),
 
-        bsSize: PropTypes.string,
-        bsStyle: PropTypes.string,
-        bsStyleActive: PropTypes.string,
-        type: PropTypes.string,
-        format: PropTypes.string,
+    bsSize: PropTypes.string,
+    bsStyle: PropTypes.string,
+    bsStyleActive: PropTypes.string,
+    type: PropTypes.string,
+    format: PropTypes.string,
 
-        className: PropTypes.string,
+    className: PropTypes.string,
 
-        onDateSelected: PropTypes.func,
+    onDateSelected: PropTypes.func,
 
-        positionHorizontal: PropTypes.string,
-        positionVertical: PropTypes.string,
+    positionHorizontal: PropTypes.string,
+    positionVertical: PropTypes.string,
 
-        absolute: PropTypes.bool
-    }
+    absolute: PropTypes.bool
+  };
 
-    static defaultProps = {
-        prefixAddOn: (<i className='fa fa-calendar fa-fw'></i>),
-        postfixButton: 'reset',
+  static defaultProps = {
+    prefixAddOn: <i className="fa fa-calendar fa-fw"></i>,
+    postfixButton: 'reset',
 
-        placeholder: 'Select date...',
+    placeholder: 'Select date...',
 
-        bsSize: 'md',
-        bsStyle: 'link',
-        bsStyleActive: 'primary',
-        type: 'input',
-        format: 'DD-MM-YYYY',
+    bsSize: 'md',
+    bsStyle: 'link',
+    bsStyleActive: 'primary',
+    type: 'input',
+    format: 'DD-MM-YYYY',
 
-        // Picker Props
-        orientation: 'horizontal',
-        withPortal: false,
-        initialVisibleMonth: () => moment(),
-        numberOfMonths: 2,
-        onOutsideClick() {},
-        keepOpenOnDateSelect: false,
+    // Picker Props
+    orientation: 'horizontal',
+    withPortal: false,
+    initialVisibleMonth: () => moment(),
+    numberOfMonths: 2,
+    onOutsideClick() {},
+    keepOpenOnDateSelect: false,
 
-        navPrev: null,
-        navNext: null,
-        onPrevMonthClick() {},
-        onNextMonthClick() {},
+    navPrev: null,
+    navNext: null,
+    onPrevMonthClick() {},
+    onNextMonthClick() {},
 
-        monthFormat: 'MMMM YYYY',
+    monthFormat: 'MMMM YYYY',
 
-        onDateSelected() {},
+    onDateSelected() {},
 
-        positionHorizontal: 'bottom',
-        positionVertical: 'left',
+    positionHorizontal: 'bottom',
+    positionVertical: 'left',
 
-        absolute: true
-    }
+    absolute: true
+  };
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            date: props.initialDate || null,
-            focused: false
-        }
+    this.state = {
+      date: props.initialDate || null,
+      focused: false
+    };
 
-        this.onDateChange = this.onDateChange.bind(this);
-        this.onFocusChange = this.onFocusChange.bind(this);
-    }
+    this.onDateChange = this.onDateChange.bind(this);
+    this.onFocusChange = this.onFocusChange.bind(this);
+  }
 
-    onDateChange(date) {
-        const { onDateSelected } = this.props;
+  onDateChange(date) {
+    const { onDateSelected } = this.props;
 
-        this.setState({ focused: false, date });
+    this.setState({ focused: false, date });
 
-        onDateSelected(date);
-    }
+    onDateSelected(date);
+  }
 
-    onFocusChange(focused) {
-        this.setState({
-            focused
-        });
-    }
+  onFocusChange(focused) {
+    this.setState({
+      focused
+    });
+  }
 
-    onReset() {
-        this.setState({
-            date: this.props.initialDate || null
-        });
-    }
+  onReset() {
+    this.setState({
+      date: this.props.initialDate || null
+    });
+  }
 
-    renderButtons({date, focused}) {
-        const {
-            placeholder,
-            bsSize,
-            bsStyle,
-            bsStyleActive,
-            format,
-        } = this.props;
+  renderButtons({ date, focused }) {
+    const { placeholder, bsSize, bsStyle, bsStyleActive, format } = this.props;
 
-        return (
-            <Button
-                onClick={() => this.onFocusChange(true)}
-                bsStyle={focused ? bsStyleActive : bsStyle}
-            >
-                { date ? moment(date).format(format) : placeholder }
-            </Button>
-        );
-    }
+    return (
+      <Button onClick={() => this.onFocusChange(true)} bsStyle={focused ? bsStyleActive : bsStyle}>
+        {date ? moment(date).format(format) : placeholder}
+      </Button>
+    );
+  }
 
-    renderInputs({date, focused}) {
-        const {
-            prefixAddOn,
-            postfixButton,
-            placeholder,
-            bsSize,
-            format
-        } = this.props;
+  renderInputs({ date, focused }) {
+    const { prefixAddOn, postfixButton, placeholder, bsSize, format } = this.props;
 
-        return (prefixAddOn || postfixButton) ? (
-                <InputGroup bsSize={ bsSize }>
-                    { prefixAddOn && (<InputGroup.Addon>{ prefixAddOn }</InputGroup.Addon>) }
-                    <FormControl
-                        placeholder={placeholder}
-                        value={ date ? moment(date).format(format) : '' }
-                        type='text'
-                        onFocus={ () => this.onFocusChange(true) }
-                        className={ focused && classes.focusedInput }
-                    />
-                    { postfixButton && (
-                        <InputGroup.Button>
-                            {
-                                postfixButton === 'reset' ? (
-                                    <Button onClick={this.onReset.bind(this)}>
-                                        <i className='fa fa-times fa-fw text-danger'></i>
-                                    </Button>
-                                ) : postfixButton
-                            }
-                        </InputGroup.Button>
-                    ) }
-                </InputGroup>
+    return prefixAddOn || postfixButton ? (
+      <InputGroup bsSize={bsSize}>
+        {prefixAddOn && <InputGroup.Addon>{prefixAddOn}</InputGroup.Addon>}
+        <FormControl
+          placeholder={placeholder}
+          value={date ? moment(date).format(format) : ''}
+          type="text"
+          onFocus={() => this.onFocusChange(true)}
+          className={focused && classes.focusedInput}
+        />
+        {postfixButton && (
+          <InputGroup.Button>
+            {postfixButton === 'reset' ? (
+              <Button onClick={this.onReset.bind(this)}>
+                <i className="fa fa-times fa-fw text-danger"></i>
+              </Button>
             ) : (
-                <FormControl
-                    placeholder={placeholder}
-                    value={ date ? moment(date).format(format) : '' }
-                    type='text'
-                    onFocus={ () => this.onFocusChange(true) }
-                    className={ focused && classes.focusedInput }
-                />
-            );
-    }
+              postfixButton
+            )}
+          </InputGroup.Button>
+        )}
+      </InputGroup>
+    ) : (
+      <FormControl
+        placeholder={placeholder}
+        value={date ? moment(date).format(format) : ''}
+        type="text"
+        onFocus={() => this.onFocusChange(true)}
+        className={focused && classes.focusedInput}
+      />
+    );
+  }
 
-    render() {
-        const {
-            format,
-            type,
-            className
-        } = this.props;
+  render() {
+    const { format, type, className } = this.props;
 
-        const {
-            focused,
-            date: dateRaw
-        } = this.state;
-        const pickerProps = _.pick(this.props, _.keys(pickerPropTypes));
+    const { focused, date: dateRaw } = this.state;
+    const pickerProps = _.pick(this.props, _.keys(pickerPropTypes));
 
-        const date = dateRaw && moment(dateRaw);
+    const date = dateRaw && moment(dateRaw);
 
-        const wrapClass = classNames({
-            [classes['wrap--absolute']]: this.props.absolute,
-            [classes['wrap--left']]: this.props.positionHorizontal === 'left',
-            [classes['wrap--right']]: this.props.positionHorizontal === 'right',
-            [classes['wrap--top']]: this.props.positionVertical === 'top',
-            [classes['wrap--bottom']]: this.props.positionVertical === 'bottom',
-        }, className);
+    const wrapClass = classNames(
+      {
+        [classes['wrap--absolute']]: this.props.absolute,
+        [classes['wrap--left']]: this.props.positionHorizontal === 'left',
+        [classes['wrap--right']]: this.props.positionHorizontal === 'right',
+        [classes['wrap--top']]: this.props.positionVertical === 'top',
+        [classes['wrap--bottom']]: this.props.positionVertical === 'bottom'
+      },
+      className
+    );
 
-        return (
-            <OutsideClick onClickOutside={() => {this.onFocusChange(false)}}>
-                <div className={wrapClass}>
-                    { type === 'input' && this.renderInputs({date, focused}) }
-                    { type === 'button' && this.renderButtons({date, focused}) }
+    return (
+      <OutsideClick
+        onClickOutside={() => {
+          this.onFocusChange(false);
+        }}
+      >
+        <div className={wrapClass}>
+          {type === 'input' && this.renderInputs({ date, focused })}
+          {type === 'button' && this.renderButtons({ date, focused })}
 
-                    {
-                        this.state.focused && (
-                            <div className={classes.pickerWrap}>
-                                <ReactDatePicker {...pickerProps} onChange={this.onDateChange} />
-                            </div>
-                        )
-                    }
-                </div>
-            </OutsideClick>
-        );
-    }
+          {this.state.focused && (
+            <div className={classes.pickerWrap}>
+              <ReactDatePicker {...pickerProps} onChange={this.onDateChange} />
+            </div>
+          )}
+        </div>
+      </OutsideClick>
+    );
+  }
 }
 
 export default DatePicker;

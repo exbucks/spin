@@ -6,12 +6,12 @@ import MenuAddOn from './Menu';
 import ProgressAddOn from './Progress';
 
 const SidebarAddons = {
-    AvatarAndBarsAddOn,
-    AvatarAndNumbersAddOn,
-    AvatarAndStatsAddOn,
-    BarsAddOn,
-    MenuAddOn,
-    ProgressAddOn
+  AvatarAndBarsAddOn,
+  AvatarAndNumbersAddOn,
+  AvatarAndStatsAddOn,
+  BarsAddOn,
+  MenuAddOn,
+  ProgressAddOn
 };
 
 export default SidebarAddons;

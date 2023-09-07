@@ -12,16 +12,16 @@ import Attachments from './Attachments';
 import Chat from './Chat';
 
 export {
-    SummaryBox,
-    Notifications,
-    Emails,
-    Timeline,
-    Tasks,
-    Reminders,
-    Comments,
-    Projects,
-    Users,
-    Attachments,
-    Comments2,
-    Chat
-}
+  SummaryBox,
+  Notifications,
+  Emails,
+  Timeline,
+  Tasks,
+  Reminders,
+  Comments,
+  Projects,
+  Users,
+  Attachments,
+  Comments2,
+  Chat
+};

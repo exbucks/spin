@@ -1,57 +1,57 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import _ from 'underscore';
 
 import classes from './wizard.scss';
 
 class Wizard extends React.Component {
-    static propTypes = {
-        children: PropTypes.node,
-        onStepChanged: PropTypes.func,
-        activeStep: PropTypes.string
+  static propTypes = {
+    children: PropTypes.node,
+    onStepChanged: PropTypes.func,
+    activeStep: PropTypes.string
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeStep: this.props.activeStep
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.activeStep !== this.props.activeStep) {
+      this.setState({
+        activeStep: nextProps.activeStep
+      });
     }
+  }
 
-    constructor(props) {
-        super(props);
+  stepClick(id) {
+    this.setState({
+      activeStep: id
+    });
 
-        this.state = {
-            activeStep: this.props.activeStep
-        }
-    }
+    this.props.onStepChanged(id);
+  }
 
-    componentWillReceiveProps(nextProps) {
-        if(nextProps.activeStep !== this.props.activeStep) {
-            this.setState({
-                activeStep: nextProps.activeStep
-            })
-        }
-    }
+  render() {
+    const { children } = this.props;
+    const { activeStep } = this.state;
 
-    stepClick(id) {
-        this.setState({
-            activeStep: id
-        });
-
-        this.props.onStepChanged(id);
-    }
-
-    render() {
-        const { children } = this.props;
-        const { activeStep } = this.state;
-
-        return (
-            <div className={classes['wizard']}>
-                {
-                    _.map(children, child => (
-                        React.cloneElement(child, {
-                            onClick: () => {this.stepClick(child.props.id || '')},
-                            active: child.props.id === activeStep
-                        })
-                    ))
-                }
-            </div>
-        );
-    }
+    return (
+      <div className={classes['wizard']}>
+        {_.map(children, (child) =>
+          React.cloneElement(child, {
+            onClick: () => {
+              this.stepClick(child.props.id || '');
+            },
+            active: child.props.id === activeStep
+          })
+        )}
+      </div>
+    );
+  }
 }
 
 export default Wizard;

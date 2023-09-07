@@ -5,11 +5,4 @@ import VideoModal from './VideoModal';
 import DeleteModal from './DeleteModal';
 import EditModal from './EditModal';
 
-export {
-    CallModal,
-    ProfileModal,
-    ChatModal,
-    VideoModal,
-    DeleteModal,
-    EditModal
-};
+export { CallModal, ProfileModal, ChatModal, VideoModal, DeleteModal, EditModal };

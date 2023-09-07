@@ -1,9 +1,5 @@
 import Sidebar from './Sidebar.js';
-import {
-    AddOn,
-    AddOnContent,
-    Menu
-} from './components';
+import { AddOn, AddOnContent, Menu } from './components';
 
 Sidebar.Menu = Menu;
 Sidebar.AddOn = AddOn;

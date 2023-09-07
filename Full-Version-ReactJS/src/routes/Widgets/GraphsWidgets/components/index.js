@@ -18,22 +18,22 @@ import CpuBox from './CpuBox';
 import DonutWithLegend from './DonutWithLegend';
 
 export {
-    TrafficByDays,
-    Results,
-    Results2,
-    CustomerOverview,
-    Memory,
-    Storages,
-    Infobox,
-    Statistics,
-    Stock,
-    Monitor,
-    Path,
-    Statistics2,
-    Statistics3,
-    Network,
-    SatisfactionResults,
-    Stats,
-    CpuBox,
-    DonutWithLegend
-}
+  TrafficByDays,
+  Results,
+  Results2,
+  CustomerOverview,
+  Memory,
+  Storages,
+  Infobox,
+  Statistics,
+  Stock,
+  Monitor,
+  Path,
+  Statistics2,
+  Statistics3,
+  Network,
+  SatisfactionResults,
+  Stats,
+  CpuBox,
+  DonutWithLegend
+};

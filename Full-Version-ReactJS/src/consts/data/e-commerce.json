@@ -14,106 +14,106 @@
     }
   },
   "Report": {
-      "Revenue": [
-        {
-          "date": "{{dateDiff:0}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-1}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-2}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-3}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-4}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-5}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-6}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-7}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-8}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-9}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-10}}",
-          "value": "{{n:40:250}}"
-        },
-        {
-          "date": "{{dateDiff:-11}}",
-          "value": "{{n:40:250}}"
-        }
-      ],
-      "ItemsSold": [
-        {
-          "date": "{{dateDiff:0}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-1}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-2}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-3}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-4}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-5}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-6}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-7}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-8}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-9}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-10}}",
-          "value": "{{n:4000:15000}}"
-        },
-        {
-          "date": "{{dateDiff:-11}}",
-          "value": "{{n:4000:15000}}"
-        }
-      ]
+    "Revenue": [
+      {
+        "date": "{{dateDiff:0}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-1}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-2}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-3}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-4}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-5}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-6}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-7}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-8}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-9}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-10}}",
+        "value": "{{n:40:250}}"
+      },
+      {
+        "date": "{{dateDiff:-11}}",
+        "value": "{{n:40:250}}"
+      }
+    ],
+    "ItemsSold": [
+      {
+        "date": "{{dateDiff:0}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-1}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-2}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-3}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-4}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-5}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-6}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-7}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-8}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-9}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-10}}",
+        "value": "{{n:4000:15000}}"
+      },
+      {
+        "date": "{{dateDiff:-11}}",
+        "value": "{{n:4000:15000}}"
+      }
+    ]
   },
   "LatestTransactions": [
     {

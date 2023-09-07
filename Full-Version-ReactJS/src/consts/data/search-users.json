@@ -9,11 +9,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "Facebook",
-        "Twitter"
-      ]
+      "Networks": ["LinkedIn", "Facebook", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -21,10 +17,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Xing",
-        "Twitter"
-      ]
+      "Networks": ["Xing", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -32,11 +25,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "Facebook",
-        "Pinterest"
-      ]
+      "Networks": ["LinkedIn", "Facebook", "Pinterest"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -44,22 +33,14 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "GitHub",
-        "Facebook"
-      ]
+      "Networks": ["LinkedIn", "GitHub", "Facebook"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Twitter",
-        "Facebook",
-        "Xing"
-      ]
+      "Networks": ["Twitter", "Facebook", "Xing"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -67,20 +48,14 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "Twitter"
-      ]
+      "Networks": ["LinkedIn", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Facebook",
-        "Twitter"
-      ]
+      "Networks": ["Facebook", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -88,9 +63,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "GitHub"
-      ]
+      "Networks": ["GitHub"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -98,11 +71,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Facbook",
-        "Xing",
-        "GitHub"
-      ]
+      "Networks": ["Facbook", "Xing", "GitHub"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -110,11 +79,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "Facebook",
-        "Twitter"
-      ]
+      "Networks": ["LinkedIn", "Facebook", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -122,10 +87,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Xing",
-        "Twitter"
-      ]
+      "Networks": ["Xing", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -133,11 +95,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "Facebook",
-        "Pinterest"
-      ]
+      "Networks": ["LinkedIn", "Facebook", "Pinterest"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -145,9 +103,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "GitHub"
-      ]
+      "Networks": ["GitHub"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -155,11 +111,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "GitHub",
-        "Facebook"
-      ]
+      "Networks": ["LinkedIn", "GitHub", "Facebook"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -167,11 +119,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Twitter",
-        "Facebook",
-        "Xing"
-      ]
+      "Networks": ["Twitter", "Facebook", "Xing"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -179,10 +127,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "LinkedIn",
-        "Twitter"
-      ]
+      "Networks": ["LinkedIn", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -190,10 +135,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "Facebook",
-        "Twitter"
-      ]
+      "Networks": ["Facebook", "Twitter"]
     },
     {
       "Avatar": "{{fake:[image.avatar]}}",
@@ -201,9 +143,7 @@
       "Name": "{{fake:[name.firstName] [name.lastName]}}",
       "Favorited": "{{n:0:1}}",
       "Title": "{{fake:[name.jobTitle]}}",
-      "Networks": [
-        "GitHub"
-      ]
+      "Networks": ["GitHub"]
     }
   ]
 }

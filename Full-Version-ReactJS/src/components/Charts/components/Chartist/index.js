@@ -1,3 +1,3 @@
-import Chartist from "./Chartist";
+import Chartist from './Chartist';
 
 export default Chartist;

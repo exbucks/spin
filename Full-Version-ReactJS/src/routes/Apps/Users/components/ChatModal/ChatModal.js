@@ -1,52 +1,45 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { faker } from '@faker-js/faker';
 import _ from 'underscore';
 
-import {
-    Modal,
-    Button,
-    FormControl,
-    InputGroup
-} from 'components';
+import { Modal, Button, FormControl, InputGroup } from 'components';
 
 import treeRandomizer from 'modules/treeRandomizer';
 import chatData from 'consts/data/app-chat.json';
 
 const messages = treeRandomizer(chatData).Messages;
 
-import {
-    Chat
-} from 'routes/Apps/components';
+import { Chat } from 'routes/Apps/components';
 
-const ChatModal = props => (
-    <Modal show={ props.visible } onHide={ props.onClose }>
-        <Modal.Header closeButton>
-            <Modal.Title>Chat with {`${faker.person.firstName()} ${faker.person.lastName()}`}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <Chat messages={ _.first(messages, 4) } />
-        </Modal.Body>
-        <Modal.Footer>
-            <InputGroup>
-                <FormControl type='text' placeholder='Message...' />
-                <InputGroup.Button>
-                    <Button>
-                        Send
-                    </Button>
-                </InputGroup.Button>
-            </InputGroup>
-        </Modal.Footer>
-    </Modal>
+const ChatModal = (props) => (
+  <Modal show={props.visible} onHide={props.onClose}>
+    <Modal.Header closeButton>
+      <Modal.Title>
+        Chat with {`${faker.person.firstName()} ${faker.person.lastName()}`}
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <Chat messages={_.first(messages, 4)} />
+    </Modal.Body>
+    <Modal.Footer>
+      <InputGroup>
+        <FormControl type="text" placeholder="Message..." />
+        <InputGroup.Button>
+          <Button>Send</Button>
+        </InputGroup.Button>
+      </InputGroup>
+    </Modal.Footer>
+  </Modal>
 );
 
 ChatModal.propTypes = {
-    visible: PropTypes.bool,
-    onClose: PropTypes.func
+  visible: PropTypes.bool,
+  onClose: PropTypes.func
 };
 
 ChatModal.defaultProps = {
-    onClose: () => { }
+  onClose: () => {}
 };
 
 export default ChatModal;

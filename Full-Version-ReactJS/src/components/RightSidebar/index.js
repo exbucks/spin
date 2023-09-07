@@ -1,8 +1,4 @@
-import {
-    OverlayContent,
-    ScrollArea,
-    OverlayContentParent
-} from './components';
+import { OverlayContent, ScrollArea, OverlayContentParent } from './components';
 
 import RightSidebar from './RightSidebar';
 

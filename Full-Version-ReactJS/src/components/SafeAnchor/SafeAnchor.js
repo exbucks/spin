@@ -1,3 +1,3 @@
-const SafeAnchor = (props) => <div></div>
+const SafeAnchor = (props) => <div></div>;
 
-export default SafeAnchor
+export default SafeAnchor;

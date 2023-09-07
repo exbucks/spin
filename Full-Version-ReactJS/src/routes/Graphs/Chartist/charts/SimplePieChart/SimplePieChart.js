@@ -9,21 +9,20 @@ const sum = (a, b) => a + b;
 
 const chartType = 'Pie';
 const chartData = {
-    series: [5, 3, 4]
+  series: [5, 3, 4]
 };
 const chartOptions = {
-    labelInterpolationFnc: value =>
-        Math.round(value / chartData.series.reduce(sum) * 100) + '%'
+  labelInterpolationFnc: (value) => Math.round((value / chartData.series.reduce(sum)) * 100) + '%'
 };
 
 //===============Component================
 const SimplePieChart = () => (
-    <Charts.Chartist
-        className={ classes.chartContainer }
-        data={ chartData }
-        options={ chartOptions }
-        type={ chartType }
-    />
+  <Charts.Chartist
+    className={classes.chartContainer}
+    data={chartData}
+    options={chartOptions}
+    type={chartType}
+  />
 );
 
 export default SimplePieChart;

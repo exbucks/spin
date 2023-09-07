@@ -12,36 +12,35 @@ import classes from './GlyphIcons.scss';
 // Main Container
 // ------------------------------------
 class GlyphIconsContainer extends RoutedComponent {
-    getLayoutOptions() {
-        return {
-            contentView: CONTENT_VIEW_STATIC
-        }
-    }
+  getLayoutOptions() {
+    return {
+      contentView: CONTENT_VIEW_STATIC
+    };
+  }
 
-    render() {
-        return (
-            <Row>
-                <Col lg={ 12 }>
-                    <p>
-                        Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to Glyphicons whenever possible.
-                    </p>
+  render() {
+    return (
+      <Row>
+        <Col lg={12}>
+          <p>
+            Includes over 250 glyphs in font format from the Glyphicon Halflings set. Glyphicons
+            Halflings are normally not available for free, but their creator has made them available
+            for Bootstrap free of cost. As a thank you, we only ask that you include a link back to
+            Glyphicons whenever possible.
+          </p>
 
-                    <div className={ classes.iconsContainer }>
-                        {
-                            _.map(iconsData.glyphIcons, (icon, index) => (
-                                <div className={ classes.iconElement } key={ index }>
-                                    <span className={ `${ classes.icon } ${icon}` }></span>
-                                    <p className='m-t-2'>
-                                        { icon }
-                                    </p>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </Col>
-            </Row>
-        )
-    }
+          <div className={classes.iconsContainer}>
+            {_.map(iconsData.glyphIcons, (icon, index) => (
+              <div className={classes.iconElement} key={index}>
+                <span className={`${classes.icon} ${icon}`}></span>
+                <p className="m-t-2">{icon}</p>
+              </div>
+            ))}
+          </div>
+        </Col>
+      </Row>
+    );
+  }
 }
 
 export default connect()(GlyphIconsContainer);

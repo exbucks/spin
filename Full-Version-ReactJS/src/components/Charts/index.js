@@ -14,20 +14,20 @@ import Recharts from './components/Recharts';
 import AsyncChart from './components/AsyncChart';
 
 const Charts = {
-    SparklineBar,
-    SparklinePie,
-    SparklineLine,
-    SparklineDonut,
-    HighStock,
-    Highchart,
-    HighchartBasicLine,
-    HighchartBasicArea,
-    HighchartBasicColumn,
-    HighchartBasicPie,
-    Chartist,
-    Recharts,
+  SparklineBar,
+  SparklinePie,
+  SparklineLine,
+  SparklineDonut,
+  HighStock,
+  Highchart,
+  HighchartBasicLine,
+  HighchartBasicArea,
+  HighchartBasicColumn,
+  HighchartBasicPie,
+  Chartist,
+  Recharts,
 
-    AsyncChart
+  AsyncChart
 };
 
 export default Charts;

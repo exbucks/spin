@@ -1,3 +1,3 @@
-import LayoutOptions from './LayoutOptions'
+import LayoutOptions from './LayoutOptions';
 
-export default LayoutOptions
+export default LayoutOptions;

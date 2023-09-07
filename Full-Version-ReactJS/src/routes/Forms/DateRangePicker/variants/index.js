@@ -12,39 +12,35 @@ import BootstrapDateRangeProps from './BootstrapDateRangeProps';
 import BootstrapDateProps from './BootstrapDateProps';
 
 const mergedVariants = [].concat(
-    DateRangePicker,
-    DateRangeInputProps,
-    DateRangeCalendarProps,
-    DateRangeDayProps,
+  DateRangePicker,
+  DateRangeInputProps,
+  DateRangeCalendarProps,
+  DateRangeDayProps,
 
-    SingleDatePicker,
-    SingleDateInputProps,
-    SingleDateCalendarProps,
-    SingleDateDayProps,
+  SingleDatePicker,
+  SingleDateInputProps,
+  SingleDateCalendarProps,
+  SingleDateDayProps,
 
-    DayPickerRangeController,
-    DayPickerProps,
+  DayPickerRangeController,
+  DayPickerProps,
 
-    BootstrapDateRangeProps,
-    BootstrapDateProps
+  BootstrapDateRangeProps,
+  BootstrapDateProps
 );
 
 export {
-    DateRangePicker,
-    DateRangeInputProps,
-    DateRangeCalendarProps,
-    DateRangeDayProps,
-
-    SingleDatePicker,
-    SingleDateInputProps,
-    SingleDateCalendarProps,
-    SingleDateDayProps,
-
-    DayPickerRangeController,
-    DayPickerProps,
-
-    BootstrapDateRangeProps,
-    BootstrapDateProps,
-    
-    mergedVariants
-}
+  DateRangePicker,
+  DateRangeInputProps,
+  DateRangeCalendarProps,
+  DateRangeDayProps,
+  SingleDatePicker,
+  SingleDateInputProps,
+  SingleDateCalendarProps,
+  SingleDateDayProps,
+  DayPickerRangeController,
+  DayPickerProps,
+  BootstrapDateRangeProps,
+  BootstrapDateProps,
+  mergedVariants
+};

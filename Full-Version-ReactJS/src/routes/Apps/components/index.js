@@ -12,16 +12,16 @@ import Upload from './Upload';
 import Comments from './Comments';
 
 export {
-    FavoriteApps,
-    ProjectsList,
-    SearchBox,
-    UsersList,
-    LabelsList,
-    PriorityButton,
-    SideNav,
-    EmailAttachments,
-    UserDetails,
-    Chat,
-    Upload,
-    Comments
+  FavoriteApps,
+  ProjectsList,
+  SearchBox,
+  UsersList,
+  LabelsList,
+  PriorityButton,
+  SideNav,
+  EmailAttachments,
+  UserDetails,
+  Chat,
+  Upload,
+  Comments
 };

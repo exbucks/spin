@@ -1,11 +1,7 @@
 import React from 'react';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
-import {
-    Col,
-    Row,
-    Button
-} from 'components';
+import { Col, Row, Button } from 'components';
 
 import { products } from './../utils';
 
@@ -14,39 +10,41 @@ const data = Array.from(products(['id', 'name', 'price'], 5));
 import classes from './../ReactTables.scss';
 
 const createCustomToolbar = (props) => {
-    const {
-        btnGroup
-    } = props.components;
+  const { btnGroup } = props.components;
 
-    return (
-        <div>
-            <Col md={6}>
-                <h4 className='m-t-0'>Insert Row</h4>
-            </Col>
-            <Col md={6} className='text-right'>
-                <div className={classes.actions}>
-                    { btnGroup }
-                </div>
-            </Col>
-        </div>
-    );
-}
+  return (
+    <div>
+      <Col md={6}>
+        <h4 className="m-t-0">Insert Row</h4>
+      </Col>
+      <Col md={6} className="text-right">
+        <div className={classes.actions}>{btnGroup}</div>
+      </Col>
+    </div>
+  );
+};
 
 const options = {
-    toolBar: createCustomToolbar,
-    insertBtn: (onClick) => (
-        <Button onClick={() => {onClick()}}>
-            New <i className='fa fa-fw fa-plus text-success'></i>
-        </Button>
-    )
+  toolBar: createCustomToolbar,
+  insertBtn: (onClick) => (
+    <Button
+      onClick={() => {
+        onClick();
+      }}
+    >
+      New <i className="fa fa-fw fa-plus text-success"></i>
+    </Button>
+  )
 };
 
 const InsertRow = () => (
-    <BootstrapTable data={ data } insertRow={ true } options={options}>
-        <TableHeaderColumn dataField='id' isKey={ true }>Product ID</TableHeaderColumn>
-        <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
-        <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
-    </BootstrapTable>
+  <BootstrapTable data={data} insertRow={true} options={options}>
+    <TableHeaderColumn dataField="id" isKey={true}>
+      Product ID
+    </TableHeaderColumn>
+    <TableHeaderColumn dataField="name">Product Name</TableHeaderColumn>
+    <TableHeaderColumn dataField="price">Product Price</TableHeaderColumn>
+  </BootstrapTable>
 );
 
 /*

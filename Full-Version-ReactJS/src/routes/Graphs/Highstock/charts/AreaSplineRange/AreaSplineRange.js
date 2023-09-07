@@ -3,47 +3,49 @@ import React from 'react';
 import { Charts } from 'components';
 
 const getJson = (cb) => {
-    require.ensure([], (require) => {
-        const { data } = require('consts/data/highstock/data-range.json');
-        cb(data);
-    });
-}
+  require.ensure([], (require) => {
+    const { data } = require('consts/data/highstock/data-range.json');
+    cb(data);
+  });
+};
 
 const getConfig = (data) => ({
-    chart: {
-        type: 'areasplinerange'
-    },
+  chart: {
+    type: 'areasplinerange'
+  },
 
-    rangeSelector: {
-        selected: 2
-    },
+  rangeSelector: {
+    selected: 2
+  },
 
-    credits: {
-        enabled: false
-    },
+  credits: {
+    enabled: false
+  },
 
-    exporting: {
-        enabled: false
-    },
+  exporting: {
+    enabled: false
+  },
 
-    title: {
-        text: ''
-    },
+  title: {
+    text: ''
+  },
 
-    tooltip: {
-        valueSuffix: '°C'
-    },
+  tooltip: {
+    valueSuffix: '°C'
+  },
 
-    series: [{
-        name: 'Temperatures',
-        data: data
-    }]
+  series: [
+    {
+      name: 'Temperatures',
+      data: data
+    }
+  ]
 });
 
 const SingleLineSeries = () => (
-    <Charts.AsyncChart getConfig={ getConfig } getJson={ getJson } >
-        <Charts.HighStock />
-    </Charts.AsyncChart>
-)
+  <Charts.AsyncChart getConfig={getConfig} getJson={getJson}>
+    <Charts.HighStock />
+  </Charts.AsyncChart>
+);
 
 export default SingleLineSeries;
